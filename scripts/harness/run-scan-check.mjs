@@ -27,7 +27,20 @@ const tris = ms => ms.reduce((n, m) => n + (m.geometry.index?.count ?? m.geometr
 const mats = ms => new Set(ms.flatMap(m => Array.isArray(m.material) ? m.material : [m.material])).size;
 console.log('SCAN-GEOMETRY', JSON.stringify({ towerMeshes: scanMeshes.length, towerTriangles: tris(scanMeshes), towerMaterials: mats(scanMeshes), fieldTriangles: tris(fieldMeshes), fieldMaterials: mats(fieldMeshes), nonFinite, colliders: scanTower.colliders.length }));
 if (nonFinite) fail('non-finite scan vertices');
-if (mats(scanMeshes) > 4 || mats(fieldMeshes) > 1) fail('too many scan materials');
+// Tower: near = captured scan + textured crown/clocks/window panels + metal/reveals; far = captured scan + textured crown/clocks.
+if (mats(scanMeshes) > 5 || mats(fieldMeshes) > 1) fail('too many scan materials');
+{
+  const towerLod = scanTower.group.children.find(o => o.isLOD);
+  const lodMats = towerLod.levels.map(l => { const ms = []; l.object.traverse(o => { if (o.isMesh) ms.push(o); }); return [...new Set(ms.flatMap(m => [m.material].flat()))]; });
+  const capturedMaps = lodMats.map(list => list.filter(m => m.userData.capturedColor).map(m => m.map));
+  // one unlit captured textured material per LOD (relit by COLOR_0), authored infill never labelled captured,
+  // and the far LOD draws from the near textures (scan atlas and authored detail atlas each once on the GPU)
+  const ok = lodMats.every(list => list.length <= 3 && list.every(m => m.isMeshBasicMaterial && !m.toneMapped && m.vertexColors) && list.filter(m => m.map && m.userData.capturedColor).length === 1 && list.every(m => m.userData.capturedColor === !m.userData.authoredInfill))
+    && capturedMaps[0][0] && capturedMaps[1][0] === capturedMaps[0][0] && scanTower.stats.sharedAtlases === 2
+    && new Set(lodMats.flatMap(l => l.map(m => m.map).filter(Boolean))).size === 2; // scan atlas + authored detail atlas, each once
+  console.log('TOWER-MATERIALS', JSON.stringify({ lodMaterials: lodMats.map(l => l.map(m => m.name)), sharedAtlas: capturedMaps[1][0] === capturedMaps[0][0], lodTriangles: scanTower.stats.lodTriangles }));
+  if (!ok) fail('tower LOD materials (captured/authored labelling, vertex colours, shared atlas)');
+}
 
 // 2. transform residuals (recorded by tools/scans)
 const res = tower.transform.residuals;
@@ -40,9 +53,17 @@ scanTower.group.updateMatrixWorld(true);
 const lod = scanTower.group.children.find(o => o.isLOD);
 const near = []; lod.levels[0].object.traverse(o => { if (o.isMesh) near.push(o); });
 const box = new THREE.Box3(); for (const m of near) box.expandByObject(m);
-const [cx, , cz] = tower.anchor, groundY = ground.height(cx, cz), topAbove = box.max.y - groundY;
-console.log('TOWER-TOP', JSON.stringify({ topY: r3(box.max.y), groundY: r3(groundY), aboveGround: r3(topAbove), published: 93.6 }));
+const [cx, , cz] = tower.anchor, groundY = ground.height(cx, cz);
+// Architectural top (published 307 ft excludes antennas): median first visible hit straight down over
+// the crown roof (1 m grid within 3 m of the centre; the thin roof rail and mast cover a few cells only).
+// The bounding box (incl. the mast) is reported and bounded separately.
+const roofHits = [];
+for (let s = -3; s <= 3; s += 1) for (let t = -3; t <= 3; t += 1) { const [x, z] = [cx + s * tower.axes.u[0] + t * tower.axes.v[0], cz + s * tower.axes.u[1] + t * tower.axes.v[1]]; const h = new THREE.Raycaster(new THREE.Vector3(x, 200, z), new THREE.Vector3(0, -1, 0), 0, 300).intersectObjects(near, false)[0]; if (h) roofHits.push(h.point.y); }
+roofHits.sort((p, q2) => p - q2);
+const roofY = q(roofHits, 0.5), topAbove = roofY - groundY;
+console.log('TOWER-TOP', JSON.stringify({ roofY: r3(roofY), roofSamples: roofHits.length, boxTopY: r3(box.max.y), groundY: r3(groundY), aboveGround: r3(topAbove), boxAboveGround: r3(box.max.y - groundY), published: 93.6 }));
 if (Math.abs(topAbove - 93.6) > 2) fail('tower top height');
+if (box.max.y - groundY > 93.6 + 8) fail('tower appendages (mast/antennas) implausibly tall');
 
 // helpers: tower-local axes
 const [u, v] = [tower.axes.u, tower.axes.v];

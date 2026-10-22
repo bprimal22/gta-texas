@@ -1,0 +1,2 @@
+{ "name": "claude-tower-tools", "private": true, "type": "module",
+  "dependencies": { "@gltf-transform/core": "4.5.1", "@gltf-transform/extensions": "4.5.1", "sharp": "0.34.4", "meshoptimizer": "1.1.1" } }

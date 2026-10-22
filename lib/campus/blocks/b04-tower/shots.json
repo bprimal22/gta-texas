@@ -331,5 +331,328 @@
   "fov": 58,
   "groundY": 11.0,
   "note": "District round. Compare with ut-geb-433 (corner view)."
+ },
+ {
+  "id": "b04-tower-orbit-north",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower review orbit from the north (105 m out, 115 m from the south-east where the baked terrain has a hole; mid-shaft height)",
+  "position": [
+   -202.8,
+   74,
+   -122.27
+  ],
+  "target": [
+   -212.6,
+   72,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 12.44,
+  "note": "Tower review (2026-10 Tower pass): whole Tower from a fixed bearing relative to the shaft axes. Relit scan (game sun ESE: east/south lit, north/west shade), authored window strips in the near LOD. Compare with .work/claude-tower refs."
+ },
+ {
+  "id": "b04-tower-orbit-northeast",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower review orbit from the north-east (105 m out, 115 m from the south-east where the baked terrain has a hole; mid-shaft height)",
+  "position": [
+   -131.75,
+   74,
+   -84.73
+  ],
+  "target": [
+   -212.6,
+   72,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 9.94,
+  "note": "Tower review (2026-10 Tower pass): whole Tower from a fixed bearing relative to the shaft axes. Relit scan (game sun ESE: east/south lit, north/west shade), authored window strips in the near LOD. Compare with .work/claude-tower refs."
+ },
+ {
+  "id": "b04-tower-orbit-east",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower review orbit from the east (105 m out, 115 m from the south-east where the baked terrain has a hole; mid-shaft height)",
+  "position": [
+   -108.05,
+   74,
+   -7.93
+  ],
+  "target": [
+   -212.6,
+   72,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 11.47,
+  "note": "Tower review (2026-10 Tower pass): whole Tower from a fixed bearing relative to the shaft axes. Relit scan (game sun ESE: east/south lit, north/west shade), authored window strips in the near LOD. Compare with .work/claude-tower refs."
+ },
+ {
+  "id": "b04-tower-orbit-southeast",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower review orbit from the south-east (105 m out, 115 m from the south-east where the baked terrain has a hole; mid-shaft height)",
+  "position": [
+   -139.22,
+   74,
+   70.82
+  ],
+  "target": [
+   -212.6,
+   72,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 15.45,
+  "note": "Tower review (2026-10 Tower pass): whole Tower from a fixed bearing relative to the shaft axes. Relit scan (game sun ESE: east/south lit, north/west shade), authored window strips in the near LOD. Compare with .work/claude-tower refs."
+ },
+ {
+  "id": "b04-tower-orbit-south",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower review orbit from the south (105 m out, 115 m from the south-east where the baked terrain has a hole; mid-shaft height)",
+  "position": [
+   -222.39,
+   74,
+   86.81
+  ],
+  "target": [
+   -212.6,
+   72,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 16.37,
+  "note": "Tower review (2026-10 Tower pass): whole Tower from a fixed bearing relative to the shaft axes. Relit scan (game sun ESE: east/south lit, north/west shade), authored window strips in the near LOD. Compare with .work/claude-tower refs."
+ },
+ {
+  "id": "b04-tower-orbit-southwest",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower review orbit from the south-west (105 m out, 115 m from the south-east where the baked terrain has a hole; mid-shaft height)",
+  "position": [
+   -293.44,
+   74,
+   49.27
+  ],
+  "target": [
+   -212.6,
+   72,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 16.1,
+  "note": "Tower review (2026-10 Tower pass): whole Tower from a fixed bearing relative to the shaft axes. Relit scan (game sun ESE: east/south lit, north/west shade), authored window strips in the near LOD. Compare with .work/claude-tower refs."
+ },
+ {
+  "id": "b04-tower-orbit-west",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower review orbit from the west (105 m out, 115 m from the south-east where the baked terrain has a hole; mid-shaft height)",
+  "position": [
+   -317.14,
+   74,
+   -27.52
+  ],
+  "target": [
+   -212.6,
+   72,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 15.08,
+  "note": "Tower review (2026-10 Tower pass): whole Tower from a fixed bearing relative to the shaft axes. Relit scan (game sun ESE: east/south lit, north/west shade), authored window strips in the near LOD. Compare with .work/claude-tower refs."
+ },
+ {
+  "id": "b04-tower-orbit-northwest",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower review orbit from the north-west (105 m out, 115 m from the south-east where the baked terrain has a hole; mid-shaft height)",
+  "position": [
+   -279.59,
+   74,
+   -98.58
+  ],
+  "target": [
+   -212.6,
+   72,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 16.5,
+  "note": "Tower review (2026-10 Tower pass): whole Tower from a fixed bearing relative to the shaft axes. Relit scan (game sun ESE: east/south lit, north/west shade), authored window strips in the near LOD. Compare with .work/claude-tower refs."
+ },
+ {
+  "id": "b04-tower-crown-southeast",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower crown from the south-east: clock dials, belfry colonnade, cornice, roof rail and mast",
+  "position": [
+   -187.07,
+   101,
+   13.07
+  ],
+  "target": [
+   -212.6,
+   99,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 15.22,
+  "note": "Tower review: crown close-up (sunlit side). Belfry above the clock-block roof, clock dials, roof rail and mast are authored (ut-tower.json crown/clocks); clock stage below is scanned."
+ },
+ {
+  "id": "b04-tower-crown-northwest",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower crown from the north-west (reverse, shade side)",
+  "position": [
+   -238.12,
+   101,
+   -48.53
+  ],
+  "target": [
+   -212.6,
+   99,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 15.83,
+  "note": "Tower review: crown close-up, reverse/shade side."
+ },
+ {
+  "id": "b04-tower-crown-northeast-high",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower crown from above the north-east: roof, rail, lattice mast, cornice",
+  "position": [
+   -186.42,
+   122,
+   -39.42
+  ],
+  "target": [
+   -212.6,
+   101,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 14.87,
+  "note": "Tower review: elevated crown view; mast position triangulated from two GPS-tagged photographs (+-0.7 m)."
+ },
+ {
+  "id": "b04-tower-crown-southwest-high",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower crown from above the south-west (reverse diagonal)",
+  "position": [
+   -238.78,
+   122,
+   3.97
+  ],
+  "target": [
+   -212.6,
+   101,
+   -17.73
+  ],
+  "fov": 50,
+  "groundY": 15.36,
+  "note": "Tower review: elevated crown view, reverse diagonal."
+ },
+ {
+  "id": "b04-tower-deck-southwest",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Observation deck and clock stage from the south-west at deck height",
+  "position": [
+   -237.24,
+   90,
+   2.69
+  ],
+  "target": [
+   -212.6,
+   92,
+   -17.73
+  ],
+  "fov": 55,
+  "groundY": 15.37,
+  "note": "Tower review: deck parapet / clock stage junction at Y ~87."
+ },
+ {
+  "id": "b04-tower-strips-east",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "East shaft face close-up: window strips (two-light windows over gilded spandrels)",
+  "position": [
+   -187.52,
+   62,
+   -10.84
+  ],
+  "target": [
+   -203.64,
+   62,
+   -16.89
+  ],
+  "fov": 55,
+  "groundY": 15.53,
+  "note": "Tower review: authored recessed window strips registered to the scanned bands (near LOD). Sunlit face under the game sun."
+ },
+ {
+  "id": "b04-tower-strips-south",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "South shaft face close-up from the south-south-west, oblique: strip reveals",
+  "position": [
+   -236,
+   58,
+   28
+  ],
+  "target": [
+   -213.44,
+   64,
+   -8.77
+  ],
+  "fov": 35,
+  "groundY": 16.53,
+  "note": "Tower review: camera backed away for fallback-Tower clearance; oblique view showing the strip recess, reveals, sill/head."
+ },
+ {
+  "id": "b04-tower-strips-north",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "North shaft face close-up (shade side)",
+  "position": [
+   -214.7,
+   62,
+   -43.64
+  ],
+  "target": [
+   -211.76,
+   62,
+   -26.69
+  ],
+  "fov": 55,
+  "groundY": 15.28,
+  "note": "Tower review: shade side, strips calibrated to the captured strip brightness."
+ },
+ {
+  "id": "b04-tower-top",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Tower from above (crown, deck, Main Building roofs)",
+  "position": [
+   -215.86,
+   160,
+   17.12
+  ],
+  "target": [
+   -212.6,
+   95,
+   -17.73
+  ],
+  "fov": 55,
+  "groundY": 14.77,
+  "note": "Tower review: elevated crown/top view; authored flat lid closes the open scanned lantern top."
  }
 ]

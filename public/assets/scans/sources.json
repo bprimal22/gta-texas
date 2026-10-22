@@ -26,14 +26,19 @@
   }
  ],
  "derivation": {
-  "tower": "tools/scans/align-tower.mjs + global-reg.mjs + finalize-tower.mjs (alignment) then tools/scans/build-tower.mjs (crop, fragment removal, chart re-atlas to one JPEG, meshoptimizer LODs, lantern-top infill, collider heightfield)",
+  "tower": "tools/scans/align-tower.mjs + global-reg.mjs + finalize-tower.mjs (alignment) then tools/scans/build-tower.mjs (crop, fragment removal, chart re-atlas to one JPEG, per-vertex relight of the photographed wall sun to the game sun (COLOR_0, atlas texels unchanged), meshoptimizer far LOD, cuts + authored window strips (near), authored belfry and clock dials (both LODs), roof rail and mast (near), collider heightfield from the visible tops)",
   "field": "tools/scans/stadium-level.mjs + stadium-align.mjs (alignment) then tools/scans/build-stadium.mjs (field-only crop, flatten, re-atlas)",
   "tools": "@gltf-transform/core 4, sharp, meshoptimizer (tools/package.json)",
-  "westStand": "tools/scans/stand-probe.mjs (bowl section reach from the real authored scene) then tools/scans/build-stand.mjs (west-straight crop, fragment removal, clean rim line + trim of torn rim/press-box remnants; original source photo UV charts kept (tools/scans/stand-charts.mjs: no position weld across UV seams), used source texel regions re-packed at scale 1 into a 4096x2048 atlas (exact source texels, no colour/exposure edits), UV-aware meshoptimizer simplifyWithAttributes LODs that keep chart seams, far LOD embeds the same full-resolution atlas JPEG (no downsampling); reduced collider surface, seam profiles); transform = dkr-field.json. Fidelity: tools/scans/stand-fidelity.mjs"
+  "westStand": "tools/scans/stand-probe.mjs (bowl section reach from the real authored scene) then tools/scans/build-stand.mjs (west-straight crop, fragment removal, clean rim line + trim of torn rim/press-box remnants; original source photo UV charts kept (tools/scans/stand-charts.mjs: no position weld across UV seams), used source texel regions re-packed at scale 1 into a 4096x2048 atlas (exact source texels, no colour/exposure edits), UV-aware meshoptimizer simplifyWithAttributes LODs that keep chart seams, far LOD embeds the same full-resolution atlas JPEG (no downsampling); reduced collider surface, seam profiles); transform = dkr-field.json. Fidelity: tools/scans/stand-fidelity.mjs",
+  "towerTools": "Pinned offline authoring dependencies: tools/scans/tower-tools.package.json; setup in tools/scans/tower-reference-notes.md. Not game dependencies."
  },
  "authoredInfill": [
-  "ut-tower GLBs: flat grey lid closing the open scanned lantern top (material \"UT Tower lantern lid (authored infill)\")",
-  "ut-tower atlas: 7758 sky-blue bleed texels on the lantern rim desaturated",
+  "ut-tower GLBs: COLOR_0 relight multiplier per vertex (fitted photographed wall sun az 217 deg -> game sun az 121.2 deg, luminance-clamped); atlas texels unchanged except the 7758 sky-blue bleed texels on the lantern rim desaturated (that area is now cut)",
+  "ut-tower near GLB: 12 shaft window strips cut from the scan and replaced by authored recessed panels (registered to the scanned bands: centres, 1.2 m width, 2.5875 m floor pitch, 16 spandrels) + stone reveals; pattern drawn from reference proportions (CC0 Commons close-up), no photographic texels",
+  "ut-tower GLBs: belfry above Y 94.9 (inside 5.35 m of the crown centre) replaced by an authored four-fold symmetric belfry (podium, pedestals, 16 columns, corner piers, bell chamber, architrave/frieze/cornice, attic, roof at 108.85) fitted to the scan half-extent profile and photographs; textured with captured limestone (orthographic resample of the scanned north/east shaft wall, mean-normalised) plus drawn 0.5 m course / 1.2 m head joints",
+  "ut-tower GLBs: four clock dials (r 2.05 m, centre Y 91.15, measured from orthographic scan crops) replacing the melted rings; dial drawn from reference photographs (gold bezel, pale blue-green field, red radial Roman numerals), hands at 10:45 (game sun time)",
+  "ut-tower near GLB: roof guard rail and lattice mast with two whip antennas (position triangulated from two GPS-tagged Commons photographs, +-0.7 m; heights estimated); no colliders",
+  "ut-tower GLBs: the former flat grey lantern lid is removed (superseded by the authored roof)",
   "dkr-west-stand GLBs: 622 interior hole cells (1,244 triangles) surfaced at the hole-filled collider height - 0.03 m, separate untextured unlit material \"DKR west stand authored infill (flat approximate capture tone)\" (extras.authoredInfill), tone = median source texel of nearby captured faces",
   "stadium-bowl.ts (generated, not in the GLB): rim parapet + roof cap from the clean rim line to the outer wall, and a press-box box fitted to the surviving scanned slab extents (dkr-west-stand.json sector.pressBox)"
  ],
@@ -76,21 +81,22 @@
   },
   {
    "name": "ut-tower-far.glb",
-   "bytes": 602192,
-   "sha256": "af5005d7be8138c953259e9f8bca80e7f73eac6e0e310b1b268cbc8f41ad4458",
+   "bytes": 859880,
+   "sha256": "dd76a33845516a2e453c66499a36fe70898985d25001e2561d548c8ea2e30677",
    "kind": "derived 3D asset (MIT, see LICENSE-utimagery.txt)"
   },
   {
    "name": "ut-tower-near.glb",
-   "bytes": 2294484,
-   "sha256": "f637f8d22ec91df78f9d5069c07368bbdf38ed2128d7037ecbb430bb77dad6b7",
+   "bytes": 2718892,
+   "sha256": "d59b9b3e3747cc742e57bfebafa2c5b2c6bd0cc9a5b3bb2c3ef51c427c661eda",
    "kind": "derived 3D asset (MIT, see LICENSE-utimagery.txt)"
   },
   {
    "name": "ut-tower.json",
-   "bytes": 67084,
-   "sha256": "75c8d055227ba545420ebae0a61e559f2d55de82ff95ccbeec94381bda6bd57a",
+   "bytes": 76926,
+   "sha256": "f2bdfbfa466a946ceb9512882734fd00380cafd342b79416cf87e7725a112450",
    "kind": "alignment/collider metadata (derived)"
   }
- ]
+ ],
+ "towerReferences": "26 reference photographs used only as geometry/drawing guidance, not shipped textures: tools/scans/tower-references.json. Measured reconstruction, budgets, limitations and reproducible authoring setup: tools/scans/tower-reference-notes.md. Captured texels come only from the MIT utimagery scan."
 }

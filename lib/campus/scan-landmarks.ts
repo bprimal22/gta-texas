@@ -14,8 +14,13 @@ import type { StadiumScanSector } from './stadium-bowl';
  *
  * Tower: the scan replaces the authored Tower (`buildTower`) above the Main Building
  * north-stack roof (Y 35.9). Its position is the measured one, ~28 m north of the MAI
- * landmark point used by the authored Tower. Collision is simplified: one tower-aligned shaft
- * cuboid plus a 73×73 heightfield cap sampled from the visible scan tops — never raw scan triangles.
+ * landmark point used by the authored Tower. The photographed sun is swapped for the game sun once,
+ * per vertex (COLOR_0, atlas texels untouched). The melted scanned belfry above the clock-block
+ * roof, the clock rings and the shaft window strips (near LOD) are replaced by measured, authored
+ * geometry flagged extras.authoredInfill (tools/scans/build-tower.mjs 6b-6f, ut-tower.json crown /
+ * clocks / windowStrips). Collision is simplified: one tower-aligned shaft cuboid plus a 73×73
+ * heightfield cap sampled from the visible tops (scan + authored crown stone; the roof rail and mast
+ * are not landable) — never raw scan triangles.
  *
  * Field: a flattened, visual-only decal of the scanned DKR turf (north end zone to the south
  * 20-yard line), laid 3 cm above the generated stadium field plane, whose collider is kept.
@@ -40,11 +45,12 @@ export interface ScanLoadOptions {
 export interface ScanTowerOptions extends ScanLoadOptions {
   /** 'baked' (default): unlit photographed colour, not tone mapped. 'lit': standard PBR. */
   shading?: 'baked' | 'lit';
-  /** Linear multiplier on the baked colour. Default 1.1: the sunlit south shaft face is
-   * photographed at sRGB luma ~200 (p50); 1.1 lifts it to ~209, the sunlit limestone level
-   * of the lit scene. Shaded faces (north ~79, east ~86) keep their photographed shade. */
+  /** Linear multiplier on the baked colour. Default 1.1: a wall facing the sun is relit to sRGB
+   * ~209-229 before gain, matching the sunlit limestone of the lit scene; walls facing away from the
+   * game sun (north/west) are relit to the photographed shade level (~87), which matches the lit
+   * scene's shaded stone (~90 in game). The relight itself is baked per vertex (ut-tower.json relight). */
   gain?: number;
-  /** Distance (m) beyond which the 14k-triangle far LOD is shown. */
+  /** Distance (m) beyond which the approximately 15.5k-triangle far LOD is shown. */
   farDistance?: number;
 }
 
@@ -147,14 +153,38 @@ function finishMaterials(meshes: THREE.Mesh[], shading: 'baked' | 'lit', gain: n
       // outside the ACES curve so the photographed stone colour is not darkened twice.
       // userData.capturedColor tells the render pipeline (lib/campus/render) not to relight it.
       // Authored infill (glTF extras.authoredInfill) is shown the same way but not labelled captured.
+      // COLOR_0 (when present) is a normalised per-vertex multiplier stored divided by
+      // extras.vertexColorScale (Tower: one-time relight of the photographed sun to the game sun).
       src.toneMapped = false;
       src.userData.capturedColor = !src.userData.authoredInfill;
-      src.color.multiplyScalar(gain);
+      src.color.multiplyScalar(gain * (src.vertexColors && typeof src.userData.vertexColorScale === 'number' ? src.userData.vertexColorScale : 1));
       replaced.set(m, src);
       return src;
     });
     mesh.material = Array.isArray(mesh.material) ? next : next[0];
   }
+}
+
+/** Far LOD textures are the near ones downsampled with the same UV layout: near materials carry
+ * glTF extras.textureKey, far ones extras.textureOfNear. Point each far material at the near texture
+ * and release its own copy before anything is uploaded, so each atlas reaches the GPU once.
+ * Returns the number of far materials switched. */
+function shareNearTextures(nearMeshes: THREE.Mesh[], farMeshes: THREE.Mesh[]) {
+  const materialsOf = (meshes: THREE.Mesh[]) => new Set(meshes.flatMap(m => [m.material].flat()) as THREE.MeshBasicMaterial[]);
+  const byKey = new Map<string, THREE.Texture>();
+  for (const m of materialsOf(nearMeshes)) if (m.map && typeof m.userData.textureKey === 'string') byKey.set(m.userData.textureKey, m.map);
+  let shared = 0;
+  for (const m of materialsOf(farMeshes)) {
+    const nearMap = byKey.get(m.userData.textureOfNear);
+    if (!nearMap || !m.map || m.map === nearMap) continue;
+    const own = m.map, image = own.image as { close?: () => void } | undefined;
+    m.map = nearMap;
+    m.needsUpdate = true;
+    own.dispose();
+    if (image && typeof image.close === 'function') image.close();
+    shared++;
+  }
+  return shared;
 }
 
 function assertFinite(meshes: THREE.Mesh[], what: string) {
@@ -194,7 +224,7 @@ export async function prepareScanTower(options: ScanTowerOptions = {}): Promise<
   const gltfs = await acquireAll(towerMeta.files.map(f => assetUrl(base, f.name)), load, options.timeoutMs ?? 20000, 'Tower scan load', options.signal);
   const [near, far] = gltfs;
   const group = new THREE.Group();
-  let triangles = 0;
+  let triangles = 0, sharedAtlases = 0;
   try {
     group.name = 'UT Tower photogrammetry (aligned scan)';
     const [ax, ay, az] = towerMeta.anchor;
@@ -213,6 +243,7 @@ export async function prepareScanTower(options: ScanTowerOptions = {}): Promise<
       mesh.geometry.computeBoundingSphere();
     }
     finishMaterials(meshes, options.shading ?? 'baked', options.gain ?? 1.1);
+    sharedAtlases = shareNearTextures(meshesOf(near.scene), meshesOf(far.scene));
     group.updateMatrixWorld(true);
   } catch (error) {
     disposeTree(group, ...gltfs.map(g => g.scene));
@@ -222,7 +253,7 @@ export async function prepareScanTower(options: ScanTowerOptions = {}): Promise<
   const [ax, , az] = towerMeta.anchor;
   const stats: Record<string, unknown> = {
     source: 'seanhlewis/utimagery@13f08efe tower.glb (MIT), aligned + cropped', centre: [ax, az], yawDeg: towerMeta.yawRad * 180 / Math.PI,
-    cutY: towerMeta.cutY, topY: towerMeta.lid.y, triangles, lodTriangles: towerMeta.files.map(f => f.triangles),
+    cutY: towerMeta.cutY, topY: towerMeta.crown.roofY, triangles, lodTriangles: towerMeta.files.map(f => f.triangles + (f.authoredTriangles ?? 0)), sharedAtlases,
     shading: options.shading ?? 'baked', residuals: towerMeta.transform.residuals.cornerRms2D_m, loadMs: Math.round(performance.now() - started),
   };
   let state: 'prepared' | 'committed' | 'disposed' = 'prepared';
