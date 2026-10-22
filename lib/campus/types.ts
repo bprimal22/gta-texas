@@ -40,6 +40,7 @@ export interface GameStatus {
   speed: number;
   fps: number;
   mode: string;
+  powerSaving?: boolean;
   /** True when the game is using only files bundled with the local app. */
   offline?: boolean;
   locomotion?: 'foot'|'mounting'|'riding'|'dismounting'|'flying'|'landing';

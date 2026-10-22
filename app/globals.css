@@ -530,3 +530,7 @@ button {
 .guest-preview-status { position:fixed; top:3.8rem; right:1rem; z-index:20; max-width:calc(100vw - 2rem); padding:.4rem .6rem; border-radius:4px; background:#142421d9; color:#f3f4ef; font-size:.875rem; pointer-events:none; }
 .imagery-settings { position:fixed; top:1.25rem; right:1.5rem; z-index:30; padding:.5rem .7rem; background:#112321c9; color:white; border:1px solid #ffffff40; border-radius:4px; font-size:.875rem; cursor:pointer; }
 @media (max-width:600px) { .connection-card { padding-left:1rem; } .imagery-settings { top:.6rem; right:.6rem; } }
+
+.power-saving { pointer-events: auto; border: 1px solid #ffffff66; border-radius: 4px; padding: 5px 8px; background: #162b24df; color: #fff; font: inherit; cursor: pointer; }
+.power-saving[aria-pressed="true"] { border-color: #ffd5a8; color: #ffd5a8; }
+.power-saving:focus-visible { outline: 2px solid #ffd5a8; outline-offset: 3px; }

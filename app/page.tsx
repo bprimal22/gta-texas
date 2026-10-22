@@ -157,6 +157,12 @@ export default function Home() {
           <span><kbd>F</kbd> Scooter</span>
           <span><kbd>W</kbd> Hold to fly / rise</span>
         </>}
+        <button className="power-saving" type="button" aria-pressed={!!status.powerSaving}
+          disabled={!status.ready}
+          title="Limit gameplay to 30 FPS to reduce power use; keeps the same image quality."
+          onClick={() => game.current?.setPowerSaving(!status.powerSaving)}>
+          Power saver {status.powerSaving ? 'on · 30 FPS' : 'off · 60 FPS'}
+        </button>
         <span>
           <kbd>MOUSE DRAG</kbd> Look
         </span>

@@ -51,3 +51,49 @@ The retail suite tested 170 scooter rides, approximately 3.7 km, with zero retai
 Visual review used only the Codex in-app browser. The build remains an approximation: shared glass shading, simplified lettering, unmodeled balconies and secondary facade details still limit realism. A raw deep-West high-rise excluded by the existing district seam remains a coverage gap. This pass does not make the world 1:1.
 
 Run evidence and guarded promotion records: `/Users/bprimal/e/local-ut/.work/west-campus-identity-20261021/`. Review screenshots and a portable summary: `/Users/bprimal/e/ut/research/whole-campus-92/district-agents-40/verification/west-campus-identity-20261021/`. The original online game is untouched; no public deployment was performed.
+
+## GPU efficiency pass — October 22, 2026
+
+Rendering now has a 60 FPS budget independent of the 60 Hz physics step, a 30 FPS
+Power saver option, 5 FPS intro/map/settled-idle rendering, and no rendering while
+the document is hidden or unfocused. Focus/mode transitions discard elapsed time
+debt. Dynamic shadows, geometry/LOD settings, lighting, pixel ratio, AO samples,
+and scene antialiasing retain their previous settings. The final fullscreen
+output no longer requests a second multisampled canvas framebuffer.
+
+AO multiplication is fused into output conversion. A controlled local Chromium
+comparison at 1280×720, DPR 1, `?shot=spawn-east-mall-west` used the same new frame
+budget in both runs and switched only `aocomposite=legacy` versus the fused path.
+After 10 seconds of warm-up:
+
+| Measure | Legacy composition | Fused composition |
+| --- | --- | --- |
+| GPU frame time, median / p95 | 6.08 / 6.92 ms (50 samples) | 5.68 / 6.39 ms (33 samples) |
+| Draw calls | 650 | 648 |
+| Triangles | 4,692,263 | 4,692,261 |
+| Fullscreen passes | 5 | 3 |
+| Extra full-resolution half-float composite | 1280×720 | unused 1×1 placeholder |
+
+This is about a 7% per-frame GPU reduction in one fixed view, not a prediction
+of temperature or battery improvements. The full-size composite colour buffer
+alone was 7.0 MiB at this resolution. The unchanged scene region in screenshots
+had mean absolute RGB difference 0.86 on the 0–255 scale; independently randomized
+Poisson denoising noise and removal of intermediate half-float rounding prevent
+a pixel-identical comparison. Visual review retained edges, foliage and shadows.
+
+Browser checks exercised running, scooter riding/steering/braking, takeoff,
+forward flight and landing at 30 FPS; the live power toggle, expanded map and
+960×600 target resize worked. Active render intervals were approximately
+33.4 ms at 30 FPS and 16.7 ms at 60 FPS; quiet mode reported a 5 FPS target.
+An initially unfocused document reported a zero render target. Deterministic
+scheduler tests cover blur/hidden/resume without catch-up, idle/input transitions,
+mode switches, and pacing at display rates from 59.94 through 165 Hz. The browser
+automation's tab/window visibility controls did not reliably change DOM focus,
+so those controls were not used to claim an OS-level background-power measurement.
+
+TypeScript, lint, production build, offline audit, local-server checks, render
+checks (including actual fused shader submission/pass counts and resize/DPR
+coalescing), 270 physical camera-clearance checks, and the Capitol shader check
+passed. Temporary measurement code was removed from the production entrypoint.
+Local raw evidence is retained under `.work/ao-legacy.*`, `.work/ao-fused.*`,
+`.work/visual-comparison.json`, and `.work/performance-*.json`.

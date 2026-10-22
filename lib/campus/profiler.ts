@@ -79,6 +79,7 @@ export class FrameProfiler {
     }
     this.lastFrameAt = now;
   }
+  resetClock() { this.lastFrameAt = 0; }
   /** Start a fresh measurement window (e.g. after activating a camera shot). */
   mark(label = '') {
     this.markWindow = { startedAt: performance.now(), frames: 0, cpu: [], gpu: [], calls: [], triangles: [], intervals: [], label };

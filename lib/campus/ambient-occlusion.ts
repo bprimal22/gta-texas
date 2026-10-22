@@ -8,6 +8,10 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
  * screen or errors; the 1–3 fps HUD figure was cold shader compilation only.
  * Kill switch: `?occlusion=off` (or set this constant to false). */
 export const CAMPUS_AO_DEFAULT_ENABLED = true;
+export const campusAoRequested = (search: string) => {
+  const mode = new URLSearchParams(search).get('occlusion');
+  return mode === 'on' ? true : mode === 'off' ? false : CAMPUS_AO_DEFAULT_ENABLED;
+};
 
 /** Materials whose colour is captured imagery (scans, photographs) set
  * `material.userData.capturedColor = true`. The pipeline then never wraps
@@ -30,6 +34,7 @@ export class CampusAmbientOcclusion {
    * `?occlusion=off` renders directly with Three's antialiased renderer exactly
    * as before this pass; `?occlusion=on` forces it on. */
   private readonly pipelineRequested: boolean;
+  private readonly fusedOutput: boolean;
   enabled: boolean;
   readonly resolutionScale = .75;
   private readonly size = new THREE.Vector2();
@@ -48,8 +53,8 @@ export class CampusAmbientOcclusion {
     search = typeof location === 'undefined' ? '' : location.search,
   ) {
     const params = new URLSearchParams(search);
-    const mode = params.get('occlusion');
-    this.pipelineRequested = mode === 'on' ? true : mode === 'off' ? false : CAMPUS_AO_DEFAULT_ENABLED;
+    this.fusedOutput = params.get('aocomposite') !== 'legacy';
+    this.pipelineRequested = campusAoRequested(search);
     this.enabled = this.pipelineRequested;
     const msaa = params.get('aomsaa');
     const samples = msaa === '0' ? 0 : Math.min(4, renderer.capabilities.maxSamples);
@@ -74,6 +79,20 @@ export class CampusAmbientOcclusion {
     this.ao.gtaoMaterial.defines.FRAGMENT_OUTPUT =
       'vec4(vec3(mix(1.0, ao, 1.0 - smoothstep(30.0, 65.0, -viewPos.z))), 1.0)';
     this.ao.updatePdMaterial({ radius: 5, samples: 8, rings: 2 });
+    if (this.fusedOutput) {
+      // GTAOPass normally copies full-resolution scene colour to a second
+      // half-float buffer, multiplies AO into it, then OutputPass reads it back.
+      // Apply that same multiplication before the existing output transform:
+      // two fewer full-resolution passes and no composite framebuffer.
+      this.ao.output = GTAOPass.OUTPUT.Off;
+      this.output.uniforms.campusAO = { value: this.ao.pdRenderTarget.texture };
+      this.output.uniforms.campusAOIntensity = { value: 0 };
+      this.output.material.fragmentShader = this.output.material.fragmentShader
+        .replace('uniform sampler2D tDiffuse;', 'uniform sampler2D tDiffuse;\nuniform sampler2D campusAO;\nuniform float campusAOIntensity;')
+        .replace('gl_FragColor = texture2D( tDiffuse, vUv );', `gl_FragColor = texture2D( tDiffuse, vUv );
+          vec4 campusOcclusion = texture2D(campusAO, vUv);
+          gl_FragColor.rgb *= mix(vec3(1.0), campusOcclusion.rgb, campusAOIntensity);`);
+    }
     this.output.renderToScreen = true;
     this.resize();
   }
@@ -133,7 +152,7 @@ export class CampusAmbientOcclusion {
     if (this.color.width === w && this.color.height === h) return;
     this.resizes++;
     this.color.setSize(w, h);
-    this.composite.setSize(w, h);
+    if (!this.fusedOutput) this.composite.setSize(w, h);
     this.ao.setSize(Math.max(1, Math.ceil(w * this.resolutionScale)), Math.max(1, Math.ceil(h * this.resolutionScale)));
   }
 
@@ -194,7 +213,8 @@ export class CampusAmbientOcclusion {
       this.applied = this.enabled && allowOcclusion;
       if (this.applied) this.ao.render(renderer, this.composite, this.color, 0, false);
       renderer.toneMapping = THREE.NoToneMapping;
-      this.output.render(renderer, this.composite, this.applied ? this.composite : this.color, 0, false);
+      if (this.fusedOutput) this.output.uniforms.campusAOIntensity.value = this.applied ? this.ao.blendIntensity : 0;
+      this.output.render(renderer, this.composite, this.applied && !this.fusedOutput ? this.composite : this.color, 0, false);
     } finally {
       renderer.toneMapping = toneMapping;
       renderer.setRenderTarget(target);
@@ -215,6 +235,9 @@ export class CampusAmbientOcclusion {
       occlusionSize: [this.ao.width, this.ao.height],
       colorSamples: this.color.samples,
       sceneGeometryPasses: 1,
+      fusedOutput: this.fusedOutput,
+      fullscreenPasses: this.applied ? this.fusedOutput ? 3 : 5 : 1,
+      compositeSize: [this.composite.width, this.composite.height],
       toneMapping: 'Per lit material; photographed imagery bypasses ACES',
       patchedLitMaterials: this.patchedMaterials,
       capturedColorMaterialsSkipped: this.skippedCaptured,

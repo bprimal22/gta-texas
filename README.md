@@ -303,6 +303,28 @@ context under Node (textures stubbed) and reports:
   at 100 m flight on the M5 Pro) are goals, not yet measured in the browser.
 
 
+## Rendering and power use
+
+Gameplay renders at up to 60 FPS while physics continues at 60 Hz. The **Power
+saver** button limits rendering to 30 FPS with the same resolution, shadows,
+antialiasing, and AO quality (`?fps=30` also selects it on load). The intro,
+expanded map, and settled idle view refresh at 5 FPS. Input wakes the full frame
+rate immediately. Hidden or unfocused windows stop rendering and resume without
+catching up elapsed physics time.
+
+AO is composed during the final output pass: the old full-size copy and blend
+passes and their half-float framebuffer are unnecessary. The scene retains its
+4x MSAA offscreen target; the fullscreen output no longer requests redundant
+canvas MSAA. `?aocomposite=legacy` restores the previous AO composition for
+visual comparisons. Dynamic shadows, scene detail, pixel ratio, lighting, and
+AO sampling settings remain unchanged.
+
+`window.__campus.snapshot().pacing` reports the selected and current frame budget;
+`.timing` reports actual rendered intervals and optional asynchronous GPU
+samples. Unsupported GPU timers report null, rather than zero. Run
+`npm run check:performance` for refresh-rate, idle, pause/resume, and power-mode
+checks; `npm run check:render` also checks the AO pass count and output shader.
+
 ## Cloudflare Pages hosting
 
 The hosted copy is a Direct Upload Pages project named `gtatexas`. Upload the

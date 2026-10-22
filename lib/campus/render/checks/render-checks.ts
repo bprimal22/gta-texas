@@ -19,6 +19,7 @@ import {
   acesFilmic, displayedSky, horizonDisplayHex, linearToSrgb8, luminance, skyIrradiance, skyRadiance, srgbHexToLinear,
 } from '../sky-model';
 import { CampusAmbientOcclusion } from '../../ambient-occlusion';
+import { ViewportSync } from '../viewport';
 import { createCampusGlazing, bindCampusGlassEnvironment } from '../../campus-glass';
 import { CampusLocalReflection } from '../../local-reflection';
 import { buildContactAo } from '../contact-ao';
@@ -317,4 +318,60 @@ export function contactAoSmoke() {
   if (step.stats.quads !== 0) failures.push('band crossed a 2 m step instead of being dropped');
   flat.dispose(); step.dispose();
   return { failures, stats: flat.stats };
+}
+
+/** Exercise both AO output paths against the recording WebGL context. This
+ * validates pass count/target lifetime and compiles the fused output shader;
+ * image equivalence is checked separately with real browser screenshots. */
+export function checkAoOutput() {
+  const rows = [];
+  const failures: string[] = [];
+  for (const search of ['', '?aocomposite=legacy', '?occlusion=off']) {
+    const { canvas, gl, sources } = createRecordingContext();
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas as never, context: gl as never });
+    renderer.setSize(1280, 720, false);
+    const scene = new THREE.Scene();
+    scene.add(new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshBasicMaterial()));
+    const camera = new THREE.PerspectiveCamera(55, 1280/720, .1, 100);
+    camera.position.z = 5;
+    const ao = new CampusAmbientOcclusion(renderer, scene, camera, search);
+    ao.render(true);
+    const snapshot = ao.snapshot();
+    const calls = renderer.info.render.calls;
+    const expected = search.includes('off') ? 1 : search.includes('legacy') ? 6 : 4;
+    if (calls !== expected) failures.push(`${search || 'fused'}: ${calls} draws, expected ${expected}`);
+    if (!search && ao.composite.width !== 1) failures.push('fused output allocated a composite buffer');
+    if (!search && !sources.some((s: {source:string}) => s.source.includes('campusOcclusion'))) failures.push('fused shader was not compiled');
+    ao.render(false);
+    if (ao.output.uniforms.campusAOIntensity && ao.output.uniforms.campusAOIntensity.value !== 0) failures.push('AO stayed enabled in overview');
+    rows.push({ search, calls, ...snapshot });
+    ao.dispose(); renderer.dispose();
+  }
+  return { rows, failures };
+}
+
+export function checkViewportSync() {
+  const failures: string[] = [];
+  const events = new EventTarget(), original = globalThis.window;
+  const fakeWindow = { devicePixelRatio: 2, addEventListener: events.addEventListener.bind(events), removeEventListener: events.removeEventListener.bind(events) };
+  (globalThis as unknown as {window: unknown}).window = fakeWindow;
+  try {
+    let ratio = 1, sizes = 0, callbacks = 0;
+    const size = new THREE.Vector2();
+    const renderer = { getSize: (out: THREE.Vector2) => out.copy(size), getPixelRatio: () => ratio,
+      setPixelRatio: (v: number) => { ratio = v; }, setSize: (w: number, h: number) => { size.set(w,h); sizes++; } };
+    const host = { clientWidth: 1280, clientHeight: 720 }, camera = new THREE.PerspectiveCamera();
+    const viewport = new ViewportSync(renderer as unknown as THREE.WebGLRenderer, camera, host as HTMLElement, () => { callbacks++; });
+    viewport.apply();
+    if (ratio !== 1.5 || sizes !== 1) failures.push('initial HiDPI size/cap incorrect');
+    host.clientWidth = 960; host.clientHeight = 600;
+    for (let i=0; i<20; i++) events.dispatchEvent(new Event('resize'));
+    viewport.apply(); viewport.apply();
+    if (sizes !== 2 || callbacks !== 2 || camera.aspect !== 1.6) failures.push('resize burst was not coalesced');
+    fakeWindow.devicePixelRatio = 1;
+    events.dispatchEvent(new Event('resize')); viewport.apply();
+    if (Number(ratio) !== 1 || Number(sizes) !== 3) failures.push('DPR change did not update target sizing');
+    viewport.dispose();
+    return { failures, sizes, callbacks };
+  } finally { (globalThis as unknown as {window:unknown}).window = original; }
 }

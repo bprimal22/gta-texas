@@ -1,3 +1,4 @@
+import { FramePacing } from './render/frame-pacing';
 import * as THREE from 'three';
 import { PERSONAL_CHARACTER_URL } from './character-asset';
 import RAPIER from '@dimforge/rapier3d-compat';
@@ -24,7 +25,7 @@ import { ContactShadow } from './contact-shadow';
 import { bindCampusGlassEnvironment, createCampusGlazing, setCampusGlassEnvironment } from './campus-glass';
 import { POB_GLASS_NAME, POB_GLASS_SKY_INTENSITY } from './pob-glass';
 import { CampusLocalReflection } from './local-reflection';
-import { CampusAmbientOcclusion } from './ambient-occlusion';
+import { CampusAmbientOcclusion, campusAoRequested } from './ambient-occlusion';
 import { CampusLighting } from './render/lighting';
 import { CameraShotController } from './render/camera-shots';
 import { ViewportSync } from './render/viewport';
@@ -162,6 +163,8 @@ export class CampusGame {
   disposed = false;
   ready = false;
   raf = 0;
+  private readonly pacing = new FramePacing(location.search);
+  private interactedAt = performance.now();
   signal = new AbortController();
   last = performance.now();
   accumulator = 0;
@@ -189,7 +192,9 @@ export class CampusGame {
     private report: (s: GameStatus) => void,
   ) {
     this.renderer = new THREE.WebGLRenderer({
-      antialias: true,
+      // AO already resolves scene edges with 4x MSAA. The final fullscreen
+      // triangle needs no second multisampled default framebuffer.
+      antialias: !campusAoRequested(location.search),
       powerPreference: 'high-performance',
     });
     this.profiler = new FrameProfiler(
@@ -204,7 +209,7 @@ export class CampusGame {
     this.renderer.domElement.tabIndex = 0;
     this.renderer.domElement.setAttribute(
       'aria-label',
-      'UT Austin exploration game. WASD to move; Shift boosts flight. Hold G or Up arrow to rise and C, Control or Down arrow to land; release to hover. Flight is capped at 100 metres. Space also flies up. F mounts or dismounts the scooter. Drag mouse to look.',
+      'UT Austin exploration game. Arrow keys run and steer; Shift boosts flight. Hold W to rise and Down arrow to descend; release to hover. Flight is capped at 100 metres. Space also flies up. F mounts or dismounts the scooter. Drag mouse to look.',
     );
     this.host.appendChild(this.renderer.domElement);
     this.camera.aspect = host.clientWidth / host.clientHeight;
@@ -718,6 +723,7 @@ export class CampusGame {
     };
     this.report({
       ready: this.ready,
+      powerSaving: this.pacing.playFps === 30,
       location: 'Speedway · Gates-Dell',
       speed: 0,
       fps: 0,
@@ -740,7 +746,11 @@ export class CampusGame {
       }
     );
   }
+  setPowerSaving(enabled: boolean) {
+    this.pacing.setPowerSaving(enabled); this.interactedAt = performance.now(); this.lastHud = 0;
+  }
   play() {
+    this.interactedAt = performance.now(); this.pacing.reset();
     this.active = true;
     this.renderer.domElement.focus();
   }
@@ -834,6 +844,18 @@ export class CampusGame {
     const options = { signal: this.signal.signal };
     const canvas = this.renderer.domElement;
     let dragging = false;
+    const wake = () => { this.interactedAt = performance.now(); };
+    for (const event of ['keydown', 'keyup', 'pointerdown', 'wheel'])
+      window.addEventListener(event, wake, { ...options, passive: true });
+    window.addEventListener('pointermove', () => {
+      if (dragging || document.pointerLockElement === canvas) wake();
+    }, { ...options, passive: true });
+    const resume = () => {
+      wake(); this.pacing.reset(); this.accumulator = 0;
+      this.last = performance.now(); this.fpsSamples = []; this.profiler.resetClock();
+      this.previousPosition.copy(this.body?.translation() ?? this.spawn);
+    };
+    window.addEventListener('focus', resume, options);
     window.addEventListener(
       'keydown',
       (e) => {
@@ -939,6 +961,7 @@ export class CampusGame {
       () => {
         if (document.hidden) clear();
         this.last = performance.now();
+        resume();
       },
       options,
     );
@@ -1086,6 +1109,7 @@ export class CampusGame {
     this.lastHud = 0;
   }
   beginFlightHold(direction: 'up' | 'down' = 'up') {
+    this.interactedAt = performance.now();
     if (!this.ready || !this.active || this.overview || this.mapExpanded || this.travel) return;
     if (this.flightHolding && this.flightHoldDirection === direction) return;
     if(direction === 'down' && !this.flight.active)return;
@@ -1411,10 +1435,17 @@ export class CampusGame {
     const cpuFrameStart = performance.now();
     if (this.disposed) return;
     this.raf = requestAnimationFrame(this.tick);
-    const rawElapsed = Math.max(0, (now - this.last) / 1000),
-      elapsed = Math.min(rawElapsed, 0.1);
+    const moving = this.keys.size > 0 || this.jumpQueued || this.flightHolding
+      || this.velocity.lengthSq() > .01 || (!this.grounded && !this.flight.active)
+      || (this.scooter.mounted && this.scooter.actualSpeed > .02);
+    const quiet = !this.cameraShots.active && !this.travel && (!this.active || this.mapExpanded || (!moving && now - this.interactedAt > 2500));
+    const elapsed = this.pacing.sample(now, { hidden: document.hidden, focused: document.hasFocus(), quiet });
+    if (elapsed === null) {
+      if (document.hidden || !document.hasFocus()) this.accumulator = 0;
+      return;
+    }
+    const rawElapsed = Math.max(0, (now - this.last) / 1000);
     this.last = now;
-    if (document.hidden) return;
     this.viewport.apply();
     if (this.travel) {
       this.updateTravel(now);
@@ -1426,7 +1457,7 @@ export class CampusGame {
       this.ambientOcclusion.render(false);
       if (now - this.lastHud > 250) {
         this.lastHud = now;
-        this.report({ ready: this.ready, location: 'UT Austin', speed: 0, fps: 0,
+        this.report({ ready: this.ready, powerSaving: this.pacing.playFps === 30, location: 'UT Austin', speed: 0, fps: 0,
           mode: 'Travel', mapExpanded: this.mapExpanded, traveling: !!this.travel,
           travelMessage: this.travelMessage, offline: this.offline,
           imagery: this.imagerySnapshot() });
@@ -1536,6 +1567,7 @@ export class CampusGame {
         fps = 1000 / (recent.reduce((a, b) => a + b, 0) / recent.length);
       this.report({
         ready: true,
+        powerSaving: this.pacing.playFps === 30,
         location,
         speed: Math.hypot(this.velocity.x, this.velocity.z),
         fps,
@@ -1699,6 +1731,7 @@ export class CampusGame {
         sampleCount: a.length,
       },
       timing: this.profiler.snapshot(),
+      pacing: this.pacing.snapshot(),
       render: this.renderer.info.render,
       memory: this.renderer.info.memory,
       // GIS footprint counts do not establish rendered building coverage.
