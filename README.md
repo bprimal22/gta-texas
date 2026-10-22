@@ -305,9 +305,9 @@ context under Node (textures stubbed) and reports:
 
 ## Rendering and power use
 
-Gameplay renders at up to 60 FPS while physics continues at 60 Hz. The **Power
-saver** button limits rendering to 30 FPS with the same resolution, shadows,
-antialiasing, and AO quality (`?fps=30` also selects it on load). The intro,
+Gameplay defaults to **Power saver on (30 FPS)** while physics continues at
+60 Hz. Turn Power saver off for up to 60 FPS (`?fps=60` also selects it on load).
+Both modes use the same resolution, shadows, antialiasing, and AO quality. The intro,
 expanded map, and settled idle view refresh at 5 FPS. Input wakes the full frame
 rate immediately. Hidden or unfocused windows stop rendering and resume without
 catching up elapsed physics time.

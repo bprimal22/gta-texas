@@ -13,7 +13,9 @@ for(const refresh of [59.94,60,90,120,144,165]) {
   assert(elapsed>9.9 && elapsed<=10, 'active simulation follows real time');
  }
 }
-const p=new FramePacing();
+assert.equal(new FramePacing().playFps,30,'power saver defaults on for fresh loads');
+assert.equal(new FramePacing('?fps=garbage').playFps,30);
+const p=new FramePacing('?fps=60');
 assert.equal(p.sample(0,active),0);
 assert.equal(p.sample(10,{...active,focused:false}),null);
 assert.equal(p.sample(100000,{...active,hidden:true}),null);
@@ -24,7 +26,6 @@ assert.equal(p.sample(100200,{...active,quiet:true}),null);
 assert(p.sample(100318,{...active,quiet:true})!==null);
 assert.equal(p.sample(100319,active),0,'input wakes quiet mode immediately');
 assert.equal(p.snapshot().targetFps,60);
-assert.equal(new FramePacing('?fps=garbage').playFps,60);
 p.setPowerSaving(true);
 assert.equal(p.playFps,30);
 assert.equal(p.sample(100320,active),0);

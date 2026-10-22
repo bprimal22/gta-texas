@@ -10,7 +10,7 @@ export class FramePacing {
   skipped = 0;
   playFps: number;
   constructor(search = '') {
-    this.playFps = new URLSearchParams(search).get('fps') === '30' ? 30 : 60;
+    this.playFps = new URLSearchParams(search).get('fps') === '60' ? 60 : 30;
   }
   sample(now: number, state: { hidden: boolean; focused: boolean; quiet: boolean }) {
     const rate = state.hidden || !state.focused ? 0 : state.quiet ? 5 : this.playFps;

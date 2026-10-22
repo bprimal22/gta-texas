@@ -4,12 +4,14 @@ import Link from '@/web/link';
 import { Button } from '@/components/ui/button';
 import type { CampusGame } from '@/lib/campus/game';
 import type { GameStatus } from '@/lib/campus/types';
+const initialPowerSaving = () => typeof window === 'undefined' || new URLSearchParams(window.location.search).get('fps') !== '60';
 export default function Home() {
   const host = useRef<HTMLDivElement>(null),
     map = useRef<HTMLCanvasElement>(null),
     game = useRef<CampusGame | null>(null);
   const [status, setStatus] = useState<GameStatus>({
       ready: false,
+      powerSaving: initialPowerSaving(),
       location: 'Speedway',
       speed: 0,
       fps: 0,
@@ -30,6 +32,7 @@ export default function Home() {
         setPlaying(false);
         setStatus({
           ready: false,
+          powerSaving: initialPowerSaving(),
           location: 'Speedway',
           speed: 0,
           fps: 0,

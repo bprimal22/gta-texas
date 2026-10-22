@@ -97,3 +97,7 @@ coalescing), 270 physical camera-clearance checks, and the Capitol shader check
 passed. Temporary measurement code was removed from the production entrypoint.
 Local raw evidence is retained under `.work/ao-legacy.*`, `.work/ao-fused.*`,
 `.work/visual-comparison.json`, and `.work/performance-*.json`.
+
+Power saver now defaults to on (30 FPS) on each new load, including the loading
+control label. The button can still select 60 FPS; `?fps=60` explicitly overrides
+the default. The existing pacing suite checks the default and both budgets.
