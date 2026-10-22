@@ -1,5 +1,7 @@
 # GTA Texas — Offline Campus Explorer
 
+**Play online:** [gtatexas.pages.dev](https://gtatexas.pages.dev/)
+
 An unofficial, standalone UT Austin campus explorer built with Three.js:
 a personal character, walking, scooter, flight, travel map and overview,
 on a campus built only from files in this repository. This project is not
@@ -299,3 +301,20 @@ context under Node (textures stubbed) and reports:
 * The JavaScript bundle is large (≈6 MB) and a cold load spends a few seconds
   generating context and trees. Performance targets (60 fps hero route, ≥45 fps
   at 100 m flight on the M5 Pro) are goals, not yet measured in the browser.
+
+
+## Cloudflare Pages hosting
+
+The hosted copy is a Direct Upload Pages project named `gtatexas`. Upload the
+contents of `dist/` (or a ZIP with `index.html` at its root) to deploy the same
+prebuilt game. This project currently uses manual deployments; pushing to GitHub
+does not automatically update Cloudflare.
+
+`public/_headers` is copied into `dist/` during a build and keeps the same-origin
+security policy used by the local server. Pages serves the character viewer at
+`/character` using its default SPA fallback; no rewrite to `/index.html` is
+needed because Pages canonicalizes that path to `/`.
+
+The hosted copy needs internet to download its bundled files. For fully offline
+play, download/clone the repository and use `npm start` locally. Neither version
+uses Cesium tokens or streamed provider tiles.
