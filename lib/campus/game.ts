@@ -1564,7 +1564,7 @@ export class CampusGame {
       // deep-west extension it would name a distant core landmark.
       if (this.deepWest?.contains(p.x, p.z)) location = 'West Campus';
       const recent = this.fpsSamples.slice(-60),
-        fps = 1000 / (recent.reduce((a, b) => a + b, 0) / recent.length);
+        fps = recent.length ? 1000 / (recent.reduce((a, b) => a + b, 0) / recent.length) : 0;
       this.report({
         ready: true,
         powerSaving: this.pacing.playFps === 30,
