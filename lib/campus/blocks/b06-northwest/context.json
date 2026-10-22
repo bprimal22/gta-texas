@@ -1,0 +1,1861 @@
+{
+ "block": "b06-northwest",
+ "footprints": {
+  "547842:357": {
+   "rings": [
+    [
+     [
+      -250.58,
+      -523.77
+     ],
+     [
+      -249.83,
+      -532.2
+     ],
+     [
+      -262.93,
+      -533.37
+     ],
+     [
+      -265.59,
+      -503.59
+     ],
+     [
+      -270.04,
+      -503.99
+     ],
+     [
+      -274.66,
+      -452.26
+     ],
+     [
+      -274.87,
+      -449.87
+     ],
+     [
+      -270.42,
+      -449.47
+     ],
+     [
+      -272.91,
+      -421.57
+     ],
+     [
+      -261.24,
+      -420.55
+     ],
+     [
+      -260.82,
+      -425.46
+     ],
+     [
+      -233.79,
+      -423.16
+     ],
+     [
+      -234.13,
+      -419.21
+     ],
+     [
+      -232.29,
+      -419.05
+     ],
+     [
+      -222.64,
+      -418.23
+     ],
+     [
+      -222.3,
+      -422.18
+     ],
+     [
+      -203.42,
+      -420.58
+     ],
+     [
+      -202.83,
+      -427.58
+     ],
+     [
+      -205.92,
+      -427.84
+     ],
+     [
+      -205.53,
+      -432.33
+     ],
+     [
+      -221.33,
+      -433.67
+     ],
+     [
+      -219.49,
+      -455.35
+     ],
+     [
+      -205.22,
+      -454.14
+     ],
+     [
+      -202.38,
+      -487.99
+     ],
+     [
+      -215.97,
+      -489.21
+     ],
+     [
+      -214.33,
+      -507.52
+     ],
+     [
+      -197.6,
+      -506.02
+     ],
+     [
+      -196.43,
+      -519.09
+     ],
+     [
+      -213.17,
+      -520.53
+     ],
+     [
+      -212.43,
+      -528.84
+     ],
+     [
+      -225.5,
+      -530.01
+     ],
+     [
+      -226.25,
+      -521.67
+     ]
+    ],
+    [
+     [
+      -251.87,
+      -510.75
+     ],
+     [
+      -227.43,
+      -508.56
+     ],
+     [
+      -228.86,
+      -492.52
+     ],
+     [
+      -253.3,
+      -494.71
+     ]
+    ],
+    [
+     [
+      -256.19,
+      -446.24
+     ],
+     [
+      -238.36,
+      -444.65
+     ],
+     [
+      -237.79,
+      -450.97
+     ],
+     [
+      -231.42,
+      -450.4
+     ],
+     [
+      -232.84,
+      -434.56
+     ],
+     [
+      -260.08,
+      -436.99
+     ],
+     [
+      -258.76,
+      -451.8
+     ],
+     [
+      -255.72,
+      -451.52
+     ]
+    ]
+   ],
+   "evidence": {
+    "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json) objectId 400 KIN (outer ring + 2 courtyards); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/KIN/ (fetched 2026-10-20: 6 floors, 233,937 GSF, UT building since 1958)",
+    "basis": "official",
+    "note": "Official outline replaces the City ring (City 6,088 m2 net with courtyards of 269/309 m2; official 5,741 m2 with courtyards of 395/318 m2; IoU 0.92). City/UT registration scatter in this block is 0.1-3.5 m (centroid offsets, derived/analyse.py), so this is an identity/shape correction, not survey precision."
+   }
+  }
+ },
+ "catalog": {
+  "718326": {
+   "abbr": "CSS",
+   "archetype": "shed",
+   "basis": "known",
+   "district": "core",
+   "note": "Carothers Dorm Substation (UT CSS, 2501 Whitis Ave, 1 floor, 150 GSF, 2011)",
+   "evidence": {
+    "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json) objectId 544 CSS covers 66% of this City ring; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CSS/ (fetched 2026-10-20: 1 floors, 150 GSF, UT building since 2011)",
+    "basis": "official",
+    "note": "Identity from the official polygon; finish is the generic shed archetype (estimate)."
+   }
+  },
+  "529270": {
+   "archetype": "cret-core",
+   "basis": "estimate",
+   "district": "core",
+   "overrides": {
+    "wallFamily": "limestone",
+    "wallColor": "#d9cdb2"
+   },
+   "note": "University United Methodist Church sanctuary, 2409 Guadalupe St (1907-09, Frederick M. Mann; Romanesque Revival, light Central Texas limestone, red clay tile roof, tower)",
+   "evidence": {
+    "source": "https://en.wikipedia.org/wiki/University_United_Methodist_Church ; https://guidetoaustinarchitecture.com/places/university-united-methodist-church/ ; https://heimsath.com/project/university-united-methodist-church/ ; https://www.uumc.org/our-history (all fetched 2026-10-20); OSM way 382075766",
+    "basis": "reference-interpreted",
+    "note": "Identity/material from text sources. Archetype = tile-roofed core idiom with a limestone wall override: a style approximation (round arches, rusticated stone, gables not modelled). Was master-plan district default (buff brick, flat)."
+   }
+  },
+  "614690": {
+   "archetype": "wc-midrise",
+   "basis": "estimate",
+   "district": "north-university",
+   "overrides": {
+    "wallFamily": "brownBrick",
+    "storefront": false
+   },
+   "note": "Moxy Austin-University hotel, 2552 Guadalupe St (HKS; opened 13 Jan 2021; 5 storeys over 2 below-grade parking levels; metal panel + brick, flat TPO roof)",
+   "evidence": {
+    "source": "https://www.harveycleary.com/projects/moxy-hotel/ ; https://www.hospitalitynet.org/announcement/41005749/moxy-austin---university.html (fetched 2026-10-20); 2017 LiDAR covers only 15% of the City 2023 ring (built after the capture)",
+    "basis": "reference-interpreted",
+    "note": "Post-2017 building: height stays the City 2023 footprint h (22.38 m, not LiDAR); wall family brick (metal panels not representable). Storefront off: hotel lobby, not retail (estimate)."
+   }
+  },
+  "590680": {
+   "archetype": "b06-northwest:gordon-white-limestone",
+   "basis": "known",
+   "note": "Gordon-White Building: limestone (D12 photo-interpreted; was buff-brick core idiom)",
+   "evidence": {
+    "source": "research/whole-campus-92/screenshot-dataset/online-photos/ut-gwb-410-directory-photo.jpg",
+    "basis": "reference-interpreted",
+    "note": "Facade only. Parapet kept equal to the previous archetype so the measured LiDAR roof top is unchanged."
+   }
+  },
+  "462945": {
+   "archetype": "b06-northwest:dealey-frame",
+   "basis": "known",
+   "note": "Dealey Center for New Media: stone frame + glazed bays (D11 photo-interpreted)",
+   "evidence": {
+    "source": "research/whole-campus-92/screenshot-dataset/online-photos/ut-dmc-656-directory-photo.jpg",
+    "basis": "reference-interpreted",
+    "note": "Facade only. Parapet kept equal to the previous archetype so the measured LiDAR roof top is unchanged."
+   }
+  }
+ },
+ "massing": {
+  "462945:4": {
+   "datum": {
+    "aboveY": 17.6
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 10.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        -382.62,
+        -447.69
+       ],
+       [
+        -379.91,
+        -476.52
+       ],
+       [
+        -361.52,
+        -475.69
+       ],
+       [
+        -360.28,
+        -474.27
+       ],
+       [
+        -360.78,
+        -465.74
+       ],
+       [
+        -356.32,
+        -464.25
+       ],
+       [
+        -359.29,
+        -458.8
+       ],
+       [
+        -358.04,
+        -456.5
+       ],
+       [
+        -353.5,
+        -458.02
+       ],
+       [
+        -347.98,
+        -456.51
+       ],
+       [
+        -346.62,
+        -457.76
+       ],
+       [
+        -346.12,
+        -461.83
+       ],
+       [
+        -347.47,
+        -463.18
+       ],
+       [
+        -355.01,
+        -463.35
+       ],
+       [
+        -351.62,
+        -465.25
+       ],
+       [
+        -351.12,
+        -473.77
+       ],
+       [
+        -349.5,
+        -475.86
+       ],
+       [
+        -349.57,
+        -474.72
+       ],
+       [
+        -306.57,
+        -471.16
+       ],
+       [
+        -307.82,
+        -451.88
+       ],
+       [
+        -314.57,
+        -451.86
+       ],
+       [
+        -315.35,
+        -442.38
+       ]
+      ]
+     ],
+     "bottom": 10.9,
+     "top": 24.7,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        -354.6,
+        -459.04
+       ],
+       [
+        -357.68,
+        -457.71
+       ],
+       [
+        -358.15,
+        -458.38
+       ],
+       [
+        -354.93,
+        -464.83
+       ],
+       [
+        -359.83,
+        -466.46
+       ],
+       [
+        -360.22,
+        -474.87
+       ],
+       [
+        -357.61,
+        -474.94
+       ],
+       [
+        -357.19,
+        -479.18
+       ],
+       [
+        -350.13,
+        -478.49
+       ],
+       [
+        -350.37,
+        -475.65
+       ],
+       [
+        -352.08,
+        -474.24
+       ],
+       [
+        -352.57,
+        -465.84
+       ],
+       [
+        -357.38,
+        -462.75
+       ],
+       [
+        -348.08,
+        -462.21
+       ],
+       [
+        -347.19,
+        -460.29
+       ],
+       [
+        -348.24,
+        -457.82
+       ]
+      ]
+     ],
+     "bottom": 10.9,
+     "top": 28.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 462945 (USGS 3DEP TX_Central_B1_2017; groundY 17.6, P50 24.7, P95 28.6, max 30.2, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/DMC/ (fetched 2026-10-20: 8 floors, 126,077 GSF, UT building since 2009)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar-tiers, archetype master-plan) restated above the LiDAR groundY 17.6 instead of the generator grade (baked-ground median around the ring ~18.34 campus Y, +0.7 m). Identity DMC (UT GIS objectId 656 overlaps 85% of the ring); 10.9 m south wing base, 24.7 m main slab, 28.6 m stair/mech tower (LiDAR tiers)."
+   }
+  },
+  "487225:120": {
+   "datum": {
+    "aboveY": 17.0
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 487225 (USGS 3DEP TX_Central_B1_2017; groundY 17.0, P50 2.9, P95 4.5, max 4.7, flat 0.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype utility) restated above the LiDAR groundY 17.0 instead of the generator grade (baked-ground median around the ring ~16.78 campus Y, -0.2 m). Unnamed 52 m2 service structure (no UT GIS building)."
+   }
+  },
+  "502047:147": {
+   "datum": {
+    "aboveY": 15.0
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 5.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        -476.48,
+        -344.77
+       ],
+       [
+        -474.03,
+        -373.33
+       ],
+       [
+        -431.51,
+        -370.52
+       ],
+       [
+        -424.22,
+        -368.7
+       ],
+       [
+        -425.19,
+        -355.67
+       ],
+       [
+        -446.99,
+        -359.68
+       ],
+       [
+        -464.04,
+        -359.18
+       ],
+       [
+        -465.79,
+        -357.33
+       ],
+       [
+        -464.78,
+        -351.81
+       ],
+       [
+        -466.29,
+        -347.29
+       ],
+       [
+        -464.36,
+        -343.65
+       ]
+      ]
+     ],
+     "bottom": 5.9,
+     "top": 9.2,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        -463.96,
+        -343.62
+       ],
+       [
+        -466.11,
+        -346.32
+       ],
+       [
+        -464.62,
+        -351.8
+       ],
+       [
+        -465.61,
+        -357.27
+       ],
+       [
+        -463.97,
+        -359.02
+       ],
+       [
+        -457.48,
+        -358.52
+       ],
+       [
+        -454.98,
+        -360.02
+       ],
+       [
+        -425.17,
+        -355.96
+       ],
+       [
+        -425.28,
+        -354.44
+       ],
+       [
+        -422.76,
+        -353.74
+       ],
+       [
+        -423.78,
+        -341.38
+       ]
+      ]
+     ],
+     "bottom": 5.9,
+     "top": 16.1,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        -440.73,
+        -401.43
+       ],
+       [
+        -439.79,
+        -414.02
+       ],
+       [
+        -433.36,
+        -414.19
+       ],
+       [
+        -432.63,
+        -413.46
+       ],
+       [
+        -433.54,
+        -401.58
+       ],
+       [
+        -438.73,
+        -400.77
+       ]
+      ]
+     ],
+     "bottom": 5.9,
+     "top": 8.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 502047 (USGS 3DEP TX_Central_B1_2017; groundY 15.0, P50 9.1, P95 17.5, max 21.9, flat 0.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/WWH/ (fetched 2026-10-20: 4 floors, 43,060 GSF, UT building since 1973)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar-tiers, archetype cret-residence) restated above the LiDAR groundY 15.0 instead of the generator grade (baked-ground median around the ring ~16.32 campus Y, +1.3 m). City ring = WWH (UT GIS 624, 97% of it inside) + an unnamed one-storey building to the north (LiDAR tier 5.9 m, x-447..-418 z-430..-368); tiers 9.2/16.1 m are WWH."
+   }
+  },
+  "551320:432": {
+   "datum": {
+    "aboveY": 16.6
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 17.1,
+     "roof": "hip-tile",
+     "slope": 0.501,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 551320 (USGS 3DEP TX_Central_B1_2017; groundY 16.6, P50 14.8, P95 16.7, max 17.1, pitched 26.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CRD/ (fetched 2026-10-20: 4 floors, 39,649 GSF, UT building since 1937)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype cret-residence) restated above the LiDAR groundY 16.6 instead of the generator grade (baked-ground median around the ring ~17.97 campus Y, +1.4 m). Carothers (Cret/Ayres 1935): single hip-tile ridge at LiDAR max (17.1 m above groundY = 33.7 campus Y)."
+   }
+  },
+  "654063:872": {
+   "datum": {
+    "aboveY": 13.9
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 19.3,
+     "roof": "hip-tile",
+     "slope": 0.49,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 654063 (USGS 3DEP TX_Central_B1_2017; groundY 13.9, P50 16.5, P95 18.1, max 19.3, pitched 26.1 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/LTD/ (fetched 2026-10-20: 5 floors, 57,334 GSF, UT building since 1927)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype cret-residence) restated above the LiDAR groundY 13.9 instead of the generator grade (baked-ground median around the ring ~15.15 campus Y, +1.2 m). Littlefield Residence Hall (Greene 1926): hip-tile ridge at LiDAR max (19.3 m)."
+   }
+  },
+  "675128:957": {
+   "datum": {
+    "aboveY": 14.8
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 15.6,
+     "roof": "hip-tile",
+     "slope": 0.396,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 675128 (USGS 3DEP TX_Central_B1_2017; groundY 14.8, P50 12.9, P95 14.1, max 15.6, pitched 21.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype master-plan) restated above the LiDAR groundY 14.8 instead of the generator grade (baked-ground median around the ring ~16.08 campus Y, +1.3 m). Unnamed (no UT GIS building); hip-tile ridge 15.6 m = LiDAR max."
+   }
+  },
+  "676647:976": {
+   "datum": {
+    "aboveY": 17.2
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 11.2,
+     "roof": "hip-metal",
+     "slope": 0.483,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 676647 (USGS 3DEP TX_Central_B1_2017; groundY 17.2, P50 9.5, P95 10.7, max 11.2, pitched 25.8 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/LCH/ (fetched 2026-10-20: 2 floors, 3,274 GSF, UT building since 1894)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype historic-19c) restated above the LiDAR groundY 17.2 instead of the generator grade (baked-ground median around the ring ~18.1 campus Y, +0.9 m). Littlefield Carriage House (Wahrenberger 1893): hip ridge 11.2 m = LiDAR max."
+   }
+  },
+  "699274:1053": {
+   "datum": {
+    "aboveY": 16.4
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 6.8,
+     "roof": "hip-shingle",
+     "slope": 0.468,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 699274 (USGS 3DEP TX_Central_B1_2017; groundY 16.4, P50 4.5, P95 6.0, max 6.8, mixed 25.1 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY 16.4 instead of the generator grade (baked-ground median around the ring ~17.16 campus Y, +0.8 m). Unnamed small house west of Guadalupe."
+   }
+  },
+  "718326:1174": {
+   "datum": {
+    "aboveY": 18.6
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 3.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 718326 (USGS 3DEP TX_Central_B1_2017; groundY 18.6, P50 3.6, P95 3.7, max 3.7, flat 1.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CSS/ (fetched 2026-10-20: 1 floors, 150 GSF, UT building since 2011)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY 18.6 instead of the generator grade (baked-ground median around the ring ~18.85 campus Y, +0.2 m). Identity CSS Carothers Dorm Substation (UT GIS 544, 1 floor, 2011)."
+   }
+  },
+  "504340:183": {
+   "datum": {
+    "aboveY": 15.9
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.2,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -400.48,
+       -310.96
+      ],
+      [
+       -374.26,
+       -308.59
+      ],
+      [
+       -368.26,
+       -378.98
+      ],
+      [
+       -394.77,
+       -381.24
+      ]
+     ],
+     "bottom": 4.2,
+     "top": 33.58,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "ring": [
+      [
+       -360.72,
+       -369.65
+      ],
+      [
+       -360.0,
+       -369.59
+      ],
+      [
+       -360.21,
+       -367.2
+      ],
+      [
+       -360.95,
+       -367.26
+      ],
+      [
+       -361.33,
+       -362.62
+      ],
+      [
+       -361.84,
+       -362.67
+      ],
+      [
+       -363.09,
+       -347.92
+      ],
+      [
+       -325.89,
+       -344.77
+      ],
+      [
+       -322.28,
+       -386.8
+      ],
+      [
+       -359.08,
+       -389.94
+      ]
+     ],
+     "bottom": 4.2,
+     "top": 22.99,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "ring": [
+      [
+       -364.65,
+       -322.81
+      ],
+      [
+       -366.23,
+       -304.86
+      ],
+      [
+       -365.82,
+       -304.48
+      ],
+      [
+       -329.65,
+       -301.3
+      ],
+      [
+       -328.13,
+       -319.26
+      ],
+      [
+       -364.48,
+       -322.38
+      ]
+     ],
+     "bottom": 4.2,
+     "top": 11.85,
+     "roof": "flat",
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 504340 (USGS 3DEP TX_Central_B1_2017; groundY 15.9, P50 23.0, P95 33.6, max 44.9, flat 0.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CMB/ (fetched 2026-10-20: 10 floors, 122,236 GSF, UT building since 1973); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CMA/ (fetched 2026-10-20: 9 floors, 111,623 GSF, UT building since 1973); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/HSM/ (fetched 2026-10-20: 4 floors, 26,033 GSF, UT building since 1973)",
+    "basis": "measured",
+    "note": "One City polygon merges three official buildings: CMB (UT GIS 654, 10 floors), CMA (655, 9 floors) and HSM Hearst (653, 4 floors), Ford, Powell and Carson 1973. Base: flat 4.2 m deck/podium over the whole City ring (LiDAR tier 4.2 m, 1,604 m2 between the three buildings). Wings (official UT GIS polygon intersected with the City ring, 0.08 m inset; heights from the raster inside each wing, above LiDAR groundY 15.9): CMB: flat top 33.58 m (raster roofY_P50 49.48 campus Y); CMA: flat top 22.99 m (raster roofY_P50 38.89 campus Y); HSM: flat top 11.85 m (raster roofY_P50 27.75 campus Y)."
+   }
+  },
+  "549050:385": {
+   "datum": {
+    "aboveY": 12.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 6.1,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -287.72,
+       -227.39
+      ],
+      [
+       -287.46,
+       -227.37
+      ],
+      [
+       -288.16,
+       -219.19
+      ],
+      [
+       -277.62,
+       -218.3
+      ],
+      [
+       -276.86,
+       -227.14
+      ],
+      [
+       -243.28,
+       -224.27
+      ],
+      [
+       -243.28,
+       -238.13
+      ],
+      [
+       -243.41,
+       -236.63
+      ],
+      [
+       -276.01,
+       -239.43
+      ],
+      [
+       -275.97,
+       -239.88
+      ],
+      [
+       -286.67,
+       -240.8
+      ]
+     ],
+     "bottom": 6.1,
+     "top": 21.52,
+     "roof": "hip-tile",
+     "role": "tier",
+     "slope": 0.479
+    },
+    {
+     "ring": [
+      [
+       -222.44,
+       -252.61
+      ],
+      [
+       -232.64,
+       -253.51
+      ],
+      [
+       -233.6,
+       -242.51
+      ],
+      [
+       -242.84,
+       -243.32
+      ],
+      [
+       -243.12,
+       -224.26
+      ],
+      [
+       -241.44,
+       -224.11
+      ],
+      [
+       -241.68,
+       -221.33
+      ],
+      [
+       -231.34,
+       -220.46
+      ],
+      [
+       -231.11,
+       -223.19
+      ],
+      [
+       -230.78,
+       -223.16
+      ],
+      [
+       -230.73,
+       -223.74
+      ],
+      [
+       -220.93,
+       -222.9
+      ],
+      [
+       -219.08,
+       -246.91
+      ],
+      [
+       -219.08,
+       -253.52
+      ],
+      [
+       -222.36,
+       -253.52
+      ]
+     ],
+     "bottom": 6.1,
+     "top": 9.12,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "ring": [
+      [
+       -222.34,
+       -253.68
+      ],
+      [
+       -210.06,
+       -253.68
+      ],
+      [
+       -209.21,
+       -263.38
+      ],
+      [
+       -209.81,
+       -263.43
+      ],
+      [
+       -206.48,
+       -301.4
+      ],
+      [
+       -205.87,
+       -301.34
+      ],
+      [
+       -204.82,
+       -313.41
+      ],
+      [
+       -205.43,
+       -313.46
+      ],
+      [
+       -205.06,
+       -317.4
+      ],
+      [
+       -216.71,
+       -318.41
+      ]
+     ],
+     "bottom": 6.1,
+     "top": 20.32,
+     "roof": "hip-tile",
+     "role": "tier",
+     "slope": 0.479
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 549050 (USGS 3DEP TX_Central_B1_2017; groundY 12.5, P50 17.8, P95 20.5, max 22.9, pitched 25.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/AND/ (fetched 2026-10-20: 5 floors, 41,221 GSF, UT building since 1936); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/BLD/ (fetched 2026-10-20: 7 floors, 69,754 GSF, UT building since 1955)",
+    "basis": "measured",
+    "note": "One City polygon merges Andrews (UT GIS 398, 1936, Cret/White) and Blanton (UT GIS 452, 1955, Lemmon). The generator put ONE hipped roof over the whole L (ridge 22 m above grade = 36.8 campus Y, a plateau 3.5 m above the LiDAR max). Base: flat 6.1 m over the City ring (LiDAR tier 6.1 m at the AND/BLD junction). Wings (official UT GIS polygon intersected with the City ring, 0.08 m inset; heights from the raster inside each wing, above LiDAR groundY 12.5): AND-west: hip-tile top 21.52 m (raster roofY_P95 34.02 campus Y); junction: flat top 9.12 m (raster roofY_P50 21.62 campus Y); BLD-north: hip-tile top 20.32 m (raster roofY_P95 32.82 campus Y)."
+   }
+  },
+  "590680:607": {
+   "datum": {
+    "aboveY": 14.4
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 8.6,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -279.54,
+       -191.65
+      ],
+      [
+       -283.62,
+       -192.0
+      ],
+      [
+       -283.62,
+       -175.31
+      ],
+      [
+       -252.78,
+       -172.71
+      ],
+      [
+       -252.78,
+       -193.02
+      ],
+      [
+       -279.42,
+       -193.02
+      ]
+     ],
+     "bottom": 8.6,
+     "top": 19.71,
+     "roof": "hip-tile",
+     "role": "tier",
+     "slope": 0.479
+    },
+    {
+     "ring": [
+      [
+       -290.89,
+       -192.6
+      ],
+      [
+       -292.28,
+       -176.04
+      ],
+      [
+       -283.78,
+       -175.33
+      ],
+      [
+       -283.78,
+       -192.01
+      ]
+     ],
+     "bottom": 8.6,
+     "top": 12.76,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "ring": [
+      [
+       -266.94,
+       -202.71
+      ],
+      [
+       -279.36,
+       -203.76
+      ],
+      [
+       -280.12,
+       -194.7
+      ],
+      [
+       -279.29,
+       -194.58
+      ],
+      [
+       -279.41,
+       -193.18
+      ],
+      [
+       -253.78,
+       -193.18
+      ],
+      [
+       -253.78,
+       -204.02
+      ],
+      [
+       -266.83,
+       -204.02
+      ]
+     ],
+     "bottom": 8.6,
+     "top": 12.0,
+     "roof": "flat",
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 590680 (USGS 3DEP TX_Central_B1_2017; groundY 14.4, P50 12.8, P95 19.3, max 20.2, mixed 25.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/GWB/ (fetched 2026-10-20: 5 floors, 42,951 GSF, UT building since 1951)",
+    "basis": "measured",
+    "note": "Gordon-White Building (UT GIS 410, former Home Economics, Lemmon/Jessen). The generator put one hipped roof (ridge 20.2 m above grade = 37.2 campus Y) over the whole stepped plan; LiDAR tiers: 18.0 m front bar on W 24th St (x-284..-253), 12.8 m west pavilion, 12.1 m middle wing, 8.6 m rear wing. Base: flat 8.6 m over the City ring (LiDAR tier 8.6 m: rear/east wing x-267..-243 z-213..-190). Wings (official UT GIS polygon intersected with the City ring, 0.08 m inset; heights from the raster inside each wing, above LiDAR groundY 14.4): front-bar: hip-tile top 19.71 m (raster roofY_P95 34.11 campus Y); west-pavilion: flat top 12.76 m (raster roofY_P50 27.16 campus Y); middle-wing: flat top 12.0 m (raster roofY_P50 26.4 campus Y)."
+   }
+  },
+  "529270:331": {
+   "datum": {
+    "aboveY": 14.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 7.0,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -389.87,
+       -215.27
+      ],
+      [
+       -403.48,
+       -216.46
+      ],
+      [
+       -403.83,
+       -212.49
+      ],
+      [
+       -408.06,
+       -212.86
+      ],
+      [
+       -409.56,
+       -195.69
+      ],
+      [
+       -408.62,
+       -195.6
+      ],
+      [
+       -408.9,
+       -192.29
+      ],
+      [
+       -405.52,
+       -192.0
+      ],
+      [
+       -405.59,
+       -191.17
+      ],
+      [
+       -393.08,
+       -190.08
+      ],
+      [
+       -393.08,
+       -199.18
+      ],
+      [
+       -388.58,
+       -199.18
+      ],
+      [
+       -388.58,
+       -216.92
+      ],
+      [
+       -389.72,
+       -216.92
+      ]
+     ],
+     "bottom": 7.0,
+     "top": 18.46,
+     "roof": "hip-tile",
+     "role": "tier",
+     "slope": 0.561
+    },
+    {
+     "ring": [
+      [
+       -375.94,
+       -192.51
+      ],
+      [
+       -373.02,
+       -192.25
+      ],
+      [
+       -371.53,
+       -209.39
+      ],
+      [
+       -374.51,
+       -209.65
+      ],
+      [
+       -374.11,
+       -214.23
+      ],
+      [
+       -388.42,
+       -214.42
+      ],
+      [
+       -388.42,
+       -199.18
+      ],
+      [
+       -383.92,
+       -199.18
+      ],
+      [
+       -383.92,
+       -192.08
+      ],
+      [
+       -375.98,
+       -192.08
+      ]
+     ],
+     "bottom": 7.0,
+     "top": 15.26,
+     "roof": "hip-tile",
+     "role": "tier",
+     "slope": 0.561
+    },
+    {
+     "ring": [
+      [
+       -391.87,
+       -189.97
+      ],
+      [
+       -392.01,
+       -188.42
+      ],
+      [
+       -384.58,
+       -187.77
+      ],
+      [
+       -384.58,
+       -198.52
+      ],
+      [
+       -392.42,
+       -198.52
+      ],
+      [
+       -392.42,
+       -190.02
+      ]
+     ],
+     "bottom": 7.0,
+     "top": 22.64,
+     "roof": "flat",
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 529270 (USGS 3DEP TX_Central_B1_2017; groundY 14.5, P50 13.8, P95 21.4, max 23.2, pitched 29.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json); ",
+    "basis": "measured",
+    "note": "Unnamed City record at the NE corner of Guadalupe and W 24th St (no UT GIS building; church, see EVIDENCE.md). The generator put ONE hipped roof (ridge 22.9 m above grade = 38.8 campus Y) over the whole cross-shaped plan, a 6-10 m plateau. Raster: N-S nave ridge ~34 campus Y at x~-396, E-W east wing ridge ~30 at z~-202, square tower x-392..-385 z-198..-188 ~36-38. Base: flat 7.0 m over the City ring (LiDAR tier 8.4 m north annex / 6-7 m aisles, raster 19-22 campus Y). Wings (official UT GIS polygon intersected with the City ring, 0.08 m inset; heights from the raster inside each wing, above LiDAR groundY 14.5): nave: hip-tile top 18.46 m (raster roofY_P95 32.96 campus Y); east-wing: hip-tile top 15.26 m (raster roofY_P95 29.76 campus Y); tower: flat top 22.64 m (raster roofY_P90 37.14 campus Y)."
+   }
+  },
+  "463671:18": {
+   "datum": {
+    "aboveY": 17.8
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 15.3,
+     "roof": "hip-shingle",
+     "slope": 0.479,
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -351.3,
+       -217.6
+      ],
+      [
+       -351.3,
+       -212.4
+      ],
+      [
+       -345.6,
+       -212.4
+      ],
+      [
+       -345.6,
+       -217.6
+      ]
+     ],
+     "bottom": 11.7,
+     "top": 21.7,
+     "roof": "hip-shingle",
+     "slope": 1.2,
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 463671 (USGS 3DEP TX_Central_B1_2017; groundY 17.8, P50 13.3, P95 15.3, max 21.7, mixed 25.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json) objectId 626 LFH; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/LFH/ (fetched 2026-10-20: 4 floors, 16,135 GSF, UT building since 1894)",
+    "basis": "measured",
+    "note": "Littlefield Home (Wahrenberger 1893). Main hip (25.6 deg) ridge 33.1 campus Y = raster P95 (generator: ridge 16.8 m above grade 18.2 = 35.0, 2.4 m above P95). The 1 m raster shows a ~5x5 m tower at x-351..-346 z-218..-212 peaking at 39.5 campus Y (21.7 m above groundY 17.8): modelled as a steep (50 deg) hip-shingle tier (roof is polychrome slate per SAH Archipedia TX-01-AU41.5 summary / https://volzassociates.com/projects/littlefield-house/, fetched 2026-10-20; the house has a square and a round tower). Its plan shape/cap form are estimates; round corner bays on the W 24th St front (UT GIS ring) are not modelled."
+   }
+  },
+  "547842:357": {
+   "datum": {
+    "aboveY": 16.3
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 7.8,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        -250.58,
+        -523.77
+       ],
+       [
+        -250.07,
+        -532.12
+       ],
+       [
+        -262.39,
+        -533.01
+       ],
+       [
+        -264.32,
+        -511.71
+       ],
+       [
+        -226.92,
+        -508.97
+       ],
+       [
+        -227.42,
+        -500.82
+       ],
+       [
+        -228.12,
+        -500.79
+       ],
+       [
+        -228.38,
+        -497.89
+       ],
+       [
+        -227.45,
+        -495.68
+       ],
+       [
+        -215.42,
+        -495.38
+       ],
+       [
+        -214.33,
+        -507.52
+       ],
+       [
+        -197.6,
+        -506.02
+       ],
+       [
+        -196.43,
+        -519.06
+       ],
+       [
+        -213.17,
+        -520.53
+       ],
+       [
+        -212.43,
+        -528.82
+       ],
+       [
+        -224.43,
+        -529.91
+       ],
+       [
+        -225.55,
+        -521.42
+       ]
+      ]
+     ],
+     "bottom": 7.8,
+     "top": 19.1,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        -252.92,
+        -498.98
+       ],
+       [
+        -264.34,
+        -511.47
+       ],
+       [
+        -265.05,
+        -503.66
+       ]
+      ]
+     ],
+     "bottom": 7.8,
+     "top": 19.1,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        -261.24,
+        -420.55
+       ],
+       [
+        -260.82,
+        -425.46
+       ],
+       [
+        -233.79,
+        -423.16
+       ],
+       [
+        -233.83,
+        -422.73
+       ],
+       [
+        -232.92,
+        -422.65
+       ],
+       [
+        -233.01,
+        -419.11
+       ],
+       [
+        -222.64,
+        -418.23
+       ],
+       [
+        -222.3,
+        -422.18
+       ],
+       [
+        -203.42,
+        -420.58
+       ],
+       [
+        -202.88,
+        -427.03
+       ],
+       [
+        -205.92,
+        -427.84
+       ],
+       [
+        -205.56,
+        -432.0
+       ],
+       [
+        -221.33,
+        -433.67
+       ],
+       [
+        -220.05,
+        -448.71
+       ],
+       [
+        -230.43,
+        -450.51
+       ],
+       [
+        -232.13,
+        -434.73
+       ],
+       [
+        -234.0,
+        -434.52
+       ],
+       [
+        -259.68,
+        -436.93
+       ],
+       [
+        -260.08,
+        -436.99
+       ],
+       [
+        -258.78,
+        -452.24
+       ],
+       [
+        -263.01,
+        -453.52
+       ],
+       [
+        -268.96,
+        -453.52
+       ],
+       [
+        -270.12,
+        -452.27
+       ],
+       [
+        -271.89,
+        -421.48
+       ]
+      ]
+     ],
+     "bottom": 7.8,
+     "top": 17.8,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        -253.3,
+        -494.71
+       ],
+       [
+        -253.04,
+        -497.62
+       ],
+       [
+        -261.17,
+        -497.66
+       ],
+       [
+        -264.31,
+        -457.6
+       ],
+       [
+        -265.45,
+        -454.58
+       ],
+       [
+        -259.21,
+        -453.98
+       ],
+       [
+        -256.41,
+        -452.32
+       ],
+       [
+        -256.27,
+        -451.57
+       ],
+       [
+        -254.9,
+        -454.92
+       ],
+       [
+        -252.06,
+        -456.81
+       ],
+       [
+        -250.08,
+        -482.55
+       ],
+       [
+        -248.14,
+        -486.33
+       ],
+       [
+        -245.05,
+        -487.45
+       ],
+       [
+        -244.48,
+        -493.92
+       ]
+      ]
+     ],
+     "bottom": 7.8,
+     "top": 12.8,
+     "roof": "flat",
+     "role": "mech"
+    },
+    {
+     "rings": [
+      [
+       [
+        -219.98,
+        -456.17
+       ],
+       [
+        -216.1,
+        -481.84
+       ],
+       [
+        -216.58,
+        -489.04
+       ],
+       [
+        -218.03,
+        -491.7
+       ],
+       [
+        -220.05,
+        -491.7
+       ],
+       [
+        -222.83,
+        -487.96
+       ],
+       [
+        -225.3,
+        -462.76
+       ],
+       [
+        -225.3,
+        -456.67
+       ],
+       [
+        -224.64,
+        -456.01
+       ]
+      ]
+     ],
+     "bottom": 7.8,
+     "top": 10.6,
+     "roof": "flat",
+     "role": "mech"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 547842 (USGS 3DEP TX_Central_B1_2017; groundY 16.3, P50 12.9, P95 19.2, max 24.5, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b06-northwest/derived/inventory-b06.json; UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json) objectId 400",
+    "basis": "measured",
+    "note": "Generator's own LiDAR tier volumes (base 7.8 m, tiers 19.1/17.8 m, penthouses 12.8/10.6 m) restated above LiDAR groundY 16.3 (generator grade ~18.55, +2.2 m) and clipped to the official footprint (larger official courtyards stay open)."
+   }
+  }
+ },
+ "replaces": {
+  "504340:183": {
+   "source": "lib/campus/blocks/b06-northwest/index.ts buildComms + bodies.json (derived/make_bodies.py): UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json) objectIds 654 CMB / 655 CMA / 653 HSM; USGS 3DEP 2017 0.5 m DSM/BLD rasters (plaza 20.08 campus Y, P10 20.04 / P90 20.58; service court 14.58; skybridge strip 24.4-24.5); OpenStreetMap (ODbL) via public/data/campus.json pedestrian area 129071789, steps 1512199816, service 129071807; screenshot-dataset/captures/b06-r0-a1-overview.jpg (Codex ACCEPTED geographic-overview-only, 2026-10-20) for the plaza/bridge arrangement",
+   "basis": "measured",
+   "note": "The generator could only draw a solid 4.2 m podium under the three towers (top unreachable). install() rebuilds CMB/CMA/HSM (LiDAR roof P50 49.48/38.89/27.75), a walkable plaza deck at 20.08 with parapets, two bridges over the service drive (clearance ~4.6 m), the OSM south stair, the CMB-CMA connector (28.2) and the skybridge to DMC (21.4-24.5). Facade rhythm, entrances and soffit heights are estimates."
+  },
+  "529270:331": {
+   "source": "lib/campus/blocks/b06-northwest/index.ts buildChurch + bodies.json: City ring 529270; USGS 3DEP 2017 0.5 m raster profiles in the ring frame (derived/make_bodies.py): nave ridge 30.0 / eave 25.3, transept ridge 29.8 / eave 25.0, crossing cap 34.2, tower 35.3-37.5, annex 22.4; UUMC (Frederick M. Mann 1907-09, Romanesque Revival, limestone, red clay tile, tower): https://en.wikipedia.org/wiki/University_United_Methodist_Church , https://heimsath.com/project/university-united-methodist-church/ (fetched 2026-10-20)",
+   "basis": "measured",
+   "note": "Cross plan of gabled nave (N-S) and transept (E-W) with gable walls, pyramidal crossing cap (interior dome, exterior form estimated), SE tower with low tile pyramid. Window forms/arches, buttresses and porches are not modelled (estimate rectangles)."
+  },
+  "463671:18": {
+   "source": "lib/campus/blocks/b06-northwest/index.ts buildLittlefield + bodies.json: City ring 463671; USGS 3DEP 2017 raster (main roof median 31.1, P95 33.1; square tower peak 39.5 at x-351..-346 z-218..-212; round corner turret peak ~34 at x-340 z-213); UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b06-northwest/sources/ut-gis-b06-campus.json) objectId 626 LFH (round SE corner); Littlefield Home: red brick, sandstone, polychrome slate, square and round towers (https://volzassociates.com/projects/littlefield-house/, SAH Archipedia TX-01-AU41.5 summary; fetched 2026-10-20)",
+   "basis": "measured",
+   "note": "Hipped main roof (b04 straight-skeleton fit to the LiDAR median), square tower with steep pyramid, round turret with cone. Veranda, porte-cochere, dormers, cresting and slate polychromy are not modelled."
+  },
+  "487225:120": {
+   "source": "lib/campus/blocks/b06-northwest/index.ts (flat body, LiDAR roof P50 19.93 campus Y, roofs-lidar.json 487225)",
+   "basis": "measured",
+   "note": "Rebuilt only so the adjacent authored church annex cannot suppress it; identity unknown, finish estimate."
+  },
+  "549050:385": {
+   "source": "lib/campus/blocks/b06-northwest/honors-quad.ts + honors-quad.json (lane .work/claude-district40/derive.py): UT LIS Campus_Buildings FeatureServer/0 official polygons (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, via research/whole-campus-92/district-agents-40/packets/D12.json landmarks) objectIds 398 AND, 452 BLD; USGS 3DEP TX_Central_B1_2017 0.5 m building/DTM rasters (realism-lanes/lidar work/rasters.npz) sampled per wing; facade/entrance interpretation from Codex-approved screenshot-dataset/collections/district-orbits-30m/captures/d12-orbit-{southwest,southeast,northwest,northeast-r2}.jpg, full-map-30m/captures/priority-01.jpg, detail-ltd-northeast.jpg, detail-ltd-southwest.jpg and online-photos/ut-ltd-409-directory-photo.jpg",
+   "basis": "measured",
+   "note": "One City polygon merges Andrews (1936) and Blanton (1955). Rebuilt as 9 official-polygon wings cut at the LiDAR steps: AND west pavilion (hip, ridge 34.82), AND street-side tail (flat 28.07), AND E-W range (hip, ridge 31.58), AND east block (flat 25.17), AND quad-side and street-side low strips (flat 21.6 / 22.2), AND/BLD lobby (flat 18.59), BLD south link (flat 21.59), BLD N-S bar (hip, ridge 32.93). Heights measured; facade rhythm, materials and the quad entrances are reference-interpreted estimates."
+  },
+  "551320:432": {
+   "source": "lib/campus/blocks/b06-northwest/honors-quad.ts + honors-quad.json (lane .work/claude-district40/derive.py): UT LIS Campus_Buildings FeatureServer/0 official polygons (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, via research/whole-campus-92/district-agents-40/packets/D12.json landmarks) objectIds 629 CRD; USGS 3DEP TX_Central_B1_2017 0.5 m building/DTM rasters (realism-lanes/lidar work/rasters.npz) sampled per wing; facade/entrance interpretation from Codex-approved screenshot-dataset/collections/district-orbits-30m/captures/d12-orbit-{southwest,southeast,northwest,northeast-r2}.jpg, full-map-30m/captures/priority-01.jpg, detail-ltd-northeast.jpg, detail-ltd-southwest.jpg and online-photos/ut-ltd-409-directory-photo.jpg",
+   "basis": "measured",
+   "note": "Carothers: official N-S range (hip, ridge 33.42) + low east annex (flat 20.03) + south-end chimney (33.67). The official 3 m south arm toward Andrews (z -254.6..-240.3, 43 m2) has 11% LiDAR building coverage (eave spill only) and is not built; reported in HONORS-QUAD-EVIDENCE.md."
+  },
+  "654063:872": {
+   "source": "lib/campus/blocks/b06-northwest/honors-quad.ts + honors-quad.json (lane .work/claude-district40/derive.py): UT LIS Campus_Buildings FeatureServer/0 official polygons (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, via research/whole-campus-92/district-agents-40/packets/D12.json landmarks) objectIds 409 LTD; USGS 3DEP TX_Central_B1_2017 0.5 m building/DTM rasters (realism-lanes/lidar work/rasters.npz) sampled per wing; facade/entrance interpretation from Codex-approved screenshot-dataset/collections/district-orbits-30m/captures/d12-orbit-{southwest,southeast,northwest,northeast-r2}.jpg, full-map-30m/captures/priority-01.jpg, detail-ltd-northeast.jpg, detail-ltd-southwest.jpg and online-photos/ut-ltd-409-directory-photo.jpg",
+   "basis": "measured",
+   "note": "Littlefield Residence Hall: official U plan under one hip-and-valley tile roof (eave 29.15 fitted, ridge 32.15 = raster P98, 0.9 m broad eaves) + 3 chimney stacks (LiDAR peaks 32.3-33.2). Every wing end is hipped in the 2017 LiDAR, so the gable in the UT directory photo (direction unverified) is not invented."
+  },
+  "547842:357": {
+   "source": "lib/campus/blocks/b06-northwest/kinsolving.ts (D12, engineering-core lane): official UT GIS outline with both courtyards (this file's footprints 547842:357) + this file's measured massing tiers (USGS 3DEP 2017 LiDAR above groundY 16.3); facade from research/whole-campus-92/screenshot-dataset/collections/full-map-30m/captures/b06-r0-b1-30m.jpg and online-photos/ut-kin-400-directory-photo.jpg; entrances at OSM 1512521129-1512521133 path ends",
+   "basis": "measured",
+   "note": "Heights and plan measured/official; tier rings wobble-simplified and snapped to the official outline; storey 2.95 m, bay 3.2 m, window and entrance-surround sizes are estimates. The generated fallback keeps the same massing if install() fails."
+  }
+ },
+ "archetypes": {
+  "b06-northwest:gordon-white-limestone": {
+   "label": "Gordon-White Building: pale limestone with dark punched windows (b06, D12)",
+   "era": "1952 / 2016",
+   "wall": "limestone",
+   "wallColor": "#ddd5c2",
+   "ground": "limestone",
+   "groundColor": "#d9d1be",
+   "base": "limestone",
+   "baseColor": "#d3c9b3",
+   "baseHeight": 0.8,
+   "trim": "limestone",
+   "trimColor": "#e6dfcf",
+   "roof": "flat",
+   "roofColor": "#c4c1ba",
+   "roofSlope": 0,
+   "overhang": 0,
+   "brackets": false,
+   "parapet": 0,
+   "cornice": 0.45,
+   "belt": true,
+   "floor": 4.0,
+   "groundFloor": 4.4,
+   "window": {
+    "bay": 3.4,
+    "width": 1.2,
+    "sill": 1.0,
+    "head": 2.9,
+    "mullions": 0,
+    "transom": false,
+    "type": "punched",
+    "frame": "dark"
+   },
+   "groundWindow": {
+    "bay": 3.4,
+    "width": 1.2,
+    "sill": 0.8,
+    "head": 3.3,
+    "mullions": 0,
+    "transom": false,
+    "type": "punched",
+    "frame": "dark"
+   },
+   "door": {
+    "width": 2.2,
+    "height": 2.8
+   },
+   "reference": "research/whole-campus-92/screenshot-dataset/online-photos/ut-gwb-410-directory-photo.jpg: pale limestone walls with dark punched windows; the grey metal-and-glass top box and pergola are not localised to a tier and are not modelled. Interpretation only."
+  },
+  "b06-northwest:dealey-frame": {
+   "label": "Dealey Center for New Media: limestone frame with large glazed bays (b06, D11)",
+   "era": "2010s",
+   "wall": "limestone",
+   "wallColor": "#d8d2c4",
+   "ground": "limestone",
+   "groundColor": "#d4cec0",
+   "base": "limestone",
+   "baseColor": "#cfc8b8",
+   "baseHeight": 0.8,
+   "trim": "limestone",
+   "trimColor": "#e3ddd0",
+   "roof": "flat",
+   "roofColor": "#c6c3bc",
+   "roofSlope": 0,
+   "overhang": 0,
+   "brackets": false,
+   "parapet": 1.0,
+   "cornice": 0.3,
+   "belt": false,
+   "floor": 4.2,
+   "groundFloor": 5.0,
+   "window": {
+    "bay": 3.4,
+    "width": 2.9,
+    "sill": 0.5,
+    "head": 3.5,
+    "mullions": 1,
+    "transom": false,
+    "type": "glazed",
+    "frame": "dark"
+   },
+   "groundWindow": {
+    "bay": 3.4,
+    "width": 3.0,
+    "sill": 0.3,
+    "head": 4.4,
+    "mullions": 1,
+    "transom": false,
+    "type": "glazed",
+    "frame": "dark"
+   },
+   "door": {
+    "width": 2.4,
+    "height": 3.0
+   },
+   "reference": "research/whole-campus-92/screenshot-dataset/online-photos/ut-dmc-656-directory-photo.jpg: pale stone grid frame with full-bay dark glazing and a roof sun-fin canopy; a brick volume behind is not localised and not modelled. Interpretation only."
+  }
+ }
+}

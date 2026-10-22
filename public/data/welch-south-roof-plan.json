@@ -1,0 +1,39 @@
+{
+  "building": "WEL",
+  "scope": "Projecting south cap roof only; pitched north continuation, no north hip",
+  "footprint": [
+    [
+      -49.28846312439674,
+      37.039597638216705
+    ],
+    [
+      -28.522101433023714,
+      38.83838313366168
+    ],
+    [
+      -25.84667858421875,
+      9.259180297278665
+    ],
+    [
+      -46.69394869297108,
+      7.453386502074483
+    ]
+  ],
+  "sourceObjectId": 561,
+  "sourcePath": "research/raw/ut-official-buildings.geojson",
+  "southWidth": 20.844121645095733,
+  "depth": 29.699737268760593,
+  "eaveElevation": 25.5,
+  "pitch": 0.45,
+  "shellThickness": 0.24,
+  "cutCeiling": 33,
+  "ridgeCapRadius": 0.095,
+  "northBoundaryInferred": true,
+  "northBoundaryBasis": "Line parallel to official SW\u2013SE edge through official west-leg/lecture-extension join; NE is its exact intersection with official east edge. Internal boundary is not an external north wall.",
+  "photoPaths": [
+    "research/streetview-reference-survey/expanded/screenshots/L021-h090.jpg",
+    "research/campus20/science-west24/references/welch-uteach-2024.jpg"
+  ],
+  "scanGridPath": "/tmp/ut-iteration-53/welch-roof-grid.json",
+  "eaveProfilesPath": "/tmp/ut-iteration-53/welch-official-profiles.json"
+}

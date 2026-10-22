@@ -1,0 +1,103 @@
+{
+ "asset": "dkr-field",
+ "anchor": [
+  444.3,
+  0,
+  272.5
+ ],
+ "yOffsetAboveGeneratedField": 0.03,
+ "matrixColumnMajor_rawGltfToCampus_fieldPlaneAtY0": [
+  35.549016012928966,
+  4.088459295993787,
+  -3.591669769957616,
+  0,
+  -4.074670239552178,
+  35.729930640072716,
+  0.3424171920425719,
+  0,
+  3.6073055859371284,
+  0.06846663056192798,
+  35.781710263332464,
+  0,
+  406.29700917233083,
+  62.64367393582274,
+  280.35355584546846,
+  1
+ ],
+ "method": "Leveled by a trimmed PCA plane through green turf triangles; scale from 11 sunlit yard lines (5 yd = 4.572 m) anchored on the TEXAS goal line (orange end-zone edge); yaw/translation by brute-force registration of stand/turf cells against GIS footprints NEZ 655373 + SEZ 504014. Author Cesium placement NOT used.",
+ "scale": {
+  "metresPerGltfUnit": 35.96314962067291,
+  "relativeToAuthor37": 0.9719770167749434,
+  "yardLinePeriodS37": 4.7038149267871265,
+  "yardLineRmsS37": 0.053358103775417394,
+  "sidelineWidthTrue": 49.845011027399714
+ },
+ "registration": {
+  "yawDeg": 354.237,
+  "fieldCentreCampus": [
+   444.8,
+   273
+  ],
+  "score": {
+   "yawDeg": 354.237,
+   "score": 2.813554068120189,
+   "standIn": 0.9881889763779528,
+   "turfOut": 0.9877394636015325,
+   "recall": 0.8376256281407035,
+   "t": [
+    444.8,
+    273
+   ],
+   "within0005": {
+    "n": 10,
+    "xs": [
+     444.3,
+     445.3
+    ],
+    "zs": [
+     271,
+     273.5
+    ]
+   }
+  }
+ },
+ "levelTiltDeg": 6.528684686168362,
+ "crop": {
+  "rule": "triangles with all vertices within 0.6 m of the scanned field plane, inside the generated STADIUM_FIELD opening inset 0.75 m, and north of the south 20-yard line; flattened to the plane",
+  "triangles": 97874,
+  "areaM2": 5966.477637639306,
+  "texelsPerMetre": 9.034730813379657,
+  "openingCoverage": 0.7122872464443927,
+  "flatteningAbsDy": {
+   "p50": 0.060785258319985554,
+   "p95": 0.22704268540390804,
+   "max": 0.599872465523998
+  }
+ },
+ "colour": "photographed texels unchanged (no relighting); the shadowed south end (south of the south 20-yard line) is cropped",
+ "southCutAlongS37": -35.8800000000017,
+ "cutYardLine": "south 20-yard line",
+ "scanContent": {
+  "fieldTris": 154239,
+  "standTris": 678464,
+  "otherTris": 166963,
+  "standMaxHeightAboveField": 67.97398424937296,
+  "standSamplesBySector": {
+   "west": 73901,
+   "east": 2818,
+   "north": 1052,
+   "south": 19184
+  }
+ },
+ "file": {
+  "name": "dkr-field.glb",
+  "bytes": 1885964,
+  "sha256": "575aec5896585bbb3ad72404beb0dbde0eaeb951e8c01c0c36501ad814291499",
+  "triangles": 43119,
+  "vertices": 54867,
+  "atlas": [
+   4096,
+   1024
+  ]
+ }
+}

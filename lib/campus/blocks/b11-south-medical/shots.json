@@ -1,0 +1,230 @@
+[
+ {
+  "id": "b11-dell-med-plaza",
+  "block": "b11-south-medical",
+  "kind": "street",
+  "label": "Dell Medical School: plaza between the Health Discovery Building (left, official HDB footprint: 17 m low wing + 46 m tower) and the Health Transformation Building (right, added record) looking east toward Dell Seton Medical Center",
+  "position": [
+   180,
+   -10.8,
+   936
+  ],
+  "target": [
+   285,
+   4,
+   937
+  ],
+  "fov": 62,
+  "groundY": -12.49,
+  "note": "Was one City ring ('HDB') over HDB+HTB+HCG with an invented single facade. Facades remain the generic medical-modern archetype (no accepted b11 photo reference yet)."
+ },
+ {
+  "id": "b11-mlk-red-river",
+  "block": "b11-south-medical",
+  "kind": "street",
+  "label": "MLK Blvd at Red River St looking south-east: Jamail Texas Swimming Center (two LiDAR-restated records), Trinity Garage beyond, the cleared Erwin Center site to the east",
+  "position": [
+   296,
+   -7.6,
+   646
+  ],
+  "target": [
+   380,
+   -2,
+   740
+  ],
+  "fov": 62,
+  "groundY": -9.38,
+  "note": "Erwin Center + Cooley Pavilion excluded (demolished 2023-24). MLK edge paths belong to b09/b05 neighbours where they are primary; not moved."
+ },
+ {
+  "id": "b11-waller-creek",
+  "block": "b11-south-medical",
+  "kind": "side",
+  "label": "Waller Creek corridor north of 18th St looking north: Collections Deposit Library (left) and Hargis Hall (right)",
+  "position": [
+   445,
+   1.8,
+   880
+  ],
+  "target": [
+   440,
+   4,
+   790
+  ],
+  "fov": 60,
+  "groundY": -0.71,
+  "note": "Creek channel/grade is the baked terrain (8 m City 2021 contours); channel walls and the creek trail were not re-measured in this pass."
+ },
+ {
+  "id": "b11-aerial-medical",
+  "block": "b11-south-medical",
+  "kind": "aerial",
+  "label": "Aerial over 15th St looking north: Dell Seton Medical Center tiers, Dell Med HDB/HTB/HCG split, Trinity Garage, Capitol Complex towers to the west",
+  "position": [
+   230,
+   110,
+   1110
+  ],
+  "target": [
+   200,
+   0,
+   880
+  ],
+  "fov": 60,
+  "groundY": -17.0,
+  "note": "Roof heights from the 2017 LiDAR in the same datum; post-2017 Capitol Complex buildings from published heights / City 2023 h."
+ },
+ {
+  "id": "b11-d23-orbit-southwest",
+  "block": "b11-south-medical",
+  "kind": "aerial",
+  "label": "D23 actual orbit southwest: matching viewpoint of capture d23-orbit-southwest toward Barbara Jordan State Office Building (463088:8, authored)",
+  "position": [
+   -204.64,
+   31.96,
+   933.64
+  ],
+  "target": [
+   -141.0,
+   -4.94,
+   870.0
+  ],
+  "fov": 60.0,
+  "groundY": 1.62,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d23-orbit-southwest.jpg (sha256 d19f746a80329aa2..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b11-d23-orbit-southeast",
+  "block": "b11-south-medical",
+  "kind": "aerial",
+  "label": "D23 actual orbit southeast: matching viewpoint of capture d23-orbit-southeast toward Barbara Jordan State Office Building (463088:8, authored)",
+  "position": [
+   -77.36,
+   26.27,
+   933.64
+  ],
+  "target": [
+   -141.0,
+   -4.94,
+   870.0
+  ],
+  "fov": 60.0,
+  "groundY": -4.1,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d23-orbit-southeast.jpg (sha256 39daf9a9a582761d..., review context-limited); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b11-d23-orbit-northeast",
+  "block": "b11-south-medical",
+  "kind": "aerial",
+  "label": "D23 actual orbit northeast: matching viewpoint of capture d23-orbit-northeast toward Barbara Jordan State Office Building (463088:8, authored)",
+  "position": [
+   -77.36,
+   24.97,
+   806.36
+  ],
+  "target": [
+   -141.0,
+   -4.94,
+   870.0
+  ],
+  "fov": 60.0,
+  "groundY": -5.7,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d23-orbit-northeast.jpg (sha256 7e6a6577afed1e65..., review context-limited); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b11-d23-orbit-northwest",
+  "block": "b11-south-medical",
+  "kind": "aerial",
+  "label": "D23 actual orbit northwest: matching viewpoint of capture d23-orbit-northwest toward Barbara Jordan State Office Building (463088:8, authored)",
+  "position": [
+   -204.64,
+   26.15,
+   806.36
+  ],
+  "target": [
+   -141.0,
+   -4.94,
+   870.0
+  ],
+  "fov": 60.0,
+  "groundY": -0.87,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d23-orbit-northwest.jpg (sha256 19d36ed8b0f91f67..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b11-d24-orbit-southwest",
+  "block": "b11-south-medical",
+  "kind": "aerial",
+  "label": "D24 actual orbit southwest: matching viewpoint of capture d24-orbit-southwest toward John W. Hargis Hall (633570:818, authored)",
+  "position": [
+   409.36,
+   26.5,
+   933.64
+  ],
+  "target": [
+   473,
+   8.24,
+   870
+  ],
+  "fov": 60.0,
+  "groundY": -4.75,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d24-orbit-southwest.jpg (sha256 49539b49b3621ae0..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b11-d24-orbit-southeast",
+  "block": "b11-south-medical",
+  "kind": "aerial",
+  "label": "D24 actual orbit southeast: matching viewpoint of capture d24-orbit-southeast toward John W. Hargis Hall (633570:818, authored)",
+  "position": [
+   536.64,
+   30.0,
+   933.64
+  ],
+  "target": [
+   473,
+   8.24,
+   870
+  ],
+  "fov": 60.0,
+  "groundY": 0.02,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d24-orbit-southeast.jpg (sha256 60d63f51ed6274ec..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b11-d24-orbit-northeast",
+  "block": "b11-south-medical",
+  "kind": "aerial",
+  "label": "D24 actual orbit northeast: matching viewpoint of capture d24-orbit-northeast toward John W. Hargis Hall (633570:818, authored)",
+  "position": [
+   536.64,
+   33.26,
+   806.36
+  ],
+  "target": [
+   473,
+   8.24,
+   870
+  ],
+  "fov": 60.0,
+  "groundY": 3.32,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d24-orbit-northeast.jpg (sha256 9478ce0becef54d5..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b11-d24-orbit-northwest",
+  "block": "b11-south-medical",
+  "kind": "aerial",
+  "label": "D24 actual orbit northwest: matching viewpoint of capture d24-orbit-northwest toward John W. Hargis Hall (633570:818, authored)",
+  "position": [
+   409.36,
+   28.81,
+   806.36
+  ],
+  "target": [
+   473,
+   8.24,
+   870
+  ],
+  "fov": 60.0,
+  "groundY": -1.57,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d24-orbit-northwest.jpg (sha256 a04165fff4718d3a..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ }
+]

@@ -1,0 +1,101 @@
+[
+ {
+  "id": "b10-manor-ipf",
+  "block": "b10-east-campus",
+  "kind": "street",
+  "label": "Manor Rd / Robert Dedman Dr corner looking south-east at the Indoor Practice Facility: ribbed fabric vault re-massed as two hip-metal shells (eave 10.4 m, crown 20.9 m above LiDAR ground) instead of a five-step flat ziggurat",
+  "position": [975, 19.6, -110],
+  "target": [1020, 26, -20],
+  "fov": 62,
+  "groundY": 17.78,
+  "note": "Vault curvature approximated by two hip planes; ribs, end walls and the north annex are not modelled. Street geometry untouched."
+ },
+ {
+  "id": "b10-mlk-disch-falk",
+  "block": "b10-east-campus",
+  "kind": "side",
+  "label": "MLK Blvd south of UFCU Disch-Falk Field looking north-west: grandstand (LiDAR-restated, was ~4 m high from the grade datum) and the 2019 Player Development Center with its pitched metal roof",
+  "position": [1060, 11.4, 806],
+  "target": [1010, 22, 740],
+  "fov": 62,
+  "groundY": 9.6,
+  "note": "Grandstand fabric canopies and light towers are not modelled individually (generic athletic archetype)."
+ },
+ {
+  "id": "b10-comal-grad-housing",
+  "block": "b10-east-campus",
+  "kind": "street",
+  "label": "Comal St at the Texas Tennis Center looking north-east to the East Campus Graduate Apartments (2024): flat-roofed blocks at the completed City height instead of 7 m hipped placeholders",
+  "position": [1097, 16.9, 520],
+  "target": [1150, 26, 450],
+  "fov": 62,
+  "groundY": 15.11,
+  "note": "Graduate Housing B-E heights are labelled estimates (sibling GHA City 2023 h); no published storey count. Facades generic apartment-lowrise."
+ },
+ {
+  "id": "b10-srh-east",
+  "block": "b10-east-campus",
+  "kind": "side",
+  "label": "Robert Dedman Dr east of Sid Richardson Hall looking west at the long travertine SRH wall under the LBJ plaza",
+  "position": [872, 17.5, 120],
+  "target": [800, 24, 120],
+  "fov": 60,
+  "groundY": 15.68,
+  "note": "SRH restated in the LiDAR datum (plaza deck 11.7 m above LiDAR ground). Facade remains the monolith-stone archetype."
+ },
+ {
+  "id": "b10-aerial-east-campus",
+  "block": "b10-east-campus",
+  "kind": "aerial",
+  "label": "Aerial from above the tennis center looking north over the Comal/Leona child-development centres, Facilities Complex sheds and the athletic fields toward the IPF",
+  "position": [1040, 125, 600],
+  "target": [1060, 20, 300],
+  "fov": 60,
+  "groundY": 15.0,
+  "note": "Roof heights from the 2017 LiDAR in the same datum; post-2017 buildings from City 2023 h / labelled estimates."
+ },
+ {
+  "id": "b10-d22-orbit-southwest",
+  "block": "b10-east-campus",
+  "kind": "aerial",
+  "label": "D22 same pose as reviewed d22-orbit-southwest (Google 3D Tiles, usable-context): Disch-Falk south/west street facades, recessed brick bays, glazed band and white roof",
+  "position": [974.36, 41.86, 851.14],
+  "target": [1038, 19.23, 787.5],
+  "fov": 60,
+  "groundY": 11.86,
+  "note": "Pose copied from actualOrbitReferences d22-orbit-southwest (actual camera/target, 60 deg vertical FOV); groundY = camera Y - 30 m planning height (not surveyed)."
+ },
+ {
+  "id": "b10-d22-orbit-northeast",
+  "block": "b10-east-campus",
+  "kind": "aerial",
+  "label": "D22 same pose as reviewed d22-orbit-northeast: raked dark seating bowl under the sloped white roof, field edge",
+  "position": [1101.64, 43.12, 723.86],
+  "target": [1038, 19.23, 787.5],
+  "fov": 60,
+  "groundY": 13.12,
+  "note": "Pose copied from actualOrbitReferences d22-orbit-northeast; seat rows/roof slab are estimates."
+ },
+ {
+  "id": "b10-d22-street-south",
+  "block": "b10-east-campus",
+  "kind": "street",
+  "label": "Street south of Disch-Falk looking north-west along the brick street facade: tall recessed bays, glazed band, white fascia",
+  "position": [1046, 17.4, 800],
+  "target": [1000, 21, 775],
+  "fov": 62,
+  "groundY": 15.7,
+  "note": "groundY = LiDAR perimeter ground P50 15.66 (lidar-reference.json evidence note), not surveyed at this point."
+ },
+ {
+  "id": "b10-d21-dome-aerial",
+  "block": "b10-east-campus",
+  "kind": "aerial",
+  "label": "D21 Indoor Practice Facility fabric dome from the south-west over the practice fields (compare d21-orbit-southwest/-southeast, where the dome is visible at distance)",
+  "position": [940, 62, 95],
+  "target": [1020, 30, -20],
+  "fov": 55,
+  "groundY": 19,
+  "note": "Dome profile fitted to LiDAR P10/P50/crown; orbit references show the dome only at distance (subject orbit not captured)."
+ }
+]

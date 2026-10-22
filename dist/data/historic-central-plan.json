@@ -1,0 +1,2650 @@
+{
+ "buildings": [
+  {
+   "abbr": "EPS",
+   "name": "E.P. SCHOCH BUILDING",
+   "base": 2.5,
+   "floors": 3,
+   "floorHeight": 4.25,
+   "rings": [
+    [
+     [
+      19.5959,
+      43.4484
+     ],
+     [
+      43.8488,
+      45.6479
+     ],
+     [
+      45.0511,
+      46.4145
+     ],
+     [
+      45.6145,
+      45.8387
+     ],
+     [
+      47.8549,
+      46.6094
+     ],
+     [
+      49.0778,
+      46.1221
+     ],
+     [
+      73.2565,
+      48.3149
+     ],
+     [
+      75.036,
+      28.0156
+     ],
+     [
+      21.4197,
+      23.1102
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       20.62686719061598,
+       42.58799986871466
+      ],
+      [
+       44.164717764502996,
+       44.722651903616246
+      ],
+      [
+       44.91149744251115,
+       45.1988070239365
+      ],
+      [
+       45.355549255462954,
+       44.74498197264498
+      ],
+      [
+       47.83064767653432,
+       45.596418480911225
+      ],
+      [
+       48.93726263729871,
+       45.15545562999906
+      ],
+      [
+       72.39334081157978,
+       47.2827200495321
+      ],
+      [
+       74.00698201295643,
+       28.875422022499105
+      ],
+      [
+       22.280900696452985,
+       24.14295970618903
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     75.11305489190843,
+     28.022649816320303
+    ],
+    [
+     21.4197,
+     23.1102
+    ],
+    [
+     19.501435482710352,
+     44.07693988631982
+    ],
+    [
+     73.19479037461896,
+     48.9893897026401
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L007-h000",
+     "L175-h090",
+     "L176-h090",
+     "L008-h270"
+    ],
+    "doorEdges": {
+     "3": [
+      0.5
+     ],
+     "8": [
+      0.5
+     ]
+    },
+    "bayCounts": {
+     "0": 6,
+     "5": 6,
+     "6": 3,
+     "7": 13,
+     "8": 1
+    },
+    "doorWidth": 1.65,
+    "bayWidth": 2.45,
+    "bayHeight": 2.75,
+    "frameColumns": 4,
+    "frameRows": 5,
+    "plinth": 0.72,
+    "roofRise": 5.36,
+    "roofOverhang": 0.7,
+    "soffitBrackets": false,
+    "entryStyle": "stepped-lintel"
+   },
+   "lidarFit": {
+    "source": "public/data/derived/roofs-lidar.json",
+    "basis": "measured",
+    "note": "eave/roofRise fitted so the built roof P50/P95 inside the City ring match the 2017 LiDAR (root-shared lane, 2026-10-20)"
+   }
+  },
+  {
+   "abbr": "BRB",
+   "name": "BERNARD & AUDRE RAPOPORT BUILDING",
+   "base": 2,
+   "floors": 3,
+   "floorHeight": 4.25,
+   "rings": [
+    [
+     [
+      16.0766,
+      83.194
+     ],
+     [
+      14.1931,
+      103.5202
+     ],
+     [
+      67.844,
+      108.3546
+     ],
+     [
+      69.6471,
+      88.0158
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       16.935123025353075,
+       84.22511482764148
+      ],
+      [
+       15.226924819373567,
+       102.65950738106896
+      ],
+      [
+       66.98172408249117,
+       107.32305266283714
+      ],
+      [
+       68.61703253870404,
+       88.87692564313649
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     14.1931,
+     103.5202
+    ],
+    [
+     67.844,
+     108.3546
+    ],
+    [
+     69.6764595690759,
+     88.01844554556806
+    ],
+    [
+     16.025559569075284,
+     83.18404554556834
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L007-h180",
+     "L175-h090",
+     "L008-h270"
+    ],
+    "doorEdges": {
+     "3": [
+      0.25,
+      0.75
+     ]
+    },
+    "bayCounts": {
+     "0": 3,
+     "1": 13,
+     "2": 3,
+     "3": 14
+    },
+    "doorWidth": 2,
+    "bayWidth": 2.3,
+    "bayHeight": 2.55,
+    "frameColumns": 4,
+    "frameRows": 5,
+    "plinth": 0.85,
+    "roofRise": 5.1,
+    "roofOverhang": 0.9,
+    "soffitBrackets": true,
+    "entryStyle": "paired-pilaster"
+   },
+   "eave": 15.19,
+   "lidarFit": {
+    "source": "public/data/derived/roofs-lidar.json",
+    "basis": "measured",
+    "note": "eave/roofRise fitted so the built roof P50/P95 inside the City ring match the 2017 LiDAR (root-shared lane, 2026-10-20)"
+   }
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 5,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      109.8744,
+      16.9792
+     ],
+     [
+      106.7645,
+      50.9078
+     ],
+     [
+      126.0875,
+      52.6929
+     ],
+     [
+      129.2216,
+      18.7665
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       110.7789,
+       18.067
+      ],
+      [
+       107.8515,
+       50.004
+      ],
+      [
+       125.1837,
+       51.6051
+      ],
+      [
+       128.1338,
+       19.6703
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     106.7645,
+     16.9792
+    ],
+    [
+     129.2216,
+     16.9792
+    ],
+    [
+     129.2216,
+     52.6929
+    ],
+    [
+     106.7645,
+     52.6929
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {
+     "0": [
+      0.2284
+     ],
+     "1": [
+      0.3428
+     ]
+    },
+    "bayCounts": {
+     "0": 5,
+     "1": 6,
+     "2": 10,
+     "3": 6
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": [
+     0
+    ]
+   },
+   "part": "tower",
+   "partTier": {
+    "lidarHeight": 27.7,
+    "groundY": -2.4,
+    "roofY": 25.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 25.1,
+   "cutTop": 26.3,
+   "skipEdges": [],
+   "stepEdges": {
+    "2": 20.1,
+    "3": 12.1
+   }
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 2,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      134.6375,
+      -0.4769
+     ],
+     [
+      134.543,
+      0.5076
+     ],
+     [
+      111.5638,
+      -1.4514
+     ],
+     [
+      109.8744,
+      16.9792
+     ],
+     [
+      132.8362,
+      19.1004
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       110.8702,
+       17.0712
+      ],
+      [
+       132.8362,
+       19.1004
+      ],
+      [
+       134.4553,
+       1.5037
+      ],
+      [
+       112.4689,
+       -0.3706
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     109.8744,
+     -1.4514
+    ],
+    [
+     134.6375,
+     -1.4514
+    ],
+    [
+     134.6375,
+     19.1004
+    ],
+    [
+     109.8744,
+     19.1004
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "1": 6,
+     "2": 3
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": [
+     2
+    ]
+   },
+   "part": "low-wing",
+   "partTier": {
+    "lidarHeight": 14.7,
+    "groundY": -2.4,
+    "roofY": 12.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 12.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    3,
+    4
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      141.7708,
+      -4.9976
+     ],
+     [
+      135.1282,
+      -5.5875
+     ],
+     [
+      134.8288,
+      -2.4694
+     ],
+     [
+      134.5527,
+      0.5196
+     ],
+     [
+      141.2044,
+      1.134
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       135.5485,
+       0.6115
+      ],
+      [
+       141.2044,
+       1.134
+      ],
+      [
+       141.6788,
+       -4.0018
+      ],
+      [
+       136.0287,
+       -4.5036
+      ],
+      [
+       135.8244,
+       -2.3756
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     134.5527,
+     -5.5875
+    ],
+    [
+     141.7708,
+     -5.5875
+    ],
+    [
+     141.7708,
+     1.134
+    ],
+    [
+     134.5527,
+     1.134
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "0": 1
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "north-a",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    3,
+    4
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      134.5527,
+      0.5196
+     ],
+     [
+      132.8362,
+      19.1004
+     ],
+     [
+      139.4879,
+      19.7149
+     ],
+     [
+      141.2044,
+      1.134
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       133.832,
+       19.1924
+      ],
+      [
+       139.4879,
+       19.7149
+      ],
+      [
+       141.2044,
+       1.134
+      ],
+      [
+       135.5485,
+       0.6115
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     132.8362,
+     0.5196
+    ],
+    [
+     141.2044,
+     0.5196
+    ],
+    [
+     141.2044,
+     19.7149
+    ],
+    [
+     132.8362,
+     19.7149
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "0": 5
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "north-b",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    1,
+    2,
+    3
+   ],
+   "stepEdges": {
+    "0": 12.1
+   }
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      149.487,
+      -6.71
+     ],
+     [
+      141.9913,
+      -7.3846
+     ],
+     [
+      141.9209,
+      -6.6226
+     ],
+     [
+      141.7741,
+      -4.9973
+     ],
+     [
+      141.7674,
+      -4.96
+     ],
+     [
+      149.2654,
+      -4.2673
+     ],
+     [
+      149.3106,
+      -4.7558
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       142.7665,
+       -4.8677
+      ],
+      [
+       148.2707,
+       -4.3592
+      ],
+      [
+       148.4011,
+       -5.8037
+      ],
+      [
+       142.8958,
+       -6.2991
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     141.7674,
+     -7.3846
+    ],
+    [
+     149.487,
+     -7.3846
+    ],
+    [
+     149.487,
+     -4.2673
+    ],
+    [
+     141.7674,
+     -4.2673
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "0": 1
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "north-bump",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    3,
+    4
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      141.7674,
+      -4.96
+     ],
+     [
+      139.4879,
+      19.7149
+     ],
+     [
+      146.9859,
+      20.4076
+     ],
+     [
+      149.2654,
+      -4.2673
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       141.7674,
+       -4.96
+      ],
+      [
+       139.4879,
+       19.7149
+      ],
+      [
+       146.9859,
+       20.4076
+      ],
+      [
+       149.2654,
+       -4.2673
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     139.4879,
+     -4.96
+    ],
+    [
+     149.2654,
+     -4.96
+    ],
+    [
+     149.2654,
+     20.4076
+    ],
+    [
+     139.4879,
+     20.4076
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {},
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "north-c",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      153.8705,
+      21.0436
+     ],
+     [
+      155.8382,
+      -3.6554
+     ],
+     [
+      149.2676,
+      -4.2801
+     ],
+     [
+      149.3106,
+      -4.7558
+     ],
+     [
+      146.9859,
+      20.4076
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       149.1746,
+       -3.2844
+      ],
+      [
+       146.9859,
+       20.4076
+      ],
+      [
+       152.8746,
+       20.9516
+      ],
+      [
+       154.7631,
+       -2.7531
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     146.9859,
+     -4.7558
+    ],
+    [
+     155.8382,
+     -4.7558
+    ],
+    [
+     155.8382,
+     21.0436
+    ],
+    [
+     146.9859,
+     21.0436
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "0": 5,
+     "1": 1
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "north-d",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    3,
+    4
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      129.2216,
+      18.7665
+     ],
+     [
+      126.5355,
+      47.8427
+     ],
+     [
+      128.527,
+      48.0267
+     ],
+     [
+      131.2131,
+      18.9505
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       129.1296,
+       19.7623
+      ],
+      [
+       126.5355,
+       47.8427
+      ],
+      [
+       128.527,
+       48.0267
+      ],
+      [
+       131.1211,
+       19.9463
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     126.5355,
+     18.7665
+    ],
+    [
+     131.2131,
+     18.7665
+    ],
+    [
+     131.2131,
+     48.0267
+    ],
+    [
+     126.5355,
+     48.0267
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "3": 1
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "main-a",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    0,
+    1,
+    2
+   ],
+   "stepEdges": {
+    "3": 12.1
+   }
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      131.2131,
+      18.9505
+     ],
+     [
+      128.527,
+      48.0267
+     ],
+     [
+      130.1501,
+      48.1766
+     ],
+     [
+      132.8362,
+      19.1004
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       131.1211,
+       19.9463
+      ],
+      [
+       128.619,
+       47.0309
+      ],
+      [
+       130.2421,
+       47.1809
+      ],
+      [
+       132.7442,
+       20.0962
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     128.527,
+     18.9505
+    ],
+    [
+     132.8362,
+     18.9505
+    ],
+    [
+     132.8362,
+     48.1766
+    ],
+    [
+     128.527,
+     48.1766
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "1": 1,
+     "3": 1
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "main-c",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    0,
+    2
+   ],
+   "stepEdges": {
+    "1": 16.1,
+    "3": 12.1
+   }
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      132.8362,
+      19.1004
+     ],
+     [
+      130.8833,
+      40.2404
+     ],
+     [
+      143.8979,
+      41.4427
+     ],
+     [
+      145.8508,
+      20.3027
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       132.8362,
+       19.1004
+      ],
+      [
+       130.8833,
+       40.2404
+      ],
+      [
+       143.8979,
+       41.4427
+      ],
+      [
+       145.8508,
+       20.3027
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     130.8833,
+     19.1004
+    ],
+    [
+     145.8508,
+     19.1004
+    ],
+    [
+     145.8508,
+     41.4427
+    ],
+    [
+     130.8833,
+     41.4427
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {},
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "main-b1",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      130.8833,
+      40.2404
+     ],
+     [
+      130.1501,
+      48.1766
+     ],
+     [
+      143.1647,
+      49.3789
+     ],
+     [
+      143.8979,
+      41.4427
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       130.8833,
+       40.2404
+      ],
+      [
+       130.2421,
+       47.1809
+      ],
+      [
+       142.2609,
+       48.2912
+      ],
+      [
+       142.9021,
+       41.3507
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     130.1501,
+     40.2404
+    ],
+    [
+     143.8979,
+     40.2404
+    ],
+    [
+     143.8979,
+     49.3789
+    ],
+    [
+     130.1501,
+     49.3789
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "1": 4,
+     "2": 2
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "main-b2",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    0,
+    3
+   ],
+   "stepEdges": {
+    "1": 16.1,
+    "2": 16.1
+   }
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      126.5355,
+      47.8427
+     ],
+     [
+      126.0875,
+      52.6929
+     ],
+     [
+      128.079,
+      52.8768
+     ],
+     [
+      128.527,
+      48.0267
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       126.5355,
+       47.8427
+      ],
+      [
+       126.1794,
+       51.6971
+      ],
+      [
+       127.1752,
+       51.7891
+      ],
+      [
+       127.5313,
+       47.9347
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     126.0875,
+     47.8427
+    ],
+    [
+     128.527,
+     47.8427
+    ],
+    [
+     128.527,
+     52.8768
+    ],
+    [
+     126.0875,
+     52.8768
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "1": 1,
+     "2": 1
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "main-south",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    0,
+    3
+   ],
+   "stepEdges": {
+    "2": 16.1
+   }
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 3,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      128.527,
+      48.0267
+     ],
+     [
+      128.079,
+      52.8768
+     ],
+     [
+      142.7166,
+      54.2291
+     ],
+     [
+      143.1647,
+      49.3789
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       128.527,
+       48.0267
+      ],
+      [
+       128.171,
+       51.8811
+      ],
+      [
+       142.8086,
+       53.2333
+      ],
+      [
+       143.1647,
+       49.3789
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     128.079,
+     48.0267
+    ],
+    [
+     143.1647,
+     48.0267
+    ],
+    [
+     143.1647,
+     54.2291
+    ],
+    [
+     128.079,
+     54.2291
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "1": 4
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "strip-west",
+   "partTier": {
+    "lidarHeight": 18.7,
+    "groundY": -2.4,
+    "roofY": 16.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 16.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    0,
+    2,
+    3
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 3,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      143.8979,
+      41.4427
+     ],
+     [
+      143.7157,
+      43.4143
+     ],
+     [
+      147.649,
+      43.7777
+     ],
+     [
+      147.8311,
+      41.8061
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       143.8979,
+       41.4427
+      ],
+      [
+       143.7157,
+       43.4143
+      ],
+      [
+       146.6532,
+       43.6857
+      ],
+      [
+       146.8353,
+       41.7141
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     143.7157,
+     41.4427
+    ],
+    [
+     147.8311,
+     41.4427
+    ],
+    [
+     147.8311,
+     43.7777
+    ],
+    [
+     143.7157,
+     43.7777
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {},
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "strip-a1",
+   "partTier": {
+    "lidarHeight": 18.7,
+    "groundY": -2.4,
+    "roofY": 16.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 16.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    0,
+    1,
+    3
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 3,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      143.7157,
+      43.4143
+     ],
+     [
+      142.7166,
+      54.2291
+     ],
+     [
+      146.6499,
+      54.5924
+     ],
+     [
+      147.649,
+      43.7777
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       143.7157,
+       43.4143
+      ],
+      [
+       142.8086,
+       53.2333
+      ],
+      [
+       146.7419,
+       53.5967
+      ],
+      [
+       147.649,
+       43.7777
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     142.7166,
+     43.4143
+    ],
+    [
+     147.649,
+     43.4143
+    ],
+    [
+     147.649,
+     54.5924
+    ],
+    [
+     142.7166,
+     54.5924
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "1": 1
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "strip-a2",
+   "partTier": {
+    "lidarHeight": 18.7,
+    "groundY": -2.4,
+    "roofY": 16.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 16.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    0,
+    2,
+    3
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 3,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      146.6499,
+      54.5924
+     ],
+     [
+      148.1585,
+      54.7318
+     ],
+     [
+      149.1611,
+      43.9049
+     ],
+     [
+      147.6491,
+      43.7764
+     ],
+     [
+      147.7226,
+      42.981
+     ],
+     [
+      147.8373,
+      41.8066
+     ]
+    ]
+   ],
+   "core": [],
+   "roofRectangle": [
+    [
+     146.6499,
+     41.8066
+    ],
+    [
+     149.1611,
+     41.8066
+    ],
+    [
+     149.1611,
+     54.7318
+    ],
+    [
+     146.6499,
+     54.7318
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "0": 0,
+     "1": 2
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "strip-b",
+   "partTier": {
+    "lidarHeight": 18.7,
+    "groundY": -2.4,
+    "roofY": 16.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 16.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    5
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      145.8508,
+      20.3027
+     ],
+     [
+      143.8979,
+      41.4427
+     ],
+     [
+      147.8311,
+      41.8061
+     ],
+     [
+      149.784,
+      20.6661
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       145.8508,
+       20.3027
+      ],
+      [
+       143.9898,
+       40.447
+      ],
+      [
+       147.9231,
+       40.8103
+      ],
+      [
+       149.784,
+       20.6661
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     143.8979,
+     20.3027
+    ],
+    [
+     149.784,
+     20.3027
+    ],
+    [
+     149.784,
+     41.8061
+    ],
+    [
+     143.8979,
+     41.8061
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "1": 1
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "east-a",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    0,
+    2,
+    3
+   ],
+   "stepEdges": {
+    "1": 16.1
+   }
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      147.8373,
+      41.8066
+     ],
+     [
+      151.9169,
+      42.1492
+     ],
+     [
+      153.8666,
+      21.0432
+     ],
+     [
+      149.784,
+      20.6661
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       152.0089,
+       41.1534
+      ],
+      [
+       153.8666,
+       21.0432
+      ],
+      [
+       149.784,
+       20.6661
+      ],
+      [
+       147.929,
+       40.8108
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     147.8373,
+     20.6661
+    ],
+    [
+     153.8666,
+     20.6661
+    ],
+    [
+     153.8666,
+     42.1492
+    ],
+    [
+     147.8373,
+     42.1492
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "0": 1
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "east-b",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    1,
+    2,
+    3
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "JGB",
+   "name": "JACKSON GEOLOGICAL SCIENCES BLDG.",
+   "base": 2,
+   "floors": 4,
+   "floorHeight": 4.1,
+   "rings": [
+    [
+     [
+      151.9169,
+      42.1492
+     ],
+     [
+      190.12,
+      45.4639
+     ],
+     [
+      190.5096,
+      44.5621
+     ],
+     [
+      193.3155,
+      44.4892
+     ],
+     [
+      195.0752,
+      24.8501
+     ],
+     [
+      191.408,
+      24.5113
+     ],
+     [
+      153.865,
+      21.1123
+     ],
+     [
+      153.8705,
+      21.0436
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       153.772,
+       22.108
+      ],
+      [
+       152.009,
+       41.1534
+      ],
+      [
+       182.2417,
+       43.7766
+      ],
+      [
+       192.399,
+       43.5127
+      ],
+      [
+       193.9902,
+       25.7541
+      ],
+      [
+       191.3169,
+       25.5072
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     151.9169,
+     21.0436
+    ],
+    [
+     195.0752,
+     21.0436
+    ],
+    [
+     195.0752,
+     45.4639
+    ],
+    [
+     151.9169,
+     45.4639
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L010-h000",
+     "L009-h090"
+    ],
+    "primaryRefs": [
+     "jgb-official"
+    ],
+    "doorEdges": {},
+    "bayCounts": {
+     "0": 9,
+     "3": 4,
+     "4": 1,
+     "5": 9
+    },
+    "doorWidth": 2.6,
+    "doorHeight": 3.8,
+    "bayWidth": 1.75,
+    "bayHeight": 2.8,
+    "frameColumns": 1,
+    "frameRows": 2,
+    "plinth": 0.6,
+    "roofRise": 0,
+    "roofOverhang": 0,
+    "soffitBrackets": false,
+    "entryStyle": "jackson-concrete",
+    "flatRoof": true,
+    "finEdges": []
+   },
+   "part": "east-c",
+   "partTier": {
+    "lidarHeight": 22.7,
+    "groundY": -2.4,
+    "roofY": 20.3,
+    "basis": "measured",
+    "source": "public/data/derived/roofs-lidar.json 575728"
+   },
+   "eave": 20.1,
+   "cutTop": 26.3,
+   "skipEdges": [
+    6,
+    7
+   ],
+   "stepEdges": {}
+  },
+  {
+   "abbr": "WAG",
+   "name": "WAGGENER HALL",
+   "base": 5.8,
+   "floors": 4,
+   "floorHeight": 4.12,
+   "rings": [
+    [
+     [
+      -36.8635,
+      140.6428
+     ],
+     [
+      -31.4399,
+      78.8737
+     ],
+     [
+      -49.0041,
+      77.335
+     ],
+     [
+      -54.4249,
+      139.0748
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       -37.726642167730056,
+       139.6119536173642
+      ],
+      [
+       -32.469369973676244,
+       79.73715240014148
+      ],
+      [
+       -48.14081557363554,
+       78.36426588412267
+      ],
+      [
+       -53.39557210357041,
+       138.21292608314727
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     -36.8635,
+     140.6428
+    ],
+    [
+     -31.4399,
+     78.8737
+    ],
+    [
+     -49.00379378150631,
+     77.33151249340862
+    ],
+    [
+     -54.42739378150626,
+     139.1006124934094
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L095-h270",
+     "L021-h180"
+    ],
+    "primaryRefs": [
+     "wag-official"
+    ],
+    "doorEdges": {
+     "0": [
+      0.5
+     ],
+     "2": [
+      0.5
+     ]
+    },
+    "bayCounts": {
+     "0": 15,
+     "1": 4,
+     "2": 15,
+     "3": 4
+    },
+    "doorWidth": 3,
+    "doorHeight": 5,
+    "archDoor": true,
+    "bayWidth": 1.5,
+    "bayHeight": 2.6,
+    "frameColumns": 3,
+    "frameRows": 5,
+    "plinth": 4.3,
+    "roofRise": 4.5,
+    "roofOverhang": 1.25,
+    "atticHeight": 2.65,
+    "soffitBrackets": true,
+    "entryStyle": "arched-central-bay"
+   }
+  },
+  {
+   "abbr": "GAR",
+   "name": "GARRISON HALL",
+   "base": 14.8,
+   "floors": 3,
+   "floorHeight": 4.5,
+   "rings": [
+    [
+     [
+      -136.0209,
+      120.7393
+     ],
+     [
+      -134.9997,
+      109.4895
+     ],
+     [
+      -105.2238,
+      112.2383
+     ],
+     [
+      -103.6327,
+      94.7902
+     ],
+     [
+      -151.3299,
+      90.5366
+     ],
+     [
+      -153.8547,
+      119.1524
+     ]
+    ]
+   ],
+   "core": [
+    [
+     [
+      [
+       -136.8812794505153,
+       119.7089874993623
+      ],
+      [
+       -135.8597955236819,
+       108.45605968885475
+      ],
+      [
+       -106.0835051828653,
+       111.20489572366264
+      ],
+      [
+       -104.66521974931358,
+       95.65189083826644
+      ],
+      [
+       -150.46714994505953,
+       91.56730955717185
+      ],
+      [
+       -152.82494347307988,
+       118.29027693641959
+      ]
+     ]
+    ]
+   ],
+   "roofRectangle": [
+    [
+     -103.6327,
+     94.7902
+    ],
+    [
+     -151.3299,
+     90.5366
+    ],
+    [
+     -153.8816211659881,
+     119.14999919090509
+    ],
+    [
+     -106.18442116598975,
+     123.40359919090437
+    ]
+   ],
+   "profile": {
+    "refs": [
+     "L022-h180",
+     "L016-h090"
+    ],
+    "primaryRefs": [
+     "gar-official"
+    ],
+    "doorEdges": {
+     "3": [
+      0.43
+     ]
+    },
+    "bayCounts": {
+     "0": 2,
+     "1": 7,
+     "2": 4,
+     "3": 11,
+     "4": 6,
+     "5": 4
+    },
+    "doorWidth": 2.65,
+    "doorHeight": 4,
+    "archDoor": true,
+    "archGroundWindows": true,
+    "bayWidth": 1.6,
+    "bayHeight": 2.65,
+    "frameColumns": 3,
+    "frameRows": 5,
+    "plinth": 4.15,
+    "roofRise": 4.23,
+    "roofOverhang": 1.05,
+    "soffitBrackets": true,
+    "entryStyle": "arched-balcony"
+   },
+   "roofRectangles": [
+    [
+     [
+      -151.32924646624,
+      90.52724603808001
+     ],
+     [
+      -103.63059172748,
+      94.80407379012
+     ],
+     [
+      -105.1907542004,
+      112.2042721256
+     ],
+     [
+      -152.88940893915998,
+      107.92744437356001
+     ]
+    ],
+    [
+     [
+      -152.88940893915998,
+      107.92744437356001
+     ],
+     [
+      -135.00116840652,
+      109.53136641212001
+     ],
+     [
+      -136.00763841624,
+      120.75633694679996
+     ],
+     [
+      -153.89587894887998,
+      119.15241490823998
+     ]
+    ]
+   ],
+   "eave": 29.3,
+   "lidarFit": {
+    "source": "public/data/derived/roofs-lidar.json",
+    "basis": "measured",
+    "note": "eave/roofRise fitted so the built roof P50/P95 inside the City ring match the 2017 LiDAR (root-shared lane, 2026-10-20)"
+   }
+  }
+ ],
+ "sourceSha256": "6fc4130f5540f3e5fc3debb2da05bf02e63313814382de43f946b952d3303fe0",
+ "limits": "Footprints and default base datums preserved from installed mall plan. Photo-informed facade sizes and roofs are estimates. No surrounding ground or scan-fringe replacement."
+}

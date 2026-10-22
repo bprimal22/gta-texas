@@ -1,0 +1,67 @@
+{
+ "title": "Campus ground finish textures",
+ "license": "CC0 1.0 (ambientCG)",
+ "usage": "lib/campus/vegetation/lawn.ts (world-XZ sampled maintained lawn, leaf-litter root zones, groundcover beds)",
+ "files": [
+  {
+   "url": "https://ambientcg.com/get?file=Grass004_1K-JPG.zip",
+   "page": "https://ambientcg.com/view?id=Grass004",
+   "license": "CC0 1.0 (ambientCG)",
+   "archiveBytes": 11003149,
+   "archiveSha256": "4b63495f459db8481f4d5144e4e9069345c81cf898cc71f2216f5dd3bb344469",
+   "file": "lawn-color.jpg",
+   "bytes": 418489,
+   "sha256": "51082723aa28309b49c565f2d85f7433243f21e88e226dc72110d4a70a6d9801",
+   "derivedFrom": "Grass004_1K-JPG_Color.jpg",
+   "preparation": "re-encoded JPEG (quality 88-90) with Pillow; no other change"
+  },
+  {
+   "url": "https://ambientcg.com/get?file=Grass004_1K-JPG.zip",
+   "page": "https://ambientcg.com/view?id=Grass004",
+   "license": "CC0 1.0 (ambientCG)",
+   "archiveBytes": 11003149,
+   "archiveSha256": "4b63495f459db8481f4d5144e4e9069345c81cf898cc71f2216f5dd3bb344469",
+   "file": "lawn-normal.jpg",
+   "bytes": 121691,
+   "sha256": "f5898f44614e4a6c16d942743714cf8a2ead80af166f4fab81776b56f26d54f1",
+   "derivedFrom": "Grass004_1K-JPG_NormalGL.jpg (resized 512)",
+   "preparation": "re-encoded JPEG (quality 88-90) with Pillow; no other change"
+  },
+  {
+   "url": "https://ambientcg.com/get?file=Grass001_1K-JPG.zip",
+   "page": "https://ambientcg.com/view?id=Grass001",
+   "license": "CC0 1.0 (ambientCG)",
+   "archiveBytes": 10710313,
+   "archiveSha256": "902f447a64171c8099589642d5bf2d1d6e52c40e94d957eb78eae722084b0cfb",
+   "file": "groundcover-color.jpg",
+   "bytes": 315121,
+   "sha256": "f98978f6dbb931fece8d5481964e03fb6ff77bec688c3a896133600055dd5ec7",
+   "derivedFrom": "Grass001_1K-JPG_Color.jpg",
+   "preparation": "re-encoded JPEG (quality 88-90) with Pillow; no other change"
+  },
+  {
+   "url": "https://ambientcg.com/get?file=ScatteredLeaves009_1K-JPG.zip",
+   "page": "https://ambientcg.com/view?id=ScatteredLeaves009",
+   "license": "CC0 1.0 (ambientCG)",
+   "archiveBytes": 10947905,
+   "archiveSha256": "204e8832ec987fbc26f1a62053444a4df4f2ca7eb4dd8ed91e1ed03ab361be87",
+   "file": "litter-color.jpg",
+   "bytes": 395091,
+   "sha256": "63d4e476f5e73ac1c280df4af6a4e1edbf7be1730c7441093364bad6f0e77e6d",
+   "derivedFrom": "ScatteredLeaves009_1K-JPG_Color.jpg",
+   "preparation": "re-encoded JPEG (quality 88-90) with Pillow; no other change"
+  },
+  {
+   "url": "https://ambientcg.com/get?file=ScatteredLeaves009_1K-JPG.zip",
+   "page": "https://ambientcg.com/view?id=ScatteredLeaves009",
+   "license": "CC0 1.0 (ambientCG)",
+   "archiveBytes": 10947905,
+   "archiveSha256": "204e8832ec987fbc26f1a62053444a4df4f2ca7eb4dd8ed91e1ed03ab361be87",
+   "file": "litter-normal.jpg",
+   "bytes": 125826,
+   "sha256": "c7db5c44991629e5dd7e7964d67ae9a5f6cd4acdc1f463393ab76d7ace2fc1b0",
+   "derivedFrom": "ScatteredLeaves009_1K-JPG_NormalGL.jpg (resized 512)",
+   "preparation": "re-encoded JPEG (quality 88-90) with Pillow; no other change"
+  }
+ ]
+}

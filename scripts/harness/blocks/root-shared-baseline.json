@@ -1,0 +1,712 @@
+{
+ "sceneMs": 19303,
+ "ok": false,
+ "report": {
+  "roofs": {
+   "JGB": {
+    "generator": "historic-central-buildings",
+    "groundY": -2.4,
+    "pitchDeg": 30.2,
+    "gridPoints": 3194,
+    "roofSamples": 3127,
+    "coverage": 0.98,
+    "lidarY": {
+     "p50": 20.3,
+     "p95": 26.7,
+     "max": 28.7
+    },
+    "modelY": {
+     "p50": 26.8,
+     "p95": 26.8,
+     "max": 27.03
+    },
+    "residual": {
+     "p50": 6.5,
+     "p95": 0.1,
+     "max": -1.67
+    },
+    "tiers": [
+     {
+      "tierHeight": 14.7,
+      "area": 382,
+      "lidarY": 12.3,
+      "samples": 360,
+      "modelMedianY": 26.8,
+      "residual": 14.5
+     },
+     {
+      "tierHeight": 18.7,
+      "area": 139,
+      "lidarY": 16.3,
+      "samples": 115,
+      "modelMedianY": 26.8,
+      "residual": 10.5
+     },
+     {
+      "tierHeight": 22.7,
+      "area": 2879,
+      "lidarY": 20.3,
+      "samples": 2652,
+      "modelMedianY": 26.8,
+      "residual": 6.5
+     },
+     {
+      "tierHeight": 27.7,
+      "area": 658,
+      "lidarY": 25.3,
+      "samples": 660,
+      "modelMedianY": 26.8,
+      "residual": 1.5
+     }
+    ],
+    "visPhys": {
+     "bad": 0,
+     "worst": 0
+    },
+    "reportOnly": {
+     "p95": "P95/max sit 1.4/3.4 m above the highest tier: rooftop plant/penthouse returns smaller than a tier (< 60 m2); position and form unsourced, not built"
+    }
+   },
+   "EPS": {
+    "generator": "historic-central-buildings",
+    "groundY": 1.1,
+    "pitchDeg": 27,
+    "gridPoints": 1090,
+    "roofSamples": 1090,
+    "coverage": 1,
+    "lidarY": {
+     "p50": 17.8,
+     "p95": 20.3,
+     "max": 20.8
+    },
+    "modelY": {
+     "p50": 16.28,
+     "p95": 17.26,
+     "max": 17.4
+    },
+    "residual": {
+     "p50": -1.52,
+     "p95": -3.04,
+     "max": -3.4
+    },
+    "tiers": [
+     {
+      "tierHeight": 16.6,
+      "area": 1181,
+      "lidarY": 17.7,
+      "samples": 1090,
+      "modelMedianY": 16.28,
+      "residual": -1.42
+     }
+    ],
+    "visPhys": {
+     "bad": 0,
+     "worst": 0
+    }
+   },
+   "BRB": {
+    "generator": "historic-central-buildings",
+    "groundY": 0.3,
+    "pitchDeg": 26.9,
+    "gridPoints": 1079,
+    "roofSamples": 1079,
+    "coverage": 1,
+    "lidarY": {
+     "p50": 17.6,
+     "p95": 20,
+     "max": 20.5
+    },
+    "modelY": {
+     "p50": 15.91,
+     "p95": 17.04,
+     "max": 17.19
+    },
+    "residual": {
+     "p50": -1.69,
+     "p95": -2.96,
+     "max": -3.31
+    },
+    "tiers": [
+     {
+      "tierHeight": 17.1,
+      "area": 1168,
+      "lidarY": 17.4,
+      "samples": 1079,
+      "modelMedianY": 15.91,
+      "residual": -1.49
+     }
+    ],
+    "visPhys": {
+     "bad": 0,
+     "worst": 0
+    }
+   },
+   "WAG": {
+    "generator": "historic-central-buildings",
+    "groundY": 3.8,
+    "pitchDeg": 24.5,
+    "gridPoints": 1194,
+    "roofSamples": 1139,
+    "coverage": 0.95,
+    "lidarY": {
+     "p50": 27,
+     "p95": 29,
+     "max": 29.4
+    },
+    "modelY": {
+     "p50": 27.15,
+     "p95": 29.21,
+     "max": 29.48
+    },
+    "residual": {
+     "p50": 0.15,
+     "p95": 0.21,
+     "max": 0.08
+    },
+    "tiers": [
+     {
+      "tierHeight": 23,
+      "area": 1296,
+      "lidarY": 26.8,
+      "samples": 1139,
+      "modelMedianY": 27.15,
+      "residual": 0.35
+     }
+    ],
+    "visPhys": {
+     "bad": 0,
+     "worst": 0
+    }
+   },
+   "GAR": {
+    "generator": "historic-central-buildings",
+    "groundY": 9.9,
+    "pitchDeg": 23.2,
+    "gridPoints": 1208,
+    "roofSamples": 1043,
+    "coverage": 0.86,
+    "lidarY": {
+     "p50": 31.3,
+     "p95": 33.3,
+     "max": 33.8
+    },
+    "modelY": {
+     "p50": 29.55,
+     "p95": 30.78,
+     "max": 30.95
+    },
+    "residual": {
+     "p50": -1.75,
+     "p95": -2.52,
+     "max": -2.85
+    },
+    "tiers": [
+     {
+      "tierHeight": 21.3,
+      "area": 1324,
+      "lidarY": 31.2,
+      "samples": 1043,
+      "modelMedianY": 29.55,
+      "residual": -1.65
+     }
+    ],
+    "visPhys": {
+     "bad": 0,
+     "worst": 0
+    }
+   },
+   "WCH": {
+    "generator": "wch-building",
+    "groundY": 10.1,
+    "pitchDeg": 26.2,
+    "gridPoints": 989,
+    "roofSamples": 966,
+    "coverage": 0.98,
+    "lidarY": {
+     "p50": 32.5,
+     "p95": 34.7,
+     "max": 35.2
+    },
+    "modelY": {
+     "p50": 29.38,
+     "p95": 30.83,
+     "max": 31.05
+    },
+    "residual": {
+     "p50": -3.12,
+     "p95": -3.87,
+     "max": -4.15
+    },
+    "tiers": [
+     {
+      "tierHeight": 22.2,
+      "area": 1088,
+      "lidarY": 32.3,
+      "samples": 966,
+      "modelMedianY": 29.38,
+      "residual": -2.92
+     }
+    ],
+    "visPhys": {
+     "bad": 0,
+     "worst": 0
+    }
+   },
+   "BIO": {
+    "generator": "west24-buildings",
+    "groundY": 12.8,
+    "pitchDeg": 26.4,
+    "gridPoints": 1406,
+    "roofSamples": 1217,
+    "coverage": 0.87,
+    "lidarY": {
+     "p50": 33.8,
+     "p95": 36.8,
+     "max": 38.9
+    },
+    "modelY": {
+     "p50": 30.75,
+     "p95": 32.38,
+     "max": 32.74
+    },
+    "residual": {
+     "p50": -3.05,
+     "p95": -4.42,
+     "max": -6.16
+    },
+    "tiers": [
+     {
+      "tierHeight": 19.8,
+      "area": 1499,
+      "lidarY": 32.6,
+      "samples": 1217,
+      "modelMedianY": 30.75,
+      "residual": -1.85
+     },
+     {
+      "tierHeight": 22.6,
+      "area": 584,
+      "lidarY": 35.4,
+      "samples": 586,
+      "modelMedianY": 31.63,
+      "residual": -3.77
+     }
+    ],
+    "visPhys": {
+     "bad": 0,
+     "worst": 0
+    },
+    "reportOnly": {
+     "tier:19.8": "one hip at the measured 26.4 deg pitch cannot also reproduce the separate 22.6 m central tier; the central raised element is not identified"
+    }
+   },
+   "PAI": {
+    "generator": "west24-buildings",
+    "groundY": 8.8,
+    "pitchDeg": 26.3,
+    "gridPoints": 2304,
+    "roofSamples": 2254,
+    "coverage": 0.98,
+    "lidarY": {
+     "p50": 28.4,
+     "p95": 32.7,
+     "max": 37.1
+    },
+    "modelY": {
+     "p50": 26.95,
+     "p95": 28.26,
+     "max": 28.59
+    },
+    "residual": {
+     "p50": -1.45,
+     "p95": -4.44,
+     "max": -8.51
+    },
+    "tiers": [
+     {
+      "tierHeight": 17.8,
+      "area": 1496,
+      "lidarY": 26.6,
+      "samples": 1325,
+      "modelMedianY": 26.8,
+      "residual": 0.2
+     },
+     {
+      "tierHeight": 21.6,
+      "area": 180,
+      "lidarY": 30.4,
+      "samples": 181,
+      "modelMedianY": 26.8,
+      "residual": -3.6
+     },
+     {
+      "tierHeight": 22.3,
+      "area": 899,
+      "lidarY": 31.1,
+      "samples": 859,
+      "modelMedianY": 27.78,
+      "residual": -3.32
+     }
+    ],
+    "visPhys": {
+     "bad": 0,
+     "worst": 0
+    },
+    "reportOnly": {
+     "tier:21.6": "raised 180 m2 block on the rear wing (Y30.4) unidentified (observatory/penthouse?); not built",
+     "p95": "includes the unbuilt rear raised block and the 37.1 max (dome/plant)"
+    }
+   },
+   "GEA": {
+    "generator": "west24-buildings",
+    "groundY": 10.1,
+    "pitchDeg": 23.7,
+    "gridPoints": 1390,
+    "roofSamples": 1216,
+    "coverage": 0.87,
+    "lidarY": {
+     "p50": 27.1,
+     "p95": 35,
+     "max": 37.2
+    },
+    "modelY": {
+     "p50": 26.95,
+     "p95": 27.86,
+     "max": 30.77
+    },
+    "residual": {
+     "p50": -0.15,
+     "p95": -7.14,
+     "max": -6.43
+    },
+    "tiers": [
+     {
+      "tierHeight": 7.3,
+      "area": 211,
+      "lidarY": 17.4,
+      "samples": 15,
+      "modelMedianY": 26.29,
+      "residual": 8.89
+     },
+     {
+      "tierHeight": 15.8,
+      "area": 337,
+      "lidarY": 25.9,
+      "samples": 293,
+      "modelMedianY": 26.88,
+      "residual": 0.98
+     },
+     {
+      "tierHeight": 15.9,
+      "area": 333,
+      "lidarY": 26,
+      "samples": 296,
+      "modelMedianY": 26.89,
+      "residual": 0.89
+     },
+     {
+      "tierHeight": 20.7,
+      "area": 634,
+      "lidarY": 30.8,
+      "samples": 611,
+      "modelMedianY": 27.07,
+      "residual": -3.73
+     }
+    ],
+    "visPhys": {
+     "bad": 0,
+     "worst": 0
+    },
+    "reportOnly": {
+     "p50": "the one-storey court infill (LiDAR Y17.3, 211 m2) lies outside the official UT polygon and is not built, so the record P50 mixes in low court returns; zones are checked by tier",
+     "p95": "central-range P90/P95 35.1/35.5 exceed a hip at the measured 23.7 deg pitch; the remainder (towers/roof elements, east-wing raised element) is not sourced"
+    }
+   },
+   "WEL": {
+    "generator": "west24-buildings (north wing only)",
+    "groundY": 4.7,
+    "pitchDeg": 21.1,
+    "gridPoints": 9392,
+    "roofSamples": 2325,
+    "coverage": 0.25,
+    "lidarY": {
+     "p50": 27.4,
+     "p95": 34,
+     "max": 40.4
+    },
+    "modelY": {
+     "p50": 25.88,
+     "p95": 27.57,
+     "max": 27.93
+    },
+    "residual": {
+     "p50": -1.52,
+     "p95": -6.43,
+     "max": -12.47
+    },
+    "tiers": [
+     {
+      "tierHeight": 7.3,
+      "area": 490,
+      "lidarY": 12,
+      "samples": 0,
+      "modelMedianY": null,
+      "residual": null
+     },
+     {
+      "tierHeight": 12.8,
+      "area": 507,
+      "lidarY": 17.5,
+      "samples": 0,
+      "modelMedianY": null,
+      "residual": null
+     },
+     {
+      "tierHeight": 22.6,
+      "area": 6363,
+      "lidarY": 27.3,
+      "samples": 2235,
+      "modelMedianY": 25.94,
+      "residual": -1.36
+     },
+     {
+      "tierHeight": 29.3,
+      "area": 894,
+      "lidarY": 34,
+      "samples": 0,
+      "modelMedianY": null,
+      "residual": null
+     }
+    ],
+    "visPhys": {
+     "bad": 0,
+     "worst": 0
+    },
+    "note": "reported only: partial wing"
+   }
+  },
+  "jgbHorizontalNearLTH": {
+   "triangles": 0,
+   "examples": []
+  },
+  "generatedDecisions": {
+   "549259": {
+    "decision": "generated",
+    "ground": 0,
+    "perimeter": 0.39
+   },
+   "613959": {
+    "decision": "generated",
+    "ground": 0,
+    "perimeter": 0
+   },
+   "698195": {
+    "decision": "generated",
+    "ground": 0,
+    "perimeter": 0.08
+   },
+   "714471": {
+    "decision": "generated",
+    "ground": 0,
+    "perimeter": 0
+   },
+   "733879": {
+    "decision": "generated",
+    "ground": 0,
+    "perimeter": 0.03
+   }
+  },
+  "yardClips": {
+   "JGB": {
+    "expected": 325,
+    "actual": 325
+   },
+   "WAG": {
+    "expected": 253,
+    "actual": 253
+   },
+   "GAR": {
+    "expected": 277,
+    "actual": 277
+   }
+  },
+  "routeHeadroom": {
+   "samples": 16012,
+   "blocked": 84,
+   "baselineBlocked": null,
+   "newBlocked": 84,
+   "newExamples": [
+    "31.7,24.0",
+    "34.7,24.1",
+    "41.3,24.7",
+    "45.3,50.0",
+    "15.4,103.7",
+    "17.2,103.9",
+    "54.7,107.4",
+    "58.7,107.6"
+   ],
+   "examples": [
+    [
+     31.72,
+     2.24,
+     24.03,
+     "Smooth East Mall buildings: Mall planting soil",
+     "EPS Historic campus warm limestone",
+     0.78
+    ],
+    [
+     34.67,
+     2.2,
+     24.15,
+     "Smooth East Mall buildings: Mall planting soil",
+     "EPS Historic campus warm limestone",
+     0.82
+    ],
+    [
+     41.33,
+     2.13,
+     24.66,
+     "Smooth East Mall buildings: Mall planting soil",
+     "EPS Historic campus warm limestone",
+     0.89
+    ],
+    [
+     45.33,
+     2.1,
+     49.96,
+     "Smooth East Mall buildings: Mall planting soil",
+     "EPS Historic campus dark iron",
+     0.68
+    ],
+    [
+     15.4,
+     1.79,
+     103.73,
+     "Smooth East Mall buildings: Mall planting soil",
+     "BRB Historic campus warm limestone",
+     0.83
+    ],
+    [
+     17.17,
+     1.71,
+     103.89,
+     "Smooth East Mall buildings: Mall planting soil",
+     "BRB Historic campus warm limestone",
+     0.91
+    ]
+   ],
+   "keys": [
+    "31.7,24.0",
+    "34.7,24.1",
+    "41.3,24.7",
+    "45.3,50.0",
+    "15.4,103.7",
+    "17.2,103.9",
+    "54.7,107.4",
+    "58.7,107.6",
+    "61.3,107.9",
+    "-36.0,131.6",
+    "-36.2,134.7",
+    "-36.2,133.3",
+    "-32.1,87.1",
+    "-32.3,89.3",
+    "-32.5,93.3",
+    "-152.0,98.1",
+    "-152.0,98.4",
+    "-152.1,98.8",
+    "-152.1,99.4",
+    "-152.1,99.7",
+    "-152.1,99.1",
+    "-152.0,98.1",
+    "-152.2,100.0",
+    "-152.2,100.7",
+    "-152.3,101.3",
+    "-152.4,102.7",
+    "-152.5,103.3",
+    "-152.3,102.0",
+    "-152.5,104.0",
+    "-152.6,104.7",
+    "-152.6,105.3",
+    "-152.8,106.7",
+    "-152.8,107.3",
+    "-152.7,106.0",
+    "-152.9,108.0",
+    "-152.9,108.7",
+    "-153.0,109.3",
+    "-153.1,110.7",
+    "-153.2,111.3",
+    "-153.1,110.0",
+    "-153.2,112.0",
+    "-153.3,112.7",
+    "-153.3,113.3",
+    "-153.5,114.7",
+    "-153.5,115.3",
+    "-153.4,114.0",
+    "-153.6,116.5",
+    "-153.7,117.0",
+    "-152.6,119.5",
+    "-151.4,91.0",
+    "-151.4,91.5",
+    "-151.4,91.8",
+    "-151.4,91.3",
+    "-151.5,92.0",
+    "-151.5,92.7",
+    "-151.6,93.3",
+    "-151.7,94.7",
+    "-151.8,95.3",
+    "-151.6,94.0",
+    "-151.9,97.4",
+    "-152.0,97.7",
+    "-151.8,96.4",
+    "-151.9,96.7",
+    "-151.9,96.7",
+    "-151.9,97.0",
+    "-114.7,111.4",
+    "-112.7,111.6",
+    "-109.3,111.9",
+    "-111.3,111.7",
+    "-110.7,111.7",
+    "-108.7,111.9",
+    "-108.7,111.9",
+    "-109.3,111.9",
+    "-107.9,112.0",
+    "-108.0,112.0",
+    "-108.0,112.0",
+    "-107.9,112.0",
+    "-152.1,98.4",
+    "-152.6,103.3",
+    "-153.0,108.0",
+    "-153.0,108.0",
+    "-153.4,112.7",
+    "-151.5,92.0",
+    "-151.6,92.0"
+   ]
+  }
+ },
+ "failures": [
+  "JGB roof P50 Y26.8 vs LiDAR Y20.3 (> 0.6 m)",
+  "JGB tier 14.7 m: model median Y26.8 vs LiDAR Y12.3 (> 0.8 m)",
+  "JGB tier 18.7 m: model median Y26.8 vs LiDAR Y16.3 (> 0.8 m)",
+  "JGB tier 22.7 m: model median Y26.8 vs LiDAR Y20.3 (> 0.8 m)",
+  "JGB tier 27.7 m: model median Y26.8 vs LiDAR Y25.3 (> 0.8 m)",
+  "EPS roof P50 Y16.28 vs LiDAR Y17.8 (> 0.6 m)",
+  "EPS roof P95 Y17.26 vs LiDAR Y20.3 (> 0.8 m)",
+  "EPS tier 16.6 m: model median Y16.28 vs LiDAR Y17.7 (> 0.8 m)",
+  "BRB roof P50 Y15.91 vs LiDAR Y17.6 (> 0.6 m)",
+  "BRB roof P95 Y17.04 vs LiDAR Y20 (> 0.8 m)",
+  "BRB tier 17.1 m: model median Y15.91 vs LiDAR Y17.4 (> 0.8 m)",
+  "GAR roof P50 Y29.55 vs LiDAR Y31.3 (> 0.6 m)",
+  "GAR roof P95 Y30.78 vs LiDAR Y33.3 (> 0.8 m)",
+  "GAR tier 21.3 m: model median Y29.55 vs LiDAR Y31.2 (> 0.8 m)",
+  "WCH roof P50 Y29.38 vs LiDAR Y32.5 (> 0.6 m)",
+  "WCH roof P95 Y30.83 vs LiDAR Y34.7 (> 0.8 m)",
+  "WCH tier 22.2 m: model median Y29.38 vs LiDAR Y32.3 (> 0.8 m)",
+  "BIO roof P50 Y30.75 vs LiDAR Y33.8 (> 0.6 m)",
+  "BIO roof P95 Y32.38 vs LiDAR Y36.8 (> 0.8 m)",
+  "BIO tier 22.6 m: model median Y31.63 vs LiDAR Y35.4 (> 1 m)",
+  "PAI roof P50 Y26.95 vs LiDAR Y28.4 (> 0.6 m)",
+  "PAI tier 22.3 m: model median Y27.78 vs LiDAR Y31.1 (> 1 m)",
+  "GEA tier 20.7 m: model median Y27.07 vs LiDAR Y30.8 (> 1 m)",
+  "84 other walkable samples newly have a root-shared solid 0.3-2.1 m above (no baseline given), e.g. [\"31.7,24.0\",\"34.7,24.1\",\"41.3,24.7\",\"45.3,50.0\",\"15.4,103.7\",\"17.2,103.9\"]"
+ ]
+}

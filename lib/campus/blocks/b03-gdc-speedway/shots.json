@@ -1,0 +1,211 @@
+[
+  {
+    "id": "b03-speedway-south-from-pob",
+    "block": "b03-gdc-speedway",
+    "kind": "street",
+    "label": "Speedway street approach south past POB toward the GDC north wing and the East Mall",
+    "position": [
+      7,
+      5.21,
+      -75
+    ],
+    "target": [
+      9,
+      6,
+      -5
+    ],
+    "fov": 60,
+    "groundY": 3.51,
+    "note": "Matches the Street View survey stop 01 viewpoint area (camera ~x7 z-66, Mar 2025) but looks along Speedway; checks the 9.144 m golden brick, drain line, GDC north frontage and the hedge line."
+  },
+  {
+    "id": "b03-gdc-west-passage",
+    "block": "b03-gdc-speedway",
+    "kind": "side",
+    "label": "GDC west side: the narrow central passage between the paired wings, Circle with Towers and the new approach hedges",
+    "position": [
+      5.5,
+      5.29,
+      -19
+    ],
+    "target": [
+      40,
+      9,
+      -19
+    ],
+    "fov": 60,
+    "groundY": 3.59,
+    "note": "Codex Street View note (Mar 2025 capture, observed 2026-10-19): open central passage, LeWitt Circle with Towers (8 towers), low clipped hedges beside the straight paths. Wing-edge and open-sky positions are checked against LiDAR by the b03 block check."
+  },
+  {
+    "id": "b03-east-mall-mlk",
+    "block": "b03-gdc-speedway",
+    "kind": "street",
+    "label": "East Mall looking east to the MLK statue with EPS (north) and BRB (south)",
+    "position": [
+      80,
+      2.54,
+      71
+    ],
+    "target": [
+      101,
+      3,
+      71
+    ],
+    "fov": 55,
+    "groundY": 0.84,
+    "note": "MLK statue (Varilla, unveiled Sept 1999); EPS/BRB come from the root-shared historic generator."
+  },
+  {
+    "id": "b03-24th-ppe",
+    "block": "b03-gdc-speedway",
+    "kind": "street",
+    "label": "East 24th Street looking south-west at the power plant expansion (594130, corrected to LiDAR height) and POB",
+    "position": [
+      140,
+      2.14,
+      -125
+    ],
+    "target": [
+      118,
+      12,
+      -88
+    ],
+    "fov": 60,
+    "groundY": 0.44,
+    "note": "Before this block the footprint was built 47.8 m tall from the City height; now the measured 2017 LiDAR roof (P95 18.4 m above ground)."
+  },
+  {
+    "id": "b03-aerial-southwest",
+    "block": "b03-gdc-speedway",
+    "kind": "aerial",
+    "label": "Aerial from the south-west over the East Mall: GDC, JGB, the power plant group, Speedway",
+    "position": [
+      20,
+      120,
+      140
+    ],
+    "target": [
+      130,
+      0,
+      -30
+    ],
+    "fov": 55,
+    "groundY": 0.65,
+    "note": "Shows the route-suppressed footprints (LTH, 613959, 698195) still missing until the shared request to clip the JGB yard soil is applied."
+  },
+  {
+    "id": "b03-speedway-north-street",
+    "block": "b03-gdc-speedway",
+    "kind": "street",
+    "label": "Speedway north of the EER south walk looking north to Dean Keeton: the new 30 ft paved stretch between EER/PMA (east) and the west lawn",
+    "position": [
+      24.6,
+      7.47,
+      -252
+    ],
+    "target": [
+      31.5,
+      7.2,
+      -330
+    ],
+    "fov": 60,
+    "groundY": 5.79,
+    "note": "Round 2: paved by install() (speedway-north.ts) from the accepted brick end (z -243.8) to the Dean Keeton curb (z -366.5) in the observed asphalt service-drive finish (accepted atlas b03-r1-a2; OSM service); the planned golden brick is a one-constant switch. East edge on b01's published engineeringSpeedwayEdge() profile. Angled parking, turnaround and the paver plaza at Dean Keeton are not modelled."
+  },
+  {
+    "id": "b03-plant-cooling-towers-aerial",
+    "block": "b03-gdc-speedway",
+    "kind": "aerial",
+    "label": "Aerial from the south-east over San Jacinto: the added official CT1 (7 fans) and CT2 (5 fans) cooling towers, PA1/PA3/PA4 storehouses, PPA and the 212 ft PPL chimney",
+    "position": [
+      312,
+      48,
+      10
+    ],
+    "target": [
+      232,
+      2,
+      -58
+    ],
+    "fov": 55,
+    "groundY": -6.75,
+    "note": "Round 3: CT1/CT2/PA1/PA3/PA4/PB2 were absent (no City 2023 record); added from the official UT High-Security buildings layer with LiDAR deck heights; fan shrouds from LiDAR cells + the accepted atlas b03-r0-b1 fan count. Compare with that overview (top-down)."
+  },
+  {
+    "id": "b03-lth-street",
+    "block": "b03-gdc-speedway",
+    "kind": "street",
+    "label": "Open ground between JGB and WIN looking south-west at the Laboratory Theater (LTH): 11.2 m east stage block in front of the 7.7 m west block",
+    "position": [
+      203,
+      -1.4,
+      34
+    ],
+    "target": [
+      188,
+      3,
+      14
+    ],
+    "fov": 60,
+    "groundY": -3.3,
+    "note": "Round 3: LTH heights moved to the LiDAR datum (were 1.14 m high). Facade still the generic modernist-lab archetype (no facade capture)."
+  },
+  {
+    "id": "b03-r1-a2-30m-actual",
+    "block": "b03-gdc-speedway",
+    "kind": "aerial",
+    "label": "D04 actual capture pose (full-map-30m b03-r1-a2-30m): painted stall lines on the Speedway north service drive",
+    "position": [
+      9,
+      34.693,
+      -183
+    ],
+    "target": [
+      22.5,
+      17.469,
+      -232.5
+    ],
+    "fov": 60,
+    "groundY": 5.6,
+    "note": "District round. Same pose as full-map-30m b03-r1-a2-30m, the evidence for the stall paint (speedway-north-markings.ts). Used as the D04 actual-pose shot: all four d04-orbit-* cameras lie 1.14 m outside the block aerial margin (G5)."
+  },
+  {
+    "id": "b03-d05-orbit-southeast-actual",
+    "block": "b03-gdc-speedway",
+    "kind": "aerial",
+    "label": "D05 actual orbit pose (GDC roof / East Mall) — compare with d05-orbit-southeast",
+    "position": [
+      146.14,
+      30.816,
+      -21.36
+    ],
+    "target": [
+      82.5,
+      9.581,
+      -85.0
+    ],
+    "fov": 60,
+    "groundY": 9.6,
+    "note": "District round. Same pose as screenshot-dataset/collections/district-orbits-30m/captures/d05-orbit-southeast.jpg. GDC itself is root-owned and unchanged by b03."
+  },
+  {
+    "id": "b03-plant-stacks-fans-close",
+    "block": "b03-gdc-speedway",
+    "kind": "side",
+    "label": "D05 subject: textured brick chimney B and CS6 fan shrouds (metre-UV PBR finish)",
+    "position": [
+      160,
+      34,
+      -8
+    ],
+    "target": [
+      118,
+      30,
+      -55
+    ],
+    "fov": 55,
+    "groundY": 0.5,
+    "note": "District round. Shows the new b03 finishes at mid distance; geometry is the LiDAR round-2/3 geometry."
+  }
+]

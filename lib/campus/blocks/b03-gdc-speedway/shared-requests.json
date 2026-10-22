@@ -1,0 +1,102 @@
+[
+  {
+    "id": "b03-r1",
+    "file": "public/data/mall-buildings-plan.json (buildings[abbr=JGB].yards), consumed by lib/campus/mall-buildings.ts",
+    "change": "Drop every JGB yard cell whose triangle centroid lies inside, or within 0.5 m of, the City outer rings of records 549259:390 (LTH), 613959:738 (City-labelled E23, most likely the Hal C. Weaver Power Plant PPL) and 698195:1031 (most likely Central Chilling Station No. 6). Do not move any other yard cell.",
+    "reason": "These three real buildings are missing from the scene: planContextBuildings classifies them 'route' because the mesh 'Smooth East Mall buildings: Mall planting soil' (the JGB yard band, ~20 m wide, generated around the JGB ring with no survey basis; bbox x 90.5-214.3, z -26.7-74.0) lies inside their footprints. It is the ONLY authored walkable ground inside 613959 (58 of 58 ground cells) and 698195 (92 of 92), and 16 of 16 cells inside LTH. After the clip 613959 and 698195 have elevated 0 / perimeter 0 and 0.08, so they regenerate; b03 context.json already carries their LiDAR massing (613959) / measured tiers (698195) and utility catalogue entries.",
+    "evidence": {
+      "source": "research/whole-campus-92/b03-gdc-speedway/derived/probe-routes2.json (lane probe .work/b03/probe-routes2.mjs, real headless scene, 2026-10-20); official LTH polygon research/raw/ut-official-buildings.geojson object 446 overlaps 96.6% of the City LTH ring; LiDAR roofs-lidar.json 698195 tier 13.7 m covers the soil cells at x 119.9-124, z -25..-9; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/LTH/ (303 E 24th, 3 floors, 1959) and .../UTM/PPL/, .../UTM/CS6/ (fetched 2026-10-20)",
+      "basis": "measured",
+      "note": "Verify with: node scripts/harness/run-block-checks.mjs b03-gdc-speedway -> own.suppressed should show decision 'generated' for 613959 and 698195; run-context-check ROUTE-CELLS-INSIDE-GENERATED must stay 0."
+    },
+    "status": "applied by root (LTH, 613959, 698195 generated; verified by the b03 block check B8)"
+  },
+  {
+    "id": "b03-r2",
+    "file": "lib/campus/historic-central-buildings.ts / public/data/historic-central-plan.json (JGB ground apron)",
+    "change": "Clip the JGB 'Historic campus warm limestone' ground/apron triangles (campus Y -4.43) that extend south of the official JGB edge into the LTH City ring (examples at x 188.75 z 21.49 and x 196.75 z 23.49), i.e. keep JGB ground north of the line (195.1, 24.8)-(153.9, 21.1) in the LTH x range 173-200.",
+    "reason": "Together with b03-r1 this leaves no authored walkable ground inside LTH, so the Laboratory Theater (LiDAR tiers 7.7 m / 11.2 m above groundY -4.4) can regenerate. LTH's perimeter fraction (0.39) is just under the 0.4 'authored' threshold because JGB's east wall runs along its north edge; if it reaches 0.4 after integration, b03 will author LTH itself (replaces + install) in the next round rather than leave it missing.",
+    "evidence": {
+      "source": "research/whole-campus-92/b03-gdc-speedway/derived/probe-routes2.json; research/raw/ut-official-buildings.geojson objects 565 (JGB) and 446 (LTH)",
+      "basis": "official",
+      "note": "Official JGB edge vertices taken from the mall-buildings-plan JGB ring (utObjectId-based) [195.1,24.8] -> [153.9,21.1]."
+    },
+    "status": "applied by root (LTH, 613959, 698195 generated; verified by the b03 block check B8)"
+  },
+  {
+    "id": "b03-r3",
+    "file": "lib/campus/historic-central-buildings.ts / public/data/historic-central-plan.json (JGB massing)",
+    "change": "Replace JGB's single eave level (campus Y 26.8 everywhere) with the LiDAR roof tiers of record 575728 (heights above groundY -2.4): main body 22.7 m over its 2,879 m2 tier ring (campus Y 20.3), the 27.7 m tier over 658 m2 (campus Y 25.3, the 7-floor tower part), 18.7 m over 139 m2 (campus Y 16.3) and the low north wing 14.7 m over 382 m2 (campus Y 12.3). Rings: public/data/derived/roofs-lidar.json buildings['575728'].tiers.",
+    "reason": "Datum-aware comparison (b03 block check, 'authoredRoofAnchors') shows the authored JGB top is +6.5 m above the main LiDAR tier, +10.5 m and +14.5 m above the two low tiers, and +1.5 m above the high tier. JGB (1967) predates the 2017 LiDAR, so the tiers describe the current roof. EPS (-0.37 m) and BRB (-0.34 m) already agree.",
+    "evidence": {
+      "source": "public/data/derived/roofs-lidar.json 575728 (USGS 3DEP 2017; status measured, coverage reported in file); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/JGB/ (2305 Speedway, 7 floors, 1967; fetched 2026-10-20)",
+      "basis": "measured",
+      "note": "LiDAR tier rings merge parts smaller than 60 m2 and have 0.6-0.9 m horizontal scatter; facade rhythm is not established by this request."
+    },
+    "status": "applied by root-shared (JGB per-tier massing); round 3 verified 0.00 m on all four tiers (the round-2 +5.0 m was the b03 probe falling inside the 27.7 m tier; probe fixed)"
+  },
+  {
+    "id": "b03-r4",
+    "file": "lib/campus/walkway.ts (Speedway sourceWayIds) or an explicit hand-over of the stretch to b03 install()",
+    "change": "Speedway north of the authored corridor end (OSM 570134436 ends at campus 21.9,-235.3 / 22.7,-243.8) to the East Dean Keeton curb (z ~ -366) is bare 'Campus terrain lawn' with no paving and no collider under the downward probe (stations z -260, -290, -320, -350). Either extend the accepted golden-brick corridor along OSM 571500826 + 1036229280 (service, 22.7,-243.8 -> 29.7,-325.1 -> 33.0,-373.0) at the PWP 30 ft width, or authorise b03 to author it in install() with the same 'Speedway golden brick paving' material.",
+    "reason": "The pedestrian Speedway Mall project ran from Jester Circle to Dean Keeton and the brick north of 24th was laid (and not re-laid) by Oct 2017. A ground tie-in is needed: at z -260 the terrain at the corridor centre (campus Y ~6.5) is ~0.9 m above the b01 engineering courtyard concrete at x >= 29 (Y 5.61), so b01 (EER west frontage owner) must agree the east edge elevation; b03 did not build this without that agreement.",
+    "evidence": {
+      "source": "https://thedailytexan.com/2015/09/25/speedway-to-be-reconstructed-as-pedestrian-mall-area/ and https://thedailytexan.com/2017/10/18/speedway-mall-project-to-be-almost-entirely-redone-due-to-faulty-bricks/ (fetched 2026-10-20); https://www.pwpla.com/projects/uta-speedway-and-the-east-mall ('narrowed to a pedestrian-friendly 30 feet wide', fetched 2026-10-20); lane probe .work/b03/probe-north.mjs",
+      "basis": "reference-interpreted",
+      "note": "The width and edge treatment of this northern stretch (beside EER, completed 2017) are not separately published; 30 ft is the mall-wide figure. A second source (ESCSI newsletter) says 36 ft; PWP is the designer and is preferred."
+    },
+    "status": "resolved by b03 round 2 install() (lib/campus/blocks/b03-gdc-speedway/speedway-north.ts) against b01-r1; finish changed to the observed asphalt service drive, see EVIDENCE.md round 2"
+  },
+  {
+    "id": "b03-d1",
+    "file": "lib/campus/gdc-facade.ts, gdc-glazing.ts, gdc-masonry.ts (root-owned GDC model)",
+    "change": "ROOT REVIEW ONLY: the district round made NO change to the Gates Dell Complex and claims no GDC improvement. Compare the new shot b03-d05-orbit-southeast-actual (same pose as district-orbits-30m d05-orbit-southeast) and the existing b03-gdc-west-passage / b03-east-mall-mlk shots against the GDC directory/architect photographs (ut-gdc-402-directory-photo, ut-gdc-402-engineering-13/14/15) and decide any facade/roof changes in the root module.",
+    "reason": "GDC (589955) is root-authored; D05's core subject cannot be improved from b03. The b03 fan/chimney finishes are on the power plant, not on GDC.",
+    "evidence": {
+      "source": "district-orbits-30m d05-orbit-southeast (roof-only/obstructed review statuses); packet D05 photoReferences",
+      "basis": "reference-interpreted",
+      "note": "No measured GDC gap was derived in this round; request is for root inspection, not a specified patch."
+    }
+  },
+  {
+    "id": "b03-d2",
+    "file": "lib/campus/blocks/b01-eer (east side of the Speedway north drive) or root ground/curbs",
+    "change": "Red curb paint (fire lane) observed EAST of the built 9.144 m Speedway north strip, on the sidewalk curb return around campus x 28.8-33.0, z -255 .. -262 (and a second short red segment near x 27.9, z -244.8). b03 did not paint it (outside b03's surface). Owner of that curb may add 0.10 m red paint 0.008 m above its own surface, no collider.",
+    "reason": "Source-supported visible detail outside b03 ownership.",
+    "evidence": {
+      "source": "full-map-30m b03-r1-a2-30m (camera campus (9, 34.69, -183) -> (22.5, 17.47, -232.5), vFOV 60, 1280x720); pixels unprojected onto the drive (road Y 5.6-7.0)",
+      "basis": "reference-interpreted",
+      "note": "Positions +-1 m (plane height uncertainty); colour red, width estimate."
+    }
+  },
+  {
+    "id": "b03-d3",
+    "file": "lib/campus/blocks/b03-gdc-speedway/speedway-north.ts + b01 engineeringSpeedwayEdge (shared edge; ROOT decision)",
+    "change": "INFORMATION: the capture shows a paved service drive about 10.8-11.3 m wide (stalls ~5.25 m + aisle ~5.6 m), centred ~1.5 m WEST of OSM 571500826, while the built strip is the PWP 30 ft (9.144 m) on the OSM centreline with b01's published east edge. b03 kept the 9.144 m strip (B6 and the b01 seam depend on it) and fitted the stall pattern proportionally. If root wants the observed width, widen/shift the strip westward (west band, b02/b03 edge) and re-run B6 + the b01 seam.",
+    "reason": "Records the measured-vs-built discrepancy instead of hiding it.",
+    "evidence": {
+      "source": "full-map-30m b03-r1-a2-30m (camera campus (9, 34.69, -183) -> (22.5, 17.47, -232.5), vFOV 60, 1280x720); pixels unprojected onto the drive (road Y 5.6-7.0)",
+      "basis": "reference-interpreted"
+    }
+  },
+  {
+    "id": "b03-d4",
+    "file": "lib/campus/context/materials.ts or a root texture cache",
+    "change": "Offer a shared per-family texture cache (TextureLoader result per /assets/materials/context/<family>-*.jpg) that block-local finishes can borrow; b02, b03, b04 and b06 each load their own copies of the same maps.",
+    "reason": "Texture memory/upload cost; blocks may not borrow each other's helpers.",
+    "evidence": {
+      "source": "lib/campus/blocks/{b02-sciences,b03-gdc-speedway,b04-tower,b06-northwest}/textured-finish.ts",
+      "basis": "official"
+    }
+  },
+  {
+    "id": "b03-d5",
+    "file": "none (evidence gap)",
+    "change": "Winship Drama Building (732538) canopy/coffered soffit and planter band visible in ut-win-564-directory-photo were NOT added: the photograph's facade direction cannot be mapped to a wall of the generated record from the available captures (D05 orbits look west/north-west from x 146; WIN is at x 218-300). A ground photo with a known bearing (or a Winship-facing orbit) is needed before a block-local overlay.",
+    "reason": "No unmapped overlays on generated walls.",
+    "evidence": {
+      "source": "screenshot-dataset/online-photos/ut-win-564-directory-photo.jpg",
+      "basis": "reference-interpreted"
+    }
+  }
+]

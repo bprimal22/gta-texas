@@ -1,0 +1,124 @@
+{
+ "block": "b04-tower",
+ "replaces": {
+  "734456": {
+   "source": "lib/campus/blocks/b04-tower/index.ts GOL_SPEC: GIS ring (campus.json 734456) + USGS 3DEP 2017 LiDAR tiers (roofs-lidar.json: groundY 11.2, tiers 16.0/6.2/20.4 m, max 23.8 m, pitch 25.8 deg); UT building page https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/GOL/ (5 floors, 84,041 GSF, 1932), fetched 2026-10-20",
+   "basis": "measured",
+   "note": "Goldsmith Hall was classified 'route' (7 edge cells touched by West Mall paving, ground 0.012) and therefore drawn by nothing. The b04 install() rebuilds the whole body; facade rhythm is an estimate."
+  },
+  "734466": {
+   "source": "lib/campus/blocks/b04-tower/index.ts GEB_SPEC: GIS ring (campus.json 734466) + USGS 3DEP 2017 LiDAR (groundY 11.0, flat tier 22.1 m, P95 22.9 m); UT building page https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/GEB/ (5 floors, 31,233 GSF, 1904), fetched 2026-10-20",
+   "basis": "measured",
+   "note": "Gebauer was classified 'authored' only because WCH yard planting soil sat >3 m above the contour inside its south edge; no module drew the building. The yard is now clipped to the footprint (wch-building.ts) and install() builds the body."
+  },
+  "591884": {
+   "source": "lib/campus/blocks/b04-tower/greenhouse.ts BOT_SPEC: GIS ring (campus.json 591884:623) + USGS 3DEP 2017 LiDAR (roofs-lidar.json 591884: groundY 15.6, tier 4.8 m, P95 6.4 m, max 6.7 m, pitch 29.4 deg); UT directory photograph ut-bot-577 (knee wall, glass walls, curved eave, glazing bars)",
+   "basis": "measured",
+   "note": "Round 3 (D07). Plan and heights measured; knee-wall height, glazing-bar module and eave radius reference-interpreted; entrance gable/door/steps not modelled (facade direction unverified, no mapped path ends at the ring)."
+  }
+ },
+ "massing": {
+  "487501:125": {
+   "datum": {
+    "aboveY": 11.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 22.4,
+     "roof": "hip-tile",
+     "slope": 0.45,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 487501 (USGS 3DEP TX_Central_B1_2017): groundY 11.5, P50 19.2, P95 21.7, max 22.4, pitched 24.2 deg",
+    "basis": "measured",
+    "note": "Same ridge rule the generator uses (min(max, P95+1.5) = 22.4 m) but measured above the LiDAR groundY datum instead of the generator grade; the grade datum put the roof ~1.7 m (P50) / 2.5 m (P95) above the LiDAR surface."
+   }
+  },
+  "719571:1194": {
+   "datum": {
+    "aboveY": 11.1
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 20.5,
+     "roof": "hip-tile",
+     "slope": 0.45,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 719571 (USGS 3DEP 2017): groundY 11.1, P50 17.9, P95 20.2, max 23.0, pitched 24.3 deg",
+    "basis": "measured",
+    "note": "Sutton Hall (Cass Gilbert, 1918). One hipped volume above the LiDAR groundY datum; ridge 20.5 m fitted so the rendered roof P95 matches the LiDAR P95 (the generator's min(max,P95+1.5)=21.7 m ridge rendered +0.7 m P50 / +1.2 m P95 high). The 19.4 m central tier / 16.5 m wings are not modelled separately."
+   }
+  }
+ },
+ "archetypes": {
+  "b04-tower:west-mall-stucco": {
+   "label": "West Mall Office Building: pale stucco, stone-framed windows, red tile hip roof (b04, D06)",
+   "era": "1961",
+   "wall": "stucco",
+   "wallColor": "#e4dac8",
+   "ground": "stucco",
+   "groundColor": "#e0d6c3",
+   "base": "limestone",
+   "baseColor": "#d9cdb4",
+   "baseHeight": 0.9,
+   "trim": "limestone",
+   "trimColor": "#ebe1cd",
+   "roof": "hip-tile",
+   "roofColor": "#b0583a",
+   "roofSlope": 0.45,
+   "overhang": 1.0,
+   "brackets": true,
+   "parapet": 0,
+   "cornice": 0.45,
+   "belt": true,
+   "floor": 3.8,
+   "groundFloor": 4.2,
+   "window": {
+    "bay": 3.2,
+    "width": 1.15,
+    "sill": 0.9,
+    "head": 2.6,
+    "mullions": 1,
+    "transom": false,
+    "type": "punched",
+    "frame": "light",
+    "surround": true
+   },
+   "groundWindow": {
+    "bay": 3.2,
+    "width": 1.15,
+    "sill": 1.0,
+    "head": 2.9,
+    "mullions": 1,
+    "transom": false,
+    "type": "punched",
+    "frame": "dark",
+    "surround": true
+   },
+   "door": {
+    "width": 1.6,
+    "height": 2.6
+   },
+   "reference": "research/whole-campus-92/screenshot-dataset/online-photos/ut-wmb-569-directory-photo.jpg: smooth pale cream walls, light-framed 6-over-6 windows in raised stone surrounds, string course, iron grilles on the ground storey; d06-orbit-northwest shows white walls under red tile. Interpretation only."
+  }
+ },
+ "catalog": {
+  "487501": {
+   "archetype": "b04-tower:west-mall-stucco",
+   "basis": "known",
+   "note": "West Mall Office Building (1961): pale stucco/stone (D06 photo-interpreted; was buff-brick core idiom)",
+   "evidence": {
+    "source": "research/whole-campus-92/screenshot-dataset/online-photos/ut-wmb-569-directory-photo.jpg; district-orbits-30m d06-orbit-northwest",
+    "basis": "reference-interpreted",
+    "note": "Facade only; LiDAR massing unchanged."
+   }
+  }
+ }
+}

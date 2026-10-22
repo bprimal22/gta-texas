@@ -1,0 +1,25 @@
+[
+ {
+  "id": "b01-r1",
+  "answers": "b03-r4",
+  "file": "lib/campus/walkway.ts (Speedway sourceWayIds / corridor height) or b03 install(): Speedway brick north of z -243.8 to East Dean Keeton",
+  "change": "b01 agrees to b03-r4 and fixes the engineering side of the shared east edge. Build the 30 ft (9.144 m) brick along OSM 571500826 + 1036229280 (22.7,-243.8 -> 29.7,-325.1 -> 33.0,-373.0). Along its EAST edge (centreline offset 4.572 m east; exported as speedwayNorthEastEdge(z) from lib/campus/engineering-courtyard.ts) the brick top must equal engineeringSpeedwayEdge(z) from the same module within +-0.03 m (z -244..-364). Values (campus Y): 5.62 at z-244, 5.60-5.61 to z-264 (engineering court concrete), then terrain/PMA forecourt 5.69 (z-268) -> 5.84 (z-280) -> 6.28 (z-296) -> 6.23 (z-312) -> 6.40 (z-328) -> 6.10 (z-348) -> 5.58 (z-364). Easiest consistent option: extend the Speedway corridor height sampler along these ways (the court's west edge already follows speedwayHeight + 0.02 m, so the court rides with it). Toward the WEST edge the brick may follow the terrain (cross-fall <= 0.3 m measured at z-244..-256, flush north of z-260). b01 does not move or lower its court edge.",
+  "reason": "b03-r4 reported a ~0.9 m step at z -260. b01's block check could not reproduce it: measured in the built scene the engineering side at the shared edge is 5.60-5.62 between z -244 and -264, the baked terrain 0.5 m west of the edge is 5.32-5.64 (court 0.03-0.30 m ABOVE the terrain at z -244..-256, flush within 0.05 m at z -260..-264), and north of the court the engineering side is the terrain itself or the PMA forecourt within 0.18 m of the terrain. A brick at engineeringSpeedwayEdge() therefore ties in without a step or a ramp on either side.",
+  "evidence": {
+   "source": "scripts/harness/blocks/b01-eer.ts section 8 (speedwaySeam report: z, edgeX, engineeringY, surface, publishedY, deviation, terrainWestY, step) in the b01 round-2 lane, 2026-10-20; b03-r4 sources (Daily Texan 2015-09-25 / 2017-10-18; PWP 30 ft)",
+   "basis": "measured",
+   "note": "Elevations are the built scene's colliders/baked terrain (2017 LiDAR datum), not a survey of the 2017 brick. The b01 check fails if the engineering side drifts > 0.05 m from the published profile."
+  }
+ },
+ {
+  "id": "b01-d02-eer-1",
+  "file": "lib/campus/engineering-courtyard.ts (buildEngineeringCourtyard, per-tower loop that draws the outer-return slit glazing, ~lines 356-367; root-owned EER 715399)",
+  "change": "VERIFY in IAB, then only if absent: on the south tower's OUTER (south) face, engineering frame t = +33.5 (campus line (132.7,-209.8) -> (212.8,-202.6)), add the continuous dark horizontal band seen in district-orbits-30m d02-orbit-southeast (right-hand building, about one third up the visible face) as a recessed dark-glass/shadow box 0.4-0.6 m deep spanning s 104..184.4 at the storey where the band sits (height to be read in IAB against the d02-orbit-southeast pose, b01 shot b01-d02-orbit-southeast). Keep the existing per-floor slits (s 106..end step 4.4) and every collider unchanged.",
+  "reason": "D02 asks for visible EER improvement, but EER is root-authored. The photographed staggered stone slots, panel field, diagrid court frame and outer-return slits are already modelled (b01 check: eerWestElevation identicalAdjacentStoreys 0, diagrid 12/12). This band is the only visible candidate not obviously present in the code; b01 cannot overlay it without double geometry on a root wall.",
+  "evidence": {
+   "source": "research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d02-orbit-southeast.jpg (camera 179.89,28.94,-168.86 -> target 116.25,14.05,-232.5, fov 60)",
+   "basis": "reference-interpreted",
+   "note": "Unverified height and depth; capture reviewed usable-context ('lowest entrances remain partly hidden'). Not claimed as implemented."
+  }
+ }
+]

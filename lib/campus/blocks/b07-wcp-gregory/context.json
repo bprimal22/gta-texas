@@ -1,0 +1,2659 @@
+{
+ "block": "b07-wcp-gregory",
+ "replaces": {
+  "716175:1135": {
+   "source": "lib/campus/blocks/b07-wcp-gregory/index.ts buildGrp: City ring 716175 + USGS 3DEP 2017 LiDAR raster (ground 0.36, roof P10 4.06 / P50 4.66 / max 5.48 campus Y; roofs-lidar.json pitched 19.6 deg); UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json) objectId 414 GRP; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/GRP/ (fetched 2026-10-20) (1 floor, 1,106 GSF, 2005)",
+   "basis": "measured",
+   "note": "GRP was classified 'route' because the WCP perimeter paving (east-south-modern.ts) ran over it; nothing drew it. The paving is now cut 0.15 m outside the footprint and install() builds the body (hip metal roof, ridge 5.45 campus Y). Wall/roof finish is an estimate."
+  },
+  "719550:1193": {
+   "source": "roofs-lidar.json 719550 (USGS 3DEP 2017: groundY -5.7, pitch 26.0 deg, tiers 14.2 / 14.7 / 20.0 m); lidar-reference.json 719550:1193 (P50 9.05, P90 14.83, P95 15.48, max 16.72); City 2023 footprint 719550 (campus.json record 1193); ut-phd-428-directory-photo.jpg; review/d14-contact.jpg",
+   "basis": "reference-interpreted",
+   "note": "b07 D14 install (d14.ts buildPrather): centre pavilion + south and north-east wings as exact-facet red tile hips at the measured pitch, eave lines calibrated to the LiDAR quantiles; limestone banded ground storey, round-headed windows, brick upper storeys. Storeys/bays/unseen faces estimated. The massing entry stays as the generated fallback."
+  }
+ },
+ "massing": {
+  "485181:94": {
+   "datum": {
+    "aboveY": -0.4
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.8,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 485181 (USGS 3DEP TX_Central_B1_2017; groundY -0.4, P50 4.8, P95 4.8, max 4.8); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/GRS/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY -0.4 instead of the generator grade (baked-ground median around the ring, ~0.04 campus Y, i.e. +0.4 m). Identity: GRS."
+   }
+  },
+  "501737:142": {
+   "datum": {
+    "aboveY": -10.0
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 6.2,
+     "roof": "hip-metal",
+     "slope": 0.25,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 501737 (USGS 3DEP TX_Central_B1_2017; groundY -10.0, P50 4.9, P95 5.7, max 6.2); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CLK/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY -10.0 instead of the generator grade (baked-ground median around the ring, ~-9.52 campus Y, i.e. +0.5 m). Identity: CLK."
+   }
+  },
+  "504712:189": {
+   "datum": {
+    "aboveY": 0.0
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.8,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 504712 (USGS 3DEP TX_Central_B1_2017; groundY 0.0, P50 4.4, P95 5.1, max 5.2); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/GRC/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY 0.0 instead of the generator grade (baked-ground median around the ring, ~0.2 campus Y, i.e. +0.2 m). Identity: GRC."
+   }
+  },
+  "526236:273": {
+   "datum": {
+    "aboveY": -3.2
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 6.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        140.54,
+        449.32
+       ],
+       [
+        138.05,
+        445.32
+       ],
+       [
+        134.27,
+        445.12
+       ],
+       [
+        135.97,
+        420.73
+       ],
+       [
+        137.48,
+        420.83
+       ],
+       [
+        137.56,
+        417.59
+       ],
+       [
+        130.42,
+        418.44
+       ],
+       [
+        130.03,
+        423.28
+       ],
+       [
+        118.07,
+        422.45
+       ],
+       [
+        117.97,
+        417.05
+       ],
+       [
+        109.49,
+        415.59
+       ],
+       [
+        98.33,
+        415.82
+       ],
+       [
+        97.93,
+        420.34
+       ],
+       [
+        87.32,
+        419.6
+       ],
+       [
+        85.74,
+        419.13
+       ],
+       [
+        86.08,
+        414.23
+       ],
+       [
+        80.82,
+        413.85
+       ],
+       [
+        80.07,
+        406.83
+       ],
+       [
+        76.97,
+        406.31
+       ],
+       [
+        74.97,
+        408.81
+       ],
+       [
+        69.11,
+        407.62
+       ],
+       [
+        70.58,
+        373.99
+       ],
+       [
+        75.33,
+        374.26
+       ],
+       [
+        75.6,
+        370.44
+       ],
+       [
+        77.83,
+        368.23
+       ],
+       [
+        81.91,
+        368.52
+       ],
+       [
+        81.72,
+        374.27
+       ],
+       [
+        84.24,
+        374.77
+       ],
+       [
+        85.73,
+        378.75
+       ],
+       [
+        89.22,
+        381.74
+       ],
+       [
+        88.72,
+        392.14
+       ],
+       [
+        83.73,
+        393.64
+       ],
+       [
+        82.91,
+        402.98
+       ],
+       [
+        110.94,
+        403.42
+       ],
+       [
+        111.2,
+        404.57
+       ],
+       [
+        147.73,
+        407.98
+       ],
+       [
+        146.72,
+        418.74
+       ],
+       [
+        148.16,
+        419.74
+       ],
+       [
+        148.02,
+        425.87
+       ],
+       [
+        152.72,
+        426.23
+       ],
+       [
+        152,
+        438.71
+       ],
+       [
+        146.72,
+        438.36
+       ],
+       [
+        146.05,
+        447.72
+       ],
+       [
+        142.93,
+        447.82
+       ],
+       [
+        142.73,
+        449.13
+       ]
+      ]
+     ],
+     "bottom": 6.9,
+     "top": 33.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier",
+     "archetype": "b07-wcp-gregory:jester-tower"
+    },
+    {
+     "rings": [
+      [
+       [
+        146.37,
+        460.03
+       ],
+       [
+        146.89,
+        457.17
+       ],
+       [
+        145.54,
+        455.82
+       ],
+       [
+        139.01,
+        454.82
+       ],
+       [
+        135.97,
+        454.82
+       ],
+       [
+        133.67,
+        457.29
+       ],
+       [
+        131.17,
+        456.81
+       ],
+       [
+        130.93,
+        458.37
+       ],
+       [
+        112.87,
+        457.1
+       ],
+       [
+        112.27,
+        452.95
+       ],
+       [
+        107.8,
+        451.64
+       ],
+       [
+        108.38,
+        445.63
+       ],
+       [
+        131.94,
+        446.47
+       ],
+       [
+        132.23,
+        447.88
+       ],
+       [
+        134.68,
+        448.04
+       ],
+       [
+        134.89,
+        445.48
+       ],
+       [
+        137.96,
+        445.48
+       ],
+       [
+        140.46,
+        449.49
+       ],
+       [
+        146.06,
+        448.01
+       ],
+       [
+        146.44,
+        449.48
+       ],
+       [
+        165.72,
+        449.75
+       ],
+       [
+        165.63,
+        452.47
+       ],
+       [
+        167.03,
+        451.06
+       ],
+       [
+        170.8,
+        451.77
+       ],
+       [
+        169.92,
+        457.49
+       ],
+       [
+        165.93,
+        457.22
+       ],
+       [
+        165.63,
+        461.12
+       ]
+      ]
+     ],
+     "bottom": 6.9,
+     "top": 20.1,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        146.88,
+        418.64
+       ],
+       [
+        146.88,
+        416.2
+       ],
+       [
+        147.89,
+        407.98
+       ],
+       [
+        150.94,
+        407.84
+       ],
+       [
+        154.12,
+        369.92
+       ],
+       [
+        155.47,
+        365.13
+       ],
+       [
+        161.52,
+        365.63
+       ],
+       [
+        161.54,
+        370.54
+       ],
+       [
+        166.14,
+        371.17
+       ],
+       [
+        163.1,
+        407.73
+       ],
+       [
+        160.33,
+        408.14
+       ],
+       [
+        160.77,
+        418.62
+       ],
+       [
+        148.43,
+        417.93
+       ],
+       [
+        148.19,
+        419.09
+       ]
+      ]
+     ],
+     "bottom": 6.9,
+     "top": 19.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        134.35,
+        460.97
+       ],
+       [
+        134.55,
+        458.04
+       ],
+       [
+        136.38,
+        455.85
+       ],
+       [
+        145.09,
+        456.76
+       ],
+       [
+        145.85,
+        457.52
+       ],
+       [
+        145.31,
+        461.83
+       ]
+      ]
+     ],
+     "bottom": 6.9,
+     "top": 8.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    },
+    {
+     "rings": [
+      [
+       [
+        67.45,
+        412.07
+       ],
+       [
+        67.64,
+        409.33
+       ],
+       [
+        68.38,
+        409.05
+       ],
+       [
+        68.82,
+        410.94
+       ],
+       [
+        75.49,
+        409.73
+       ],
+       [
+        77.43,
+        407.3
+       ],
+       [
+        78.71,
+        407.3
+       ],
+       [
+        79.93,
+        408.19
+       ],
+       [
+        80.3,
+        412.99
+       ]
+      ]
+     ],
+     "bottom": 6.9,
+     "top": 38.8,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 526236 (USGS 3DEP TX_Central_B1_2017; groundY -3.2, P50 21.8, P95 35.5, max 39.8); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/JCD/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar-tiers, archetype modernist-dorm) restated above the LiDAR groundY -3.2 instead of the generator grade (baked-ground median around the ring, ~-1.03 campus Y, i.e. +2.2 m). Identity: JCD east tower + LDH Longhorn Dining. b07 round 2: the tower tier (volume 1) carries archetype b07-wcp-gregory:jester-tower (no generated openings; vertical window stacks are d13.ts geometry from ut-jcd-563-directory-photo.jpg, ut-jcd-659-directory-photo.jpg, ut-jes-552-directory-photo.jpg (research/whole-campus-92/screenshot-dataset/online-photos; packet D13 photoReferences); district-agents-40/review/d13-contact.jpg (NE/NW orbits usable, SW/SE obstructed)). Heights unchanged."
+   }
+  },
+  "526723:286": {
+   "datum": {
+    "aboveY": -4.1
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 11.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        72.39,
+        474.16
+       ],
+       [
+        75.09,
+        448.29
+       ],
+       [
+        71,
+        449.32
+       ],
+       [
+        48.01,
+        445.82
+       ],
+       [
+        37.97,
+        445.82
+       ],
+       [
+        34.58,
+        448.22
+       ],
+       [
+        20.09,
+        446.83
+       ],
+       [
+        21.21,
+        433.66
+       ],
+       [
+        15.86,
+        443.51
+       ],
+       [
+        16.38,
+        440.18
+       ],
+       [
+        13.89,
+        437.18
+       ],
+       [
+        14.39,
+        434.67
+       ],
+       [
+        13.03,
+        433.31
+       ],
+       [
+        8.02,
+        434.32
+       ],
+       [
+        4.91,
+        432.31
+       ],
+       [
+        5.39,
+        425.29
+       ],
+       [
+        3.88,
+        425.17
+       ],
+       [
+        4.94,
+        412.48
+       ],
+       [
+        10.37,
+        411.27
+       ],
+       [
+        11.07,
+        405.47
+       ],
+       [
+        14.54,
+        404.98
+       ],
+       [
+        18.03,
+        401.48
+       ],
+       [
+        21.32,
+        401.52
+       ],
+       [
+        20.93,
+        405.86
+       ],
+       [
+        22.69,
+        406.26
+       ],
+       [
+        19.43,
+        433.79
+       ],
+       [
+        26.09,
+        433.28
+       ],
+       [
+        26.57,
+        428.57
+       ],
+       [
+        29.5,
+        428.01
+       ],
+       [
+        37.58,
+        428.77
+       ],
+       [
+        37.11,
+        434.07
+       ],
+       [
+        45.57,
+        434.85
+       ],
+       [
+        45.95,
+        433.69
+       ],
+       [
+        58.78,
+        435.99
+       ],
+       [
+        59.47,
+        430.69
+       ],
+       [
+        70.02,
+        431.63
+       ],
+       [
+        69.62,
+        437.06
+       ],
+       [
+        87.41,
+        438.8
+       ],
+       [
+        85.62,
+        451.57
+       ],
+       [
+        86.76,
+        451.77
+       ],
+       [
+        86.42,
+        455.57
+       ],
+       [
+        91.19,
+        456.27
+       ],
+       [
+        90.07,
+        468.72
+       ],
+       [
+        85.16,
+        468.56
+       ],
+       [
+        84.33,
+        477.66
+       ],
+       [
+        81.3,
+        479.11
+       ]
+      ]
+     ],
+     "bottom": 11.9,
+     "top": 45.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier",
+     "archetype": "b07-wcp-gregory:jester-tower"
+    },
+    {
+     "rings": [
+      [
+       [
+        72.57,
+        491.44
+       ],
+       [
+        72.66,
+        487.62
+       ],
+       [
+        70.45,
+        487.08
+       ],
+       [
+        69.03,
+        488.61
+       ],
+       [
+        42.06,
+        486.31
+       ],
+       [
+        41.55,
+        484.5
+       ],
+       [
+        28.43,
+        483.07
+       ],
+       [
+        27.44,
+        484.96
+       ],
+       [
+        0.38,
+        482.62
+       ],
+       [
+        0.26,
+        477.83
+       ],
+       [
+        -5.87,
+        477.31
+       ],
+       [
+        -6.37,
+        482.16
+       ],
+       [
+        -12.61,
+        481.62
+       ],
+       [
+        -10.11,
+        439.65
+       ],
+       [
+        -5.14,
+        440.08
+       ],
+       [
+        -4.72,
+        435.26
+       ],
+       [
+        -8.58,
+        434.64
+       ],
+       [
+        -8.33,
+        431.76
+       ],
+       [
+        4.83,
+        431.97
+       ],
+       [
+        7.72,
+        434.24
+       ],
+       [
+        7.72,
+        439.18
+       ],
+       [
+        5.75,
+        442.62
+       ],
+       [
+        1.63,
+        442.62
+       ],
+       [
+        -0.58,
+        468.34
+       ],
+       [
+        -1.98,
+        468.74
+       ],
+       [
+        -2.19,
+        471.67
+       ],
+       [
+        0.71,
+        471.97
+       ],
+       [
+        0.1,
+        477.95
+       ],
+       [
+        30.55,
+        473.47
+       ],
+       [
+        31.43,
+        472.09
+       ],
+       [
+        30,
+        483.36
+       ],
+       [
+        40,
+        484.58
+       ],
+       [
+        41,
+        475.1
+       ],
+       [
+        41.63,
+        484.69
+       ],
+       [
+        71.97,
+        476.87
+       ],
+       [
+        72.55,
+        474.52
+       ],
+       [
+        81.71,
+        479.74
+       ],
+       [
+        81.22,
+        483.17
+       ],
+       [
+        77.22,
+        489.18
+       ],
+       [
+        77.68,
+        491.89
+       ]
+      ]
+     ],
+     "bottom": 11.9,
+     "top": 20.3,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        4.88,
+        392.14
+       ],
+       [
+        5.38,
+        381.64
+       ],
+       [
+        1.48,
+        380.31
+       ],
+       [
+        -1.85,
+        383.68
+       ],
+       [
+        -1.51,
+        379.84
+       ],
+       [
+        -4.08,
+        379.61
+       ],
+       [
+        -3.75,
+        375.77
+       ],
+       [
+        -0.56,
+        375.57
+       ],
+       [
+        -0.43,
+        373.94
+       ],
+       [
+        -7.15,
+        372.53
+       ],
+       [
+        -4.62,
+        342.69
+       ],
+       [
+        2.8,
+        343.28
+       ],
+       [
+        -0.6,
+        374.06
+       ],
+       [
+        7.87,
+        374.28
+       ],
+       [
+        10.38,
+        343.68
+       ],
+       [
+        9.54,
+        342.32
+       ],
+       [
+        4.22,
+        342.78
+       ],
+       [
+        4.68,
+        337.26
+       ],
+       [
+        7.05,
+        336.97
+       ],
+       [
+        8.38,
+        334.72
+       ],
+       [
+        9.38,
+        318.14
+       ],
+       [
+        6.97,
+        317.3
+       ],
+       [
+        5.22,
+        320.18
+       ],
+       [
+        4.58,
+        336.51
+       ],
+       [
+        -6.11,
+        335.61
+       ],
+       [
+        -4.41,
+        316.78
+       ],
+       [
+        2.08,
+        317.34
+       ],
+       [
+        3.07,
+        311.98
+       ],
+       [
+        12.18,
+        312.77
+       ],
+       [
+        10.42,
+        333.47
+       ],
+       [
+        15.94,
+        333.95
+       ],
+       [
+        16.94,
+        337.97
+       ],
+       [
+        60.5,
+        341.98
+       ],
+       [
+        65.55,
+        341.98
+       ],
+       [
+        67.35,
+        338.26
+       ],
+       [
+        74.29,
+        338.78
+       ],
+       [
+        73.44,
+        348.84
+       ],
+       [
+        70.34,
+        349.82
+       ],
+       [
+        68.56,
+        342.29
+       ],
+       [
+        66.73,
+        343.14
+       ],
+       [
+        65.44,
+        349.31
+       ],
+       [
+        18.47,
+        345.32
+       ],
+       [
+        17.22,
+        346.67
+       ],
+       [
+        15.22,
+        374.15
+       ],
+       [
+        10.73,
+        376.65
+       ],
+       [
+        8.73,
+        393.1
+       ]
+      ]
+     ],
+     "bottom": 11.9,
+     "top": 15.8,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        24.26,
+        377.4
+       ],
+       [
+        25.68,
+        357.02
+       ],
+       [
+        26.98,
+        355.26
+       ],
+       [
+        32.16,
+        354.83
+       ],
+       [
+        33.58,
+        356.26
+       ],
+       [
+        48.31,
+        357.99
+       ],
+       [
+        46,
+        379.71
+       ]
+      ]
+     ],
+     "bottom": 11.9,
+     "top": 15.2,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    },
+    {
+     "rings": [
+      [
+       [
+        20.17,
+        337.51
+       ],
+       [
+        17.21,
+        336.55
+       ],
+       [
+        17.22,
+        334.06
+       ],
+       [
+        17.68,
+        332.79
+       ],
+       [
+        18.01,
+        333.26
+       ],
+       [
+        37.04,
+        334.81
+       ],
+       [
+        42.94,
+        333.82
+       ],
+       [
+        49.34,
+        335.79
+       ],
+       [
+        64.37,
+        336.79
+       ],
+       [
+        66.08,
+        337.17
+       ],
+       [
+        65.12,
+        340.75
+       ]
+      ]
+     ],
+     "bottom": 11.9,
+     "top": 19.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    },
+    {
+     "rings": [
+      [
+       [
+        43.01,
+        331.99
+       ],
+       [
+        36.96,
+        332.99
+       ],
+       [
+        19.17,
+        331.55
+       ],
+       [
+        18.76,
+        330.26
+       ],
+       [
+        19.76,
+        330.23
+       ],
+       [
+        19.85,
+        328.41
+       ],
+       [
+        35.72,
+        330.27
+       ],
+       [
+        42.18,
+        333.79
+       ],
+       [
+        43.14,
+        328.13
+       ],
+       [
+        44.77,
+        326.45
+       ],
+       [
+        66.75,
+        328.93
+       ],
+       [
+        66.29,
+        336.23
+       ]
+      ]
+     ],
+     "bottom": 11.9,
+     "top": 16.3,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    },
+    {
+     "rings": [
+      [
+       [
+        0.49,
+        373.17
+       ],
+       [
+        3.88,
+        342.39
+       ],
+       [
+        3.56,
+        343.08
+       ],
+       [
+        8.74,
+        343.37
+       ],
+       [
+        9.39,
+        347.72
+       ],
+       [
+        6.5,
+        373.72
+       ]
+      ]
+     ],
+     "bottom": 11.9,
+     "top": 19.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    },
+    {
+     "rings": [
+      [
+       [
+        78.31,
+        491.07
+       ],
+       [
+        79.13,
+        486.64
+       ],
+       [
+        82.15,
+        483.62
+       ],
+       [
+        82.76,
+        479.03
+       ],
+       [
+        88.53,
+        480.54
+       ],
+       [
+        88.65,
+        479.08
+       ],
+       [
+        103.77,
+        480.37
+       ],
+       [
+        103.9,
+        481.88
+       ],
+       [
+        108.6,
+        482.31
+       ],
+       [
+        108.19,
+        486.89
+       ],
+       [
+        105.23,
+        486.63
+       ],
+       [
+        104.24,
+        482.06
+       ],
+       [
+        85.86,
+        480.44
+       ],
+       [
+        84.28,
+        485.45
+       ],
+       [
+        86.11,
+        487.28
+       ],
+       [
+        103.35,
+        488.3
+       ],
+       [
+        103.21,
+        489.97
+       ],
+       [
+        84.82,
+        489.23
+       ],
+       [
+        84.19,
+        491.28
+       ]
+      ]
+     ],
+     "bottom": 11.9,
+     "top": 16.7,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    },
+    {
+     "rings": [
+      [
+       [
+        -10.08,
+        403.97
+       ],
+       [
+        -9.21,
+        393.96
+       ],
+       [
+        -8.92,
+        394.27
+       ],
+       [
+        4.1,
+        395.27
+       ],
+       [
+        4.88,
+        396.05
+       ],
+       [
+        4.43,
+        404.08
+       ],
+       [
+        2.65,
+        404.79
+       ]
+      ]
+     ],
+     "bottom": 11.9,
+     "top": 16.2,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    },
+    {
+     "rings": [
+      [
+       [
+        87.17,
+        485.55
+       ],
+       [
+        86.44,
+        483.29
+       ],
+       [
+        89.59,
+        482.31
+       ],
+       [
+        103.09,
+        483.76
+       ],
+       [
+        103.85,
+        484.52
+       ],
+       [
+        103.53,
+        486.82
+       ]
+      ]
+     ],
+     "bottom": 11.9,
+     "top": 19.1,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 526723 (USGS 3DEP TX_Central_B1_2017; groundY -4.1, P50 16.9, P95 48.8, max 53.4); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/JES/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar-tiers, archetype modernist-dorm) restated above the LiDAR groundY -4.1 instead of the generator grade (baked-ground median around the ring, ~-2.61 campus Y, i.e. +1.5 m). Identity: JES Jester Center + JCD west tower. b07 round 2: the tower tier (volume 1) carries archetype b07-wcp-gregory:jester-tower (no generated openings; vertical window stacks are d13.ts geometry from ut-jcd-563-directory-photo.jpg, ut-jcd-659-directory-photo.jpg, ut-jes-552-directory-photo.jpg (research/whole-campus-92/screenshot-dataset/online-photos; packet D13 photoReferences); district-agents-40/review/d13-contact.jpg (NE/NW orbits usable, SW/SE obstructed)). Heights unchanged."
+   }
+  },
+  "570462:521": {
+   "datum": {
+    "aboveY": -10.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 10.5,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        152.86,
+        615.13
+       ],
+       [
+        151.38,
+        611.19
+       ],
+       [
+        152.88,
+        586.22
+       ],
+       [
+        153.55,
+        584.98
+       ],
+       [
+        166.43,
+        585.48
+       ],
+       [
+        167.72,
+        591.7
+       ],
+       [
+        165.72,
+        612.17
+       ],
+       [
+        164.46,
+        613.82
+       ],
+       [
+        157.45,
+        613.32
+       ],
+       [
+        156.25,
+        616.1
+       ]
+      ]
+     ],
+     "bottom": 10.5,
+     "top": 21.8,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        142.38,
+        621.68
+       ],
+       [
+        143.74,
+        604.61
+       ],
+       [
+        145.38,
+        601.22
+       ],
+       [
+        146.58,
+        576.49
+       ],
+       [
+        172.14,
+        579.17
+       ],
+       [
+        171.99,
+        580.78
+       ],
+       [
+        169.61,
+        578.49
+       ],
+       [
+        148.73,
+        578.62
+       ],
+       [
+        145.21,
+        619.77
+       ],
+       [
+        156.44,
+        621.47
+       ],
+       [
+        157.13,
+        623.07
+       ]
+      ]
+     ],
+     "bottom": 10.5,
+     "top": 20.7,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 570462 (USGS 3DEP TX_Central_B1_2017; groundY -10.5, P50 11.6, P95 22.9, max 24.8); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CS3/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar-tiers, archetype master-plan) restated above the LiDAR groundY -10.5 instead of the generator grade (baked-ground median around the ring, ~-4.65 campus Y, i.e. +5.8 m). Identity: CS3 Central Chilling Station No. 3."
+   }
+  },
+  "589099:581": {
+   "datum": {
+    "aboveY": -6.1
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 12.8,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        70.19,
+        604.77
+       ],
+       [
+        70.28,
+        603.25
+       ],
+       [
+        58.95,
+        602.32
+       ],
+       [
+        53.62,
+        600.13
+       ],
+       [
+        53.95,
+        595.17
+       ],
+       [
+        51.85,
+        594.15
+       ],
+       [
+        58.08,
+        526.4
+       ],
+       [
+        86.08,
+        528.84
+       ],
+       [
+        87.1,
+        518.02
+       ],
+       [
+        95.72,
+        518.77
+       ],
+       [
+        95.43,
+        529.82
+       ],
+       [
+        128.61,
+        532.7
+       ],
+       [
+        122.23,
+        608.61
+       ]
+      ]
+     ],
+     "bottom": 12.8,
+     "top": 21.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 589099 (USGS 3DEP TX_Central_B1_2017; groundY -6.1, P50 21.8, P95 22.9, max 27.1); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/BRG/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar-tiers, archetype garage) restated above the LiDAR groundY -6.1 instead of the generator grade (baked-ground median around the ring, ~-5.29 campus Y, i.e. +0.8 m). Identity: BRG Brazos Garage."
+   }
+  },
+  "611354:699": {
+   "datum": {
+    "aboveY": -4.3
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 13.4,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        159.5,
+        336.32
+       ],
+       [
+        160.3,
+        326.06
+       ],
+       [
+        159.02,
+        326.02
+       ],
+       [
+        160.28,
+        326.19
+       ],
+       [
+        160.57,
+        324.54
+       ],
+       [
+        199.75,
+        327.65
+       ],
+       [
+        197.22,
+        331.17
+       ],
+       [
+        196.51,
+        339.91
+       ]
+      ]
+     ],
+     "bottom": 13.4,
+     "top": 16.5,
+     "roof": "hip-tile",
+     "slope": 0.46,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        108.61,
+        331.89
+       ],
+       [
+        110.05,
+        328.48
+       ],
+       [
+        133.97,
+        330.48
+       ],
+       [
+        135.98,
+        331.98
+       ],
+       [
+        140.54,
+        331.48
+       ],
+       [
+        142.43,
+        329.69
+       ],
+       [
+        138.53,
+        327.32
+       ],
+       [
+        111.53,
+        325.32
+       ],
+       [
+        109.88,
+        324.16
+       ],
+       [
+        109.88,
+        321.27
+       ],
+       [
+        117.39,
+        319.99
+       ],
+       [
+        146.48,
+        323.33
+       ],
+       [
+        148.19,
+        325.05
+       ],
+       [
+        146.72,
+        326.16
+       ],
+       [
+        145.72,
+        335.26
+       ]
+      ]
+     ],
+     "bottom": 13.4,
+     "top": 17.1,
+     "roof": "hip-tile",
+     "slope": 0.46,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        134.03,
+        330.32
+       ],
+       [
+        112.5,
+        328.32
+       ],
+       [
+        109.95,
+        328.32
+       ],
+       [
+        107.95,
+        331.83
+       ],
+       [
+        99.08,
+        331.03
+       ],
+       [
+        99.87,
+        327.24
+       ],
+       [
+        102.92,
+        324.7
+       ],
+       [
+        99.03,
+        321.32
+       ],
+       [
+        93.07,
+        320.83
+       ],
+       [
+        92.11,
+        316.49
+       ],
+       [
+        108.93,
+        317.34
+       ],
+       [
+        108.87,
+        319.78
+       ],
+       [
+        111.12,
+        320.11
+       ],
+       [
+        109.72,
+        321.16
+       ],
+       [
+        109.72,
+        324.24
+       ],
+       [
+        111.47,
+        325.48
+       ],
+       [
+        138.48,
+        327.48
+       ],
+       [
+        142.17,
+        329.23
+       ],
+       [
+        140.46,
+        331.32
+       ],
+       [
+        136.02,
+        331.82
+       ]
+      ]
+     ],
+     "bottom": 13.4,
+     "top": 20.0,
+     "roof": "hip-tile",
+     "slope": 0.46,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        196.51,
+        341.69
+       ],
+       [
+        197.38,
+        331.23
+       ],
+       [
+        199.94,
+        327.67
+       ],
+       [
+        213.93,
+        328.93
+       ],
+       [
+        214.03,
+        332.77
+       ],
+       [
+        221.63,
+        333.5
+       ],
+       [
+        219.99,
+        334.81
+       ],
+       [
+        215.47,
+        332.73
+       ],
+       [
+        216.21,
+        335.66
+       ],
+       [
+        213.68,
+        337.18
+       ],
+       [
+        215.7,
+        339.71
+       ],
+       [
+        213.76,
+        343.11
+       ],
+       [
+        207.94,
+        342.42
+       ],
+       [
+        207.79,
+        344.11
+       ]
+      ]
+     ],
+     "bottom": 13.4,
+     "top": 20.1,
+     "roof": "hip-tile",
+     "slope": 0.46,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        94.71,
+        330.49
+       ],
+       [
+        92.2,
+        329.16
+       ],
+       [
+        91.95,
+        324.05
+       ],
+       [
+        90.67,
+        325.52
+       ],
+       [
+        90.69,
+        325.55
+       ],
+       [
+        91.19,
+        320.06
+       ],
+       [
+        91.5,
+        319.81
+       ],
+       [
+        92.4,
+        321.75
+       ],
+       [
+        98.63,
+        322.27
+       ],
+       [
+        101.41,
+        324.69
+       ],
+       [
+        98.99,
+        326.7
+       ],
+       [
+        98.16,
+        330.38
+       ]
+      ]
+     ],
+     "bottom": 13.4,
+     "top": 23.1,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 611354 (USGS 3DEP TX_Central_B1_2017; groundY -4.3, P50 16.2, P95 22.4, max 24.6); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/RHD/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Pitched multi-wing hall. The generator's single hipped roof over the whole City ring (ridge 23.9 m) rendered the roof median 5-6 m above the LiDAR median (one plateau at the ridge). Restated as the generator's own LiDAR tier volumes (flat-tier path, snapped tier rings) above groundY -4.3: flat deck at the lowest substantial tier, each higher wing tier hipped (hip-tile, ridge = tier median + 1.5 m, slope 0.46). Low-wing roofs are flat decks (estimate; real wings are hipped). Identity: BHD Brackenridge + RHD Roberts (one City polygon)."
+   }
+  },
+  "625251:802": {
+   "datum": {
+    "aboveY": -10.4
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 28.9,
+     "roof": "hip-tile",
+     "slope": 0.494,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 625251 (USGS 3DEP TX_Central_B1_2017; groundY -10.4, P50 24.7, P95 27.4, max 32.2); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/SJH/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype cret-residence) restated above the LiDAR groundY -10.4 instead of the generator grade (baked-ground median around the ring, ~-8.29 campus Y, i.e. +2.1 m). Identity: SJH."
+   }
+  },
+  "651688:837": {
+   "datum": {
+    "aboveY": -2.9
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 8.5,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        206.55,
+        297.87
+       ],
+       [
+        205.54,
+        295.29
+       ],
+       [
+        202.49,
+        296.82
+       ],
+       [
+        178.51,
+        292.82
+       ],
+       [
+        164.55,
+        292.32
+       ],
+       [
+        161.99,
+        287.2
+       ],
+       [
+        159.94,
+        292.33
+       ],
+       [
+        152.31,
+        293.93
+       ],
+       [
+        152.38,
+        290.14
+       ],
+       [
+        150.9,
+        289.65
+       ],
+       [
+        152.38,
+        284.7
+       ],
+       [
+        150.62,
+        279.94
+       ],
+       [
+        164.65,
+        280.76
+       ],
+       [
+        166.49,
+        249.09
+       ],
+       [
+        178.69,
+        250.94
+       ],
+       [
+        181.56,
+        237.02
+       ],
+       [
+        205.93,
+        239.39
+       ],
+       [
+        205.86,
+        243.78
+       ],
+       [
+        208.84,
+        244.28
+       ],
+       [
+        208.44,
+        248.82
+       ],
+       [
+        205.84,
+        248.64
+       ],
+       [
+        205.53,
+        250.74
+       ],
+       [
+        180.91,
+        248.56
+       ],
+       [
+        180.55,
+        250.72
+       ],
+       [
+        178.56,
+        250.77
+       ],
+       [
+        175.75,
+        282.38
+       ],
+       [
+        206.23,
+        285.08
+       ],
+       [
+        207.19,
+        274.26
+       ],
+       [
+        210.86,
+        274.17
+       ],
+       [
+        211.57,
+        271.38
+       ],
+       [
+        214.56,
+        271.67
+       ],
+       [
+        214.34,
+        274.17
+       ],
+       [
+        219.62,
+        274.67
+       ],
+       [
+        217.48,
+        298.81
+       ]
+      ]
+     ],
+     "bottom": 8.5,
+     "top": 13,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        167.42,
+        248.06
+       ],
+       [
+        168.6,
+        236.58
+       ],
+       [
+        180.26,
+        237.72
+       ],
+       [
+        177.91,
+        249.82
+       ]
+      ]
+     ],
+     "bottom": 8.5,
+     "top": 16.8,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 651688 (USGS 3DEP TX_Central_B1_2017; groundY -2.9, P50 12.7, P95 17.1, max 19.1); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/MHD/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar-tiers, archetype cret-residence) restated above the LiDAR groundY -2.9 instead of the generator grade (baked-ground median around the ring, ~-0.26 campus Y, i.e. +2.6 m). Identity: MHD."
+   }
+  },
+  "654836:889": {
+   "datum": {
+    "aboveY": -3.4
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 6.0,
+     "roof": "hip-metal",
+     "slope": 0.38,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 654836 (USGS 3DEP TX_Central_B1_2017; groundY -3.4, P50 5.4, P95 8.1, max 16.4); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype utility) restated above the LiDAR groundY -3.4 instead of the generator grade (baked-ground median around the ring, ~-2.57 campus Y, i.e. +0.8 m). Identity: no UT GIS building at this footprint. Ridge lowered from min(max, P95+1.5)=9.6 to 6.0 m (raster P90 roof Y 2.56 = 6.0 m above groundY; P95/max are tree canopy)."
+   }
+  },
+  "656127:915": {
+   "datum": {
+    "aboveY": -1.2
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 13.3,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       24.6,
+       237.6
+      ],
+      [
+       97.7,
+       243.8
+      ],
+      [
+       95.6,
+       279.0
+      ],
+      [
+       20.9,
+       272.7
+      ]
+     ],
+     "bottom": 13.3,
+     "top": 18.1,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "ring": [
+      [
+       33.0,
+       182.2
+      ],
+      [
+       94.5,
+       187.2
+      ],
+      [
+       94.2,
+       190.6
+      ],
+      [
+       109.6,
+       192.0
+      ],
+      [
+       108.3,
+       226.4
+      ],
+      [
+       92.0,
+       225.5
+      ],
+      [
+       91.2,
+       233.0
+      ],
+      [
+       30.6,
+       228.0
+      ]
+     ],
+     "bottom": 13.3,
+     "top": 27.2,
+     "roof": "hip-tile",
+     "slope": 0.408,
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 656127 (USGS 3DEP TX_Central_B1_2017; groundY -1.2, P50 17.8, P95 25.7, max 28.6); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/GRE/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Gregory Gym (UT GRE, 1930, 7 floors, 265,610 GSF; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/GRE/ (fetched 2026-10-20)). The generator put ONE hipped roof (ridge 27.2 m, eave ~20.7 m) over the whole 9,550 m2 ring above grade. LiDAR tiers (roofs-lidar.json 656127, above groundY -1.2): 13.3 m over the east/perimeter (5,937 m2), 18.1 m south block (x21-98, z237-280), 18.7/25.3 m main hall (x27-110, z181-233, pitched 22 deg; ridge min(max 28.6, P95 25.7+1.5)=27.2 m). Volumes: flat base 13.3, flat south tier 18.1, hipped hall (hip, not the real west gable end: the generator has no gable form). GRF (UT GIS 417) is inside this City ring at the 6.1 m tier and is not separated."
+   }
+  },
+  "676812:977": {
+   "datum": {
+    "aboveY": -10.2
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 8.4,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        259.52,
+        225.82
+       ],
+       [
+        256.88,
+        224.16
+       ],
+       [
+        259.89,
+        195.13
+       ],
+       [
+        237.56,
+        191.83
+       ],
+       [
+        236.38,
+        188.2
+       ],
+       [
+        238.05,
+        183.99
+       ],
+       [
+        260.03,
+        186.48
+       ],
+       [
+        261.38,
+        185.24
+       ],
+       [
+        263.87,
+        162.28
+       ],
+       [
+        270.04,
+        161.98
+       ],
+       [
+        273.03,
+        157.51
+       ],
+       [
+        276.23,
+        159.25
+       ],
+       [
+        276.71,
+        162.65
+       ],
+       [
+        271.23,
+        164.64
+       ],
+       [
+        264.23,
+        225.62
+       ]
+      ]
+     ],
+     "bottom": 8.4,
+     "top": 16.0,
+     "roof": "hip-tile",
+     "slope": 0.46,
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 676812 (USGS 3DEP TX_Central_B1_2017; groundY -10.2, P50 9.3, P95 15.3, max 19.4); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/UTX/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Pitched multi-wing hall. The generator's single hipped roof over the whole City ring (ridge 16.8 m) rendered the roof median 5-6 m above the LiDAR median (one plateau at the ridge). Restated as the generator's own LiDAR tier volumes (flat-tier path, snapped tier rings) above groundY -10.2: flat deck at the lowest substantial tier, each higher wing tier hipped (hip-tile, ridge = tier median + 1.5 m, slope 0.46). Low-wing roofs are flat decks (estimate; real wings are hipped). Identity: UTX."
+   }
+  },
+  "717973:1167": {
+   "datum": {
+    "aboveY": -3.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.1,
+     "roof": "hip-metal",
+     "slope": 0.317,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 717973 (USGS 3DEP TX_Central_B1_2017; groundY -3.5, P50 3.6, P95 4.0, max 4.1); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/BSB/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY -3.5 instead of the generator grade (baked-ground median around the ring, ~-3.44 campus Y, i.e. +0.1 m). Identity: BSB."
+   }
+  },
+  "719550:1193": {
+   "datum": {
+    "aboveY": -5.7
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 14.2,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        191.42,
+        403.62
+       ],
+       [
+        193.07,
+        385.72
+       ],
+       [
+        207.23,
+        387.95
+       ],
+       [
+        203.94,
+        403.64
+       ]
+      ]
+     ],
+     "bottom": 14.2,
+     "top": 21.5,
+     "roof": "hip-tile",
+     "slope": 0.46,
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 719550 (USGS 3DEP TX_Central_B1_2017; groundY -5.7, P50 14.7, P95 21.1, max 22.4); raster check research/whole-campus-92/b07-wcp-gregory/derived/lidar-b07-city-rings.json; identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PHD/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Pitched multi-wing hall. The generator's single hipped roof over the whole City ring (ridge 22.4 m) rendered the roof median 5-6 m above the LiDAR median (one plateau at the ridge). Restated as the generator's own LiDAR tier volumes (flat-tier path, snapped tier rings) above groundY -5.7: flat deck at the lowest substantial tier, each higher wing tier hipped (hip-tile, ridge = tier median + 1.5 m, slope 0.46). Low-wing roofs are flat decks (estimate; real wings are hipped). Identity: PHD."
+   }
+  }
+ },
+ "catalog": {
+  "570462": {
+   "abbr": "CS3",
+   "archetype": "utility",
+   "basis": "known",
+   "district": "east-campus",
+   "note": "Central Chilling Station No. 3 (UT CS3 0138, 1910 San Jacinto Blvd, 1970, 3 floors); was an unnamed master-plan district default",
+   "evidence": {
+    "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; sources/ut-gis-b07-campus.json) objectId 459 CS3 overlaps this City record (x147-175, z576-623); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CS3/ (fetched 2026-10-20)",
+    "basis": "official",
+    "note": "Identity and use from the official UT GIS/building page; facade family is the generic utility archetype (estimate)."
+   }
+  },
+  "611354": {
+   "abbr": "RHD",
+   "archetype": "b07-wcp-gregory:residence-hall",
+   "basis": "known",
+   "district": "east-campus",
+   "note": "Roberts Residence Hall (1936); b07 residence-hall archetype (limestone ground storey)",
+   "evidence": {
+    "source": "ut-rhd-420-directory-photo.jpg (packet D14 photoReferences); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/RHD/",
+    "basis": "reference-interpreted",
+    "note": "Ground-storey family/colour read from one photo; massing/heights unchanged (measured b07 massing)."
+   }
+  },
+  "651688": {
+   "abbr": "MHD",
+   "archetype": "b07-wcp-gregory:residence-hall",
+   "basis": "known",
+   "district": "east-campus",
+   "note": "Moore-Hill Residence Hall (1956); b07 residence-hall archetype (limestone ground storey)",
+   "evidence": {
+    "source": "ut-mhd-421-directory-photo.jpg (packet D14 photoReferences); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/MHD/",
+    "basis": "reference-interpreted",
+    "note": "Ground-storey family/colour read from one photo; massing/heights unchanged (measured b07 massing). Moore-Hill stays flat: LiDAR pitch 1.0 deg / flat tiers conflict with the tile seen at a roof edge in the photo (unresolved, reported)."
+   }
+  },
+  "625251": {
+   "abbr": "SJH",
+   "archetype": "b07-wcp-gregory:residence-hall",
+   "basis": "known",
+   "district": "east-campus",
+   "note": "San Jacinto Residence Hall (2000); b07 residence-hall archetype (limestone ground storey)",
+   "evidence": {
+    "source": "ut-sjh-399-directory-photo.jpg (packet D14 photoReferences); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/SJH/",
+    "basis": "reference-interpreted",
+    "note": "Ground-storey family/colour read from one photo; massing/heights unchanged (measured b07 massing)."
+   }
+  }
+ },
+ "archetypes": {
+  "b07-wcp-gregory:jester-tower": {
+   "label": "Jester tower (1969): tan brick, windows grouped in vertical stacks (b07 d13.ts geometry)",
+   "era": "1960s-1970s",
+   "wall": "buffBrick",
+   "wallColor": "#c8a886",
+   "ground": "precast",
+   "groundColor": "#d2ccbf",
+   "base": "precast",
+   "baseColor": "#c9c3b6",
+   "baseHeight": 0.6,
+   "trim": "precast",
+   "trimColor": "#d6d0c2",
+   "roof": "flat",
+   "roofColor": "#c4c1ba",
+   "roofSlope": 0,
+   "overhang": 0,
+   "brackets": false,
+   "parapet": 1,
+   "cornice": 0.5,
+   "belt": false,
+   "floor": 3.15,
+   "groundFloor": 4.2,
+   "window": {
+    "bay": 2.4,
+    "width": 1.2,
+    "sill": 0.85,
+    "head": 2.25,
+    "mullions": 1,
+    "transom": false,
+    "type": "none",
+    "frame": "dark"
+   },
+   "groundWindow": {
+    "bay": 3.6,
+    "width": 2.4,
+    "sill": 0.5,
+    "head": 3.4,
+    "mullions": 2,
+    "transom": false,
+    "type": "glazed",
+    "frame": "dark"
+   },
+   "door": {
+    "width": 2.4,
+    "height": 2.7
+   },
+   "reference": "ut-jcd-563 / ut-jcd-659 / ut-jes-552 (packet D13): tan brick tower planes with plain brick between continuous vertical window stacks at the plane ends; the stacks are b07 install geometry (d13.ts), so the generated punched grid is switched off on the tower tiers only. Colour photo-read (estimate)."
+  },
+  "b07-wcp-gregory:residence-hall": {
+   "label": "Core-idiom residence hall with limestone ground storey (Roberts / Moore-Hill / San Jacinto)",
+   "era": "1920s-1950s, 2000s revival",
+   "wall": "buffBrick",
+   "wallColor": "#d4bd98",
+   "ground": "limestone",
+   "groundColor": "#ddd2bc",
+   "base": "limestone",
+   "baseColor": "#ddd0b5",
+   "baseHeight": 1,
+   "trim": "limestone",
+   "trimColor": "#e6dac2",
+   "roof": "hip-tile",
+   "roofColor": "#b0583a",
+   "roofSlope": 0.42,
+   "overhang": 0.8,
+   "brackets": true,
+   "parapet": 0,
+   "cornice": 0.35,
+   "belt": false,
+   "floor": 3.5,
+   "groundFloor": 3.9,
+   "window": {
+    "bay": 3,
+    "width": 1.1,
+    "sill": 0.85,
+    "head": 2.45,
+    "mullions": 0,
+    "transom": true,
+    "type": "punched",
+    "frame": "bronze",
+    "surround": true
+   },
+   "groundWindow": {
+    "bay": 3,
+    "width": 1.1,
+    "sill": 0.9,
+    "head": 2.75,
+    "mullions": 0,
+    "transom": true,
+    "type": "punched",
+    "frame": "bronze",
+    "surround": true
+   },
+   "door": {
+    "width": 1.9,
+    "height": 2.7
+   },
+   "reference": "ut-rhd-420, ut-mhd-421, ut-sjh-399 (packet D14): buff brick upper storeys over a cream limestone ground storey, limestone trim, round-headed entries (b07 d14.ts surrounds at mapped entrances). Otherwise the cret-residence idiom (same overhang/slope, so roof heights are unchanged)."
+  }
+ }
+}

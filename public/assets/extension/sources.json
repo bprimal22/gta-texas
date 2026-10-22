@@ -1,0 +1,32 @@
+{
+ "deepWestExtension": [
+  {
+   "dataset": "City of Austin Planimetrics 2023 - Building Footprints 2023 (layer 0)",
+   "publisher": "City of Austin",
+   "query": "https://maps.austintexas.gov/gis/rest/Shared/PlanimetricsSurvey_1/MapServer/0/query?f=json&where=1%3D1&geometry=-97.7534925914328%2C30.28095796249019%2C-97.74506622260441%2C30.290700770403514&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=10000",
+   "retrievedAt": "2026-10-21T17:41:14.408878+00:00",
+   "use": "footprint rings/holes and MAX_HEIGHT (US survey feet)",
+   "sha256": "41b3051067ca10f07e58aa23a70c295cafef6c6d606dd7cb7a742813c1d39d11"
+  },
+  {
+   "dataset": "City of Austin Planimetrics 2023 - Impervious Cover 2023 (layer 1; roads, sidewalks, pavement, courtyards, alleys, trails)",
+   "publisher": "City of Austin",
+   "use": "surface polygons (bridges excluded)",
+   "sha256": "00d4196518e229dce358881f9af205f191484ecb533556aea68268af86ec2bc5"
+  },
+  {
+   "dataset": "USGS 3D Elevation Program (3DEP) bare-earth DEM via the National Map elevation ImageServer",
+   "publisher": "U.S. Geological Survey",
+   "license": "Public domain (U.S. Government work). Credit: U.S. Geological Survey.",
+   "query": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-97.75390870841198%2C30.28059711775266%2C-97.74444204713565%2C30.291061615141047&bboxSR=4326&imageSR=4326&size=228%2C290&format=tiff&pixelType=F32&noDataInterpretation=esriNoDataMatchAny&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A%22None%22%7D&f=json",
+   "use": "extension terrain, NAVD88 m - 165",
+   "sha256": "067c72e96de9783f7ce3fccd2d7fab1466a3d181e0892b10be26983c73055cfb"
+  }
+ ],
+ "limitations": [
+  "2023 footprints are not a current-building survey",
+  "facade materials, windows, parapets and pitched roofs are generic estimates",
+  "road polygons do not establish permissions or markings",
+  "no trees or bridges are modelled in the extension"
+ ]
+}

@@ -1,0 +1,173 @@
+[
+ {
+  "id": "b02-24th-speedway",
+  "block": "b02-sciences",
+  "kind": "street",
+  "label": "24th St at Speedway looking west: NHB (north) and Welch (south) science frontage",
+  "position": [
+   -3.0,
+   7.0,
+   -139.0
+  ],
+  "target": [
+   -80.0,
+   16.0,
+   -136.0
+  ],
+  "fov": 60,
+  "groundY": 5.3,
+  "note": "Street-level approach from the Speedway/24th corner; NHB authored, Welch north wing authored + restored west wing body behind"
+ },
+ {
+  "id": "b02-welch-west",
+  "block": "b02-sciences",
+  "kind": "side",
+  "label": "Welch west side from the Painter gap (restored west wing, LiDAR Y34.0)",
+  "position": [
+   -119.0,
+   11.8,
+   -60.0
+  ],
+  "target": [
+   -95.0,
+   22.0,
+   -72.0
+  ],
+  "fov": 60,
+  "groundY": 9.8,
+  "note": "Restored Welch west wing body (install); before: open terrain inside the footprint [integrator: raised 0.8 m to 1.7 m above the terrain collider, which the harness now includes as the game does]"
+ },
+ {
+  "id": "b02-nhb-corner",
+  "block": "b02-sciences",
+  "kind": "street",
+  "label": "NHB southeast corner at 24th / Speedway",
+  "position": [
+   -1.0,
+   7.2,
+   -140.0
+  ],
+  "target": [
+   -30.0,
+   22.0,
+   -172.0
+  ],
+  "fov": 55,
+  "groundY": 5.3,
+  "note": "NHB corner; FNT body visible behind NHB to the north"
+ },
+ {
+  "id": "b02-speedway-pob",
+  "block": "b02-sciences",
+  "kind": "side",
+  "label": "POB from the west Speedway kerb (restored body behind the authored facades)",
+  "position": [
+   -2.0,
+   6.0,
+   -60.0
+  ],
+  "target": [
+   55.0,
+   16.0,
+   -85.0
+  ],
+  "fov": 60,
+  "groundY": 4.2,
+  "note": "POB footprint override; body Y25.2 (LiDAR) behind the 24th/Speedway facade shell"
+ },
+ {
+  "id": "b02-aerial",
+  "block": "b02-sciences",
+  "kind": "aerial",
+  "label": "Science block aerial from the south-east (Welch, NHB, FNT, MBB, NMS, BME)",
+  "position": [
+   30.0,
+   130.0,
+   -20.0
+  ],
+  "target": [
+   -70.0,
+   15.0,
+   -260.0
+  ],
+  "fov": 55,
+  "groundY": 4.5,
+  "note": "Aerial: restored MBB/NMS/FNT/BME and Welch/POB bodies; heights from LiDAR"
+ },
+ {
+  "id": "b02-nhb-roofline",
+  "block": "b02-sciences",
+  "kind": "aerial",
+  "label": "NHB from the south-west over 24th St: lower west end (Y31.4), screened penthouse (Y41.1-43.0), canopy",
+  "position": [
+   -135.0,
+   52.0,
+   -118.0
+  ],
+  "target": [
+   -55.0,
+   36.0,
+   -168.0
+  ],
+  "fov": 55,
+  "groundY": 9.0,
+  "note": "Round 2: NHB west end lowered 4.7 m to the LiDAR roof, penthouse re-cut to the measured Y42 level, canopy ends at the step (u 104.75; LiDAR u~103.9)"
+ },
+ {
+  "id": "b02-mbb-nms-roofs",
+  "block": "b02-sciences",
+  "kind": "aerial",
+  "label": "MBB / NMS tile hips and gables from above Speedway (LiDAR-fitted, 21-25 deg)",
+  "position": [
+   30.0,
+   68.0,
+   -262.0
+  ],
+  "target": [
+   -30.0,
+   24.0,
+   -300.0
+  ],
+  "fov": 55,
+  "groundY": 5.0,
+  "note": "Round 2: stepped flat tiers replaced by hip/gable sections fitted to the 2017 LiDAR (roofs.json)"
+ },
+ {
+  "id": "b02-d03-orbit-southeast",
+  "block": "b02-sciences",
+  "kind": "aerial",
+  "label": "D03 matching pose of evidence capture d03-orbit-southeast: NMS south face green glazed bays between brick piers, pale eave band, LiDAR roof plant housings and exhaust stacks on the hip",
+  "position": [
+   -21.36,
+   37.616,
+   -306.36
+  ],
+  "target": [
+   -85.0,
+   21.021,
+   -370.0
+  ],
+  "fov": 60,
+  "groundY": 7.62,
+  "note": "Pose = actualCameraCampus/actualTargetCampus of district-orbits-30m d03-orbit-southeast (reference only). Plant heights measured (2017 DSM); bay widths estimated."
+ },
+ {
+  "id": "b02-d03-ssb-gallery-southwest",
+  "block": "b02-sciences",
+  "kind": "aerial",
+  "label": "D03 SSB Student Services from the south-west (same side as the b06-r0-b1-30m KIN source pose, which sees SSB in its right background): open top gallery on square piers, broad clay-tile hip roof with its measured wells, pale precast upper storeys over brick infill, central glazed stair bay on the long south face",
+  "position": [
+   -178.0,
+   46.0,
+   -392.0
+  ],
+  "target": [
+   -122.0,
+   30.0,
+   -438.0
+  ],
+  "fov": 60,
+  "groundY": 15.4,
+  "note": "Roof heights measured (2017 DSM: eave 37.45, 0.66 m/m, crest 42.92, wells 37.63); gallery/pier/bay/storey/overhang and stair-bay sizes are estimates from ut-ssb-476 and b06-r0-b1-30m. Compare with b06-d12-kin-b06-r0-b1 (KIN source pose, b06 shots)."
+ }
+]

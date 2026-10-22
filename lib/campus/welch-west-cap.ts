@@ -1,0 +1,19 @@
+import * as T from 'three';
+import plan from './welch-west-cap-plan.json' with {type:'json'};
+type Face=[T.Vector3,T.Vector3,T.Vector3];
+type Volume={planes:T.Plane[];bounds:T.Box3};
+/** A closed, borrowed-material planting patch. Coordinates and anchors are baked
+ * from fixed authored ground; streamed geometry is cleared only above this floor. */
+export function buildWelchWestCap({grass}:{grass:T.MeshStandardMaterial}){
+ const rows=plan.rows.map(r=>r.vertices.map(p=>new T.Vector3(...p as [number,number,number]))),values:number[]=[],uvs:number[]=[],faces:Face[]=[];
+ const tri=(a:T.Vector3,b:T.Vector3,c:T.Vector3)=>{for(const p of[a,b,c]){values.push(...p.toArray());uvs.push(p.x*.5,p.z*.5)}};
+ const top=(a:T.Vector3,b:T.Vector3,c:T.Vector3)=>{const f:Face=b.clone().sub(a).cross(c.clone().sub(a)).y<0?[a,c,b]:[a,b,c];faces.push(f);tri(...f);const low=f.map(p=>p.clone().add(new T.Vector3(0,-plan.shellDepth,0))) as Face;tri(low[0],low[2],low[1]);};
+ for(let i=0;i<rows.length-1;i++)for(let j=0;j<rows[i].length-1;j++){top(rows[i][j],rows[i+1][j],rows[i][j+1]);top(rows[i][j+1],rows[i+1][j],rows[i+1][j+1]);}
+ const perimeter=[...rows.map(r=>r[0]),...rows.at(-1)!.slice(1),...rows.slice(0,-1).reverse().map(r=>r.at(-1)!),...rows[0].slice(1,-1).reverse()],center=perimeter.reduce((a,b)=>a.add(b),new T.Vector3()).multiplyScalar(1/perimeter.length);
+ for(let i=0;i<perimeter.length;i++){const a=perimeter[i],b=perimeter[(i+1)%perimeter.length],aa=a.clone().add(new T.Vector3(0,-plan.shellDepth,0)),bb=b.clone().add(new T.Vector3(0,-plan.shellDepth,0)),normal=b.clone().sub(a).cross(bb.clone().sub(a)),mid=a.clone().lerp(b,.5).sub(center).setY(0);if(normal.dot(mid)>0){tri(a,b,bb);tri(a,bb,aa)}else{tri(a,bb,b);tri(a,aa,bb)}}
+ const geometry=new T.BufferGeometry().setAttribute('position',new T.Float32BufferAttribute(values,3)).setAttribute('uv',new T.Float32BufferAttribute(uvs,2));geometry.computeVertexNormals();geometry.computeBoundingBox();geometry.computeBoundingSphere();const mesh=new T.Mesh(geometry,grass);mesh.name='Welch west cap: closed planting repair';mesh.castShadow=true;mesh.receiveShadow=true;
+ const height=(x:number,z:number)=>{for(const[a,b,c]of faces){const den=(b.z-c.z)*(a.x-c.x)+(c.x-b.x)*(a.z-c.z),wa=((b.z-c.z)*(x-c.x)+(c.x-b.x)*(z-c.z))/den,wb=((c.z-a.z)*(x-c.x)+(a.x-c.x)*(z-c.z))/den,wc=1-wa-wb;if(Math.min(wa,wb,wc)>=-1e-7)return wa*a.y+wb*b.y+wc*c.y}return NaN;};
+ const volume=(p:T.Vector3[],low:number):Volume=>{const c=p.reduce((a,b)=>a.add(b),new T.Vector3()).multiplyScalar(1/4),planes=p.map((a,i)=>{const b=p[(i+1)%4],q=new T.Plane().setFromNormalAndCoplanarPoint(new T.Vector3(b.z-a.z,0,a.x-b.x).normalize(),a);if(q.distanceToPoint(c)>0)q.negate();return q});planes.push(new T.Plane(new T.Vector3(0,-1,0),low),new T.Plane(new T.Vector3(0,1,0),-plan.sourceCeiling));const bounds=new T.Box3().setFromPoints(p);bounds.min.y=low;bounds.max.y=plan.sourceCeiling;return{planes,bounds}};
+ const volumes:Volume[]=[],oldGroundTrimVolumes:Volume[]=[];for(let i=0;i<rows.length-1;i++){const p=[rows[i][0],rows[i+1][0],rows[i+1].at(-1)!,rows[i].at(-1)!],low=Math.min(...rows[i].map(p=>p.y),...rows[i+1].map(p=>p.y));volumes.push(volume(p,low-.04));oldGroundTrimVolumes.push(volume(p,low-4))}
+ let disposed=false;return{meshes:[mesh],materials:[],colliderGeometries:[geometry],volumes,sourceClearanceVolumes:volumes,oldGroundTrimVolumes,authoredGroundTrimVolumes:oldGroundTrimVolumes,height,terrainHeight:height,contains:(x:number,z:number)=>Number.isFinite(height(x,z)),paved:(_x:number,_z:number)=>false,trees:[],stats:{areaM2:(plan.sEnd-plan.sStart)*(plan.dEnd-plan.dStart),triangles:values.length/9,rows:rows.length,materialBatches:1,sourceCutVolumes:volumes.length,sourceCeiling:plan.sourceCeiling,existingCornerMismatch:plan.existingCornerMismatch},dispose(){if(!disposed){geometry.dispose();disposed=true}}};
+}

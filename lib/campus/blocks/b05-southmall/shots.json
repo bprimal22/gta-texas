@@ -1,0 +1,344 @@
+[
+{
+"id": "b05-fountain-front",
+"block": "b05-southmall",
+"kind": "street",
+"label": "Littlefield Fountain front: lower basin, cascade, upper pool with the bronze group and back wall, from the south lawn",
+"position": [
+-233.0,
+8.4,
+260.5
+],
+"target": [
+-235.3,
+9.6,
+231.0
+],
+"fov": 55,
+"groundY": 6.6,
+"note": "Basin outline from LiDAR no-return rows (measured); cascade lips straight (estimate); sculpture schematic, LiDAR height only."
+},
+{
+"id": "b05-south-mall-from-fountain",
+"block": "b05-southmall",
+"kind": "street",
+"label": "South Mall looking north up the Tower axis from the Littlefield Fountain plaza (21st St side)",
+"position": [
+-236.0,
+8.2,
+264.0
+],
+"target": [
+-226.0,
+30.0,
+40.0
+],
+"fov": 55,
+"groundY": 6.3,
+"note": "Fountain foreground, terrace + stairs, central lawn with flanking walks; Six Pack halls left/right; b04 Main Mall beyond z 170."
+},
+{
+"id": "b05-pcl-approach",
+"block": "b05-southmall",
+"kind": "street",
+"label": "PCL north-east approach from Speedway / 21st St plaza",
+"position": [
+-62,
+3.0,
+300
+],
+"target": [
+-100,
+14,
+370
+],
+"fov": 55,
+"groundY": 1.2,
+"note": "Authored PCL skins; roof deck/penthouse visible only from above."
+},
+{
+"id": "b05-blanton-mlk",
+"block": "b05-southmall",
+"kind": "street",
+"label": "Blanton BMS/BMA from MLK Blvd at Congress, looking south",
+"position": [
+-60,
+0.5,
+505
+],
+"target": [
+-50,
+8,
+575
+],
+"fov": 55,
+"groundY": -3.4,
+"note": "BMA/BMS hipped tile roofs on LiDAR datum (round 2); Austin (BMK) at 26 ft 4 in; Snohetta petals (2023) not modelled."
+},
+{
+"id": "b05-aerial-south-mall-fountain",
+"block": "b05-southmall",
+"kind": "aerial",
+"label": "Aerial over the Littlefield Fountain and South Mall looking north-east",
+"position": [
+-300,
+70,
+300
+],
+"target": [
+-236,
+8,
+228
+],
+"fov": 55,
+"groundY": 5.8,
+"note": "Lawn panel, walks, terrace, fountain composition; Six Pack hipped roofs; compare with screenshot-dataset/captures/b05-r0-a1-overview.jpg."
+},
+{
+"id": "b05-r3-university-ave-north",
+"block": "b05-southmall",
+"kind": "street",
+"label": "University Ave looking north from the Church of Christ: Longhorns for Christ, Kappa Kappa Gamma, Alpha Phi, University Christian Church (round 3 LiDAR massing)",
+"position": [
+-250.0,
+4.0,
+470.0
+],
+"target": [
+-212.0,
+12.0,
+330.0
+],
+"fov": 55,
+"groundY": 1.8,
+"note": "Round 3: green-metal hall roofs, KKG Georgian hip tile, Alpha Phi grey shingle tiers; roofs on LiDAR P50 within 0.7 m. Facades are archetype skins (no per-facade survey)."
+},
+{
+"id": "b05-r3-aerial-dobie-catholic",
+"block": "b05-southmall",
+"kind": "aerial",
+"label": "Aerial over the cleared Dobie Garage lot (Mulva Hall site) and the University Catholic Center, looking south-east",
+"position": [
+-390.0,
+70.0,
+250.0
+],
+"target": [
+-290.0,
+8.0,
+340.0
+],
+"fov": 55,
+"groundY": 7.0,
+"note": "Dobie Garage excluded (demolished 2024; Mulva Hall under construction, not modelled). Catholic Center: flat deck + hipped south band from the LiDAR strip profile."
+},
+{
+"id": "b05-r3-lavaca-greenwood",
+"block": "b05-southmall",
+"kind": "street",
+"label": "Lavaca St looking south from W 18th-MLK: Greenwood Towers + garage (west), Cambridge Tower (east)",
+"position": [
+-348.0,
+11.3,
+556.0
+],
+"target": [
+-354.0,
+16.0,
+640.0
+],
+"fov": 60,
+"groundY": 9.1,
+"note": "Round 3: Greenwood Towers tiers 26.5/30.3 m + garage 7.2 m (LiDAR); Peach Tree hip shingle."
+},
+{
+"id": "b05-r4-hrc-colonnade",
+"block": "b05-southmall",
+"kind": "street",
+"label": "HRC east colonnade at pedestrian height: stone piers, recessed glazed ground storey, slot windows, heavy cornice (compare ut-hrc-570)",
+"position": [
+-343.0,
+11.5,
+214.0
+],
+"target": [
+-362.0,
+22.0,
+193.0
+],
+"fov": 55,
+"groundY": 9.77,
+"note": "D08. Matches the UT directory photo view (corner from the south-east, looking up). Module, storeys and colonnade depth estimated; unseen faces repeat the module."
+},
+{
+"id": "b05-r4-hrc-aerial",
+"block": "b05-southmall",
+"kind": "aerial",
+"label": "HRC from the south-east above 21st St: cornice ring, parapet and roof deck on the LiDAR tier",
+"position": [
+-330.0,
+62.0,
+150.0
+],
+"target": [
+-388.0,
+35.0,
+195.0
+],
+"fov": 50,
+"groundY": 10.9,
+"note": "D08. Deck campus Y 41.2 = LiDAR groundY 9.8 + tier 31.4 (measured)."
+},
+{
+"id": "b05-r4-sixpack-west-ends",
+"block": "b05-southmall",
+"kind": "street",
+"label": "Mezes / Benedict mall end elevations from the South Mall east walk: entrance surrounds, stone balconies, quoins, cornice band and dormers (compare ut-mez-553, ut-ben-559)",
+"position": [
+-214.0,
+11.25,
+214.0
+],
+"target": [
+-197.0,
+15.0,
+212.0
+],
+"fov": 60,
+"groundY": 9.54,
+"note": "D08. Generated six-pack bodies (measured massing, limestone wall override) + b05 additions; dormer count/spacing estimated from the d08 orbits."
+},
+{
+"id": "b05-r4-sixpack-dormers-aerial",
+"block": "b05-southmall",
+"kind": "aerial",
+"label": "Batts / Mezes / Benedict tile roofs with dormers and the Benedict ridge ventilator, from above the South Mall",
+"position": [
+-222.0,
+44.0,
+168.0
+],
+"target": [
+-172.0,
+22.0,
+195.0
+],
+"fov": 55,
+"groundY": 12.28,
+"note": "D08. Dormers seated on the generated roof function; ventilator from ut-ben-559."
+},
+{
+"id": "b05-r4-att-trellis",
+"block": "b05-southmall",
+"kind": "street",
+"label": "AT&T Center east corner pavilions: brick body over limestone base, deep tile eaves, steel trellis and stacked balconies (compare ut-att-551)",
+"position": [
+-252.0,
+5.55,
+527.0
+],
+"target": [
+-276.0,
+22.0,
+498.0
+],
+"fov": 55,
+"groundY": 3.83,
+"note": "D09. Archetype from the photo; trellis/balcony pavilion positions are estimates."
+},
+{
+"id": "b05-r4-blanton-mlk-petals",
+"block": "b05-southmall",
+"kind": "street",
+"label": "Blanton Grounds from the MLK Blvd sidewalk: petal canopies between the BMS and BMA arcades (compare ut-bma-456-campus-10)",
+"position": [
+-77.0,
+-3.1,
+611.0
+],
+"target": [
+-76.0,
+3.0,
+575.0
+],
+"fov": 60,
+"groundY": -4.83,
+"note": "D10. Petals 2023 (not in the 2017 LiDAR): positions/sizes estimated from photos; arcades and roofs per d10.ts."
+},
+{
+"id": "b05-r4-blanton-plaza-pedestrian",
+"block": "b05-southmall",
+"kind": "street",
+"label": "Inside the Blanton plaza looking south: BMS arcade with the gold check-in portal, petal stems and shells, BMA loggia (compare bms campus-12, campus-11)",
+"position": [
+-71.5,
+-1.85,
+536.0
+],
+"target": [
+-80.0,
+1.0,
+590.0
+],
+"fov": 65,
+"groundY": -3.54,
+"note": "D10. Pedestrian height on the mapped plaza walk."
+},
+{
+"id": "b05-r4-blanton-aerial",
+"block": "b05-southmall",
+"kind": "aerial",
+"label": "Blanton BMA/BMS exact-facet hipped tile roofs, timber soffits and the petal canopies from the south-east",
+"position": [
+-30.0,
+38.0,
+650.0
+],
+"target": [
+-72.0,
+4.0,
+565.0
+],
+"fov": 55,
+"groundY": -6.31,
+"note": "D10. Roof wall line/crown calibrated to the LiDAR tier median at the measured pitch."
+},
+{
+"id": "b05-d21-street-21st-guadalupe",
+"block": "b05-southmall",
+"kind": "street",
+"label": "Dobie Twenty21 from the 21st St north sidewalk near Guadalupe: light brick retail podium with storefronts, blue-green glass tower with dark bands rising behind (tower top out of frame, as in the UT directory photo)",
+"position": [
+-425,
+10.36,
+247
+],
+"target": [
+-395,
+32.5,
+300
+],
+"fov": 55,
+"groundY": 8.66,
+"note": "Camera 1.7 m above ground on footway 1206014000 (campus.json). Measured: City ring, tier roofs Y 14.7/19.1/89.0/97.2 (LiDAR). Estimates: colours, ~3 m band rhythm, storefront bays. Signage/stair/grid cube not modelled."
+},
+{
+"id": "b05-d21-aerial-30m-northeast",
+"block": "b05-southmall",
+"kind": "aerial",
+"label": "Dobie Twenty21 review from 30 m above local ground, north-east over 21st St at Whitis: podium tiers, stepped glass tower, mechanical tier",
+"position": [
+-330,
+39.14,
+215
+],
+"target": [
+-390,
+45,
+300
+],
+"fov": 60,
+"groundY": 9.14,
+"note": "30 m above harness ground 9.14. Shows the measured tier steps (14.7 podium base, 19.1 tier B, 89.0 tower, 97.2 mechanical) and the stepped tower ring as bays; HRC is behind/left of the sight line."
+}
+]

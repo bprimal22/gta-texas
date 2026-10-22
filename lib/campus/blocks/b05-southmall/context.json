@@ -1,0 +1,4845 @@
+{
+ "block": "b05-southmall",
+ "massing": {
+  "714471": {
+   "datum": {
+    "aboveY": 6.7
+   },
+   "volumes": [
+    {
+     "ring": [
+      [
+       -193.11,
+       149.16
+      ],
+      [
+       -191.56,
+       131.62
+      ],
+      [
+       -191.48,
+       131.63
+      ],
+      [
+       -191.47,
+       131.55
+      ],
+      [
+       -145.82,
+       135.61
+      ],
+      [
+       -145.82,
+       135.69
+      ],
+      [
+       -145.75,
+       135.7
+      ],
+      [
+       -147.31,
+       153.29
+      ]
+     ],
+     "bottom": 0,
+     "top": 22.76,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.445
+    },
+    {
+     "ring": [
+      [
+       -171.67,
+       198.02
+      ],
+      [
+       -171.27,
+       180.4
+      ],
+      [
+       -168.69,
+       151.35
+      ],
+      [
+       -148.06,
+       153.22
+      ],
+      [
+       -151.95,
+       199.75
+      ]
+     ],
+     "bottom": 0,
+     "top": 20.43,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.445
+    },
+    {
+     "ring": [
+      [
+       -174.25,
+       227.1
+      ],
+      [
+       -171.67,
+       198.02
+      ],
+      [
+       -151.95,
+       199.75
+      ],
+      [
+       -154.38,
+       228.86
+      ]
+     ],
+     "bottom": 0,
+     "top": 19.25,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.445
+    },
+    {
+     "ring": [
+      [
+       -197.26,
+       195.79
+      ],
+      [
+       -195.7,
+       178.25
+      ],
+      [
+       -171.27,
+       180.4
+      ],
+      [
+       -171.67,
+       198.02
+      ]
+     ],
+     "bottom": 0,
+     "top": 22.74,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.445
+    },
+    {
+     "ring": [
+      [
+       -201.29,
+       241.77
+      ],
+      [
+       -199.79,
+       224.87
+      ],
+      [
+       -154.08,
+       228.89
+      ],
+      [
+       -155.53,
+       245.84
+      ],
+      [
+       -155.61,
+       245.83
+      ]
+     ],
+     "bottom": 0,
+     "top": 18.99,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.445
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 714471 (USGS 3DEP 2017: groundY 6.7, pitched 24.0 deg, tiers 21.0/18.4/17.3 m, max 24.4 m); official UT polygons research/raw/ut-official-buildings.geojson objects 557 BAT, 553 MEZ, 559 BEN; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/BAT/ (5 floors, 1951), https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/MEZ/ (6 floors, 1951), https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/BEN/ (5 floors, 1951), fetched 2026-10-20; https://barrypopik.com/blog/six_pack_ut_austin_campus_buildings (\"six red-roofed buildings, commonly referred to as the six pack\")",
+    "basis": "measured",
+    "note": "City record 714471 is the connected union of Batts, Mezes and Benedict (official overlap 19/48/19%). One hipped clay-tile volume per building on its official polygon (Mezes split into north bar, south bar and west wing; tier = LiDAR median inside each piece: 18.4, 17.3 and 21.0 m. The north bar is mixed in the LiDAR: a 21.0 m east strip, 17.3-18.4 m west half and an 11.8 m strip on its west side; one hipped volume at the median is a compromise). Ridge = tier + 0.4 x rise (tier = median of the pitched piece; calibrated so the built roof median meets the LiDAR median), rise from the measured 24 deg pitch. Tile is from a secondary source (six red-roofed buildings) and matches the LiDAR pitch; eave brackets and the Benedict-Mezes infill (3D/I 2006) are not modelled separately. Pending b05-r1: the record is suppressed (route) by mall-buildings yard soil until the soil is clipped."
+   }
+  },
+  "732528": {
+   "datum": {
+    "aboveY": 8.3
+   },
+   "volumes": [
+    {
+     "ring": [
+      [
+       -260.13,
+       124.65
+      ],
+      [
+       -261.71,
+       142.18
+      ],
+      [
+       -289.44,
+       139.46
+      ],
+      [
+       -305.72,
+       137.99
+      ],
+      [
+       -307.19,
+       137.86
+      ],
+      [
+       -305.63,
+       120.56
+      ]
+     ],
+     "bottom": 0,
+     "top": 22.43,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.445
+    },
+    {
+     "ring": [
+      [
+       -289.44,
+       139.46
+      ],
+      [
+       -292.05,
+       168.48
+      ],
+      [
+       -308.33,
+       167.01
+      ],
+      [
+       -305.72,
+       137.99
+      ]
+     ],
+     "bottom": 0,
+     "top": 18.23,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.445
+    },
+    {
+     "ring": [
+      [
+       -264.29,
+       170.97
+      ],
+      [
+       -265.72,
+       188.43
+      ],
+      [
+       -290.17,
+       186.24
+      ],
+      [
+       -310.98,
+       184.37
+      ],
+      [
+       -317.07,
+       183.82
+      ],
+      [
+       -315.95,
+       171.35
+      ],
+      [
+       -316.11,
+       171.34
+      ],
+      [
+       -315.66,
+       166.36
+      ],
+      [
+       -308.33,
+       167.01
+      ],
+      [
+       -292.05,
+       168.48
+      ]
+     ],
+     "bottom": 0,
+     "top": 22.44,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.445
+    },
+    {
+     "ring": [
+      [
+       -313.63,
+       213.87
+      ],
+      [
+       -312.93,
+       206.13
+      ],
+      [
+       -310.98,
+       184.37
+      ],
+      [
+       -290.17,
+       186.24
+      ],
+      [
+       -292.57,
+       215.53
+      ]
+     ],
+     "bottom": 0,
+     "top": 12.15,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.445
+    },
+    {
+     "ring": [
+      [
+       -315.13,
+       230.57
+      ],
+      [
+       -313.63,
+       213.87
+      ],
+      [
+       -292.57,
+       215.53
+      ],
+      [
+       -268.51,
+       217.93
+      ],
+      [
+       -270.01,
+       234.62
+      ]
+     ],
+     "bottom": 0,
+     "top": 16.79,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.445
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 732528 (2017: groundY 8.3, pitched 24.2 deg, tiers 20.7/20.7/16.6/15.1/10.1 m, max 22.8 m); official UT polygons 575 PAR, 573 CAL, 572 HRH; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PAR/ (5 floors, 1955), https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CAL/ (7 floors, 1967), https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/HRH/ (5 floors, 1941), fetched 2026-10-20; https://barrypopik.com/blog/six_pack_ut_austin_campus_buildings (\"six red-roofed buildings, commonly referred to as the six pack\")",
+    "basis": "measured",
+    "note": "City record 732528 (labelled Rainey) is the connected union of Parlin, Calhoun and Rainey (official overlap 32/23/35%). Before: one hipped roof over the whole union at campus Y ~31.5, 8 m above Rainey's measured roof and 13 m above its north wing. Now one hipped tile volume per building piece on the official polygons, ridge = tier + 0.4 x rise. The 6.6 m strip (93 m2) on the Parlin wing east side and the 4.9 m piece (86 m2) are not modelled."
+   }
+  },
+  "733879": {
+   "datum": {
+    "aboveY": 2.7
+   },
+   "volumes": [
+    {
+     "ring": [
+      [
+       -42.73,
+       155.23
+      ],
+      [
+       -44.69,
+       178.13
+      ],
+      [
+       -63.2,
+       175.8
+      ],
+      [
+       -64.6,
+       190.7
+      ],
+      [
+       -45.9,
+       192.3
+      ],
+      [
+       -51.73,
+       260.46
+      ],
+      [
+       -92.18,
+       256.82
+      ],
+      [
+       -82.76,
+       151.8
+      ]
+     ],
+     "bottom": 0,
+     "top": 24.3,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -44.69,
+       178.13
+      ],
+      [
+       -39.91,
+       178.54
+      ],
+      [
+       -41.12,
+       192.71
+      ],
+      [
+       -45.9,
+       192.3
+      ],
+      [
+       -64.6,
+       190.7
+      ],
+      [
+       -63.2,
+       175.8
+      ]
+     ],
+     "bottom": 0,
+     "top": 10.5,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -73.0,
+       160.2
+      ],
+      [
+       -63.4,
+       160.2
+      ],
+      [
+       -63.4,
+       170.6
+      ],
+      [
+       -73.0,
+       170.6
+      ]
+     ],
+     "bottom": 24.3,
+     "top": 33.4,
+     "roof": "flat",
+     "role": "mech"
+    },
+    {
+     "ring": [
+      [
+       -93.88,
+       229.54
+      ],
+      [
+       -103.56,
+       228.69
+      ],
+      [
+       -144.44,
+       263.06
+      ],
+      [
+       -145.16,
+       262.02
+      ],
+      [
+       -139.8,
+       202.16
+      ],
+      [
+       -125.87,
+       190.31
+      ],
+      [
+       -124.87,
+       191.38
+      ],
+      [
+       -122.16,
+       191.63
+      ],
+      [
+       -103.53,
+       175.97
+      ],
+      [
+       -103.27,
+       171.93
+      ],
+      [
+       -95.86,
+       165.68
+      ],
+      [
+       -91.88,
+       166.01
+      ],
+      [
+       -92.44,
+       172.62
+      ],
+      [
+       -87.11,
+       173.08
+      ],
+      [
+       -85.42,
+       173.22
+      ],
+      [
+       -90.5,
+       229.83
+      ],
+      [
+       -92.26,
+       229.68
+      ]
+     ],
+     "bottom": 0,
+     "top": 19.5,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 733879 (2017: groundY 2.7, flat, tiers 24.3 m 4115 m2, 19.5 m 3145 m2, 10.5 m 417 m2, 33.4 m 87 m2); official UT polygons 415 CBA, 424 GSB; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CBA/ (10 floors, 1962), https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/GSB/ (5 floors, 1975); https://en.wikipedia.org/wiki/McCombs_School_of_Business (GSB opened March 1976, rhombus plan facing 21st St), fetched 2026-10-20",
+    "basis": "measured",
+    "note": "City record 733879 is the union of CBA and GSB (official overlap 56/37%). CBA 24.3 m on its official polygon except the measured 10.5 m north-east low wing; 33.4 m stair/lift core (87 m2, LiDAR tier outline squared); GSB 19.5 m on its official polygon. Pending b05-r1: suppressed (route) by one mall yard-soil cell at its north-east corner."
+   }
+  },
+  "-501:add": {
+   "datum": {
+    "aboveY": -3.3
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 26.2,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 652349 tier 26.2 m (10950 m2, covers PCL and UTC; 3132 m2 of it inside official UTC polygon 426), groundY -3.3 (2017; UTC 1984 predates it)",
+    "basis": "measured",
+    "note": "Roof deck campus Y 22.9 (same deck as PCL)."
+   }
+  },
+  "570651": {
+   "datum": {
+    "aboveY": -4.8
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 8.03,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "https://en.wikipedia.org/wiki/Austin_(building) (\"60 ft. x 73 ft. x 26 ft. 4 in.\", opened February 18, 2018); https://www.linbeck.com/project/ellsworth-kellys-austin/ (\"barrel-vaulted, chapel-like\"); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/BMK/; fetched 2026-10-20",
+    "basis": "official",
+    "note": "2017 LiDAR (P50 1.0 m) shows the site under construction, so it cannot describe the building. Height 26 ft 4 in = 8.03 m above LiDAR ground -4.8. The barrel vault is modelled as a flat roof at the crown height (no vault form in the generator)."
+   }
+  },
+  "610756": {
+   "datum": {
+    "aboveY": 4.1
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 18.6,
+     "roof": "hip-metal",
+     "role": "main",
+     "slope": 0.532
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 610756 (2017: groundY 4.1, pitched 28 deg, P50 15.2, P95 17.1, max 24.4); identity: University Christian Church, 2007 University Ave at 21st St, \"rises sixty-two feet above 21st\", modified Gothic, Cedar Park stone, \"copper roof and trim\" (https://www.ucc-austin.org/ via search summary, fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "The generator used City h 37.0 m (City MAX_HEIGHT = the tower) because the record is a LiDAR conflict, not a post-2017 building: the church predates the 2017 LiDAR, so the measured roof is current. Ridge = min(max, P95 + 1.5) = 18.6 m (campus Y 22.7; 62 ft = 18.9 m published). The gabled nave is approximated by the hipped copper form; the tower (LiDAR max 24.4 m) is not placed (position not in the derived data). Identity is reference-interpreted (address + corner + pitched roof), no official polygon."
+   }
+  },
+  "505680": {
+   "datum": {
+    "aboveY": 1.8
+   },
+   "volumes": [
+    {
+     "ring": [
+      [
+       -339.0,
+       499.4
+      ],
+      [
+       -338.8,
+       497.8
+      ],
+      [
+       -332.7,
+       498.2
+      ],
+      [
+       -333.2,
+       495.2
+      ],
+      [
+       -332.2,
+       483.7
+      ],
+      [
+       -331.2,
+       482.2
+      ],
+      [
+       -332.0,
+       480.9
+      ],
+      [
+       -346.5,
+       479.9
+      ],
+      [
+       -350.0,
+       479.4
+      ],
+      [
+       -350.7,
+       478.7
+      ],
+      [
+       -347.2,
+       438.2
+      ],
+      [
+       -346.0,
+       436.4
+      ],
+      [
+       -343.0,
+       436.4
+      ],
+      [
+       -326.5,
+       437.9
+      ],
+      [
+       -325.2,
+       439.2
+      ],
+      [
+       -327.2,
+       465.2
+      ],
+      [
+       -329.2,
+       480.7
+      ],
+      [
+       -329.0,
+       481.9
+      ],
+      [
+       -327.5,
+       481.9
+      ],
+      [
+       -326.9,
+       476.9
+      ],
+      [
+       -320.3,
+       477.2
+      ],
+      [
+       -318.8,
+       461.3
+      ],
+      [
+       -316.3,
+       461.3
+      ],
+      [
+       -313.7,
+       433.7
+      ],
+      [
+       -320.6,
+       432.9
+      ],
+      [
+       -320.2,
+       428.7
+      ],
+      [
+       -321.0,
+       427.9
+      ],
+      [
+       -321.5,
+       428.9
+      ],
+      [
+       -325.5,
+       428.9
+      ],
+      [
+       -326.7,
+       428.2
+      ],
+      [
+       -326.2,
+       414.2
+      ],
+      [
+       -325.2,
+       409.7
+      ],
+      [
+       -326.7,
+       408.7
+      ],
+      [
+       -326.5,
+       407.9
+      ],
+      [
+       -330.0,
+       407.6
+      ],
+      [
+       -330.0,
+       405.4
+      ],
+      [
+       -348.5,
+       403.9
+      ],
+      [
+       -350.7,
+       428.2
+      ],
+      [
+       -351.9,
+       433.0
+      ],
+      [
+       -353.2,
+       433.2
+      ],
+      [
+       -352.2,
+       434.2
+      ],
+      [
+       -352.2,
+       436.7
+      ],
+      [
+       -356.2,
+       476.2
+      ],
+      [
+       -357.2,
+       497.7
+      ]
+     ],
+     "bottom": 0,
+     "top": 21.56,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.456
+    },
+    {
+     "ring": [
+      [
+       -277.7,
+       510.2
+      ],
+      [
+       -276.0,
+       486.9
+      ],
+      [
+       -300.5,
+       484.9
+      ],
+      [
+       -301.5,
+       483.4
+      ],
+      [
+       -301.8,
+       484.7
+      ],
+      [
+       -306.5,
+       484.4
+      ],
+      [
+       -330.5,
+       481.9
+      ],
+      [
+       -332.2,
+       483.7
+      ],
+      [
+       -333.2,
+       497.2
+      ],
+      [
+       -331.7,
+       498.4
+      ],
+      [
+       -332.2,
+       505.7
+      ]
+     ],
+     "bottom": 0,
+     "top": 31.17,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.456
+    },
+    {
+     "ring": [
+      [
+       -276.5,
+       434.4
+      ],
+      [
+       -276.3,
+       432.9
+      ],
+      [
+       -270.7,
+       433.2
+      ],
+      [
+       -269.0,
+       410.4
+      ],
+      [
+       -323.2,
+       405.7
+      ],
+      [
+       -323.5,
+       408.2
+      ],
+      [
+       -326.0,
+       408.0
+      ],
+      [
+       -326.7,
+       408.7
+      ],
+      [
+       -325.2,
+       409.2
+      ],
+      [
+       -326.7,
+       421.7
+      ],
+      [
+       -326.5,
+       428.4
+      ],
+      [
+       -321.5,
+       428.9
+      ],
+      [
+       -321.0,
+       427.9
+      ],
+      [
+       -319.5,
+       427.9
+      ],
+      [
+       -298.5,
+       429.9
+      ],
+      [
+       -296.7,
+       430.3
+      ],
+      [
+       -296.5,
+       431.4
+      ],
+      [
+       -279.0,
+       432.9
+      ]
+     ],
+     "bottom": 0,
+     "top": 31.23,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.456
+    },
+    {
+     "ring": [
+      [
+       -283.7,
+       486.2
+      ],
+      [
+       -282.3,
+       472.4
+      ],
+      [
+       -279.5,
+       472.4
+      ],
+      [
+       -277.2,
+       446.2
+      ],
+      [
+       -276.2,
+       444.7
+      ],
+      [
+       -276.7,
+       434.7
+      ],
+      [
+       -277.5,
+       433.4
+      ],
+      [
+       -279.0,
+       432.9
+      ],
+      [
+       -296.5,
+       431.4
+      ],
+      [
+       -297.2,
+       436.2
+      ],
+      [
+       -299.0,
+       436.5
+      ],
+      [
+       -299.5,
+       437.4
+      ],
+      [
+       -301.7,
+       461.2
+      ],
+      [
+       -300.0,
+       461.4
+      ],
+      [
+       -299.7,
+       462.2
+      ],
+      [
+       -301.7,
+       483.2
+      ],
+      [
+       -300.5,
+       484.9
+      ]
+     ],
+     "bottom": 0,
+     "top": 26.99,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.456
+    },
+    {
+     "ring": [
+      [
+       -328.2,
+       482.2
+      ],
+      [
+       -329.2,
+       481.7
+      ],
+      [
+       -329.2,
+       480.7
+      ],
+      [
+       -327.2,
+       465.2
+      ],
+      [
+       -325.2,
+       439.2
+      ],
+      [
+       -326.5,
+       437.9
+      ],
+      [
+       -346.0,
+       436.4
+      ],
+      [
+       -347.2,
+       438.2
+      ],
+      [
+       -350.7,
+       478.7
+      ],
+      [
+       -350.0,
+       479.4
+      ],
+      [
+       -346.5,
+       479.9
+      ],
+      [
+       -332.0,
+       480.9
+      ],
+      [
+       -331.0,
+       482.4
+      ]
+     ],
+     "bottom": 0,
+     "top": 25.68,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.456
+    },
+    {
+     "ring": [
+      [
+       -356.2,
+       482.2
+      ],
+      [
+       -352.2,
+       434.2
+      ],
+      [
+       -353.5,
+       432.9
+      ],
+      [
+       -358.0,
+       432.5
+      ],
+      [
+       -362.2,
+       481.7
+      ]
+     ],
+     "bottom": 0,
+     "top": 13.2,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -270.7,
+       467.7
+      ],
+      [
+       -268.2,
+       438.2
+      ],
+      [
+       -273.5,
+       437.4
+      ],
+      [
+       -273.9,
+       438.6
+      ],
+      [
+       -276.7,
+       438.7
+      ],
+      [
+       -276.7,
+       445.2
+      ],
+      [
+       -275.2,
+       446.2
+      ],
+      [
+       -277.2,
+       467.2
+      ]
+     ],
+     "bottom": 0,
+     "top": 4.7,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 505680 (USGS 3DEP, early 2017); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/ATT/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Round 2: the generator measured these heights from its own grade (median baked ground around the footprint), which on this sloping block lies above the LiDAR groundY, so roofs came out high (block check r1: ATT +7.1, BMS +4.2, RRH +3.4, SZB +2.5, BMA +2.4 m). Now datum aboveY = LiDAR groundY and one volume per LiDAR tier >= 100 m2 (tiers are drawn from ground to their height; the taller covers the lower), hipped tiers ridge = tier + 0.6 x rise at the measured pitch. AT&T Executive Education and Conference Center (Lake|Flato with HKS, 2008), 8 floors; the City ring also covers ~18% of the Conference Center Garage CCG (official polygon 532), which is below the 2 m tier threshold (garage roof at grade) and gets no volume."
+   }
+  },
+  "568540": {
+   "datum": {
+    "aboveY": -4.6
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 22.4,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.496
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 568540 (USGS 3DEP, early 2017); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/BMA/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Round 2: the generator measured these heights from its own grade (median baked ground around the footprint), which on this sloping block lies above the LiDAR groundY, so roofs came out high (block check r1: ATT +7.1, BMS +4.2, RRH +3.4, SZB +2.5, BMA +2.4 m). Now datum aboveY = LiDAR groundY and one volume per LiDAR tier >= 100 m2 (tiers are drawn from ground to their height; the taller covers the lower); BMA: one hipped tile roof at the measured 26 deg pitch, ridge = P95 22.4 m (rise capped at 6.5 m, flat crown over the deep plan). Blanton gallery building (Kallmann McKinnell & Wood, 2006): \"clay tile roofs\" (https://www.kmwarch.com/university-of-texas-austin-jack-s-blanton-museum-of-art, fetched 2026-10-20)."
+   }
+  },
+  "592266": {
+   "datum": {
+    "aboveY": -4.0
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 20.7,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.29
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 592266 (USGS 3DEP, early 2017); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/BMS/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Round 2: the generator measured these heights from its own grade (median baked ground around the footprint), which on this sloping block lies above the LiDAR groundY, so roofs came out high (block check r1: ATT +7.1, BMS +4.2, RRH +3.4, SZB +2.5, BMA +2.4 m). Now datum aboveY = LiDAR groundY and one volume per LiDAR tier >= 100 m2 (tiers are drawn from ground to their height; the taller covers the lower); BMS: one hipped tile roof, eave at the 14.9 m tier, ridge 20.7 m (P95 21.8 minus 1.1, calibrated to the LiDAR median by the block check). Blanton Smith Building (KMW, 2006/2008), clay tile roofs (same source)."
+   }
+  },
+  "675538": {
+   "datum": {
+    "aboveY": 4.4
+   },
+   "volumes": [
+    {
+     "ring": [
+      [
+       -377.8,
+       490.3
+      ],
+      [
+       -376.2,
+       469.2
+      ],
+      [
+       -378.0,
+       467.4
+      ],
+      [
+       -388.5,
+       467.9
+      ],
+      [
+       -392.5,
+       468.9
+      ],
+      [
+       -395.0,
+       470.9
+      ],
+      [
+       -398.5,
+       471.9
+      ],
+      [
+       -402.5,
+       468.9
+      ],
+      [
+       -404.0,
+       468.9
+      ],
+      [
+       -405.0,
+       469.9
+      ],
+      [
+       -408.0,
+       469.4
+      ],
+      [
+       -412.7,
+       466.7
+      ],
+      [
+       -414.7,
+       462.7
+      ],
+      [
+       -421.7,
+       454.2
+      ],
+      [
+       -424.2,
+       449.7
+      ],
+      [
+       -422.7,
+       440.2
+      ],
+      [
+       -421.7,
+       438.7
+      ],
+      [
+       -417.7,
+       422.7
+      ],
+      [
+       -416.0,
+       420.9
+      ],
+      [
+       -408.5,
+       417.9
+      ],
+      [
+       -403.0,
+       417.9
+      ],
+      [
+       -395.0,
+       420.4
+      ],
+      [
+       -389.5,
+       420.9
+      ],
+      [
+       -386.5,
+       416.5
+      ],
+      [
+       -385.2,
+       401.2
+      ],
+      [
+       -441.5,
+       395.9
+      ],
+      [
+       -446.2,
+       444.7
+      ],
+      [
+       -443.5,
+       444.9
+      ],
+      [
+       -442.0,
+       445.9
+      ],
+      [
+       -435.0,
+       445.9
+      ],
+      [
+       -433.7,
+       444.7
+      ],
+      [
+       -433.2,
+       437.7
+      ],
+      [
+       -428.5,
+       437.9
+      ],
+      [
+       -427.7,
+       438.7
+      ],
+      [
+       -427.7,
+       445.2
+      ],
+      [
+       -429.0,
+       446.9
+      ],
+      [
+       -432.5,
+       446.9
+      ],
+      [
+       -433.7,
+       448.2
+      ],
+      [
+       -433.7,
+       451.7
+      ],
+      [
+       -431.5,
+       452.9
+      ],
+      [
+       -430.2,
+       455.2
+      ],
+      [
+       -422.5,
+       461.9
+      ],
+      [
+       -421.0,
+       462.4
+      ],
+      [
+       -410.0,
+       471.4
+      ],
+      [
+       -408.7,
+       472.7
+      ],
+      [
+       -408.7,
+       474.2
+      ],
+      [
+       -410.0,
+       477.4
+      ],
+      [
+       -412.5,
+       477.4
+      ],
+      [
+       -417.5,
+       476.4
+      ],
+      [
+       -420.5,
+       474.4
+      ],
+      [
+       -445.0,
+       466.9
+      ],
+      [
+       -446.2,
+       465.7
+      ],
+      [
+       -445.7,
+       455.2
+      ],
+      [
+       -444.7,
+       450.7
+      ],
+      [
+       -444.7,
+       447.7
+      ],
+      [
+       -445.5,
+       446.9
+      ],
+      [
+       -446.6,
+       447.1
+      ],
+      [
+       -448.6,
+       467.7
+      ]
+     ],
+     "bottom": 0,
+     "top": 30.5,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -409.7,
+       477.2
+      ],
+      [
+       -408.7,
+       472.7
+      ],
+      [
+       -421.0,
+       462.4
+      ],
+      [
+       -422.5,
+       461.9
+      ],
+      [
+       -429.0,
+       456.4
+      ],
+      [
+       -431.5,
+       452.9
+      ],
+      [
+       -433.7,
+       451.7
+      ],
+      [
+       -433.7,
+       448.2
+      ],
+      [
+       -432.5,
+       446.9
+      ],
+      [
+       -429.0,
+       446.9
+      ],
+      [
+       -427.7,
+       445.2
+      ],
+      [
+       -427.7,
+       438.7
+      ],
+      [
+       -428.5,
+       437.9
+      ],
+      [
+       -433.2,
+       437.7
+      ],
+      [
+       -433.7,
+       444.7
+      ],
+      [
+       -435.0,
+       445.9
+      ],
+      [
+       -446.2,
+       445.2
+      ],
+      [
+       -446.6,
+       446.8
+      ],
+      [
+       -444.7,
+       447.7
+      ],
+      [
+       -446.2,
+       461.7
+      ],
+      [
+       -446.2,
+       465.7
+      ],
+      [
+       -445.0,
+       466.9
+      ],
+      [
+       -420.5,
+       474.4
+      ],
+      [
+       -417.5,
+       476.4
+      ],
+      [
+       -412.5,
+       477.4
+      ]
+     ],
+     "bottom": 0,
+     "top": 35.0,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -426.7,
+       419.2
+      ],
+      [
+       -418.0,
+       415.4
+      ],
+      [
+       -416.5,
+       415.4
+      ],
+      [
+       -415.2,
+       414.2
+      ],
+      [
+       -413.7,
+       401.2
+      ],
+      [
+       -415.0,
+       399.9
+      ],
+      [
+       -421.0,
+       398.9
+      ],
+      [
+       -432.5,
+       397.9
+      ],
+      [
+       -434.0,
+       398.4
+      ],
+      [
+       -439.0,
+       397.4
+      ],
+      [
+       -440.0,
+       397.9
+      ],
+      [
+       -440.7,
+       399.7
+      ],
+      [
+       -442.2,
+       417.2
+      ],
+      [
+       -441.0,
+       418.4
+      ],
+      [
+       -437.5,
+       418.9
+      ],
+      [
+       -435.0,
+       418.4
+      ],
+      [
+       -431.5,
+       419.4
+      ]
+     ],
+     "bottom": 0,
+     "top": 35.2,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -376.2,
+       467.2
+      ],
+      [
+       -376.3,
+       465.2
+      ],
+      [
+       -406.9,
+       454.4
+      ],
+      [
+       -408.0,
+       454.9
+      ],
+      [
+       -409.7,
+       451.7
+      ],
+      [
+       -409.2,
+       450.7
+      ],
+      [
+       -410.2,
+       450.2
+      ],
+      [
+       -408.7,
+       442.2
+      ],
+      [
+       -409.2,
+       441.7
+      ],
+      [
+       -408.2,
+       430.7
+      ],
+      [
+       -405.7,
+       423.7
+      ],
+      [
+       -404.5,
+       422.4
+      ],
+      [
+       -389.2,
+       421.7
+      ],
+      [
+       -404.5,
+       420.4
+      ],
+      [
+       -411.0,
+       422.4
+      ],
+      [
+       -412.2,
+       424.2
+      ],
+      [
+       -411.7,
+       427.2
+      ],
+      [
+       -416.2,
+       433.2
+      ],
+      [
+       -417.7,
+       438.7
+      ],
+      [
+       -420.7,
+       445.2
+      ],
+      [
+       -419.5,
+       447.4
+      ],
+      [
+       -417.7,
+       447.2
+      ],
+      [
+       -419.2,
+       448.7
+      ],
+      [
+       -418.0,
+       450.4
+      ],
+      [
+       -416.5,
+       450.9
+      ],
+      [
+       -414.7,
+       449.2
+      ],
+      [
+       -414.7,
+       454.7
+      ],
+      [
+       -413.2,
+       458.2
+      ],
+      [
+       -410.5,
+       460.4
+      ],
+      [
+       -403.0,
+       462.9
+      ],
+      [
+       -396.5,
+       462.9
+      ],
+      [
+       -395.5,
+       465.9
+      ],
+      [
+       -391.0,
+       464.9
+      ],
+      [
+       -386.0,
+       466.9
+      ]
+     ],
+     "bottom": 0,
+     "top": 19.6,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -400.0,
+       471.4
+      ],
+      [
+       -395.0,
+       470.9
+      ],
+      [
+       -392.5,
+       468.9
+      ],
+      [
+       -388.5,
+       467.9
+      ],
+      [
+       -377.7,
+       467.2
+      ],
+      [
+       -386.0,
+       466.9
+      ],
+      [
+       -391.0,
+       464.9
+      ],
+      [
+       -395.5,
+       465.9
+      ],
+      [
+       -396.5,
+       462.9
+      ],
+      [
+       -401.0,
+       463.4
+      ],
+      [
+       -410.5,
+       460.4
+      ],
+      [
+       -413.2,
+       458.2
+      ],
+      [
+       -414.2,
+       456.2
+      ],
+      [
+       -414.2,
+       451.2
+      ],
+      [
+       -415.2,
+       450.7
+      ],
+      [
+       -414.7,
+       449.2
+      ],
+      [
+       -416.5,
+       450.9
+      ],
+      [
+       -419.2,
+       449.2
+      ],
+      [
+       -418.2,
+       447.7
+      ],
+      [
+       -419.5,
+       447.4
+      ],
+      [
+       -420.7,
+       445.2
+      ],
+      [
+       -417.7,
+       438.7
+      ],
+      [
+       -416.2,
+       433.2
+      ],
+      [
+       -411.7,
+       427.2
+      ],
+      [
+       -412.2,
+       424.2
+      ],
+      [
+       -411.0,
+       422.4
+      ],
+      [
+       -404.5,
+       420.4
+      ],
+      [
+       -399.0,
+       420.4
+      ],
+      [
+       -395.0,
+       421.4
+      ],
+      [
+       -389.2,
+       421.2
+      ],
+      [
+       -395.0,
+       420.4
+      ],
+      [
+       -403.0,
+       417.9
+      ],
+      [
+       -408.5,
+       417.9
+      ],
+      [
+       -416.0,
+       420.9
+      ],
+      [
+       -417.7,
+       422.7
+      ],
+      [
+       -421.7,
+       438.7
+      ],
+      [
+       -422.7,
+       440.2
+      ],
+      [
+       -424.2,
+       449.7
+      ],
+      [
+       -421.7,
+       454.2
+      ],
+      [
+       -414.7,
+       462.7
+      ],
+      [
+       -411.5,
+       467.9
+      ],
+      [
+       -406.0,
+       469.9
+      ],
+      [
+       -402.5,
+       468.9
+      ]
+     ],
+     "bottom": 0,
+     "top": 24.7,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 675538 (USGS 3DEP, early 2017); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/RRH/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Round 2: the generator measured these heights from its own grade (median baked ground around the footprint), which on this sloping block lies above the LiDAR groundY, so roofs came out high (block check r1: ATT +7.1, BMS +4.2, RRH +3.4, SZB +2.5, BMA +2.4 m). Now datum aboveY = LiDAR groundY and one volume per LiDAR tier >= 100 m2 (tiers are drawn from ground to their height; the taller covers the lower). Rowling Hall (Jacobs + Ennead, opened Feb 2018; https://news.utexas.edu/2018/02/22/new-rowling-hall-is-the-future-of-business-education/). TIME ORDER: the early-2017 LiDAR saw the building topped out but before completion; roof plant added later is not measured."
+   }
+  },
+  "502161": {
+   "datum": {
+    "aboveY": -2.8
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 21.6,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 502161 (USGS 3DEP, early 2017); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/SZB/ (fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "Round 2: the generator measured these heights from its own grade (median baked ground around the footprint), which on this sloping block lies above the LiDAR groundY, so roofs came out high (block check r1: ATT +7.1, BMS +4.2, RRH +3.4, SZB +2.5, BMA +2.4 m). Now datum aboveY = LiDAR groundY and one volume per LiDAR tier >= 100 m2 (tiers are drawn from ground to their height; the taller covers the lower). George I. Sanchez Building (1975), flat roof."
+   }
+  },
+  "485466": {
+   "datum": {
+    "aboveY": 7.9
+   },
+   "volumes": [
+    {
+     "ring": [
+      [
+       -315.2,
+       637.2
+      ],
+      [
+       -313.7,
+       636.2
+      ],
+      [
+       -311.2,
+       629.2
+      ],
+      [
+       -307.7,
+       616.2
+      ],
+      [
+       -303.2,
+       604.7
+      ],
+      [
+       -302.7,
+       600.2
+      ],
+      [
+       -300.2,
+       592.7
+      ],
+      [
+       -298.7,
+       590.7
+      ],
+      [
+       -298.7,
+       588.7
+      ],
+      [
+       -293.2,
+       573.7
+      ],
+      [
+       -293.2,
+       571.7
+      ],
+      [
+       -290.7,
+       564.2
+      ],
+      [
+       -289.2,
+       562.7
+      ],
+      [
+       -290.4,
+       562.3
+      ],
+      [
+       -290.5,
+       560.9
+      ],
+      [
+       -311.5,
+       554.1
+      ],
+      [
+       -320.2,
+       581.7
+      ],
+      [
+       -320.8,
+       583.0
+      ],
+      [
+       -322.7,
+       582.7
+      ],
+      [
+       -321.7,
+       583.7
+      ],
+      [
+       -321.7,
+       587.2
+      ],
+      [
+       -326.2,
+       598.7
+      ],
+      [
+       -327.2,
+       603.7
+      ],
+      [
+       -336.0,
+       630.2
+      ],
+      [
+       -327.0,
+       632.9
+      ],
+      [
+       -326.2,
+       633.7
+      ],
+      [
+       -326.6,
+       634.3
+      ],
+      [
+       -325.7,
+       634.7
+      ],
+      [
+       -318.9,
+       636.9
+      ],
+      [
+       -317.5,
+       636.4
+      ]
+     ],
+     "bottom": 0,
+     "top": 50.1,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -295.7,
+       644.2
+      ],
+      [
+       -292.2,
+       632.7
+      ],
+      [
+       -304.5,
+       628.6
+      ],
+      [
+       -296.7,
+       604.5
+      ],
+      [
+       -302.5,
+       602.4
+      ],
+      [
+       -304.7,
+       607.2
+      ],
+      [
+       -313.7,
+       636.2
+      ],
+      [
+       -315.5,
+       637.4
+      ],
+      [
+       -317.5,
+       636.4
+      ],
+      [
+       -318.2,
+       637.1
+      ]
+     ],
+     "bottom": 0,
+     "top": 6.2,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -293.0,
+       593.3
+      ],
+      [
+       -283.7,
+       564.7
+      ],
+      [
+       -288.4,
+       562.9
+      ],
+      [
+       -290.0,
+       562.9
+      ],
+      [
+       -290.7,
+       564.2
+      ],
+      [
+       -299.2,
+       591.2
+      ]
+     ],
+     "bottom": 0,
+     "top": 6.2,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -326.7,
+       600.7
+      ],
+      [
+       -321.7,
+       587.2
+      ],
+      [
+       -321.7,
+       583.7
+      ],
+      [
+       -323.0,
+       582.4
+      ],
+      [
+       -329.0,
+       580.6
+      ],
+      [
+       -334.2,
+       598.7
+      ]
+     ],
+     "bottom": 0,
+     "top": 5.6,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 485466 (USGS 3DEP, early 2017); screenshot-dataset/captures/b05-r0-a3-overview.jpg (accepted overview, 2026-10-20)",
+    "basis": "measured",
+    "note": "Flat tiers on the LiDAR datum: tower 50.1 m (1840 m2) and podium pieces 5.6-6.2 m. Identity (south of MLK between Lavaca and Colorado) not established; no official UT polygon."
+   }
+  },
+  "463006:7": {
+   "datum": {
+    "aboveY": 4.0
+   },
+   "volumes": [
+    {
+     "ring": [
+      [
+       -423.2,
+       611.7
+      ],
+      [
+       -422.2,
+       606.2
+      ],
+      [
+       -419.2,
+       597.7
+      ],
+      [
+       -417.8,
+       595.7
+      ],
+      [
+       -411.8,
+       576.1
+      ],
+      [
+       -438.1,
+       567.6
+      ],
+      [
+       -449.7,
+       603.2
+      ]
+     ],
+     "bottom": 0,
+     "top": 7.2,
+     "roof": "flat",
+     "role": "main",
+     "archetype": "garage"
+    },
+    {
+     "ring": [
+      [
+       -369.8,
+       629.8
+      ],
+      [
+       -367.7,
+       622.7
+      ],
+      [
+       -366.0,
+       621.9
+      ],
+      [
+       -364.2,
+       616.5
+      ],
+      [
+       -366.0,
+       613.4
+      ],
+      [
+       -374.0,
+       610.9
+      ],
+      [
+       -376.7,
+       620.2
+      ],
+      [
+       -378.0,
+       621.9
+      ],
+      [
+       -379.0,
+       621.9
+      ],
+      [
+       -381.5,
+       620.4
+      ],
+      [
+       -389.0,
+       618.4
+      ],
+      [
+       -392.7,
+       616.2
+      ],
+      [
+       -391.2,
+       611.2
+      ],
+      [
+       -390.0,
+       609.9
+      ],
+      [
+       -382.5,
+       611.9
+      ],
+      [
+       -379.7,
+       608.7
+      ],
+      [
+       -381.2,
+       607.2
+      ],
+      [
+       -381.0,
+       605.9
+      ],
+      [
+       -382.0,
+       605.9
+      ],
+      [
+       -382.6,
+       607.5
+      ],
+      [
+       -383.5,
+       607.4
+      ],
+      [
+       -417.1,
+       595.9
+      ],
+      [
+       -418.2,
+       596.2
+      ],
+      [
+       -423.2,
+       609.7
+      ],
+      [
+       -423.2,
+       611.7
+      ],
+      [
+       -422.5,
+       612.4
+      ]
+     ],
+     "bottom": 0,
+     "top": 26.5,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -363.7,
+       614.7
+      ],
+      [
+       -364.4,
+       614.5
+      ],
+      [
+       -364.2,
+       613.2
+      ],
+      [
+       -360.2,
+       601.2
+      ],
+      [
+       -378.5,
+       594.9
+      ],
+      [
+       -382.1,
+       605.8
+      ],
+      [
+       -380.7,
+       606.2
+      ],
+      [
+       -381.2,
+       607.2
+      ],
+      [
+       -378.5,
+       609.4
+      ],
+      [
+       -366.0,
+       613.4
+      ],
+      [
+       -364.0,
+       615.9
+      ]
+     ],
+     "bottom": 0,
+     "top": 21.0,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -377.7,
+       621.7
+      ],
+      [
+       -374.2,
+       612.7
+      ],
+      [
+       -375.0,
+       610.4
+      ],
+      [
+       -380.0,
+       608.9
+      ],
+      [
+       -382.5,
+       611.9
+      ],
+      [
+       -388.5,
+       609.9
+      ],
+      [
+       -390.0,
+       609.9
+      ],
+      [
+       -391.2,
+       611.2
+      ],
+      [
+       -392.7,
+       615.7
+      ],
+      [
+       -392.0,
+       616.9
+      ],
+      [
+       -381.5,
+       620.4
+      ],
+      [
+       -379.0,
+       621.9
+      ]
+     ],
+     "bottom": 0,
+     "top": 30.3,
+     "roof": "flat",
+     "role": "mech"
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 463006 (groundY 4.0, P50 21.0, P95 30.3, max 31.8, flat 0.5 deg); OpenStreetMap way 236328113 (https://www.openstreetmap.org/way/236328113, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) \"Greenwood Towers\", 1800 Lavaca St, building:levels 8; OpenStreetMap way 1317145959 (https://www.openstreetmap.org/way/1317145959, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) amenity=parking multi-storey; https://www.homes.com/building/greenwood-towers-austin-tx/b-rc6fx7c4e7cm1/ (8-story condominium completed 1966, fetched 2026-10-20)",
+    "basis": "measured",
+    "note": "One City ring = Greenwood Towers + its parking garage (OSM cover 49/43%). Flat LiDAR tiers on the LiDAR datum, one volume per tier >= 60 m2 (tiers drawn from ground; the taller covers the lower): 7.2 m (1034 m2, garage), 26.5 m (819 m2, tower), 21.0 m (259 m2, tower), 30.3 m (152 m2, tower). 8 floors x ~3.3 m = 26.5 m tier; 30.3 m = roof plant. Garage volume uses the garage archetype."
+   }
+  },
+  "466192:59": {
+   "datum": {
+    "aboveY": 7.7
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.1,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 466192 (groundY 7.7, P50 4.1, P95 4.1, max 4.1, flat 6.7 deg); OpenStreetMap way 381834125 (https://www.openstreetmap.org/way/381834125, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) 1802 Lavaca St, height 4.3",
+    "basis": "measured",
+    "note": "One-storey building; flat deck at LiDAR P50/P95 4.1 m (OSM height 4.3 m agrees)."
+   }
+  },
+  "488003:135": {
+   "datum": {
+    "aboveY": 5.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 6.0,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 488003 (groundY 5.5, P50 6.0, P95 9.2, max 9.8, flat 0.5 deg); OpenStreetMap way 236328114 (https://www.openstreetmap.org/way/236328114, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) and OpenStreetMap way 236328117 (https://www.openstreetmap.org/way/236328117, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) (two unnamed buildings)",
+    "basis": "measured",
+    "note": "Flat 6.0 m tier (802 m2 of 810) on the LiDAR datum; City ring spans two OSM buildings of the same height. Raster P95 9.2 m = rooftop plant/edges, not modelled."
+   }
+  },
+  "506791:214": {
+   "datum": {
+    "aboveY": 5.0
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 6.08,
+     "roof": "hip-shingle",
+     "role": "main",
+     "slope": 0.277
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 506791 (groundY 5.0, P50 4.8, P95 7.0, max 7.2, mixed 28.9 deg)",
+    "basis": "measured",
+    "note": "Pitched 28.9 deg one-storey roof: hip-shingle, ridge = tier 4.4 + 0.4 x rise 2.14 = 6.08 m (cap = LiDAR max 7.2). No OSM building on this ring in Oct 2026 (Overpass) - existence after 2017 not confirmed."
+   }
+  },
+  "507348:223": {
+   "datum": {
+    "aboveY": 8.0
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 9.8,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 507348 (groundY 8.0, P50 9.8, P95 9.9, max 11.2, flat 3.7 deg); OpenStreetMap way 381834281 (https://www.openstreetmap.org/way/381834281, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) height 11.2",
+    "basis": "measured",
+    "note": "Flat deck at LiDAR P50 9.8 m (P95 9.9; OSM 11.2 m = City h, includes parapet/plant)."
+   }
+  },
+  "525167:250": {
+   "datum": {
+    "aboveY": 7.3
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 7.19,
+     "roof": "hip-shingle",
+     "role": "main",
+     "slope": 0.46
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 525167 (groundY 7.3, P50 6.7, P95 7.3, max 8.6, pitched 24.7 deg); OpenStreetMap way 236328115 (https://www.openstreetmap.org/way/236328115, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used)",
+    "basis": "measured",
+    "note": "Hip-shingle, ridge = tier 6.5 + 0.4 x rise 1.71 = 7.19 m."
+   }
+  },
+  "526084:269": {
+   "datum": {
+    "aboveY": 7.9
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 8.63,
+     "roof": "hip-shingle",
+     "role": "main",
+     "slope": 0.454
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 526084 (groundY 7.9, P50 7.9, P95 8.9, max 9.3, pitched 24.4 deg); OpenStreetMap way 236328116 (https://www.openstreetmap.org/way/236328116, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) \"Peach Tree Apartments\", 1804 Lavaca St, building=apartments",
+    "basis": "measured",
+    "note": "Hip-shingle, ridge = tier 7.7 + 0.4 x rise 2.33 = 8.63 m."
+   }
+  },
+  "567838:465": {
+   "datum": {
+    "aboveY": 0.3
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.58,
+     "roof": "hip-metal",
+     "role": "main",
+     "slope": 0.315
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 567838 (groundY 0.3, P50 4.3, P95 4.6, max 4.6, pitched 17.5 deg); OpenStreetMap way 382075789 (https://www.openstreetmap.org/way/382075789, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) building=roof, height 4.5; research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b2-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "measured",
+    "note": "Pitched 17.5 deg canopy/shed: hip-metal, ridge = P50 4.3 + 0.4 x rise 0.7 = 4.58 m (cap LiDAR max 4.6). Green metal roof from the accepted overview."
+   }
+  },
+  "612018:712": {
+   "datum": {
+    "aboveY": 0.3
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.63,
+     "roof": "hip-metal",
+     "role": "main",
+     "slope": 0.378
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 612018 (groundY 0.3, P50 4.3, P95 4.6, max 4.7, pitched 20.7 deg); OpenStreetMap way 382075782 (https://www.openstreetmap.org/way/382075782, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) building=roof, height 4.4; research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b2-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "measured",
+    "note": "Pitched 20.7 deg canopy/shed: hip-metal, ridge = P50 4.3 + 0.4 x rise 0.83 = 4.63 m (cap LiDAR max 4.7). Green metal roof from the accepted overview."
+   }
+  },
+  "633606:820": {
+   "datum": {
+    "aboveY": 0.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.7,
+     "roof": "hip-metal",
+     "role": "main",
+     "slope": 0.358
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 633606 (groundY 0.5, P50 4.4, P95 4.7, max 4.7, pitched 19.7 deg); OpenStreetMap way 382075785 (https://www.openstreetmap.org/way/382075785, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) building=yes, height 4.3; research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b2-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "measured",
+    "note": "Pitched 19.7 deg canopy/shed: hip-metal, ridge = P50 4.4 + 0.4 x rise 0.8 = 4.7 m (cap LiDAR max 4.7). Green metal roof from the accepted overview."
+   }
+  },
+  "715514:1119": {
+   "datum": {
+    "aboveY": 0.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.6,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 715514 (groundY 0.5, P50 4.6, P95 4.9, max 4.9, flat 0.0 deg); OpenStreetMap way 382075788 (https://www.openstreetmap.org/way/382075788, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) height 6.1",
+    "basis": "measured",
+    "note": "Flat 4.6 m (LiDAR P50; roof form undetermined, 20 m2)."
+   }
+  },
+  "716915:1148": {
+   "datum": {
+    "aboveY": 0.1
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 5.87,
+     "roof": "hip-metal",
+     "role": "main",
+     "slope": 0.354
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 716915 (groundY 0.1, P50 4.7, P95 6.1, max 6.6, mixed 25.6 deg); OpenStreetMap way 382075762 (https://www.openstreetmap.org/way/382075762, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) height 6.1; research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b2-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "measured",
+    "note": "Hip-metal, ridge = tier 4.7 + 0.4 x rise 2.16 = 5.87 m (P95 6.1, max 6.6). Green metal roof (overview)."
+   }
+  },
+  "575894:549": {
+   "datum": {
+    "aboveY": 1.8
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 13.77,
+     "roof": "hip-tile",
+     "role": "main",
+     "slope": 0.302
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 575894 (groundY 1.8, P50 12.4, P95 14.0, max 15.8, pitched 16.8 deg); OpenStreetMap way 382075752 (https://www.openstreetmap.org/way/382075752, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) \"Kappa Kappa Gamma\", 2001 University Ave, height 13.3; NRHP nomination (THC) and https://www.hmdb.org/m.asp?m=266863 (three-story Georgian Revival brick, 1939, B. P. Briscoe; 1972 rear addition), fetched 2026-10-20",
+    "basis": "measured",
+    "note": "Three storeys; hip-tile ridge = tier 12.4 + 0.4 x rise 3.43 = 13.77 m at the measured 16.8 deg pitch (the real roof has a flat centre over the U plan, overview)."
+   }
+  },
+  "591878:622": {
+   "datum": {
+    "aboveY": 8.1
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 5.3,
+     "roof": "hip-shingle",
+     "role": "main",
+     "slope": 0.354
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 591878 (groundY 8.1, P50 4.5, P95 5.4, max 6.0, pitched 22.2 deg); OpenStreetMap way 236328112 (https://www.openstreetmap.org/way/236328112, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) 303 W Martin Luther King Jr Blvd",
+    "basis": "measured",
+    "note": "One storey, hip-shingle, ridge = tier 4.3 + 0.4 x rise 2.17 = 5.3 m."
+   }
+  },
+  "593634:654": {
+   "datum": {
+    "aboveY": 7.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 12.37,
+     "roof": "hip-shingle",
+     "role": "main",
+     "slope": 0.25
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 593634 (groundY 7.5, P50 11.4, P95 12.5, max 13.2, pitched 13.8 deg); OpenStreetMap way 236328120 (https://www.openstreetmap.org/way/236328120, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) 2000 Whitis Ave",
+    "basis": "measured",
+    "note": "Low-pitch (13.8 deg) roof: hip-shingle, ridge = tier 11.3 + 0.4 x rise 2.68 = 12.37 m."
+   }
+  },
+  "624573:795": {
+   "datum": {
+    "aboveY": 2.8
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 12.17,
+     "roof": "hip-shingle",
+     "role": "main",
+     "slope": 0.394,
+     "ring": [
+      [
+       -209.2,
+       350.7
+      ],
+      [
+       -208.7,
+       342.7
+      ],
+      [
+       -206.5,
+       340.4
+      ],
+      [
+       -199.5,
+       341.4
+      ],
+      [
+       -197.0,
+       339.9
+      ],
+      [
+       -196.2,
+       340.7
+      ],
+      [
+       -197.2,
+       348.2
+      ],
+      [
+       -196.0,
+       349.4
+      ],
+      [
+       -192.5,
+       349.4
+      ],
+      [
+       -191.7,
+       348.7
+      ],
+      [
+       -190.7,
+       340.7
+      ],
+      [
+       -191.2,
+       339.2
+      ],
+      [
+       -192.0,
+       338.4
+      ],
+      [
+       -196.0,
+       338.4
+      ],
+      [
+       -197.2,
+       337.2
+      ],
+      [
+       -197.2,
+       335.7
+      ],
+      [
+       -200.0,
+       332.9
+      ],
+      [
+       -200.5,
+       334.0
+      ],
+      [
+       -210.0,
+       333.4
+      ],
+      [
+       -210.5,
+       330.4
+      ],
+      [
+       -221.0,
+       330.1
+      ],
+      [
+       -222.2,
+       348.7
+      ],
+      [
+       -220.6,
+       349.1
+      ],
+      [
+       -220.5,
+       349.9
+      ]
+     ]
+    },
+    {
+     "bottom": 0,
+     "top": 8.65,
+     "roof": "hip-shingle",
+     "role": "main",
+     "slope": 0.394,
+     "ring": [
+      [
+       -188.7,
+       353.2
+      ],
+      [
+       -187.3,
+       333.1
+      ],
+      [
+       -200.1,
+       332.6
+      ],
+      [
+       -197.2,
+       335.7
+      ],
+      [
+       -197.2,
+       337.2
+      ],
+      [
+       -196.0,
+       338.4
+      ],
+      [
+       -192.0,
+       338.4
+      ],
+      [
+       -191.2,
+       339.2
+      ],
+      [
+       -190.7,
+       340.7
+      ],
+      [
+       -191.7,
+       348.7
+      ],
+      [
+       -192.5,
+       349.4
+      ],
+      [
+       -196.0,
+       349.4
+      ],
+      [
+       -197.2,
+       348.2
+      ],
+      [
+       -196.2,
+       340.7
+      ],
+      [
+       -197.0,
+       339.9
+      ],
+      [
+       -199.5,
+       341.4
+      ],
+      [
+       -206.5,
+       340.4
+      ],
+      [
+       -208.7,
+       342.7
+      ],
+      [
+       -209.2,
+       350.7
+      ],
+      [
+       -206.0,
+       351.9
+      ]
+     ]
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 624573 (groundY 2.8, P50 10.5, P95 12.3, max 13.7, pitched 21.5 deg); OpenStreetMap way 382075753 (https://www.openstreetmap.org/way/382075753, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) \"Texas Alpha Phi\", 2005 University Ave, height 13.5; research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b2-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "measured",
+    "note": "Two pitched tiers (21.5 deg), hip-shingle each, ridge = tier + 0.4 x rise: 11.0 m (394 m2) -> 12.17 m, 7.7 m (256 m2) -> 8.65 m. Grey shingle roof (overview)."
+   }
+  },
+  "652493:849": {
+   "datum": {
+    "aboveY": -0.1
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 16.64,
+     "roof": "hip-metal",
+     "role": "main",
+     "slope": 0.392
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 652493 (groundY -0.1, P50 15.0, P95 17.3, max 21.0, pitched 21.4 deg); OpenStreetMap way 382075765 (https://www.openstreetmap.org/way/382075765, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) \"University Avenue Church of Christ\", 1903 University Ave, height 21.3; research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b3-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "measured",
+    "note": "Hip-metal, ridge = tier 14.9 + 0.4 x rise 4.35 = 16.64 m, capped at LiDAR P95 17.3 (LiDAR max 21.0 = a small spire/plant, position not derived, not placed). Green metal roof (overview)."
+   }
+  },
+  "697424:1020": {
+   "datum": {
+    "aboveY": 7.0
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 3.9,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 697424 (groundY 7.0, P50 3.9, P95 4.1, max 4.2, pitched 12.8 deg)",
+    "basis": "measured",
+    "note": "Flat 3.9 m (LiDAR P50; P95 4.1). No OSM building on this ring in Oct 2026 - existence after 2017 not confirmed."
+   }
+  },
+  "697591:1022": {
+   "datum": {
+    "aboveY": -0.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 16.02,
+     "roof": "hip-metal",
+     "role": "main",
+     "slope": 0.344,
+     "ring": [
+      [
+       -212.7,
+       442.2
+      ],
+      [
+       -210.5,
+       439.4
+      ],
+      [
+       -196.9,
+       440.4
+      ],
+      [
+       -196.2,
+       425.7
+      ],
+      [
+       -194.9,
+       418.5
+      ],
+      [
+       -207.5,
+       417.5
+      ],
+      [
+       -209.2,
+       436.2
+      ],
+      [
+       -215.2,
+       435.7
+      ],
+      [
+       -215.7,
+       441.7
+      ],
+      [
+       -214.5,
+       442.4
+      ]
+     ]
+    },
+    {
+     "bottom": 0,
+     "top": 7.0,
+     "roof": "hip-metal",
+     "role": "main",
+     "slope": 0.344,
+     "ring": [
+      [
+       -198.7,
+       454.7
+      ],
+      [
+       -197.0,
+       440.4
+      ],
+      [
+       -210.5,
+       439.4
+      ],
+      [
+       -213.0,
+       442.4
+      ],
+      [
+       -215.7,
+       442.2
+      ],
+      [
+       -216.2,
+       447.7
+      ],
+      [
+       -215.5,
+       449.4
+      ],
+      [
+       -213.7,
+       449.7
+      ],
+      [
+       -213.7,
+       452.7
+      ],
+      [
+       -204.0,
+       453.4
+      ],
+      [
+       -203.5,
+       454.4
+      ]
+     ]
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 697591 (groundY -0.5, P50 13.7, P95 16.5, max 16.9, pitched 19.0 deg); OpenStreetMap way 382075751 (https://www.openstreetmap.org/way/382075751, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) \"Longhorns for Christ Campus Center\", 105 W 20th St, height 16.4; research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b2-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "measured",
+    "note": "Two pitched tiers (19 deg), hip-metal, ridge = tier + 0.4 x rise: 15.1 m (304 m2) -> 16.02 m, 6.0 m (229 m2) -> 7.0 m. Green metal roof (overview)."
+   }
+  },
+  "699919:1069": {
+   "datum": {
+    "aboveY": 3.8
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 11.2,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -296.88,
+       303.11
+      ],
+      [
+       -267.1,
+       305.74
+      ],
+      [
+       -268.52,
+       321.5
+      ],
+      [
+       -298.3,
+       318.87
+      ]
+     ],
+     "bottom": 0,
+     "top": 14.9,
+     "roof": "hip-shingle",
+     "role": "main",
+     "slope": 0.49
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 699919 (groundY 3.8, P50 11.6, P95 14.6, max 15.8, pitched 26.1 deg); LiDAR 4 m strip profile of the same raster (round 3); OpenStreetMap way 206424537 (https://www.openstreetmap.org/way/206424537, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) \"University Catholic Center\", 2010 University Ave; https://staustin.org/parishhistory (Catholic Student Center dedicated 1965); research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b1-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "measured",
+    "note": "Mixed roof: flat deck 11.2 m (strip medians Y 14.6-15.6 outside the band) over the whole plan + one hip-shingle band across the south part at the measured 26 deg pitch, ridge 14.9 m (Y 18.7 = band P90; strip P98 18.9-19.0), eave ~10.8 m meets the deck. Round 3 first fit (one hip over the plan, ridge 13.2 m) left a flat crown at P50 +1.19 m. City h 20.2 m was the gable/plant maximum."
+   }
+  },
+  "484112:83": {
+   "datum": {
+    "aboveY": 6.0
+   },
+   "volumes": [
+    {
+     "ring": [
+      [
+       -361.3,
+       327.7
+      ],
+      [
+       -359.2,
+       299.7
+      ],
+      [
+       -361.6,
+       299.4
+      ],
+      [
+       -361.3,
+       295.1
+      ],
+      [
+       -365.4,
+       294.7
+      ],
+      [
+       -365.1,
+       290.9
+      ],
+      [
+       -358.3,
+       291.2
+      ],
+      [
+       -357.2,
+       277.2
+      ],
+      [
+       -361.3,
+       272.1
+      ],
+      [
+       -397.6,
+       269.0
+      ],
+      [
+       -399.9,
+       275.5
+      ],
+      [
+       -407.1,
+       274.9
+      ],
+      [
+       -407.0,
+       268.4
+      ],
+      [
+       -435.0,
+       266.0
+      ],
+      [
+       -435.4,
+       267.1
+      ],
+      [
+       -439.6,
+       270.1
+      ],
+      [
+       -439.7,
+       273.2
+      ],
+      [
+       -438.5,
+       273.9
+      ],
+      [
+       -437.5,
+       272.9
+      ],
+      [
+       -436.0,
+       272.9
+      ],
+      [
+       -434.5,
+       274.4
+      ],
+      [
+       -430.5,
+       274.4
+      ],
+      [
+       -427.5,
+       275.4
+      ],
+      [
+       -427.0,
+       274.9
+      ],
+      [
+       -425.7,
+       276.2
+      ],
+      [
+       -425.2,
+       279.7
+      ],
+      [
+       -426.2,
+       281.2
+      ],
+      [
+       -426.7,
+       292.2
+      ],
+      [
+       -421.7,
+       295.7
+      ],
+      [
+       -422.7,
+       297.7
+      ],
+      [
+       -422.0,
+       298.4
+      ],
+      [
+       -420.0,
+       298.4
+      ],
+      [
+       -418.2,
+       300.2
+      ],
+      [
+       -418.7,
+       302.7
+      ],
+      [
+       -414.2,
+       305.2
+      ],
+      [
+       -414.7,
+       307.2
+      ],
+      [
+       -413.5,
+       308.4
+      ],
+      [
+       -409.0,
+       308.9
+      ],
+      [
+       -407.7,
+       308.2
+      ],
+      [
+       -412.7,
+       300.7
+      ],
+      [
+       -412.7,
+       299.2
+      ],
+      [
+       -407.5,
+       293.9
+      ],
+      [
+       -404.5,
+       293.4
+      ],
+      [
+       -399.5,
+       289.4
+      ],
+      [
+       -398.2,
+       288.2
+      ],
+      [
+       -397.7,
+       286.2
+      ],
+      [
+       -393.5,
+       282.4
+      ],
+      [
+       -391.5,
+       281.4
+      ],
+      [
+       -389.0,
+       281.9
+      ],
+      [
+       -384.7,
+       285.7
+      ],
+      [
+       -384.2,
+       289.2
+      ],
+      [
+       -380.7,
+       292.2
+      ],
+      [
+       -380.2,
+       294.2
+      ],
+      [
+       -378.0,
+       296.4
+      ],
+      [
+       -376.5,
+       296.4
+      ],
+      [
+       -373.7,
+       299.2
+      ],
+      [
+       -371.7,
+       302.7
+      ],
+      [
+       -371.7,
+       304.2
+      ],
+      [
+       -376.5,
+       309.4
+      ],
+      [
+       -379.5,
+       309.9
+      ],
+      [
+       -382.5,
+       311.9
+      ],
+      [
+       -386.7,
+       316.2
+      ],
+      [
+       -387.2,
+       318.2
+      ],
+      [
+       -391.7,
+       321.7
+      ],
+      [
+       -391.7,
+       322.7
+      ],
+      [
+       -389.5,
+       323.9
+      ],
+      [
+       -378.5,
+       324.9
+      ],
+      [
+       -374.5,
+       323.9
+      ],
+      [
+       -369.5,
+       323.9
+      ],
+      [
+       -367.5,
+       324.9
+      ],
+      [
+       -363.5,
+       324.4
+      ],
+      [
+       -362.2,
+       325.2
+      ],
+      [
+       -362.2,
+       326.7
+      ]
+     ],
+     "bottom": 0,
+     "top": 8.7,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -364.7,
+       335.2
+      ],
+      [
+       -364.5,
+       332.9
+      ],
+      [
+       -361.7,
+       333.2
+      ],
+      [
+       -361.3,
+       328.1
+      ],
+      [
+       -362.5,
+       324.9
+      ],
+      [
+       -367.5,
+       324.9
+      ],
+      [
+       -369.5,
+       323.9
+      ],
+      [
+       -374.5,
+       323.9
+      ],
+      [
+       -376.5,
+       324.9
+      ],
+      [
+       -389.5,
+       323.9
+      ],
+      [
+       -391.5,
+       322.9
+      ],
+      [
+       -392.0,
+       321.4
+      ],
+      [
+       -395.0,
+       321.9
+      ],
+      [
+       -399.2,
+       317.7
+      ],
+      [
+       -400.2,
+       314.2
+      ],
+      [
+       -407.0,
+       306.9
+      ],
+      [
+       -408.0,
+       306.9
+      ],
+      [
+       -407.7,
+       308.2
+      ],
+      [
+       -409.0,
+       308.9
+      ],
+      [
+       -413.5,
+       308.4
+      ],
+      [
+       -414.7,
+       307.2
+      ],
+      [
+       -414.2,
+       305.2
+      ],
+      [
+       -418.7,
+       302.7
+      ],
+      [
+       -418.2,
+       300.2
+      ],
+      [
+       -420.0,
+       298.4
+      ],
+      [
+       -422.0,
+       298.4
+      ],
+      [
+       -422.7,
+       297.7
+      ],
+      [
+       -421.7,
+       295.7
+      ],
+      [
+       -426.7,
+       292.2
+      ],
+      [
+       -426.2,
+       281.2
+      ],
+      [
+       -425.2,
+       279.7
+      ],
+      [
+       -425.7,
+       276.2
+      ],
+      [
+       -427.0,
+       274.9
+      ],
+      [
+       -427.5,
+       275.4
+      ],
+      [
+       -430.5,
+       274.4
+      ],
+      [
+       -434.5,
+       274.4
+      ],
+      [
+       -436.0,
+       272.9
+      ],
+      [
+       -440.0,
+       273.9
+      ],
+      [
+       -443.7,
+       318.7
+      ],
+      [
+       -446.7,
+       322.8
+      ],
+      [
+       -445.0,
+       326.4
+      ],
+      [
+       -442.6,
+       326.8
+      ],
+      [
+       -442.7,
+       329.2
+      ],
+      [
+       -405.9,
+       332.7
+      ]
+     ],
+     "bottom": 0,
+     "top": 13.1,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -392.7,
+       321.7
+      ],
+      [
+       -389.0,
+       318.9
+      ],
+      [
+       -388.0,
+       318.9
+      ],
+      [
+       -386.7,
+       316.2
+      ],
+      [
+       -382.5,
+       311.9
+      ],
+      [
+       -379.5,
+       309.9
+      ],
+      [
+       -376.5,
+       309.4
+      ],
+      [
+       -371.7,
+       304.2
+      ],
+      [
+       -371.7,
+       302.7
+      ],
+      [
+       -373.7,
+       299.2
+      ],
+      [
+       -376.5,
+       296.4
+      ],
+      [
+       -378.0,
+       296.4
+      ],
+      [
+       -380.2,
+       294.2
+      ],
+      [
+       -380.7,
+       292.2
+      ],
+      [
+       -384.2,
+       289.2
+      ],
+      [
+       -384.7,
+       285.7
+      ],
+      [
+       -390.0,
+       281.4
+      ],
+      [
+       -393.5,
+       282.4
+      ],
+      [
+       -397.7,
+       286.2
+      ],
+      [
+       -398.2,
+       288.2
+      ],
+      [
+       -399.5,
+       289.4
+      ],
+      [
+       -404.5,
+       293.4
+      ],
+      [
+       -407.5,
+       293.9
+      ],
+      [
+       -412.7,
+       299.2
+      ],
+      [
+       -412.7,
+       300.7
+      ],
+      [
+       -409.7,
+       305.2
+      ],
+      [
+       -408.0,
+       306.9
+      ],
+      [
+       -405.5,
+       307.9
+      ],
+      [
+       -400.2,
+       314.2
+      ],
+      [
+       -399.2,
+       317.7
+      ],
+      [
+       -395.0,
+       321.9
+      ]
+     ],
+     "bottom": 0,
+     "top": 83.0,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       -391.7,
+       309.7
+      ],
+      [
+       -390.7,
+       308.7
+      ],
+      [
+       -391.2,
+       306.7
+      ],
+      [
+       -388.0,
+       304.4
+      ],
+      [
+       -386.2,
+       302.7
+      ],
+      [
+       -386.2,
+       301.7
+      ],
+      [
+       -390.2,
+       296.7
+      ],
+      [
+       -390.2,
+       294.2
+      ],
+      [
+       -392.0,
+       293.4
+      ],
+      [
+       -393.5,
+       295.4
+      ],
+      [
+       -396.5,
+       297.4
+      ],
+      [
+       -398.2,
+       297.7
+      ],
+      [
+       -400.2,
+       300.7
+      ],
+      [
+       -400.2,
+       302.2
+      ],
+      [
+       -397.0,
+       305.9
+      ],
+      [
+       -395.0,
+       305.9
+      ],
+      [
+       -394.2,
+       306.7
+      ],
+      [
+       -393.5,
+       309.4
+      ]
+     ],
+     "bottom": 0,
+     "top": 91.2,
+     "roof": "flat",
+     "role": "mech"
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 484112 (groundY 6.0, P50 13.0, P95 83.8, max 93.9, mixed 20.8 deg); UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; derived/r3/ut-gis-b05.json) D21 (OBJECTID 756, 2021 Guadalupe St); OpenStreetMap way 42807636 (https://www.openstreetmap.org/way/42807636, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) building:levels 31, start_date 1972",
+    "basis": "measured",
+    "note": "Round 3 datum fix (round-1 residual +1.74 m from the generator grade): flat LiDAR tiers on aboveY = groundY: 8.7 m (2232 m2), 13.1 m (2025 m2), 83.0 m (895 m2), 91.2 m (121 m2)."
+   }
+  },
+  "653897:869": {
+   "datum": {
+    "aboveY": 9.8
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 31.4,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster sampled inside the City ring (0.6 m inset; research/whole-campus-92/b05-southmall/derived/r3/records-r3.json) + public/data/derived/roofs-lidar.json 653897 (groundY 9.8, P50 31.4, P95 33.1, max 35.7, flat 1.1 deg); UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; derived/r3/ut-gis-b05.json) HRC (OBJECTID 570)",
+    "basis": "measured",
+    "note": "Round 3 datum fix (round-1 residual +0.84 m): flat deck at the 31.4 m tier (3888 m2) above LiDAR groundY 9.8."
+   }
+  }
+ },
+ "catalog": {
+  "484112": {
+   "abbr": "D21",
+   "archetype": "b05-southmall:dobie-glass-tower",
+   "basis": "known",
+   "district": "core",
+   "note": "Dobie Twenty21 (2021 Guadalupe St; 1972 residence tower, renovated as Dobie Twenty21): blue-green reflective glass tower over a light painted-brick retail podium. Corrects the shared catalogue reading (modernist-dorm, pale precast) for the b05 fallback only; the shared catalogue is unchanged.",
+   "evidence": {
+    "source": "UT directory photo ut-d21-756-directory-photo.jpg (research/whole-campus-92/screenshot-dataset/online-photos; packet D08 photoReferences, sha256 83e1c249d21c85b0a3bccc09b574cdedabdde4ecd4a645274970009b60c7dad7; https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/D21/); https://housing.utexas.edu/housing/residence-halls/residence-hall-locations/dobie-twenty21 (official: 27-story complex; OSM building:levels 31 not used)",
+    "basis": "reference-interpreted",
+    "note": "Facade family and colours read from one photo (estimate); massing unchanged (measured b05 massing). Used only if the d21.ts install fails (fallback)."
+   }
+  },
+  "714471": {
+   "archetype": "cret-core",
+   "basis": "known",
+   "note": "Batts / Mezes / Benedict Halls (1951), South Mall east side, red tile roofs (\"six pack\")",
+   "evidence": {
+    "source": "https://barrypopik.com/blog/six_pack_ut_austin_campus_buildings (\"six red-roofed buildings, commonly referred to as the six pack\"); https://larryspeck.com/writing/the-heroic-decades/ (era idiom: limestone base, brick body, bracketed eaves, red tile roof), fetched 2026-10-20; ut-mez-553-directory-photo.jpg, ut-ben-559-directory-photo.jpg (packet D08 photoReferences)",
+    "basis": "reference-interpreted",
+    "note": "Era idiom; per-facade bay counts are not surveyed. b05 D08: walls are pale limestone ashlar in ut-mez-553 / ut-ben-559 (mall end elevations), so the wall family is overridden to limestone (colour photo-read); dormers, cornice band, entrances/balconies and the Benedict ridge ventilator are b05 install geometry (d08.ts)."
+   },
+   "overrides": {
+    "wallFamily": "limestone",
+    "wallColor": "#dcd1bc"
+   }
+  },
+  "732528": {
+   "archetype": "cret-core",
+   "basis": "known",
+   "note": "Parlin (1955), Calhoun (1967) and Rainey (1941, former Music Building) Halls, South Mall west side, red tile roofs (\"six pack\")",
+   "evidence": {
+    "source": "https://barrypopik.com/blog/six_pack_ut_austin_campus_buildings (\"six red-roofed buildings, commonly referred to as the six pack\"); https://larryspeck.com/writing/the-heroic-decades/ (Rainey = 1942 Music Building), fetched 2026-10-20",
+    "basis": "reference-interpreted",
+    "note": "One archetype for the three buildings (one source record); Calhoun is later but shares the tile roof."
+   }
+  },
+  "733879": {
+   "archetype": "modernist-lab",
+   "basis": "known",
+   "note": "CBA (1962, brick) + GSB (1976) McCombs School of Business",
+   "evidence": {
+    "source": "https://en.wikipedia.org/wiki/McCombs_School_of_Business (CBA \"brick facade\", fetched 2026-10-20)",
+    "basis": "reference-interpreted",
+    "note": "Facade rhythm not surveyed."
+   }
+  },
+  "-501": {
+   "archetype": "brutalist-precast",
+   "basis": "estimate",
+   "note": "University Teaching Center (1984), attached to PCL; facade family assumed from PCL, not surveyed",
+   "evidence": {
+    "source": "https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/UTC/ (fetched 2026-10-20)",
+    "basis": "estimate",
+    "note": "No facade reference reviewed for UTC."
+   }
+  },
+  "610756": {
+   "archetype": "b05-southmall:copper-church",
+   "basis": "estimate",
+   "note": "University Christian Church (modified Gothic, Cedar Park stone, copper roof); identity interpreted",
+   "overrides": {
+    "wallColor": "#d9cdb4"
+   },
+   "evidence": {
+    "source": "https://www.ucc-austin.org/ (search summary, fetched 2026-10-20)",
+    "basis": "reference-interpreted",
+    "note": "Not a UT building; no official polygon."
+   }
+  },
+  "485466": {
+   "archetype": "office-tower",
+   "basis": "known",
+   "note": "Cambridge Tower, 1801 Lavaca St (1965, Thomas Edward Stanley II; 15 floors apartments) - identity from OSM/Wikidata; gridded light facade and flat roof in the accepted overview",
+   "evidence": {
+    "source": "OpenStreetMap way 516187606 (https://www.openstreetmap.org/way/516187606, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) \"Cambridge Tower\", building:levels 15, height 55, start_date 1965, architect Thomas Edward Stanley II, wikidata Q18386271; research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-a3-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "reference-interpreted",
+    "note": "facade = office-tower archetype skin; no per-facade survey"
+   }
+  },
+  "463006": {
+   "archetype": "office-tower",
+   "basis": "estimate",
+   "note": "Greenwood Towers (1966, 8-storey condominium) + garage; tower archetype for the slab, garage archetype on the garage tier",
+   "evidence": {
+    "source": "OpenStreetMap way 236328113 (https://www.openstreetmap.org/way/236328113, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used); homes.com (fetched 2026-10-20)",
+    "basis": "reference-interpreted",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "466192": {
+   "archetype": "small-commercial",
+   "basis": "estimate",
+   "note": "1-storey building at 1802 Lavaca St (use not sourced)",
+   "evidence": {
+    "source": "OpenStreetMap way 381834125 (https://www.openstreetmap.org/way/381834125, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used)",
+    "basis": "reference-interpreted",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "506791": {
+   "archetype": "house",
+   "basis": "estimate",
+   "note": "Unidentified 1-storey pitched-roof building north of W 20th St at Guadalupe (no OSM building in 2026)",
+   "evidence": {
+    "source": "Overpass query 2026-10-20 (no building)",
+    "basis": "estimate",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "525167": {
+   "archetype": "apartment-lowrise",
+   "basis": "estimate",
+   "note": "Unnamed 2-storey pitched-roof building beside Peach Tree Apartments (1804 Lavaca)",
+   "evidence": {
+    "source": "OpenStreetMap way 236328115 (https://www.openstreetmap.org/way/236328115, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used)",
+    "basis": "estimate",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "526084": {
+   "archetype": "apartment-lowrise",
+   "basis": "known",
+   "note": "Peach Tree Apartments, 1804 Lavaca St",
+   "evidence": {
+    "source": "OpenStreetMap way 236328116 (https://www.openstreetmap.org/way/236328116, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used)",
+    "basis": "reference-interpreted",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "567838": {
+   "archetype": "b05-southmall:green-metal-canopy",
+   "basis": "estimate",
+   "note": "Green-roofed carport/shed on the University Ave parking lot (building=roof, height 4.5)",
+   "evidence": {
+    "source": "OpenStreetMap way 382075789 (https://www.openstreetmap.org/way/382075789, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used); research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b2-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "reference-interpreted",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "612018": {
+   "archetype": "b05-southmall:green-metal-canopy",
+   "basis": "estimate",
+   "note": "Green-roofed carport/shed on the University Ave parking lot (building=roof, height 4.4)",
+   "evidence": {
+    "source": "OpenStreetMap way 382075782 (https://www.openstreetmap.org/way/382075782, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used); research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b2-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "reference-interpreted",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "633606": {
+   "archetype": "b05-southmall:green-metal-canopy",
+   "basis": "estimate",
+   "note": "Green-roofed carport/shed on the University Ave parking lot (building=yes, height 4.3)",
+   "evidence": {
+    "source": "OpenStreetMap way 382075785 (https://www.openstreetmap.org/way/382075785, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used); research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b2-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "reference-interpreted",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "715514": {
+   "archetype": "b05-southmall:green-metal-canopy",
+   "basis": "estimate",
+   "note": "Small shed on the University Ave parking lot",
+   "evidence": {
+    "source": "OpenStreetMap way 382075788 (https://www.openstreetmap.org/way/382075788, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used)",
+    "basis": "estimate",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "716915": {
+   "archetype": "b05-southmall:green-metal-hall",
+   "basis": "estimate",
+   "note": "Small green-roofed building west of the Longhorns for Christ centre (OSM building, h 6.1)",
+   "evidence": {
+    "source": "OpenStreetMap way 382075762 (https://www.openstreetmap.org/way/382075762, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used)",
+    "basis": "estimate",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "575894": {
+   "archetype": "b05-southmall:georgian-house",
+   "basis": "known",
+   "note": "Kappa Kappa Gamma House (Birdsall P. Briscoe, 1939; NRHP, RTHL 1989)",
+   "evidence": {
+    "source": "THC NRHP nomination; hmdb.org marker 266863; research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b2-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "reference-interpreted",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "591878": {
+   "archetype": "house",
+   "basis": "estimate",
+   "note": "1-storey pitched-roof building at 303 W MLK Jr Blvd (use not sourced)",
+   "evidence": {
+    "source": "OpenStreetMap way 236328112 (https://www.openstreetmap.org/way/236328112, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used)",
+    "basis": "estimate",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "593634": {
+   "archetype": "apartment-lowrise",
+   "basis": "estimate",
+   "note": "3-storey building at 2000 Whitis Ave (use not sourced)",
+   "evidence": {
+    "source": "OpenStreetMap way 236328120 (https://www.openstreetmap.org/way/236328120, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used)",
+    "basis": "estimate",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "624573": {
+   "archetype": "b05-southmall:grey-shingle-house",
+   "basis": "known",
+   "note": "Texas Alpha Phi sorority house, 2005 University Ave",
+   "evidence": {
+    "source": "OpenStreetMap way 382075753 (https://www.openstreetmap.org/way/382075753, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used); research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b2-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "reference-interpreted",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "652493": {
+   "archetype": "b05-southmall:green-metal-hall",
+   "basis": "known",
+   "note": "University Avenue Church of Christ, 1903 University Ave (building photographed 1949)",
+   "evidence": {
+    "source": "OpenStreetMap way 382075765 (https://www.openstreetmap.org/way/382075765, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used); https://texashistory.unt.edu/ark:/67531/metapth62865/ ; research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b3-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "reference-interpreted",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "697591": {
+   "archetype": "b05-southmall:green-metal-hall",
+   "basis": "known",
+   "note": "Longhorns for Christ Campus Center (University Avenue Church of Christ ministry), 105 W 20th St",
+   "evidence": {
+    "source": "OpenStreetMap way 382075751 (https://www.openstreetmap.org/way/382075751, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used); https://uachurch.org/ (fetched 2026-10-20)",
+    "basis": "reference-interpreted",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "699919": {
+   "archetype": "b05-southmall:midcentury-ministry",
+   "basis": "known",
+   "note": "University Catholic Center (1965), stucco + stone; flat north part with plant, grey hipped south part",
+   "evidence": {
+    "source": "designdecadence.blogspot.com 2012-04 (secondary); staustin.org; research-only accepted overview research/whole-campus-92/screenshot-dataset/captures/b05-r0-b1-overview.jpg (Codex review 2026-10-20, geographic-overview-only; roof colour/arrangement interpretation, no dimensions)",
+    "basis": "reference-interpreted",
+    "note": "facade = archetype skin; no per-facade survey"
+   }
+  },
+  "615315": {
+   "archetype": "shed",
+   "basis": "known",
+   "note": "Piney Woods Portal: stair/elevator portal of the Capitol Mall underground garage (Texas Facilities Commission, opened 2023); post-2017 so no LiDAR; City h 5.6 m",
+   "evidence": {
+    "source": "OpenStreetMap way 1049156805 (https://www.openstreetmap.org/way/1049156805, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) \"Piney Woods Portal\", building:levels 1, levels underground 5; https://phase1.tfc-ccp.org/virtual-construction-tour/stop-6-underground-parking-garage-texas-capitol-mall/ (portals \"pop up along the mall\", fetched 2026-10-20)",
+    "basis": "reference-interpreted",
+    "note": "height = City 2023 h (no LiDAR: built after 2017); portal glazing/stone not modelled"
+   }
+  },
+  "505680": {
+   "abbr": "ATT",
+   "archetype": "b05-southmall:att-conference",
+   "basis": "known",
+   "district": "core",
+   "note": "AT&T Executive Education & Conference Center (2008); b05 D09 archetype from the UT directory photo",
+   "evidence": {
+    "source": "ut-att-551-directory-photo.jpg (research/whole-campus-92/screenshot-dataset/online-photos; packet D09 photoReferences); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/ATT/",
+    "basis": "reference-interpreted",
+    "note": "Facade family/colour and eave depth read from one photo; massing and heights unchanged (measured b05 massing)."
+   }
+  }
+ },
+ "footprints": {
+  "652349": {
+   "rings": [
+    [
+     [
+      -123.09,
+      299.95
+     ],
+     [
+      -123.84,
+      313.3
+     ],
+     [
+      -126.24,
+      345.55
+     ],
+     [
+      -142.87,
+      344.31
+     ],
+     [
+      -147.55,
+      374.94
+     ],
+     [
+      -148.82,
+      390.29
+     ],
+     [
+      -147.34,
+      390.42
+     ],
+     [
+      -146.94,
+      385.62
+     ],
+     [
+      -146.48,
+      385.66
+     ],
+     [
+      -146.8,
+      389.49
+     ],
+     [
+      -128.21,
+      411.66
+     ],
+     [
+      -103.27,
+      413.73
+     ],
+     [
+      -105.6,
+      441.87
+     ],
+     [
+      -104.18,
+      441.99
+     ],
+     [
+      -103.77,
+      437.02
+     ],
+     [
+      -103.34,
+      437.05
+     ],
+     [
+      -103.49,
+      438.95
+     ],
+     [
+      -55.1,
+      397.23
+     ],
+     [
+      -54.88,
+      394.59
+     ],
+     [
+      -53.35,
+      394.71
+     ],
+     [
+      -53.67,
+      398.52
+     ],
+     [
+      -52.46,
+      398.62
+     ],
+     [
+      -47.52,
+      338.96
+     ],
+     [
+      -48.75,
+      338.86
+     ],
+     [
+      -49.23,
+      344.57
+     ],
+     [
+      -78.51,
+      342.14
+     ],
+     [
+      -78.38,
+      340.52
+     ],
+     [
+      -85.87,
+      339.9
+     ],
+     [
+      -121.17,
+      298.87
+     ],
+     [
+      -121.33,
+      300.74
+     ],
+     [
+      -122.04,
+      300.68
+     ],
+     [
+      -121.43,
+      293.26
+     ],
+     [
+      -122.52,
+      293.17
+     ]
+    ]
+   ],
+   "evidence": {
+    "source": "campus.json City 2023 ring 652349 (whose outer ring matches the LiDAR 26.2 m tier outline within ~0.5 m) split at its courtyard and along official UT polygon 558 PCL / 426 UTC shared edge (research/raw/ut-official-buildings.geojson); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PCL/ (7 floors, 1977), https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/UTC/ (6 floors, 1984), fetched 2026-10-20",
+    "basis": "official",
+    "note": "The City ring was PCL + UTC + their shared light court (hole). PCL keeps the City vertices on its four authored faces; the west boundary follows the court and the official PCL/UTC edge (-142.9,344.3)-(-147.6,374.9)."
+   }
+  }
+ },
+ "add": [
+  {
+   "id": -501,
+   "name": "UNIVERSITY TEACHING CENTER",
+   "abbr": "UTC",
+   "h": 26.2,
+   "rings": [
+    [
+     [
+      -123.09,
+      299.95
+     ],
+     [
+      -125.01,
+      299.44
+     ],
+     [
+      -129.24,
+      294.53
+     ],
+     [
+      -138.5,
+      293.78
+     ],
+     [
+      -138.39,
+      292.41
+     ],
+     [
+      -148.38,
+      291.6
+     ],
+     [
+      -148.53,
+      293.5
+     ],
+     [
+      -176.1,
+      291.28
+     ],
+     [
+      -176.5,
+      296.21
+     ],
+     [
+      -175.55,
+      295.74
+     ],
+     [
+      -176.0,
+      301.34
+     ],
+     [
+      -176.82,
+      301.82
+     ],
+     [
+      -178.27,
+      319.85
+     ],
+     [
+      -177.5,
+      320.48
+     ],
+     [
+      -177.76,
+      323.7
+     ],
+     [
+      -178.53,
+      323.08
+     ],
+     [
+      -179.11,
+      330.29
+     ],
+     [
+      -178.35,
+      329.71
+     ],
+     [
+      -178.62,
+      333.01
+     ],
+     [
+      -179.47,
+      333.58
+     ],
+     [
+      -181.2,
+      355.18
+     ],
+     [
+      -180.36,
+      355.66
+     ],
+     [
+      -180.6,
+      358.66
+     ],
+     [
+      -181.18,
+      358.2
+     ],
+     [
+      -182.1,
+      369.65
+     ],
+     [
+      -171.2,
+      370.52
+     ],
+     [
+      -155.83,
+      387.73
+     ],
+     [
+      -152.86,
+      385.31
+     ],
+     [
+      -152.27,
+      374.56
+     ],
+     [
+      -147.55,
+      374.94
+     ],
+     [
+      -142.87,
+      344.31
+     ],
+     [
+      -142.42,
+      338.2
+     ],
+     [
+      -143.64,
+      338.11
+     ],
+     [
+      -143.36,
+      334.68
+     ],
+     [
+      -140.9,
+      333.88
+     ],
+     [
+      -140.26,
+      326.0
+     ],
+     [
+      -123.84,
+      313.3
+     ]
+    ]
+   ],
+   "evidence": {
+    "source": "City ring 652349 west part + official UT polygon 426 UTC; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/UTC/ (University Teaching Center, 6 floors, 1984; \"adjacent to the Perry-Castaneda Library\", https://en.wikipedia.org/wiki/Perry%E2%80%93Casta%C3%B1eda_Library), fetched 2026-10-20",
+    "basis": "official",
+    "note": "UTC was missing from the scene: it was part of the PCL City record, which is suppressed as authored, and the authored PCL package only skins the four east faces."
+   }
+  }
+ ],
+ "archetypes": {
+  "b05-southmall:dobie-glass-tower": {
+   "label": "Dobie Twenty21: reflective blue-green glass residence tower with dark floor bands over a light painted-brick retail podium",
+   "era": "1970s (renovated)",
+   "wall": "metal",
+   "wallColor": "#24302f",
+   "ground": "buffBrick",
+   "groundColor": "#e7e3da",
+   "base": "buffBrick",
+   "baseColor": "#dcd8cf",
+   "baseHeight": 0.6,
+   "trim": "metal",
+   "trimColor": "#1e2a2b",
+   "roof": "flat",
+   "roofColor": "#bdbab3",
+   "roofSlope": 0,
+   "overhang": 0,
+   "brackets": false,
+   "parapet": 0.6,
+   "cornice": 0,
+   "belt": false,
+   "floor": 2.96,
+   "groundFloor": 4.5,
+   "storefront": true,
+   "window": {
+    "bay": 1.6,
+    "width": 1.5,
+    "sill": 0.05,
+    "head": 1.95,
+    "mullions": 0,
+    "transom": false,
+    "type": "ribbon",
+    "frame": "dark"
+   },
+   "groundWindow": {
+    "bay": 4.5,
+    "width": 3.4,
+    "sill": 0.35,
+    "head": 3.75,
+    "mullions": 2,
+    "transom": false,
+    "type": "glazed",
+    "frame": "dark"
+   },
+   "door": {
+    "width": 2.4,
+    "height": 3
+   },
+   "reference": "ut-d21-756-directory-photo.jpg (packet D08): blue-green reflective glass tower with dark horizontal bands and stepped vertical bays, a dark level above the podium, light painted-brick podium with storefronts. Colours photo-read; floor 2.96 m from 27 official storeys over the measured tiers is an estimate, not a survey. Fallback only (the d21.ts install replaces the record)."
+  },
+  "b05-southmall:copper-church": {
+   "label": "Stone church with copper roof",
+   "era": "1920s",
+   "wall": "limestone",
+   "wallColor": "#d8ccb0",
+   "ground": "limestone",
+   "groundColor": "#dccfb6",
+   "base": "limestone",
+   "baseColor": "#d5c8ae",
+   "baseHeight": 1.2,
+   "trim": "limestone",
+   "trimColor": "#e8decb",
+   "roof": "hip-metal",
+   "roofColor": "#6f9a86",
+   "roofSlope": 0.53,
+   "overhang": 0.4,
+   "brackets": false,
+   "parapet": 0,
+   "cornice": 0.7,
+   "belt": true,
+   "floor": 4.4,
+   "groundFloor": 5,
+   "window": {
+    "bay": 3.4,
+    "width": 1.3,
+    "sill": 1,
+    "head": 3.3,
+    "mullions": 1,
+    "transom": true,
+    "type": "punched",
+    "frame": "bronze"
+   },
+   "groundWindow": {
+    "bay": 3.4,
+    "width": 1.5,
+    "sill": 1,
+    "head": 3.8,
+    "mullions": 1,
+    "transom": true,
+    "type": "punched",
+    "frame": "bronze"
+   },
+   "door": {
+    "width": 2.4,
+    "height": 3.2
+   },
+   "reference": "University Christian Church, 2007 University Ave: Cedar Park stone, Cordova cream limestone trim, copper roof and trim (https://www.ucc-austin.org/, fetched 2026-10-20); copper weathered green in live-reference/southwest-business-church-photo-only.jpg"
+  },
+  "b05-southmall:georgian-house": {
+   "label": "Georgian Revival brick house (sorority, 1939)",
+   "era": "1930s",
+   "wall": "brownBrick",
+   "wallColor": "#a86a50",
+   "ground": "brownBrick",
+   "groundColor": "#b99d80",
+   "base": "limestone",
+   "baseColor": "#e3dccb",
+   "baseHeight": 0.3,
+   "trim": "limestone",
+   "trimColor": "#efe9dc",
+   "roof": "hip-tile",
+   "roofColor": "#a5483a",
+   "roofSlope": 0.3,
+   "overhang": 0.6,
+   "brackets": false,
+   "parapet": 0,
+   "cornice": 0.5,
+   "belt": false,
+   "floor": 3.6,
+   "groundFloor": 4.2,
+   "window": {
+    "bay": 3.2,
+    "width": 1.2,
+    "sill": 0.8,
+    "head": 2.75,
+    "mullions": 1,
+    "transom": false,
+    "type": "punched",
+    "frame": "light"
+   },
+   "groundWindow": {
+    "bay": 3.2,
+    "width": 1.3,
+    "sill": 0.8,
+    "head": 3.1,
+    "mullions": 1,
+    "transom": true,
+    "type": "punched",
+    "frame": "light"
+   },
+   "door": {
+    "width": 0.95,
+    "height": 2.1
+   },
+   "reference": "Kappa Kappa Gamma House, 2001 University Ave (Birdsall P. Briscoe, 1939): three-story Georgian Revival brick house, double-height Ionic portico, U plan closed by a 1972 rear addition (NRHP nomination https://www.thc.texas.gov/public/upload/preserve/national_register/final/TX_Travis%20County_Kappa%20Kappa%20Gamma%20House.pdf ; https://www.hmdb.org/m.asp?m=266863, fetched 2026-10-20); red tile hip roof in screenshot-dataset b05-r0-b2-overview (accepted). Brick colour estimate; portico not modelled."
+  },
+  "b05-southmall:grey-shingle-house": {
+   "label": "Brick house with grey shingle hip roof (sorority)",
+   "era": "1960s-1980s",
+   "wall": "brownBrick",
+   "wallColor": "#b99d80",
+   "ground": "brownBrick",
+   "groundColor": "#b99d80",
+   "base": "precast",
+   "baseColor": "#bfb8aa",
+   "baseHeight": 0.3,
+   "trim": "stucco",
+   "trimColor": "#e6e0d4",
+   "roof": "hip-shingle",
+   "roofColor": "#6e6f6c",
+   "roofSlope": 0.33,
+   "overhang": 0.6,
+   "brackets": false,
+   "parapet": 0,
+   "cornice": 0,
+   "belt": false,
+   "floor": 3.06,
+   "groundFloor": 3.06,
+   "window": {
+    "bay": 3.4,
+    "width": 1.5,
+    "sill": 0.9,
+    "head": 2.1,
+    "mullions": 1,
+    "transom": false,
+    "type": "punched",
+    "frame": "light"
+   },
+   "groundWindow": {
+    "bay": 3.4,
+    "width": 1.5,
+    "sill": 0.9,
+    "head": 2.1,
+    "mullions": 1,
+    "transom": false,
+    "type": "punched",
+    "frame": "light"
+   },
+   "door": {
+    "width": 0.95,
+    "height": 2.1
+   },
+   "reference": "Texas Alpha Phi, 2005 University Ave (OSM way 382075753): grey hipped roof in screenshot-dataset b05-r0-b2-overview (accepted). Wall material not sourced (district brick default)."
+  },
+  "b05-southmall:green-metal-hall": {
+   "label": "Church/campus-ministry hall with green standing-seam metal hip roof",
+   "era": "1950s-60s",
+   "wall": "buffBrick",
+   "wallColor": "#d4bb96",
+   "ground": "limestone",
+   "groundColor": "#e0d3b8",
+   "base": "limestone",
+   "baseColor": "#ddd0b5",
+   "baseHeight": 1,
+   "trim": "limestone",
+   "trimColor": "#e4d8c0",
+   "roof": "hip-metal",
+   "roofColor": "#3f8a80",
+   "roofSlope": 0.4,
+   "overhang": 0.9,
+   "brackets": false,
+   "parapet": 0,
+   "cornice": 0.35,
+   "belt": true,
+   "floor": 4.2,
+   "groundFloor": 4.8,
+   "sunshades": true,
+   "window": {
+    "bay": 3.2,
+    "width": 1.9,
+    "sill": 0.85,
+    "head": 3,
+    "mullions": 2,
+    "transom": true,
+    "type": "punched",
+    "frame": "dark"
+   },
+   "groundWindow": {
+    "bay": 3.2,
+    "width": 2.2,
+    "sill": 0.5,
+    "head": 3.8,
+    "mullions": 2,
+    "transom": true,
+    "type": "glazed",
+    "frame": "dark"
+   },
+   "door": {
+    "width": 2.4,
+    "height": 3
+   },
+   "reference": "University Avenue Church of Christ (1903 University Ave, OSM way 382075765; building photographed 1949: https://texashistory.unt.edu/ark:/67531/metapth62865/) and Longhorns for Christ Campus Center (105 W 20th St, OSM way 382075751): teal-green metal hip roofs in screenshot-dataset b05-r0-b2/b3-overview (accepted). Walls: district buff brick (estimate)."
+  },
+  "b05-southmall:green-metal-canopy": {
+   "label": "Carport / service shed with green metal roof",
+   "era": "various",
+   "wall": "metal",
+   "wallColor": "#c3c4c2",
+   "ground": "metal",
+   "groundColor": "#c3c4c2",
+   "base": "precast",
+   "baseColor": "#bdb7aa",
+   "baseHeight": 0.2,
+   "trim": "metal",
+   "trimColor": "#b9bbba",
+   "roof": "hip-metal",
+   "roofColor": "#3f8a80",
+   "roofSlope": 0,
+   "overhang": 0,
+   "brackets": false,
+   "parapet": 0.3,
+   "cornice": 0,
+   "belt": false,
+   "floor": 3.5,
+   "groundFloor": 3.5,
+   "window": {
+    "bay": 4,
+    "width": 0,
+    "sill": 0,
+    "head": 0,
+    "mullions": 0,
+    "transom": false,
+    "type": "none",
+    "frame": "dark"
+   },
+   "groundWindow": {
+    "bay": 4,
+    "width": 0,
+    "sill": 0,
+    "head": 0,
+    "mullions": 0,
+    "transom": false,
+    "type": "none",
+    "frame": "dark"
+   },
+   "door": {
+    "width": 1,
+    "height": 2.2
+   },
+   "reference": "Small structures along the University Ave parking lot east of the Longhorns for Christ centre (OSM building=roof / building=yes, heights 4.3-6.1): green metal roofs in screenshot-dataset b05-r0-b2-overview (accepted). OSM building=roof means open-sided; modelled closed (generator has no open canopy)."
+  },
+  "b05-southmall:midcentury-ministry": {
+   "label": "1960s campus ministry centre, stucco and stone, grey hip roof",
+   "era": "1960s",
+   "wall": "stucco",
+   "wallColor": "#e2dccd",
+   "ground": "limestone",
+   "groundColor": "#dccfb6",
+   "base": "limestone",
+   "baseColor": "#cfc3a8",
+   "baseHeight": 1.2,
+   "trim": "limestone",
+   "trimColor": "#e8decb",
+   "roof": "hip-shingle",
+   "roofColor": "#6d6a66",
+   "roofSlope": 0.49,
+   "overhang": 0.5,
+   "brackets": false,
+   "parapet": 0,
+   "cornice": 0.7,
+   "belt": true,
+   "floor": 4.4,
+   "groundFloor": 5,
+   "window": {
+    "bay": 3.4,
+    "width": 1.3,
+    "sill": 1,
+    "head": 3.3,
+    "mullions": 1,
+    "transom": true,
+    "type": "punched",
+    "frame": "bronze"
+   },
+   "groundWindow": {
+    "bay": 3.4,
+    "width": 1.5,
+    "sill": 1,
+    "head": 3.8,
+    "mullions": 1,
+    "transom": true,
+    "type": "punched",
+    "frame": "bronze"
+   },
+   "door": {
+    "width": 2.4,
+    "height": 3.2
+   },
+   "reference": "University Catholic Center, 2010 University Ave (dedicated 1965: https://staustin.org/parishhistory): \"rectangular shaped building ... symmetrical windows on all sides ... half-stucco and half-stone\" (http://designdecadence.blogspot.com/2012/04/places-of-worship-around-ut.html, fetched 2026-10-20); grey hipped roof in screenshot-dataset b05-r0-b1-overview (accepted)."
+  },
+  "b05-southmall:att-conference": {
+   "label": "AT&T Executive Education & Conference Center (Lake|Flato with HKS, 2008)",
+   "era": "2000s",
+   "wall": "brownBrick",
+   "wallColor": "#b98462",
+   "ground": "limestone",
+   "groundColor": "#ddd1b8",
+   "base": "limestone",
+   "baseColor": "#d8cbb1",
+   "baseHeight": 1.2,
+   "trim": "limestone",
+   "trimColor": "#e2d6bf",
+   "roof": "hip-tile",
+   "roofColor": "#ad583b",
+   "roofSlope": 0.456,
+   "overhang": 1.4,
+   "brackets": false,
+   "parapet": 0,
+   "cornice": 0.3,
+   "belt": true,
+   "floor": 3.5,
+   "groundFloor": 4.8,
+   "window": {
+    "bay": 3.0,
+    "width": 1.5,
+    "sill": 0.75,
+    "head": 2.75,
+    "mullions": 1,
+    "transom": false,
+    "type": "punched",
+    "frame": "dark",
+    "surround": true
+   },
+   "groundWindow": {
+    "bay": 3.0,
+    "width": 2.2,
+    "sill": 0.45,
+    "head": 3.6,
+    "mullions": 2,
+    "transom": true,
+    "type": "glazed",
+    "frame": "dark"
+   },
+   "door": {
+    "width": 2.4,
+    "height": 3.0
+   },
+   "reference": "ut-att-551-directory-photo.jpg (packet D09): warm orange-tan brick body over a pale limestone base, regular paired punched windows on 3.4-3.5 m floors, deep tile eaves without heavy brackets, steel trellis + balconies at the top corner pavilion (d09.ts). Colours photo-read (estimate)."
+  }
+ },
+ "exclude": {
+  "718615:1179": {
+   "source": "https://www.dallasnews.com/business/real-estate/2024/06/12/425-million-expansion-at-ut-mccombs-school-of-business-in-austin-moves-ahead/ (UT to demolish Dobie Garage at Whitis Ave and 20th St for the 17-storey Mulva Hall); https://mulvahall.mccombs.utexas.edu/mulva-hall-news/gallery/ (construction gallery); UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; derived/r3/ut-gis-b05.json) Z26 \"102-1422 CAM: RED MCCOMBS SCHOOL OF BUSINESS NEW BUILDING\" Status Future covers 88% of the City ring; OpenStreetMap way 1315431488 (https://www.openstreetmap.org/way/1315431488, Overpass query 2026-10-20, OSM base 2026-10-20T22:07Z, ODbL; identity/tags only, geometry not used) landuse=construction \"Miriam and James J. Mulva Hall\", opening_date 2028 (all fetched 2026-10-20)",
+   "basis": "reference-interpreted",
+   "note": "Dobie Garage (2017 LiDAR: flat 17.7 m deck, 3218 m2) was demolished June-Oct 2024; Mulva Hall (17 storeys, opening fall 2028) is under construction. The building under construction is not modelled (no final massing source for Oct 2026 progress); the lot is left as open ground."
+  }
+ },
+ "replaces": {
+  "484112:83": {
+   "source": "UT directory photo ut-d21-756-directory-photo.jpg (research/whole-campus-92/screenshot-dataset/online-photos; packet D08 photoReferences, sha256 83e1c249d21c85b0a3bccc09b574cdedabdde4ecd4a645274970009b60c7dad7; https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/D21/); https://housing.utexas.edu/housing/residence-halls/residence-hall-locations/dobie-twenty21 (official: 27-story complex; OSM building:levels 31 not used); City 2023 footprint 484112 (campus.json record 83); public/data/derived/roofs-lidar.json 484112 tiers 8.7 / 13.1 / 83.0 / 91.2 m above groundY 6.0 (= massing['484112:83'], unchanged)",
+   "basis": "reference-interpreted",
+   "note": "b05 D08 install (d21.ts buildDobie): podium base on the exact City ring at the measured 8.7 m tier (campus Y 14.7), tier B ring to Y 19.1, tower on the exact measured stepped 83.0 m tier ring (Y 89.0, its facets are the bays) with a glass / dark-band curtain wall, mechanical tier ring to Y 97.2. Rings and heights are the measured ones, unchanged. Colours, the ~3 m band rhythm (27 official storeys support it; storey heights not surveyed), the dark base/crown bands and the storefronts are estimates. Signage, stair and grid cube not modelled. The massing entry stays as the generated fallback."
+  },
+  "653897:869": {
+   "source": "UT directory photo ut-hrc-570-directory-photo.jpg (research/whole-campus-92/screenshot-dataset/online-photos; packet D08 photoReferences); City 2023 footprint 653897 (campus.json record 869); public/data/derived/roofs-lidar.json 653897 (groundY 9.8, flat tier 31.4 m) and r3-lidar.json (P50 41.15)",
+   "basis": "reference-interpreted",
+   "note": "b05 D08 install (d08.ts buildHrc): pier colonnade on the GIS line, glazed ground storey 4.2 m behind it, paired slot windows, projecting cornice + parapet, deck at the measured campus Y 41.2. Storey count, module and unseen north/west elevations are estimates. The massing entry stays as the generated fallback."
+  },
+  "568540:484": {
+   "source": "Blanton photos ut-bma-456-campus-10.webp, ut-bma-456-campus-11.webp, ut-bms-455-campus-12.webp (packet D10 photoReferences); City 2023 footprint 568540 (record 484); roofs-lidar.json 568540 (groundY -4.6, pitch 26.4 deg, tiers 16.6/21.9 m); mapped footways 129347372 / 461228771 under the plaza edge",
+   "basis": "reference-interpreted",
+   "note": "b05 D10 install (d10.ts buildHall BMA): limestone body, 11.5 m deep plaza loggia behind round-arched arcade (open at both ends), two upper floors, exact-facet hipped tile roof at the measured pitch, wall line Y 11.4, crown 19.3 (calibrated to the LiDAR tier median), 2.2 m timber soffit. Unseen east/north elevations repeat the idiom (estimate). Massing entry stays as fallback."
+  },
+  "592266:632": {
+   "source": "Blanton photos ut-bms-455-campus-12.webp (plaza facade), ut-bma-456-campus-10.webp; City 2023 footprint 592266 (record 632); roofs-lidar.json 592266 (groundY -4.0, pitch 26.3 deg, tiers 14.9/17.5/21.5 m); mapped footways 1528925722 / 1199982735 under the plaza edge",
+   "basis": "reference-interpreted",
+   "note": "b05 D10 install (d10.ts buildHall BMS): 4.5 m plaza loggia on round columns, X-panels between upper floors, pilasters and capitals, gold-framed check-in portal (bay position estimated), exact-facet hipped tile roof, wall line Y 9.6, crown 18.6. Unseen west/north elevations repeat the idiom (estimate). Massing entry stays as fallback."
+  }
+ }
+}

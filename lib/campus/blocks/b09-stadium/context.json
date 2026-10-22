@@ -1,0 +1,2969 @@
+{
+ "block": "b09-stadium",
+ "footprints": {
+  "504014:177": {
+   "rings": [
+    [
+     [
+      483.48,
+      390.16
+     ],
+     [
+      483.66,
+      388.54
+     ],
+     [
+      478.67,
+      388.1
+     ],
+     [
+      396.99,
+      380.86
+     ],
+     [
+      392.97,
+      380.52
+     ],
+     [
+      392.68,
+      380.49
+     ],
+     [
+      392.41,
+      380.47
+     ],
+     [
+      392.08,
+      380.44
+     ],
+     [
+      391.79,
+      380.42
+     ],
+     [
+      391.46,
+      380.39
+     ],
+     [
+      391.16,
+      380.36
+     ],
+     [
+      390.88,
+      380.34
+     ],
+     [
+      390.59,
+      380.32
+     ],
+     [
+      390.27,
+      380.29
+     ],
+     [
+      389.99,
+      380.26
+     ],
+     [
+      384.6,
+      379.77
+     ],
+     [
+      384.43,
+      381.35
+     ],
+     [
+      381.28,
+      384.02
+     ],
+     [
+      373.68,
+      383.32
+     ],
+     [
+      371.07,
+      380.25
+     ],
+     [
+      372.16,
+      372.91
+     ],
+     [
+      375.29,
+      370.27
+     ],
+     [
+      378.49,
+      370.49
+     ],
+     [
+      378.72,
+      367.91
+     ],
+     [
+      362.52,
+      339.72
+     ],
+     [
+      397.03,
+      342.54
+     ],
+     [
+      397.94,
+      332.36
+     ],
+     [
+      477.21,
+      338.94
+     ],
+     [
+      476.32,
+      348.79
+     ],
+     [
+      513.22,
+      352.03
+     ],
+     [
+      512.67,
+      352.7
+     ],
+     [
+      512.58,
+      352.81
+     ],
+     [
+      510.75,
+      355.04
+     ],
+     [
+      510.66,
+      355.16
+     ],
+     [
+      491.85,
+      378.12
+     ],
+     [
+      491.75,
+      380.33
+     ],
+     [
+      494.98,
+      380.46
+     ],
+     [
+      497.67,
+      383.84
+     ],
+     [
+      496.93,
+      391.29
+     ],
+     [
+      496.78,
+      391.42
+     ],
+     [
+      493.9,
+      393.93
+     ],
+     [
+      486.24,
+      393.26
+     ],
+     [
+      483.48,
+      390.16
+     ]
+    ]
+   ],
+   "evidence": {
+    "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json) object 642 SEZ South End Zone (last edited 2025-08-05); https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/SEZ/ (fetched 2026-10-20, sources/ut-pages/SEZ.html) (9 floors, 111,900 GSF, UT building since 2021); https://en.wikipedia.org/wiki/Darrell_K_Royal%E2%80%93Texas_Memorial_Stadium (2019-2021 south end zone closure); https://www.henselphelps.com/project/darrell-k-royal-texas-memorial-stadium-south-end-zone-addition/ (Populous, completed July 2021, 'updates to the nearby Moncrief-Neuhaus Athletic Center')",
+    "basis": "official",
+    "note": "City 2023 record 504014 is a UNION of the 2021 South End Zone (UT 642, 97% inside) and the 1986 Moncrief-Neuhaus Athletic Center (UT 560, 97% inside). The generated bowl extends its stands to the footprint edge, so the south stand ran over MNC to z~425 with a 46.8 m rim. The SEZ ring stops the bowl at the real SEZ south facade (z~394); MNC is added as its own building (-901)."
+   }
+  }
+ },
+ "add": [
+  {
+   "id": -901,
+   "name": "MONCRIEF-NEUHAUS ATHLETIC CENTER",
+   "abbr": "MNC",
+   "h": 6.0,
+   "rings": [
+    [
+     [
+      396.99,
+      380.86
+     ],
+     [
+      478.67,
+      388.1
+     ],
+     [
+      479.38,
+      394.67
+     ],
+     [
+      478.18,
+      407.92
+     ],
+     [
+      477.82,
+      411.94
+     ],
+     [
+      471.01,
+      411.43
+     ],
+     [
+      470.85,
+      411.42
+     ],
+     [
+      469.73,
+      411.34
+     ],
+     [
+      468.52,
+      425.45
+     ],
+     [
+      457.8,
+      424.48
+     ],
+     [
+      458.26,
+      419.04
+     ],
+     [
+      457.39,
+      418.98
+     ],
+     [
+      457.18,
+      418.96
+     ],
+     [
+      404.67,
+      414.48
+     ],
+     [
+      404.44,
+      414.46
+     ],
+     [
+      403.44,
+      414.37
+     ],
+     [
+      402.81,
+      420.02
+     ],
+     [
+      394.5,
+      419.33
+     ],
+     [
+      392.76,
+      419.19
+     ],
+     [
+      395.6,
+      388.28
+     ],
+     [
+      395.63,
+      387.91
+     ],
+     [
+      395.92,
+      384.87
+     ],
+     [
+      395.95,
+      384.54
+     ],
+     [
+      395.98,
+      384.22
+     ],
+     [
+      395.98,
+      384.18
+     ],
+     [
+      396.7,
+      384.23
+     ],
+     [
+      396.72,
+      384.0
+     ],
+     [
+      396.99,
+      380.86
+     ]
+    ]
+   ],
+   "evidence": {
+    "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json) object 560 MNC (Active, last edited 2025-12-12; O'Connell, Robertson and Grobe 1986; renovated/expanded Heery 2006-2009); https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/MNC/ (fetched 2026-10-20, sources/ut-pages/MNC.html) (4 floors, 124,817 GSF, 1986)",
+    "basis": "official",
+    "note": "Separate building south of the SEZ, previously merged into the stadium record 504014 and buried under generated stands."
+   }
+  }
+ ],
+ "massing": {
+  "462938:3": {
+   "datum": {
+    "aboveY": 2.1
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 17.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 462938 (groundY 2.1, P50 17.6, P95 17.6, max 18.2, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/MRH/ (fetched 2026-10-20, sources/ut-pages/MRH.html)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype brutalist-precast) restated above the LiDAR groundY 2.1 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 3.4). Raster roof Y P50 19.7 / P95 19.78. Identity: MRH (small south piece of the Music Building; the main MRH body is inside City union 526275)."
+   }
+  },
+  "465549:51": {
+   "datum": {
+    "aboveY": 2.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.2,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 465549 (groundY 2.5, P50 4.2, P95 4.3, max 4.3, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY 2.5 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 3.53). Raster roof Y P50 6.68 / P95 6.81. Identity: no UT GIS building (small structure in the TMM/ART yard)."
+   }
+  },
+  "466015:55": {
+   "datum": {
+    "aboveY": 3.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 3.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 466015 (groundY 3.5, P50 3.9, P95 4.1, max 4.1, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY 3.5 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 3.59). Raster roof Y P50 7.43 / P95 7.63. Identity: no UT GIS building."
+   }
+  },
+  "567986:472": {
+   "datum": {
+    "aboveY": 3.6
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 3.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 567986 (groundY 3.6, P50 3.9, P95 4.1, max 4.2, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype utility) restated above the LiDAR groundY 3.6 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 3.62). Raster roof Y P50 7.49 / P95 7.72. Identity: no UT GIS building."
+   }
+  },
+  "591912:624": {
+   "datum": {
+    "aboveY": 3.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 8.3,
+     "roof": "hip-tile",
+     "slope": 0.25,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 591912 (groundY 3.5, P50 7.4, P95 8.2, max 8.3, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype master-plan) restated above the LiDAR groundY 3.5 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 3.54). Raster roof Y P50 10.93 / P95 11.7. Identity: no UT GIS building."
+   }
+  },
+  "611417:701": {
+   "datum": {
+    "aboveY": 2.9
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 3.5,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 611417 (groundY 2.9, P50 3.5, P95 3.6, max 3.7, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY 2.9 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 3.84). Raster roof Y P50 6.37 / P95 6.5. Identity: no UT GIS building."
+   }
+  },
+  "624857:797": {
+   "datum": {
+    "aboveY": 2.8
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 3.7,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 624857 (groundY 2.8, P50 3.7, P95 3.8, max 3.8, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY 2.8 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 2.86). Raster roof Y P50 6.42 / P95 6.57. Identity: no UT GIS building."
+   }
+  },
+  "733500:1240": {
+   "datum": {
+    "aboveY": 2.7
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 3.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 733500 (groundY 2.7, P50 3.6, P95 3.8, max 3.8, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY 2.7 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 2.86). Raster roof Y P50 6.37 / P95 6.53. Identity: no UT GIS building."
+   }
+  },
+  "657377:941": {
+   "datum": {
+    "aboveY": 8.4
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 5.5,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 657377 (groundY 8.4, P50 5.5, P95 5.5, max 5.6, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype utility) restated above the LiDAR groundY 8.4 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 10.5). Raster roof Y P50 13.9 / P95 13.93. Identity: no UT GIS building."
+   }
+  },
+  "720056:1205": {
+   "datum": {
+    "aboveY": 3.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.2,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 720056 (groundY 3.5, P50 4.2, P95 4.5, max 4.5, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype utility) restated above the LiDAR groundY 3.5 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 3.57). Raster roof Y P50 7.75 / P95 8.0. Identity: no UT GIS building."
+   }
+  },
+  "716690:1143": {
+   "datum": {
+    "aboveY": 3.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 20.7,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 716690 (groundY 3.5, P50 20.7, P95 21.0, max 21.1, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY 3.5 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 4.84). Raster roof Y P50 24.28 / P95 24.57. Identity: no UT GIS building (25 m2 tower-like structure, LiDAR roof 19.4 m above ground)."
+   }
+  },
+  "487578:126": {
+   "datum": {
+    "aboveY": 16.2
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 3.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 487578 (groundY 16.2, P50 3.6, P95 4.7, max 4.7, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype athletic) restated above the LiDAR groundY 16.2 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 16.41). Raster roof Y P50 19.78 / P95 20.93. Identity: MMS 665 (Myers stadium structure)."
+   }
+  },
+  "507225:220": {
+   "datum": {
+    "aboveY": 13
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 6.8,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 507225 (groundY 13.0, P50 6.8, P95 7.6, max 7.8, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype athletic) restated above the LiDAR groundY 13 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 15.47). Raster roof Y P50 19.8 / P95 20.64. Identity: MMS 662."
+   }
+  },
+  "716988:1151": {
+   "datum": {
+    "aboveY": 16.2
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 3.7,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 716988 (groundY 16.2, P50 3.6, P95 4.5, max 4.6, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype athletic) restated above the LiDAR groundY 16.2 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 16.23). Raster roof Y P50 19.81 / P95 20.63. Identity: MMS 664."
+   }
+  },
+  "464372:31": {
+   "datum": {
+    "aboveY": 9.2
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 4.2,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 464372 (groundY 9.2, P50 3.8, P95 5.0, max 5.0, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype athletic) restated above the LiDAR groundY 9.2 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 9.49). Raster roof Y P50 None / P95 None. Identity: MMS 582."
+   }
+  },
+  "502761:160": {
+   "datum": {
+    "aboveY": 2.1
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 6.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 502761 (groundY 2.1, P50 6.9, P95 7.4, max 7.5, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype master-plan) restated above the LiDAR groundY 2.1 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 2.72). Raster roof Y P50 9.08 / P95 9.54. Identity: no UT GIS building."
+   }
+  },
+  "724296:1216": {
+   "datum": {
+    "aboveY": 5.9
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 3.0,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 724296 (groundY 5.9, P50 3.0, P95 9.6, max 9.7, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY 5.9 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 6.25). Raster roof Y P50 8.94 / P95 15.55. Identity: no UT GIS building (small shed north of TMM). Top 9.3 -> 3.0 m: raster roof P50 8.94 = 2.7 m above ground (City h 2.76); P90/P95 15.5 are canopy returns."
+   }
+  },
+  "612504:719": {
+   "datum": {
+    "aboveY": 4.7
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 15.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        447.62,
+        -82.4
+       ],
+       [
+        451.47,
+        -117.37
+       ],
+       [
+        468.51,
+        -115.8
+       ],
+       [
+        467.87,
+        -108.23
+       ],
+       [
+        469.75,
+        -107.66
+       ],
+       [
+        465.72,
+        -80.89
+       ]
+      ]
+     ],
+     "bottom": 15.6,
+     "top": 21.5,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 612504 (groundY 4.7, P50 21.5, P95 22.2, max 23.0, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/TMM/ (fetched 2026-10-20, sources/ut-pages/TMM.html)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar-tiers, archetype stone-civic) restated above the LiDAR groundY 4.7 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 6.14). Raster roof Y P50 26.15 / P95 26.92. Identity: TMM Texas Science & Natural History Museum (Cret/Staub 1936, 6 floors)."
+   }
+  },
+  "502366:152": {
+   "datum": "campusY",
+   "volumes": [
+    {
+     "bottom": -6.0,
+     "top": 7.52,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       389.0,
+       -67.0
+      ],
+      [
+       399.0,
+       -67.0
+      ],
+      [
+       399.0,
+       -65.0
+      ],
+      [
+       413.0,
+       -65.0
+      ],
+      [
+       413.0,
+       -63.0
+      ],
+      [
+       425.0,
+       -63.0
+      ],
+      [
+       425.0,
+       -61.0
+      ],
+      [
+       439.0,
+       -61.0
+      ],
+      [
+       439.0,
+       -59.0
+      ],
+      [
+       451.0,
+       -59.0
+      ],
+      [
+       451.0,
+       -55.0
+      ],
+      [
+       449.0,
+       -55.0
+      ],
+      [
+       449.0,
+       -41.0
+      ],
+      [
+       443.0,
+       -41.0
+      ],
+      [
+       443.0,
+       -37.0
+      ],
+      [
+       447.0,
+       -37.0
+      ],
+      [
+       447.0,
+       -33.0
+      ],
+      [
+       441.0,
+       -33.0
+      ],
+      [
+       441.0,
+       -31.0
+      ],
+      [
+       431.0,
+       -31.0
+      ],
+      [
+       431.0,
+       -35.0
+      ],
+      [
+       427.0,
+       -35.0
+      ],
+      [
+       429.0,
+       -39.0
+      ],
+      [
+       425.0,
+       -39.0
+      ],
+      [
+       425.0,
+       -37.0
+      ],
+      [
+       423.0,
+       -37.0
+      ],
+      [
+       425.0,
+       -41.0
+      ],
+      [
+       409.0,
+       -43.0
+      ],
+      [
+       409.0,
+       -37.0
+      ],
+      [
+       407.0,
+       -37.0
+      ],
+      [
+       407.0,
+       -25.0
+      ],
+      [
+       405.0,
+       -25.0
+      ],
+      [
+       405.0,
+       -23.0
+      ],
+      [
+       407.0,
+       -23.0
+      ],
+      [
+       407.0,
+       -19.0
+      ],
+      [
+       419.0,
+       -19.0
+      ],
+      [
+       419.0,
+       -17.0
+      ],
+      [
+       425.0,
+       -17.0
+      ],
+      [
+       425.0,
+       -5.0
+      ],
+      [
+       423.0,
+       -5.0
+      ],
+      [
+       423.0,
+       -1.0
+      ],
+      [
+       409.0,
+       -1.0
+      ],
+      [
+       409.0,
+       1.0
+      ],
+      [
+       407.0,
+       1.0
+      ],
+      [
+       409.0,
+       -3.0
+      ],
+      [
+       397.0,
+       -3.0
+      ],
+      [
+       397.0,
+       -5.0
+      ],
+      [
+       385.0,
+       -5.0
+      ],
+      [
+       385.0,
+       -7.0
+      ],
+      [
+       371.0,
+       -7.0
+      ],
+      [
+       371.0,
+       -9.0
+      ],
+      [
+       363.0,
+       -9.0
+      ],
+      [
+       363.0,
+       -13.0
+      ],
+      [
+       365.0,
+       -13.0
+      ],
+      [
+       365.0,
+       -25.0
+      ],
+      [
+       367.0,
+       -25.0
+      ],
+      [
+       367.0,
+       -27.0
+      ],
+      [
+       373.0,
+       -27.0
+      ],
+      [
+       373.0,
+       -25.0
+      ],
+      [
+       385.0,
+       -25.0
+      ],
+      [
+       385.0,
+       -23.0
+      ],
+      [
+       395.0,
+       -23.0
+      ],
+      [
+       395.0,
+       -27.0
+      ],
+      [
+       397.0,
+       -27.0
+      ],
+      [
+       397.0,
+       -45.0
+      ],
+      [
+       393.0,
+       -45.0
+      ],
+      [
+       393.0,
+       -47.0
+      ],
+      [
+       391.0,
+       -47.0
+      ],
+      [
+       391.0,
+       -45.0
+      ],
+      [
+       389.0,
+       -45.0
+      ],
+      [
+       389.0,
+       -41.0
+      ],
+      [
+       383.0,
+       -41.0
+      ],
+      [
+       383.0,
+       -43.0
+      ],
+      [
+       381.0,
+       -43.0
+      ],
+      [
+       381.0,
+       -49.0
+      ],
+      [
+       387.0,
+       -49.0
+      ],
+      [
+       387.0,
+       -65.0
+      ],
+      [
+       389.0,
+       -65.0
+      ]
+     ],
+     "bottom": 7.52,
+     "top": 9.86,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "ring": [
+      [
+       381.0,
+       11.0
+      ],
+      [
+       385.0,
+       11.0
+      ],
+      [
+       385.0,
+       13.0
+      ],
+      [
+       393.0,
+       13.0
+      ],
+      [
+       393.0,
+       15.0
+      ],
+      [
+       399.0,
+       15.0
+      ],
+      [
+       399.0,
+       17.0
+      ],
+      [
+       401.0,
+       17.0
+      ],
+      [
+       401.0,
+       15.0
+      ],
+      [
+       403.0,
+       15.0
+      ],
+      [
+       403.0,
+       17.0
+      ],
+      [
+       413.0,
+       17.0
+      ],
+      [
+       413.0,
+       19.0
+      ],
+      [
+       417.0,
+       17.0
+      ],
+      [
+       417.0,
+       19.0
+      ],
+      [
+       419.0,
+       19.0
+      ],
+      [
+       419.0,
+       21.0
+      ],
+      [
+       417.0,
+       21.0
+      ],
+      [
+       417.0,
+       33.0
+      ],
+      [
+       415.0,
+       33.0
+      ],
+      [
+       417.0,
+       37.0
+      ],
+      [
+       415.0,
+       37.0
+      ],
+      [
+       415.0,
+       39.0
+      ],
+      [
+       409.0,
+       39.0
+      ],
+      [
+       409.0,
+       37.0
+      ],
+      [
+       397.0,
+       37.0
+      ],
+      [
+       397.0,
+       35.0
+      ],
+      [
+       387.0,
+       35.0
+      ],
+      [
+       387.0,
+       33.0
+      ],
+      [
+       383.0,
+       35.0
+      ],
+      [
+       383.0,
+       33.0
+      ],
+      [
+       377.0,
+       33.0
+      ],
+      [
+       377.0,
+       29.0
+      ],
+      [
+       379.0,
+       29.0
+      ],
+      [
+       379.0,
+       17.0
+      ],
+      [
+       381.0,
+       17.0
+      ]
+     ],
+     "bottom": 7.52,
+     "top": 9.86,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "ring": [
+      [
+       389.0,
+       -67.0
+      ],
+      [
+       399.0,
+       -67.0
+      ],
+      [
+       399.0,
+       -65.0
+      ],
+      [
+       413.0,
+       -65.0
+      ],
+      [
+       413.0,
+       -63.0
+      ],
+      [
+       425.0,
+       -63.0
+      ],
+      [
+       425.0,
+       -61.0
+      ],
+      [
+       439.0,
+       -61.0
+      ],
+      [
+       439.0,
+       -59.0
+      ],
+      [
+       449.0,
+       -59.0
+      ],
+      [
+       449.0,
+       -43.0
+      ],
+      [
+       447.0,
+       -43.0
+      ],
+      [
+       447.0,
+       -41.0
+      ],
+      [
+       441.0,
+       -41.0
+      ],
+      [
+       443.0,
+       -37.0
+      ],
+      [
+       447.0,
+       -37.0
+      ],
+      [
+       447.0,
+       -33.0
+      ],
+      [
+       441.0,
+       -33.0
+      ],
+      [
+       441.0,
+       -31.0
+      ],
+      [
+       431.0,
+       -31.0
+      ],
+      [
+       431.0,
+       -35.0
+      ],
+      [
+       427.0,
+       -35.0
+      ],
+      [
+       427.0,
+       -37.0
+      ],
+      [
+       429.0,
+       -37.0
+      ],
+      [
+       427.0,
+       -41.0
+      ],
+      [
+       419.0,
+       -41.0
+      ],
+      [
+       419.0,
+       -43.0
+      ],
+      [
+       405.0,
+       -43.0
+      ],
+      [
+       405.0,
+       -45.0
+      ],
+      [
+       393.0,
+       -45.0
+      ],
+      [
+       393.0,
+       -47.0
+      ],
+      [
+       389.0,
+       -45.0
+      ],
+      [
+       389.0,
+       -41.0
+      ],
+      [
+       383.0,
+       -41.0
+      ],
+      [
+       383.0,
+       -43.0
+      ],
+      [
+       381.0,
+       -43.0
+      ],
+      [
+       381.0,
+       -49.0
+      ],
+      [
+       387.0,
+       -49.0
+      ],
+      [
+       387.0,
+       -65.0
+      ],
+      [
+       389.0,
+       -65.0
+      ]
+     ],
+     "bottom": 9.86,
+     "top": 19.39,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "ring": [
+      [
+       371.0,
+       -27.0
+      ],
+      [
+       373.0,
+       -27.0
+      ],
+      [
+       373.0,
+       -25.0
+      ],
+      [
+       383.0,
+       -25.0
+      ],
+      [
+       383.0,
+       -23.0
+      ],
+      [
+       395.0,
+       -23.0
+      ],
+      [
+       395.0,
+       -21.0
+      ],
+      [
+       405.0,
+       -21.0
+      ],
+      [
+       405.0,
+       -19.0
+      ],
+      [
+       419.0,
+       -19.0
+      ],
+      [
+       419.0,
+       -17.0
+      ],
+      [
+       425.0,
+       -17.0
+      ],
+      [
+       425.0,
+       -5.0
+      ],
+      [
+       423.0,
+       -5.0
+      ],
+      [
+       423.0,
+       -1.0
+      ],
+      [
+       411.0,
+       -1.0
+      ],
+      [
+       411.0,
+       -3.0
+      ],
+      [
+       397.0,
+       -3.0
+      ],
+      [
+       397.0,
+       -5.0
+      ],
+      [
+       385.0,
+       -5.0
+      ],
+      [
+       385.0,
+       -7.0
+      ],
+      [
+       371.0,
+       -7.0
+      ],
+      [
+       371.0,
+       -9.0
+      ],
+      [
+       363.0,
+       -9.0
+      ],
+      [
+       363.0,
+       -13.0
+      ],
+      [
+       365.0,
+       -13.0
+      ],
+      [
+       365.0,
+       -25.0
+      ],
+      [
+       371.0,
+       -25.0
+      ]
+     ],
+     "bottom": 9.86,
+     "top": 19.39,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "bottom": 19.39,
+     "top": 24.3,
+     "roof": "flat",
+     "role": "mech",
+     "ring": [
+      [
+       432.36,
+       -33.45
+      ],
+      [
+       432.91,
+       -36.99
+      ],
+      [
+       430.07,
+       -37.56
+      ],
+      [
+       429.92,
+       -43.61
+      ],
+      [
+       439.51,
+       -42.74
+      ],
+      [
+       441.4,
+       -40.07
+      ],
+      [
+       440.98,
+       -37.41
+      ],
+      [
+       446.84,
+       -36.1
+      ],
+      [
+       446.52,
+       -34.78
+      ],
+      [
+       440.65,
+       -35.69
+      ],
+      [
+       440.1,
+       -32.31
+      ]
+     ]
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 502366 (groundY -3.8, P50 13.6, P95 24.4, max 31.8, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); tier rings traced from the same raster (derived/art_tier.py -> art-tiers.json: bands < Y 9 / 9-16 / >= 16, 2 m majority, DP 1.0 m); generator mech volume restated above groundY -3.8; UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json) object 566 ART; https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/ART/ (fetched 2026-10-20, sources/ut-pages/ART.html) (5 floors, 1962)",
+    "basis": "measured",
+    "note": "The grade-datum generator rendered roof P50 12.8 / P95 24.4 (raster 9.8 / 20.6, ~3-4 m too high); restating its tiers above groundY left the 9-12 Y studio decks (~1,100 m2) at the 7.8 deck. Now three traced levels: low deck 7.52, mid decks 9.86, the 1961 museum/studio blocks 19.39, plus the 24.3 mechanical/lift block. Flat simplification of sawtooth/skylit studio roofs (reference-interpreted, not modelled)."
+   }
+  },
+  "657080:933": {
+   "datum": {
+    "aboveY": 7.7
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 8,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        777.46,
+        -75.37
+       ],
+       [
+        776.87,
+        -77.01
+       ],
+       [
+        784.88,
+        -106.8
+       ],
+       [
+        783.92,
+        -109.7
+       ],
+       [
+        787.06,
+        -109.31
+       ],
+       [
+        789.39,
+        -117.32
+       ],
+       [
+        787.4,
+        -119.31
+       ],
+       [
+        789.24,
+        -122.07
+       ],
+       [
+        791.04,
+        -125.42
+       ],
+       [
+        796.81,
+        -123.91
+       ],
+       [
+        797.63,
+        -127.01
+       ],
+       [
+        804,
+        -125.43
+       ],
+       [
+        803.2,
+        -122.04
+       ],
+       [
+        808.23,
+        -120.7
+       ],
+       [
+        809.18,
+        -118.5
+       ],
+       [
+        799.01,
+        -79.87
+       ],
+       [
+        801.77,
+        -78.73
+       ],
+       [
+        800.41,
+        -73.59
+       ],
+       [
+        797.02,
+        -73.57
+       ],
+       [
+        795.8,
+        -70.87
+       ]
+      ]
+     ],
+     "bottom": 8,
+     "top": 17.4,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 657080 (groundY 7.7, P50 8.1, P95 17.5, max 18.2, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/TCC/ (fetched 2026-10-20, sources/ut-pages/TCC.html)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar-tiers, archetype modernist-lab) restated above the LiDAR groundY 7.7 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 11.53). Raster roof Y P50 15.84 / P95 25.19. Identity: TCC Thompson Conference Center (1970, 4 floors)."
+   }
+  },
+  "487284:121": {
+   "datum": "campusY",
+   "volumes": [
+    {
+     "bottom": -10.0,
+     "top": 2.92,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       443.0,
+       481.0
+      ],
+      [
+       445.0,
+       481.0
+      ],
+      [
+       445.0,
+       483.0
+      ],
+      [
+       453.0,
+       483.0
+      ],
+      [
+       453.0,
+       485.0
+      ],
+      [
+       461.0,
+       485.0
+      ],
+      [
+       461.0,
+       487.0
+      ],
+      [
+       469.0,
+       487.0
+      ],
+      [
+       469.0,
+       489.0
+      ],
+      [
+       477.0,
+       489.0
+      ],
+      [
+       477.0,
+       491.0
+      ],
+      [
+       483.0,
+       491.0
+      ],
+      [
+       483.0,
+       493.0
+      ],
+      [
+       499.0,
+       495.0
+      ],
+      [
+       499.0,
+       497.0
+      ],
+      [
+       505.0,
+       497.0
+      ],
+      [
+       505.0,
+       499.0
+      ],
+      [
+       515.0,
+       499.0
+      ],
+      [
+       517.0,
+       503.0
+      ],
+      [
+       515.0,
+       503.0
+      ],
+      [
+       515.0,
+       511.0
+      ],
+      [
+       513.0,
+       511.0
+      ],
+      [
+       513.0,
+       519.0
+      ],
+      [
+       511.0,
+       519.0
+      ],
+      [
+       511.0,
+       525.0
+      ],
+      [
+       509.0,
+       525.0
+      ],
+      [
+       509.0,
+       533.0
+      ],
+      [
+       507.0,
+       533.0
+      ],
+      [
+       507.0,
+       539.0
+      ],
+      [
+       503.0,
+       539.0
+      ],
+      [
+       503.0,
+       537.0
+      ],
+      [
+       497.0,
+       537.0
+      ],
+      [
+       497.0,
+       535.0
+      ],
+      [
+       489.0,
+       535.0
+      ],
+      [
+       489.0,
+       533.0
+      ],
+      [
+       481.0,
+       533.0
+      ],
+      [
+       481.0,
+       531.0
+      ],
+      [
+       475.0,
+       531.0
+      ],
+      [
+       475.0,
+       529.0
+      ],
+      [
+       465.0,
+       529.0
+      ],
+      [
+       465.0,
+       527.0
+      ],
+      [
+       457.0,
+       527.0
+      ],
+      [
+       457.0,
+       525.0
+      ],
+      [
+       451.0,
+       525.0
+      ],
+      [
+       451.0,
+       523.0
+      ],
+      [
+       435.0,
+       521.0
+      ],
+      [
+       435.0,
+       511.0
+      ],
+      [
+       437.0,
+       511.0
+      ],
+      [
+       437.0,
+       505.0
+      ],
+      [
+       439.0,
+       505.0
+      ],
+      [
+       439.0,
+       497.0
+      ],
+      [
+       441.0,
+       497.0
+      ],
+      [
+       441.0,
+       489.0
+      ],
+      [
+       443.0,
+       489.0
+      ]
+     ],
+     "bottom": 2.92,
+     "top": 12.86,
+     "roof": "flat",
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 487284 (groundY -6.9, P50 17.2, P95 21.6, max 23.1, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); tier ring traced from the same raster (derived/rsc_tier.py -> rsc-tiers.json: cells >= Y 9 by 2 m majority, DP 1.0 m); UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json) object 498 RSC; https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/RSC/ (fetched 2026-10-20, sources/ut-pages/RSC.html) (2 floors, 1990)",
+    "basis": "measured",
+    "note": "Generator volumes restated above groundY -6.9 put 85% of the roof at Y 3.0 (raster P50 10.2): its tiers covered only ~1,000 m2 of the ~2,950 m2 gym halls. Now a low deck at the raster median below Y 9 (2.92) and one traced gym-hall tier at the raster median above Y 9 (12.86; P90 14.66; real hall roofs vary 10-15, flat simplification)."
+   }
+  },
+  "590302:603": {
+   "datum": {
+    "aboveY": -7.9
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 7.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 590302 (groundY -7.9, P50 7.5, P95 7.9, max 8.0, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY -7.9 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 -5.91). Raster roof Y P50 -0.35 / P95 0.0. Identity: TCP Texas Cowboys Pavilion."
+   }
+  },
+  "526275:274": {
+   "datum": {
+    "aboveY": 0.5
+   },
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 12.3,
+     "roof": "flat",
+     "slope": 0,
+     "role": "main"
+    },
+    {
+     "rings": [
+      [
+       [
+        585.88,
+        -24.32
+       ],
+       [
+        587.08,
+        -42.17
+       ],
+       [
+        559.99,
+        -45.18
+       ],
+       [
+        555.22,
+        -43.86
+       ],
+       [
+        554.22,
+        -24.88
+       ],
+       [
+        545.78,
+        -24.39
+       ],
+       [
+        548.06,
+        -51.47
+       ],
+       [
+        546.82,
+        -51.6
+       ],
+       [
+        548.38,
+        -65.3
+       ],
+       [
+        547.44,
+        -70.68
+       ],
+       [
+        550.27,
+        -70.44
+       ],
+       [
+        551.57,
+        -83.03
+       ],
+       [
+        593.86,
+        -79.52
+       ],
+       [
+        596.08,
+        -106.03
+       ],
+       [
+        597.61,
+        -106.25
+       ],
+       [
+        598.1,
+        -112.02
+       ],
+       [
+        601.42,
+        -112.28
+       ],
+       [
+        602.16,
+        -121.01
+       ],
+       [
+        606.72,
+        -118.75
+       ],
+       [
+        604.75,
+        -78.12
+       ],
+       [
+        638.23,
+        -75.26
+       ],
+       [
+        638.44,
+        -69.69
+       ],
+       [
+        642.04,
+        -69.42
+       ],
+       [
+        642.45,
+        -74.33
+       ],
+       [
+        643.51,
+        -74.4
+       ],
+       [
+        641.12,
+        -42.87
+       ],
+       [
+        598.91,
+        -46.43
+       ],
+       [
+        596.75,
+        -21.87
+       ],
+       [
+        587.76,
+        -21.38
+       ]
+      ]
+     ],
+     "bottom": 12.3,
+     "top": 15,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        606.98,
+        -104.56
+       ],
+       [
+        606.91,
+        -103.26
+       ],
+       [
+        605.38,
+        -107.81
+       ],
+       [
+        606.89,
+        -118.84
+       ],
+       [
+        601.46,
+        -122.66
+       ],
+       [
+        608.37,
+        -125.24
+       ],
+       [
+        608.88,
+        -129.84
+       ],
+       [
+        606.03,
+        -131.68
+       ],
+       [
+        598.08,
+        -132.18
+       ],
+       [
+        598.14,
+        -134.69
+       ],
+       [
+        600.03,
+        -134.53
+       ],
+       [
+        604.07,
+        -182.48
+       ],
+       [
+        625.68,
+        -181.73
+       ],
+       [
+        624.38,
+        -175.91
+       ],
+       [
+        622.47,
+        -176.7
+       ],
+       [
+        619.22,
+        -172.33
+       ],
+       [
+        615.72,
+        -123.27
+       ],
+       [
+        616.97,
+        -122.02
+       ],
+       [
+        619.58,
+        -122.02
+       ],
+       [
+        619.6,
+        -123.22
+       ],
+       [
+        662.45,
+        -119.61
+       ],
+       [
+        663.05,
+        -121.03
+       ],
+       [
+        668.42,
+        -120.57
+       ],
+       [
+        668.46,
+        -116.66
+       ],
+       [
+        665.96,
+        -116.17
+       ],
+       [
+        661.72,
+        -111.33
+       ],
+       [
+        661.21,
+        -99.26
+       ]
+      ]
+     ],
+     "bottom": 12.3,
+     "top": 27.3,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        526.06,
+        59.02
+       ],
+       [
+        525.88,
+        56.93
+       ],
+       [
+        501.97,
+        54.88
+       ],
+       [
+        501.43,
+        56.9
+       ],
+       [
+        498.87,
+        56.69
+       ],
+       [
+        497.85,
+        48.3
+       ],
+       [
+        501.81,
+        1.26
+       ],
+       [
+        503.68,
+        0.75
+       ],
+       [
+        504.58,
+        -4.73
+       ],
+       [
+        506.93,
+        -4.53
+       ],
+       [
+        507.23,
+        -2.33
+       ],
+       [
+        531.06,
+        -0.33
+       ],
+       [
+        531.57,
+        -2.17
+       ],
+       [
+        534.35,
+        -1.72
+       ],
+       [
+        533.9,
+        3.78
+       ],
+       [
+        535.47,
+        4.08
+       ],
+       [
+        534.26,
+        18.58
+       ],
+       [
+        541.72,
+        19.24
+       ],
+       [
+        541.17,
+        30.78
+       ],
+       [
+        533.26,
+        30.12
+       ],
+       [
+        531.31,
+        53.13
+       ],
+       [
+        529.5,
+        53.22
+       ],
+       [
+        529,
+        59.26
+       ]
+      ]
+     ],
+     "bottom": 12.3,
+     "top": 15.9,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        548.54,
+        12.87
+       ],
+       [
+        546.23,
+        10.29
+       ],
+       [
+        548.16,
+        -12.22
+       ],
+       [
+        551.09,
+        -14.39
+       ],
+       [
+        551.43,
+        -17.23
+       ],
+       [
+        551.63,
+        -19.52
+       ],
+       [
+        549.81,
+        -19.92
+       ],
+       [
+        550.04,
+        -22.54
+       ],
+       [
+        550.13,
+        -22.52
+       ],
+       [
+        551.35,
+        -19.26
+       ],
+       [
+        571.45,
+        -17.2
+       ],
+       [
+        588.84,
+        -17.2
+       ],
+       [
+        587.99,
+        -19.28
+       ],
+       [
+        589.12,
+        -19.69
+       ],
+       [
+        596.86,
+        -19.04
+       ],
+       [
+        596.66,
+        -15.38
+       ],
+       [
+        594.31,
+        -15.01
+       ],
+       [
+        590.32,
+        -18.45
+       ],
+       [
+        587.42,
+        -14.11
+       ],
+       [
+        584.68,
+        19.42
+       ],
+       [
+        548.27,
+        16.14
+       ]
+      ]
+     ],
+     "bottom": 12.3,
+     "top": 31.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    },
+    {
+     "rings": [
+      [
+       [
+        580.73,
+        -23.98
+       ],
+       [
+        558.94,
+        -26.01
+       ],
+       [
+        555.45,
+        -25.23
+       ],
+       [
+        556.17,
+        -43.11
+       ],
+       [
+        560.07,
+        -44.19
+       ],
+       [
+        586.05,
+        -41.3
+       ],
+       [
+        584.97,
+        -22.14
+       ]
+      ]
+     ],
+     "bottom": 12.3,
+     "top": 33.8,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier",
+     "archetype": "b09-stadium:bass-blank"
+    },
+    {
+     "rings": [
+      [
+       [
+        579.94,
+        37.06
+       ],
+       [
+        578.71,
+        35.84
+       ],
+       [
+        578.92,
+        26.14
+       ],
+       [
+        565.59,
+        24
+       ],
+       [
+        552.63,
+        23.48
+       ],
+       [
+        550.45,
+        25.79
+       ],
+       [
+        549.54,
+        33.61
+       ],
+       [
+        549.1,
+        32.34
+       ],
+       [
+        541.67,
+        30.17
+       ],
+       [
+        542.65,
+        20.14
+       ],
+       [
+        545.96,
+        20.42
+       ],
+       [
+        546.67,
+        17.83
+       ],
+       [
+        584.26,
+        21.83
+       ],
+       [
+        586.23,
+        20.35
+       ],
+       [
+        589.37,
+        20.87
+       ],
+       [
+        590.16,
+        19.53
+       ],
+       [
+        589.74,
+        21.72
+       ],
+       [
+        592.73,
+        22.32
+       ],
+       [
+        591.64,
+        35.21
+       ],
+       [
+        591.38,
+        35.95
+       ],
+       [
+        586.72,
+        35.55
+       ],
+       [
+        586.34,
+        38.21
+       ]
+      ]
+     ],
+     "bottom": 12.3,
+     "top": 28.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    },
+    {
+     "rings": [
+      [
+       [
+        551.06,
+        41.82
+       ],
+       [
+        551.55,
+        35.93
+       ],
+       [
+        548.86,
+        35.43
+       ],
+       [
+        548.92,
+        34.58
+       ],
+       [
+        549.95,
+        35.99
+       ],
+       [
+        550.88,
+        33.72
+       ],
+       [
+        551.38,
+        26.23
+       ],
+       [
+        553.03,
+        24.48
+       ],
+       [
+        556.5,
+        24.48
+       ],
+       [
+        577.92,
+        26.97
+       ],
+       [
+        577.72,
+        36.24
+       ],
+       [
+        581.66,
+        38.85
+       ],
+       [
+        580.96,
+        44.32
+       ]
+      ]
+     ],
+     "bottom": 12.3,
+     "top": 25.1,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        585.38,
+        18.14
+       ],
+       [
+        585.38,
+        15.2
+       ],
+       [
+        587.88,
+        -11.77
+       ],
+       [
+        591.01,
+        -16.97
+       ],
+       [
+        593.93,
+        -13.76
+       ],
+       [
+        590.72,
+        8.7
+       ],
+       [
+        591.22,
+        13.23
+       ],
+       [
+        593.17,
+        15.43
+       ],
+       [
+        589.28,
+        19.61
+       ]
+      ]
+     ],
+     "bottom": 12.3,
+     "top": 24,
+     "roof": "flat",
+     "slope": 0,
+     "role": "tier"
+    },
+    {
+     "rings": [
+      [
+       [
+        552.48,
+        -20.97
+       ],
+       [
+        550.88,
+        -23.12
+       ],
+       [
+        559.02,
+        -24.19
+       ],
+       [
+        580.2,
+        -22.22
+       ],
+       [
+        584.24,
+        -19.7
+       ],
+       [
+        586.62,
+        -20.19
+       ],
+       [
+        585.62,
+        -20.29
+       ],
+       [
+        585.92,
+        -19.58
+       ],
+       [
+        584.23,
+        -20.14
+       ],
+       [
+        582.93,
+        -18.73
+       ]
+      ]
+     ],
+     "bottom": 12.3,
+     "top": 28.6,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    },
+    {
+     "rings": [
+      [
+       [
+        596.01,
+        -125.11
+       ],
+       [
+        598.58,
+        -131.16
+       ],
+       [
+        605.71,
+        -130.72
+       ],
+       [
+        607.84,
+        -129.34
+       ],
+       [
+        607.46,
+        -125.91
+       ],
+       [
+        602.13,
+        -123.55
+       ]
+      ]
+     ],
+     "bottom": 12.3,
+     "top": 31.5,
+     "roof": "flat",
+     "slope": 0,
+     "role": "mech"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 526275 (groundY 0.5, P50 15.9, P95 32.0, max 36.0, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json); identity UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/PAC/ (fetched 2026-10-20, sources/ut-pages/PAC.html)",
+    "basis": "measured",
+    "note": "Generator's own LiDAR volumes (lidar-tiers, archetype brutalist-precast) restated above the LiDAR groundY 0.5 instead of the generator grade (baked-ground median around the ring; perimeter ground P50 1.97). Raster roof Y P50 16.36 / P95 32.45. Identity: City union of PAC Performing Arts Center (Bass Concert Hall, 11 floors), MRH Music Building (9 floors) and DFA Doty Fine Arts (5 floors). [east-south lane: the 33.8 m Bass fly-tower volume is a tier with archetype b09-stadium:bass-blank (blank tan, d18 orbits) instead of a metal mech box; heights unchanged.]"
+   }
+  },
+  "463679:19": {
+   "datum": "campusY",
+   "volumes": [
+    {
+     "ring": [
+      [
+       592.72,
+       290.05
+      ],
+      [
+       599.14,
+       291.74
+      ],
+      [
+       600.91,
+       285.08
+      ],
+      [
+       644.16,
+       297.09
+      ],
+      [
+       603.56,
+       451.0
+      ],
+      [
+       560.88,
+       439.73
+      ],
+      [
+       560.22,
+       439.35
+      ],
+      [
+       554.45,
+       437.82
+      ],
+      [
+       555.18,
+       435.08
+      ],
+      [
+       554.41,
+       434.88
+      ],
+      [
+       592.72,
+       290.05
+      ]
+     ],
+     "bottom": -2.0,
+     "top": 16.7,
+     "roof": "flat",
+     "role": "main",
+     "archetype": "garage"
+    },
+    {
+     "ring": [
+      [
+       575.2,
+       464.31
+      ],
+      [
+       558.63,
+       462.86
+      ],
+      [
+       559.51,
+       452.56
+      ],
+      [
+       561.75,
+       452.72
+      ],
+      [
+       562.71,
+       449.31
+      ],
+      [
+       558.71,
+       448.25
+      ],
+      [
+       560.92,
+       439.79
+      ],
+      [
+       603.5,
+       451.04
+      ],
+      [
+       598.92,
+       468.34
+      ],
+      [
+       582.28,
+       465.31
+      ],
+      [
+       583.71,
+       457.26
+      ],
+      [
+       583.16,
+       457.06
+      ],
+      [
+       580.21,
+       456.32
+      ],
+      [
+       579.11,
+       456.17
+      ],
+      [
+       575.9,
+       456.11
+      ],
+      [
+       575.2,
+       464.31
+      ]
+     ],
+     "bottom": -2.0,
+     "top": 15.01,
+     "roof": "flat",
+     "role": "main",
+     "archetype": "athletic"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 463679 (groundY 0.8, P50 15.9, P95 19.7, max 26.2, conflict); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json) (MAG ring roof Y P50 16.7, P10 15.43; MFH ring P50 15.01); UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json) objects 479 MAG, 527 MFH; https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/MAG/ (fetched 2026-10-20, sources/ut-pages/MAG.html) (6 floors, 1998); https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/MFH/ (fetched 2026-10-20, sources/ut-pages/MFH.html) (3 floors, 1999)",
+    "basis": "measured",
+    "note": "City record is a union of Manor Garage and the Mithoff Track/Soccer Fieldhouse. The generator used City h 48.6 (LiDAR 'conflict') and rendered a 57.2 m slab: ~40 m too tall for a 6-floor 1998 garage. Both buildings predate the 2017 LiDAR. Now two volumes on the official rings: MAG top deck 16.7 (garage), MFH roof 15.01 (athletic). Ramps/stair towers (raster max 27.03) not modelled."
+   }
+  },
+  "526415:277": {
+   "datum": "campusY",
+   "volumes": [
+    {
+     "bottom": 5.0,
+     "top": 17.34,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 526415 (groundY 9.8, P50 7.5, P95 7.6, max 10.1, conflict); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json) (roof Y P10 17.27 / P50 17.34 / P95 17.38, perimeter ground P50 12.47); UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json) object 478 UPB; https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/UPB/ (fetched 2026-10-20, sources/ut-pages/UPB.html) (1 floor, 24,440 GSF, 1960)",
+    "basis": "measured",
+    "note": "City h 33.35 (LiDAR 'conflict') rendered a 44.6 m roof plus an estimated mech box (48.5): a one-floor 1960 building drawn ~32 m tall. Now one flat volume at the measured roof 17.34 (~5 m above the street side)."
+   }
+  },
+  "590259:602": {
+   "datum": "campusY",
+   "volumes": [
+    {
+     "bottom": 10.0,
+     "top": 42.46,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json 590259 (groundY 15.7, P50 26.7, P95 28.3, max 29.4, measured); USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json) (City ring roof Y P50 42.46, P90 44.01, max 45.1; ground P50 15.82); UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json) object 392 LBJ (its ring is ~6 m west of the City ring and of the LiDAR roof tier, so the City ring is kept); https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/LBJ/ (fetched 2026-10-20, sources/ut-pages/LBJ.html) (10 floors, 1971, SOM/Bunshaft)",
+    "basis": "measured",
+    "note": "Generator top (grade datum) rendered 40.38, 2.1 m under the measured roof 42.46. Raster P90 44.01 is the raised perimeter band of the travertine attic (reference-interpreted; not modelled as geometry)."
+   }
+  },
+  "-901:add": {
+   "datum": "campusY",
+   "volumes": [
+    {
+     "bottom": -3.0,
+     "top": 7.63,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "USGS 3DEP TX_Central_B1_2017 0.5 m building raster sampled in the ring (research/whole-campus-92/b09-stadium/derived/lidar-b09.json) (UT MNC ring: roof Y P10 7.54 / P50 7.63 / P90 9.84 / P95 12.38 / max 15.11; perimeter ground P10 -2.14 / P50 2.41)",
+    "basis": "measured",
+    "note": "Main roof from the 2017 LiDAR (predates the 2021 SEZ works, which connected to MNC; post-2021 roof changes unknown). A ~100 m2 strip at Y~14 (x405-458, z411-418) is not modelled. The building steps down to the field level on its north side (4 floors on a slope); only one flat volume is modelled."
+   }
+  }
+ },
+ "catalog": {
+  "-901": {
+   "abbr": "MNC",
+   "archetype": "athletic",
+   "basis": "known",
+   "district": "east-campus",
+   "note": "Moncrief-Neuhaus Athletic Center (UT MNC 0421, 1986, 4 floors)",
+   "evidence": {
+    "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json) object 560; https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/MNC/ (fetched 2026-10-20, sources/ut-pages/MNC.html)",
+    "basis": "official",
+    "note": "Identity/use official; facade is the generic athletic archetype (estimate)."
+   }
+  },
+  "526415": {
+   "abbr": "UPB",
+   "archetype": "utility",
+   "basis": "known",
+   "district": "east-campus",
+   "note": "University Police Building (UT UPB 0634, 2201 Robert Dedman Dr, 1 floor, 1960)",
+   "evidence": {
+    "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0/query, queried 2026-10-20; research/whole-campus-92/b09-stadium/sources/ut-gis-b09-campus.json) object 478 UPB; https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/UPB/ (fetched 2026-10-20, sources/ut-pages/UPB.html)",
+    "basis": "official",
+    "note": "One-storey service building; modernist-lab estimate replaced by the generic low utility archetype (estimate)."
+   }
+  }
+ },
+ "replaces": {
+  "612504:719": {
+   "source": "lib/campus/blocks/b09-stadium/d17-tmm.ts: City ring 612504 split into the LiDAR main block (Y 26.2) and east annex (Y 20.3); Art Deco west front from ut-tmm-493-directory-photo.jpg (official UT photograph) and d17-orbit-northwest",
+   "basis": "reference-interpreted",
+   "note": "Window/pilaster widths, sill/head, door and attic reveal are estimates; front stair not built (shared pedestrian area); side/rear elevations undocumented (plain)."
+  },
+  "590259:602": {
+   "source": "lib/campus/blocks/b09-stadium/d18-lbj-bass.ts: City ring 590259 = cornice outline; roof Y 42.4 and central penthouse Y 44.0 from the 2017 USGS 3DEP DSM; cornice box, dark ribbon, ribs, recessed short front from ut-lbj-392-directory-photo.jpg and ut-lbj-392-campus-14.jpg (official UT photographs)",
+   "basis": "reference-interpreted",
+   "note": "Overhang 2.8 m, ribbon/cornice heights, rib pitch, front recess and penthouse plan are estimates."
+  },
+  "463679:19": {
+   "source": "lib/campus/blocks/b09-stadium/d19-manor.ts: official UT rings MAG 479 / MFH 527 (lidar-reference.json), deck Y 16.7 / MFH roof Y 15.01, west Myers rake on the official east edge measured in 2017 USGS 3DEP DSM sections; open-deck facade from ut-mag-479-directory-photo.jpg (official UT photograph)",
+   "basis": "reference-interpreted",
+   "note": "Level count, bay, spandrel/opening heights, rake row pitch and MFH window grid are estimates; the curved ramp tower is not placed."
+  }
+ },
+ "archetypes": {
+  "b09-stadium:bass-blank": {
+   "label": "Bass Concert Hall fly tower: blank tan masonry",
+   "era": "1960s-1980s",
+   "wall": "precast",
+   "wallColor": "#c8ab85",
+   "ground": "precast",
+   "groundColor": "#c8ab85",
+   "base": "precast",
+   "baseColor": "#bfa27c",
+   "baseHeight": 0.5,
+   "trim": "precast",
+   "trimColor": "#bea47f",
+   "roof": "flat",
+   "roofColor": "#c4c1ba",
+   "roofSlope": 0,
+   "overhang": 0,
+   "brackets": false,
+   "parapet": 0.3,
+   "cornice": 0.0,
+   "belt": false,
+   "floor": 4,
+   "groundFloor": 4.6,
+   "deepReveal": true,
+   "window": {
+    "bay": 1.6,
+    "width": 1,
+    "sill": 0.9,
+    "head": 2.8,
+    "mullions": 0,
+    "transom": false,
+    "type": "none",
+    "frame": "dark"
+   },
+   "groundWindow": {
+    "bay": 3.2,
+    "width": 2.4,
+    "sill": 0.4,
+    "head": 3.6,
+    "mullions": 2,
+    "transom": false,
+    "type": "none",
+    "frame": "dark"
+   },
+   "door": {
+    "width": 2.4,
+    "height": 2.8
+   },
+   "reference": "d18-orbit-southwest / -southeast (reviewed): blank tan fly tower without windows; slit reveals added by b09 install (d18-lbj-bass.ts)."
+  }
+ }
+}

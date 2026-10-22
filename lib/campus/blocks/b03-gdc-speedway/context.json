@@ -1,0 +1,1130 @@
+{
+  "block": "b03-gdc-speedway",
+  "massing": {
+    "463644": {
+      "datum": {
+        "aboveY": -4.5
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 7,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 463644 (groundY -4.5, tier 7.0 m over 73 m2 of the 81 m2 ring, P95 8.1)",
+        "basis": "measured",
+        "note": "Round 3: generated top was +0.96 m above LiDAR (grade offset). North strip of CT1 (official multipolygon part 2)."
+      }
+    },
+    "502996": {
+      "datum": {
+        "aboveY": -2.4
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 3.8,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 502996 (groundY -2.4, P50 3.8, P95 3.9)",
+        "basis": "measured",
+        "note": "Round 3: generated top was +0.61 m above LiDAR (grade offset)."
+      }
+    },
+    "549259": {
+      "datum": {
+        "aboveY": -4.4
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 7.7,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "ring": [
+            [
+              192.24,
+              8.92
+            ],
+            [
+              200.01,
+              9.58
+            ],
+            [
+              198.79,
+              23.82
+            ],
+            [
+              191.02,
+              23.16
+            ],
+            [
+              191.14,
+              21.8
+            ],
+            [
+              192.15,
+              9.98
+            ]
+          ],
+          "bottom": 7.7,
+          "top": 11.2,
+          "roof": "flat",
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 549259 (USGS 3DEP 2017: groundY -4.4, tiers 7.7 m over 198 m2 west and 11.2 m over 113 m2 east, ring x 190.8-199.8); City ring 549259 east block (x 191-200) = the 11.2 m tier",
+        "basis": "measured",
+        "note": "Round 3: the generator put both tiers on its own grade, 1.14 m above the LiDAR datum (block check B10: 4.44/7.94 vs 3.30/6.80). Datum {aboveY:-4.4}. Tier split line = the City ring step at x 191-192 (LiDAR tier edge at x 190.8-191.8)."
+      }
+    },
+    "594130": {
+      "datum": {
+        "aboveY": 0.8
+      },
+      "volumes": [
+        {
+          "ring": [
+            [
+              94.47,
+              -105.48
+            ],
+            [
+              97.58,
+              -105.16
+            ],
+            [
+              94.01,
+              -63.09
+            ],
+            [
+              149.01,
+              -58.41
+            ],
+            [
+              149.54,
+              -64.66
+            ],
+            [
+              150.93,
+              -64.54
+            ],
+            [
+              151.5,
+              -71.26
+            ],
+            [
+              150.61,
+              -71.33
+            ],
+            [
+              153.06,
+              -100.18
+            ],
+            [
+              155.73,
+              -99.95
+            ]
+          ],
+          "bottom": 0,
+          "top": 17.3,
+          "roof": "hip-tile",
+          "slope": 0.55,
+          "role": "main",
+          "archetype": "b03-gdc-speedway:power-plant-tile"
+        },
+        {
+          "ring": [
+            [
+              95.27,
+              -114.84
+            ],
+            [
+              94.47,
+              -105.48
+            ],
+            [
+              155.73,
+              -100
+            ],
+            [
+              156.55,
+              -109.63
+            ]
+          ],
+          "bottom": 0,
+          "top": 17.2,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "b03-gdc-speedway:power-plant"
+        },
+        {
+          "ring": [
+            [
+              140.4,
+              -75.9
+            ],
+            [
+              148.4,
+              -75.2
+            ],
+            [
+              149.4,
+              -63.3
+            ],
+            [
+              141.4,
+              -64
+            ]
+          ],
+          "bottom": 12,
+          "top": 21.1,
+          "roof": "flat",
+          "role": "mech"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 594130 (groundY 0.8, P50 17.0, P95 18.4, mixed roof, pitch 31 deg) and LiDAR grid derived/r2/roof_grid.py (USGS 3DEP TX_Central_B1_2017 class-6 returns, LiDAR lane aligned points; campus Y = NAVD88-165): hall eave band ~12.3 m rising to a flat crown at 17.0 m from ~13 m inside the walls; north wing flat 17.0 m north of the line (97.6,-105.2)-(155.7,-100.0); a 21 m box at x 140-149, z -64..-76; stack (46.5 m) built by install(). Roof form from live-reference/gdc-power-plant-north-photo-only.jpg (red clay-tile band, flat crown).",
+        "basis": "measured",
+        "note": "Round 1 had one flat box at 17.8 m. The generator's tile hip has a fixed 6.5 m rise (HIP_MAX), so with the crown at 17.3 m (LiDAR 17.0) the eave is 10.8 m against ~12.3 m measured; residuals reported in the block check. Zone medians (derived/r2/zones.json, campus Y): hall P90 17.87 (crown), north wing 17.99 (17.2 m), box 21.89 (21.1 m)."
+      }
+    },
+    "613959": {
+      "datum": {
+        "aboveY": -4.3
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 12,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "ring": [
+            [
+              171.59,
+              -11.27
+            ],
+            [
+              171.37,
+              -9.03
+            ],
+            [
+              177.96,
+              -8.38
+            ],
+            [
+              177.18,
+              0.34
+            ],
+            [
+              199.71,
+              2.36
+            ],
+            [
+              200.19,
+              -2.94
+            ],
+            [
+              204.24,
+              -2.58
+            ],
+            [
+              204.81,
+              -9
+            ],
+            [
+              200.76,
+              -9.36
+            ],
+            [
+              203.75,
+              -43.47
+            ],
+            [
+              166.71,
+              -46.8
+            ],
+            [
+              165.25,
+              -30.48
+            ],
+            [
+              158.06,
+              -31.12
+            ],
+            [
+              156.41,
+              -12.63
+            ]
+          ],
+          "bottom": 12,
+          "top": 16.4,
+          "roof": "flat",
+          "role": "tier"
+        },
+        {
+          "ring": [
+            [
+              187.53,
+              -44.93
+            ],
+            [
+              203.75,
+              -43.47
+            ],
+            [
+              208.42,
+              -96.81
+            ],
+            [
+              202.18,
+              -97.35
+            ],
+            [
+              202.69,
+              -103.26
+            ],
+            [
+              192.68,
+              -104.12
+            ]
+          ],
+          "bottom": 12,
+          "top": 17,
+          "roof": "flat",
+          "role": "tier"
+        },
+        {
+          "ring": [
+            [
+              195.5,
+              -44.21
+            ],
+            [
+              203.75,
+              -43.47
+            ],
+            [
+              208.42,
+              -96.81
+            ],
+            [
+              202.18,
+              -97.35
+            ],
+            [
+              202.69,
+              -103.26
+            ],
+            [
+              200.65,
+              -103.44
+            ]
+          ],
+          "bottom": 17,
+          "top": 20.6,
+          "roof": "flat",
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 613959 (groundY -4.3, P50 16.4, P95 21.0; status 'conflict' only because City h 64.1 m is the stack) and LiDAR grid derived/r2/roof_grid.py (USGS 3DEP TX_Central_B1_2017 class-6 returns, LiDAR lane aligned points; campus Y = NAVD88-165): block south of the line (166.7,-46.8)-(175.6,-46.0) flat at 16.4 m; stack hall at 12 m on its west, 16-18 m within 16.3 m of the east wall line (200.8,-9.4)-(208.4,-96.8), 20-22 m within 8.3 m of it; stack (64.0 m) built by install().",
+        "basis": "measured",
+        "note": "Round 1 had one flat box at 20.4 m over the whole record (+4.0 m over the 16.4 m block, +8.4 m over the 12 m strip). Strip lines are read from 2 m LiDAR cells (+-1 m); glazed monitors (18 m) are folded into the 16.4 m tier. Zone medians (derived/r2/zones.json, campus Y): block 12.09, west strip 7.74, mid strip 13.29 (deck 16.4 m + 18 m monitors -> 17.0 m), east strip 16.1 (20.6 m)."
+      }
+    },
+    "698195": {
+      "datum": {
+        "aboveY": 1
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 13.7,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "b03-gdc-speedway:power-plant"
+        },
+        {
+          "ring": [
+            [
+              142.3,
+              -15.3
+            ],
+            [
+              143.3,
+              -16.3
+            ],
+            [
+              143.8,
+              -19.3
+            ],
+            [
+              143.3,
+              -19.8
+            ],
+            [
+              146.3,
+              -46.8
+            ],
+            [
+              146.3,
+              -52.8
+            ],
+            [
+              145,
+              -54.1
+            ],
+            [
+              130.5,
+              -55.1
+            ],
+            [
+              129.3,
+              -53.8
+            ],
+            [
+              131.8,
+              -50.3
+            ],
+            [
+              131.8,
+              -44.3
+            ],
+            [
+              130.3,
+              -36.3
+            ],
+            [
+              130.3,
+              -27.3
+            ],
+            [
+              129.3,
+              -21.3
+            ],
+            [
+              126.3,
+              -17.8
+            ],
+            [
+              127.5,
+              -16.1
+            ]
+          ],
+          "bottom": 13.7,
+          "top": 24.9,
+          "roof": "flat",
+          "role": "mech",
+          "archetype": "utility"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 698195 tiers 13.7 m (1266 m2) and 24.9 m (572 m2 ring), groundY 1.0; live-reference/gdc-power-plant-north-photo-only.jpg shows three large cooling-tower fan cells on a pale enclosure over a dark brick base (consistent with a chilling station).",
+        "basis": "measured",
+        "note": "Same heights as the generator's tier massing; split so the cooling-tower enclosure takes the pale utility facade and the base the brick plant facade. Fan shrouds (LiDAR max 27.8 m) not modelled."
+      }
+    },
+    "-301:add": {
+      "datum": {
+        "aboveY": -4.24
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 8.65,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "b03-gdc-speedway:cooling-tower"
+        }
+      ],
+      "evidence": {
+        "source": "USGS 3DEP TX_Central_B1_2017 points (LiDAR lane aligned extraction, campus Y = NAVD88-165), research/whole-campus-92/b03-gdc-speedway/derived/r3/plant-official.json",
+        "basis": "measured",
+        "note": "Top = class-6 P50 campus Y 4.41 (P90 5.35; fan shrouds to 7.4-7.6 built by install()) over the official ring; base = LiDAR class-2 ground median within 12 m outside it (campus Y -4.24)."
+      }
+    },
+    "-302:add": {
+      "datum": {
+        "aboveY": -5.27
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 14.11,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "b03-gdc-speedway:cooling-tower"
+        }
+      ],
+      "evidence": {
+        "source": "USGS 3DEP TX_Central_B1_2017 points (LiDAR lane aligned extraction, campus Y = NAVD88-165), research/whole-campus-92/b03-gdc-speedway/derived/r3/plant-official.json",
+        "basis": "measured",
+        "note": "Top = class-6 P50 campus Y 8.84 (P95 10.07; fan shrouds to 10.1 built by install()) over the official ring; base = LiDAR class-2 ground median within 12 m outside it (campus Y -5.27)."
+      }
+    },
+    "-303:add": {
+      "datum": {
+        "aboveY": -5.26
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 5.6,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "utility"
+        }
+      ],
+      "evidence": {
+        "source": "USGS 3DEP TX_Central_B1_2017 points (LiDAR lane aligned extraction, campus Y = NAVD88-165), research/whole-campus-92/b03-gdc-speedway/derived/r3/plant-official.json",
+        "basis": "measured",
+        "note": "Top = class-6 P50 campus Y 0.34 (P95 2.14) over the official ring; base = LiDAR class-2 ground median within 12 m outside it (campus Y -5.26)."
+      }
+    },
+    "-304:add": {
+      "datum": {
+        "aboveY": -5.24
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 6.89,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "utility"
+        }
+      ],
+      "evidence": {
+        "source": "USGS 3DEP TX_Central_B1_2017 points (LiDAR lane aligned extraction, campus Y = NAVD88-165), research/whole-campus-92/b03-gdc-speedway/derived/r3/plant-official.json",
+        "basis": "measured",
+        "note": "Top = class-6 P50 campus Y 1.65 (P95 1.72) over the official ring; base = LiDAR class-2 ground median within 12 m outside it (campus Y -5.24)."
+      }
+    },
+    "-305:add": {
+      "datum": {
+        "aboveY": -5.26
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 4.54,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "utility"
+        }
+      ],
+      "evidence": {
+        "source": "USGS 3DEP TX_Central_B1_2017 points (LiDAR lane aligned extraction, campus Y = NAVD88-165), research/whole-campus-92/b03-gdc-speedway/derived/r3/plant-official.json",
+        "basis": "measured",
+        "note": "Top = class-6 P50 campus Y -0.72 (P95 0.33) over the official ring; base = LiDAR class-2 ground median within 12 m outside it (campus Y -5.26)."
+      }
+    },
+    "-306:add": {
+      "datum": {
+        "aboveY": -5.63
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 3.15,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "utility"
+        }
+      ],
+      "evidence": {
+        "source": "USGS 3DEP TX_Central_B1_2017 points (LiDAR lane aligned extraction, campus Y = NAVD88-165), research/whole-campus-92/b03-gdc-speedway/derived/r3/plant-official.json",
+        "basis": "measured",
+        "note": "Top = 48 class-6 returns, P50 campus Y -2.48 over the official ring; base = LiDAR class-2 ground median within 12 m outside it (campus Y -5.63)."
+      }
+    }
+  },
+  "catalog": {
+    "463644": {
+      "archetype": "utility",
+      "basis": "estimate",
+      "note": "North part of UTM Cooling Tower 1 (CT1, 2009): the official CT1 multipolygon has a second 23 x 3 m part exactly on this City ring",
+      "evidence": {
+        "source": "official UT ArcGIS layer Campus_Buildings_High_Security_view (https://services9.arcgis.com/w9x0fkENXvuWZY26/arcgis/rest/services/Campus_Buildings_High_Security_view/FeatureServer/0/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson, retrieved 2026-09-07 as research/dkr-frontage-58/references/ut-official-current-all.geojson, sha256 559176b0...), projected in research/whole-campus-92/b03-gdc-speedway/derived/r3/plant_official.py",
+        "basis": "official",
+        "note": "Official CT1 part 2 ring (241.83,-91.56)-(241.55,-88.2)-(217.3,-90.26)-(217.58,-94.03) vs City 463644 x 216.9-240.6 z -94.2..-88.5. LiDAR height 7.0 m kept."
+      }
+    },
+    "594130": {
+      "archetype": "b03-gdc-speedway:power-plant-tile",
+      "basis": "known",
+      "note": "PPE HAL C WEAVER POWER PLANT EXPANSION (215 E 24th, 5 floors, 1988): official polygon covers 97.7% of this City ring (round 3; was inferred from address order/area). ",
+      "evidence": {
+        "source": "official UT ArcGIS layer Campus_Buildings_High_Security_view (research/dkr-frontage-58/references/ut-official-current-all.geojson, retrieved 2026-09-07; projected and overlapped in research/whole-campus-92/b03-gdc-speedway/derived/r3/plant_official.py -> plant-official.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PPE/ (fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Identity official (round 3). Facade family as before: Official UT polygons (research/raw/ut-official-buildings.geojson) have no record for this footprint. Round 2: facade family from the Codex photo-only capture live-reference/gdc-power-plant-north-photo-only.jpg (reference-interpreted)."
+      },
+      "abbr": "PPE"
+    },
+    "613959": {
+      "archetype": "b03-gdc-speedway:power-plant",
+      "basis": "known",
+      "note": "PPL HAL C. WEAVER POWER PLANT (301 E 24th, 1927; City label E23 is wrong): official polygon covers 96.3% of this City ring (round 3; was inferred from address order/area). The 212 ft chimney is measured inside it.",
+      "evidence": {
+        "source": "official UT ArcGIS layer Campus_Buildings_High_Security_view (research/dkr-frontage-58/references/ut-official-current-all.geojson, retrieved 2026-09-07; projected and overlapped in research/whole-campus-92/b03-gdc-speedway/derived/r3/plant_official.py -> plant-official.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PPL/ (fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Identity official (round 3). Facade family as before: Official E23 polygon overlaps 0.2% of this City ring. Round 2: facade family from the Codex photo-only capture live-reference/gdc-power-plant-north-photo-only.jpg (reference-interpreted)."
+      },
+      "abbr": "PPL"
+    },
+    "633980": {
+      "archetype": "utility",
+      "basis": "known",
+      "note": "PPA HAL C. WEAVER POWER PLANT ANNEX (325 E 24th, 1 floor): official polygon covers 96.4% of this City ring (round 3; was inferred from address order/area). ",
+      "evidence": {
+        "source": "official UT ArcGIS layer Campus_Buildings_High_Security_view (research/dkr-frontage-58/references/ut-official-current-all.geojson, retrieved 2026-09-07; projected and overlapped in research/whole-campus-92/b03-gdc-speedway/derived/r3/plant_official.py -> plant-official.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PPA/ (fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Identity official (round 3). Facade family as before: Massing stays from measured LiDAR tiers 15.4 / 21.4 m."
+      },
+      "abbr": "PPA"
+    },
+    "698195": {
+      "archetype": "b03-gdc-speedway:power-plant",
+      "basis": "known",
+      "note": "CS6 CENTRAL CHILLING STATION #6 (217 E 24th, 5 floors, 2009, McKinney York): official polygon covers 96.6% of this City ring (round 3; was inferred from address order/area). ",
+      "evidence": {
+        "source": "official UT ArcGIS layer Campus_Buildings_High_Security_view (research/dkr-frontage-58/references/ut-official-current-all.geojson, retrieved 2026-09-07; projected and overlapped in research/whole-campus-92/b03-gdc-speedway/derived/r3/plant_official.py -> plant-official.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CS6/ (fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Identity official (round 3). Facade family as before: LiDAR tiers 13.7 m / 24.9 m kept as measured massing once restored. Round 2: facade family from the Codex photo-only capture live-reference/gdc-power-plant-north-photo-only.jpg (reference-interpreted)."
+      },
+      "abbr": "CS6"
+    },
+    "-301": {
+      "archetype": "b03-gdc-speedway:cooling-tower",
+      "basis": "known",
+      "note": "CT1 UTM COOLING TOWER 1 (307 E 24th St, 2 floors, 2009, 1,587 gsf)",
+      "evidence": {
+        "source": "https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CT1/ (fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Cooling-tower enclosure: pale panel walls with intake louvres and fan shrouds on the deck, interpreted from the accepted atlas overviews b03-r0-b1 / b03-r0-b2 (top-down; walls barely visible)."
+      }
+    },
+    "-302": {
+      "archetype": "b03-gdc-speedway:cooling-tower",
+      "basis": "known",
+      "note": "CT2 UTM COOLING TOWER 2 (325 E 24th St, 1 floor, 2017, 891 gsf)",
+      "evidence": {
+        "source": "https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CT2/ (fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Cooling-tower enclosure: pale panel walls with intake louvres and fan shrouds on the deck, interpreted from the accepted atlas overviews b03-r0-b1 / b03-r0-b2 (top-down; walls barely visible)."
+      }
+    },
+    "-303": {
+      "archetype": "utility",
+      "basis": "known",
+      "note": "PA3 POWER PLANT ANNEX STOREHOUSE #3-WD (305 E 24th St, 1 floor, 1988, 1,232 gsf)",
+      "evidence": {
+        "source": "https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PA3/ (fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Plant storehouse: generic utility facade (no facade capture)."
+      }
+    },
+    "-304": {
+      "archetype": "utility",
+      "basis": "known",
+      "note": "PA4 POWER PLANT ANNEX STOREHOUSE #4-MET (305 E 24th St, 2 floors, 1981, 3,368 gsf)",
+      "evidence": {
+        "source": "https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PA4/ (fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Plant storehouse: generic utility facade (no facade capture)."
+      }
+    },
+    "-305": {
+      "archetype": "utility",
+      "basis": "known",
+      "note": "PA1 POWER PLANT ANNEX STOREHOUSE #1 (305 E 24th St, 1 floor, 1970, 384 gsf)",
+      "evidence": {
+        "source": "https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PA1/ (fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Plant storehouse: generic utility facade (no facade capture)."
+      }
+    },
+    "-306": {
+      "archetype": "utility",
+      "basis": "known",
+      "note": "PB2 POWER PLANT AUX. BLDG.#2 (13 m2 official polygon)",
+      "evidence": {
+        "source": "https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PB2/ (fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Plant storehouse: generic utility facade (no facade capture)."
+      }
+    },
+    "732538": {
+      "archetype": "b03-gdc-speedway:winship-brick",
+      "basis": "known",
+      "note": "F.L. Winship Drama Building (1962): glazed lobby (D05 photo-interpreted)",
+      "evidence": {
+        "source": "research/whole-campus-92/screenshot-dataset/online-photos/ut-win-564-directory-photo.jpg",
+        "basis": "reference-interpreted",
+        "note": "Facade only. Parapet kept equal to the previous archetype so the measured LiDAR roof top is unchanged."
+      }
+    },
+    "549259": {
+      "archetype": "b03-gdc-speedway:lab-theater",
+      "basis": "known",
+      "note": "Laboratory Theater (D05 photo-interpreted)",
+      "evidence": {
+        "source": "research/whole-campus-92/screenshot-dataset/online-photos/ut-lth-446-directory-photo.jpg",
+        "basis": "reference-interpreted",
+        "note": "Facade only; massing unchanged (LiDAR tiers). Parapet kept equal to the previous archetype so the measured LiDAR roof top is unchanged."
+      }
+    }
+  },
+  "archetypes": {
+    "b03-gdc-speedway:power-plant": {
+      "label": "Hal C. Weaver power plant brick hall (b03)",
+      "era": "1927-1988",
+      "wall": "brownBrick",
+      "wallColor": "#ad6c49",
+      "ground": "brownBrick",
+      "groundColor": "#a8684a",
+      "base": "limestone",
+      "baseColor": "#d6cbb2",
+      "baseHeight": 0.6,
+      "trim": "limestone",
+      "trimColor": "#ddd2bb",
+      "roof": "flat",
+      "roofColor": "#b9b1a2",
+      "roofSlope": 0,
+      "overhang": 0,
+      "brackets": false,
+      "parapet": 0.9,
+      "cornice": 0.35,
+      "belt": false,
+      "floor": 4.7,
+      "groundFloor": 5.4,
+      "window": {
+        "bay": 5.5,
+        "width": 2.2,
+        "sill": 1.1,
+        "head": 3.9,
+        "mullions": 1,
+        "transom": true,
+        "type": "punched",
+        "frame": "dark"
+      },
+      "groundWindow": {
+        "bay": 5.5,
+        "width": 2.2,
+        "sill": 1,
+        "head": 4.2,
+        "mullions": 1,
+        "transom": true,
+        "type": "punched",
+        "frame": "dark"
+      },
+      "door": {
+        "width": 3,
+        "height": 3.6,
+        "vehicle": true
+      },
+      "reference": "Codex photo-only capture live-reference/gdc-power-plant-north-photo-only.jpg (pose JSON adjacent): orange-red brick walls with pale stone trim and tall industrial windows on the plant halls; flat roofs with glazed monitors. Interpretation only; no dimensions taken from the image."
+    },
+    "b03-gdc-speedway:power-plant-tile": {
+      "label": "Power plant hall with clay-tile hipped roof (b03)",
+      "era": "1927-1988",
+      "wall": "brownBrick",
+      "wallColor": "#bf8a60",
+      "ground": "brownBrick",
+      "groundColor": "#b98559",
+      "base": "limestone",
+      "baseColor": "#d6cbb2",
+      "baseHeight": 0.6,
+      "trim": "limestone",
+      "trimColor": "#ddd2bb",
+      "roof": "hip-tile",
+      "roofColor": "#a4553b",
+      "roofSlope": 0.55,
+      "overhang": 0.5,
+      "brackets": false,
+      "parapet": 0,
+      "cornice": 0.35,
+      "belt": false,
+      "floor": 4.7,
+      "groundFloor": 5.4,
+      "window": {
+        "bay": 5.5,
+        "width": 2.2,
+        "sill": 1.1,
+        "head": 3.9,
+        "mullions": 1,
+        "transom": true,
+        "type": "punched",
+        "frame": "dark"
+      },
+      "groundWindow": {
+        "bay": 5.5,
+        "width": 2.2,
+        "sill": 1,
+        "head": 4.2,
+        "mullions": 1,
+        "transom": true,
+        "type": "punched",
+        "frame": "dark"
+      },
+      "door": {
+        "width": 3,
+        "height": 3.6,
+        "vehicle": true
+      },
+      "reference": "Same capture: 594130 has a red clay-tile hipped roof band around a flat central metal/skylight crown and tan brick walls; LiDAR (roofs-lidar.json 594130: mixed roof, pitch 31 deg) agrees. Interpretation only."
+    },
+    "b03-gdc-speedway:cooling-tower": {
+      "label": "Induced-draft cooling tower enclosure (b03)",
+      "era": "2009-2017",
+      "wall": "metal",
+      "wallColor": "#c3c6c2",
+      "ground": "metal",
+      "groundColor": "#b9bcb8",
+      "base": "precast",
+      "baseColor": "#bdb8ad",
+      "baseHeight": 0.6,
+      "trim": "metal",
+      "trimColor": "#a7aaa8",
+      "roof": "flat",
+      "roofColor": "#aeb1ae",
+      "roofSlope": 0,
+      "overhang": 0,
+      "brackets": false,
+      "parapet": 0.3,
+      "cornice": 0.15,
+      "belt": false,
+      "floor": 4,
+      "groundFloor": 4.2,
+      "window": {
+        "bay": 3,
+        "width": 2.7,
+        "sill": 1,
+        "head": 3.3,
+        "mullions": 0,
+        "transom": false,
+        "type": "ribbon",
+        "frame": "dark"
+      },
+      "groundWindow": {
+        "bay": 3,
+        "width": 2.7,
+        "sill": 0.8,
+        "head": 3.2,
+        "mullions": 0,
+        "transom": false,
+        "type": "ribbon",
+        "frame": "dark"
+      },
+      "door": {
+        "width": 1,
+        "height": 2.2
+      },
+      "reference": "Accepted atlas overviews b03-r0-b1/b03-r0-b2 (top-down): pale grey panel enclosures with a row of fan shrouds; dark ribbon openings stand for the air-intake louvres (estimate: the walls are not visible in any accepted capture). Interpretation only."
+    },
+    "b03-gdc-speedway:winship-brick": {
+      "label": "F. Loren Winship Drama Building: tan brick with a tall glazed lobby under a concrete canopy (b03, D05)",
+      "era": "1962",
+      "wall": "buffBrick",
+      "wallColor": "#c99c80",
+      "ground": "buffBrick",
+      "groundColor": "#c4977b",
+      "base": "precast",
+      "baseColor": "#cdc6b8",
+      "baseHeight": 0.5,
+      "trim": "precast",
+      "trimColor": "#d6d0c4",
+      "roof": "flat",
+      "roofColor": "#c4c1ba",
+      "roofSlope": 0,
+      "overhang": 0,
+      "brackets": false,
+      "parapet": 0.9,
+      "cornice": 0.9,
+      "belt": false,
+      "floor": 4.5,
+      "groundFloor": 5.5,
+      "window": {
+        "bay": 5.0,
+        "width": 1.0,
+        "sill": 1.2,
+        "head": 2.6,
+        "mullions": 0,
+        "transom": false,
+        "type": "punched",
+        "frame": "dark"
+      },
+      "groundWindow": {
+        "bay": 2.0,
+        "width": 1.85,
+        "sill": 0.2,
+        "head": 4.6,
+        "mullions": 1,
+        "transom": true,
+        "type": "glazed",
+        "frame": "dark"
+      },
+      "door": {
+        "width": 2.4,
+        "height": 3.0
+      },
+      "reference": "research/whole-campus-92/screenshot-dataset/online-photos/ut-win-564-directory-photo.jpg: tall dark-framed glazed lobby wall under a deep coffered concrete canopy, pinkish tan brick walls. Interpretation only."
+    },
+    "b03-gdc-speedway:lab-theater": {
+      "label": "Laboratory Theater: pale painted concrete, near-blank walls (b03, D05)",
+      "era": "1960s",
+      "wall": "precast",
+      "wallColor": "#d9d4c8",
+      "ground": "precast",
+      "groundColor": "#d5d0c4",
+      "base": "precast",
+      "baseColor": "#cbc6ba",
+      "baseHeight": 0.4,
+      "trim": "metal",
+      "trimColor": "#a9aaa6",
+      "roof": "flat",
+      "roofColor": "#c4c1ba",
+      "roofSlope": 0,
+      "overhang": 0,
+      "brackets": false,
+      "parapet": 0.9,
+      "cornice": 0.3,
+      "belt": false,
+      "floor": 4.6,
+      "groundFloor": 4.6,
+      "window": {
+        "bay": 7.0,
+        "width": 1.0,
+        "sill": 1.4,
+        "head": 2.6,
+        "mullions": 0,
+        "transom": false,
+        "type": "punched",
+        "frame": "dark"
+      },
+      "groundWindow": {
+        "bay": 7.0,
+        "width": 1.2,
+        "sill": 1.0,
+        "head": 2.4,
+        "mullions": 0,
+        "transom": false,
+        "type": "punched",
+        "frame": "dark"
+      },
+      "door": {
+        "width": 2.0,
+        "height": 2.6
+      },
+      "reference": "research/whole-campus-92/screenshot-dataset/online-photos/ut-lth-446-directory-photo.jpg: pale concrete/stucco walls with very few openings, exterior stair and glazed entry. Interpretation only."
+    }
+  },
+  "add": [
+    {
+      "id": -301,
+      "name": "UTM COOLING TOWER 1",
+      "abbr": "CT1",
+      "h": 8.65,
+      "rings": [
+        [
+          [
+            241.27,
+            -85.07
+          ],
+          [
+            236.21,
+            -28.91
+          ],
+          [
+            217.81,
+            -30.57
+          ],
+          [
+            222.85,
+            -86.73
+          ]
+        ]
+      ],
+      "evidence": {
+        "source": "official UT ArcGIS layer Campus_Buildings_High_Security_view (https://services9.arcgis.com/w9x0fkENXvuWZY26/arcgis/rest/services/Campus_Buildings_High_Security_view/FeatureServer/0/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson, retrieved 2026-09-07 as research/dkr-frontage-58/references/ut-official-current-all.geojson, sha256 559176b0...), projected in research/whole-campus-92/b03-gdc-speedway/derived/r3/plant_official.py; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CT1/ (307 E 24th St, 2 floors, 2009, 1,587 gsf, fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Missing from the City 2023 footprints (no campus.json record overlaps it) and so absent from the scene. Ring = official polygon. Main tower ring only; the official second part (the 23 x 3 m strip to the north) is City record 463644, kept."
+      }
+    },
+    {
+      "id": -302,
+      "name": "UTM COOLING TOWER 2",
+      "abbr": "CT2",
+      "h": 14.11,
+      "rings": [
+        [
+          [
+            258.57,
+            -18.05
+          ],
+          [
+            254.75,
+            -18.38
+          ],
+          [
+            257.97,
+            -59.89
+          ],
+          [
+            267.37,
+            -59.07
+          ],
+          [
+            264.15,
+            -17.57
+          ],
+          [
+            263.06,
+            -17.66
+          ]
+        ]
+      ],
+      "evidence": {
+        "source": "official UT ArcGIS layer Campus_Buildings_High_Security_view (https://services9.arcgis.com/w9x0fkENXvuWZY26/arcgis/rest/services/Campus_Buildings_High_Security_view/FeatureServer/0/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson, retrieved 2026-09-07 as research/dkr-frontage-58/references/ut-official-current-all.geojson, sha256 559176b0...), projected in research/whole-campus-92/b03-gdc-speedway/derived/r3/plant_official.py; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CT2/ (325 E 24th St, 1 floor, 2017, 891 gsf, fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Missing from the City 2023 footprints (no campus.json record overlaps it) and so absent from the scene. Ring = official polygon. Year built 2017 = the LiDAR year: the early-2017 flight already shows the deck and three fan shrouds; the southern fans are not resolved in it."
+      }
+    },
+    {
+      "id": -303,
+      "name": "POWER PLANT ANNEX STOREHOUSE #3-WD",
+      "abbr": "PA3",
+      "h": 5.6,
+      "rings": [
+        [
+          [
+            251.54,
+            -43.53
+          ],
+          [
+            250.62,
+            -31.65
+          ],
+          [
+            241.16,
+            -32.39
+          ],
+          [
+            242.08,
+            -44.27
+          ]
+        ]
+      ],
+      "evidence": {
+        "source": "official UT ArcGIS layer Campus_Buildings_High_Security_view (https://services9.arcgis.com/w9x0fkENXvuWZY26/arcgis/rest/services/Campus_Buildings_High_Security_view/FeatureServer/0/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson, retrieved 2026-09-07 as research/dkr-frontage-58/references/ut-official-current-all.geojson, sha256 559176b0...), projected in research/whole-campus-92/b03-gdc-speedway/derived/r3/plant_official.py; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PA3/ (305 E 24th St, 1 floor, 1988, 1,232 gsf, fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Missing from the City 2023 footprints (no campus.json record overlaps it) and so absent from the scene. Ring = official polygon. "
+      }
+    },
+    {
+      "id": -304,
+      "name": "POWER PLANT ANNEX STOREHOUSE #4-MET",
+      "abbr": "PA4",
+      "h": 6.89,
+      "rings": [
+        [
+          [
+            252.8,
+            -59.77
+          ],
+          [
+            251.54,
+            -43.53
+          ],
+          [
+            242.08,
+            -44.27
+          ],
+          [
+            243.34,
+            -60.51
+          ]
+        ]
+      ],
+      "evidence": {
+        "source": "official UT ArcGIS layer Campus_Buildings_High_Security_view (https://services9.arcgis.com/w9x0fkENXvuWZY26/arcgis/rest/services/Campus_Buildings_High_Security_view/FeatureServer/0/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson, retrieved 2026-09-07 as research/dkr-frontage-58/references/ut-official-current-all.geojson, sha256 559176b0...), projected in research/whole-campus-92/b03-gdc-speedway/derived/r3/plant_official.py; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PA4/ (305 E 24th St, 2 floors, 1981, 3,368 gsf, fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Missing from the City 2023 footprints (no campus.json record overlaps it) and so absent from the scene. Ring = official polygon. "
+      }
+    },
+    {
+      "id": -305,
+      "name": "POWER PLANT ANNEX STOREHOUSE #1",
+      "abbr": "PA1",
+      "h": 4.54,
+      "rings": [
+        [
+          [
+            250.34,
+            -31.68
+          ],
+          [
+            249.67,
+            -22.99
+          ],
+          [
+            245.64,
+            -23.3
+          ],
+          [
+            246.32,
+            -31.99
+          ]
+        ]
+      ],
+      "evidence": {
+        "source": "official UT ArcGIS layer Campus_Buildings_High_Security_view (https://services9.arcgis.com/w9x0fkENXvuWZY26/arcgis/rest/services/Campus_Buildings_High_Security_view/FeatureServer/0/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson, retrieved 2026-09-07 as research/dkr-frontage-58/references/ut-official-current-all.geojson, sha256 559176b0...), projected in research/whole-campus-92/b03-gdc-speedway/derived/r3/plant_official.py; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PA1/ (305 E 24th St, 1 floor, 1970, 384 gsf, fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Missing from the City 2023 footprints (no campus.json record overlaps it) and so absent from the scene. Ring = official polygon. "
+      }
+    },
+    {
+      "id": -306,
+      "name": "POWER PLANT AUX. BLDG.#2",
+      "abbr": "PB2",
+      "h": 3.15,
+      "rings": [
+        [
+          [
+            276.69,
+            -58.48
+          ],
+          [
+            280.53,
+            -58.17
+          ],
+          [
+            280.32,
+            -54.77
+          ],
+          [
+            276.47,
+            -55.08
+          ]
+        ]
+      ],
+      "evidence": {
+        "source": "official UT ArcGIS layer Campus_Buildings_High_Security_view (https://services9.arcgis.com/w9x0fkENXvuWZY26/arcgis/rest/services/Campus_Buildings_High_Security_view/FeatureServer/0/query?where=1%3D1&outFields=%2A&outSR=4326&f=geojson, retrieved 2026-09-07 as research/dkr-frontage-58/references/ut-official-current-all.geojson, sha256 559176b0...), projected in research/whole-campus-92/b03-gdc-speedway/derived/r3/plant_official.py; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/PB2/ (13 m2 official polygon, fetched 2026-10-20)",
+        "basis": "official",
+        "note": "Missing from the City 2023 footprints (no campus.json record overlaps it) and so absent from the scene. Ring = official polygon. "
+      }
+    }
+  ]
+}

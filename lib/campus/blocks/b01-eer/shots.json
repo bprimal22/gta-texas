@@ -1,0 +1,382 @@
+[
+ {
+  "id": "b01-eer-west-approach",
+  "block": "b01-eer",
+  "kind": "street",
+  "label": "EER west entrance from the engineering mall lawn walk",
+  "position": [
+   54.83,
+   7.1,
+   -259.56
+  ],
+  "target": [
+   141.72,
+   22,
+   -243.2
+  ],
+  "fov": 60,
+  "groundY": 5.3,
+  "note": "Mall walk (concrete strip north of the lawn) looking east: towers to Y45.0, braced open court frame, entry terrace Y12.5 above the one-storey west glazing. Compare coleman-01.jpg (2017)."
+ },
+ {
+  "id": "b01-eer-west-entry-close",
+  "block": "b01-eer",
+  "kind": "street",
+  "label": "EER west entrance up close from the paved mall end (walkable, below the tree canopy)",
+  "position": [
+   110,
+   7.3,
+   -243
+  ],
+  "target": [
+   138,
+   21,
+   -245
+  ],
+  "fov": 60,
+  "groundY": 5.53,
+  "note": "Round 2 (Codex inc-1 request): inspect the limestone west faces, inner-corner glazing, terrace soffit and the court curtain walls behind the braced frame without the foreground trees that hide b01-eer-west-approach. Trees are not removed."
+ },
+ {
+  "id": "b01-eer-speedway-side",
+  "block": "b01-eer",
+  "kind": "side",
+  "label": "PMA tower, PMA east wing and ECJ from the Speedway edge",
+  "position": [
+   49.28,
+   7.2,
+   -264.88
+  ],
+  "target": [
+   127.95,
+   40,
+   -314.1
+  ],
+  "fov": 60,
+  "groundY": 5.4,
+  "note": "Looks NE across the north mall edge: PMA west tower, Y74.2 core, Y51.1 east wing, ECJ (official GIS 430) beyond. Compare pma-2025-utnews.jpg."
+ },
+ {
+  "id": "b01-eer-upper-court",
+  "block": "b01-eer",
+  "kind": "rear",
+  "label": "EER upper outdoor court looking east under the roof screen",
+  "position": [
+   152.68,
+   14.3,
+   -242.22
+  ],
+  "target": [
+   215.43,
+   20,
+   -236.64
+  ],
+  "fov": 60,
+  "groundY": 12.5,
+  "note": "On the court deck (Y12.5): inner tower elevations, planted bed, skylight, Y38.6 slat screen, east braced frame. Compare 1012_Jeff-Goldberg-17.jpg. Deck height reference-interpreted."
+ },
+ {
+  "id": "b01-eer-san-jacinto",
+  "block": "b01-eer",
+  "kind": "side",
+  "label": "EER low east side and open east porch",
+  "position": [
+   237.47,
+   0.2,
+   -236.08
+  ],
+  "target": [
+   201.48,
+   14,
+   -237.88
+  ],
+  "fov": 60,
+  "groundY": -2.2,
+  "note": "Low (San Jacinto) side: building now reaches the -2.2 grade (former Y3.5 underside void removed); east atrium glazing below the deck."
+ },
+ {
+  "id": "b01-eer-aerial",
+  "block": "b01-eer",
+  "kind": "aerial",
+  "label": "Engineering block aerial from the southwest",
+  "position": [
+   96.51,
+   105,
+   -186.38
+  ],
+  "target": [
+   175.09,
+   20,
+   -279.78
+  ],
+  "fov": 55,
+  "groundY": 4,
+  "note": "EER towers/court/screen, PMA+ECJ split, PAT and GLT restored, ACS 2026 estimate massing."
+ },
+ {
+  "id": "b01-live-east-aerial",
+  "block": "b01-eer",
+  "kind": "aerial",
+  "label": "LIVE-REFERENCE pose: EER from the east, 100 m flight (matches live-reference/eer-east-aerial-hybrid.json)",
+  "position": [
+   222.29,
+   102.26,
+   -247.21
+  ],
+  "target": [
+   217.73,
+   99.4,
+   -247.62
+  ],
+  "fov": 55,
+  "groundY": -2.52,
+  "note": "Research-only matched camera for comparison with the user's live original game (hybrid scene: its pale slab towers / flat EER roofs are placeholders, not ground truth). Not architecture evidence."
+ },
+ {
+  "id": "b01-live-south-north",
+  "block": "b01-eer",
+  "kind": "aerial",
+  "label": "LIVE-REFERENCE pose: engineering block from the south looking north (matches live-reference/eer-south-looking-north-native.json)",
+  "position": [
+   103.57,
+   67.65,
+   -184.67
+  ],
+  "target": [
+   103.11,
+   65.49,
+   -189.6
+  ],
+  "fov": 55,
+  "groundY": 3.04,
+  "note": "Research-only matched camera (native 1204x954 capture in the live game). Not architecture evidence."
+ },
+ {
+  "id": "b01-bridge-south-end",
+  "block": "b01-eer",
+  "kind": "street",
+  "label": "Dean Keeton engineering bridge from its south end on the ECJ/PMA terrace, looking north along the deck",
+  "position": [
+   134.89,
+   8.73,
+   -341.06
+  ],
+  "target": [
+   137.22,
+   7.8,
+   -383.01
+  ],
+  "fov": 60,
+  "groundY": 7.03,
+  "note": "Round 3. Terrace floor Y7.03 (DSM at the OSM 25775199 south node). Solid gray parapets, open deck; ETC/CPE plaza beyond. Deck grade, width and parapet height are estimates."
+ },
+ {
+  "id": "b01-bridge-north-end",
+  "block": "b01-eer",
+  "kind": "street",
+  "label": "Dean Keeton engineering bridge from the north (ETC/CPE plaza) landing, looking south",
+  "position": [
+   141.4,
+   7.25,
+   -414.77
+  ],
+  "target": [
+   135.54,
+   7.5,
+   -363.08
+  ],
+  "fov": 60,
+  "groundY": 5.55,
+  "note": "Round 3. The landing ramps 12% from the north node (Y6.40, LiDAR plaza 6.39 at z-410) down to the baked terrain, which is ~1.3-2.5 m below the LiDAR plaza here (no terrain rebake)."
+ },
+ {
+  "id": "b01-bridge-dean-keeton-under",
+  "block": "b01-eer",
+  "kind": "street",
+  "label": "East Dean Keeton street view under the span (north carriageway, looking west)",
+  "position": [
+   155.82,
+   2,
+   -367.84
+  ],
+  "target": [
+   120.96,
+   4.5,
+   -370.94
+  ],
+  "fov": 60,
+  "groundY": 0.34,
+  "note": "Round 3. Compare streetview-reference-survey 17-engineering-dean-keeton.jpg (Mar 2024): uncovered deck, light girders/fascia, gray parapet, open underside (headroom ~4.6 m over the carriageways, estimate). Median pier is an estimate."
+ },
+ {
+  "id": "b01-bridge-aerial",
+  "block": "b01-eer",
+  "kind": "aerial",
+  "label": "Dean Keeton engineering bridge aerial from the southeast",
+  "position": [
+   185,
+   50,
+   -352
+  ],
+  "target": [
+   136.4,
+   6,
+   -373
+  ],
+  "fov": 55,
+  "groundY": 0.6,
+  "note": "Round 3. Plan = OSM 25775199 (58.08 m) between the ECJ/PMA terrace and the ETC/CPE plaza; compare screenshot-dataset b01-r0-a1-overview (research only)."
+ },
+ {
+  "id": "b01-d01-orbit-southwest",
+  "block": "b01-eer",
+  "kind": "aerial",
+  "label": "D01 CPE orbit south-west (matches district-orbits-30m d01-orbit-southwest camera/target/FOV)",
+  "position": [
+   34.23,
+   35.84,
+   -397.7
+  ],
+  "target": [
+   97.87,
+   12.65,
+   -461.34
+  ],
+  "fov": 60,
+  "groundY": 5.84,
+  "note": "Exact actual readback of the research orbit pose. CPE south face punched-window clusters, west end notch glazing, plant tiers."
+ },
+ {
+  "id": "b01-d01-orbit-southeast",
+  "block": "b01-eer",
+  "kind": "aerial",
+  "label": "D01 CPE orbit south-east (d01-orbit-southeast moved 18 m along the view ray)",
+  "position": [
+   149.1,
+   29.27,
+   -410.11
+  ],
+  "target": [
+   97.87,
+   12.65,
+   -461.34
+  ],
+  "fov": 60,
+  "groundY": 3.29,
+  "note": "The exact research readback [161.51,33.29,-397.7] lies INSIDE the ETC footprint below its Y40.7 roof (also the likely cause of the reference artefact); moved 18 m toward the target, just west of the ETC west face. Same target / FOV."
+ },
+ {
+  "id": "b01-d01-orbit-northeast",
+  "block": "b01-eer",
+  "kind": "aerial",
+  "label": "D01 CPE orbit north-east (d01-orbit-northeast moved 9 m along the view ray)",
+  "position": [
+   155.28,
+   29.56,
+   -518.75
+  ],
+  "target": [
+   97.87,
+   12.65,
+   -461.34
+  ],
+  "fov": 60,
+  "groundY": 1.4,
+  "note": "Camera moved 9 m toward the target along the same ray so it lies within the b01 shot rectangle margin (G5); otherwise the reference pose."
+ },
+ {
+  "id": "b01-d01-orbit-northwest",
+  "block": "b01-eer",
+  "kind": "aerial",
+  "label": "D01 CPE orbit north-west (d01-orbit-northwest moved 9 m along the view ray)",
+  "position": [
+   40.37,
+   34.77,
+   -518.84
+  ],
+  "target": [
+   97.87,
+   12.65,
+   -461.34
+  ],
+  "fov": 60,
+  "groundY": 7.13,
+  "note": "Camera moved 9 m toward the target (G5 margin). North face windows, west bump notch glazing and ducts."
+ },
+ {
+  "id": "b01-d01-cpe-south-lawn",
+  "block": "b01-eer",
+  "kind": "street",
+  "label": "D01 CPE south face from the lawn between CPE and ETC",
+  "position": [
+   118,
+   7.7,
+   -412
+  ],
+  "target": [
+   92,
+   16,
+   -432
+  ],
+  "fov": 60,
+  "groundY": 6,
+  "note": "Pedestrian view of the punched-window clusters and the attic panels (interpreted)."
+ },
+ {
+  "id": "b01-d01-etc-dean-keeton",
+  "block": "b01-eer",
+  "kind": "street",
+  "label": "D01 ETC from the East Dean Keeton north sidewalk",
+  "position": [
+   160,
+   3.9,
+   -376
+  ],
+  "target": [
+   168,
+   24,
+   -425
+  ],
+  "fov": 60,
+  "groundY": 2.1,
+  "note": "ETC recessed bands with splayed sills and columns (interpreted); lower level only where grade exposes it."
+ },
+ {
+  "id": "b01-d02-orbit-southeast",
+  "block": "b01-eer",
+  "kind": "aerial",
+  "label": "D02 matching pose of evidence capture d02-orbit-southeast: GLT dark curtain-wall grid (near left), J.T. Patterson red brick bands / ribbon windows (centre), EER pale tower face (right)",
+  "position": [
+   179.89,
+   28.939,
+   -168.86
+  ],
+  "target": [
+   116.25,
+   14.054,
+   -232.5
+  ],
+  "fov": 60,
+  "groundY": -1.06,
+  "note": "Pose = actualCameraCampus/actualTargetCampus of district-orbits-30m d02-orbit-southeast (reference only, never a texture). EER is root-authored (engineering-courtyard.ts) and unchanged by b01."
+ },
+ {
+  "id": "b01-d02-orbit-northwest",
+  "block": "b01-eer",
+  "kind": "aerial",
+  "label": "D02 matching pose of evidence capture d02-orbit-northwest: Patterson labs (right) and the GLT glass grid beyond the engineering court",
+  "position": [
+   52.61,
+   36.148,
+   -296.14
+  ],
+  "target": [
+   116.25,
+   14.054,
+   -232.5
+  ],
+  "fov": 60,
+  "groundY": 6.15,
+  "note": "Pose from district-orbits-30m d02-orbit-northwest. PMA tower (left) and the Patterson rooftop duct housing are unchanged (root PMA; PAT roof keeps its measured LiDAR tier)."
+ }
+]

@@ -1,0 +1,6 @@
+{
+  "outerGrade": [[0, 2.929226828443149], [7.5, 2.965860683523683], [14, 2.8090281407104705], [20.1598707551, 2.45]],
+  "status": "First station is observed old west cap; next two are prepared visible source with geometricError2.006m; last is a documented supported fill to actual authored GDC north boundary atY2.45, not a fabricated source hit.",
+  "inner": "Use original frozen frontage.floorY, not window-sill tops. At s7.5 structural floorY2.885; sillY3.182482.",
+  "west": "Use existing POB boundary.height callback at exact X26.0695267 shared cap edge."
+}

@@ -1,0 +1,3082 @@
+{
+ "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 / DSM / DTM rasters (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b13-north-perimeter/east/derived/inventory-b13e.json; campus Y = NAVD88 - 165, raster shift dx -0.23 dz -1.07",
+ "records": {
+  "463210:12": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 5.95,
+   "roofY_P50": 6.51,
+   "roofY_P90": 6.98,
+   "roofY_P95": 7.04,
+   "roofY_max": 12.27,
+   "coverage": 0.88,
+   "groundY": 2.3,
+   "restated": true
+  },
+  "463840:21": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 6.08,
+   "roofY_P50": 6.12,
+   "roofY_P90": 6.14,
+   "roofY_P95": 6.15,
+   "roofY_max": 6.16,
+   "coverage": 0.85,
+   "groundY": 3.1,
+   "restated": true
+  },
+  "464119:26": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 7.68,
+   "roofY_P50": 8.71,
+   "roofY_P90": 9.9,
+   "roofY_P95": 10.07,
+   "roofY_max": 10.15,
+   "coverage": 0.92,
+   "groundY": 3.4,
+   "restated": true
+  },
+  "464136:28": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 11.78,
+   "roofY_P50": 12.07,
+   "roofY_P90": 12.33,
+   "roofY_P95": 12.38,
+   "roofY_max": 12.46,
+   "coverage": 0.68,
+   "groundY": 9.1,
+   "restated": true
+  },
+  "464846:41": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 7.26,
+   "roofY_P50": 7.67,
+   "roofY_P90": 8.19,
+   "roofY_P95": 8.29,
+   "roofY_max": 8.43,
+   "coverage": 0.6,
+   "groundY": 3.8,
+   "restated": true
+  },
+  "464906:42": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 10.6,
+   "roofY_P50": 10.94,
+   "roofY_P90": 11.24,
+   "roofY_P95": 11.29,
+   "roofY_max": 19.06,
+   "coverage": 0.78,
+   "groundY": 4.7,
+   "restated": true
+  },
+  "464951:44": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.47,
+   "roofY_P50": 5.61,
+   "roofY_P90": 6.56,
+   "roofY_P95": 6.69,
+   "roofY_max": 6.81,
+   "coverage": 0.97,
+   "groundY": 1.1,
+   "restated": true
+  },
+  "465997:54": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 22.61,
+   "roofY_P50": 23.71,
+   "roofY_P90": 24.81,
+   "roofY_P95": 24.95,
+   "roofY_max": 25.07,
+   "coverage": 0.97,
+   "groundY": 11.4,
+   "restated": true
+  },
+  "466126:56": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 7.63,
+   "roofY_P50": 8.55,
+   "roofY_P90": 9.42,
+   "roofY_P95": 9.54,
+   "roofY_max": 10.3,
+   "coverage": 0.76,
+   "groundY": 0.8,
+   "restated": true
+  },
+  "466217:60": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 9.38,
+   "roofY_P50": 12.03,
+   "roofY_P90": 13.46,
+   "roofY_P95": 13.67,
+   "roofY_max": 13.91,
+   "coverage": 0.86,
+   "groundY": 5.9,
+   "restated": true
+  },
+  "466326:63": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 20.66,
+   "roofY_P50": 21.61,
+   "roofY_P90": 22.58,
+   "roofY_P95": 22.7,
+   "roofY_max": 22.8,
+   "coverage": 0.42,
+   "groundY": 14.7,
+   "restated": false,
+   "exempt": "special: checked in conflicts/cityTop"
+  },
+  "466575:67": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 6.97,
+   "roofY_P50": 7.76,
+   "roofY_P90": 8.52,
+   "roofY_P95": 8.63,
+   "roofY_max": 10.56,
+   "coverage": 0.75,
+   "groundY": 2.2,
+   "restated": true
+  },
+  "466707:70": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.29,
+   "roofY_P50": 4.65,
+   "roofY_P90": 4.87,
+   "roofY_P95": 4.93,
+   "roofY_max": 4.96,
+   "coverage": 0.94,
+   "groundY": 1.1,
+   "restated": true
+  },
+  "466746:72": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 15.88,
+   "roofY_P50": 16.63,
+   "roofY_P90": 17.36,
+   "roofY_P95": 17.53,
+   "roofY_max": 17.91,
+   "coverage": 0.95,
+   "groundY": 12.3,
+   "restated": true
+  },
+  "470243:80": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 3.17,
+   "roofY_P50": 3.43,
+   "roofY_P90": 3.6,
+   "roofY_P95": 3.61,
+   "roofY_max": 3.64,
+   "coverage": 0.83,
+   "groundY": -2.5,
+   "restated": true
+  },
+  "484337:87": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 9.65,
+   "roofY_P50": 10.55,
+   "roofY_P90": 11.6,
+   "roofY_P95": 11.75,
+   "roofY_max": 12.13,
+   "coverage": 0.92,
+   "groundY": 5.2,
+   "restated": true
+  },
+  "485205:95": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 11.2,
+   "roofY_P50": 11.98,
+   "roofY_P90": 12.89,
+   "roofY_P95": 13.03,
+   "roofY_max": 13.39,
+   "coverage": 0.84,
+   "groundY": 4.5,
+   "restated": true
+  },
+  "485482:101": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 6.42,
+   "roofY_P50": 7.36,
+   "roofY_P90": 8.4,
+   "roofY_P95": 8.55,
+   "roofY_max": 8.98,
+   "coverage": 0.78,
+   "groundY": 1.8,
+   "restated": true
+  },
+  "486460:111": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 10.53,
+   "roofY_P50": 11.55,
+   "roofY_P90": 12.71,
+   "roofY_P95": 12.88,
+   "roofY_max": 13.16,
+   "coverage": 0.96,
+   "groundY": 4.5,
+   "restated": true
+  },
+  "487179:118": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 15.86,
+   "roofY_P50": 18.15,
+   "roofY_P90": 19.47,
+   "roofY_P95": 19.64,
+   "roofY_max": 19.82,
+   "coverage": 0.83,
+   "groundY": 9.6,
+   "restated": true
+  },
+  "487363:123": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 3.03,
+   "roofY_P50": 4.25,
+   "roofY_P90": 5.73,
+   "roofY_P95": 5.97,
+   "roofY_max": 10.33,
+   "coverage": 0.68,
+   "groundY": -1.7,
+   "restated": true
+  },
+  "487661:127": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 6.72,
+   "roofY_P50": 7.25,
+   "roofY_P90": 7.61,
+   "roofY_P95": 7.66,
+   "roofY_max": 12.95,
+   "coverage": 0.82,
+   "groundY": 3.1,
+   "restated": true
+  },
+  "490604:140": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 12.85,
+   "roofY_P50": 13.78,
+   "roofY_P90": 15.02,
+   "roofY_P95": 15.27,
+   "roofY_max": 15.67,
+   "coverage": 0.82,
+   "groundY": 9.1,
+   "restated": true
+  },
+  "501832:145": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 11.09,
+   "roofY_P50": 11.71,
+   "roofY_P90": 12.15,
+   "roofY_P95": 12.2,
+   "roofY_max": 12.25,
+   "coverage": 0.93,
+   "groundY": 8.4,
+   "restated": true
+  },
+  "502319:151": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 9.75,
+   "roofY_P50": 9.85,
+   "roofY_P90": 9.96,
+   "roofY_P95": 9.97,
+   "roofY_max": 12.27,
+   "coverage": 0.83,
+   "groundY": 6.6,
+   "restated": true
+  },
+  "502615:157": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 11.83,
+   "roofY_P50": 12.52,
+   "roofY_P90": 12.91,
+   "roofY_P95": 13.01,
+   "roofY_max": 13.24,
+   "coverage": 0.79,
+   "groundY": 8.1,
+   "restated": true
+  },
+  "502895:163": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 13.82,
+   "roofY_P50": 14.14,
+   "roofY_P90": 16.57,
+   "roofY_P95": 16.58,
+   "roofY_max": 16.87,
+   "coverage": 0.96,
+   "groundY": 4.5,
+   "restated": true
+  },
+  "503430:170": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 10.66,
+   "roofY_P50": 13.25,
+   "roofY_P90": 14.24,
+   "roofY_P95": 14.38,
+   "roofY_max": 19.82,
+   "coverage": 0.85,
+   "groundY": 6.0,
+   "restated": true
+  },
+  "504174:180": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 22.4,
+   "roofY_P50": 22.64,
+   "roofY_P90": 22.89,
+   "roofY_P95": 22.92,
+   "roofY_max": 23.62,
+   "coverage": 0.87,
+   "groundY": 16.2,
+   "restated": true
+  },
+  "504286:182": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 11.07,
+   "roofY_P50": 12.34,
+   "roofY_P90": 15.37,
+   "roofY_P95": 15.77,
+   "roofY_max": 16.17,
+   "coverage": 0.86,
+   "groundY": 7.1,
+   "restated": true
+  },
+  "504450:185": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 22.05,
+   "roofY_P50": 23.14,
+   "roofY_P90": 24.2,
+   "roofY_P95": 24.35,
+   "roofY_max": 24.48,
+   "coverage": 0.97,
+   "groundY": 10.6,
+   "restated": true
+  },
+  "504756:190": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 7.29,
+   "roofY_P50": 7.67,
+   "roofY_P90": 7.87,
+   "roofY_P95": 7.89,
+   "roofY_max": 7.89,
+   "coverage": 0.66,
+   "groundY": 3.8,
+   "restated": true
+  },
+  "504799:191": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 20.8,
+   "roofY_P50": 21.18,
+   "roofY_P90": 21.47,
+   "roofY_P95": 23.53,
+   "roofY_max": 26.08,
+   "coverage": 0.66,
+   "groundY": 15.7,
+   "restated": true
+  },
+  "504915:196": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 14.95,
+   "roofY_P50": 15.36,
+   "roofY_P90": 15.72,
+   "roofY_P95": 15.76,
+   "roofY_max": 15.79,
+   "coverage": 0.91,
+   "groundY": 11.8,
+   "restated": true
+  },
+  "506185:210": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 13.59,
+   "roofY_P50": 14.56,
+   "roofY_P90": 15.34,
+   "roofY_P95": 15.41,
+   "roofY_max": 17.43,
+   "coverage": 0.79,
+   "groundY": 9.7,
+   "restated": true
+  },
+  "507045:217": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 14.0,
+   "roofY_P50": 16.4,
+   "roofY_P90": 18.31,
+   "roofY_P95": 18.54,
+   "roofY_max": 19.26,
+   "coverage": 0.86,
+   "groundY": 3.5,
+   "restated": true
+  },
+  "507097:218": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 5.0,
+   "roofY_P50": 8.02,
+   "roofY_P90": 9.48,
+   "roofY_P95": 9.92,
+   "roofY_max": 12.97,
+   "coverage": 0.91,
+   "groundY": 1.5,
+   "restated": true
+  },
+  "507131:219": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 4.74,
+   "roofY_P50": 4.76,
+   "roofY_P90": 4.77,
+   "roofY_P95": 4.77,
+   "roofY_max": 4.92,
+   "coverage": 0.79,
+   "groundY": 1.7,
+   "restated": true
+  },
+  "507241:221": {
+   "unit": "b13-r0-j1",
+   "roofY_P10": 19.64,
+   "roofY_P50": 20.76,
+   "roofY_P90": 21.77,
+   "roofY_P95": 21.86,
+   "roofY_max": 21.99,
+   "coverage": 0.96,
+   "groundY": 15.0,
+   "restated": true
+  },
+  "507933:234": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.34,
+   "roofY_P50": 5.14,
+   "roofY_P90": 9.38,
+   "roofY_P95": 9.82,
+   "roofY_max": 10.84,
+   "coverage": 0.61,
+   "groundY": 1.6,
+   "restated": true,
+   "p50Only": "two-part house: whole-ring P95 band set by the upper part; the upper part is checked separately in volumes"
+  },
+  "507954:235": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 11.71,
+   "roofY_P50": 13.26,
+   "roofY_P90": 14.13,
+   "roofY_P95": 14.25,
+   "roofY_max": 14.34,
+   "coverage": 0.88,
+   "groundY": 7.9,
+   "restated": true
+  },
+  "508285:238": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 15.67,
+   "roofY_P50": 16.06,
+   "roofY_P90": 16.43,
+   "roofY_P95": 16.48,
+   "roofY_max": 18.73,
+   "coverage": 0.94,
+   "groundY": 9.2,
+   "restated": true
+  },
+  "525425:253": {
+   "unit": "b13-r0-j1",
+   "roofY_P10": 22.36,
+   "roofY_P50": 23.33,
+   "roofY_P90": 24.53,
+   "roofY_P95": 24.82,
+   "roofY_max": 25.25,
+   "coverage": 0.97,
+   "groundY": 11.7,
+   "restated": true
+  },
+  "525710:259": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 15.22,
+   "roofY_P50": 17.21,
+   "roofY_P90": 18.11,
+   "roofY_P95": 18.23,
+   "roofY_max": 18.36,
+   "coverage": 0.94,
+   "groundY": 10.4,
+   "restated": true
+  },
+  "525824:262": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 7.22,
+   "roofY_P50": 8.35,
+   "roofY_P90": 9.47,
+   "roofY_P95": 9.58,
+   "roofY_max": 9.69,
+   "coverage": 0.85,
+   "groundY": -3.2,
+   "restated": true
+  },
+  "526036:266": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 17.82,
+   "roofY_P50": 18.38,
+   "roofY_P90": 18.44,
+   "roofY_P95": 18.45,
+   "roofY_max": 19.85,
+   "coverage": 0.95,
+   "groundY": 8.4,
+   "restated": true
+  },
+  "526091:270": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 10.38,
+   "roofY_P50": 10.82,
+   "roofY_P90": 11.09,
+   "roofY_P95": 11.12,
+   "roofY_max": 11.15,
+   "coverage": 0.85,
+   "groundY": 6.5,
+   "restated": true
+  },
+  "526777:288": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 7.06,
+   "roofY_P50": 7.24,
+   "roofY_P90": 7.43,
+   "roofY_P95": 7.46,
+   "roofY_max": 14.05,
+   "coverage": 0.8,
+   "groundY": 2.9,
+   "restated": true
+  },
+  "526884:290": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 9.49,
+   "roofY_P50": 10.42,
+   "roofY_P90": 11.48,
+   "roofY_P95": 11.61,
+   "roofY_max": 11.75,
+   "coverage": 0.86,
+   "groundY": 5.5,
+   "restated": true
+  },
+  "526996:292": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 6.65,
+   "roofY_P50": 8.06,
+   "roofY_P90": 8.88,
+   "roofY_P95": 9.0,
+   "roofY_max": 10.79,
+   "coverage": 0.8,
+   "groundY": 3.1,
+   "restated": true
+  },
+  "527039:293": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 19.29,
+   "roofY_P50": 19.41,
+   "roofY_P90": 19.52,
+   "roofY_P95": 19.53,
+   "roofY_max": 21.68,
+   "coverage": 0.89,
+   "groundY": 16.5,
+   "restated": true
+  },
+  "527077:295": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 7.57,
+   "roofY_P50": 8.09,
+   "roofY_P90": 8.47,
+   "roofY_P95": 8.53,
+   "roofY_max": 8.59,
+   "coverage": 0.84,
+   "groundY": 3.9,
+   "restated": true
+  },
+  "528037:310": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 16.62,
+   "roofY_P50": 17.72,
+   "roofY_P90": 18.56,
+   "roofY_P95": 18.65,
+   "roofY_max": 19.29,
+   "coverage": 0.89,
+   "groundY": 10.4,
+   "restated": true
+  },
+  "528726:323": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 22.18,
+   "roofY_P50": 23.27,
+   "roofY_P90": 24.37,
+   "roofY_P95": 24.52,
+   "roofY_max": 24.63,
+   "coverage": 0.97,
+   "groundY": 11.9,
+   "restated": true
+  },
+  "529036:326": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 18.47,
+   "roofY_P50": 20.33,
+   "roofY_P90": 22.16,
+   "roofY_P95": 22.3,
+   "roofY_max": 22.44,
+   "coverage": 0.94,
+   "groundY": 14.1,
+   "restated": true
+  },
+  "529135:328": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 10.43,
+   "roofY_P50": 10.83,
+   "roofY_P90": 11.29,
+   "roofY_P95": 11.4,
+   "roofY_max": 11.55,
+   "coverage": 0.81,
+   "groundY": 7.1,
+   "restated": true
+  },
+  "529164:329": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 9.19,
+   "roofY_P50": 11.18,
+   "roofY_P90": 11.91,
+   "roofY_P95": 12.05,
+   "roofY_max": 14.78,
+   "coverage": 0.82,
+   "groundY": 2.1,
+   "restated": true
+  },
+  "529330:333": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 6.46,
+   "roofY_P50": 6.86,
+   "roofY_P90": 7.43,
+   "roofY_P95": 7.64,
+   "roofY_max": 15.1,
+   "coverage": 0.87,
+   "groundY": 2.6,
+   "restated": true
+  },
+  "529694:339": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 14.87,
+   "roofY_P50": 15.88,
+   "roofY_P90": 19.33,
+   "roofY_P95": 19.51,
+   "roofY_max": 19.6,
+   "coverage": 0.98,
+   "groundY": 10.3,
+   "restated": true
+  },
+  "529908:341": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 10.85,
+   "roofY_P50": 11.68,
+   "roofY_P90": 12.63,
+   "roofY_P95": 12.76,
+   "roofY_max": 15.5,
+   "coverage": 0.95,
+   "groundY": 6.7,
+   "restated": true
+  },
+  "530069:342": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 9.2,
+   "roofY_P50": 9.83,
+   "roofY_P90": 10.59,
+   "roofY_P95": 10.66,
+   "roofY_max": 10.97,
+   "coverage": 0.75,
+   "groundY": 5.6,
+   "restated": true
+  },
+  "533730:351": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 11.33,
+   "roofY_P50": 11.62,
+   "roofY_P90": 12.08,
+   "roofY_P95": 12.24,
+   "roofY_max": 12.31,
+   "coverage": 0.78,
+   "groundY": 8.4,
+   "restated": true
+  },
+  "548032:360": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 12.46,
+   "roofY_P50": 13.43,
+   "roofY_P90": 14.18,
+   "roofY_P95": 14.3,
+   "roofY_max": 14.44,
+   "coverage": 0.79,
+   "groundY": 7.5,
+   "restated": true
+  },
+  "548052:361": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 6.07,
+   "roofY_P50": 6.48,
+   "roofY_P90": 7.01,
+   "roofY_P95": 7.08,
+   "roofY_max": 7.28,
+   "coverage": 0.82,
+   "groundY": 2.9,
+   "restated": true
+  },
+  "548174:364": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 12.29,
+   "roofY_P50": 13.0,
+   "roofY_P90": 13.65,
+   "roofY_P95": 13.81,
+   "roofY_max": 13.91,
+   "coverage": 0.75,
+   "groundY": 6.8,
+   "restated": true
+  },
+  "548495:371": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 13.83,
+   "roofY_P50": 14.14,
+   "roofY_P90": 14.61,
+   "roofY_P95": 14.73,
+   "roofY_max": 19.46,
+   "coverage": 0.97,
+   "groundY": 9.3,
+   "restated": true
+  },
+  "548650:375": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 10.49,
+   "roofY_P50": 11.31,
+   "roofY_P90": 12.06,
+   "roofY_P95": 12.19,
+   "roofY_max": 12.32,
+   "coverage": 0.83,
+   "groundY": 6.1,
+   "restated": true
+  },
+  "548823:378": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 18.08,
+   "roofY_P50": 18.59,
+   "roofY_P90": 19.33,
+   "roofY_P95": 19.54,
+   "roofY_max": 21.84,
+   "coverage": 0.95,
+   "groundY": 10.4,
+   "restated": true
+  },
+  "548882:380": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 6.14,
+   "roofY_P50": 7.49,
+   "roofY_P90": 8.77,
+   "roofY_P95": 8.85,
+   "roofY_max": 9.0,
+   "coverage": 0.88,
+   "groundY": 1.9,
+   "restated": true
+  },
+  "548894:381": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 18.73,
+   "roofY_P50": 18.84,
+   "roofY_P90": 18.96,
+   "roofY_P95": 18.99,
+   "roofY_max": 19.03,
+   "coverage": 0.9,
+   "groundY": 14.8,
+   "restated": true
+  },
+  "549118:388": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 11.35,
+   "roofY_P50": 11.66,
+   "roofY_P90": 11.9,
+   "roofY_P95": 11.93,
+   "roofY_max": 11.94,
+   "coverage": 0.59,
+   "groundY": 8.8,
+   "restated": true
+  },
+  "549403:392": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 12.35,
+   "roofY_P50": 13.37,
+   "roofY_P90": 14.21,
+   "roofY_P95": 14.32,
+   "roofY_max": 14.88,
+   "coverage": 0.84,
+   "groundY": 8.4,
+   "restated": true
+  },
+  "549436:394": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 3.55,
+   "roofY_P50": 3.8,
+   "roofY_P90": 11.55,
+   "roofY_P95": 11.6,
+   "roofY_max": 11.66,
+   "coverage": 0.36,
+   "groundY": -0.6,
+   "restated": false
+  },
+  "549473:395": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 7.9,
+   "roofY_P50": 8.42,
+   "roofY_P90": 9.13,
+   "roofY_P95": 9.27,
+   "roofY_max": 9.41,
+   "coverage": 0.75,
+   "groundY": 1.8,
+   "restated": true
+  },
+  "549583:400": {
+   "unit": "b13-r0-j1",
+   "roofY_P10": 18.7,
+   "roofY_P50": 18.71,
+   "roofY_P90": 18.73,
+   "roofY_P95": 18.73,
+   "roofY_max": 18.77,
+   "coverage": 0.95,
+   "groundY": 15.0,
+   "restated": true
+  },
+  "549632:402": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.97,
+   "roofY_P50": 5.61,
+   "roofY_P90": 5.99,
+   "roofY_P95": 6.03,
+   "roofY_max": 8.6,
+   "coverage": 0.81,
+   "groundY": 1.2,
+   "restated": true
+  },
+  "549793:404": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 6.38,
+   "roofY_P50": 7.77,
+   "roofY_P90": 10.71,
+   "roofY_P95": 10.92,
+   "roofY_max": 12.98,
+   "coverage": 0.81,
+   "groundY": -0.3,
+   "restated": true
+  },
+  "549907:410": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 14.61,
+   "roofY_P50": 15.88,
+   "roofY_P90": 17.01,
+   "roofY_P95": 17.15,
+   "roofY_max": 17.27,
+   "coverage": 0.93,
+   "groundY": 11.4,
+   "restated": true
+  },
+  "550115:414": {
+   "unit": "b13-r0-j1",
+   "roofY_P10": 18.5,
+   "roofY_P50": 19.35,
+   "roofY_P90": 20.44,
+   "roofY_P95": 20.61,
+   "roofY_max": 20.89,
+   "coverage": 0.96,
+   "groundY": 14.1,
+   "restated": true
+  },
+  "550310:415": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 14.39,
+   "roofY_P50": 15.25,
+   "roofY_P90": 16.31,
+   "roofY_P95": 16.5,
+   "roofY_max": 16.59,
+   "coverage": 0.96,
+   "groundY": 8.2,
+   "restated": true
+  },
+  "550577:418": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.32,
+   "roofY_P50": 5.17,
+   "roofY_P90": 5.79,
+   "roofY_P95": 5.94,
+   "roofY_max": 5.99,
+   "coverage": 0.85,
+   "groundY": 1.1,
+   "restated": true
+  },
+  "550850:425": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 9.69,
+   "roofY_P50": 10.52,
+   "roofY_P90": 10.97,
+   "roofY_P95": 11.09,
+   "roofY_max": 11.12,
+   "coverage": 0.55,
+   "groundY": 4.9,
+   "restated": true
+  },
+  "567008:452": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 14.65,
+   "roofY_P50": 15.49,
+   "roofY_P90": 16.25,
+   "roofY_P95": 16.32,
+   "roofY_max": 20.91,
+   "coverage": 0.83,
+   "groundY": 9.8,
+   "restated": true
+  },
+  "567361:456": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 18.02,
+   "roofY_P50": 18.14,
+   "roofY_P90": 18.25,
+   "roofY_P95": 22.33,
+   "roofY_max": 27.14,
+   "coverage": 0.96,
+   "groundY": 13.7,
+   "restated": true
+  },
+  "567607:460": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 11.94,
+   "roofY_P50": 11.98,
+   "roofY_P90": 11.99,
+   "roofY_P95": 12.0,
+   "roofY_max": 12.0,
+   "coverage": 0.82,
+   "groundY": 9.4,
+   "restated": true
+  },
+  "567782:464": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 3.06,
+   "roofY_P50": 3.89,
+   "roofY_P90": 6.05,
+   "roofY_P95": 6.35,
+   "roofY_max": 6.97,
+   "coverage": 0.85,
+   "groundY": -1.2,
+   "restated": true
+  },
+  "567938:471": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 5.66,
+   "roofY_P50": 6.59,
+   "roofY_P90": 7.57,
+   "roofY_P95": 7.73,
+   "roofY_max": 10.44,
+   "coverage": 0.95,
+   "groundY": 1.9,
+   "restated": true
+  },
+  "568165:477": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 9.36,
+   "roofY_P50": 9.77,
+   "roofY_P90": 10.13,
+   "roofY_P95": 10.17,
+   "roofY_max": 10.31,
+   "coverage": 0.77,
+   "groundY": 5.9,
+   "restated": true
+  },
+  "568307:482": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 10.8,
+   "roofY_P50": 12.02,
+   "roofY_P90": 13.2,
+   "roofY_P95": 13.32,
+   "roofY_max": 13.51,
+   "coverage": 0.36,
+   "groundY": 5.7,
+   "restated": false,
+   "exempt": "2017 raster covers only 0.36 of the ring (tree canopy / partial footprint): datum restated, roof not checked"
+  },
+  "568809:489": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.96,
+   "roofY_P50": 5.03,
+   "roofY_P90": 5.15,
+   "roofY_P95": 5.23,
+   "roofY_max": 8.69,
+   "coverage": 0.83,
+   "groundY": 2.3,
+   "restated": true
+  },
+  "569056:496": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 10.14,
+   "roofY_P50": 11.82,
+   "roofY_P90": 13.39,
+   "roofY_P95": 14.45,
+   "roofY_max": 19.38,
+   "coverage": 0.66,
+   "groundY": 6.2,
+   "restated": true
+  },
+  "569183:499": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 20.55,
+   "roofY_P50": 21.49,
+   "roofY_P90": 22.03,
+   "roofY_P95": 22.18,
+   "roofY_max": 28.91,
+   "coverage": 0.9,
+   "groundY": 15.3,
+   "restated": true
+  },
+  "569864:510": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 5.94,
+   "roofY_P50": 9.02,
+   "roofY_P90": 10.56,
+   "roofY_P95": 10.92,
+   "roofY_max": 17.15,
+   "coverage": 0.82,
+   "groundY": 2.3,
+   "restated": true
+  },
+  "570230:514": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 12.92,
+   "roofY_P50": 13.36,
+   "roofY_P90": 13.73,
+   "roofY_P95": 13.77,
+   "roofY_max": 21.17,
+   "coverage": 0.68,
+   "groundY": 9.1,
+   "restated": true
+  },
+  "570290:515": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 13.14,
+   "roofY_P50": 15.5,
+   "roofY_P90": 16.02,
+   "roofY_P95": 16.05,
+   "roofY_max": 16.99,
+   "coverage": 0.79,
+   "groundY": 7.3,
+   "restated": true
+  },
+  "570302:516": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.25,
+   "roofY_P50": 6.78,
+   "roofY_P90": 8.76,
+   "roofY_P95": 8.97,
+   "roofY_max": 9.18,
+   "coverage": 0.87,
+   "groundY": 0.3,
+   "restated": true
+  },
+  "570356:519": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 15.07,
+   "roofY_P50": 15.77,
+   "roofY_P90": 16.54,
+   "roofY_P95": 16.63,
+   "roofY_max": 19.85,
+   "coverage": 0.84,
+   "groundY": 10.3,
+   "restated": true
+  },
+  "571250:536": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 20.26,
+   "roofY_P50": 20.94,
+   "roofY_P90": 21.96,
+   "roofY_P95": 22.26,
+   "roofY_max": 23.74,
+   "coverage": 0.95,
+   "groundY": 15.6,
+   "restated": true
+  },
+  "571359:539": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 3.73,
+   "roofY_P50": 3.94,
+   "roofY_P90": 4.14,
+   "roofY_P95": 4.16,
+   "roofY_max": 4.2,
+   "coverage": 0.95,
+   "groundY": 1.4,
+   "restated": true
+  },
+  "571602:541": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 8.55,
+   "roofY_P50": 23.78,
+   "roofY_P90": 24.18,
+   "roofY_P95": 25.35,
+   "roofY_max": 26.94,
+   "coverage": 0.94,
+   "groundY": 4.8,
+   "restated": true
+  },
+  "587342:552": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 15.23,
+   "roofY_P50": 15.8,
+   "roofY_P90": 16.34,
+   "roofY_P95": 16.41,
+   "roofY_max": 16.57,
+   "coverage": 0.95,
+   "groundY": 10.5,
+   "restated": true
+  },
+  "587451:557": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 15.41,
+   "roofY_P50": 16.46,
+   "roofY_P90": 17.52,
+   "roofY_P95": 17.64,
+   "roofY_max": 17.78,
+   "coverage": 0.85,
+   "groundY": 10.6,
+   "restated": true
+  },
+  "587556:560": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 11.92,
+   "roofY_P50": 18.17,
+   "roofY_P90": 18.26,
+   "roofY_P95": 18.28,
+   "roofY_max": 20.36,
+   "coverage": 0.84,
+   "groundY": 6.0,
+   "restated": true
+  },
+  "587774:562": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 10.2,
+   "roofY_P50": 10.49,
+   "roofY_P90": 11.26,
+   "roofY_P95": 11.47,
+   "roofY_max": 14.17,
+   "coverage": 0.54,
+   "groundY": 6.2,
+   "restated": true
+  },
+  "588453:572": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 20.63,
+   "roofY_P50": 21.51,
+   "roofY_P90": 22.53,
+   "roofY_P95": 22.66,
+   "roofY_max": 27.59,
+   "coverage": 0.34,
+   "groundY": 14.7,
+   "restated": false,
+   "exempt": "special: checked in conflicts/cityTop"
+  },
+  "588553:574": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 13.35,
+   "roofY_P50": 14.48,
+   "roofY_P90": 15.71,
+   "roofY_P95": 15.88,
+   "roofY_max": 17.43,
+   "coverage": 0.81,
+   "groundY": 9.2,
+   "restated": true
+  },
+  "588723:576": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 16.44,
+   "roofY_P50": 17.19,
+   "roofY_P90": 18.19,
+   "roofY_P95": 18.49,
+   "roofY_max": 18.77,
+   "coverage": 0.95,
+   "groundY": 11.3,
+   "restated": true
+  },
+  "589004:579": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 11.49,
+   "roofY_P50": 12.43,
+   "roofY_P90": 13.55,
+   "roofY_P95": 13.76,
+   "roofY_max": 13.94,
+   "coverage": 0.96,
+   "groundY": 7.3,
+   "restated": true
+  },
+  "589162:584": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 8.62,
+   "roofY_P50": 9.36,
+   "roofY_P90": 10.25,
+   "roofY_P95": 10.34,
+   "roofY_max": 10.43,
+   "coverage": 0.87,
+   "groundY": 4.6,
+   "restated": true
+  },
+  "589219:585": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 14.54,
+   "roofY_P50": 14.66,
+   "roofY_P90": 14.77,
+   "roofY_P95": 14.81,
+   "roofY_max": 22.21,
+   "coverage": 0.72,
+   "groundY": 11.2,
+   "restated": true
+  },
+  "589263:586": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 11.98,
+   "roofY_P50": 12.64,
+   "roofY_P90": 13.25,
+   "roofY_P95": 13.3,
+   "roofY_max": 15.49,
+   "coverage": 0.82,
+   "groundY": 8.3,
+   "restated": true
+  },
+  "589306:587": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 13.07,
+   "roofY_P50": 13.11,
+   "roofY_P90": 13.15,
+   "roofY_P95": 13.16,
+   "roofY_max": 15.81,
+   "coverage": 0.91,
+   "groundY": 9.9,
+   "restated": true
+  },
+  "589487:590": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.07,
+   "roofY_P50": 4.85,
+   "roofY_P90": 6.29,
+   "roofY_P95": 6.48,
+   "roofY_max": 6.68,
+   "coverage": 0.77,
+   "groundY": -1.2,
+   "restated": true
+  },
+  "590088:601": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 18.27,
+   "roofY_P50": 18.35,
+   "roofY_P90": 18.45,
+   "roofY_P95": 18.47,
+   "roofY_max": 18.5,
+   "coverage": 0.69,
+   "groundY": 14.0,
+   "restated": true
+  },
+  "590695:609": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 3.86,
+   "roofY_P50": 4.36,
+   "roofY_P90": 4.75,
+   "roofY_P95": 4.8,
+   "roofY_max": 4.87,
+   "coverage": 0.71,
+   "groundY": -1.0,
+   "restated": true
+  },
+  "590709:611": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 10.28,
+   "roofY_P50": 14.2,
+   "roofY_P90": 15.19,
+   "roofY_P95": 15.32,
+   "roofY_max": 18.76,
+   "coverage": 0.73,
+   "groundY": 5.9,
+   "restated": true
+  },
+  "590955:612": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.06,
+   "roofY_P50": 5.11,
+   "roofY_P90": 6.08,
+   "roofY_P95": 6.24,
+   "roofY_max": 9.78,
+   "coverage": 0.85,
+   "groundY": 1.3,
+   "restated": true
+  },
+  "591598:618": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 19.6,
+   "roofY_P50": 20.36,
+   "roofY_P90": 21.47,
+   "roofY_P95": 21.64,
+   "roofY_max": 22.4,
+   "coverage": 0.94,
+   "groundY": 12.8,
+   "restated": true
+  },
+  "591770:621": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 13.03,
+   "roofY_P50": 14.97,
+   "roofY_P90": 15.3,
+   "roofY_P95": 15.33,
+   "roofY_max": 19.87,
+   "coverage": 0.77,
+   "groundY": 8.8,
+   "restated": true
+  },
+  "592039:627": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.96,
+   "roofY_P50": 5.19,
+   "roofY_P90": 6.21,
+   "roofY_P95": 6.36,
+   "roofY_max": 14.55,
+   "coverage": 0.9,
+   "groundY": 1.6,
+   "restated": true
+  },
+  "592550:638": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 11.92,
+   "roofY_P50": 13.82,
+   "roofY_P90": 15.33,
+   "roofY_P95": 15.58,
+   "roofY_max": 15.79,
+   "coverage": 0.79,
+   "groundY": 7.8,
+   "restated": true
+  },
+  "593320:646": {
+   "unit": "b13-r0-j1",
+   "roofY_P10": 39.98,
+   "roofY_P50": 40.05,
+   "roofY_P90": 40.15,
+   "roofY_P95": 40.87,
+   "roofY_max": 45.05,
+   "coverage": 0.93,
+   "groundY": 17.9,
+   "restated": true
+  },
+  "593955:658": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 16.67,
+   "roofY_P50": 17.32,
+   "roofY_P90": 20.29,
+   "roofY_P95": 21.63,
+   "roofY_max": 27.35,
+   "coverage": 0.89,
+   "groundY": 8.8,
+   "restated": true
+  },
+  "594014:660": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 3.42,
+   "roofY_P50": 3.69,
+   "roofY_P90": 3.94,
+   "roofY_P95": 3.97,
+   "roofY_max": 4.04,
+   "coverage": 0.83,
+   "groundY": 0.9,
+   "restated": true
+  },
+  "594033:661": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 12.12,
+   "roofY_P50": 12.74,
+   "roofY_P90": 13.72,
+   "roofY_P95": 13.84,
+   "roofY_max": 13.97,
+   "coverage": 0.88,
+   "groundY": 8.2,
+   "restated": true
+  },
+  "594412:669": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 18.25,
+   "roofY_P50": 19.1,
+   "roofY_P90": 19.88,
+   "roofY_P95": 19.99,
+   "roofY_max": 20.51,
+   "coverage": 0.96,
+   "groundY": 12.6,
+   "restated": true
+  },
+  "596792:674": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 11.65,
+   "roofY_P50": 11.91,
+   "roofY_P90": 12.18,
+   "roofY_P95": 12.22,
+   "roofY_max": 14.78,
+   "coverage": 0.75,
+   "groundY": 7.7,
+   "restated": true
+  },
+  "596840:676": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 20.48,
+   "roofY_P50": 21.31,
+   "roofY_P90": 22.16,
+   "roofY_P95": 22.32,
+   "roofY_max": 28.56,
+   "coverage": 0.81,
+   "groundY": 15.7,
+   "restated": true
+  },
+  "610723:682": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 8.31,
+   "roofY_P50": 8.77,
+   "roofY_P90": 9.22,
+   "roofY_P95": 9.3,
+   "roofY_max": 9.35,
+   "coverage": 0.7,
+   "groundY": 5.3,
+   "restated": true
+  },
+  "610796:684": {
+   "unit": "b13-r0-j1",
+   "roofY_P10": 27.02,
+   "roofY_P50": 28.38,
+   "roofY_P90": 29.79,
+   "roofY_P95": 30.0,
+   "roofY_max": 33.17,
+   "coverage": 0.67,
+   "groundY": 16.7,
+   "restated": true
+  },
+  "611160:693": {
+   "unit": "b13-r0-j1",
+   "roofY_P10": 19.99,
+   "roofY_P50": 21.01,
+   "roofY_P90": 24.58,
+   "roofY_P95": 24.95,
+   "roofY_max": 25.26,
+   "coverage": 0.96,
+   "groundY": 12.7,
+   "restated": true
+  },
+  "611690:707": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 7.23,
+   "roofY_P50": 10.34,
+   "roofY_P90": 11.96,
+   "roofY_P95": 12.12,
+   "roofY_max": 13.6,
+   "coverage": 0.85,
+   "groundY": 2.0,
+   "restated": true
+  },
+  "611960:710": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 10.61,
+   "roofY_P50": 10.64,
+   "roofY_P90": 10.67,
+   "roofY_P95": 11.46,
+   "roofY_max": 11.85,
+   "coverage": 0.68,
+   "groundY": 2.3,
+   "restated": true
+  },
+  "612030:713": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 17.88,
+   "roofY_P50": 18.31,
+   "roofY_P90": 18.64,
+   "roofY_P95": 18.69,
+   "roofY_max": 18.99,
+   "coverage": 0.96,
+   "groundY": 11.3,
+   "restated": true
+  },
+  "612800:721": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 12.16,
+   "roofY_P50": 12.81,
+   "roofY_P90": 13.78,
+   "roofY_P95": 14.0,
+   "roofY_max": 14.35,
+   "coverage": 0.86,
+   "groundY": 8.0,
+   "restated": true
+  },
+  "612852:723": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.09,
+   "roofY_P50": 5.07,
+   "roofY_P90": 5.71,
+   "roofY_P95": 5.8,
+   "roofY_max": 6.14,
+   "coverage": 0.75,
+   "groundY": -0.4,
+   "restated": true
+  },
+  "613051:726": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 7.27,
+   "roofY_P50": 8.43,
+   "roofY_P90": 9.39,
+   "roofY_P95": 9.52,
+   "roofY_max": 9.66,
+   "coverage": 0.68,
+   "groundY": 2.8,
+   "restated": true
+  },
+  "613522:734": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 10.08,
+   "roofY_P50": 11.51,
+   "roofY_P90": 11.82,
+   "roofY_P95": 11.92,
+   "roofY_max": 12.29,
+   "coverage": 0.72,
+   "groundY": 5.0,
+   "restated": true
+  },
+  "614078:740": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 8.68,
+   "roofY_P50": 9.36,
+   "roofY_P90": 10.25,
+   "roofY_P95": 10.44,
+   "roofY_max": 10.74,
+   "coverage": 0.84,
+   "groundY": 1.7,
+   "restated": true
+  },
+  "614187:743": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 9.82,
+   "roofY_P50": 10.81,
+   "roofY_P90": 11.02,
+   "roofY_P95": 11.58,
+   "roofY_max": 14.57,
+   "coverage": 0.84,
+   "groundY": 2.2,
+   "restated": true
+  },
+  "614234:744": {
+   "unit": "b13-r0-j1",
+   "roofY_P10": 29.01,
+   "roofY_P50": 30.54,
+   "roofY_P90": 30.71,
+   "roofY_P95": 30.94,
+   "roofY_max": 31.45,
+   "coverage": 0.84,
+   "groundY": 19.1,
+   "restated": true
+  },
+  "614535:748": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 18.34,
+   "roofY_P50": 19.23,
+   "roofY_P90": 20.76,
+   "roofY_P95": 20.99,
+   "roofY_max": 21.18,
+   "coverage": 0.85,
+   "groundY": 13.9,
+   "restated": true
+  },
+  "621487:761": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 16.81,
+   "roofY_P50": 17.46,
+   "roofY_P90": 18.16,
+   "roofY_P95": 18.24,
+   "roofY_max": 18.34,
+   "coverage": 0.83,
+   "groundY": 9.4,
+   "restated": true
+  },
+  "621808:764": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 6.12,
+   "roofY_P50": 6.74,
+   "roofY_P90": 7.42,
+   "roofY_P95": 7.57,
+   "roofY_max": 7.88,
+   "coverage": 0.76,
+   "groundY": -0.6,
+   "restated": true
+  },
+  "621841:765": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 11.43,
+   "roofY_P50": 12.32,
+   "roofY_P90": 13.25,
+   "roofY_P95": 13.35,
+   "roofY_max": 14.5,
+   "coverage": 0.84,
+   "groundY": 7.8,
+   "restated": true
+  },
+  "622010:766": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 15.21,
+   "roofY_P50": 16.19,
+   "roofY_P90": 16.72,
+   "roofY_P95": 17.62,
+   "roofY_max": 18.72,
+   "coverage": 0.69,
+   "groundY": 6.6,
+   "restated": true
+  },
+  "622825:773": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 3.26,
+   "roofY_P50": 3.52,
+   "roofY_P90": 3.77,
+   "roofY_P95": 3.83,
+   "roofY_max": 3.98,
+   "coverage": 0.49,
+   "groundY": -0.4,
+   "restated": false,
+   "exempt": "2017 raster covers only 0.49 of the ring (tree canopy / partial footprint): datum restated, roof not checked"
+  },
+  "622927:776": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.42,
+   "roofY_P50": 4.49,
+   "roofY_P90": 4.53,
+   "roofY_P95": 4.54,
+   "roofY_max": 4.57,
+   "coverage": 0.88,
+   "groundY": -1.0,
+   "restated": true
+  },
+  "623614:783": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 6.35,
+   "roofY_P50": 6.73,
+   "roofY_P90": 7.06,
+   "roofY_P95": 7.09,
+   "roofY_max": 8.13,
+   "coverage": 0.79,
+   "groundY": 3.1,
+   "restated": true
+  },
+  "623758:786": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 10.68,
+   "roofY_P50": 10.75,
+   "roofY_P90": 10.8,
+   "roofY_P95": 10.81,
+   "roofY_max": 10.83,
+   "coverage": 0.71,
+   "groundY": 5.5,
+   "restated": true
+  },
+  "624186:788": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 10.54,
+   "roofY_P50": 11.15,
+   "roofY_P90": 11.66,
+   "roofY_P95": 11.78,
+   "roofY_max": 20.22,
+   "coverage": 0.82,
+   "groundY": 7.2,
+   "restated": true
+  },
+  "624532:793": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 5.17,
+   "roofY_P50": 6.01,
+   "roofY_P90": 6.68,
+   "roofY_P95": 6.76,
+   "roofY_max": 8.3,
+   "coverage": 0.91,
+   "groundY": 1.4,
+   "restated": true
+  },
+  "626427:812": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 10.75,
+   "roofY_P50": 11.25,
+   "roofY_P90": 11.79,
+   "roofY_P95": 11.84,
+   "roofY_max": 11.92,
+   "coverage": 0.49,
+   "groundY": 7.5,
+   "restated": false,
+   "exempt": "2017 raster covers only 0.49 of the ring (tree canopy / partial footprint): datum restated, roof not checked"
+  },
+  "633405:813": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 17.02,
+   "roofY_P50": 17.61,
+   "roofY_P90": 18.37,
+   "roofY_P95": 18.51,
+   "roofY_max": 26.64,
+   "coverage": 0.71,
+   "groundY": 13.3,
+   "restated": true
+  },
+  "633688:822": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 6.89,
+   "roofY_P50": 7.19,
+   "roofY_P90": 7.46,
+   "roofY_P95": 7.51,
+   "roofY_max": 7.6,
+   "coverage": 0.85,
+   "groundY": 3.5,
+   "restated": true
+  },
+  "633968:825": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 11.17,
+   "roofY_P50": 11.19,
+   "roofY_P90": 11.22,
+   "roofY_P95": 11.25,
+   "roofY_max": 12.39,
+   "coverage": 0.8,
+   "groundY": 4.1,
+   "restated": true
+  },
+  "634381:832": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 10.29,
+   "roofY_P50": 10.53,
+   "roofY_P90": 10.75,
+   "roofY_P95": 10.75,
+   "roofY_max": 10.79,
+   "coverage": 0.7,
+   "groundY": 6.9,
+   "restated": true
+  },
+  "651563:835": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 17.95,
+   "roofY_P50": 21.63,
+   "roofY_P90": 22.86,
+   "roofY_P95": 23.62,
+   "roofY_max": 29.21,
+   "coverage": 0.94,
+   "groundY": 4.3,
+   "restated": true
+  },
+  "651681:836": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 15.86,
+   "roofY_P50": 15.93,
+   "roofY_P90": 17.02,
+   "roofY_P95": 17.03,
+   "roofY_max": 17.04,
+   "coverage": 0.95,
+   "groundY": 11.4,
+   "restated": true
+  },
+  "652188:843": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 12.19,
+   "roofY_P50": 13.1,
+   "roofY_P90": 13.91,
+   "roofY_P95": 13.99,
+   "roofY_max": 14.23,
+   "coverage": 0.67,
+   "groundY": 5.2,
+   "restated": true
+  },
+  "652461:848": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 13.82,
+   "roofY_P50": 14.06,
+   "roofY_P90": 14.25,
+   "roofY_P95": 14.28,
+   "roofY_max": 14.32,
+   "coverage": 1.0,
+   "groundY": 9.9,
+   "restated": true
+  },
+  "652657:853": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 11.62,
+   "roofY_P50": 12.77,
+   "roofY_P90": 13.72,
+   "roofY_P95": 13.83,
+   "roofY_max": 15.11,
+   "coverage": 0.84,
+   "groundY": 7.6,
+   "restated": true
+  },
+  "652721:854": {
+   "unit": "b13-r0-j1",
+   "roofY_P10": 20.27,
+   "roofY_P50": 20.88,
+   "roofY_P90": 21.57,
+   "roofY_P95": 21.62,
+   "roofY_max": 21.67,
+   "coverage": 0.95,
+   "groundY": 13.1,
+   "restated": true
+  },
+  "652826:857": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 11.18,
+   "roofY_P50": 11.2,
+   "roofY_P90": 11.29,
+   "roofY_P95": 11.37,
+   "roofY_max": 11.53,
+   "coverage": 0.85,
+   "groundY": 5.9,
+   "restated": true
+  },
+  "653095:862": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 20.81,
+   "roofY_P50": 23.06,
+   "roofY_P90": 25.5,
+   "roofY_P95": 25.95,
+   "roofY_max": 26.66,
+   "coverage": 0.91,
+   "groundY": 9.1,
+   "restated": true
+  },
+  "653160:863": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 28.15,
+   "roofY_P50": 30.32,
+   "roofY_P90": 32.04,
+   "roofY_P95": 32.26,
+   "roofY_max": 32.49,
+   "coverage": 0.95,
+   "groundY": 13.9,
+   "restated": true
+  },
+  "653187:864": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 8.88,
+   "roofY_P50": 9.01,
+   "roofY_P90": 9.12,
+   "roofY_P95": 9.14,
+   "roofY_max": 9.14,
+   "coverage": 0.86,
+   "groundY": 5.8,
+   "restated": true
+  },
+  "654198:877": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 18.28,
+   "roofY_P50": 18.79,
+   "roofY_P90": 19.35,
+   "roofY_P95": 19.41,
+   "roofY_max": 21.81,
+   "coverage": 0.84,
+   "groundY": 11.7,
+   "restated": true
+  },
+  "654273:880": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 15.19,
+   "roofY_P50": 15.23,
+   "roofY_P90": 15.27,
+   "roofY_P95": 15.29,
+   "roofY_max": 16.25,
+   "coverage": 0.89,
+   "groundY": 6.4,
+   "restated": true
+  },
+  "654395:882": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.41,
+   "roofY_P50": 5.0,
+   "roofY_P90": 5.3,
+   "roofY_P95": 5.32,
+   "roofY_max": 9.82,
+   "coverage": 0.92,
+   "groundY": 1.7,
+   "restated": true
+  },
+  "654425:883": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 6.82,
+   "roofY_P50": 7.53,
+   "roofY_P90": 8.08,
+   "roofY_P95": 8.17,
+   "roofY_max": 8.78,
+   "coverage": 0.94,
+   "groundY": 2.8,
+   "restated": true
+  },
+  "654959:891": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 25.05,
+   "roofY_P50": 25.66,
+   "roofY_P90": 26.78,
+   "roofY_P95": 26.99,
+   "roofY_max": 27.91,
+   "coverage": 0.86,
+   "groundY": 16.7,
+   "restated": true
+  },
+  "655421:900": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 10.27,
+   "roofY_P50": 10.43,
+   "roofY_P90": 11.18,
+   "roofY_P95": 11.26,
+   "roofY_max": 11.61,
+   "coverage": 0.82,
+   "groundY": 5.9,
+   "restated": true
+  },
+  "655456:902": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 5.11,
+   "roofY_P50": 5.45,
+   "roofY_P90": 5.74,
+   "roofY_P95": 5.79,
+   "roofY_max": 8.95,
+   "coverage": 0.81,
+   "groundY": 1.7,
+   "restated": true
+  },
+  "655916:908": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 4.82,
+   "roofY_P50": 5.72,
+   "roofY_P90": 6.68,
+   "roofY_P95": 6.78,
+   "roofY_max": 8.84,
+   "coverage": 0.84,
+   "groundY": 0.6,
+   "restated": true
+  },
+  "655932:909": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 5.22,
+   "roofY_P50": 5.5,
+   "roofY_P90": 5.82,
+   "roofY_P95": 5.85,
+   "roofY_max": 5.93,
+   "coverage": 0.33,
+   "groundY": 2.4,
+   "restated": false,
+   "exempt": "2017 raster covers only 0.33 of the ring (tree canopy / partial footprint): datum restated, roof not checked"
+  },
+  "655985:910": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 14.66,
+   "roofY_P50": 15.36,
+   "roofY_P90": 15.8,
+   "roofY_P95": 15.84,
+   "roofY_max": 19.33,
+   "coverage": 0.7,
+   "groundY": 10.5,
+   "restated": true
+  },
+  "656013:912": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 6.14,
+   "roofY_P50": 9.59,
+   "roofY_P90": 10.68,
+   "roofY_P95": 11.03,
+   "roofY_max": 11.4,
+   "coverage": 0.91,
+   "groundY": 2.1,
+   "restated": true
+  },
+  "656246:919": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 10.63,
+   "roofY_P50": 11.59,
+   "roofY_P90": 12.63,
+   "roofY_P95": 12.86,
+   "roofY_max": 13.02,
+   "coverage": 0.86,
+   "groundY": 6.2,
+   "restated": true
+  },
+  "656472:925": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 11.87,
+   "roofY_P50": 12.69,
+   "roofY_P90": 13.49,
+   "roofY_P95": 13.5,
+   "roofY_max": 20.97,
+   "coverage": 0.85,
+   "groundY": 7.9,
+   "restated": true
+  },
+  "656937:930": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 8.62,
+   "roofY_P50": 9.35,
+   "roofY_P90": 11.37,
+   "roofY_P95": 11.57,
+   "roofY_max": 11.76,
+   "coverage": 0.84,
+   "groundY": 4.9,
+   "restated": true
+  },
+  "657161:936": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 11.49,
+   "roofY_P50": 11.68,
+   "roofY_P90": 11.9,
+   "roofY_P95": 11.95,
+   "roofY_max": 11.97,
+   "coverage": 0.86,
+   "groundY": 8.4,
+   "restated": true
+  },
+  "657392:942": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 6.14,
+   "roofY_P50": 6.85,
+   "roofY_P90": 7.47,
+   "roofY_P95": 7.5,
+   "roofY_max": 8.93,
+   "coverage": 0.7,
+   "groundY": 2.2,
+   "restated": true
+  },
+  "663184:950": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 8.72,
+   "roofY_P50": 9.37,
+   "roofY_P90": 10.28,
+   "roofY_P95": 10.51,
+   "roofY_max": 15.77,
+   "coverage": 0.8,
+   "groundY": 4.4,
+   "restated": true
+  },
+  "675008:953": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 8.49,
+   "roofY_P50": 12.69,
+   "roofY_P90": 14.29,
+   "roofY_P95": 14.47,
+   "roofY_max": 16.28,
+   "coverage": 0.91,
+   "groundY": 4.1,
+   "restated": true
+  },
+  "675025:954": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 13.22,
+   "roofY_P50": 14.72,
+   "roofY_P90": 16.26,
+   "roofY_P95": 16.52,
+   "roofY_max": 16.81,
+   "coverage": 0.84,
+   "groundY": 5.1,
+   "restated": true
+  },
+  "675101:955": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 12.86,
+   "roofY_P50": 13.96,
+   "roofY_P90": 15.05,
+   "roofY_P95": 15.25,
+   "roofY_max": 15.42,
+   "coverage": 0.84,
+   "groundY": 8.8,
+   "restated": true
+  },
+  "675498:963": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 5.89,
+   "roofY_P50": 8.18,
+   "roofY_P90": 8.83,
+   "roofY_P95": 8.9,
+   "roofY_max": 9.63,
+   "coverage": 0.81,
+   "groundY": 2.4,
+   "restated": true
+  },
+  "677157:981": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.24,
+   "roofY_P50": 4.8,
+   "roofY_P90": 5.35,
+   "roofY_P95": 5.43,
+   "roofY_max": 7.71,
+   "coverage": 0.91,
+   "groundY": 1.5,
+   "restated": true
+  },
+  "677388:983": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 8.22,
+   "roofY_P50": 9.73,
+   "roofY_P90": 11.32,
+   "roofY_P95": 11.48,
+   "roofY_max": 14.29,
+   "coverage": 0.74,
+   "groundY": 4.6,
+   "restated": true
+  },
+  "677452:984": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 10.31,
+   "roofY_P50": 12.88,
+   "roofY_P90": 13.38,
+   "roofY_P95": 13.46,
+   "roofY_max": 13.56,
+   "coverage": 0.84,
+   "groundY": 5.9,
+   "restated": true
+  },
+  "677916:992": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 9.42,
+   "roofY_P50": 11.39,
+   "roofY_P90": 12.43,
+   "roofY_P95": 12.58,
+   "roofY_max": 12.73,
+   "coverage": 0.82,
+   "groundY": 5.0,
+   "restated": true
+  },
+  "696453:1004": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 16.94,
+   "roofY_P50": 17.69,
+   "roofY_P90": 18.53,
+   "roofY_P95": 18.84,
+   "roofY_max": 22.11,
+   "coverage": 0.85,
+   "groundY": 13.7,
+   "restated": true
+  },
+  "696609:1007": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 8.72,
+   "roofY_P50": 9.36,
+   "roofY_P90": 10.04,
+   "roofY_P95": 10.07,
+   "roofY_max": 11.65,
+   "coverage": 0.81,
+   "groundY": 5.2,
+   "restated": true
+  },
+  "696744:1009": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 12.66,
+   "roofY_P50": 13.61,
+   "roofY_P90": 14.52,
+   "roofY_P95": 14.6,
+   "roofY_max": 14.73,
+   "coverage": 0.85,
+   "groundY": 8.4,
+   "restated": true
+  },
+  "696784:1010": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 12.54,
+   "roofY_P50": 13.56,
+   "roofY_P90": 14.68,
+   "roofY_P95": 14.82,
+   "roofY_max": 15.51,
+   "coverage": 0.79,
+   "groundY": 2.4,
+   "restated": true
+  },
+  "697177:1017": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 14.16,
+   "roofY_P50": 14.61,
+   "roofY_P90": 15.06,
+   "roofY_P95": 15.12,
+   "roofY_max": 15.43,
+   "coverage": 0.82,
+   "groundY": 10.8,
+   "restated": true
+  },
+  "698264:1034": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 6.14,
+   "roofY_P50": 6.7,
+   "roofY_P90": 7.09,
+   "roofY_P95": 7.14,
+   "roofY_max": 8.87,
+   "coverage": 0.77,
+   "groundY": 2.7,
+   "restated": true
+  },
+  "698408:1036": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 7.78,
+   "roofY_P50": 8.6,
+   "roofY_P90": 9.44,
+   "roofY_P95": 9.52,
+   "roofY_max": 9.63,
+   "coverage": 0.83,
+   "groundY": 0.9,
+   "restated": true
+  },
+  "698655:1039": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 13.43,
+   "roofY_P50": 16.2,
+   "roofY_P90": 17.5,
+   "roofY_P95": 17.64,
+   "roofY_max": 24.64,
+   "coverage": 0.79,
+   "groundY": 10.6,
+   "restated": true
+  },
+  "699000:1046": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 15.35,
+   "roofY_P50": 17.22,
+   "roofY_P90": 17.33,
+   "roofY_P95": 17.56,
+   "roofY_max": 20.99,
+   "coverage": 0.94,
+   "groundY": 5.6,
+   "restated": true
+  },
+  "699382:1056": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 13.44,
+   "roofY_P50": 13.5,
+   "roofY_P90": 13.83,
+   "roofY_P95": 13.88,
+   "roofY_max": 13.98,
+   "coverage": 0.76,
+   "groundY": 6.8,
+   "restated": true
+  },
+  "699492:1059": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 15.94,
+   "roofY_P50": 16.61,
+   "roofY_P90": 17.75,
+   "roofY_P95": 18.01,
+   "roofY_max": 21.43,
+   "coverage": 0.9,
+   "groundY": 10.9,
+   "restated": true
+  },
+  "699816:1066": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 11.1,
+   "roofY_P50": 11.68,
+   "roofY_P90": 12.15,
+   "roofY_P95": 12.24,
+   "roofY_max": 12.34,
+   "coverage": 0.84,
+   "groundY": 8.2,
+   "restated": true
+  },
+  "700059:1071": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 12.54,
+   "roofY_P50": 12.73,
+   "roofY_P90": 12.93,
+   "roofY_P95": 16.18,
+   "roofY_max": 17.1,
+   "coverage": 0.95,
+   "groundY": 9.8,
+   "restated": true
+  },
+  "700307:1075": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 13.33,
+   "roofY_P50": 13.74,
+   "roofY_P90": 14.04,
+   "roofY_P95": 14.21,
+   "roofY_max": 14.34,
+   "coverage": 0.7,
+   "groundY": 9.4,
+   "restated": true
+  },
+  "704937:1080": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 10.43,
+   "roofY_P50": 10.85,
+   "roofY_P90": 11.6,
+   "roofY_P95": 11.78,
+   "roofY_max": 15.1,
+   "coverage": 0.7,
+   "groundY": 6.2,
+   "restated": true
+  },
+  "713865:1084": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 14.04,
+   "roofY_P50": 16.75,
+   "roofY_P90": 18.42,
+   "roofY_P95": 18.69,
+   "roofY_max": 19.32,
+   "coverage": 0.83,
+   "groundY": 9.3,
+   "restated": true
+  },
+  "714019:1087": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 8.16,
+   "roofY_P50": 8.75,
+   "roofY_P90": 9.71,
+   "roofY_P95": 9.93,
+   "roofY_max": 10.2,
+   "coverage": 0.83,
+   "groundY": 1.5,
+   "restated": true
+  },
+  "714092:1088": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 12.26,
+   "roofY_P50": 15.7,
+   "roofY_P90": 17.34,
+   "roofY_P95": 17.47,
+   "roofY_max": 18.66,
+   "coverage": 0.86,
+   "groundY": 8.3,
+   "restated": true
+  },
+  "714123:1090": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 7.72,
+   "roofY_P50": 8.72,
+   "roofY_P90": 10.17,
+   "roofY_P95": 10.44,
+   "roofY_max": 14.46,
+   "coverage": 0.79,
+   "groundY": 3.6,
+   "restated": true
+  },
+  "714345:1091": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 14.24,
+   "roofY_P50": 14.91,
+   "roofY_P90": 15.63,
+   "roofY_P95": 15.74,
+   "roofY_max": 15.86,
+   "coverage": 0.97,
+   "groundY": 7.3,
+   "restated": true
+  },
+  "714409:1094": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 12.0,
+   "roofY_P50": 12.1,
+   "roofY_P90": 12.2,
+   "roofY_P95": 12.22,
+   "roofY_max": 12.25,
+   "coverage": 0.78,
+   "groundY": 9.2,
+   "restated": true
+  },
+  "714504:1096": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 13.15,
+   "roofY_P50": 14.48,
+   "roofY_P90": 15.72,
+   "roofY_P95": 15.96,
+   "roofY_max": 16.31,
+   "coverage": 0.82,
+   "groundY": 9.4,
+   "restated": true
+  },
+  "714811:1105": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 5.32,
+   "roofY_P50": 6.07,
+   "roofY_P90": 6.74,
+   "roofY_P95": 6.89,
+   "roofY_max": 9.1,
+   "coverage": 0.75,
+   "groundY": 0.7,
+   "restated": true
+  },
+  "714911:1107": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 16.61,
+   "roofY_P50": 16.99,
+   "roofY_P90": 17.41,
+   "roofY_P95": 17.47,
+   "roofY_max": 22.5,
+   "coverage": 0.75,
+   "groundY": 12.2,
+   "restated": true
+  },
+  "715668:1123": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 11.03,
+   "roofY_P50": 11.89,
+   "roofY_P90": 13.15,
+   "roofY_P95": 13.31,
+   "roofY_max": 13.46,
+   "coverage": 0.75,
+   "groundY": 6.8,
+   "restated": true
+  },
+  "716633:1141": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 13.06,
+   "roofY_P50": 13.71,
+   "roofY_P90": 14.64,
+   "roofY_P95": 14.9,
+   "roofY_max": 18.51,
+   "coverage": 0.96,
+   "groundY": 8.2,
+   "restated": true
+  },
+  "716668:1142": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 11.38,
+   "roofY_P50": 11.72,
+   "roofY_P90": 14.72,
+   "roofY_P95": 14.81,
+   "roofY_max": 17.42,
+   "coverage": 0.8,
+   "groundY": 7.0,
+   "restated": true
+  },
+  "716715:1145": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 12.88,
+   "roofY_P50": 15.76,
+   "roofY_P90": 16.52,
+   "roofY_P95": 16.62,
+   "roofY_max": 16.73,
+   "coverage": 0.84,
+   "groundY": 8.8,
+   "restated": true
+  },
+  "716799:1146": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 15.78,
+   "roofY_P50": 15.89,
+   "roofY_P90": 16.01,
+   "roofY_P95": 16.03,
+   "roofY_max": 18.36,
+   "coverage": 0.92,
+   "groundY": 12.4,
+   "restated": true
+  },
+  "716942:1150": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 13.32,
+   "roofY_P50": 13.35,
+   "roofY_P90": 13.37,
+   "roofY_P95": 13.41,
+   "roofY_max": 18.03,
+   "coverage": 0.6,
+   "groundY": 10.3,
+   "restated": true
+  },
+  "717099:1153": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 22.06,
+   "roofY_P50": 22.73,
+   "roofY_P90": 23.82,
+   "roofY_P95": 24.05,
+   "roofY_max": 28.78,
+   "coverage": 0.94,
+   "groundY": 13.7,
+   "restated": true
+  },
+  "717174:1154": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 19.58,
+   "roofY_P50": 20.25,
+   "roofY_P90": 21.47,
+   "roofY_P95": 22.86,
+   "roofY_max": 25.26,
+   "coverage": 0.82,
+   "groundY": 11.5,
+   "restated": true
+  },
+  "717263:1156": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 8.54,
+   "roofY_P50": 11.03,
+   "roofY_P90": 12.6,
+   "roofY_P95": 12.82,
+   "roofY_max": 14.53,
+   "coverage": 0.86,
+   "groundY": 3.6,
+   "restated": true
+  },
+  "718600:1178": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 15.51,
+   "roofY_P50": 18.96,
+   "roofY_P90": 21.08,
+   "roofY_P95": 21.51,
+   "roofY_max": 21.99,
+   "coverage": 0.92,
+   "groundY": 10.7,
+   "restated": true
+  },
+  "719070:1187": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 13.05,
+   "roofY_P50": 15.39,
+   "roofY_P90": 17.5,
+   "roofY_P95": 17.72,
+   "roofY_max": 17.91,
+   "coverage": 0.83,
+   "groundY": 8.8,
+   "restated": true
+  },
+  "719188:1188": {
+   "unit": "b13-r0-j1",
+   "roofY_P10": 25.82,
+   "roofY_P50": 29.86,
+   "roofY_P90": 31.08,
+   "roofY_P95": 31.59,
+   "roofY_max": 46.29,
+   "coverage": 0.95,
+   "groundY": 21.1,
+   "restated": false,
+   "exempt": "special: checked in conflicts/cityTop"
+  },
+  "719819:1199": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 17.89,
+   "roofY_P50": 18.9,
+   "roofY_P90": 23.48,
+   "roofY_P95": 23.88,
+   "roofY_max": 24.28,
+   "coverage": 0.87,
+   "groundY": 14.4,
+   "restated": true,
+   "p50Only": "two-part house: whole-ring P95 band set by the upper part; the upper part is checked separately in volumes"
+  },
+  "720289:1209": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 8.3,
+   "roofY_P50": 8.62,
+   "roofY_P90": 8.91,
+   "roofY_P95": 8.96,
+   "roofY_max": 8.96,
+   "coverage": 0.78,
+   "groundY": 4.4,
+   "restated": true
+  },
+  "720399:1210": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 7.76,
+   "roofY_P50": 8.84,
+   "roofY_P90": 9.83,
+   "roofY_P95": 9.95,
+   "roofY_max": 10.1,
+   "coverage": 0.61,
+   "groundY": 3.0,
+   "restated": true
+  },
+  "720457:1211": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 9.09,
+   "roofY_P50": 10.58,
+   "roofY_P90": 10.81,
+   "roofY_P95": 10.86,
+   "roofY_max": 12.36,
+   "coverage": 0.79,
+   "groundY": 4.0,
+   "restated": true
+  },
+  "733153:1236": {
+   "unit": "b13-r0-i1",
+   "roofY_P10": 10.12,
+   "roofY_P50": 10.69,
+   "roofY_P90": 11.49,
+   "roofY_P95": 13.66,
+   "roofY_max": 14.52,
+   "coverage": 0.92,
+   "groundY": 5.8,
+   "restated": true
+  },
+  "733455:1237": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 9.53,
+   "roofY_P50": 10.68,
+   "roofY_P90": 11.45,
+   "roofY_P95": 11.63,
+   "roofY_max": 11.82,
+   "coverage": 0.85,
+   "groundY": 5.0,
+   "restated": true
+  },
+  "733596:1242": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 3.65,
+   "roofY_P50": 4.09,
+   "roofY_P90": 4.48,
+   "roofY_P95": 4.52,
+   "roofY_max": 4.56,
+   "coverage": 0.83,
+   "groundY": 0.6,
+   "restated": true
+  },
+  "733634:1243": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 12.58,
+   "roofY_P50": 13.48,
+   "roofY_P90": 14.59,
+   "roofY_P95": 14.82,
+   "roofY_max": 17.87,
+   "coverage": 0.73,
+   "groundY": 8.9,
+   "restated": true
+  },
+  "733679:1245": {
+   "unit": "b13-r0-g2",
+   "roofY_P10": 2.9,
+   "roofY_P50": 3.08,
+   "roofY_P90": 3.17,
+   "roofY_P95": 7.12,
+   "roofY_max": 7.94,
+   "coverage": 0.73,
+   "groundY": -1.0,
+   "restated": true
+  },
+  "733973:1253": {
+   "unit": "b13-r0-i2",
+   "roofY_P10": 23.44,
+   "roofY_P50": 23.94,
+   "roofY_P90": 24.9,
+   "roofY_P95": 25.05,
+   "roofY_max": 28.1,
+   "coverage": 0.92,
+   "groundY": 15.6,
+   "restated": true
+  },
+  "734026:1254": {
+   "unit": "b13-r0-g1",
+   "roofY_P10": 7.99,
+   "roofY_P50": 10.02,
+   "roofY_P90": 11.87,
+   "roofY_P95": 12.13,
+   "roofY_max": 12.33,
+   "coverage": 0.84,
+   "groundY": 4.1,
+   "restated": true
+  },
+  "734116:1255": {
+   "unit": "b13-r0-h1",
+   "roofY_P10": 13.0,
+   "roofY_P50": 13.24,
+   "roofY_P90": 13.84,
+   "roofY_P95": 13.97,
+   "roofY_max": 14.1,
+   "coverage": 0.8,
+   "groundY": 9.3,
+   "restated": true
+  },
+  "734262:1258": {
+   "unit": "b13-r0-j2",
+   "roofY_P10": 22.57,
+   "roofY_P50": 23.74,
+   "roofY_P90": 24.79,
+   "roofY_P95": 24.92,
+   "roofY_max": 25.05,
+   "coverage": 0.96,
+   "groundY": 12.5,
+   "restated": true
+  },
+  "734993:1265": {
+   "unit": "b13-r0-h2",
+   "roofY_P10": 4.83,
+   "roofY_P50": 5.7,
+   "roofY_P90": 6.71,
+   "roofY_P95": 6.97,
+   "roofY_max": 15.01,
+   "coverage": 0.65,
+   "groundY": -2.2,
+   "restated": true
+  }
+ },
+ "volumes": {
+  "571602:541:tier1": {
+   "ring": [
+    [
+     945.06,
+     -630.16
+    ],
+    [
+     942.36,
+     -634.28
+    ],
+    [
+     941.49,
+     -631.8
+    ],
+    [
+     940.96,
+     -633.07
+    ],
+    [
+     956.54,
+     -656.01
+    ],
+    [
+     981.66,
+     -639.5
+    ],
+    [
+     974.06,
+     -627.69
+    ],
+    [
+     965.78,
+     -632.97
+    ],
+    [
+     962.78,
+     -630.68
+    ],
+    [
+     958.15,
+     -631.15
+    ],
+    [
+     956.7,
+     -628.8
+    ],
+    [
+     957.69,
+     -625.92
+    ],
+    [
+     955.47,
+     -622.32
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 23.8,
+   "roofY_P10": 23.72,
+   "roofY_P50": 23.79,
+   "roofY_P90": 24.26,
+   "roofY_P95": 25.46,
+   "roofY_max": 26.29,
+   "coverage": 0.95
+  },
+  "587556:560:tier1": {
+   "ring": [
+    [
+     919.47,
+     -788.76
+    ],
+    [
+     930.41,
+     -809.33
+    ],
+    [
+     912.9,
+     -819.34
+    ],
+    [
+     916.1,
+     -829.67
+    ],
+    [
+     918.63,
+     -832.6
+    ],
+    [
+     920.48,
+     -832.52
+    ],
+    [
+     938.03,
+     -822.99
+    ],
+    [
+     949.04,
+     -844.01
+    ],
+    [
+     955.53,
+     -840.5
+    ],
+    [
+     958.05,
+     -844.53
+    ],
+    [
+     962.56,
+     -842.09
+    ],
+    [
+     963.51,
+     -842.9
+    ],
+    [
+     965.48,
+     -841.84
+    ],
+    [
+     962.77,
+     -836.79
+    ],
+    [
+     964.01,
+     -835.87
+    ],
+    [
+     954.75,
+     -818.74
+    ],
+    [
+     956.01,
+     -817.87
+    ],
+    [
+     935.27,
+     -781.4
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 18.2,
+   "roofY_P10": 18.17,
+   "roofY_P50": 18.22,
+   "roofY_P90": 18.27,
+   "roofY_P95": 18.28,
+   "roofY_max": 20.36,
+   "coverage": 0.84
+  },
+  "587556:560:tier2": {
+   "ring": [
+    [
+     921.19,
+     -759.03
+    ],
+    [
+     922,
+     -761.76
+    ],
+    [
+     920.49,
+     -760.31
+    ],
+    [
+     918.11,
+     -761.6
+    ],
+    [
+     918.31,
+     -763.57
+    ],
+    [
+     914.92,
+     -763.49
+    ],
+    [
+     915.48,
+     -765.04
+    ],
+    [
+     910.96,
+     -767.75
+    ],
+    [
+     920.74,
+     -781.42
+    ],
+    [
+     917.41,
+     -783.34
+    ],
+    [
+     919.64,
+     -787.99
+    ],
+    [
+     936.29,
+     -780.64
+    ],
+    [
+     935.24,
+     -777.34
+    ],
+    [
+     939.64,
+     -774.85
+    ],
+    [
+     930.19,
+     -757.38
+    ],
+    [
+     928.77,
+     -757.7
+    ],
+    [
+     927.73,
+     -755.92
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 14.2,
+   "roofY_P10": 12.81,
+   "roofY_P50": 14.17,
+   "roofY_P90": 14.22,
+   "roofY_P95": 14.66,
+   "roofY_max": 17.47,
+   "coverage": 0.88
+  },
+  "651563:835:tier1": {
+   "ring": [
+    [
+     917.37,
+     -589.27
+    ],
+    [
+     922.39,
+     -598.8
+    ],
+    [
+     920.89,
+     -601.3
+    ],
+    [
+     922.87,
+     -605.26
+    ],
+    [
+     927.04,
+     -611.52
+    ],
+    [
+     929.04,
+     -611.52
+    ],
+    [
+     931.87,
+     -614.76
+    ],
+    [
+     934.03,
+     -620.46
+    ],
+    [
+     963.2,
+     -603.7
+    ],
+    [
+     951.83,
+     -586.51
+    ],
+    [
+     949.46,
+     -587.18
+    ],
+    [
+     944.65,
+     -579.35
+    ],
+    [
+     937.61,
+     -577.27
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 21.6,
+   "roofY_P10": 21.61,
+   "roofY_P50": 21.67,
+   "roofY_P90": 23.36,
+   "roofY_P95": 23.77,
+   "roofY_max": 29.21,
+   "coverage": 0.94
+  },
+  "507933:234:upper": {
+   "ring": [
+    [
+     802.03,
+     -617.99
+    ],
+    [
+     795.92,
+     -605.87
+    ],
+    [
+     797.99,
+     -605.68
+    ],
+    [
+     802.02,
+     -607.19
+    ],
+    [
+     805.77,
+     -603.93
+    ],
+    [
+     808.63,
+     -609.37
+    ],
+    [
+     810.46,
+     -608.68
+    ],
+    [
+     812.54,
+     -612.39
+    ]
+   ],
+   "roof": "hip-shingle",
+   "targetY": 10.21,
+   "roofY_P10": 8.57,
+   "roofY_P50": 9.3,
+   "roofY_P90": 10.1,
+   "roofY_P95": 10.21,
+   "roofY_max": 10.84,
+   "coverage": 0.4
+  },
+  "719819:1199:upper": {
+   "ring": [
+    [
+     1216.46,
+     -581.19
+    ],
+    [
+     1217.2,
+     -582.48
+    ],
+    [
+     1216.53,
+     -583.65
+    ],
+    [
+     1216.71,
+     -584.31
+    ],
+    [
+     1220.16,
+     -590.29
+    ],
+    [
+     1210.03,
+     -595.99
+    ],
+    [
+     1204.92,
+     -586.85
+    ],
+    [
+     1213.56,
+     -582.66
+    ],
+    [
+     1214.05,
+     -581.67
+    ]
+   ],
+   "roof": "hip-shingle",
+   "targetY": 24.16,
+   "roofY_P10": 22.3,
+   "roofY_P50": 23.18,
+   "roofY_P90": 24.05,
+   "roofY_P95": 24.16,
+   "roofY_max": 24.26,
+   "coverage": 0.9
+  }
+ },
+ "conflicts": {
+  "719188:1188": {
+   "targetTopY": 31.59,
+   "tol": 1.5,
+   "rejectedCityTopY": 51.64,
+   "basis": "2017 LiDAR raster P95 (City h 31.14 rejected)"
+  }
+ },
+ "cityTop": {
+  "466326:63": {
+   "targetTopAboveGrade": 9.4,
+   "tol": 1.2,
+   "basis": "City 2023 h (post-2017 rebuild, LiDAR stale)"
+  },
+  "588453:572": {
+   "targetTopAboveGrade": 9.55,
+   "tol": 1.2,
+   "basis": "City 2023 h (post-2017 rebuild, LiDAR stale)"
+  }
+ }
+}

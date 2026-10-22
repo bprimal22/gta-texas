@@ -1,0 +1,20 @@
+{
+  "sMin": 20.1598707551,
+  "sMax": 32.5151196298,
+  "back": -1.64,
+  "front": 3.35,
+  "base": 9.05,
+  "roof": 28.65,
+  "windowRows": [10.1, 14.0, 17.9, 21.8],
+  "windowHeight": 2.35,
+  "clerestoryBottom": 26.4,
+  "clerestoryHeight": 1.1,
+  "notes": [
+    "Optional photo-informed upper central mass above the low connector. This is an explicit simplified inference, not a surveyed reconstruction.",
+    "Width is the central projection of the official UT437 footprint in the existing south-wall frame; source witness X46.29..49.07,Z-58.82..-57.14 lies inside it.",
+    "The measured upper triangle reaches locald3.183; new frontd3.35 and shallow backd-1.64 bound its closed replacement. Front depth is inferred from source distortion plus photo topology, not a measured wall plane.",
+    "Existing POB central-pavilion roof28.65 is reused; source roof(48,-58)Y27.559 supports this approximate high band within declared geometricError2.006m.",
+    "Base9.05 and minimum cut9.08 preserve the observed low connector roof(49,-53)Y8.662. No low floor/roof or connector door cut is added.",
+    "South material and deep openings follow viewed L179-h090/L001-detail-090. Hidden bay count, side windows, cornice and floor structure are simplified architectural estimates."
+  ]
+}

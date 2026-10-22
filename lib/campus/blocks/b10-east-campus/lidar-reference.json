@@ -1,0 +1,1209 @@
+{
+ "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 / DSM rasters (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b10-east-campus/derived/inventory-b10.json; campus Y = NAVD88 - 165, raster shift dx -0.23 dz -1.07",
+ "records": {
+  "463184:10": {
+   "abbr": "MSB",
+   "roofY_P10": 22.51,
+   "roofY_P50": 22.54,
+   "roofY_P90": 23.13,
+   "roofY_P95": 23.27,
+   "roofY_max": 24.05,
+   "coverage": 0.83,
+   "groundY": 18.7,
+   "restated": true
+  },
+  "464270:29": {
+   "abbr": "",
+   "roofY_P10": 24.01,
+   "roofY_P50": 24.52,
+   "roofY_P90": 25.72,
+   "roofY_P95": 26.13,
+   "roofY_max": 28.46,
+   "coverage": 0.97,
+   "groundY": 19.5,
+   "restated": true
+  },
+  "465523:50": {
+   "abbr": "",
+   "roofY_P10": 23.38,
+   "roofY_P50": 23.58,
+   "roofY_P90": 23.84,
+   "roofY_P95": 23.89,
+   "roofY_max": 23.99,
+   "coverage": 0.95,
+   "groundY": 20.5,
+   "restated": true
+  },
+  "467931:76": {
+   "abbr": "GHB",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 16.2,
+   "restated": false
+  },
+  "488225:136": {
+   "abbr": "GHF",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 14.5,
+   "restated": false
+  },
+  "488354:137": {
+   "abbr": "GHB",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 17.2,
+   "restated": false
+  },
+  "502881:162": {
+   "abbr": "ECG",
+   "roofY_P10": 18.32,
+   "roofY_P50": 18.6,
+   "roofY_P90": 18.9,
+   "roofY_P95": 19.21,
+   "roofY_max": 29.13,
+   "coverage": 0.39,
+   "groundY": 15.9,
+   "restated": false
+  },
+  "503535:173": {
+   "abbr": "CML",
+   "roofY_P10": 23.55,
+   "roofY_P50": 24.69,
+   "roofY_P90": 26.08,
+   "roofY_P95": 26.29,
+   "roofY_max": 28.36,
+   "coverage": 0.85,
+   "groundY": 19.3,
+   "restated": true
+  },
+  "504442:184": {
+   "abbr": "AF1",
+   "roofY_P10": 24.97,
+   "roofY_P50": 25.46,
+   "roofY_P90": 25.88,
+   "roofY_P95": 26.01,
+   "roofY_max": 26.07,
+   "coverage": 0.86,
+   "groundY": 20.8,
+   "restated": true
+  },
+  "504847:193": {
+   "abbr": "",
+   "roofY_P10": 7.95,
+   "roofY_P50": 9.23,
+   "roofY_P90": 10.34,
+   "roofY_P95": 10.41,
+   "roofY_max": 11.8,
+   "coverage": 0.91,
+   "groundY": 2.7,
+   "restated": true
+  },
+  "504902:195": {
+   "abbr": "IPF",
+   "roofY_P10": 27.87,
+   "roofY_P50": 35.14,
+   "roofY_P90": 38.92,
+   "roofY_P95": 39.17,
+   "roofY_max": 39.38,
+   "coverage": 0.89,
+   "groundY": 18.5,
+   "restated": false
+  },
+  "505912:205": {
+   "abbr": "",
+   "roofY_P10": 19.89,
+   "roofY_P50": 19.93,
+   "roofY_P90": 19.95,
+   "roofY_P95": 19.95,
+   "roofY_max": 19.96,
+   "coverage": 0.89,
+   "groundY": 16.1,
+   "restated": true
+  },
+  "506091:207": {
+   "abbr": "FC5",
+   "roofY_P10": 26.89,
+   "roofY_P50": 27.88,
+   "roofY_P90": 29.52,
+   "roofY_P95": 29.78,
+   "roofY_max": 30.15,
+   "coverage": 0.88,
+   "groundY": 20.4,
+   "restated": true
+  },
+  "507419:225": {
+   "abbr": "DFF",
+   "roofY_P10": 28.93,
+   "roofY_P50": 29.6,
+   "roofY_P90": 32.35,
+   "roofY_P95": 32.87,
+   "roofY_max": 38.89,
+   "coverage": 0.85,
+   "groundY": 11.5,
+   "restated": true,
+   "p50Only": true,
+   "exempt": "grandstand: raster mixes seating bowl, fabric canopies and light towers (P95/max = light poles); checked on P50 only"
+  },
+  "508317:239": {
+   "abbr": "DEV",
+   "roofY_P10": 36.82,
+   "roofY_P50": 36.86,
+   "roofY_P90": 36.89,
+   "roofY_P95": 36.9,
+   "roofY_max": 36.92,
+   "coverage": 0.98,
+   "groundY": 21.6,
+   "restated": true
+  },
+  "510614:242": {
+   "abbr": "GHB",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 18.1,
+   "restated": false
+  },
+  "512638:243": {
+   "abbr": "FC4",
+   "roofY_P10": 25.48,
+   "roofY_P50": 26.77,
+   "roofY_P90": 30.91,
+   "roofY_P95": 31.59,
+   "roofY_max": 32.21,
+   "coverage": 0.87,
+   "groundY": 20.3,
+   "restated": true
+  },
+  "512958:246": {
+   "abbr": "",
+   "roofY_P10": 15.84,
+   "roofY_P50": 16.01,
+   "roofY_P90": 16.17,
+   "roofY_P95": 16.19,
+   "roofY_max": 16.21,
+   "coverage": 0.48,
+   "groundY": 12.8,
+   "restated": true
+  },
+  "526353:275": {
+   "abbr": "",
+   "roofY_P10": 22.34,
+   "roofY_P50": 22.78,
+   "roofY_P90": 23.37,
+   "roofY_P95": 23.72,
+   "roofY_max": 25.21,
+   "coverage": 0.83,
+   "groundY": 19.1,
+   "restated": true
+  },
+  "527448:298": {
+   "abbr": "SBS",
+   "roofY_P10": 15.95,
+   "roofY_P50": 16.39,
+   "roofY_P90": 16.79,
+   "roofY_P95": 16.86,
+   "roofY_max": 16.94,
+   "coverage": 0.83,
+   "groundY": 11.7,
+   "restated": true
+  },
+  "531510:347": {
+   "abbr": "GHC",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 17.9,
+   "restated": false
+  },
+  "547822:354": {
+   "abbr": "",
+   "roofY_P10": 24.35,
+   "roofY_P50": 27.13,
+   "roofY_P90": 27.73,
+   "roofY_P95": 27.86,
+   "roofY_max": 30.16,
+   "coverage": 0.87,
+   "groundY": 18.6,
+   "restated": true
+  },
+  "548752:377": {
+   "abbr": "FC8",
+   "roofY_P10": 24.69,
+   "roofY_P50": 26.09,
+   "roofY_P90": 26.8,
+   "roofY_P95": 26.86,
+   "roofY_max": 27.85,
+   "coverage": 0.97,
+   "groundY": 21.1,
+   "restated": true
+  },
+  "549037:384": {
+   "abbr": "",
+   "roofY_P10": 15.99,
+   "roofY_P50": 16.0,
+   "roofY_P90": 16.02,
+   "roofY_P95": 16.02,
+   "roofY_max": 16.04,
+   "coverage": 0.93,
+   "groundY": 11.4,
+   "restated": true
+  },
+  "549485:397": {
+   "abbr": "DFF",
+   "roofY_P10": 16.59,
+   "roofY_P50": 17.23,
+   "roofY_P90": 17.92,
+   "roofY_P95": 18.0,
+   "roofY_max": 18.08,
+   "coverage": 0.14,
+   "groundY": 9.8,
+   "restated": false
+  },
+  "551631:441": {
+   "abbr": "SRH",
+   "roofY_P10": 27.14,
+   "roofY_P50": 27.16,
+   "roofY_P90": 29.9,
+   "roofY_P95": 29.91,
+   "roofY_max": 31.0,
+   "coverage": 0.84,
+   "groundY": 15.4,
+   "restated": true
+  },
+  "554622:449": {
+   "abbr": "",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 19.2,
+   "restated": false
+  },
+  "570223:513": {
+   "abbr": "",
+   "roofY_P10": 27.15,
+   "roofY_P50": 27.34,
+   "roofY_P90": 27.51,
+   "roofY_P95": 27.54,
+   "roofY_max": 27.57,
+   "coverage": 0.9,
+   "groundY": 18.9,
+   "restated": true
+  },
+  "571190:535": {
+   "abbr": "TTC",
+   "roofY_P10": 18.55,
+   "roofY_P50": 18.65,
+   "roofY_P90": 18.73,
+   "roofY_P95": 18.75,
+   "roofY_max": 20.21,
+   "coverage": 0.54,
+   "groundY": 14.0,
+   "restated": false
+  },
+  "573723:542": {
+   "abbr": "",
+   "roofY_P10": 17.26,
+   "roofY_P50": 17.3,
+   "roofY_P90": 17.32,
+   "roofY_P95": 17.32,
+   "roofY_max": 17.32,
+   "coverage": 0.64,
+   "groundY": 13.7,
+   "restated": true
+  },
+  "573762:545": {
+   "abbr": "GHB",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 17.4,
+   "restated": false
+  },
+  "588435:571": {
+   "abbr": "",
+   "roofY_P10": 23.29,
+   "roofY_P50": 23.67,
+   "roofY_P90": 24.02,
+   "roofY_P95": 24.09,
+   "roofY_max": 24.12,
+   "coverage": 0.84,
+   "groundY": 19.4,
+   "restated": true
+  },
+  "588651:575": {
+   "abbr": "",
+   "roofY_P10": 15.91,
+   "roofY_P50": 15.93,
+   "roofY_P90": 15.95,
+   "roofY_P95": 15.96,
+   "roofY_max": 15.97,
+   "coverage": 0.86,
+   "groundY": 10.6,
+   "restated": true
+  },
+  "592456:636": {
+   "abbr": "UIL",
+   "roofY_P10": 34.31,
+   "roofY_P50": 36.2,
+   "roofY_P90": 38.8,
+   "roofY_P95": 39.27,
+   "roofY_max": 39.86,
+   "coverage": 0.89,
+   "groundY": 19.7,
+   "restated": true
+  },
+  "592812:641": {
+   "abbr": "",
+   "roofY_P10": 24.11,
+   "roofY_P50": 24.49,
+   "roofY_P90": 25.25,
+   "roofY_P95": 25.43,
+   "roofY_max": 25.67,
+   "coverage": 0.94,
+   "groundY": 20.7,
+   "restated": true
+  },
+  "593296:645": {
+   "abbr": "",
+   "roofY_P10": 21.99,
+   "roofY_P50": 27.21,
+   "roofY_P90": 27.49,
+   "roofY_P95": 27.52,
+   "roofY_max": 27.58,
+   "coverage": 0.84,
+   "groundY": 19.0,
+   "restated": true
+  },
+  "593416:647": {
+   "abbr": "",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 4.5,
+   "restated": false
+  },
+  "593469:650": {
+   "abbr": "SBS",
+   "roofY_P10": 20.24,
+   "roofY_P50": 20.82,
+   "roofY_P90": 21.39,
+   "roofY_P95": 21.46,
+   "roofY_max": 25.66,
+   "coverage": 0.48,
+   "groundY": 12.7,
+   "restated": true
+  },
+  "594946:671": {
+   "abbr": "",
+   "roofY_P10": 18.46,
+   "roofY_P50": 18.52,
+   "roofY_P90": 18.57,
+   "roofY_P95": 18.58,
+   "roofY_max": 18.66,
+   "coverage": 0.95,
+   "groundY": 14.2,
+   "restated": true
+  },
+  "611080:689": {
+   "abbr": "FC6",
+   "roofY_P10": 25.45,
+   "roofY_P50": 28.59,
+   "roofY_P90": 30.41,
+   "roofY_P95": 30.7,
+   "roofY_max": 31.0,
+   "coverage": 0.95,
+   "groundY": 20.1,
+   "restated": true
+  },
+  "611629:706": {
+   "abbr": "ECG",
+   "roofY_P10": 26.89,
+   "roofY_P50": 30.8,
+   "roofY_P90": 30.94,
+   "roofY_P95": 31.36,
+   "roofY_max": 37.63,
+   "coverage": 0.86,
+   "groundY": 12.2,
+   "restated": true,
+   "p50Only": true,
+   "exempt": "garage deck with stair/elevator towers and light poles; checked on P50 only"
+  },
+  "613242:730": {
+   "abbr": "",
+   "roofY_P10": 20.16,
+   "roofY_P50": 20.21,
+   "roofY_P90": 20.35,
+   "roofY_P95": 20.35,
+   "roofY_max": 20.38,
+   "coverage": 0.88,
+   "groundY": 17.1,
+   "restated": true
+  },
+  "622897:775": {
+   "abbr": "DFF",
+   "roofY_P10": 19.73,
+   "roofY_P50": 19.74,
+   "roofY_P90": 19.76,
+   "roofY_P95": 19.77,
+   "roofY_max": 19.77,
+   "coverage": 0.9,
+   "groundY": 11.6,
+   "restated": true
+  },
+  "623017:777": {
+   "abbr": "",
+   "roofY_P10": 15.46,
+   "roofY_P50": 16.64,
+   "roofY_P90": 17.53,
+   "roofY_P95": 17.62,
+   "roofY_max": 17.69,
+   "coverage": 0.97,
+   "groundY": 11.2,
+   "restated": true
+  },
+  "623232:781": {
+   "abbr": "",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 14.9,
+   "restated": false
+  },
+  "623468:782": {
+   "abbr": "",
+   "roofY_P10": 20.83,
+   "roofY_P50": 21.09,
+   "roofY_P90": 21.37,
+   "roofY_P95": 21.42,
+   "roofY_max": 21.52,
+   "coverage": 0.74,
+   "groundY": 17.7,
+   "restated": true,
+   "p50Only": true,
+   "exempt": "LiDAR roof only 2.8 m above the perimeter ground; the generator minimum wall holds the hip ~0.6 m above the LiDAR max; checked on P50 only"
+  },
+  "623655:784": {
+   "abbr": "",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 14.6,
+   "restated": false
+  },
+  "624270:790": {
+   "abbr": "",
+   "roofY_P10": 23.65,
+   "roofY_P50": 23.92,
+   "roofY_P90": 24.23,
+   "roofY_P95": 24.27,
+   "roofY_max": 24.32,
+   "coverage": 0.96,
+   "groundY": 20.6,
+   "restated": true
+  },
+  "624507:792": {
+   "abbr": "",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 5.7,
+   "restated": false
+  },
+  "651955:840": {
+   "abbr": "",
+   "roofY_P10": 20.0,
+   "roofY_P50": 20.08,
+   "roofY_P90": 20.19,
+   "roofY_P95": 20.2,
+   "roofY_max": 20.21,
+   "coverage": 0.64,
+   "groundY": 16.5,
+   "restated": true
+  },
+  "652998:861": {
+   "abbr": "AF2",
+   "roofY_P10": 22.55,
+   "roofY_P50": 23.5,
+   "roofY_P90": 24.29,
+   "roofY_P95": 31.35,
+   "roofY_max": 31.96,
+   "coverage": 0.93,
+   "groundY": 17.7,
+   "restated": true,
+   "p50Only": true,
+   "exempt": "a few tall cells (light pole / net) set LiDAR P95/max; checked on P50 only"
+  },
+  "653324:865": {
+   "abbr": "SBS",
+   "roofY_P10": 15.89,
+   "roofY_P50": 16.32,
+   "roofY_P90": 16.71,
+   "roofY_P95": 16.77,
+   "roofY_max": 16.86,
+   "coverage": 0.89,
+   "groundY": 12.3,
+   "restated": true
+  },
+  "653377:866": {
+   "abbr": "",
+   "roofY_P10": 24.22,
+   "roofY_P50": 24.44,
+   "roofY_P90": 24.66,
+   "roofY_P95": 24.69,
+   "roofY_max": 25.05,
+   "coverage": 0.87,
+   "groundY": 17.6,
+   "restated": true
+  },
+  "654081:873": {
+   "abbr": "FC7",
+   "roofY_P10": 24.6,
+   "roofY_P50": 24.63,
+   "roofY_P90": 24.67,
+   "roofY_P95": 24.71,
+   "roofY_max": 25.07,
+   "coverage": 0.94,
+   "groundY": 19.7,
+   "restated": true
+  },
+  "656230:917": {
+   "abbr": "",
+   "roofY_P10": 10.24,
+   "roofY_P50": 10.62,
+   "roofY_P90": 11.1,
+   "roofY_P95": 11.23,
+   "roofY_max": 11.82,
+   "coverage": 0.86,
+   "groundY": 6.7,
+   "restated": true
+  },
+  "661147:944": {
+   "abbr": "GHA",
+   "roofY_P10": 19.93,
+   "roofY_P50": 20.65,
+   "roofY_P90": 21.41,
+   "roofY_P95": 21.5,
+   "roofY_max": 27.34,
+   "coverage": 0.04,
+   "groundY": 16.1,
+   "restated": false
+  },
+  "661191:945": {
+   "abbr": "GHE",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 15.4,
+   "restated": false
+  },
+  "677173:982": {
+   "abbr": "",
+   "roofY_P10": 25.05,
+   "roofY_P50": 25.11,
+   "roofY_P90": 25.18,
+   "roofY_P95": 25.19,
+   "roofY_max": 25.21,
+   "coverage": 0.98,
+   "groundY": 19.8,
+   "restated": true
+  },
+  "681770:995": {
+   "abbr": "LNA",
+   "roofY_P10": 22.87,
+   "roofY_P50": 23.93,
+   "roofY_P90": 25.34,
+   "roofY_P95": 25.76,
+   "roofY_max": 26.44,
+   "coverage": 0.13,
+   "groundY": 19.7,
+   "restated": false
+  },
+  "683695:1002": {
+   "abbr": "FC3",
+   "roofY_P10": 26.92,
+   "roofY_P50": 30.06,
+   "roofY_P90": 32.99,
+   "roofY_P95": 33.89,
+   "roofY_max": 34.7,
+   "coverage": 0.9,
+   "groundY": 20.6,
+   "restated": true
+  },
+  "698776:1040": {
+   "abbr": "FC9",
+   "roofY_P10": 24.74,
+   "roofY_P50": 24.82,
+   "roofY_P90": 24.89,
+   "roofY_P95": 24.9,
+   "roofY_max": 24.92,
+   "coverage": 0.88,
+   "groundY": 20.4,
+   "restated": true
+  },
+  "700018:1070": {
+   "abbr": "",
+   "roofY_P10": 21.37,
+   "roofY_P50": 21.38,
+   "roofY_P90": 21.4,
+   "roofY_P95": 21.4,
+   "roofY_max": 21.73,
+   "coverage": 0.86,
+   "groundY": 15.8,
+   "restated": true
+  },
+  "700068:1072": {
+   "abbr": "",
+   "roofY_P10": 19.62,
+   "roofY_P50": 20.44,
+   "roofY_P90": 21.42,
+   "roofY_P95": 21.59,
+   "roofY_max": 21.74,
+   "coverage": 0.68,
+   "groundY": 15.8,
+   "restated": true
+  },
+  "713828:1083": {
+   "abbr": "CPC",
+   "roofY_P10": 14.11,
+   "roofY_P50": 14.78,
+   "roofY_P90": 15.55,
+   "roofY_P95": 15.65,
+   "roofY_max": 15.73,
+   "coverage": 0.97,
+   "groundY": 9.8,
+   "restated": true
+  },
+  "714561:1100": {
+   "abbr": "",
+   "roofY_P10": 22.95,
+   "roofY_P50": 23.06,
+   "roofY_P90": 23.16,
+   "roofY_P95": 23.17,
+   "roofY_max": 23.19,
+   "coverage": 0.83,
+   "groundY": 20.1,
+   "restated": true
+  },
+  "714645:1101": {
+   "abbr": "",
+   "roofY_P10": 21.05,
+   "roofY_P50": 23.56,
+   "roofY_P90": 23.84,
+   "roofY_P95": 23.89,
+   "roofY_max": 25.82,
+   "coverage": 0.83,
+   "groundY": 16.5,
+   "restated": true
+  },
+  "715089:1109": {
+   "abbr": "SBS",
+   "roofY_P10": 16.23,
+   "roofY_P50": 26.33,
+   "roofY_P90": 27.04,
+   "roofY_P95": 27.28,
+   "roofY_max": 29.06,
+   "coverage": 0.85,
+   "groundY": 12.2,
+   "restated": true
+  },
+  "715867:1129": {
+   "abbr": "",
+   "roofY_P10": 21.36,
+   "roofY_P50": 21.38,
+   "roofY_P90": 21.4,
+   "roofY_P95": 21.46,
+   "roofY_max": 21.71,
+   "coverage": 0.86,
+   "groundY": 15.5,
+   "restated": true
+  },
+  "719494:1191": {
+   "abbr": "AFP",
+   "roofY_P10": 24.47,
+   "roofY_P50": 25.26,
+   "roofY_P90": 27.29,
+   "roofY_P95": 27.42,
+   "roofY_max": 27.6,
+   "coverage": 0.96,
+   "groundY": 19.3,
+   "restated": true
+  },
+  "719603:1196": {
+   "abbr": "",
+   "roofY_P10": 19.49,
+   "roofY_P50": 19.63,
+   "roofY_P90": 24.29,
+   "roofY_P95": 24.34,
+   "roofY_max": 26.48,
+   "coverage": 0.88,
+   "groundY": 14.8,
+   "restated": true
+  },
+  "720225:1208": {
+   "abbr": "",
+   "roofY_P10": 12.92,
+   "roofY_P50": 13.23,
+   "roofY_P90": 13.46,
+   "roofY_P95": 13.47,
+   "roofY_max": 13.47,
+   "coverage": 0.92,
+   "groundY": 8.7,
+   "restated": true
+  },
+  "724630:1218": {
+   "abbr": "",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 15.3,
+   "restated": false
+  },
+  "732944:1232": {
+   "abbr": "",
+   "roofY_P10": 7.61,
+   "roofY_P50": 7.85,
+   "roofY_P90": 7.93,
+   "roofY_P95": 8.59,
+   "roofY_max": 9.37,
+   "coverage": 0.77,
+   "groundY": 1.5,
+   "restated": false
+  },
+  "733682:1246": {
+   "abbr": "",
+   "roofY_P10": 20.08,
+   "roofY_P50": 20.1,
+   "roofY_P90": 20.14,
+   "roofY_P95": 20.14,
+   "roofY_max": 20.14,
+   "coverage": 0.89,
+   "groundY": 16.9,
+   "restated": true
+  },
+  "735620:1275": {
+   "abbr": "GHD",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 16.9,
+   "restated": false
+  },
+  "736712:1278": {
+   "abbr": "FC2",
+   "roofY_P10": 24.88,
+   "roofY_P50": 26.91,
+   "roofY_P90": 29.07,
+   "roofY_P95": 29.43,
+   "roofY_max": 29.88,
+   "coverage": 0.88,
+   "groundY": 20.2,
+   "restated": true
+  }
+ },
+ "volumes": {
+  "IPF:outer-band": {
+   "ring": [
+    [
+     1006.94,
+     -86.99
+    ],
+    [
+     977.31,
+     26.9
+    ],
+    [
+     1001.68,
+     33.25
+    ],
+    [
+     999.66,
+     41.0
+    ],
+    [
+     1005.13,
+     42.43
+    ],
+    [
+     1007.17,
+     34.6
+    ],
+    [
+     1010.73,
+     35.53
+    ],
+    [
+     1008.87,
+     42.69
+    ],
+    [
+     1012.54,
+     43.65
+    ],
+    [
+     1014.41,
+     36.48
+    ],
+    [
+     1021.52,
+     38.33
+    ],
+    [
+     1020.98,
+     40.4
+    ],
+    [
+     1025.11,
+     41.48
+    ],
+    [
+     1025.65,
+     39.41
+    ],
+    [
+     1032.13,
+     41.1
+    ],
+    [
+     1060.14,
+     -66.54
+    ],
+    [
+     1062.25,
+     -65.99
+    ],
+    [
+     1062.85,
+     -68.31
+    ],
+    [
+     1060.74,
+     -68.86
+    ],
+    [
+     1061.74,
+     -72.7
+    ]
+   ],
+   "roof": "hip-metal",
+   "targetY": 34.9,
+   "skip": true
+  },
+  "IPF:crown": {
+   "ring": [
+    [
+     1023.92,
+     28.25
+    ],
+    [
+     1025.42,
+     26.82
+    ],
+    [
+     1026.57,
+     24.52
+    ],
+    [
+     1028.05,
+     12.69
+    ],
+    [
+     1031.5,
+     2.33
+    ],
+    [
+     1031.5,
+     -0.27
+    ],
+    [
+     1033.08,
+     -3.97
+    ],
+    [
+     1035.1,
+     -15.1
+    ],
+    [
+     1037.0,
+     -18.41
+    ],
+    [
+     1037.0,
+     -22.67
+    ],
+    [
+     1041.07,
+     -34.88
+    ],
+    [
+     1042.58,
+     -42.94
+    ],
+    [
+     1045.58,
+     -50.46
+    ],
+    [
+     1046.68,
+     -55.94
+    ],
+    [
+     1047.5,
+     -56.75
+    ],
+    [
+     1047.5,
+     -59.07
+    ],
+    [
+     1049.0,
+     -61.07
+    ],
+    [
+     1049.0,
+     -64.93
+    ],
+    [
+     1048.81,
+     -65.49
+    ],
+    [
+     1045.46,
+     -68.45
+    ],
+    [
+     1031.87,
+     -70.88
+    ],
+    [
+     1022.06,
+     -74.8
+    ],
+    [
+     1017.37,
+     -74.8
+    ],
+    [
+     1014.71,
+     -72.42
+    ],
+    [
+     1013.6,
+     -69.83
+    ],
+    [
+     1013.6,
+     -65.93
+    ],
+    [
+     1012.1,
+     -61.43
+    ],
+    [
+     1012.1,
+     -58.44
+    ],
+    [
+     1008.03,
+     -45.74
+    ],
+    [
+     1006.03,
+     -34.7
+    ],
+    [
+     1003.06,
+     -26.29
+    ],
+    [
+     1002.57,
+     -21.32
+    ],
+    [
+     999.04,
+     -10.75
+    ],
+    [
+     998.01,
+     -4.59
+    ],
+    [
+     996.6,
+     -1.76
+    ],
+    [
+     996.6,
+     0.68
+    ],
+    [
+     994.5,
+     5.44
+    ],
+    [
+     992.96,
+     12.07
+    ],
+    [
+     991.54,
+     14.43
+    ],
+    [
+     991.17,
+     18.59
+    ],
+    [
+     993.46,
+     21.97
+    ],
+    [
+     996.87,
+     23.1
+    ],
+    [
+     1000.2,
+     23.1
+    ],
+    [
+     1001.79,
+     24.16
+    ],
+    [
+     1007.01,
+     24.63
+    ],
+    [
+     1019.22,
+     29.03
+    ]
+   ],
+   "roof": "hip-metal",
+   "targetY": 39.4,
+   "roofY_P10": 35.66,
+   "roofY_P50": 37.76,
+   "roofY_P90": 39.17,
+   "roofY_P95": 39.26,
+   "roofY_max": 39.38,
+   "coverage": 0.89
+  }
+ },
+ "excluded": {},
+ "officialTop": {
+  "661147:944": {
+   "abbr": "GHA",
+   "targetTopAboveGrade": 21.74,
+   "tol": 1.2,
+   "basis": "City 2023 h"
+  },
+  "488225:136": {
+   "abbr": "GHF",
+   "targetTopAboveGrade": 22.69,
+   "tol": 1.2,
+   "basis": "City 2023 h"
+  },
+  "467931:76": {
+   "abbr": "GHB",
+   "targetTopAboveGrade": 21.74,
+   "tol": 1.2,
+   "basis": "estimate (sibling GHA City h)"
+  },
+  "488354:137": {
+   "abbr": "GHB",
+   "targetTopAboveGrade": 21.74,
+   "tol": 1.2,
+   "basis": "estimate (sibling GHA City h)"
+  },
+  "510614:242": {
+   "abbr": "GHB",
+   "targetTopAboveGrade": 21.74,
+   "tol": 1.2,
+   "basis": "estimate (sibling GHA City h)"
+  },
+  "573762:545": {
+   "abbr": "GHB",
+   "targetTopAboveGrade": 21.74,
+   "tol": 1.2,
+   "basis": "estimate (sibling GHA City h)"
+  },
+  "531510:347": {
+   "abbr": "GHC",
+   "targetTopAboveGrade": 21.74,
+   "tol": 1.2,
+   "basis": "estimate (sibling GHA City h)"
+  },
+  "735620:1275": {
+   "abbr": "GHD",
+   "targetTopAboveGrade": 21.74,
+   "tol": 1.2,
+   "basis": "estimate (sibling GHA City h)"
+  },
+  "661191:945": {
+   "abbr": "GHE",
+   "targetTopAboveGrade": 21.74,
+   "tol": 1.2,
+   "basis": "estimate (sibling GHA City h)"
+  },
+  "571190:535": {
+   "abbr": "TTC",
+   "targetTopAboveGrade": 14.13,
+   "tol": 1.2,
+   "basis": "City 2023 h"
+  },
+  "681770:995": {
+   "abbr": "LNA",
+   "targetTopAboveGrade": 10.16,
+   "tol": 1.2,
+   "basis": "City 2023 h"
+  },
+  "549485:397": {
+   "abbr": "PDC",
+   "targetTopAboveGrade": 13.37,
+   "tol": 1.2,
+   "basis": "City 2023 h"
+  }
+ }
+}

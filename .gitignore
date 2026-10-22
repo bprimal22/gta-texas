@@ -1,0 +1,15 @@
+/.work/
+.DS_Store
+.env*
+*.pem
+.vite-cache/
+.vite-cache-render/
+.work/
+
+# Installed dependencies and local verification output
+node_modules/
+/harness-dist/
+/harness-dist-deep-west/
+__pycache__/
+*.pyc
+*.log

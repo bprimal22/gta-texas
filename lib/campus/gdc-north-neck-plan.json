@@ -1,0 +1,24 @@
+{
+  "northWest": [45.425352431628866, -51.00959458045281],
+  "northEast": [57.60115631756116, -49.94489820567529],
+  "southEast": [57.004017, -44.248884],
+  "southWest": [44.927264, -45.304864],
+  "floor": 2.45,
+  "slabDepth": 0.4,
+  "eave": 6.95,
+  "ridge": 8.55,
+  "eaveOut": 0.65,
+  "ridgeDepth": 3,
+  "roofThickness": 0.18,
+  "sourceCutTop": 9.08,
+  "sourceCutBottom": 2.43,
+  "wallThickness": 0.24,
+  "stoneBaseHeight": 0.75,
+  "notes": [
+    "The GDC official UT402 ring defines the south-west and south-east corners of this 5.7m projection. Its north edge joins the independently authored POB connector.",
+    "North-east uses the connector UT437 endpoint, 99.4mm east of the UT402 vertex, to close the registration discrepancy without moving either adjacent building.",
+    "Floor2.45 and the sloping metal roof profile exactly match the accepted connector API. The projected neck is visible on the architect ground plan; its partly hidden simple brick returns and stone base are an explicit simplification.",
+    "No exterior courtyard floor is removed. The low cut is confined to the closed slab footprint and stops at the shared C-D edge. Roof profile and solid return shapes are inferred, not a recovered scan or interior survey.",
+    "No new door or traversable interior is invented. The existing connector's closed entrance, roof, glazing and ownership remain unchanged."
+  ]
+}

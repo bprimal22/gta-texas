@@ -1,0 +1,124 @@
+{
+ "source": "tools/scans/stand-palette-uv.mjs on the source-photo-UV near GLB (area-weighted samples through each captured face's own UVs; authored infill excluded). Superseded: stand-colours.mjs on the orthographic re-bake (mixed layers).",
+ "litToAlbedo": 0.87,
+ "litToAlbedoNote": "render contract: sunlit limestone albedo ~241 sRGB renders ~209",
+ "scanMeasured": {
+  "seatsMedian": [
+   71,
+   76,
+   81
+  ],
+  "seatsSunlitMedian": [
+   132,
+   134,
+   133
+  ],
+  "seatsShadeMedian": [
+   49,
+   57,
+   66
+  ],
+  "seatsSunlitFraction": 0.354,
+  "seatsWarmFraction": 0.003,
+  "fasciaSunlitMedian": [
+   181,
+   172,
+   163
+  ],
+  "fasciaShadeMedian": [
+   48,
+   52,
+   58
+  ],
+  "samples": {
+   "seats": 2099,
+   "fascia": 2238
+  }
+ },
+ "generatedBefore": {
+  "stadiumSeat": {
+   "painterMedian": [
+    164,
+    81,
+    31
+   ],
+   "painterMean": [
+    167,
+    121,
+    91
+   ]
+  },
+  "stadiumRiser/trim": {
+   "painterMedian": [
+    241,
+    238,
+    232
+   ]
+  }
+ },
+ "generatedAfter": {
+  "stadiumSeat": {
+   "base": [
+    152,
+    154,
+    153
+   ]
+  },
+  "stadiumRiser/trim": {
+   "base": [
+    208,
+    198,
+    187
+   ]
+  }
+ },
+ "previewMeans": {
+  "stadiumSeat": [
+   152,
+   154,
+   153
+  ],
+  "stadiumRiser": [
+   206,
+   196,
+   185
+  ],
+  "trim": [
+   206,
+   196,
+   185
+  ],
+  "stadiumFacade": [
+   176,
+   174,
+   170
+  ],
+  "stadiumSuite": [
+   150,
+   156,
+   160
+  ],
+  "stadiumField": [
+   70,
+   112,
+   58
+  ],
+  "stadiumFacadePale": [
+   200,
+   197,
+   190
+  ]
+ },
+ "supersededOrthographicMeasurement": {
+  "seatsSunlitMedian": [
+   110,
+   112,
+   113
+  ],
+  "fasciaSunlitMedian": [
+   106,
+   109,
+   110
+  ]
+ }
+}

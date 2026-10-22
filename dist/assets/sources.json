@@ -1,0 +1,179 @@
+[
+  {
+    "file": "brick-diff.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_brick_03/red_brick_03_diff_1k.jpg",
+    "bytes": 694500,
+    "sha256": "9c58254c099b2d211478f50a427fcdde622af24249ff2e94da41fb836f8c857f"
+  },
+  {
+    "file": "brick-normal.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_brick_03/red_brick_03_nor_gl_1k.jpg",
+    "bytes": 955430,
+    "sha256": "9bfd45e24720d851017c1e1678b70219c72239b2ac6b25e11d57d458bdab8503"
+  },
+  {
+    "file": "concrete-diff.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_02/concrete_floor_02_diff_1k.jpg",
+    "bytes": 776097,
+    "sha256": "6db84a6d87dc50508b9d134d6fbd2b7e876b8081a5f43a118a249ca18de73af5"
+  },
+  {
+    "file": "concrete-normal.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_02/concrete_floor_02_nor_gl_1k.jpg",
+    "bytes": 192757,
+    "sha256": "fcda391b57a816d646ae15544688be53790478da5cd48dbe514b3c6901415e61"
+  },
+  {
+    "file": "grass-diff.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/withered_grass/withered_grass_diff_1k.jpg",
+    "source": "https://polyhaven.com/a/withered_grass",
+    "license": "CC0",
+    "bytes": 1138384,
+    "sha256": "8bebfb639ef74f651bc445526c46c845beee52a86d831848b82eb2bbbf2d98ee"
+  },
+  {
+    "file": "bark-diff.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_brown_02/bark_brown_02_diff_1k.jpg",
+    "resolved_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_brown_02/bark_brown_02_diff_1k.jpg",
+    "bytes": 659592,
+    "sha256": "920fa0bed0c9d78c1d530e99795113afd532d7db746de440f4a85d7c83ed0f1a",
+    "retrieved_at": "2026-09-06T02:57:22.860248+00:00",
+    "license": "CC0",
+    "note": "Generic bark or Burkea africana leaf scan used for provisional broadleaf trees; not a live-oak species scan."
+  },
+  {
+    "file": "bark-normal.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_brown_02/bark_brown_02_nor_gl_1k.jpg",
+    "resolved_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_brown_02/bark_brown_02_nor_gl_1k.jpg",
+    "bytes": 1015623,
+    "sha256": "0d5e691e8ad8bcd093a3587887fda2a6b4a948b5708a4f256f7919584c6eb857",
+    "retrieved_at": "2026-09-06T02:57:24.738225+00:00",
+    "license": "CC0",
+    "note": "Generic bark or Burkea africana leaf scan used for provisional broadleaf trees; not a live-oak species scan."
+  },
+  {
+    "file": "broadleaf-diff.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_small_02/tree_small_02_leaves_diff_1k.jpg",
+    "resolved_url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/tree_small_02/tree_small_02_leaves_diff_1k.jpg",
+    "bytes": 340003,
+    "sha256": "261e7d7a5ac7d2e16ea8823ff8510be8f3f615999724232994039ad2885e5c36",
+    "retrieved_at": "2026-09-06T03:13:01.865659+00:00",
+    "license": "CC0",
+    "species": "Burkea africana; generic leaf texture in provisional oak-shaped geometry"
+  },
+  {
+    "file": "speedway-diff.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/herringbone_pavement/herringbone_pavement_diff_2k.jpg",
+    "bytes": 3796204,
+    "sha256": "9e2b6a78df1abde83d8a35f25e9bd1d5d07d0fa0fcc64c17035b6c7755834194",
+    "source": "https://polyhaven.com/a/herringbone_pavement",
+    "license": "CC0",
+    "author": "Charlotte Baglioni",
+    "retrieved_at": "2026-09-06T03:47:14.541191+00:00",
+    "note": "Generic herringbone paving material, 2 m repeat; not a capture of UT Speedway."
+  },
+  {
+    "file": "speedway-normal.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/herringbone_pavement/herringbone_pavement_nor_gl_2k.jpg",
+    "bytes": 4225006,
+    "sha256": "434eee60936c3746039ab2634cd28a77043585df20ddeecee407f254e8bc6eac",
+    "source": "https://polyhaven.com/a/herringbone_pavement",
+    "license": "CC0",
+    "author": "Charlotte Baglioni",
+    "retrieved_at": "2026-09-06T03:47:16.187287+00:00",
+    "note": "Generic herringbone paving material, 2 m repeat; not a capture of UT Speedway."
+  },
+  {
+    "file": "speedway-rough.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/herringbone_pavement/herringbone_pavement_rough_2k.jpg",
+    "bytes": 1696419,
+    "sha256": "1b30d9d5fd35158ef983a5ab895c933b694d8d3cbca028186961dabbc4c1ea46",
+    "source": "https://polyhaven.com/a/herringbone_pavement",
+    "license": "CC0",
+    "author": "Charlotte Baglioni",
+    "retrieved_at": "2026-09-06T03:47:17.067504+00:00",
+    "note": "Generic herringbone paving material, 2 m repeat; not a capture of UT Speedway."
+  },
+  {
+    "file": "main-east-limestone-color.jpg",
+    "source": "https://ambientcg.com/a/Tiles139",
+    "url": "https://ambientcg.com/get?file=Tiles139_2K-JPG.zip",
+    "archiveMember": "Tiles139_2K-JPG_Color.jpg",
+    "license": "CC0-1.0",
+    "author": "ambientCG",
+    "bytes": 4678613,
+    "sha256": "8763413c364de659253224337084bb6998713d911504681a2b0f13368c64623e",
+    "retrieved_at": "2026-09-07T06:44:59.246579+00:00",
+    "note": "Generic limestone mineral reference, not a UT surface scan. The shader samples a joint-free 280 x 280 inset with mirrored boundaries at native scale; only the color map is installed. Capture method is unverified because provider metadata conflicts. Color space confirmed srgb_texture in provider MaterialX."
+  },
+  {
+    "file": "mlk-gravel-color-65.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/clean_pebbles/clean_pebbles_diff_2k.jpg",
+    "source": "https://polyhaven.com/a/clean_pebbles",
+    "license": "CC0",
+    "authors": [
+      "Charlotte Baglioni",
+      "Dario Barresi"
+    ],
+    "bytes": 410530,
+    "sha256": "480c5938f7899b44da8f2f6b3e65541b20fa62deda3acc911526f8022b61cc28",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "derivedFromSha256": "c895ca99e4dceb9d307acd0a9b502b06936f37382e032a0681c8bf14ff405904",
+    "operation": "Linear-light 2x2 area average then sRGB encode; JPEG quality92 4:4:4",
+    "tileWidthMetres": 2
+  },
+  {
+    "file": "mlk-gravel-normal-65.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/clean_pebbles/clean_pebbles_nor_gl_2k.jpg",
+    "source": "https://polyhaven.com/a/clean_pebbles",
+    "license": "CC0",
+    "authors": [
+      "Charlotte Baglioni",
+      "Dario Barresi"
+    ],
+    "bytes": 358419,
+    "sha256": "bc04b5c54e15443890433c4164fee39f1b01ef92d59955062670dc395112b473",
+    "dimensions": [
+      512,
+      512
+    ],
+    "derivedFromSha256": "118dbd1ce5875cd0a681a5120b63b4aba8468ad06c62b90107ae23a9654f295e",
+    "operation": "Average decoded signed tangent vectors over 4x4; renormalize; JPEG quality92 4:4:4; no green-channel flip",
+    "tileWidthMetres": 2
+  },
+  {
+    "file": "mlk-aggregate-color-65.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/gravel_embedded_concrete/gravel_embedded_concrete_diff_2k.jpg",
+    "source": "https://polyhaven.com/a/gravel_embedded_concrete",
+    "license": "CC0",
+    "authors": "Charlotte Baglioni",
+    "bytes": 627256,
+    "sha256": "8c2a5acb2149bd0d53a296d3646fe3fcd232ea92cfa68b910c710b418729aa78",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "derivedFromSha256": "9ca6676079e9131eb1da1e19985ed192b6e27dd2cb77c9a09c2028922e79103f",
+    "operation": "Linear-light 2x2 area average then sRGB encode; JPEG quality92 4:4:4",
+    "tileWidthMetres": 2
+  },
+  {
+    "file": "mlk-aggregate-normal-65.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/gravel_embedded_concrete/gravel_embedded_concrete_nor_gl_2k.jpg",
+    "source": "https://polyhaven.com/a/gravel_embedded_concrete",
+    "license": "CC0",
+    "authors": "Charlotte Baglioni",
+    "bytes": 296882,
+    "sha256": "343dd30a7496d572389ab174219ffbc8abf144e979fc2f67534efe2b49c0ac13",
+    "dimensions": [
+      512,
+      512
+    ],
+    "derivedFromSha256": "38a9d392a99f56d61912cbd46cad97ea5eef70caf5c2b30b03f0a9966eac5ec8",
+    "operation": "Average decoded signed tangent vectors over 4x4; renormalize; JPEG quality92 4:4:4; no green-channel flip",
+    "tileWidthMetres": 2
+  }
+]

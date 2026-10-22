@@ -1,0 +1,211 @@
+[
+ {
+  "id": "b07-speedway-21st-approach",
+  "block": "b07-wcp-gregory",
+  "kind": "street",
+  "label": "Speedway at 21st looking north: Gregory Gym west front (re-massed: 13.3 m base, 18.1 m south block, hipped main hall) with WCP beyond",
+  "position": [
+   5,
+   0.0,
+   300
+  ],
+  "target": [
+   28,
+   14,
+   215
+  ],
+  "fov": 62,
+  "groundY": -1.49,
+  "note": "Compare with streetview-reference-survey 33-gregory-gym (2110 Speedway, Mar 2025): broad west gable with tall arched window and stair. The real west end is a GABLE; the generator can only hip it (documented gap)."
+ },
+ {
+  "id": "b07-gregory-plaza",
+  "block": "b07-wcp-gregory",
+  "kind": "street",
+  "label": "Gregory plaza looking east between WCP (left, LiDAR-corrected heights) and Gregory Gym (right); restored GRP pool building at the far end",
+  "position": [
+   12,
+   2.45,
+   170
+  ],
+  "target": [
+   118,
+   5,
+   181
+  ],
+  "fov": 60,
+  "groundY": 0.78,
+  "note": "WCP west wing eave 15.6 / ridge 20.3, office 26.2 campus Y (LiDAR 2017). Plaza paving unchanged except the 0.15 m cut around GRP."
+ },
+ {
+  "id": "b07-jester-21st",
+  "block": "b07-wcp-gregory",
+  "kind": "street",
+  "label": "East 21st St looking west: Brackenridge/Roberts (left, tiered hipped wings), Jester Center and tower beyond",
+  "position": [
+   100,
+   0.65,
+   303
+  ],
+  "target": [
+   30,
+   18,
+   360
+  ],
+  "fov": 62,
+  "groundY": -0.99,
+  "note": "Compare with streetview-reference-survey 58-jester-speedway (Mar 2025): buff brick with arched ground-floor storefronts. Facades are the generic modernist-dorm / cret-residence archetypes (not verified)."
+ },
+ {
+  "id": "b07-aerial",
+  "block": "b07-wcp-gregory",
+  "kind": "aerial",
+  "label": "Aerial from the south-east over Jester, Moore-Hill, Gregory Gym and WCP/RLP",
+  "position": [
+   230,
+   120,
+   470
+  ],
+  "target": [
+   100,
+   10,
+   260
+  ],
+  "fov": 55,
+  "groundY": -8.8,
+  "note": "Roof levels: all 17 records within the LiDAR band (block check). Silhouettes are generator vocabulary (flat tiers / hips)."
+ },
+ {
+  "id": "b07-r2-jester-orbit-ne",
+  "block": "b07-wcp-gregory",
+  "kind": "aerial",
+  "label": "D13 Jester towers from the north-east: tan brick tower planes with windows grouped in vertical stacks (compare d13-orbit-northeast, ut-jcd-563)",
+  "position": [
+   178.0,
+   78.0,
+   300.0
+  ],
+  "target": [
+   70.0,
+   28.0,
+   410.0
+  ],
+  "fov": 55,
+  "groundY": -1.35,
+  "note": "D13. Generated Jester massing (measured tiers) with b07 tower archetype + d13.ts window stacks; stack positions follow the tier outline, storey height estimated."
+ },
+ {
+  "id": "b07-r2-jester-orbit-nw",
+  "block": "b07-wcp-gregory",
+  "kind": "aerial",
+  "label": "D13 Jester and Gregory from the north-west: Jester stacks, Gregory hipped hall and WCP unchanged (compare d13-orbit-northwest)",
+  "position": [
+   -20.0,
+   78.0,
+   300.0
+  ],
+  "target": [
+   70.0,
+   25.0,
+   400.0
+  ],
+  "fov": 55,
+  "groundY": -1.36,
+  "note": "D13. Gregory/WCP/GRP unchanged (gregory-north.ts, east-south-modern.ts)."
+ },
+ {
+  "id": "b07-r2-jester-pedestrian",
+  "block": "b07-wcp-gregory",
+  "kind": "street",
+  "label": "D13 Jester residence hall (JCD) from the street, compare ut-jcd-563 / ut-jcd-659 (vertical window stacks, plain brick between)",
+  "position": [
+   150.0,
+   0.19,
+   480.0
+  ],
+  "target": [
+   118.0,
+   22.0,
+   430.0
+  ],
+  "fov": 60,
+  "groundY": -1.51,
+  "note": "D13 landmark pedestrian view; photo direction not verified, view chosen on a mapped street."
+ },
+ {
+  "id": "b07-r2-prather-orbit-ne",
+  "block": "b07-wcp-gregory",
+  "kind": "aerial",
+  "label": "D14 Prather from the north-east: centre pavilion and two lower wings, exact-facet red tile hips at the measured pitch",
+  "position": [
+   252.0,
+   46.0,
+   360.0
+  ],
+  "target": [
+   202.0,
+   4.0,
+   410.0
+  ],
+  "fov": 55,
+  "groundY": -6.91,
+  "note": "D14. Eave lines calibrated to the LiDAR quantiles; storeys and unseen faces estimated."
+ },
+ {
+  "id": "b07-r2-prather-orbit-sw",
+  "block": "b07-wcp-gregory",
+  "kind": "aerial",
+  "label": "D14 Prather and San Jacinto from the south-west: stepped hips, Roberts/Moore-Hill beyond",
+  "position": [
+   160.0,
+   46.0,
+   470.0
+  ],
+  "target": [
+   205.0,
+   4.0,
+   405.0
+  ],
+  "fov": 55,
+  "groundY": -1.9,
+  "note": "D14. San Jacinto/Roberts/Moore-Hill generated bodies (limestone ground storey archetype)."
+ },
+ {
+  "id": "b07-r2-prather-pedestrian",
+  "block": "b07-wcp-gregory",
+  "kind": "street",
+  "label": "D14 Prather west front at pedestrian height: banded limestone ground storey, round-headed windows, brick above, tile eaves (compare ut-phd-428)",
+  "position": [
+   180.0,
+   -1.64,
+   425.0
+  ],
+  "target": [
+   196.0,
+   5.0,
+   418.0
+  ],
+  "fov": 62,
+  "groundY": -3.34,
+  "note": "D14 landmark pedestrian view."
+ },
+ {
+  "id": "b07-r2-roberts-entry-pedestrian",
+  "block": "b07-wcp-gregory",
+  "kind": "street",
+  "label": "D14 Roberts / Moore-Hill entrances at pedestrian height: limestone ground storey and round-headed entry surrounds at the mapped walkways (compare ut-rhd-420, ut-mhd-421)",
+  "position": [
+   150.0,
+   1.05,
+   306.0
+  ],
+  "target": [
+   150.0,
+   4.0,
+   325.0
+  ],
+  "fov": 62,
+  "groundY": -0.65,
+  "note": "D14. Entrance positions from mapped footways; surround idiom from the photos (not surveyed)."
+ }
+]

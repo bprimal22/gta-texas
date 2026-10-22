@@ -1,0 +1,68 @@
+[
+ {
+  "id": "b12-r2-1",
+  "file": "lib/campus/render/atlas-shots.json (integrator-owned) or the G5 rule in scripts/harness/run-block-checks.mjs",
+  "change": "Add an eye-level street shot of the University Co-op from the EAST sidewalk of Guadalupe looking west: id 'atlas-coop-guadalupe-east', position [-426.0, 14.2, -7.25], target [-452.3, 17.0, -7.25], fov 55, groundY 12.54 (ray-measured physical ground at the camera). Alternatively let block street shots stand up to 25 m outside the block rectangle across a shared street.",
+  "reason": "The user asked for a Co-op pose 'opposite, looking west' that matches coop-19.jpg. b12's rectangle ends at x -448 (the west sidewalk), so G5 rejects any street camera across Guadalupe; b12 ships the same view only as a 10 m low aerial (b12-coop-guadalupe-low-aerial) plus an oblique west-sidewalk view (b12-coop-drag).",
+  "evidence": {
+   "source": "research/whole-campus-92/west-campus-dataset-pass/photos/coop-19.jpg; lib/campus/blocks/b12-west-campus/shots.json",
+   "basis": "reference-interpreted",
+   "note": "camera clearance at the eye-level pose not yet run (outside b12's shot list); expected clear: open sidewalk, no b12 collider within 20 m"
+  }
+ },
+ {
+  "id": "b12-r2-2",
+  "file": "shared landmark / atlas index (integrator-owned dataset generator)",
+  "change": "Add private landmark identities with their record keys: COOP -> 733792:1248 (subset z -30.3..13.5, portal centre [-452.25, -7.25]); UBC sanctuary -> 699548:1060 (primary entrance on Guadalupe, frontispiece centre [-467.92, 143.85]); UBC education building + chapel -> 714509:1097; MOONTOWER -> 732897:1231; SKYLOFT -> 550397:416; CASTILIAN -> 657418:943; N24 -> 525341:252; TORRE -> 490461:139.",
+  "reason": "FIX-BRIEF item 7: the current official-UT-only landmark index cannot match these abbreviations; b12 only fixes its catalogue identities (context.json catalog).",
+  "evidence": {
+   "source": "research/whole-campus-92/west-campus-dataset-pass/landmark-targets.json; lib/campus/blocks/b12-west-campus/context.json catalog/replaces",
+   "basis": "reference-interpreted",
+   "note": "positions are existing City footprint centres / authored feature centres, not surveyed entrances"
+  }
+ },
+ {
+  "id": "b12-r2-3",
+  "file": "lib/campus/blocks/b05-southmall/** (b05 owner)",
+  "change": "Coordination only: Dobie Twenty21 (484112:83; dobie-02.png, dobie-06.png: teal/green curtain-wall tower, pale low podium with recessed/trapezoid details, bright red mall entry) and Rowling Hall (675538:965; rowling-00/-02/-05: pale stone city-facing walls, patterned glazing, curved glazed inner court) are b05 records; b12 built nothing in or near their rings.",
+  "reason": "User-directed West Campus pass lists both, but ownership is b05 (whole-ring rule).",
+  "evidence": {
+   "source": "research/whole-campus-92/west-campus-dataset-pass/photos/dobie-02.png, dobie-06.png, rowling-00.jpg, rowling-02.jpg, rowling-05.jpg; https://housing.utexas.edu/housing/residence-halls/residence-hall-locations/dobie-twenty21 ; https://news.mccombs.utexas.edu/magazine/remarkable-rowling/",
+   "basis": "reference-interpreted",
+   "note": "no b12 geometry; b05 checks pass with b12 installed"
+  }
+ },
+ {
+  "id": "b12-r2-4",
+  "file": "lib/campus/blocks/b13-north-perimeter/** (b13 owner)",
+  "change": "Coordination only: Hole in the Wall, 2538 Guadalupe (hole-04.jpg, hole-07.jpg: single-storey yellow facade, black awning, projecting sign) lies north of b12's boundary; its record/footprint resolution belongs to b13. b12 added nothing for it.",
+  "reason": "FIX-BRIEF section 1: do not move it into a convenient b12 slot.",
+  "evidence": {
+   "source": "research/whole-campus-92/west-campus-dataset-pass/photos/hole-04.jpg, hole-07.jpg; https://www.rallyforaustin.com/project/hole-in-the-wall/ ; https://www.theholeinthewallaustin.com/about",
+   "basis": "reference-interpreted",
+   "note": "venue diagrams/graphics are not elevations"
+  }
+ },
+ {
+  "id": "b12-r2-5",
+  "file": "public data source for a post-2023 footprint (integrator / data)",
+  "change": "Villas on 24th (2313 Rio Grande) stays ABSENT: provide an official/public footprint (City of Austin building footprints newer than 2023, or a public site plan with coordinates) before anyone adds the tower; never extrude the demolished Cain & Abel's ring 614399:747.",
+  "reason": "No supported new footprint is available offline (OSM geometry is not allowed; contractor photos villas24-00/-22/-24/-25 show the facade but not a measured outline; contractor prose gives both 32 and 30 storeys).",
+  "evidence": {
+   "source": "research/whole-campus-92/west-campus-dataset-pass/photos/villas24-00.webp, -22, -24, -25; https://r-o.com/projects/living/multifamily/villas-on-24th/ ; https://www.villason24th.com/",
+   "basis": "reference-interpreted",
+   "note": "the exclusion of 614399:747 (round 1) is unchanged"
+  }
+ },
+ {
+  "id": "b12-r2-6",
+  "file": "none (identity note)",
+  "change": "St. Austin parish/school 533878:353 and the Union on San Antonio tower (512858:245, 696525:1006) stay separate records with their round-1 heights; staustin-00.png shows the Union high-rise, not the school; school street facades remain a photo gap (staustin-40.jpg covers only the activity deck).",
+  "reason": "FIX-BRIEF section 4.",
+  "evidence": {
+   "source": "research/whole-campus-92/west-campus-dataset-pass/photos/staustin-00.png, staustin-40.jpg; https://www.henselphelps.com/project/st-austin-catholic-parish-site-redevelopment/",
+   "basis": "reference-interpreted",
+   "note": "no change in round 2"
+  }
+ }
+]

@@ -1,0 +1,193 @@
+[
+ {
+  "id": "b09-bellmont-san-jacinto",
+  "block": "b09-stadium",
+  "kind": "street",
+  "label": "San Jacinto Blvd sidewalk south of Gate 5 looking north along the Bellmont west facade: round-2 full-height bays (twin piers on the UT GIS notches, fins, window bands), the authored dkr-frontage bays beyond with the upper facade above them",
+  "position": [
+   312,
+   -7.85,
+   338
+  ],
+  "target": [
+   321,
+   14,
+   290
+  ],
+  "fov": 60,
+  "groundY": -9.57,
+  "note": "Compare with the Feb 2022 Bellmont Street View observation (research/realism-rebuild-91/user-streetview-direction.md) and the accepted atlas b09-r1-a1/a2 overviews. Pier positions are official; levels, fin pitch and band heights are estimates. D19 pilot: fin bays (z 254-302, above the frontage) and band bays (z 302-330.5) per projected reviewed captures; block top Y 32.2 (reference-interpreted, +-2 m) with the bowl wall set back above it."
+ },
+ {
+  "id": "b09-bellmont-d19-ref",
+  "block": "b09-stadium",
+  "kind": "side",
+  "label": "Same pose as the reviewed full-map capture priority-07 (northwest of DKR, 30 m over planning terrain) looking southeast along the Bellmont west facade: compare bay types, the Y 32.2 block top and the setback upper deck",
+  "position": [
+   295,
+   23.13,
+   170
+  ],
+  "target": [
+   390,
+   6.93,
+   260
+  ],
+  "fov": 60,
+  "groundY": -6.87,
+  "note": "Pose copied from screenshot-dataset/collections/full-map-30m/captures/priority-07.json (actual camera/target, 60 deg vertical FOV); groundY = camera Y - 30 m planning height (8 m bilinear terrain, not surveyed). North bays z 207-254 are visible in the reference but intentionally unbuilt (San Jacinto sidewalk inside the GIS strip)."
+ },
+ {
+  "id": "b09-dkr-north-corner",
+  "block": "b09-stadium",
+  "kind": "street",
+  "label": "Northwest corner plaza (San Jacinto / 23rd) looking southeast at the two LiDAR-measured round corner towers (A r 5.8 m, top Y 35.0; B r 7.0 m, top Y 32.3) and the north end zone",
+  "position": [
+   345,
+   -4.0,
+   112
+  ],
+  "target": [
+   372,
+   18,
+   150
+  ],
+  "fov": 62,
+  "groundY": -5.88,
+  "note": "Accepted atlas b09-r1-a1 shows the cylindrical corner towers with dark round roofs; the Jan 2017 observation gives buff masonry with pale caps. Slot windows are an estimate."
+ },
+ {
+  "id": "b09-sez-south",
+  "block": "b09-stadium",
+  "kind": "rear",
+  "label": "South of the stadium (between MNC and the Recreational Sports Center) looking north at the 2021 South End Zone: premium glazing bands on the south wall and the 40.96 x 17.02 m videoboard on the rim, MNC in front",
+  "position": [
+   440,
+   -0.9,
+   455
+  ],
+  "target": [
+   436,
+   30,
+   382
+  ],
+  "fov": 62,
+  "groundY": -2.56,
+  "note": "The SEZ postdates the 2017 LiDAR: band levels and the board height above the rim are estimates; board size is official. MLK Blvd itself is ~185 m further south behind RSC/FTC, so this is the nearest unobstructed south view inside b09."
+ },
+ {
+  "id": "b09-pac-lbj",
+  "block": "b09-stadium",
+  "kind": "side",
+  "label": "Robert Dedman Dr north of the stadium looking west at Bass Concert Hall / PAC complex (LBJ behind the camera to the east)",
+  "position": [
+   690,
+   6.5,
+   -30
+  ],
+  "target": [
+   600,
+   10,
+   -40
+  ],
+  "fov": 62,
+  "groundY": 4.75,
+  "note": "PAC/MRH/DFA are one City union (526275) with LiDAR tier volumes restated in the LiDAR datum; generic brutalist-precast facade (estimate)."
+ },
+ {
+  "id": "b09-aerial-stadium",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "Aerial from the southwest over San Jacinto: Bellmont west facade, SEZ bands + videoboard, north corner towers, Manor Garage",
+  "position": [
+   250,
+   150,
+   470
+  ],
+  "target": [
+   430,
+   0,
+   260
+  ],
+  "fov": 55,
+  "groundY": -9.0,
+  "note": "Aerial overview; facade detail not reviewable at this distance."
+ },
+ {
+  "id": "b09-d20-orbit-northwest",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "D20 same pose as reviewed d20-orbit-northwest (usable-context): Myers east grandstand rake, press box and masts across the track; west stand on the Manor Garage edge",
+  "position": [634.71, 40.24, 311.36],
+  "target": [698.35, 18.83, 375],
+  "fov": 60,
+  "groundY": 10.24,
+  "note": "Pose copied from actualOrbitReferences d20-orbit-northwest (actual camera/target, 60 deg vertical FOV); groundY = camera Y - 30 m planning height (not surveyed)."
+ },
+ {
+  "id": "b09-d20-orbit-southeast",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "D20 same pose as reviewed d20-orbit-southeast (usable-context): Myers west grandstand along the Manor Garage east edge, garage deck, DKR beyond",
+  "position": [761.99, 45.68, 438.64],
+  "target": [698.35, 18.83, 375],
+  "fov": 60,
+  "groundY": 15.68,
+  "note": "Pose copied from actualOrbitReferences d20-orbit-southeast (actual camera/target, 60 deg vertical FOV); groundY = camera Y - 30 m planning height (not surveyed)."
+ },
+ {
+  "id": "b09-d20-field",
+  "block": "b09-stadium",
+  "kind": "street",
+  "label": "D20 Myers field centre looking east at the east grandstand: aluminium rake, back rail, press box (LiDAR top Y 28.9) and two light masts",
+  "position": [698, 12.35, 375],
+  "target": [760, 20, 372],
+  "fov": 62,
+  "groundY": 10.65,
+  "note": "groundY from the 2017 USGS 3DEP DTM at the camera (field 10.6)."
+ },
+ {
+  "id": "b09-d17-tmm-front",
+  "block": "b09-stadium",
+  "kind": "street",
+  "label": "D17 TMM forecourt looking east at the Art Deco west front: four flat pilasters, three tall dark mullioned window fields, central entrance (compare ut-tmm-493-directory-photo.jpg)",
+  "position": [428, 5.83, -99],
+  "target": [449, 15, -100],
+  "fov": 62,
+  "groundY": 4.13,
+  "note": "Front stair not built (shared pedestrian area). groundY from DTM."
+ },
+ {
+  "id": "b09-d18-lbj-southwest",
+  "block": "b09-stadium",
+  "kind": "street",
+  "label": "D18 LBJ Library from the south-west plaza: cantilevered cornice box over the dark ribbon and ribs, blank travertine body, recessed south front (compare ut-lbj-392-campus-14.jpg)",
+  "position": [712, 10.29, 82],
+  "target": [758, 30, 30],
+  "fov": 62,
+  "groundY": 8.59,
+  "note": "groundY is the physical plaza surface under the camera (2017 DTM 7.52); camera raised 1.07 m to 1.70 m above it (root camera check: was 0.63 m). Overhang depth / rib pitch are estimates."
+ },
+ {
+  "id": "b09-d18-bass-flytower",
+  "block": "b09-stadium",
+  "kind": "street",
+  "label": "D18 Bass Concert Hall fly tower from the south: blank tan tower with two dark slit reveals near the top (compare d18-orbit-southeast)",
+  "position": [570, 3.98, 5],
+  "target": [570, 30, -30],
+  "fov": 62,
+  "groundY": 2.28,
+  "note": "Fly-tower colour/blankness set by data (bass-blank archetype); slits are visual detail."
+ },
+ {
+  "id": "b09-d19-manor-west",
+  "block": "b09-stadium",
+  "kind": "street",
+  "label": "D19 Manor Garage west facade: buff piers, spandrels with brick panels, dark open decks; masts above (compare ut-mag-479-directory-photo.jpg)",
+  "position": [538, 6.56, 330],
+  "target": [575, 10, 370],
+  "fov": 62,
+  "groundY": 4.86,
+  "note": "Level count / bay are estimates; ramp tower not placed."
+ }
+]

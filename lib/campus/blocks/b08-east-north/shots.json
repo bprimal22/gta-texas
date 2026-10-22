@@ -1,0 +1,134 @@
+[
+ {
+  "id": "b08-dean-keeton-east",
+  "block": "b08-east-north",
+  "kind": "street",
+  "label": "East Dean Keeton St at x470 looking east: Jesse H. Jones Hall (right, now its own record from the official JON polygon, 29.3 m LiDAR tier) and Townes Hall beyond; the restated houses of the 700-800 E Dean Keeton block on the left",
+  "position": [470, 2.4, -341],
+  "target": [640, 9, -330],
+  "fov": 62,
+  "groundY": 0.63,
+  "note": "groundY = game terrain.height at the camera (2017 DTM there: 0.46). Facades are generic archetypes (brutalist-precast JON, house); no accepted facade reference for this street yet."
+ },
+ {
+  "id": "b08-law-school-south",
+  "block": "b08-east-north",
+  "kind": "side",
+  "label": "Law School from Trinity St looking north-west: Connally Center for Justice (added CCJ record, red-tile hip, ridge at the LiDAR max) in front of the Townes Hall 1952 tile-hip block and its flat 1964/1980 wings",
+  "position": [655, 5.5, -178],
+  "target": [610, 16, -260],
+  "fov": 60,
+  "groundY": 3.74,
+  "note": "Was one City ring 'TNH' over TNH+JON+CCJ with a single modernist-lab skin. Hip eaves/ridges from the 0.5 m raster P10/max; tile colour from the accepted b08-r0-b2 overview (research-only)."
+ },
+ {
+  "id": "b08-creekside-san-jacinto",
+  "block": "b08-east-north",
+  "kind": "street",
+  "label": "San Jacinto Blvd north of the garage looking north-east: Creekside Residence Hall (red-tile hips on a stepped plan, restated above the LiDAR ground) with the TS1 chilled-water tank and Chilling Station #4 behind",
+  "position": [334, -2.6, -215],
+  "target": [372, 1, -280],
+  "fov": 62,
+  "groundY": -4.29,
+  "note": "CRH archetype cret-residence (UT GIS identity; 1954 Lemmon/Wilson, Morris & Crain). Waller Creek/San Jacinto grade not re-measured."
+ },
+ {
+  "id": "b08-aerial-law-east",
+  "block": "b08-east-north",
+  "kind": "aerial",
+  "label": "Aerial from south of the Law School looking north-east over the Hancock blocks to St. David's Medical Center (hospital / garage / Austin Lakes split) and the post-2017 courtyard apartments at I-35",
+  "position": [600, 115, -150],
+  "target": [900, 5, -380],
+  "fov": 62,
+  "groundY": 2.71,
+  "note": "Roof heights from the 2017 LiDAR in the same datum; 484774 is post-2017 (City 2023 h)."
+ },
+ {
+  "id": "b08-d16-orbit-southwest",
+  "block": "b08-east-north",
+  "kind": "aerial",
+  "label": "D16 same pose as reviewed d16-orbit-southwest (usable-context): St. David's hospital red-brick blocks with continuous ribbon glazing, pale mechanical tier, garages with open decks",
+  "position": [942.56, 44.36, -333.86],
+  "target": [1006.2, 23.18, -397.5],
+  "fov": 60,
+  "groundY": 14.36,
+  "note": "Pose copied from actualOrbitReferences d16-orbit-southwest (actual camera/target, 60 deg vertical FOV); groundY = camera Y - 30 m planning height (not surveyed)."
+ },
+ {
+  "id": "b08-d16-orbit-northwest",
+  "block": "b08-east-north",
+  "kind": "aerial",
+  "label": "D16 same pose as reviewed d16-orbit-northwest (usable-context): St. David's brick wing with ribbon bands along the street (compare the reviewed orbit)",
+  "position": [942.56, 42.18, -461.14],
+  "target": [1006.2, 23.18, -397.5],
+  "fov": 60,
+  "groundY": 12.18,
+  "note": "Pose copied from actualOrbitReferences d16-orbit-northwest (actual camera/target, 60 deg vertical FOV); groundY = camera Y - 30 m planning height (not surveyed)."
+ },
+ {
+  "id": "b08-d15-orbit-southeast",
+  "block": "b08-east-north",
+  "kind": "aerial",
+  "label": "D15 same pose as reviewed d15-orbit-southeast (usable-context, neighbourhood view; law/garage facades are not its subject)",
+  "position": [490.24, 31.85, -333.86],
+  "target": [426.6, 3.54, -397.5],
+  "fov": 60,
+  "groundY": 1.85,
+  "note": "Pose copied from actualOrbitReferences d15-orbit-southeast; groundY = camera Y - 30 m planning height (not surveyed)."
+ },
+ {
+  "id": "b08-d15-sjg-street",
+  "block": "b08-east-north",
+  "kind": "street",
+  "label": "D15 San Jacinto Garage west facade open decks from the street: spandrels, piers, dark decks, rail lines (compare ut-sjg-494-directory-photo.jpg)",
+  "position": [352, -1.21, -185],
+  "target": [395, 8, -182],
+  "fov": 62,
+  "groundY": -2.91,
+  "note": "Corner stair/ramp tower in the photo not placed. groundY is the physical street surface under the camera (2017 DTM -4.76); camera raised 1.85 m to 1.70 m above it (root camera check: the old point was inside the street collider)."
+ },
+ {
+  "id": "b08-d15-jon-west",
+  "block": "b08-east-north",
+  "kind": "street",
+  "label": "D15 Jesse H. Jones Hall: pale precast, punched upper windows, dark ribbon glazing on the lower floors (compare ut-jon-490-directory-photo.jpg)",
+  "position": [478, 8.86, -280],
+  "target": [520, 20, -275],
+  "fov": 62,
+  "groundY": 7.16,
+  "note": "Window size/pitch estimated. groundY from the 2017 DTM."
+ },
+ {
+  "id": "b08-d15-ccj-west",
+  "block": "b08-east-north",
+  "kind": "street",
+  "label": "D15 Connally Center for Justice: limestone pilasters on the lower wing and stepped cornice on the still-generated body (compare ut-ccj-484-directory-photo.jpg)",
+  "position": [608, 9.2, -220],
+  "target": [640, 12, -222],
+  "fov": 62,
+  "groundY": 7.5,
+  "note": "Relief is visual; body generated with the limestone archetype. groundY from the 2017 DTM."
+ },
+ {
+  "id": "b08-d16-hospital-street",
+  "block": "b08-east-north",
+  "kind": "street",
+  "label": "D16 St. David's hospital from the street: brick walls, recessed ribbon glazing per floor",
+  "position": [1100, 17.05, -335],
+  "target": [1100, 26, -380],
+  "fov": 62,
+  "groundY": 15.35,
+  "note": "No official photograph; orbit-interpreted. groundY from the 2017 DTM."
+ },
+ {
+  "id": "b08-d16-garage1",
+  "block": "b08-east-north",
+  "kind": "street",
+  "label": "D16 Garage 1 open decks (catalog: open parking garage)",
+  "position": [1060, 14.29, -285],
+  "target": [1070, 18, -320],
+  "fov": 62,
+  "groundY": 12.59,
+  "note": "Level count from height; no direct facade view. groundY from the 2017 DTM."
+ }
+]

@@ -1,0 +1,1219 @@
+{
+ "block": "b01-eer",
+ "footprints": {
+  "507893": {
+   "rings": [
+    [
+     [
+      202.61,
+      -171.36
+     ],
+     [
+      209.61,
+      -170.8
+     ],
+     [
+      209.83,
+      -174.59
+     ],
+     [
+      205.18,
+      -174.77
+     ],
+     [
+      206.55,
+      -194.07
+     ],
+     [
+      224.08,
+      -192.74
+     ],
+     [
+      223.32,
+      -179.85
+     ],
+     [
+      226.92,
+      -179.7
+     ],
+     [
+      227.5,
+      -188.01
+     ],
+     [
+      261.58,
+      -185.57
+     ],
+     [
+      260.29,
+      -167.06
+     ],
+     [
+      277.69,
+      -165.93
+     ],
+     [
+      277.21,
+      -159.06
+     ],
+     [
+      275.12,
+      -159.41
+     ],
+     [
+      275.33,
+      -157.14
+     ],
+     [
+      280.3,
+      -156.83
+     ],
+     [
+      278.42,
+      -132.37
+     ],
+     [
+      256.84,
+      -133.99
+     ],
+     [
+      200.28,
+      -138.91
+     ]
+    ]
+   ],
+   "evidence": {
+    "source": "research/raw/ut-official-buildings.geojson (official UT building GIS, downloaded 2025-09-05; object 1803 ACS) + https://cockrell.utexas.edu/about/facilities/acs-building/ (checked 2026-10-20: completed Sept 2026, 207,000 sqft, 304 E 24th)",
+    "basis": "official",
+    "note": "Current ACS outline; the City 2023 ring (two parts) is the pre-redevelopment site."
+   }
+  },
+  "698987": {
+   "rings": [
+    [
+     [
+      100.88,
+      -225.15
+     ],
+     [
+      100.55,
+      -221.45
+     ],
+     [
+      100.33,
+      -219.02
+     ],
+     [
+      98.09,
+      -194.13
+     ],
+     [
+      63.7,
+      -197.22
+     ],
+     [
+      63.59,
+      -196.02
+     ],
+     [
+      63.89,
+      -195.99
+     ],
+     [
+      63.43,
+      -189.87
+     ],
+     [
+      62.92,
+      -189.92
+     ],
+     [
+      62.88,
+      -189.39
+     ],
+     [
+      59.46,
+      -189.69
+     ],
+     [
+      59.51,
+      -190.21
+     ],
+     [
+      59.01,
+      -190.26
+     ],
+     [
+      59.03,
+      -190.54
+     ],
+     [
+      59.07,
+      -190.94
+     ],
+     [
+      59.1,
+      -191.34
+     ],
+     [
+      59.14,
+      -191.76
+     ],
+     [
+      59.17,
+      -192.16
+     ],
+     [
+      59.21,
+      -192.55
+     ],
+     [
+      59.55,
+      -196.49
+     ],
+     [
+      59.85,
+      -196.46
+     ],
+     [
+      59.94,
+      -197.46
+     ],
+     [
+      56.13,
+      -197.8
+     ],
+     [
+      54.99,
+      -197.9
+     ],
+     [
+      54.65,
+      -197.93
+     ],
+     [
+      54.28,
+      -197.96
+     ],
+     [
+      53.91,
+      -197.99
+     ],
+     [
+      53.52,
+      -198.03
+     ],
+     [
+      53.1,
+      -198.06
+     ],
+     [
+      52.67,
+      -198.1
+     ],
+     [
+      38.26,
+      -199.36
+     ],
+     [
+      39.58,
+      -214.42
+     ],
+     [
+      39.72,
+      -216.03
+     ],
+     [
+      40.98,
+      -230.48
+     ]
+    ]
+   ],
+   "evidence": {
+    "source": "research/raw/ut-official-buildings.geojson (official UT building GIS, downloaded 2025-09-05; object 583 PAT) + https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/PAT/ (checked 2026-10-20: 9 floors, 1967)",
+    "basis": "official",
+    "note": "Official PAT polygon, clipped 0.6 m back from the mapped Speedway-to-EER west approach walk (engineering t>=21.0). The City ring touched that walk, so the classifier suppressed the whole building ('route') and J.T. Patterson Labs was missing from the scene."
+   }
+  },
+  "704813": {
+   "rings": [
+    [
+     [
+      186.04,
+      -153.74
+     ],
+     [
+      185.76,
+      -149.86
+     ],
+     [
+      185.51,
+      -146.48
+     ],
+     [
+      185.4,
+      -145.04
+     ],
+     [
+      185.15,
+      -141.61
+     ],
+     [
+      178.35,
+      -142.29
+     ],
+     [
+      178.18,
+      -140.61
+     ],
+     [
+      171.4,
+      -141.21
+     ],
+     [
+      171.08,
+      -141.24
+     ],
+     [
+      161.81,
+      -142.06
+     ],
+     [
+      161.52,
+      -142.09
+     ],
+     [
+      152.28,
+      -142.91
+     ],
+     [
+      151.93,
+      -142.94
+     ],
+     [
+      142.59,
+      -143.77
+     ],
+     [
+      142.25,
+      -143.8
+     ],
+     [
+      134.62,
+      -144.47
+     ],
+     [
+      133.08,
+      -144.61
+     ],
+     [
+      132.76,
+      -144.64
+     ],
+     [
+      120.42,
+      -145.74
+     ],
+     [
+      120.08,
+      -145.77
+     ],
+     [
+      119.84,
+      -145.79
+     ],
+     [
+      119.71,
+      -145.8
+     ],
+     [
+      113.31,
+      -146.35
+     ],
+     [
+      113.17,
+      -146.37
+     ],
+     [
+      112.83,
+      -146.4
+     ],
+     [
+      112.48,
+      -146.43
+     ],
+     [
+      109.88,
+      -146.66
+     ],
+     [
+      109.59,
+      -146.68
+     ],
+     [
+      106.31,
+      -146.97
+     ],
+     [
+      77.73,
+      -149.49
+     ],
+     [
+      78.42,
+      -155.79
+     ],
+     [
+      73.87,
+      -156.23
+     ],
+     [
+      73.16,
+      -155.64
+     ],
+     [
+      72.82,
+      -155.67
+     ],
+     [
+      73.5,
+      -163.67
+     ],
+     [
+      74.29,
+      -172.82
+     ],
+     [
+      77.3,
+      -172.57
+     ],
+     [
+      77.62,
+      -172.54
+     ],
+     [
+      77.95,
+      -172.51
+     ],
+     [
+      84.55,
+      -171.96
+     ],
+     [
+      84.87,
+      -171.94
+     ],
+     [
+      85.2,
+      -171.91
+     ],
+     [
+      85.49,
+      -171.88
+     ],
+     [
+      85.77,
+      -171.86
+     ],
+     [
+      86.11,
+      -171.83
+     ],
+     [
+      86.36,
+      -171.81
+     ],
+     [
+      86.68,
+      -171.78
+     ],
+     [
+      87.01,
+      -171.76
+     ],
+     [
+      87.29,
+      -171.73
+     ],
+     [
+      87.59,
+      -171.71
+     ],
+     [
+      87.86,
+      -171.69
+     ],
+     [
+      88.19,
+      -171.66
+     ],
+     [
+      88.5,
+      -171.63
+     ],
+     [
+      88.78,
+      -171.61
+     ],
+     [
+      89.07,
+      -171.59
+     ],
+     [
+      91.84,
+      -171.35
+     ],
+     [
+      92.12,
+      -171.33
+     ],
+     [
+      92.41,
+      -171.31
+     ],
+     [
+      92.73,
+      -171.28
+     ],
+     [
+      93.01,
+      -171.26
+     ],
+     [
+      93.29,
+      -171.23
+     ],
+     [
+      93.34,
+      -171.23
+     ],
+     [
+      93.62,
+      -171.2
+     ],
+     [
+      93.89,
+      -171.18
+     ],
+     [
+      94.19,
+      -171.16
+     ],
+     [
+      94.49,
+      -171.13
+     ],
+     [
+      94.81,
+      -171.11
+     ],
+     [
+      95.21,
+      -171.07
+     ],
+     [
+      102.73,
+      -170.44
+     ],
+     [
+      104.27,
+      -170.32
+     ],
+     [
+      110.94,
+      -169.76
+     ],
+     [
+      122.21,
+      -168.82
+     ],
+     [
+      123.14,
+      -168.74
+     ],
+     [
+      123.5,
+      -168.71
+     ],
+     [
+      123.69,
+      -168.69
+     ],
+     [
+      164.03,
+      -165.32
+     ],
+     [
+      164.36,
+      -165.29
+     ],
+     [
+      168.39,
+      -164.96
+     ],
+     [
+      168.72,
+      -164.93
+     ],
+     [
+      171.21,
+      -164.72
+     ],
+     [
+      171.54,
+      -164.7
+     ],
+     [
+      174.12,
+      -164.48
+     ],
+     [
+      174.45,
+      -164.45
+     ],
+     [
+      177,
+      -164.24
+     ],
+     [
+      177.31,
+      -164.21
+     ],
+     [
+      179.91,
+      -164
+     ],
+     [
+      180.21,
+      -163.97
+     ],
+     [
+      182.62,
+      -163.77
+     ],
+     [
+      182.93,
+      -163.74
+     ],
+     [
+      186.33,
+      -163.46
+     ],
+     [
+      186.63,
+      -163.43
+     ],
+     [
+      186.76,
+      -163.42
+     ],
+     [
+      186.71,
+      -162.72
+     ],
+     [
+      186.69,
+      -162.4
+     ]
+    ]
+   ],
+   "evidence": {
+    "source": "research/raw/ut-official-buildings.geojson (official UT building GIS, downloaded 2025-09-05; object 266 GLT) + https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/GLT/ (checked 2026-10-20: 8 floors, built 2021, 187,516 GSF)",
+    "basis": "official",
+    "note": "Official GLT polygon (no northward arm over the EER-GLT passage). The City ring reached over the 'Passage below GLT bridge' walk, which suppressed the building; GLT was missing from the scene."
+   }
+  }
+ },
+ "massing": {
+  "506548": {
+   "datum": "campusY",
+   "volumes": [
+    {
+     "ring": [
+      [
+       180.1,
+       -387.1
+      ],
+      [
+       185.8,
+       -452.8
+      ],
+      [
+       185,
+       -453.6
+      ],
+      [
+       180,
+       -454.1
+      ],
+      [
+       179,
+       -455.6
+      ],
+      [
+       176.5,
+       -455.1
+      ],
+      [
+       156,
+       -457.1
+      ],
+      [
+       149.9,
+       -391.2
+      ]
+     ],
+     "bottom": 3.21,
+     "top": 40.7,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       191.2,
+       -452.8
+      ],
+      [
+       192.8,
+       -468.8
+      ],
+      [
+       180,
+       -470
+      ],
+      [
+       178.3,
+       -455.8
+      ],
+      [
+       180,
+       -454.1
+      ]
+     ],
+     "bottom": 3.21,
+     "top": 6.5,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       172.8,
+       -398.8
+      ],
+      [
+       174.3,
+       -400.8
+      ],
+      [
+       177.3,
+       -438.3
+      ],
+      [
+       177.8,
+       -442.3
+      ],
+      [
+       179.3,
+       -444.8
+      ],
+      [
+       178.5,
+       -445.6
+      ],
+      [
+       162,
+       -446.6
+      ],
+      [
+       160.8,
+       -445.3
+      ],
+      [
+       160.3,
+       -443.3
+      ],
+      [
+       156.8,
+       -401.3
+      ],
+      [
+       158.5,
+       -399.6
+      ]
+     ],
+     "bottom": 3.21,
+     "top": 45.1,
+     "roof": "flat",
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json (USGS 3DEP TX_Central_B1_2017 LiDAR; campus Y = NAVD88-165, terrain residual 0.02 m)",
+    "basis": "measured",
+    "note": "Absolute campus-Y targets 40.7, 6.5, 45.1 (LiDAR groundY 1.3 + tier heights). Stored as absolute campus Y (datum \"campusY\"); bottom = local grade (main walls still start at the generator foundation). Block check b01-eer measures the built roof Y against the LiDAR Y."
+   }
+  },
+  "507893": {
+   "datum": "grade",
+   "volumes": [
+    {
+     "bottom": 0,
+     "top": 33.5,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/utm/acs/ (7 floors, 2026) + https://cockrell.utexas.edu/about/facilities/acs-building/ (completed Sept 2026, 207,000 sqft; both checked 2026-10-20)",
+    "basis": "estimate",
+    "note": "Height ESTIMATE from the official floor count: 7 floors x ~4.5 m lab floor-to-floor + ~1.5 m parapet ~= 33.5 m above grade (target campus Y ~29.4). 2017 LiDAR (13.5 m) and City h 18.69 describe the demolished pre-2026 building and are deliberately NOT used. Upper setbacks / rooftop garden terrace unknown."
+   }
+  },
+  "655276": {
+   "datum": "campusY",
+   "volumes": [
+    {
+     "bottom": 1.19,
+     "top": 6,
+     "roof": "flat",
+     "role": "main"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json (USGS 3DEP TX_Central_B1_2017 LiDAR; campus Y = NAVD88-165, terrain residual 0.02 m)",
+    "basis": "measured",
+    "note": "Absolute campus-Y targets 6.0 (LiDAR groundY -3.0 + tier heights). Stored as absolute campus Y (datum \"campusY\"); bottom = local grade (main walls still start at the generator foundation). Block check b01-eer measures the built roof Y against the LiDAR Y."
+   }
+  },
+  "698987": {
+   "datum": "campusY",
+   "volumes": [
+    {
+     "bottom": 4.41,
+     "top": 30.5,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       95.8,
+       -207.8
+      ],
+      [
+       96.8,
+       -208.8
+      ],
+      [
+       96.8,
+       -212.3
+      ],
+      [
+       95.5,
+       -213.6
+      ],
+      [
+       87,
+       -214.1
+      ],
+      [
+       85.5,
+       -215.1
+      ],
+      [
+       80,
+       -214.6
+      ],
+      [
+       59,
+       -216.6
+      ],
+      [
+       57,
+       -217.6
+      ],
+      [
+       52.5,
+       -217.1
+      ],
+      [
+       45.5,
+       -218.1
+      ],
+      [
+       44.3,
+       -216.8
+      ],
+      [
+       43.8,
+       -214.3
+      ],
+      [
+       45,
+       -212.1
+      ],
+      [
+       52.5,
+       -211.6
+      ],
+      [
+       58.5,
+       -210.1
+      ],
+      [
+       63.5,
+       -210.6
+      ],
+      [
+       68.5,
+       -209.6
+      ],
+      [
+       79.5,
+       -209.1
+      ],
+      [
+       80.5,
+       -208.1
+      ],
+      [
+       83,
+       -208.6
+      ],
+      [
+       91,
+       -207.6
+      ]
+     ],
+     "bottom": 4.41,
+     "top": 35.1,
+     "roof": "flat",
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json (USGS 3DEP TX_Central_B1_2017 LiDAR; campus Y = NAVD88-165, terrain residual 0.02 m)",
+    "basis": "measured",
+    "note": "Absolute campus-Y targets 30.5, 35.1 (LiDAR groundY 3.1 + tier heights). Stored as absolute campus Y (datum \"campusY\"); bottom = local grade (main walls still start at the generator foundation). Block check b01-eer measures the built roof Y against the LiDAR Y."
+   }
+  },
+  "732885": {
+   "datum": "campusY",
+   "volumes": [
+    {
+     "bottom": 5.56,
+     "top": 25.5,
+     "roof": "flat",
+     "role": "main"
+    },
+    {
+     "ring": [
+      [
+       68.3,
+       -445.3
+      ],
+      [
+       71,
+       -449.1
+      ],
+      [
+       74.5,
+       -449.1
+      ],
+      [
+       76.5,
+       -447.6
+      ],
+      [
+       77,
+       -448.6
+      ],
+      [
+       81.5,
+       -448.6
+      ],
+      [
+       82,
+       -447.1
+      ],
+      [
+       84.3,
+       -448.8
+      ],
+      [
+       84.3,
+       -449.8
+      ],
+      [
+       83.3,
+       -450.8
+      ],
+      [
+       83.3,
+       -454.3
+      ],
+      [
+       82,
+       -455.6
+      ],
+      [
+       76,
+       -456.1
+      ],
+      [
+       73.8,
+       -457.8
+      ],
+      [
+       74.3,
+       -463.3
+      ],
+      [
+       73,
+       -464.6
+      ],
+      [
+       71.5,
+       -464.1
+      ],
+      [
+       64,
+       -465.1
+      ],
+      [
+       62.8,
+       -463.3
+      ],
+      [
+       62.8,
+       -459.3
+      ],
+      [
+       61.3,
+       -457.3
+      ],
+      [
+       60.4,
+       -445.7
+      ]
+     ],
+     "bottom": 5.56,
+     "top": 29.4,
+     "roof": "flat",
+     "role": "tier"
+    },
+    {
+     "ring": [
+      [
+       131.2,
+       -439.8
+      ],
+      [
+       133.3,
+       -456.8
+      ],
+      [
+       131.5,
+       -459.1
+      ],
+      [
+       122.5,
+       -459.6
+      ],
+      [
+       121.8,
+       -458.8
+      ],
+      [
+       121.3,
+       -449.8
+      ],
+      [
+       120,
+       -447.1
+      ],
+      [
+       106.5,
+       -448.6
+      ],
+      [
+       102.5,
+       -448.6
+      ],
+      [
+       101.8,
+       -447.8
+      ],
+      [
+       102,
+       -447.1
+      ],
+      [
+       105,
+       -446.6
+      ],
+      [
+       116,
+       -446.1
+      ],
+      [
+       120,
+       -444.6
+      ],
+      [
+       122.5,
+       -444.6
+      ],
+      [
+       125,
+       -440.1
+      ]
+     ],
+     "bottom": 5.56,
+     "top": 30.2,
+     "roof": "flat",
+     "role": "tier"
+    }
+   ],
+   "evidence": {
+    "source": "public/data/derived/roofs-lidar.json (USGS 3DEP TX_Central_B1_2017 LiDAR; campus Y = NAVD88-165, terrain residual 0.02 m)",
+    "basis": "measured",
+    "note": "Absolute campus-Y targets 25.5, 29.4, 30.2 (LiDAR groundY 4.2 + tier heights). Stored as absolute campus Y (datum \"campusY\"); bottom = local grade (main walls still start at the generator foundation). Block check b01-eer measures the built roof Y against the LiDAR Y."
+   }
+  }
+ },
+ "replaces": {
+  "732885:1230": {
+   "source": "lib/campus/blocks/b01-eer/petroleum.ts (D01): own context.json massing (2017 USGS 3DEP LiDAR roof tiers, campus-Y) + record ring (City 2023); research references district-orbits-30m d01-orbit-southwest/-northwest/-southeast/-northeast, full-map-30m priority-03, UT directory photos (form only, no pixels)",
+   "basis": "measured",
+   "note": "Rings and heights measured (same as the massing fallback); facade openings, floor split and plant detail reference-interpreted; ground-storey openings estimated."
+  },
+  "506548:211": {
+   "source": "lib/campus/blocks/b01-eer/petroleum.ts (D01): own context.json massing (2017 USGS 3DEP LiDAR roof tiers, campus-Y) + LiDAR-cut tier rings; research references district-orbits-30m d01-orbit-southwest/-northwest/-southeast/-northeast, full-map-30m priority-03, UT directory photos (form only, no pixels)",
+   "basis": "measured",
+   "note": "Rings and heights measured (same as the massing fallback); facade openings, floor split and plant detail reference-interpreted; ground-storey openings estimated."
+  }
+ },
+ "archetypes": {
+  "b01-eer:patterson-ribbon": {
+   "label": "J.T. Patterson Labs: red-brick spandrel bands and dark ribbon windows (b01, D02)",
+   "era": "1983",
+   "wall": "brownBrick",
+   "wallColor": "#a65c45",
+   "ground": "precast",
+   "groundColor": "#cbc5b8",
+   "base": "precast",
+   "baseColor": "#c9c3b6",
+   "baseHeight": 0.6,
+   "trim": "precast",
+   "trimColor": "#d9d3c6",
+   "roof": "flat",
+   "roofColor": "#bdbab3",
+   "roofSlope": 0,
+   "overhang": 0,
+   "brackets": false,
+   "parapet": 0.9,
+   "cornice": 0.6,
+   "belt": false,
+   "floor": 4.0,
+   "groundFloor": 4.4,
+   "deepReveal": true,
+   "window": {
+    "bay": 1.8,
+    "width": 1.7,
+    "sill": 1.05,
+    "head": 2.45,
+    "mullions": 1,
+    "transom": false,
+    "type": "ribbon",
+    "frame": "dark"
+   },
+   "groundWindow": {
+    "bay": 3.6,
+    "width": 3.0,
+    "sill": 0.3,
+    "head": 3.4,
+    "mullions": 2,
+    "transom": false,
+    "type": "glazed",
+    "frame": "dark"
+   },
+   "door": {
+    "width": 2.4,
+    "height": 2.7
+   },
+   "reference": "research/whole-campus-92/screenshot-dataset/online-photos/ut-pat-583-directory-photo.jpg (UT directory photo; red-orange brick spandrel bands alternating with continuous dark window strips, pale concrete piers/coping, ground storey recessed and glazed behind piers); d02-orbit-northwest / b03-r1-a2-30m context. Reference only; dimensions estimated."
+  },
+  "b01-eer:glt-curtain-glass": {
+   "label": "Gary L. Thomas Energy Engineering Building: dark glass curtain-wall grid (b01, D02)",
+   "era": "2022",
+   "wall": "metal",
+   "wallColor": "#2e3337",
+   "ground": "metal",
+   "groundColor": "#2a2f33",
+   "base": "precast",
+   "baseColor": "#c9c4b8",
+   "baseHeight": 0.5,
+   "trim": "metal",
+   "trimColor": "#3a4044",
+   "roof": "flat",
+   "roofColor": "#c4c1ba",
+   "roofSlope": 0,
+   "overhang": 0,
+   "brackets": false,
+   "parapet": 1.0,
+   "cornice": 0.3,
+   "belt": false,
+   "floor": 4.2,
+   "groundFloor": 5.0,
+   "window": {
+    "bay": 1.6,
+    "width": 1.48,
+    "sill": 0.15,
+    "head": 4.0,
+    "mullions": 0,
+    "transom": true,
+    "type": "glazed",
+    "frame": "dark"
+   },
+   "groundWindow": {
+    "bay": 1.6,
+    "width": 1.5,
+    "sill": 0.1,
+    "head": 4.6,
+    "mullions": 0,
+    "transom": true,
+    "type": "glazed",
+    "frame": "dark"
+   },
+   "door": {
+    "width": 2.4,
+    "height": 3.0
+   },
+   "reference": "research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures d02-orbit-southwest (near right), d02-orbit-southeast (near left), d02-orbit-northwest (middle distance): dark glazed curtain-wall grid with fine vertical/horizontal mullions over the full height. Identity from camera geometry vs the GLT footprint (x 73..187, z -201..-141). Interpretation only; module sizes estimated."
+  }
+ },
+ "catalog": {
+  "698987": {
+   "archetype": "b01-eer:patterson-ribbon",
+   "basis": "known",
+   "note": "J.T. Patterson Labs (1983): red brick spandrels + dark ribbon windows (D02 photo-interpreted)",
+   "evidence": {
+    "source": "research/whole-campus-92/screenshot-dataset/online-photos/ut-pat-583-directory-photo.jpg; district-orbits-30m d02-orbit-northwest",
+    "basis": "reference-interpreted",
+    "note": "Facade composition only; massing unchanged (LiDAR). Parapet kept equal to the previous archetype so the measured LiDAR roof top is unchanged."
+   }
+  },
+  "704813": {
+   "archetype": "b01-eer:glt-curtain-glass",
+   "basis": "known",
+   "note": "Gary L. Thomas Energy Engineering Building (2022): dark glass curtain wall (D02 orbit-interpreted; was buff-brick master-plan default)",
+   "evidence": {
+    "source": "research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d02-orbit-southwest.jpg, d02-orbit-southeast.jpg, d02-orbit-northwest.jpg",
+    "basis": "reference-interpreted",
+    "note": "Facade only; footprint override and generated LiDAR massing unchanged. Parapet kept equal to the previous archetype (master-plan 1.0) so the measured roof top is unchanged."
+   }
+  }
+ }
+}

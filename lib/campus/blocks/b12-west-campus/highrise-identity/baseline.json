@@ -1,0 +1,665 @@
+{
+ "version": 1,
+ "note": "Owner context values before the highrise-identity integration (frozen by the b12 high-rise check --freeze-baseline).",
+ "archetypesContainer": {
+  "b12-west-campus": false,
+  "b11-south-medical": false
+ },
+ "records": [
+  {
+   "profile": "linden",
+   "key": "683551:996",
+   "owner": "b12-west-campus",
+   "catalogId": "683551",
+   "catalog": {
+    "archetype": "office-tower",
+    "note": "The Linden; 313 W 17th St; OSM 28 levels",
+    "evidence": {
+     "source": "OpenStreetMap way 381834145 (https://www.openstreetmap.org/way/381834145, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used); https://www.skyscrapercenter.com/building/the-linden/41782 (CTBUH: 28 floors, 101.5 m, completed 2023); https://communityimpact.com/austin/central-austin/development/2023/01/25/the-linden-residences-marks-topping-out-in-downtown-austin/ (topped out Jan 2023) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "a0e4466d",
+    "evidence": {
+     "source": "City of Austin 2023 building footprint h 100.96 m (campus.json); public/data/derived/roofs-lidar.json 683551 (USGS 3DEP 2017; status conflict, groundY 0.3, P50 12.1, P95 14.1, max 14.9, pitched 22.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json); https://www.skyscrapercenter.com/building/the-linden/41782 (CTBUH: 28 floors, 101.5 m, completed 2023); https://communityimpact.com/austin/central-austin/development/2023/01/25/the-linden-residences-marks-topping-out-in-downtown-austin/ (topped out Jan 2023) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "The Linden (Linden Residences), 28-storey residential tower, groundbreaking Sept 2021, topped out Jan 2023, completed 2023/24 (OSM still tags building=construction). City 2023 h 101.0 m agrees with the published 101.5 m. Height basis: City 2023 h 100.96 m (City h tracks the roof P95/max); main roof 99.76 m above the 2017 DTM ground along the ring (1.72 campus Y); the generator's invented penthouse is dropped. Facade/setbacks not sourced."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 99.76,
+      "archetype": null,
+      "hash": "6797c646"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "rise",
+   "key": "554717:450",
+   "owner": "b12-west-campus",
+   "catalogId": "554717",
+   "catalog": {
+    "archetype": "wc-tower",
+    "note": "Rise at West Campus; 2206 Nueces St",
+    "evidence": {
+     "source": "OpenStreetMap way 380922421 (https://www.openstreetmap.org/way/380922421, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used); https://www.nilesbolton.com/rise-at-west-campus (24 storeys); https://thedailytexan.com/2021/09/14/west-campus-condo-unit-demolished-to-make-way-for-new-apartment-complex-nueces/ (height cap 294 ft = 89.6 m, completion 2023) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "8b7c3196",
+    "evidence": {
+     "source": "City of Austin 2023 building footprint h 85.28 m (campus.json); public/data/derived/roofs-lidar.json 554717 (USGS 3DEP 2017; status conflict, groundY 11.9, P50 10.4, P95 11.6, max 12.3, pitched 25.9 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json); https://www.nilesbolton.com/rise-at-west-campus (24 storeys); https://thedailytexan.com/2021/09/14/west-campus-condo-unit-demolished-to-make-way-for-new-apartment-complex-nueces/ (height cap 294 ft = 89.6 m, completion 2023) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "Rise at West Campus, 24-storey student housing, completed 2023 (2017 LiDAR shows the demolished condo building). City 2023 h 85.3 m within the 294 ft cap. Height basis: City 2023 h 85.28 m (City h tracks the roof P95/max); main roof 84.08 m above the 2017 DTM ground along the ring (12.84 campus Y); the generator's invented penthouse is dropped. Facade/setbacks not sourced."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 84.08,
+      "archetype": null,
+      "hash": "04c11a1b"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "travis-courts",
+   "key": "597128:680",
+   "owner": "b12-west-campus",
+   "catalogId": "597128",
+   "catalog": {
+    "archetype": "office-tower",
+    "note": "Travis County Civil and Family Courts Facility; 1700 Guadalupe St",
+    "evidence": {
+     "source": "OpenStreetMap way 1020963731 (https://www.openstreetmap.org/way/1020963731, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used); https://www.henselphelps.com/project/travis-county-civil-and-family-courts-facility/ (12 storeys + penthouse, Nov 2022); https://communityimpact.com/austin/central-austin/government/2022/12/02/travis-county-celebrates-opening-of-333m-civil-court-complex/ (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "30a9579e",
+    "evidence": {
+     "source": "City of Austin 2023 building footprint h 82.79 m (campus.json); public/data/derived/roofs-lidar.json 597128 (USGS 3DEP 2017; status conflict, groundY -0.8, P50 0.0, P95 0.0, max 0.0, flat 0.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json); https://www.henselphelps.com/project/travis-county-civil-and-family-courts-facility/ (12 storeys + penthouse, Nov 2022); https://communityimpact.com/austin/central-austin/government/2022/12/02/travis-county-celebrates-opening-of-333m-civil-court-complex/ (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "Travis County Civil and Family Courts Facility, 12 storeys + roof/penthouse, construction Aug 2018 - Nov 2022 (no 2017 roof returns). A 239 ft (72.8 m) figure seen only in a search summary was not confirmed; City 2023 h 82.8 m kept (may include penthouse). Height basis: City 2023 h 82.79 m (City h tracks the roof P95/max); main roof 81.59 m above the 2017 DTM ground along the ring (0.65 campus Y); the generator's invented penthouse is dropped. Facade/setbacks not sourced."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 81.59,
+      "archetype": null,
+      "hash": "05e93eda"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "clements",
+   "key": "486277:108",
+   "owner": "b12-west-campus",
+   "catalogId": "486277",
+   "catalog": {
+    "archetype": "state-office",
+    "note": "William P. Clements, Jr. Building; OSM 15 levels; City ring spans 2 OSM buildings (merged outline, not split) (archetype office-tower -> state-office)",
+    "evidence": {
+     "source": "OpenStreetMap way 42807005 (https://www.openstreetmap.org/way/42807005, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used); OSM tags building=public amenity=None",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "7021424b",
+    "evidence": {
+     "source": "public/data/derived/roofs-lidar.json 486277 (USGS 3DEP 2017; status measured, groundY -0.9, P50 54.3, P95 72.8, max 73.7, flat 1.9 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json)",
+     "basis": "measured",
+     "note": "Generator's own LiDAR volumes (lidar-tiers, archetype office-tower) restated above the LiDAR groundY -0.9 instead of the generator grade (2017 DTM perimeter ground P50 0.23 campus Y). Round 2: tier rings = LiDAR tier pieces intersected with the City ring (the generator snaps tier rings to footprint vertices, which lost part of the upper tiers)."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 21.5,
+      "archetype": null,
+      "hash": "6f3d4ed5"
+     },
+     {
+      "index": 1,
+      "role": "tier",
+      "bottom": 21.5,
+      "top": 62.3,
+      "archetype": null,
+      "hash": "a8591bec"
+     },
+     {
+      "index": 2,
+      "role": "tier",
+      "bottom": 21.5,
+      "top": 62.3,
+      "archetype": null,
+      "hash": "6a629744"
+     },
+     {
+      "index": 3,
+      "role": "tier",
+      "bottom": 21.5,
+      "top": 72.8,
+      "archetype": null,
+      "hash": "fa1105e7"
+     },
+     {
+      "index": 4,
+      "role": "tier",
+      "bottom": 21.5,
+      "top": 67.3,
+      "archetype": null,
+      "hash": "ea6c0cfd"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "21-rio",
+   "key": "503131:167",
+   "owner": "b12-west-campus",
+   "catalogId": "503131",
+   "catalog": {
+    "archetype": "wc-tower",
+    "note": "21 Rio; 2101 Rio Grande Street; OSM 21 levels",
+    "evidence": {
+     "source": "OpenStreetMap way 380922474 (https://www.openstreetmap.org/way/380922474, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "64dde537",
+    "evidence": {
+     "source": "public/data/derived/roofs-lidar.json 503131 (USGS 3DEP 2017; status measured, groundY 9.3, P50 67.1, P95 72.4, max 74.1, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json)",
+     "basis": "measured",
+     "note": "Generator's own LiDAR volumes (lidar-tiers, archetype wc-tower) restated above the LiDAR groundY 9.3 instead of the generator grade (2017 DTM perimeter ground P50 9.96 campus Y)."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 67.1,
+      "archetype": null,
+      "hash": "b02b4027"
+     },
+     {
+      "index": 1,
+      "role": "mech",
+      "bottom": 67.1,
+      "top": 72.3,
+      "archetype": null,
+      "hash": "1f91fa64"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "ion",
+   "key": "622603:771",
+   "owner": "b12-west-campus",
+   "catalogId": "622603",
+   "catalog": null,
+   "massing": {
+    "datumHash": "ab260a34",
+    "evidence": {
+     "source": "public/data/derived/roofs-lidar.json 622603 (USGS 3DEP 2017; status measured, groundY 7.6, P50 54.8, P95 58.8, max 64.8, flat 1.4 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json)",
+     "basis": "measured",
+     "note": "Generator's own LiDAR volumes (lidar-tiers, archetype wc-tower) restated above the LiDAR groundY 7.6 instead of the generator grade (2017 DTM perimeter ground P50 10.88 campus Y)."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 9.3,
+      "archetype": null,
+      "hash": "e3ce4579"
+     },
+     {
+      "index": 1,
+      "role": "tier",
+      "bottom": 9.3,
+      "top": 56.6,
+      "archetype": null,
+      "hash": "4e3b9bd8"
+     },
+     {
+      "index": 2,
+      "role": "tier",
+      "bottom": 9.3,
+      "top": 20.8,
+      "archetype": null,
+      "hash": "b8f832b5"
+     },
+     {
+      "index": 3,
+      "role": "mech",
+      "bottom": 9.3,
+      "top": 24.7,
+      "archetype": null,
+      "hash": "6eb15888"
+     },
+     {
+      "index": 4,
+      "role": "mech",
+      "bottom": 9.3,
+      "top": 24.7,
+      "archetype": null,
+      "hash": "8a0028b6"
+     },
+     {
+      "index": 5,
+      "role": "mech",
+      "bottom": 9.3,
+      "top": 12.1,
+      "archetype": null,
+      "hash": "35638d1b"
+     },
+     {
+      "index": 6,
+      "role": "mech",
+      "bottom": 9.3,
+      "top": 29.1,
+      "archetype": null,
+      "hash": "1bcc436e"
+     },
+     {
+      "index": 7,
+      "role": "mech",
+      "bottom": 9.3,
+      "top": 63.6,
+      "archetype": null,
+      "hash": "d496345c"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "lark",
+   "key": "735333:1272",
+   "owner": "b12-west-campus",
+   "catalogId": "735333",
+   "catalog": {
+    "archetype": "wc-tower",
+    "note": "Lark Austin (probable); 2100 Nueces St",
+    "evidence": {
+     "source": "OpenStreetMap way 1317399158 (https://www.openstreetmap.org/way/1317399158, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used); https://larkaustin.com/ (18 storeys, 2019; listing) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "53d76412",
+    "evidence": {
+     "source": "City of Austin 2023 building footprint h 60.89 m (campus.json); public/data/derived/roofs-lidar.json 735333 (USGS 3DEP 2017; status conflict, groundY 9.3, P50 7.6, P95 9.5, max 10.9, pitched 21.5 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json); https://larkaustin.com/ (18 storeys, 2019; listing) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "Probably Lark Austin (18 storeys, 2019), identified by location only (OSM way 1317399158 unnamed). City 2023 h 60.9 m kept. Height basis: City 2023 h 60.89 m (City h tracks the roof P95/max); main roof 59.69 m above the 2017 DTM ground along the ring (9.97 campus Y); the generator's invented penthouse is dropped. Facade/setbacks not sourced."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 59.69,
+      "archetype": null,
+      "hash": "ffe6380e"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "signature-1909",
+   "key": "486699:114",
+   "owner": "b12-west-campus",
+   "catalogId": "486699",
+   "catalog": {
+    "archetype": "wc-tower",
+    "note": "Signature 1909; 1909 Rio Grande St",
+    "evidence": {
+     "source": "OpenStreetMap way 1049463502 (https://www.openstreetmap.org/way/1049463502, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used); https://www.homes.com/property/signature-1909-austin-tx/70c7cbxfm2csj/ (listing: 17 storeys) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "e1cf4085",
+    "evidence": {
+     "source": "City of Austin 2023 building footprint h 57.97 m (campus.json); public/data/derived/roofs-lidar.json 486699 (USGS 3DEP 2017; status conflict, groundY 7.9, P50 0.0, P95 0.0, max 0.0, flat 0.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json); https://www.homes.com/property/signature-1909-austin-tx/70c7cbxfm2csj/ (listing: 17 storeys) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "Signature 1909, 17-storey student housing, built 2018 (listing only; no primary source). No 2017 roof returns (construction). Height basis: City 2023 h 57.97 m (City h tracks the roof P95/max); main roof 56.77 m above the 2017 DTM ground along the ring (2.19 campus Y); the generator's invented penthouse is dropped. Facade/setbacks not sourced."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 56.77,
+      "archetype": null,
+      "hash": "33755dce"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "doubletree",
+   "key": "525738:260",
+   "owner": "b12-west-campus",
+   "catalogId": "525738",
+   "catalog": {
+    "archetype": "office-tower",
+    "note": "DoubleTree Suites by Hilton Austin Downtown Capitol; 303 West 15th Street; OSM 15 levels",
+    "evidence": {
+     "source": "OpenStreetMap way 381834143 (https://www.openstreetmap.org/way/381834143, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "e088e05d",
+    "evidence": {
+     "source": "public/data/derived/roofs-lidar.json 525738 (USGS 3DEP 2017; status measured, groundY -2.1, P50 48.4, P95 53.4, max 57.7, flat 1.8 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json)",
+     "basis": "measured",
+     "note": "Generator's own LiDAR volumes (lidar-tiers, archetype office-tower) restated above the LiDAR groundY -2.1 instead of the generator grade (2017 DTM perimeter ground P50 -0.8 campus Y). Round 2: tier rings = LiDAR tier pieces intersected with the City ring (the generator snaps tier rings to footprint vertices, which lost part of the upper tiers)."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 3.4,
+      "archetype": null,
+      "hash": "e71f5388"
+     },
+     {
+      "index": 1,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 52.7,
+      "archetype": null,
+      "hash": "b9a70f4e"
+     },
+     {
+      "index": 2,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 11.5,
+      "archetype": null,
+      "hash": "ec96d14c"
+     },
+     {
+      "index": 3,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 48.4,
+      "archetype": null,
+      "hash": "81f6767f"
+     },
+     {
+      "index": 4,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 48.4,
+      "archetype": null,
+      "hash": "7e80817f"
+     },
+     {
+      "index": 5,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 44.9,
+      "archetype": null,
+      "hash": "4ffe708c"
+     },
+     {
+      "index": 6,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 44.9,
+      "archetype": null,
+      "hash": "d85d2022"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "villas-on-rio",
+   "key": "641335:834",
+   "owner": "b12-west-campus",
+   "catalogId": "641335",
+   "catalog": {
+    "archetype": "wc-tower",
+    "note": "Villas on Rio; 2111 Rio Grande St",
+    "evidence": {
+     "source": "OpenStreetMap way 989017852 (https://www.openstreetmap.org/way/989017852, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used); https://www.homes.com/property/villas-on-rio-austin-tx/gdzfjebq79rfj/ (listing: 19 storeys, 2021) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "77b82987",
+    "evidence": {
+     "source": "City of Austin 2023 building footprint h 57.25 m (campus.json); public/data/derived/roofs-lidar.json 641335 (USGS 3DEP 2017; status conflict, groundY 10.3, P50 7.4, P95 9.1, max 17.7, pitched 21.5 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json); https://www.homes.com/property/villas-on-rio-austin-tx/gdzfjebq79rfj/ (listing: 19 storeys, 2021) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "Villas on Rio, 19-storey student housing, built 2021 (listing only). Height basis: City 2023 h 57.25 m (City h tracks the roof P95/max); main roof 56.05 m above the 2017 DTM ground along the ring (10.72 campus Y); the generator's invented penthouse is dropped. Facade/setbacks not sourced."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 56.05,
+      "archetype": null,
+      "hash": "1254a285"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "inspire",
+   "key": "697152:1015",
+   "owner": "b12-west-campus",
+   "catalogId": "697152",
+   "catalog": {
+    "archetype": "wc-tower",
+    "note": "Inspire on 22nd; 2200 Nueces St; OSM 18 levels",
+    "evidence": {
+     "source": "OpenStreetMap way 380922461 (https://www.openstreetmap.org/way/380922461, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used); https://www.capstone-communities.com/student-housing-west-campus-austin/ (developer: 18 storeys, opened Aug-Oct 2019) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "1fac8d10",
+    "evidence": {
+     "source": "City of Austin 2023 building footprint h 56.88 m (campus.json); public/data/derived/roofs-lidar.json 697152 (USGS 3DEP 2017; status conflict, groundY 11.4, P50 6.1, P95 9.4, max 11.4, flat 3.5 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json); https://www.capstone-communities.com/student-housing-west-campus-austin/ (developer: 18 storeys, opened Aug-Oct 2019) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "Inspire on 22nd, 18-storey student housing, opened 2019. Height basis: City 2023 h 56.88 m (City h tracks the roof P95/max); main roof 55.68 m above the 2017 DTM ground along the ring (12.06 campus Y); the generator's invented penthouse is dropped. Facade/setbacks not sourced."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 55.68,
+      "archetype": null,
+      "hash": "53159117"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "sxsw-center",
+   "key": "717464:1161",
+   "owner": "b12-west-campus",
+   "catalogId": "717464",
+   "catalog": {
+    "archetype": "office-tower",
+    "note": "SXSW Center; 1400 Lavaca St; OSM 12 levels",
+    "evidence": {
+     "source": "OpenStreetMap way 381834012 (https://www.openstreetmap.org/way/381834012, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used); https://www.walterpmoore.com/projects/sxsw-center-1400-lavaca (completed 2019); https://www.commercialcafe.com/commercial-property/us/tx/austin/sxsw-center/ (12 floors) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "9a48933f",
+    "evidence": {
+     "source": "City of Austin 2023 building footprint h 55.15 m (campus.json); public/data/derived/roofs-lidar.json 717464 (USGS 3DEP 2017; status conflict, groundY -2.5, P50 10.5, P95 10.9, max 12.7, flat 0.5 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json); https://www.walterpmoore.com/projects/sxsw-center-1400-lavaca (completed 2019); https://www.commercialcafe.com/commercial-property/us/tx/austin/sxsw-center/ (12 floors) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "SXSW Center (South by Southwest HQ), 12-13 storeys, Pei Cobb Freed, completed 2019 (2017 LiDAR = construction site). City 2023 h 55.2 m kept. Height basis: City 2023 h 55.15 m (City h tracks the roof P95/max); main roof 53.95 m above the 2017 DTM ground along the ring (-1.13 campus Y); the generator's invented penthouse is dropped. Facade/setbacks not sourced."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 53.95,
+      "archetype": null,
+      "hash": "6eb13a35"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "tma",
+   "key": "525515:254",
+   "owner": "b12-west-campus",
+   "catalogId": "525515",
+   "catalog": null,
+   "massing": {
+    "datumHash": "c0042d18",
+    "evidence": {
+     "source": "public/data/derived/roofs-lidar.json 525515 (USGS 3DEP 2017; status measured, groundY -4.6, P50 44.7, P95 48.7, max 48.9, flat 1.1 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json)",
+     "basis": "measured",
+     "note": "Generator's own LiDAR volumes (lidar-tiers, archetype office-tower) restated above the LiDAR groundY -4.6 instead of the generator grade (2017 DTM perimeter ground P50 -3.13 campus Y). Round 2: tier rings = LiDAR tier pieces intersected with the City ring (the generator snaps tier rings to footprint vertices, which lost part of the upper tiers)."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 15.1,
+      "archetype": null,
+      "hash": "5e35e454"
+     },
+     {
+      "index": 1,
+      "role": "tier",
+      "bottom": 15.1,
+      "top": 44.8,
+      "archetype": null,
+      "hash": "015d74c1"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "waterloo",
+   "key": "594352:667",
+   "owner": "b12-west-campus",
+   "catalogId": "594352",
+   "catalog": {
+    "archetype": "wc-tower",
+    "note": "Yugo Austin Waterloo (Waterloo); 2400 Seton Ave",
+    "evidence": {
+     "source": "OpenStreetMap way 1208396284 (https://www.openstreetmap.org/way/1208396284, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used); https://lvcollective.com/work/waterloo/ (30 storeys, first 30-storey building in West Campus, completed 2022); https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Austin (320 ft = 97.5 m, 2022) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "40510480",
+    "evidence": {
+     "source": "City of Austin 2023 building footprint h 32.0 m (campus.json); public/data/derived/roofs-lidar.json 594352 (USGS 3DEP 2017; status conflict, groundY 14.6, P50 6.3, P95 8.3, max 9.3, mixed 24.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json); https://lvcollective.com/work/waterloo/ (30 storeys, first 30-storey building in West Campus, completed 2022); https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Austin (320 ft = 97.5 m, 2022) (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "Waterloo / Yugo Austin Waterloo, 30-storey student housing, completed 2022. City 2023 h 32.0 m is far below the published 320 ft (stale/mid-construction value): modelled to 97.5 m (top 96.3 m main roof); whether this City ring is the whole tower footprint is not verified. Height basis: published 97.5 m; main roof 96.3 m above the 2017 DTM ground along the ring (15.21 campus Y); the generator's invented penthouse is dropped. Facade/setbacks not sourced."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 96.3,
+      "archetype": null,
+      "hash": "a92b6e15"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "union-san-antonio",
+   "key": "512858:245",
+   "owner": "b12-west-campus",
+   "catalogId": "512858",
+   "catalog": {
+    "archetype": "wc-tower",
+    "note": "Union on San Antonio; 2011 (or 1911) San Antonio St",
+    "evidence": {
+     "source": "OpenStreetMap way 380922462 (https://www.openstreetmap.org/way/380922462, Overpass query 2026-10-20, OSM base 2026-07-15, ODbL; name/address only, geometry not used); https://skyscraperpage.com/b119740/austin/union-on-san-antonio (29 floors, mechanical parapet 332 ft = 101.2 m, top floor 292 ft); https://www.henselphelps.com/project/st-austin-catholic-parish-site-redevelopment/ (29-storey tower, completed Aug 2024); https://austin.urbanize.city/post/st-austin-school-redevelopment-greystar (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "identity from OSM name/address (community data, unverified on site); facade = generic archetype"
+    }
+   },
+   "massing": {
+    "datumHash": "aedc089c",
+    "evidence": {
+     "source": "City of Austin 2023 building footprint h 44.36 m (campus.json); public/data/derived/roofs-lidar.json 512858 (USGS 3DEP 2017; status conflict, groundY 3.0, P50 7.5, P95 8.3, max 13.5, flat 0.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json); https://skyscraperpage.com/b119740/austin/union-on-san-antonio (29 floors, mechanical parapet 332 ft = 101.2 m, top floor 292 ft); https://www.henselphelps.com/project/st-austin-catholic-parish-site-redevelopment/ (29-storey tower, completed Aug 2024); https://austin.urbanize.city/post/st-austin-school-redevelopment-greystar (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "Union on San Antonio, 29-storey tower on St. Austin parish land, built 2022-2024. City 2023 h 44.4 m caught it mid-construction (WRONG for today): main roof modelled at 92.7 m (top floor 292 ft + ~12 ft, estimate) and a mechanical/parapet volume (ring inset 6 m, position estimated) to the published 332 ft (101.2 m). Height basis: published 92.7 m; main roof 92.7 m + rooftop volume to 101.2 m above the 2017 DTM ground along the ring (4.1 campus Y); the generator's invented penthouse is dropped. Facade/setbacks not sourced."
+    },
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 92.7,
+      "archetype": null,
+      "hash": "5ce483f5"
+     },
+     {
+      "index": 1,
+      "role": "mech",
+      "bottom": 92.7,
+      "top": 101.2,
+      "archetype": null,
+      "hash": "82b59c83"
+     }
+    ]
+   }
+  },
+  {
+   "profile": "hilton-garden-inn-17th",
+   "key": "528581:317",
+   "owner": "b11-south-medical",
+   "catalogId": "528581",
+   "catalog": {
+    "archetype": "office-tower",
+    "note": "Hilton Garden Inn Austin University Capitol District, 301 W 17th St (17 storeys, opened 2021; post-2017: City 2023 h 66.44 m kept)",
+    "evidence": {
+     "source": "OpenStreetMap way 960180825 (https://www.openstreetmap.org/way/960180825, Overpass query 2026-10-20, ODbL; identity only); https://www.dpr.com/projects/hilton-garden-inn-17th-and-lavaca-hotel ; https://www.hriproperties.com/2021/09/21/hilton-garden-inn-austin-university-launches-onto-the-downtown-scene/ (fetched 2026-10-20)",
+     "basis": "reference-interpreted",
+     "note": "identity; 17 floors x 3.9 m = 66 m consistent with City h"
+    }
+   },
+   "massing": null
+  }
+ ]
+}

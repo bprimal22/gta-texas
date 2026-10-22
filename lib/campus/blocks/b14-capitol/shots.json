@@ -1,0 +1,363 @@
+[
+ {
+  "id": "b14-great-walk",
+  "block": "b14-capitol",
+  "kind": "street",
+  "label": "Great Walk (Congress Ave axis) looking north at the south front and dome",
+  "position": [
+   -369.96,
+   -4.36,
+   1456.66
+  ],
+  "target": [
+   -308,
+   48,
+   1266.5
+  ],
+  "fov": 55,
+  "groundY": -6.06,
+  "note": "Ground is the authored grounds grade (LiDAR DTM within 0.3-0.7 m). Dome re-registered to LiDAR; star tip Y 93.9 (TSPB 302.64 ft). Facade detail is photo-guided (estimate). LiDAR DTM here -6.08."
+ },
+ {
+  "id": "b14-north-grounds",
+  "block": "b14-capitol",
+  "kind": "street",
+  "label": "North grounds looking south at the north entrance pavilion (LiDAR-measured projection) and the central block north face",
+  "position": [
+   -278.09,
+   4.16,
+   1200.52
+  ],
+  "target": [
+   -291.23,
+   20,
+   1221.48
+  ],
+  "fov": 58,
+  "groundY": 2.46,
+  "note": "Central block north face now at the City/LiDAR line (v -48.5, was -43); entrance pavilion deck Y 24.3 from LiDAR; arches/columns photo-guided."
+ },
+ {
+  "id": "b14-supreme-court",
+  "block": "b14-capitol",
+  "kind": "side",
+  "label": "NW Capitol lawn corner looking northwest at the Supreme Court / Tom C. Clark / Price Daniel buildings (City footprint 486339)",
+  "position": [
+   -362.21,
+   3.64,
+   1200.46
+  ],
+  "target": [
+   -420,
+   18,
+   1120
+  ],
+  "fov": 60,
+  "groundY": 1.94,
+  "note": "Previously not drawn (lawn grid intruded -> route). Generated state-office archetype on LiDAR tiers; facades generic (estimate)."
+ },
+ {
+  "id": "b14-sam-houston",
+  "block": "b14-capitol",
+  "kind": "street",
+  "label": "East Capitol lawn near Brazos St looking east at the Sam Houston State Office Building",
+  "position": [
+   -205.17,
+   3.42,
+   1273.71
+  ],
+  "target": [
+   -128,
+   22,
+   1220
+  ],
+  "fov": 60,
+  "groundY": 1.72,
+  "note": "Sam Houston (505989) roof restated in the LiDAR datum (was +4 m); facade generic state-office (estimate). LiDAR DTM here 1.96."
+ },
+ {
+  "id": "b14-aerial",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "Aerial from the southeast over the south grounds: Capitol, Sam Houston, Supreme Court/Clark, TWC",
+  "position": [
+   -150,
+   170,
+   1470
+  ],
+  "target": [
+   -300,
+   30,
+   1230
+  ],
+  "fov": 55,
+  "groundY": -6.0,
+  "note": "Overview; facade detail not reviewable. The strip south of z 1288 outside the Capitol grounds has no terrain/buildings in the source data (gap)."
+ },
+ {
+  "id": "b14-strip-brazos-11th",
+  "block": "b14-capitol",
+  "kind": "street",
+  "label": "South strip, 11th Street at Brazos looking north at the Capitol Visitor Center (1857 GLO) on the round-2 DTM ground",
+  "position": [
+   -216,
+   1.55,
+   1528
+  ],
+  "target": [
+   -205,
+   8,
+   1490
+  ],
+  "fov": 60,
+  "groundY": -0.15,
+  "note": "Round 2: ground = b14 strip patch (2017 USGS 3DEP DTM, 4 m cells; strip-ground.ts), buildings = City 2023 footprints (context.json add[]) massed from the 2017 LiDAR; facades generic archetypes (estimate)."
+ },
+ {
+  "id": "b14-strip-colorado-westgate",
+  "block": "b14-capitol",
+  "kind": "street",
+  "label": "South strip, Colorado/Lavaca side looking north-west at Westgate Tower and the Governor's Mansion block",
+  "position": [
+   -505,
+   -4.1,
+   1420
+  ],
+  "target": [
+   -549,
+   30,
+   1332
+  ],
+  "fov": 60,
+  "groundY": -5.85,
+  "note": "Round 2: Westgate Tower roof at the 2017 LiDAR (tiers 65.95 / 69.43); Governor's Mansion flat LiDAR massing (its hipped roof and portico are not modelled, estimate). Ground = DTM patch."
+ },
+ {
+  "id": "b14-d34-orbit-northwest",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D34 actual orbit northwest: matching viewpoint of capture d34-orbit-northwest (656265:920 pale pink granite body, west corner pavilions with copper pyramids, central copper hip)",
+  "position": [
+   -515.24,
+   28.84,
+   1145.36
+  ],
+  "target": [
+   -451.6,
+   5.16,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": -1.27,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d34-orbit-northwest.jpg (sha256 85eddead0606158c..., dataset reviewStatus pending-visual-review); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+ },
+ {
+  "id": "b14-d34-orbit-northeast",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D34 actual orbit northeast: matching viewpoint of capture d34-orbit-northeast (656265:920 pale pink granite body, west corner pavilions with copper pyramids, central copper hip)",
+  "position": [
+   -387.96,
+   31.04,
+   1145.36
+  ],
+  "target": [
+   -451.6,
+   5.16,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": 0.67,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d34-orbit-northeast.jpg (sha256 1b0eba210550cebd..., dataset reviewStatus pending-visual-review); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+ },
+ {
+  "id": "b14-d34-orbit-southeast",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D34 actual orbit southeast: matching viewpoint of capture d34-orbit-southeast (656265:920 pale pink granite body, west corner pavilions with copper pyramids, central copper hip)",
+  "position": [
+   -387.96,
+   31.1,
+   1272.64
+  ],
+  "target": [
+   -451.6,
+   5.16,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": 2.46,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d34-orbit-southeast.jpg (sha256 a3d5905077ec4631..., dataset reviewStatus pending-visual-review); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+ },
+ {
+  "id": "b14-d34-orbit-southwest",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D34 actual orbit southwest: matching viewpoint of capture d34-orbit-southwest (656265:920 pale pink granite body, west corner pavilions with copper pyramids, central copper hip)",
+  "position": [
+   -515.24,
+   27.84,
+   1272.64
+  ],
+  "target": [
+   -451.6,
+   5.16,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": -3.12,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d34-orbit-southwest.jpg (sha256 422c1fde3fb3b3ff..., dataset reviewStatus pending-visual-review); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+ },
+ {
+  "id": "b14-d35-orbit-northwest",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D35 actual orbit northwest: matching viewpoint of capture d35-orbit-northwest (624194:789 parking structure spandrels / recessed bays)",
+  "position": [
+   101.56,
+   14.71,
+   1145.36
+  ],
+  "target": [
+   165.2,
+   -10.45,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": -14.96,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d35-orbit-northwest.jpg (sha256 85093d24391c6e37..., dataset reviewStatus pending-visual-review); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+ },
+ {
+  "id": "b14-d35-orbit-northeast",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D35 actual orbit northeast: REVIEW POSE ADJUSTED (+3.5 m up) from capture d35-orbit-northeast (624194:789 parking structure spandrels / recessed bays)",
+  "position": [
+   228.84,
+   19.89,
+   1145.36
+  ],
+  "target": [
+   165.2,
+   -10.45,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": -13.49,
+  "note": "Review pose ADJUSTED, not the exact source pose: original capture camera [228.84, 16.39, 1145.36] (research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d35-orbit-northeast.jpg, sha256 ec09ba9fbafb407f..., dataset reviewStatus pending-visual-review; the source frame is itself obstructed by a tan roof plane) overlapped a generated context roof collider (y 17.9) beside the camera; raised 3.5 m (same x/z, target and FOV) = the smallest upward offset clear of every collider by >= 1 m (Rapier read-only probe, .work/HANDOFF-d35-shot.json). Camera Y was planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera x/z. Research comparison pose only; never a runtime texture."
+ },
+ {
+  "id": "b14-d35-orbit-southeast",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D35 actual orbit southeast: matching viewpoint of capture d35-orbit-southeast (624194:789 parking structure spandrels / recessed bays)",
+  "position": [
+   228.84,
+   16.71,
+   1272.64
+  ],
+  "target": [
+   165.2,
+   -10.45,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": -12.61,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d35-orbit-southeast.jpg (sha256 862c8036b3629eb8..., dataset reviewStatus pending-visual-review); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+ },
+ {
+  "id": "b14-d35-orbit-southwest",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D35 actual orbit southwest: matching viewpoint of capture d35-orbit-southwest (624194:789 parking structure spandrels / recessed bays)",
+  "position": [
+   101.56,
+   16.89,
+   1272.64
+  ],
+  "target": [
+   165.2,
+   -10.45,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": -14.55,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d35-orbit-southwest.jpg (sha256 b9735ee12f3b0db4..., dataset reviewStatus pending-visual-review); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+ },
+ {
+  "id": "b14-d36-orbit-northwest",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D36 actual orbit northwest: matching viewpoint of capture d36-orbit-northwest (467902:75 blue gabled house with west porch)",
+  "position": [
+   923.96,
+   35.34,
+   1145.36
+  ],
+  "target": [
+   987.6,
+   15.46,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": 5.39,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d36-orbit-northwest.jpg (sha256 a60d96a934e489ff..., dataset reviewStatus pending-visual-review); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+ },
+ {
+  "id": "b14-d36-orbit-northeast",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D36 actual orbit northeast: matching viewpoint of capture d36-orbit-northeast (467902:75 blue gabled house with west porch)",
+  "position": [
+   1051.24,
+   34.93,
+   1145.36
+  ],
+  "target": [
+   987.6,
+   15.46,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": 4.96,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d36-orbit-northeast.jpg (sha256 31b8b15a87ab2952..., dataset reviewStatus pending-visual-review); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+ },
+ {
+  "id": "b14-d36-orbit-southeast",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D36 actual orbit southeast: matching viewpoint of capture d36-orbit-southeast (467902:75 blue gabled house with west porch)",
+  "position": [
+   1051.24,
+   34.43,
+   1272.64
+  ],
+  "target": [
+   987.6,
+   15.46,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": 4.47,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d36-orbit-southeast.jpg (sha256 681974bbf34adbb1..., dataset reviewStatus pending-visual-review); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+ },
+ {
+  "id": "b14-d36-orbit-southwest",
+  "block": "b14-capitol",
+  "kind": "aerial",
+  "label": "D36 actual orbit southwest: matching viewpoint of capture d36-orbit-southwest (467902:75 blue gabled house with west porch)",
+  "position": [
+   923.96,
+   35.78,
+   1272.64
+  ],
+  "target": [
+   987.6,
+   15.46,
+   1209
+  ],
+  "fov": 60.0,
+  "groundY": 5.67,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d36-orbit-southwest.jpg (sha256 a022982ef33ae09b..., dataset reviewStatus pending-visual-review); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+ }
+]

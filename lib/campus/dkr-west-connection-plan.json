@@ -1,0 +1,294 @@
+{
+  "version": 1,
+  "scope": "DKR western portal street-to-apron connection only",
+  "status": "staged with current resident physical boundary validation",
+  "columns": 5,
+  "rows": [
+    274.341815,
+    275,
+    276,
+    278,
+    279,
+    280,
+    281,
+    281.64181499999995
+  ],
+  "vertices": [
+    [
+      306,
+      -8.640760997762658,
+      274.341815
+    ],
+    [
+      307,
+      -8.644287673085806,
+      274.341815
+    ],
+    [
+      308,
+      -8.647814348408954,
+      274.341815
+    ],
+    [
+      309,
+      -8.651341023732101,
+      274.341815
+    ],
+    [
+      310,
+      -8.65486769905525,
+      274.341815
+    ],
+    [
+      306,
+      -8.659884322465153,
+      275
+    ],
+    [
+      307,
+      -8.659504361178358,
+      275
+    ],
+    [
+      308,
+      -8.659124399891564,
+      275
+    ],
+    [
+      309,
+      -8.658744438604769,
+      275
+    ],
+    [
+      310,
+      -8.658364477317974,
+      275
+    ],
+    [
+      306,
+      -8.68893895710814,
+      276
+    ],
+    [
+      307,
+      -8.68262352690312,
+      276
+    ],
+    [
+      308,
+      -8.6763080966981,
+      276
+    ],
+    [
+      309,
+      -8.66999266649308,
+      276
+    ],
+    [
+      310,
+      -8.66367723628806,
+      276
+    ],
+    [
+      306,
+      -8.747048226394115,
+      278
+    ],
+    [
+      307,
+      -8.727930904745872,
+      278
+    ],
+    [
+      308,
+      -8.708813583097626,
+      278
+    ],
+    [
+      309,
+      -8.689696261449381,
+      278
+    ],
+    [
+      310,
+      -8.670578939801137,
+      278
+    ],
+    [
+      306,
+      -8.776102861037103,
+      279
+    ],
+    [
+      307,
+      -8.755666321473825,
+      279
+    ],
+    [
+      308,
+      -8.735229781910549,
+      279
+    ],
+    [
+      309,
+      -8.714793242347273,
+      279
+    ],
+    [
+      310,
+      -8.694356702783995,
+      279
+    ],
+    [
+      306,
+      -8.805157495680092,
+      280
+    ],
+    [
+      307,
+      -8.783401738201782,
+      280
+    ],
+    [
+      308,
+      -8.761645980723474,
+      280
+    ],
+    [
+      309,
+      -8.739890223245165,
+      280
+    ],
+    [
+      310,
+      -8.718134465766855,
+      280
+    ],
+    [
+      306,
+      -8.83421213032308,
+      281
+    ],
+    [
+      307,
+      -8.81214269266892,
+      281
+    ],
+    [
+      308,
+      -8.79007325501476,
+      281
+    ],
+    [
+      309,
+      -8.768003817360599,
+      281
+    ],
+    [
+      310,
+      -8.745934379706439,
+      281
+    ],
+    [
+      306,
+      -8.852859830656467,
+      281.64181499999995
+    ],
+    [
+      307,
+      -8.830589068360242,
+      281.64181499999995
+    ],
+    [
+      308,
+      -8.808318306064017,
+      281.64181499999995
+    ],
+    [
+      309,
+      -8.786047543767793,
+      281.64181499999995
+    ],
+    [
+      310,
+      -8.763776781471568,
+      281.64181499999995
+    ]
+  ],
+  "depth": 0.32,
+  "clearanceTop": -5.3,
+  "sourceSupportTriangle": [
+    [
+      305.3014831542969,
+      -9.034693717956543,
+      288.7830810546875
+    ],
+    [
+      307.7718505859375,
+      -8.652569770812988,
+      272.5086364746094
+    ],
+    [
+      300.9772033691406,
+      -8.550249099731445,
+      277.57537841796875
+    ]
+  ],
+  "sourceSupportEvidence": "/tmp/ut-iteration-58/headless-replay.jsonl line266 and iteration59 dkr-initial-probes.json, owner streamed, geometricError2.006368774808128",
+  "currentBoundaryValidation": [
+    {
+      "point": [
+        306,
+        -8.746757292747498,
+        277.99
+      ],
+      "differenceMetres": 3.8730018836474756e-07,
+      "tileFlags": {
+        "visible": true,
+        "active": true,
+        "sceneVisible": true,
+        "used": true,
+        "repaired": true
+      }
+    },
+    {
+      "point": [
+        306,
+        -8.796441400051117,
+        279.7
+      ],
+      "differenceMetres": 2.9476392349181424e-07,
+      "tileFlags": {
+        "visible": true,
+        "active": true,
+        "sceneVisible": true,
+        "used": true,
+        "repaired": true
+      }
+    },
+    {
+      "point": [
+        306,
+        -8.82840075492859,
+        280.8
+      ],
+      "differenceMetres": 4.4846589197788944e-07,
+      "tileFlags": {
+        "visible": true,
+        "active": true,
+        "sceneVisible": true,
+        "used": true,
+        "repaired": true
+      }
+    }
+  ],
+  "currentProbeSha256": "97205b9ce45f5f8009cd73257df8aebe45731b8b0843ec611db06abd5aa71457",
+  "apronPlanSha256": "8af34127d242b31ec4bf9245cf16a440be0404427047eb65055034df11bf7d30",
+  "assumptions": [
+    "Every west-edge point lies inside the recorded source support triangle; no extrapolated plane is used there.",
+    "The east edge is the exact existing apron X310 edge, including its row knots.",
+    "The 4m space between those two boundaries is explicitly graded authored floor; its old source triangulation is not claimed as measured.",
+    "New floor and source cuts stay within the existing portal Z band; no distant tree-row extension.",
+    "Source clearance rises only to -5.30m, leaving overhead canopy and the full adjacent stadium intact."
+  ]
+}

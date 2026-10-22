@@ -1,0 +1,4870 @@
+{
+ "source": "USGS 3DEP 2017 0.5 m class-6 raster in the City 2023 rings (derived/r2/strip_buildings.py)",
+ "records": {
+  "-14001:add": {
+   "roofY_P10": 6.05,
+   "roofY_P50": 6.71,
+   "roofY_P90": 7.33,
+   "roofY_P95": 7.51,
+   "roofY_max": 7.98,
+   "coverage": 0.81,
+   "area": 145.2,
+   "groundY": 2.47,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14002:add": {
+   "roofY_P10": 5.68,
+   "roofY_P50": 6.06,
+   "roofY_P90": 7.78,
+   "roofY_P95": 8.0,
+   "roofY_max": 10.59,
+   "coverage": 0.88,
+   "area": 155.2,
+   "groundY": 3.47,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14004:add": {
+   "roofY_P10": 2.0,
+   "roofY_P50": 2.49,
+   "roofY_P90": 2.96,
+   "roofY_P95": 2.99,
+   "roofY_max": 3.04,
+   "coverage": 0.95,
+   "area": 103.7,
+   "groundY": -1.74,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14005:add": {
+   "roofY_P10": 11.68,
+   "roofY_P50": 12.62,
+   "roofY_P90": 13.38,
+   "roofY_P95": 13.47,
+   "roofY_max": 13.59,
+   "coverage": 0.96,
+   "area": 153.7,
+   "groundY": 4.28,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14006:add": {
+   "roofY_P10": 4.48,
+   "roofY_P50": 4.79,
+   "roofY_P90": 5.29,
+   "roofY_P95": 5.47,
+   "roofY_max": 5.58,
+   "coverage": 0.85,
+   "area": 69.2,
+   "groundY": 1.56,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14008:add": {
+   "roofY_P10": 12.07,
+   "roofY_P50": 13.44,
+   "roofY_P90": 14.5,
+   "roofY_P95": 14.77,
+   "roofY_max": 16.24,
+   "coverage": 0.9,
+   "area": 698.1,
+   "groundY": 2.82,
+   "roof": "flat",
+   "name": "Governor's Mansion",
+   "tiers": 0
+  },
+  "-14009:add": {
+   "roofY_P10": 5.27,
+   "roofY_P50": 5.5,
+   "roofY_P90": 5.72,
+   "roofY_P95": 5.76,
+   "roofY_max": 5.78,
+   "coverage": 0.92,
+   "area": 31.2,
+   "groundY": 2.34,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14010:add": {
+   "roofY_P10": 5.72,
+   "roofY_P50": 7.68,
+   "roofY_P90": 9.09,
+   "roofY_P95": 9.29,
+   "roofY_max": 9.51,
+   "coverage": 0.86,
+   "area": 320.2,
+   "groundY": 1.93,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14011:add": {
+   "roofY_P10": 6.31,
+   "roofY_P50": 6.71,
+   "roofY_P90": 7.11,
+   "roofY_P95": 7.17,
+   "roofY_max": 9.58,
+   "coverage": 0.68,
+   "area": 55.2,
+   "groundY": 2.45,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14012:add": {
+   "roofY_P10": 21.95,
+   "roofY_P50": 24.43,
+   "roofY_P90": 36.42,
+   "roofY_P95": 36.49,
+   "roofY_max": 42.51,
+   "coverage": 0.96,
+   "area": 3796.9,
+   "groundY": 2.6,
+   "roof": "flat",
+   "name": "",
+   "tiers": 2
+  },
+  "-14013:add": {
+   "roofY_P10": 8.22,
+   "roofY_P50": 9.52,
+   "roofY_P90": 12.41,
+   "roofY_P95": 12.79,
+   "roofY_max": 13.06,
+   "coverage": 0.88,
+   "area": 110.0,
+   "groundY": 4.34,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14014:add": {
+   "roofY_P10": 11.01,
+   "roofY_P50": 14.18,
+   "roofY_P90": 14.32,
+   "roofY_P95": 17.23,
+   "roofY_max": 17.45,
+   "coverage": 0.89,
+   "area": 4790.6,
+   "groundY": 0.58,
+   "roof": "flat",
+   "name": "University of Texas Physicians Central Texas Trinity Professional Office",
+   "tiers": 4
+  },
+  "-14015:add": {
+   "roofY_P10": 6.6,
+   "roofY_P50": 6.89,
+   "roofY_P90": 7.29,
+   "roofY_P95": 7.33,
+   "roofY_max": 7.39,
+   "coverage": 0.85,
+   "area": 53.1,
+   "groundY": 2.78,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14016:add": {
+   "roofY_P10": 5.65,
+   "roofY_P50": 6.17,
+   "roofY_P90": 6.55,
+   "roofY_P95": 6.6,
+   "roofY_max": 6.65,
+   "coverage": 0.85,
+   "area": 101.4,
+   "groundY": 0.03,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14017:add": {
+   "roofY_P10": 5.67,
+   "roofY_P50": 8.9,
+   "roofY_P90": 9.87,
+   "roofY_P95": 10.75,
+   "roofY_max": 13.06,
+   "coverage": 0.81,
+   "area": 204.1,
+   "groundY": 2.79,
+   "roof": "hip-shingle",
+   "name": "Governor's Carriage House",
+   "tiers": 0
+  },
+  "-14018:add": {
+   "roofY_P10": 6.09,
+   "roofY_P50": 7.23,
+   "roofY_P90": 8.17,
+   "roofY_P95": 8.29,
+   "roofY_max": 8.94,
+   "coverage": 0.87,
+   "area": 129.0,
+   "groundY": 2.11,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14021:add": {
+   "roofY_P10": 6.67,
+   "roofY_P50": 7.28,
+   "roofY_P90": 7.96,
+   "roofY_P95": 8.02,
+   "roofY_max": 8.2,
+   "coverage": 0.96,
+   "area": 149.3,
+   "groundY": 3.26,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14022:add": {
+   "roofY_P10": 18.1,
+   "roofY_P50": 20.01,
+   "roofY_P90": 21.41,
+   "roofY_P95": 21.59,
+   "roofY_max": 21.98,
+   "coverage": 0.82,
+   "area": 592.5,
+   "groundY": 3.35,
+   "roof": "flat",
+   "name": "Capitol Complex Visitor Center",
+   "tiers": 0
+  },
+  "-14023:add": {
+   "roofY_P10": 2.06,
+   "roofY_P50": 2.99,
+   "roofY_P90": 4.29,
+   "roofY_P95": 4.54,
+   "roofY_max": 4.78,
+   "coverage": 0.96,
+   "area": 218.1,
+   "groundY": -0.9,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14024:add": {
+   "roofY_P10": 4.06,
+   "roofY_P50": 5.81,
+   "roofY_P90": 7.21,
+   "roofY_P95": 7.42,
+   "roofY_max": 8.16,
+   "coverage": 0.75,
+   "area": 94.6,
+   "groundY": 0.17,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14025:add": {
+   "roofY_P10": 5.56,
+   "roofY_P50": 7.07,
+   "roofY_P90": 8.08,
+   "roofY_P95": 8.21,
+   "roofY_max": 13.22,
+   "coverage": 0.89,
+   "area": 355.2,
+   "groundY": 1.85,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14026:add": {
+   "roofY_P10": 8.88,
+   "roofY_P50": 11.78,
+   "roofY_P90": 14.71,
+   "roofY_P95": 14.89,
+   "roofY_max": 15.24,
+   "coverage": 0.85,
+   "area": 141.7,
+   "groundY": 4.78,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14027:add": {
+   "roofY_P10": 5.39,
+   "roofY_P50": 6.11,
+   "roofY_P90": 6.83,
+   "roofY_P95": 6.94,
+   "roofY_max": 7.18,
+   "coverage": 0.84,
+   "area": 87.3,
+   "groundY": 2.14,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14029:add": {
+   "roofY_P10": 4.49,
+   "roofY_P50": 5.5,
+   "roofY_P90": 6.06,
+   "roofY_P95": 6.11,
+   "roofY_max": 6.25,
+   "coverage": 0.94,
+   "area": 194.0,
+   "groundY": 1.65,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14030:add": {
+   "roofY_P10": 4.45,
+   "roofY_P50": 5.75,
+   "roofY_P90": 6.41,
+   "roofY_P95": 6.47,
+   "roofY_max": 6.5,
+   "coverage": 0.96,
+   "area": 85.5,
+   "groundY": 1.06,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14031:add": {
+   "roofY_P10": 3.86,
+   "roofY_P50": 4.54,
+   "roofY_P90": 5.26,
+   "roofY_P95": 5.33,
+   "roofY_max": 5.39,
+   "coverage": 0.84,
+   "area": 60.6,
+   "groundY": 0.74,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14032:add": {
+   "roofY_P10": 4.49,
+   "roofY_P50": 5.28,
+   "roofY_P90": 6.76,
+   "roofY_P95": 6.87,
+   "roofY_max": 9.99,
+   "coverage": 0.86,
+   "area": 151.0,
+   "groundY": 1.31,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14033:add": {
+   "roofY_P10": 6.36,
+   "roofY_P50": 7.29,
+   "roofY_P90": 7.97,
+   "roofY_P95": 8.03,
+   "roofY_max": 9.92,
+   "coverage": 0.86,
+   "area": 73.8,
+   "groundY": 3.16,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14035:add": {
+   "roofY_P10": 5.95,
+   "roofY_P50": 6.05,
+   "roofY_P90": 6.14,
+   "roofY_P95": 6.15,
+   "roofY_max": 6.17,
+   "coverage": 0.82,
+   "area": 23.1,
+   "groundY": 3.44,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14036:add": {
+   "roofY_P10": 3.37,
+   "roofY_P50": 3.97,
+   "roofY_P90": 4.48,
+   "roofY_P95": 4.56,
+   "roofY_max": 4.64,
+   "coverage": 0.95,
+   "area": 117.6,
+   "groundY": 0.33,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14037:add": {
+   "roofY_P10": 6.1,
+   "roofY_P50": 6.79,
+   "roofY_P90": 7.76,
+   "roofY_P95": 7.94,
+   "roofY_max": 8.15,
+   "coverage": 0.85,
+   "area": 97.4,
+   "groundY": 2.53,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14038:add": {
+   "roofY_P10": 4.02,
+   "roofY_P50": 6.93,
+   "roofY_P90": 7.91,
+   "roofY_P95": 8.07,
+   "roofY_max": 9.15,
+   "coverage": 0.92,
+   "area": 177.6,
+   "groundY": 0.11,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14039:add": {
+   "roofY_P10": 6.63,
+   "roofY_P50": 7.09,
+   "roofY_P90": 7.48,
+   "roofY_P95": 7.53,
+   "roofY_max": 9.08,
+   "coverage": 0.88,
+   "area": 193.3,
+   "groundY": 0.91,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14041:add": {
+   "roofY_P10": 17.82,
+   "roofY_P50": 17.88,
+   "roofY_P90": 22.72,
+   "roofY_P95": 22.74,
+   "roofY_max": 23.9,
+   "coverage": 0.93,
+   "area": 2150.7,
+   "groundY": 0.87,
+   "roof": "flat",
+   "name": "Lorenzo de Zavala State Archive and Library",
+   "tiers": 1
+  },
+  "-14042:add": {
+   "roofY_P10": 9.73,
+   "roofY_P50": 11.61,
+   "roofY_P90": 12.87,
+   "roofY_P95": 13.3,
+   "roofY_max": 13.76,
+   "coverage": 0.9,
+   "area": 123.0,
+   "groundY": 3.12,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14044:add": {
+   "roofY_P10": 3.21,
+   "roofY_P50": 4.35,
+   "roofY_P90": 4.96,
+   "roofY_P95": 5.09,
+   "roofY_max": 9.7,
+   "coverage": 0.96,
+   "area": 351.2,
+   "groundY": 0.27,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14045:add": {
+   "roofY_P10": 7.78,
+   "roofY_P50": 8.77,
+   "roofY_P90": 9.75,
+   "roofY_P95": 10.08,
+   "roofY_max": 10.74,
+   "coverage": 0.88,
+   "area": 178.4,
+   "groundY": 3.97,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14046:add": {
+   "roofY_P10": 6.07,
+   "roofY_P50": 6.41,
+   "roofY_P90": 6.73,
+   "roofY_P95": 6.75,
+   "roofY_max": 6.78,
+   "coverage": 0.86,
+   "area": 25.9,
+   "groundY": 2.9,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14047:add": {
+   "roofY_P10": 5.31,
+   "roofY_P50": 5.51,
+   "roofY_P90": 8.06,
+   "roofY_P95": 8.34,
+   "roofY_max": 8.46,
+   "coverage": 0.89,
+   "area": 12.1,
+   "groundY": 2.79,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14048:add": {
+   "roofY_P10": 6.84,
+   "roofY_P50": 7.37,
+   "roofY_P90": 7.94,
+   "roofY_P95": 8.05,
+   "roofY_max": 8.17,
+   "coverage": 0.86,
+   "area": 149.2,
+   "groundY": 2.85,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14049:add": {
+   "roofY_P10": 6.93,
+   "roofY_P50": 10.25,
+   "roofY_P90": 11.75,
+   "roofY_P95": 12.05,
+   "roofY_max": 14.2,
+   "coverage": 0.81,
+   "area": 85.3,
+   "groundY": 2.79,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14050:add": {
+   "roofY_P10": 6.01,
+   "roofY_P50": 6.04,
+   "roofY_P90": 6.18,
+   "roofY_P95": 6.82,
+   "roofY_max": 6.99,
+   "coverage": 0.59,
+   "area": 136.9,
+   "groundY": 2.66,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14051:add": {
+   "roofY_P10": 4.12,
+   "roofY_P50": 4.83,
+   "roofY_P90": 6.08,
+   "roofY_P95": 6.22,
+   "roofY_max": 6.41,
+   "coverage": 0.95,
+   "area": 126.7,
+   "groundY": 0.79,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14052:add": {
+   "roofY_P10": 6.72,
+   "roofY_P50": 7.53,
+   "roofY_P90": 8.79,
+   "roofY_P95": 9.02,
+   "roofY_max": 10.07,
+   "coverage": 0.8,
+   "area": 168.0,
+   "groundY": 3.3,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14053:add": {
+   "roofY_P10": 6.2,
+   "roofY_P50": 8.78,
+   "roofY_P90": 10.08,
+   "roofY_P95": 10.27,
+   "roofY_max": 10.48,
+   "coverage": 0.84,
+   "area": 128.6,
+   "groundY": 1.5,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14054:add": {
+   "roofY_P10": 4.68,
+   "roofY_P50": 5.38,
+   "roofY_P90": 6.0,
+   "roofY_P95": 6.08,
+   "roofY_max": 6.18,
+   "coverage": 0.85,
+   "area": 77.8,
+   "groundY": 1.29,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14055:add": {
+   "roofY_P10": 6.59,
+   "roofY_P50": 9.96,
+   "roofY_P90": 10.02,
+   "roofY_P95": 10.03,
+   "roofY_max": 10.29,
+   "coverage": 0.95,
+   "area": 90.2,
+   "groundY": 3.18,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14056:add": {
+   "roofY_P10": 4.02,
+   "roofY_P50": 5.14,
+   "roofY_P90": 6.18,
+   "roofY_P95": 6.36,
+   "roofY_max": 7.65,
+   "coverage": 0.85,
+   "area": 54.6,
+   "groundY": 0.69,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14058:add": {
+   "roofY_P10": 4.72,
+   "roofY_P50": 7.11,
+   "roofY_P90": 9.0,
+   "roofY_P95": 9.26,
+   "roofY_max": 9.5,
+   "coverage": 0.84,
+   "area": 150.1,
+   "groundY": 1.0,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14059:add": {
+   "roofY_P10": 7.49,
+   "roofY_P50": 8.08,
+   "roofY_P90": 8.79,
+   "roofY_P95": 8.97,
+   "roofY_max": 10.54,
+   "coverage": 0.81,
+   "area": 104.4,
+   "groundY": 4.56,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14060:add": {
+   "roofY_P10": 3.86,
+   "roofY_P50": 4.6,
+   "roofY_P90": 5.46,
+   "roofY_P95": 6.22,
+   "roofY_max": 8.29,
+   "coverage": 0.85,
+   "area": 68.6,
+   "groundY": 0.82,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14061:add": {
+   "roofY_P10": 7.21,
+   "roofY_P50": 8.49,
+   "roofY_P90": 9.4,
+   "roofY_P95": 9.5,
+   "roofY_max": 11.67,
+   "coverage": 0.85,
+   "area": 401.0,
+   "groundY": 1.23,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14062:add": {
+   "roofY_P10": 20.15,
+   "roofY_P50": 69.2,
+   "roofY_P90": 69.57,
+   "roofY_P95": 69.61,
+   "roofY_max": 71.69,
+   "coverage": 0.9,
+   "area": 1390.7,
+   "groundY": -2.66,
+   "roof": "flat",
+   "name": "Westgate Tower",
+   "tiers": 3
+  },
+  "-14063:add": {
+   "roofY_P10": 5.17,
+   "roofY_P50": 5.97,
+   "roofY_P90": 6.87,
+   "roofY_P95": 6.99,
+   "roofY_max": 7.86,
+   "coverage": 0.87,
+   "area": 192.7,
+   "groundY": 1.55,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14064:add": {
+   "roofY_P10": 3.67,
+   "roofY_P50": 4.58,
+   "roofY_P90": 5.45,
+   "roofY_P95": 5.68,
+   "roofY_max": 6.0,
+   "coverage": 0.9,
+   "area": 167.9,
+   "groundY": 0.23,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14065:add": {
+   "roofY_P10": 7.97,
+   "roofY_P50": 8.75,
+   "roofY_P90": 9.8,
+   "roofY_P95": 9.93,
+   "roofY_max": 10.06,
+   "coverage": 0.86,
+   "area": 154.3,
+   "groundY": 4.17,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14068:add": {
+   "roofY_P10": 4.19,
+   "roofY_P50": 4.87,
+   "roofY_P90": 5.45,
+   "roofY_P95": 5.53,
+   "roofY_max": 7.07,
+   "coverage": 0.91,
+   "area": 97.7,
+   "groundY": -0.01,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14069:add": {
+   "roofY_P10": 6.27,
+   "roofY_P50": 8.0,
+   "roofY_P90": 8.75,
+   "roofY_P95": 8.84,
+   "roofY_max": 8.97,
+   "coverage": 0.85,
+   "area": 203.9,
+   "groundY": 3.48,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14070:add": {
+   "roofY_P10": 3.73,
+   "roofY_P50": 4.38,
+   "roofY_P90": 4.92,
+   "roofY_P95": 5.02,
+   "roofY_max": 11.97,
+   "coverage": 0.92,
+   "area": 144.6,
+   "groundY": 0.39,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14071:add": {
+   "roofY_P10": 6.95,
+   "roofY_P50": 7.51,
+   "roofY_P90": 8.29,
+   "roofY_P95": 8.4,
+   "roofY_max": 10.07,
+   "coverage": 0.85,
+   "area": 183.0,
+   "groundY": 3.67,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14073:add": {
+   "roofY_P10": 7.0,
+   "roofY_P50": 7.1,
+   "roofY_P90": 8.29,
+   "roofY_P95": 8.36,
+   "roofY_max": 9.41,
+   "coverage": 0.9,
+   "area": 483.5,
+   "groundY": 3.19,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14074:add": {
+   "roofY_P10": 0.36,
+   "roofY_P50": 1.01,
+   "roofY_P90": 1.63,
+   "roofY_P95": 1.78,
+   "roofY_max": 1.95,
+   "coverage": 0.96,
+   "area": 1017.3,
+   "groundY": -5.05,
+   "roof": "flat",
+   "name": "Super 8 Austin/Dtwn/Capitol Area",
+   "tiers": 0
+  },
+  "-14075:add": {
+   "roofY_P10": 7.02,
+   "roofY_P50": 7.8,
+   "roofY_P90": 8.53,
+   "roofY_P95": 8.61,
+   "roofY_max": 9.42,
+   "coverage": 0.96,
+   "area": 143.3,
+   "groundY": 4.16,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14076:add": {
+   "roofY_P10": 5.92,
+   "roofY_P50": 6.19,
+   "roofY_P90": 7.3,
+   "roofY_P95": 7.42,
+   "roofY_max": 8.74,
+   "coverage": 0.65,
+   "area": 28.4,
+   "groundY": 3.32,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14077:add": {
+   "roofY_P10": -1.78,
+   "roofY_P50": 0.29,
+   "roofY_P90": 2.22,
+   "roofY_P95": 2.67,
+   "roofY_max": 5.87,
+   "coverage": 0.91,
+   "area": 3948.3,
+   "groundY": -8.17,
+   "roof": "flat",
+   "name": "",
+   "tiers": 2
+  },
+  "-14078:add": {
+   "roofY_P10": 8.44,
+   "roofY_P50": 11.78,
+   "roofY_P90": 12.74,
+   "roofY_P95": 12.9,
+   "roofY_max": 13.27,
+   "coverage": 0.85,
+   "area": 132.5,
+   "groundY": 4.01,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14079:add": {
+   "roofY_P10": 5.6,
+   "roofY_P50": 6.21,
+   "roofY_P90": 7.13,
+   "roofY_P95": 7.23,
+   "roofY_max": 7.43,
+   "coverage": 0.87,
+   "area": 134.5,
+   "groundY": 1.97,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14080:add": {
+   "roofY_P10": 7.03,
+   "roofY_P50": 11.6,
+   "roofY_P90": 12.95,
+   "roofY_P95": 13.12,
+   "roofY_max": 13.26,
+   "coverage": 0.92,
+   "area": 151.1,
+   "groundY": 3.54,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14081:add": {
+   "roofY_P10": 4.83,
+   "roofY_P50": 5.25,
+   "roofY_P90": 6.58,
+   "roofY_P95": 6.74,
+   "roofY_max": 6.87,
+   "coverage": 0.76,
+   "area": 139.9,
+   "groundY": 1.57,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14082:add": {
+   "roofY_P10": 9.29,
+   "roofY_P50": 10.38,
+   "roofY_P90": 12.42,
+   "roofY_P95": 12.54,
+   "roofY_max": 12.7,
+   "coverage": 0.93,
+   "area": 205.9,
+   "groundY": 2.31,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14083:add": {
+   "roofY_P10": 5.86,
+   "roofY_P50": 6.62,
+   "roofY_P90": 7.6,
+   "roofY_P95": 7.71,
+   "roofY_max": 9.12,
+   "coverage": 0.67,
+   "area": 127.1,
+   "groundY": 2.74,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14084:add": {
+   "roofY_P10": 0.52,
+   "roofY_P50": 1.06,
+   "roofY_P90": 2.1,
+   "roofY_P95": 2.34,
+   "roofY_max": 2.87,
+   "coverage": 0.88,
+   "area": 231.6,
+   "groundY": -2.31,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14085:add": {
+   "roofY_P10": 5.26,
+   "roofY_P50": 5.55,
+   "roofY_P90": 5.97,
+   "roofY_P95": 6.03,
+   "roofY_max": 7.72,
+   "coverage": 0.82,
+   "area": 44.9,
+   "groundY": 2.15,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14086:add": {
+   "roofY_P10": 6.05,
+   "roofY_P50": 10.53,
+   "roofY_P90": 10.62,
+   "roofY_P95": 12.13,
+   "roofY_max": 12.93,
+   "coverage": 0.92,
+   "area": 107.7,
+   "groundY": 2.65,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14087:add": {
+   "roofY_P10": 5.03,
+   "roofY_P50": 5.66,
+   "roofY_P90": 6.3,
+   "roofY_P95": 6.39,
+   "roofY_max": 6.44,
+   "coverage": 0.88,
+   "area": 91.4,
+   "groundY": 1.88,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14088:add": {
+   "roofY_P10": 7.82,
+   "roofY_P50": 8.65,
+   "roofY_P90": 9.45,
+   "roofY_P95": 9.57,
+   "roofY_max": 9.76,
+   "coverage": 0.89,
+   "area": 186.5,
+   "groundY": 3.85,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14089:add": {
+   "roofY_P10": 5.05,
+   "roofY_P50": 5.6,
+   "roofY_P90": 6.22,
+   "roofY_P95": 6.31,
+   "roofY_max": 6.4,
+   "coverage": 0.85,
+   "area": 135.3,
+   "groundY": 1.76,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14091:add": {
+   "roofY_P10": -7.33,
+   "roofY_P50": 3.51,
+   "roofY_P90": 7.69,
+   "roofY_P95": 7.75,
+   "roofY_max": 8.08,
+   "coverage": 0.86,
+   "area": 2306.2,
+   "groundY": -13.73,
+   "roof": "flat",
+   "name": "",
+   "tiers": 1
+  },
+  "-14092:add": {
+   "roofY_P10": 6.54,
+   "roofY_P50": 7.72,
+   "roofY_P90": 8.48,
+   "roofY_P95": 8.58,
+   "roofY_max": 9.88,
+   "coverage": 0.86,
+   "area": 114.2,
+   "groundY": 3.35,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14093:add": {
+   "roofY_P10": 8.14,
+   "roofY_P50": 8.92,
+   "roofY_P90": 9.85,
+   "roofY_P95": 9.95,
+   "roofY_max": 10.11,
+   "coverage": 0.97,
+   "area": 101.4,
+   "groundY": 5.16,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14094:add": {
+   "roofY_P10": 6.79,
+   "roofY_P50": 7.31,
+   "roofY_P90": 8.36,
+   "roofY_P95": 8.62,
+   "roofY_max": 9.94,
+   "coverage": 0.77,
+   "area": 238.0,
+   "groundY": 3.69,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14095:add": {
+   "roofY_P10": -0.43,
+   "roofY_P50": 0.89,
+   "roofY_P90": 1.99,
+   "roofY_P95": 2.06,
+   "roofY_max": 3.66,
+   "coverage": 0.86,
+   "area": 664.4,
+   "groundY": -12.9,
+   "roof": "flat",
+   "name": "The Sobering Center",
+   "tiers": 0
+  },
+  "-14096:add": {
+   "roofY_P10": 5.01,
+   "roofY_P50": 9.05,
+   "roofY_P90": 10.77,
+   "roofY_P95": 11.03,
+   "roofY_max": 11.51,
+   "coverage": 0.95,
+   "area": 245.7,
+   "groundY": 1.28,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14097:add": {
+   "roofY_P10": 8.54,
+   "roofY_P50": 9.24,
+   "roofY_P90": 9.82,
+   "roofY_P95": 9.86,
+   "roofY_max": 9.94,
+   "coverage": 0.92,
+   "area": 94.1,
+   "groundY": 2.54,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14100:add": {
+   "roofY_P10": 7.84,
+   "roofY_P50": 8.75,
+   "roofY_P90": 9.84,
+   "roofY_P95": 9.95,
+   "roofY_max": 10.36,
+   "coverage": 0.85,
+   "area": 247.2,
+   "groundY": 4.34,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14101:add": {
+   "roofY_P10": 7.38,
+   "roofY_P50": 11.68,
+   "roofY_P90": 13.48,
+   "roofY_P95": 13.76,
+   "roofY_max": 14.51,
+   "coverage": 0.87,
+   "area": 200.0,
+   "groundY": 2.48,
+   "roof": "flat",
+   "name": "",
+   "tiers": 1
+  },
+  "-14102:add": {
+   "roofY_P10": 5.76,
+   "roofY_P50": 5.78,
+   "roofY_P90": 5.79,
+   "roofY_P95": 5.8,
+   "roofY_max": 8.7,
+   "coverage": 0.83,
+   "area": 64.8,
+   "groundY": 3.21,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14103:add": {
+   "roofY_P10": 7.66,
+   "roofY_P50": 8.45,
+   "roofY_P90": 12.7,
+   "roofY_P95": 12.78,
+   "roofY_max": 13.22,
+   "coverage": 0.87,
+   "area": 283.4,
+   "groundY": 3.79,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14104:add": {
+   "roofY_P10": 21.22,
+   "roofY_P50": 21.29,
+   "roofY_P90": 23.31,
+   "roofY_P95": 23.91,
+   "roofY_max": 24.07,
+   "coverage": 0.94,
+   "area": 332.6,
+   "groundY": -0.49,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14105:add": {
+   "roofY_P10": 2.78,
+   "roofY_P50": 2.79,
+   "roofY_P90": 2.81,
+   "roofY_P95": 2.82,
+   "roofY_max": 2.84,
+   "coverage": 0.82,
+   "area": 97.0,
+   "groundY": -0.5,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14106:add": {
+   "roofY_P10": 4.47,
+   "roofY_P50": 4.76,
+   "roofY_P90": 5.0,
+   "roofY_P95": 5.03,
+   "roofY_max": 5.05,
+   "coverage": 0.88,
+   "area": 25.9,
+   "groundY": 2.26,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14107:add": {
+   "roofY_P10": 5.04,
+   "roofY_P50": 5.49,
+   "roofY_P90": 5.88,
+   "roofY_P95": 5.93,
+   "roofY_max": 6.02,
+   "coverage": 0.87,
+   "area": 69.5,
+   "groundY": 1.35,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14108:add": {
+   "roofY_P10": 1.47,
+   "roofY_P50": 1.48,
+   "roofY_P90": 1.49,
+   "roofY_P95": 1.5,
+   "roofY_max": 1.5,
+   "coverage": 0.65,
+   "area": 22.4,
+   "groundY": -0.62,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14111:add": {
+   "roofY_P10": 5.84,
+   "roofY_P50": 6.01,
+   "roofY_P90": 6.21,
+   "roofY_P95": 6.24,
+   "roofY_max": 6.29,
+   "coverage": 0.77,
+   "area": 51.0,
+   "groundY": 3.26,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14112:add": {
+   "roofY_P10": 7.02,
+   "roofY_P50": 8.03,
+   "roofY_P90": 8.84,
+   "roofY_P95": 8.96,
+   "roofY_max": 9.05,
+   "coverage": 0.8,
+   "area": 105.0,
+   "groundY": 3.48,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14113:add": {
+   "roofY_P10": 3.0,
+   "roofY_P50": 4.61,
+   "roofY_P90": 5.58,
+   "roofY_P95": 5.85,
+   "roofY_max": 6.94,
+   "coverage": 0.85,
+   "area": 737.6,
+   "groundY": 0.69,
+   "roof": "flat",
+   "name": "Phillips Upshaw and Richard Funeral Home",
+   "tiers": 0
+  },
+  "-14114:add": {
+   "roofY_P10": -3.37,
+   "roofY_P50": -3.34,
+   "roofY_P90": 1.14,
+   "roofY_P95": 1.3,
+   "roofY_max": 1.5,
+   "coverage": 0.86,
+   "area": 324.7,
+   "groundY": -11.62,
+   "roof": "flat",
+   "name": "",
+   "tiers": 1
+  },
+  "-14115:add": {
+   "roofY_P10": 9.02,
+   "roofY_P50": 9.79,
+   "roofY_P90": 10.56,
+   "roofY_P95": 10.61,
+   "roofY_max": 10.68,
+   "coverage": 0.95,
+   "area": 87.2,
+   "groundY": 5.05,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14116:add": {
+   "roofY_P10": 4.56,
+   "roofY_P50": 5.04,
+   "roofY_P90": 5.42,
+   "roofY_P95": 5.48,
+   "roofY_max": 6.55,
+   "coverage": 0.83,
+   "area": 126.6,
+   "groundY": 1.07,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14117:add": {
+   "roofY_P10": 3.2,
+   "roofY_P50": 4.01,
+   "roofY_P90": 5.08,
+   "roofY_P95": 5.28,
+   "roofY_max": 5.51,
+   "coverage": 0.97,
+   "area": 160.5,
+   "groundY": -0.62,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14118:add": {
+   "roofY_P10": 5.74,
+   "roofY_P50": 6.41,
+   "roofY_P90": 7.1,
+   "roofY_P95": 7.18,
+   "roofY_max": 7.44,
+   "coverage": 0.95,
+   "area": 299.2,
+   "groundY": 0.01,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14119:add": {
+   "roofY_P10": -2.51,
+   "roofY_P50": 0.87,
+   "roofY_P90": 0.92,
+   "roofY_P95": 0.93,
+   "roofY_max": 0.96,
+   "coverage": 0.95,
+   "area": 558.5,
+   "groundY": -4.82,
+   "roof": "flat",
+   "name": "",
+   "tiers": 1
+  },
+  "-14120:add": {
+   "roofY_P10": 5.34,
+   "roofY_P50": 5.89,
+   "roofY_P90": 6.83,
+   "roofY_P95": 7.05,
+   "roofY_max": 7.41,
+   "coverage": 0.87,
+   "area": 114.9,
+   "groundY": 1.66,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14123:add": {
+   "roofY_P10": 11.94,
+   "roofY_P50": 11.95,
+   "roofY_P90": 12.06,
+   "roofY_P95": 12.08,
+   "roofY_max": 12.14,
+   "coverage": 0.63,
+   "area": 66.5,
+   "groundY": 3.75,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14125:add": {
+   "roofY_P10": 3.79,
+   "roofY_P50": 4.19,
+   "roofY_P90": 4.34,
+   "roofY_P95": 4.35,
+   "roofY_max": 4.38,
+   "coverage": 0.86,
+   "area": 19.9,
+   "groundY": 1.28,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14127:add": {
+   "roofY_P10": 5.58,
+   "roofY_P50": 6.14,
+   "roofY_P90": 6.72,
+   "roofY_P95": 6.81,
+   "roofY_max": 6.92,
+   "coverage": 0.91,
+   "area": 171.8,
+   "groundY": -0.15,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14128:add": {
+   "roofY_P10": 3.28,
+   "roofY_P50": 4.32,
+   "roofY_P90": 5.51,
+   "roofY_P95": 5.87,
+   "roofY_max": 6.35,
+   "coverage": 0.94,
+   "area": 114.4,
+   "groundY": 0.23,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14129:add": {
+   "roofY_P10": 3.42,
+   "roofY_P50": 4.0,
+   "roofY_P90": 4.6,
+   "roofY_P95": 4.71,
+   "roofY_max": 4.8,
+   "coverage": 0.94,
+   "area": 86.6,
+   "groundY": -0.23,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14130:add": {
+   "roofY_P10": 8.17,
+   "roofY_P50": 9.15,
+   "roofY_P90": 10.1,
+   "roofY_P95": 10.23,
+   "roofY_max": 10.34,
+   "coverage": 0.8,
+   "area": 134.7,
+   "groundY": 4.54,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14131:add": {
+   "roofY_P10": 5.9,
+   "roofY_P50": 6.59,
+   "roofY_P90": 7.17,
+   "roofY_P95": 7.23,
+   "roofY_max": 7.51,
+   "coverage": 0.88,
+   "area": 289.0,
+   "groundY": 0.18,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14132:add": {
+   "roofY_P10": 5.02,
+   "roofY_P50": 5.67,
+   "roofY_P90": 6.54,
+   "roofY_P95": 6.68,
+   "roofY_max": 6.77,
+   "coverage": 0.87,
+   "area": 159.8,
+   "groundY": 1.8,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14133:add": {
+   "roofY_P10": 8.63,
+   "roofY_P50": 9.75,
+   "roofY_P90": 11.62,
+   "roofY_P95": 11.97,
+   "roofY_max": 12.36,
+   "coverage": 0.96,
+   "area": 289.5,
+   "groundY": 1.06,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14134:add": {
+   "roofY_P10": 3.07,
+   "roofY_P50": 4.29,
+   "roofY_P90": 5.12,
+   "roofY_P95": 5.21,
+   "roofY_max": 5.65,
+   "coverage": 0.89,
+   "area": 103.4,
+   "groundY": 0.35,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14135:add": {
+   "roofY_P10": 5.33,
+   "roofY_P50": 5.6,
+   "roofY_P90": 5.98,
+   "roofY_P95": 6.07,
+   "roofY_max": 8.48,
+   "coverage": 0.71,
+   "area": 63.4,
+   "groundY": 2.87,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14136:add": {
+   "roofY_P10": 5.73,
+   "roofY_P50": 6.58,
+   "roofY_P90": 7.45,
+   "roofY_P95": 7.55,
+   "roofY_max": 7.69,
+   "coverage": 0.83,
+   "area": 135.0,
+   "groundY": 1.81,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14137:add": {
+   "roofY_P10": 5.53,
+   "roofY_P50": 8.18,
+   "roofY_P90": 8.74,
+   "roofY_P95": 8.83,
+   "roofY_max": 8.99,
+   "coverage": 0.79,
+   "area": 37.6,
+   "groundY": 1.37,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14138:add": {
+   "roofY_P10": 6.3,
+   "roofY_P50": 7.05,
+   "roofY_P90": 7.64,
+   "roofY_P95": 7.66,
+   "roofY_max": 7.7,
+   "coverage": 0.94,
+   "area": 73.6,
+   "groundY": -0.4,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14139:add": {
+   "roofY_P10": 9.11,
+   "roofY_P50": 10.08,
+   "roofY_P90": 11.4,
+   "roofY_P95": 11.74,
+   "roofY_max": 12.25,
+   "coverage": 0.95,
+   "area": 94.8,
+   "groundY": 4.4,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14140:add": {
+   "roofY_P10": 6.34,
+   "roofY_P50": 7.0,
+   "roofY_P90": 7.67,
+   "roofY_P95": 7.75,
+   "roofY_max": 8.04,
+   "coverage": 0.88,
+   "area": 289.8,
+   "groundY": 0.72,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14141:add": {
+   "roofY_P10": 5.7,
+   "roofY_P50": 7.56,
+   "roofY_P90": 9.87,
+   "roofY_P95": 10.12,
+   "roofY_max": 11.14,
+   "coverage": 0.85,
+   "area": 250.3,
+   "groundY": 3.14,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14142:add": {
+   "roofY_P10": 3.57,
+   "roofY_P50": 4.9,
+   "roofY_P90": 8.43,
+   "roofY_P95": 8.86,
+   "roofY_max": 9.77,
+   "coverage": 0.86,
+   "area": 301.6,
+   "groundY": 0.29,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14145:add": {
+   "roofY_P10": 5.53,
+   "roofY_P50": 7.96,
+   "roofY_P90": 8.79,
+   "roofY_P95": 8.87,
+   "roofY_max": 8.98,
+   "coverage": 0.82,
+   "area": 80.0,
+   "groundY": 2.3,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14146:add": {
+   "roofY_P10": 5.75,
+   "roofY_P50": 6.26,
+   "roofY_P90": 6.64,
+   "roofY_P95": 6.68,
+   "roofY_max": 6.86,
+   "coverage": 0.93,
+   "area": 294.9,
+   "groundY": 0.14,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14147:add": {
+   "roofY_P10": 4.89,
+   "roofY_P50": 5.46,
+   "roofY_P90": 6.01,
+   "roofY_P95": 6.14,
+   "roofY_max": 6.29,
+   "coverage": 0.9,
+   "area": 84.6,
+   "groundY": 1.75,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14149:add": {
+   "roofY_P10": 1.96,
+   "roofY_P50": 3.9,
+   "roofY_P90": 5.12,
+   "roofY_P95": 5.4,
+   "roofY_max": 5.69,
+   "coverage": 0.97,
+   "area": 215.1,
+   "groundY": -0.64,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14150:add": {
+   "roofY_P10": -1.88,
+   "roofY_P50": -1.83,
+   "roofY_P90": -1.78,
+   "roofY_P95": -1.78,
+   "roofY_max": -1.75,
+   "coverage": 0.85,
+   "area": 68.9,
+   "groundY": -5.6,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14151:add": {
+   "roofY_P10": 14.03,
+   "roofY_P50": 14.23,
+   "roofY_P90": 14.45,
+   "roofY_P95": 15.18,
+   "roofY_max": 15.32,
+   "coverage": 0.94,
+   "area": 127.2,
+   "groundY": 2.6,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14152:add": {
+   "roofY_P10": 11.47,
+   "roofY_P50": 11.59,
+   "roofY_P90": 11.73,
+   "roofY_P95": 11.74,
+   "roofY_max": 11.77,
+   "coverage": 0.8,
+   "area": 93.1,
+   "groundY": 4.22,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14153:add": {
+   "roofY_P10": 6.84,
+   "roofY_P50": 7.45,
+   "roofY_P90": 8.08,
+   "roofY_P95": 8.15,
+   "roofY_max": 8.22,
+   "coverage": 0.87,
+   "area": 97.5,
+   "groundY": 3.63,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14155:add": {
+   "roofY_P10": 0.35,
+   "roofY_P50": 0.95,
+   "roofY_P90": 1.86,
+   "roofY_P95": 2.07,
+   "roofY_max": 2.26,
+   "coverage": 0.91,
+   "area": 146.3,
+   "groundY": -3.05,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14156:add": {
+   "roofY_P10": 6.78,
+   "roofY_P50": 23.64,
+   "roofY_P90": 27.94,
+   "roofY_P95": 29.1,
+   "roofY_max": 29.65,
+   "coverage": 0.86,
+   "area": 217.4,
+   "groundY": -3.3,
+   "roof": "flat",
+   "name": "Dewitt C. Greer Building",
+   "tiers": 2
+  },
+  "-14157:add": {
+   "roofY_P10": 6.0,
+   "roofY_P50": 6.67,
+   "roofY_P90": 7.58,
+   "roofY_P95": 7.75,
+   "roofY_max": 7.94,
+   "coverage": 0.95,
+   "area": 176.4,
+   "groundY": 2.43,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14158:add": {
+   "roofY_P10": 3.44,
+   "roofY_P50": 4.15,
+   "roofY_P90": 4.75,
+   "roofY_P95": 4.91,
+   "roofY_max": 5.0,
+   "coverage": 0.9,
+   "area": 35.1,
+   "groundY": 0.62,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14159:add": {
+   "roofY_P10": 8.19,
+   "roofY_P50": 9.9,
+   "roofY_P90": 10.44,
+   "roofY_P95": 10.51,
+   "roofY_max": 10.58,
+   "coverage": 0.86,
+   "area": 139.3,
+   "groundY": 0.9,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14160:add": {
+   "roofY_P10": 4.52,
+   "roofY_P50": 8.51,
+   "roofY_P90": 9.66,
+   "roofY_P95": 9.88,
+   "roofY_max": 10.84,
+   "coverage": 0.87,
+   "area": 153.7,
+   "groundY": 0.94,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14161:add": {
+   "roofY_P10": 1.47,
+   "roofY_P50": 1.76,
+   "roofY_P90": 2.19,
+   "roofY_P95": 2.23,
+   "roofY_max": 3.48,
+   "coverage": 0.93,
+   "area": 142.3,
+   "groundY": -2.04,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14162:add": {
+   "roofY_P10": 8.76,
+   "roofY_P50": 11.98,
+   "roofY_P90": 12.74,
+   "roofY_P95": 12.89,
+   "roofY_max": 13.21,
+   "coverage": 0.89,
+   "area": 123.3,
+   "groundY": 4.83,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14163:add": {
+   "roofY_P10": 6.24,
+   "roofY_P50": 9.42,
+   "roofY_P90": 10.31,
+   "roofY_P95": 10.46,
+   "roofY_max": 11.58,
+   "coverage": 0.88,
+   "area": 317.8,
+   "groundY": 2.35,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14164:add": {
+   "roofY_P10": 8.19,
+   "roofY_P50": 8.74,
+   "roofY_P90": 9.07,
+   "roofY_P95": 9.1,
+   "roofY_max": 9.13,
+   "coverage": 0.92,
+   "area": 85.0,
+   "groundY": 1.82,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14168:add": {
+   "roofY_P10": 6.97,
+   "roofY_P50": 7.54,
+   "roofY_P90": 8.14,
+   "roofY_P95": 8.23,
+   "roofY_max": 8.3,
+   "coverage": 0.88,
+   "area": 255.8,
+   "groundY": 1.26,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14169:add": {
+   "roofY_P10": 6.69,
+   "roofY_P50": 7.59,
+   "roofY_P90": 8.56,
+   "roofY_P95": 8.69,
+   "roofY_max": 8.8,
+   "coverage": 0.85,
+   "area": 149.0,
+   "groundY": 2.83,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14170:add": {
+   "roofY_P10": 4.35,
+   "roofY_P50": 5.24,
+   "roofY_P90": 6.45,
+   "roofY_P95": 6.72,
+   "roofY_max": 7.04,
+   "coverage": 0.95,
+   "area": 152.6,
+   "groundY": 1.0,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14171:add": {
+   "roofY_P10": 7.39,
+   "roofY_P50": 8.52,
+   "roofY_P90": 9.9,
+   "roofY_P95": 10.22,
+   "roofY_max": 11.07,
+   "coverage": 0.88,
+   "area": 251.8,
+   "groundY": 2.91,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14172:add": {
+   "roofY_P10": 10.73,
+   "roofY_P50": 11.7,
+   "roofY_P90": 12.77,
+   "roofY_P95": 13.07,
+   "roofY_max": 13.78,
+   "coverage": 0.86,
+   "area": 124.9,
+   "groundY": 4.54,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14173:add": {
+   "roofY_P10": 0.43,
+   "roofY_P50": 0.51,
+   "roofY_P90": 0.59,
+   "roofY_P95": 0.61,
+   "roofY_max": 0.67,
+   "coverage": 0.97,
+   "area": 97.3,
+   "groundY": -1.75,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14174:add": {
+   "roofY_P10": 2.52,
+   "roofY_P50": 2.95,
+   "roofY_P90": 4.36,
+   "roofY_P95": 4.46,
+   "roofY_max": 4.58,
+   "coverage": 0.77,
+   "area": 103.0,
+   "groundY": -0.17,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14175:add": {
+   "roofY_P10": 4.1,
+   "roofY_P50": 4.74,
+   "roofY_P90": 5.2,
+   "roofY_P95": 5.33,
+   "roofY_max": 5.78,
+   "coverage": 0.9,
+   "area": 166.5,
+   "groundY": 0.74,
+   "roof": "hip-shingle",
+   "name": "Major Brand Gas",
+   "tiers": 0
+  },
+  "-14177:add": {
+   "roofY_P10": 1.52,
+   "roofY_P50": 2.3,
+   "roofY_P90": 3.62,
+   "roofY_P95": 4.12,
+   "roofY_max": 8.6,
+   "coverage": 0.91,
+   "area": 6849.1,
+   "groundY": -4.02,
+   "roof": "flat",
+   "name": "Capitol Visitor's Parking Garage",
+   "tiers": 0
+  },
+  "-14178:add": {
+   "roofY_P10": -1.73,
+   "roofY_P50": -1.7,
+   "roofY_P90": -1.67,
+   "roofY_P95": -1.67,
+   "roofY_max": -1.65,
+   "coverage": 0.82,
+   "area": 37.3,
+   "groundY": -5.47,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14179:add": {
+   "roofY_P10": 6.46,
+   "roofY_P50": 7.55,
+   "roofY_P90": 8.19,
+   "roofY_P95": 8.35,
+   "roofY_max": 9.42,
+   "coverage": 0.85,
+   "area": 118.3,
+   "groundY": 3.99,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14180:add": {
+   "roofY_P10": 10.68,
+   "roofY_P50": 12.66,
+   "roofY_P90": 14.84,
+   "roofY_P95": 15.09,
+   "roofY_max": 15.5,
+   "coverage": 0.85,
+   "area": 131.8,
+   "groundY": 4.93,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14181:add": {
+   "roofY_P10": 4.46,
+   "roofY_P50": 4.49,
+   "roofY_P90": 4.53,
+   "roofY_P95": 4.56,
+   "roofY_max": 4.71,
+   "coverage": 0.78,
+   "area": 69.0,
+   "groundY": 1.89,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14182:add": {
+   "roofY_P10": 5.94,
+   "roofY_P50": 9.09,
+   "roofY_P90": 15.59,
+   "roofY_P95": 15.61,
+   "roofY_max": 20.3,
+   "coverage": 0.94,
+   "area": 2125.9,
+   "groundY": 1.62,
+   "roof": "flat",
+   "name": "",
+   "tiers": 2
+  },
+  "-14183:add": {
+   "roofY_P10": -2.08,
+   "roofY_P50": -2.07,
+   "roofY_P90": -2.01,
+   "roofY_P95": -1.35,
+   "roofY_max": -1.22,
+   "coverage": 0.86,
+   "area": 49.6,
+   "groundY": -5.46,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14184:add": {
+   "roofY_P10": 7.52,
+   "roofY_P50": 8.23,
+   "roofY_P90": 8.89,
+   "roofY_P95": 9.07,
+   "roofY_max": 9.55,
+   "coverage": 0.83,
+   "area": 50.3,
+   "groundY": 4.51,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14185:add": {
+   "roofY_P10": 5.72,
+   "roofY_P50": 6.8,
+   "roofY_P90": 7.91,
+   "roofY_P95": 8.01,
+   "roofY_max": 9.94,
+   "coverage": 0.9,
+   "area": 106.0,
+   "groundY": 1.57,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14186:add": {
+   "roofY_P10": 3.02,
+   "roofY_P50": 4.63,
+   "roofY_P90": 6.61,
+   "roofY_P95": 7.21,
+   "roofY_max": 8.3,
+   "coverage": 0.91,
+   "area": 223.6,
+   "groundY": -0.08,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14188:add": {
+   "roofY_P10": 8.21,
+   "roofY_P50": 8.74,
+   "roofY_P90": 10.12,
+   "roofY_P95": 10.26,
+   "roofY_max": 10.47,
+   "coverage": 0.86,
+   "area": 131.7,
+   "groundY": 4.66,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14189:add": {
+   "roofY_P10": 6.64,
+   "roofY_P50": 7.72,
+   "roofY_P90": 9.99,
+   "roofY_P95": 10.01,
+   "roofY_max": 10.04,
+   "coverage": 0.93,
+   "area": 112.9,
+   "groundY": 3.47,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14190:add": {
+   "roofY_P10": 4.35,
+   "roofY_P50": 5.35,
+   "roofY_P90": 6.28,
+   "roofY_P95": 6.42,
+   "roofY_max": 6.57,
+   "coverage": 0.71,
+   "area": 271.1,
+   "groundY": 1.24,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14191:add": {
+   "roofY_P10": 5.7,
+   "roofY_P50": 7.21,
+   "roofY_P90": 9.41,
+   "roofY_P95": 9.77,
+   "roofY_max": 10.38,
+   "coverage": 0.94,
+   "area": 418.1,
+   "groundY": 1.83,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14192:add": {
+   "roofY_P10": 5.75,
+   "roofY_P50": 6.6,
+   "roofY_P90": 9.18,
+   "roofY_P95": 9.36,
+   "roofY_max": 11.89,
+   "coverage": 0.86,
+   "area": 217.2,
+   "groundY": 2.55,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14193:add": {
+   "roofY_P10": 4.95,
+   "roofY_P50": 5.04,
+   "roofY_P90": 5.14,
+   "roofY_P95": 5.17,
+   "roofY_max": 6.75,
+   "coverage": 0.97,
+   "area": 842.9,
+   "groundY": 0.35,
+   "roof": "flat",
+   "name": "Holt Building",
+   "tiers": 0
+  },
+  "-14194:add": {
+   "roofY_P10": 7.67,
+   "roofY_P50": 8.69,
+   "roofY_P90": 9.73,
+   "roofY_P95": 9.84,
+   "roofY_max": 15.62,
+   "coverage": 0.69,
+   "area": 175.2,
+   "groundY": 3.9,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14195:add": {
+   "roofY_P10": 5.5,
+   "roofY_P50": 8.67,
+   "roofY_P90": 9.89,
+   "roofY_P95": 10.05,
+   "roofY_max": 10.18,
+   "coverage": 0.84,
+   "area": 207.2,
+   "groundY": 1.64,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14196:add": {
+   "roofY_P10": 4.04,
+   "roofY_P50": 5.32,
+   "roofY_P90": 6.42,
+   "roofY_P95": 6.58,
+   "roofY_max": 6.69,
+   "coverage": 0.83,
+   "area": 73.6,
+   "groundY": 1.42,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14197:add": {
+   "roofY_P10": 1.65,
+   "roofY_P50": 2.03,
+   "roofY_P90": 2.41,
+   "roofY_P95": 2.54,
+   "roofY_max": 4.38,
+   "coverage": 0.84,
+   "area": 130.6,
+   "groundY": -1.46,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14198:add": {
+   "roofY_P10": 5.32,
+   "roofY_P50": 8.4,
+   "roofY_P90": 9.15,
+   "roofY_P95": 9.23,
+   "roofY_max": 11.12,
+   "coverage": 0.85,
+   "area": 155.8,
+   "groundY": 2.02,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14199:add": {
+   "roofY_P10": 8.78,
+   "roofY_P50": 9.91,
+   "roofY_P90": 10.6,
+   "roofY_P95": 10.77,
+   "roofY_max": 11.14,
+   "coverage": 0.88,
+   "area": 125.6,
+   "groundY": 4.42,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14200:add": {
+   "roofY_P10": 7.5,
+   "roofY_P50": 10.69,
+   "roofY_P90": 11.37,
+   "roofY_P95": 11.58,
+   "roofY_max": 11.95,
+   "coverage": 0.88,
+   "area": 131.3,
+   "groundY": 0.79,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14201:add": {
+   "roofY_P10": 5.11,
+   "roofY_P50": 5.81,
+   "roofY_P90": 6.61,
+   "roofY_P95": 6.73,
+   "roofY_max": 6.85,
+   "coverage": 0.87,
+   "area": 129.5,
+   "groundY": 1.73,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14202:add": {
+   "roofY_P10": 5.74,
+   "roofY_P50": 6.16,
+   "roofY_P90": 6.47,
+   "roofY_P95": 6.88,
+   "roofY_max": 10.22,
+   "coverage": 0.87,
+   "area": 36.2,
+   "groundY": 3.12,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14203:add": {
+   "roofY_P10": 6.13,
+   "roofY_P50": 8.6,
+   "roofY_P90": 9.11,
+   "roofY_P95": 9.2,
+   "roofY_max": 9.37,
+   "coverage": 0.96,
+   "area": 213.2,
+   "groundY": 1.11,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14205:add": {
+   "roofY_P10": 6.74,
+   "roofY_P50": 7.89,
+   "roofY_P90": 9.43,
+   "roofY_P95": 9.64,
+   "roofY_max": 11.74,
+   "coverage": 0.86,
+   "area": 141.4,
+   "groundY": 3.58,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14206:add": {
+   "roofY_P10": 11.17,
+   "roofY_P50": 14.24,
+   "roofY_P90": 14.75,
+   "roofY_P95": 14.8,
+   "roofY_max": 14.85,
+   "coverage": 0.89,
+   "area": 102.7,
+   "groundY": 4.66,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14207:add": {
+   "roofY_P10": 2.33,
+   "roofY_P50": 3.89,
+   "roofY_P90": 6.46,
+   "roofY_P95": 6.78,
+   "roofY_max": 7.08,
+   "coverage": 0.84,
+   "area": 190.5,
+   "groundY": -1.93,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14208:add": {
+   "roofY_P10": 8.91,
+   "roofY_P50": 10.32,
+   "roofY_P90": 11.57,
+   "roofY_P95": 11.69,
+   "roofY_max": 11.8,
+   "coverage": 0.87,
+   "area": 135.9,
+   "groundY": 1.05,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14209:add": {
+   "roofY_P10": 5.03,
+   "roofY_P50": 5.45,
+   "roofY_P90": 5.77,
+   "roofY_P95": 5.78,
+   "roofY_max": 9.96,
+   "coverage": 0.94,
+   "area": 51.2,
+   "groundY": 2.29,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14214:add": {
+   "roofY_P10": 2.22,
+   "roofY_P50": 2.89,
+   "roofY_P90": 3.56,
+   "roofY_P95": 3.6,
+   "roofY_max": 4.81,
+   "coverage": 0.96,
+   "area": 96.4,
+   "groundY": -1.11,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14215:add": {
+   "roofY_P10": 9.17,
+   "roofY_P50": 10.07,
+   "roofY_P90": 10.78,
+   "roofY_P95": 10.86,
+   "roofY_max": 11.8,
+   "coverage": 0.88,
+   "area": 90.8,
+   "groundY": 5.4,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14216:add": {
+   "roofY_P10": 10.22,
+   "roofY_P50": 10.4,
+   "roofY_P90": 10.71,
+   "roofY_P95": 10.78,
+   "roofY_max": 10.95,
+   "coverage": 0.84,
+   "area": 129.3,
+   "groundY": 3.82,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14217:add": {
+   "roofY_P10": 6.06,
+   "roofY_P50": 6.08,
+   "roofY_P90": 6.16,
+   "roofY_P95": 7.09,
+   "roofY_max": 7.27,
+   "coverage": 0.96,
+   "area": 314.3,
+   "groundY": -4.06,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14218:add": {
+   "roofY_P10": -13.65,
+   "roofY_P50": -13.35,
+   "roofY_P90": -13.06,
+   "roofY_P95": -12.45,
+   "roofY_max": -11.52,
+   "coverage": 0.85,
+   "area": 645.5,
+   "groundY": -17.79,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14219:add": {
+   "roofY_P10": 12.1,
+   "roofY_P50": 20.18,
+   "roofY_P90": 25.65,
+   "roofY_P95": 25.68,
+   "roofY_max": 25.89,
+   "coverage": 0.93,
+   "area": 342.0,
+   "groundY": 0.53,
+   "roof": "flat",
+   "name": "Heman Marion Sweatt Travis County Courthouse",
+   "tiers": 2
+  },
+  "-14220:add": {
+   "roofY_P10": 16.61,
+   "roofY_P50": 16.69,
+   "roofY_P90": 16.76,
+   "roofY_P95": 20.53,
+   "roofY_max": 20.85,
+   "coverage": 0.93,
+   "area": 1790.2,
+   "groundY": -8.64,
+   "roof": "flat",
+   "name": "Texas Workforce Comission",
+   "tiers": 0
+  },
+  "-14221:add": {
+   "roofY_P10": 17.07,
+   "roofY_P50": 17.15,
+   "roofY_P90": 21.14,
+   "roofY_P95": 21.17,
+   "roofY_max": 22.82,
+   "coverage": 0.94,
+   "area": 2288.5,
+   "groundY": 3.0,
+   "roof": "flat",
+   "name": "State Insurance Building",
+   "tiers": 1
+  },
+  "-14223:add": {
+   "roofY_P10": 3.01,
+   "roofY_P50": 3.67,
+   "roofY_P90": 4.36,
+   "roofY_P95": 4.55,
+   "roofY_max": 6.66,
+   "coverage": 0.69,
+   "area": 247.2,
+   "groundY": 0.56,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14224:add": {
+   "roofY_P10": 5.79,
+   "roofY_P50": 6.61,
+   "roofY_P90": 7.29,
+   "roofY_P95": 7.34,
+   "roofY_max": 7.4,
+   "coverage": 0.83,
+   "area": 81.4,
+   "groundY": 2.71,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14226:add": {
+   "roofY_P10": 5.69,
+   "roofY_P50": 5.7,
+   "roofY_P90": 5.72,
+   "roofY_P95": 5.73,
+   "roofY_max": 8.52,
+   "coverage": 0.91,
+   "area": 174.8,
+   "groundY": 2.44,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14227:add": {
+   "roofY_P10": 7.91,
+   "roofY_P50": 9.01,
+   "roofY_P90": 10.07,
+   "roofY_P95": 10.26,
+   "roofY_max": 10.67,
+   "coverage": 0.96,
+   "area": 180.1,
+   "groundY": 1.66,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14229:add": {
+   "roofY_P10": 3.52,
+   "roofY_P50": 6.75,
+   "roofY_P90": 8.14,
+   "roofY_P95": 8.46,
+   "roofY_max": 8.85,
+   "coverage": 0.96,
+   "area": 229.0,
+   "groundY": 0.47,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14230:add": {
+   "roofY_P10": -1.61,
+   "roofY_P50": 3.52,
+   "roofY_P90": 4.76,
+   "roofY_P95": 4.9,
+   "roofY_max": 9.07,
+   "coverage": 0.67,
+   "area": 208.9,
+   "groundY": -3.61,
+   "roof": "flat",
+   "name": "",
+   "tiers": 1
+  },
+  "-14232:add": {
+   "roofY_P10": 2.47,
+   "roofY_P50": 2.64,
+   "roofY_P90": 7.12,
+   "roofY_P95": 7.24,
+   "roofY_max": 8.0,
+   "coverage": 0.72,
+   "area": 32.5,
+   "groundY": -0.75,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14233:add": {
+   "roofY_P10": 12.58,
+   "roofY_P50": 13.75,
+   "roofY_P90": 14.8,
+   "roofY_P95": 14.99,
+   "roofY_max": 15.41,
+   "coverage": 0.95,
+   "area": 725.8,
+   "groundY": -0.87,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14234:add": {
+   "roofY_P10": 4.77,
+   "roofY_P50": 5.07,
+   "roofY_P90": 5.37,
+   "roofY_P95": 5.4,
+   "roofY_max": 5.46,
+   "coverage": 0.87,
+   "area": 91.7,
+   "groundY": 1.91,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14237:add": {
+   "roofY_P10": 5.17,
+   "roofY_P50": 6.72,
+   "roofY_P90": 7.72,
+   "roofY_P95": 7.88,
+   "roofY_max": 13.28,
+   "coverage": 0.92,
+   "area": 103.2,
+   "groundY": -0.4,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14238:add": {
+   "roofY_P10": 6.18,
+   "roofY_P50": 6.83,
+   "roofY_P90": 7.35,
+   "roofY_P95": 7.4,
+   "roofY_max": 7.47,
+   "coverage": 0.83,
+   "area": 134.5,
+   "groundY": 3.08,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14239:add": {
+   "roofY_P10": -11.6,
+   "roofY_P50": -10.84,
+   "roofY_P90": -10.16,
+   "roofY_P95": -10.05,
+   "roofY_max": -9.76,
+   "coverage": 0.66,
+   "area": 1678.7,
+   "groundY": -16.84,
+   "roof": "flat",
+   "name": "Waller Creek Tunnel Inlet Facility",
+   "tiers": 0
+  },
+  "-14240:add": {
+   "roofY_P10": 8.59,
+   "roofY_P50": 9.83,
+   "roofY_P90": 11.5,
+   "roofY_P95": 11.93,
+   "roofY_max": 12.66,
+   "coverage": 0.91,
+   "area": 147.4,
+   "groundY": 4.07,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14241:add": {
+   "roofY_P10": 4.22,
+   "roofY_P50": 4.71,
+   "roofY_P90": 5.12,
+   "roofY_P95": 5.21,
+   "roofY_max": 7.12,
+   "coverage": 0.83,
+   "area": 86.3,
+   "groundY": 0.98,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14242:add": {
+   "roofY_P10": 8.06,
+   "roofY_P50": 10.5,
+   "roofY_P90": 11.36,
+   "roofY_P95": 11.59,
+   "roofY_max": 11.91,
+   "coverage": 0.87,
+   "area": 253.6,
+   "groundY": 3.9,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14243:add": {
+   "roofY_P10": 5.72,
+   "roofY_P50": 6.82,
+   "roofY_P90": 7.94,
+   "roofY_P95": 8.13,
+   "roofY_max": 10.75,
+   "coverage": 0.92,
+   "area": 150.6,
+   "groundY": 1.27,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14244:add": {
+   "roofY_P10": -4.66,
+   "roofY_P50": -4.65,
+   "roofY_P90": -4.64,
+   "roofY_P95": -4.63,
+   "roofY_max": -4.62,
+   "coverage": 0.87,
+   "area": 50.9,
+   "groundY": -7.99,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14245:add": {
+   "roofY_P10": 4.76,
+   "roofY_P50": 6.68,
+   "roofY_P90": 9.0,
+   "roofY_P95": 9.39,
+   "roofY_max": 9.78,
+   "coverage": 0.94,
+   "area": 349.3,
+   "groundY": 1.24,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14246:add": {
+   "roofY_P10": 4.27,
+   "roofY_P50": 5.28,
+   "roofY_P90": 6.06,
+   "roofY_P95": 6.12,
+   "roofY_max": 6.81,
+   "coverage": 0.87,
+   "area": 57.9,
+   "groundY": 1.46,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14247:add": {
+   "roofY_P10": 5.28,
+   "roofY_P50": 5.92,
+   "roofY_P90": 6.58,
+   "roofY_P95": 6.7,
+   "roofY_max": 6.8,
+   "coverage": 0.93,
+   "area": 56.6,
+   "groundY": 1.45,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14249:add": {
+   "roofY_P10": -3.15,
+   "roofY_P50": 5.01,
+   "roofY_P90": 5.12,
+   "roofY_P95": 6.63,
+   "roofY_max": 10.47,
+   "coverage": 0.83,
+   "area": 8333.1,
+   "groundY": -7.94,
+   "roof": "flat",
+   "name": "",
+   "tiers": 3
+  },
+  "-14250:add": {
+   "roofY_P10": 6.58,
+   "roofY_P50": 6.61,
+   "roofY_P90": 6.64,
+   "roofY_P95": 6.65,
+   "roofY_max": 7.41,
+   "coverage": 0.89,
+   "area": 134.8,
+   "groundY": 3.3,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14251:add": {
+   "roofY_P10": 11.79,
+   "roofY_P50": 16.58,
+   "roofY_P90": 18.84,
+   "roofY_P95": 19.23,
+   "roofY_max": 21.67,
+   "coverage": 0.93,
+   "area": 1177.3,
+   "groundY": 3.04,
+   "roof": "flat",
+   "name": "Central Christian Church",
+   "tiers": 2
+  },
+  "-14252:add": {
+   "roofY_P10": 5.23,
+   "roofY_P50": 5.28,
+   "roofY_P90": 5.32,
+   "roofY_P95": 5.33,
+   "roofY_max": 5.36,
+   "coverage": 0.88,
+   "area": 12.5,
+   "groundY": 2.72,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14253:add": {
+   "roofY_P10": 9.98,
+   "roofY_P50": 18.99,
+   "roofY_P90": 19.09,
+   "roofY_P95": 20.38,
+   "roofY_max": 27.17,
+   "coverage": 0.93,
+   "area": 2861.1,
+   "groundY": 1.81,
+   "roof": "flat",
+   "name": "Ned Granger Travis County Admin Building",
+   "tiers": 1
+  },
+  "-14254:add": {
+   "roofY_P10": 7.02,
+   "roofY_P50": 7.12,
+   "roofY_P90": 7.23,
+   "roofY_P95": 7.25,
+   "roofY_max": 7.32,
+   "coverage": 0.98,
+   "area": 175.9,
+   "groundY": 0.03,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14256:add": {
+   "roofY_P10": 8.09,
+   "roofY_P50": 10.76,
+   "roofY_P90": 12.09,
+   "roofY_P95": 12.22,
+   "roofY_max": 12.36,
+   "coverage": 0.91,
+   "area": 167.4,
+   "groundY": 3.17,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14257:add": {
+   "roofY_P10": 0.7,
+   "roofY_P50": 1.44,
+   "roofY_P90": 2.82,
+   "roofY_P95": 3.06,
+   "roofY_max": 3.28,
+   "coverage": 0.95,
+   "area": 249.2,
+   "groundY": -2.39,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14258:add": {
+   "roofY_P10": 5.56,
+   "roofY_P50": 9.19,
+   "roofY_P90": 9.9,
+   "roofY_P95": 10.0,
+   "roofY_max": 10.73,
+   "coverage": 0.87,
+   "area": 100.2,
+   "groundY": 2.05,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14259:add": {
+   "roofY_P10": 6.37,
+   "roofY_P50": 6.93,
+   "roofY_P90": 7.62,
+   "roofY_P95": 7.8,
+   "roofY_max": 9.2,
+   "coverage": 0.87,
+   "area": 664.2,
+   "groundY": 2.18,
+   "roof": "flat",
+   "name": "",
+   "tiers": 0
+  },
+  "-14260:add": {
+   "roofY_P10": 7.89,
+   "roofY_P50": 8.98,
+   "roofY_P90": 12.31,
+   "roofY_P95": 12.52,
+   "roofY_max": 15.32,
+   "coverage": 0.9,
+   "area": 325.7,
+   "groundY": 4.23,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  },
+  "-14261:add": {
+   "roofY_P10": -1.53,
+   "roofY_P50": 8.34,
+   "roofY_P90": 12.88,
+   "roofY_P95": 13.03,
+   "roofY_max": 13.1,
+   "coverage": 0.85,
+   "area": 1525.5,
+   "groundY": -9.8,
+   "roof": "flat",
+   "name": "",
+   "tiers": 2
+  },
+  "-14262:add": {
+   "roofY_P10": 5.69,
+   "roofY_P50": 6.98,
+   "roofY_P90": 7.87,
+   "roofY_P95": 7.97,
+   "roofY_max": 11.35,
+   "coverage": 0.72,
+   "area": 94.5,
+   "groundY": 2.86,
+   "roof": "hip-shingle",
+   "name": "",
+   "tiers": 0
+  }
+ },
+ "dtmSamples": [
+  [
+   557.42,
+   1440.77,
+   -1.241
+  ],
+  [
+   200.76,
+   1445.64,
+   -17.32
+  ],
+  [
+   568.8,
+   1478.68,
+   -1.744
+  ],
+  [
+   60.66,
+   1432.45,
+   -8.091
+  ],
+  [
+   1233.19,
+   1390.34,
+   1.112
+  ],
+  [
+   191.88,
+   1510.11,
+   -18.833
+  ],
+  [
+   373.27,
+   1415.14,
+   -12.261
+  ],
+  [
+   -441.02,
+   1506.01,
+   -7.241
+  ],
+  [
+   1133.91,
+   1399.57,
+   2.023
+  ],
+  [
+   654.83,
+   1531.19,
+   -3.847
+  ],
+  [
+   974.49,
+   1416.86,
+   3.78
+  ],
+  [
+   -602.8,
+   1488.46,
+   2.763
+  ],
+  [
+   868.74,
+   1373.28,
+   1.076
+  ],
+  [
+   198.2,
+   1447.35,
+   -17.816
+  ],
+  [
+   1287.85,
+   1511.17,
+   -0.494
+  ],
+  [
+   -460.44,
+   1510.48,
+   -5.337
+  ],
+  [
+   -646.3,
+   1517.74,
+   1.375
+  ],
+  [
+   -745.98,
+   1359.83,
+   -0.251
+  ],
+  [
+   399.43,
+   1421.64,
+   -11.815
+  ],
+  [
+   -620.66,
+   1376.55,
+   1.129
+  ],
+  [
+   -113.08,
+   1430.23,
+   -0.637
+  ],
+  [
+   49.88,
+   1475.77,
+   -9.356
+  ],
+  [
+   889.15,
+   1485.23,
+   -0.201
+  ],
+  [
+   187.88,
+   1409.27,
+   -16.259
+  ],
+  [
+   -708.49,
+   1401.4,
+   0.982
+  ],
+  [
+   855.89,
+   1400.58,
+   0.496
+  ],
+  [
+   -170.6,
+   1362.92,
+   0.62
+  ],
+  [
+   540.67,
+   1431.15,
+   -0.633
+  ],
+  [
+   -598.92,
+   1361.01,
+   0.32
+  ],
+  [
+   1269.8,
+   1458.02,
+   0.682
+  ],
+  [
+   56.64,
+   1369.13,
+   -7.968
+  ],
+  [
+   89.76,
+   1444.46,
+   -13.922
+  ],
+  [
+   -552.74,
+   1522.85,
+   0.951
+  ],
+  [
+   260.31,
+   1345.59,
+   -10.779
+  ],
+  [
+   -600.58,
+   1483.01,
+   3.243
+  ],
+  [
+   -73.8,
+   1391.18,
+   -0.69
+  ],
+  [
+   -564.86,
+   1434.96,
+   1.884
+  ],
+  [
+   10.18,
+   1433.64,
+   -4.149
+  ],
+  [
+   527.35,
+   1335.6,
+   -2.075
+  ],
+  [
+   149.09,
+   1403.89,
+   -20.488
+  ],
+  [
+   -144.3,
+   1504.87,
+   2.251
+  ],
+  [
+   490.63,
+   1505.77,
+   -8.949
+  ],
+  [
+   1282.95,
+   1515.73,
+   -0.246
+  ],
+  [
+   -729.05,
+   1400.26,
+   0.668
+  ],
+  [
+   909.2,
+   1499.28,
+   0.429
+  ],
+  [
+   -112.62,
+   1463.09,
+   0.475
+  ],
+  [
+   806.82,
+   1411.52,
+   0.741
+  ],
+  [
+   -521.48,
+   1488.66,
+   -1.624
+  ],
+  [
+   841.58,
+   1530.0,
+   -0.624
+  ],
+  [
+   523.57,
+   1368.39,
+   -3.221
+  ],
+  [
+   1020.63,
+   1483.56,
+   3.133
+  ],
+  [
+   208.34,
+   1488.49,
+   -18.32
+  ],
+  [
+   -589.98,
+   1456.96,
+   3.109
+  ],
+  [
+   -80.05,
+   1357.91,
+   -0.094
+  ],
+  [
+   904.02,
+   1333.92,
+   2.644
+  ],
+  [
+   1261.12,
+   1488.26,
+   0.429
+  ],
+  [
+   95.76,
+   1456.07,
+   -15.083
+  ],
+  [
+   712.35,
+   1349.98,
+   1.719
+  ],
+  [
+   -727.25,
+   1459.7,
+   -0.601
+  ],
+  [
+   898.14,
+   1330.56,
+   2.485
+  ],
+  [
+   87.15,
+   1489.1,
+   -13.914
+  ],
+  [
+   407.33,
+   1418.84,
+   -11.931
+  ],
+  [
+   -569.52,
+   1514.19,
+   1.352
+  ],
+  [
+   199.35,
+   1452.42,
+   -17.826
+  ],
+  [
+   -378.39,
+   1531.72,
+   -8.857
+  ],
+  [
+   -608.91,
+   1483.07,
+   3.134
+  ],
+  [
+   554.18,
+   1481.69,
+   -2.041
+  ],
+  [
+   165.17,
+   1485.9,
+   -18.927
+  ],
+  [
+   1024.19,
+   1443.03,
+   3.202
+  ],
+  [
+   878.95,
+   1456.8,
+   -0.11
+  ],
+  [
+   -697.86,
+   1434.13,
+   1.009
+  ],
+  [
+   -507.01,
+   1333.29,
+   -3.491
+  ],
+  [
+   978.4,
+   1442.44,
+   3.091
+  ],
+  [
+   386.8,
+   1444.79,
+   -6.438
+  ],
+  [
+   164.86,
+   1380.17,
+   -18.316
+  ],
+  [
+   190.62,
+   1433.51,
+   -18.603
+  ],
+  [
+   695.53,
+   1414.11,
+   -0.901
+  ],
+  [
+   672.27,
+   1366.91,
+   0.715
+  ],
+  [
+   -442.05,
+   1521.09,
+   -7.161
+  ],
+  [
+   613.05,
+   1454.24,
+   -1.965
+  ],
+  [
+   -632.4,
+   1475.8,
+   2.2
+  ],
+  [
+   740.72,
+   1421.37,
+   1.341
+  ],
+  [
+   468.43,
+   1402.7,
+   -7.298
+  ],
+  [
+   -11.75,
+   1519.71,
+   -5.703
+  ],
+  [
+   1236.92,
+   1366.05,
+   1.475
+  ],
+  [
+   319.56,
+   1410.32,
+   -11.815
+  ],
+  [
+   855.24,
+   1466.52,
+   -1.864
+  ],
+  [
+   1286.37,
+   1456.54,
+   0.69
+  ],
+  [
+   652.1,
+   1519.17,
+   -3.422
+  ],
+  [
+   -135.9,
+   1515.45,
+   2.147
+  ],
+  [
+   47.16,
+   1347.68,
+   -7.716
+  ],
+  [
+   -704.94,
+   1424.36,
+   0.837
+  ],
+  [
+   492.12,
+   1381.87,
+   -8.73
+  ],
+  [
+   74.05,
+   1446.96,
+   -11.767
+  ],
+  [
+   498.29,
+   1401.54,
+   -4.996
+  ],
+  [
+   -71.92,
+   1382.98,
+   -0.666
+  ],
+  [
+   952.1,
+   1496.63,
+   1.895
+  ],
+  [
+   179.81,
+   1445.22,
+   -18.7
+  ],
+  [
+   -131.67,
+   1452.18,
+   0.273
+  ],
+  [
+   1081.66,
+   1517.69,
+   2.605
+  ],
+  [
+   474.35,
+   1389.77,
+   -7.663
+  ],
+  [
+   363.73,
+   1435.97,
+   -13.307
+  ],
+  [
+   -725.42,
+   1508.2,
+   -0.44
+  ],
+  [
+   1225.85,
+   1330.7,
+   1.574
+  ],
+  [
+   334.19,
+   1427.52,
+   -13.269
+  ],
+  [
+   757.09,
+   1413.4,
+   1.496
+  ],
+  [
+   -130.0,
+   1429.41,
+   -0.014
+  ],
+  [
+   -588.39,
+   1496.77,
+   2.7
+  ],
+  [
+   945.28,
+   1394.89,
+   3.263
+  ],
+  [
+   -102.25,
+   1401.78,
+   -0.591
+  ],
+  [
+   122.68,
+   1484.05,
+   -17.625
+  ],
+  [
+   501.32,
+   1506.22,
+   -9.031
+  ],
+  [
+   329.54,
+   1486.45,
+   -13.34
+  ],
+  [
+   126.14,
+   1335.35,
+   -15.875
+  ],
+  [
+   47.39,
+   1433.33,
+   -6.694
+  ],
+  [
+   376.27,
+   1427.75,
+   -12.48
+  ],
+  [
+   -493.42,
+   1518.25,
+   -3.593
+  ],
+  [
+   1143.25,
+   1377.29,
+   1.315
+  ],
+  [
+   258.11,
+   1397.31,
+   -10.863
+  ],
+  [
+   49.33,
+   1397.3,
+   -6.401
+  ],
+  [
+   -604.96,
+   1483.8,
+   3.149
+  ],
+  [
+   -577.1,
+   1393.33,
+   -0.775
+  ],
+  [
+   777.23,
+   1416.15,
+   1.701
+  ],
+  [
+   -421.81,
+   1512.03,
+   -8.392
+  ],
+  [
+   556.94,
+   1415.99,
+   -1.486
+  ],
+  [
+   228.11,
+   1464.5,
+   -17.412
+  ],
+  [
+   539.01,
+   1522.66,
+   -3.809
+  ],
+  [
+   1009.25,
+   1376.74,
+   4.432
+  ],
+  [
+   253.48,
+   1495.15,
+   -17.843
+  ],
+  [
+   -151.98,
+   1369.84,
+   0.903
+  ],
+  [
+   222.84,
+   1409.48,
+   -15.716
+  ],
+  [
+   946.91,
+   1447.62,
+   2.334
+  ],
+  [
+   -602.07,
+   1510.43,
+   3.077
+  ],
+  [
+   772.37,
+   1403.74,
+   1.717
+  ],
+  [
+   691.9,
+   1381.12,
+   0.142
+  ],
+  [
+   -425.38,
+   1513.18,
+   -8.299
+  ],
+  [
+   793.74,
+   1348.05,
+   2.373
+  ],
+  [
+   562.65,
+   1506.06,
+   -4.155
+  ],
+  [
+   585.76,
+   1531.5,
+   -5.742
+  ],
+  [
+   636.02,
+   1401.6,
+   -0.479
+  ],
+  [
+   877.31,
+   1387.95,
+   1.007
+  ],
+  [
+   992.71,
+   1382.87,
+   4.232
+  ],
+  [
+   238.64,
+   1417.12,
+   -14.211
+  ],
+  [
+   -657.48,
+   1463.65,
+   1.756
+  ],
+  [
+   1101.37,
+   1479.9,
+   2.127
+  ],
+  [
+   724.09,
+   1352.63,
+   1.469
+  ],
+  [
+   -213.06,
+   1524.22,
+   -0.216
+  ],
+  [
+   -521.12,
+   1382.11,
+   -3.737
+  ],
+  [
+   718.3,
+   1415.27,
+   0.06
+  ],
+  [
+   882.17,
+   1407.69,
+   0.825
+  ],
+  [
+   868.67,
+   1522.94,
+   -0.594
+  ],
+  [
+   959.53,
+   1442.16,
+   2.626
+  ],
+  [
+   -604.53,
+   1365.68,
+   0.459
+  ],
+  [
+   807.6,
+   1463.63,
+   -1.319
+  ],
+  [
+   -744.13,
+   1409.83,
+   0.747
+  ],
+  [
+   1079.79,
+   1476.13,
+   2.172
+  ],
+  [
+   -25.45,
+   1512.76,
+   -5.543
+  ],
+  [
+   309.23,
+   1341.92,
+   -8.595
+  ],
+  [
+   4.78,
+   1480.02,
+   -6.442
+  ],
+  [
+   9.1,
+   1478.87,
+   -6.846
+  ],
+  [
+   479.85,
+   1339.46,
+   -8.045
+  ],
+  [
+   -729.16,
+   1524.12,
+   -0.534
+  ],
+  [
+   -131.47,
+   1480.15,
+   1.595
+  ],
+  [
+   432.21,
+   1520.03,
+   -5.687
+  ],
+  [
+   656.87,
+   1418.14,
+   -1.602
+  ],
+  [
+   1185.53,
+   1438.58,
+   0.318
+  ],
+  [
+   -386.93,
+   1517.52,
+   -8.564
+  ],
+  [
+   672.56,
+   1435.81,
+   -1.917
+  ],
+  [
+   51.62,
+   1446.17,
+   -7.856
+  ],
+  [
+   146.87,
+   1368.68,
+   -16.97
+  ],
+  [
+   669.33,
+   1503.88,
+   -3.043
+  ],
+  [
+   278.44,
+   1348.88,
+   -9.46
+  ],
+  [
+   795.73,
+   1505.01,
+   -3.173
+  ],
+  [
+   -182.65,
+   1525.17,
+   2.156
+  ],
+  [
+   -97.17,
+   1358.48,
+   0.078
+  ],
+  [
+   134.11,
+   1480.86,
+   -17.603
+  ],
+  [
+   -534.92,
+   1488.34,
+   0.755
+  ],
+  [
+   -575.26,
+   1393.26,
+   -0.895
+  ],
+  [
+   749.78,
+   1516.11,
+   -2.832
+  ],
+  [
+   -744.33,
+   1368.33,
+   -0.244
+  ],
+  [
+   1029.84,
+   1489.68,
+   2.948
+  ],
+  [
+   703.33,
+   1510.79,
+   -1.466
+  ],
+  [
+   175.63,
+   1510.26,
+   -18.882
+  ],
+  [
+   736.66,
+   1496.51,
+   -1.215
+  ],
+  [
+   252.42,
+   1385.37,
+   -9.349
+  ],
+  [
+   1090.9,
+   1461.38,
+   2.165
+  ],
+  [
+   629.32,
+   1431.93,
+   -2.021
+  ],
+  [
+   1114.74,
+   1468.04,
+   1.843
+  ],
+  [
+   225.32,
+   1484.87,
+   -17.847
+  ],
+  [
+   862.1,
+   1504.99,
+   -1.371
+  ],
+  [
+   553.26,
+   1462.2,
+   -1.488
+  ],
+  [
+   1023.66,
+   1500.32,
+   3.178
+  ],
+  [
+   494.73,
+   1356.85,
+   -6.518
+  ],
+  [
+   107.16,
+   1510.6,
+   -16.803
+  ],
+  [
+   16.35,
+   1336.45,
+   -5.55
+  ],
+  [
+   1008.92,
+   1442.9,
+   3.295
+  ],
+  [
+   560.87,
+   1483.2,
+   -1.959
+  ],
+  [
+   163.15,
+   1418.38,
+   -18.951
+  ],
+  [
+   1275.36,
+   1522.13,
+   -0.4
+  ],
+  [
+   692.88,
+   1348.5,
+   1.327
+  ],
+  [
+   862.54,
+   1456.39,
+   -1.051
+  ],
+  [
+   -612.42,
+   1458.8,
+   2.083
+  ],
+  [
+   950.01,
+   1503.53,
+   1.715
+  ],
+  [
+   169.98,
+   1413.35,
+   -18.856
+  ],
+  [
+   1202.46,
+   1417.15,
+   0.482
+  ],
+  [
+   810.96,
+   1486.24,
+   -2.382
+  ],
+  [
+   -157.75,
+   1339.14,
+   0.435
+  ],
+  [
+   671.45,
+   1512.62,
+   -3.234
+  ],
+  [
+   -99.14,
+   1362.01,
+   0.206
+  ],
+  [
+   1097.06,
+   1508.22,
+   2.081
+  ],
+  [
+   947.32,
+   1332.17,
+   4.007
+  ],
+  [
+   182.34,
+   1465.0,
+   -18.592
+  ],
+  [
+   50.45,
+   1502.11,
+   -9.721
+  ],
+  [
+   -518.85,
+   1518.66,
+   -1.201
+  ],
+  [
+   1144.37,
+   1333.8,
+   1.225
+  ],
+  [
+   331.17,
+   1433.12,
+   -13.44
+  ],
+  [
+   822.4,
+   1396.35,
+   0.49
+  ],
+  [
+   480.88,
+   1359.51,
+   -8.262
+  ],
+  [
+   -631.65,
+   1461.07,
+   2.065
+  ],
+  [
+   444.75,
+   1499.6,
+   -5.251
+  ],
+  [
+   514.88,
+   1411.97,
+   -5.064
+  ],
+  [
+   -545.98,
+   1357.15,
+   -2.73
+  ],
+  [
+   -115.84,
+   1385.93,
+   0.636
+  ],
+  [
+   1082.96,
+   1352.45,
+   2.709
+  ],
+  [
+   521.62,
+   1474.03,
+   -2.096
+  ],
+  [
+   864.8,
+   1383.86,
+   0.916
+  ],
+  [
+   890.07,
+   1422.3,
+   0.827
+  ],
+  [
+   1044.14,
+   1357.21,
+   4.241
+  ],
+  [
+   582.9,
+   1386.27,
+   -1.076
+  ],
+  [
+   997.9,
+   1344.64,
+   4.868
+  ],
+  [
+   -8.49,
+   1472.76,
+   -6.068
+  ],
+  [
+   785.38,
+   1528.86,
+   -4.007
+  ],
+  [
+   670.24,
+   1437.62,
+   -1.985
+  ],
+  [
+   339.96,
+   1388.25,
+   -10.711
+  ],
+  [
+   -530.4,
+   1351.2,
+   -3.131
+  ],
+  [
+   582.26,
+   1342.98,
+   -4.52
+  ],
+  [
+   1284.35,
+   1398.12,
+   1.512
+  ],
+  [
+   102.89,
+   1353.06,
+   -14.467
+  ],
+  [
+   177.29,
+   1499.99,
+   -18.732
+  ],
+  [
+   1259.58,
+   1405.81,
+   1.141
+  ],
+  [
+   558.29,
+   1331.33,
+   -2.688
+  ],
+  [
+   1199.88,
+   1503.88,
+   -1.28
+  ],
+  [
+   163.4,
+   1392.71,
+   -18.929
+  ],
+  [
+   890.55,
+   1386.59,
+   1.255
+  ],
+  [
+   -44.31,
+   1443.6,
+   -3.787
+  ],
+  [
+   1223.4,
+   1350.0,
+   1.56
+  ],
+  [
+   2.84,
+   1493.88,
+   -5.704
+  ],
+  [
+   -587.47,
+   1364.31,
+   0.347
+  ],
+  [
+   1203.38,
+   1332.9,
+   1.339
+  ],
+  [
+   445.67,
+   1512.02,
+   -5.333
+  ],
+  [
+   177.63,
+   1413.13,
+   -18.287
+  ],
+  [
+   965.41,
+   1381.96,
+   3.89
+  ],
+  [
+   -733.82,
+   1451.11,
+   -0.316
+  ],
+  [
+   735.6,
+   1368.38,
+   1.428
+  ],
+  [
+   760.19,
+   1397.26,
+   1.996
+  ],
+  [
+   480.59,
+   1514.7,
+   -9.332
+  ],
+  [
+   -548.16,
+   1371.08,
+   -2.104
+  ],
+  [
+   834.77,
+   1396.08,
+   0.438
+  ],
+  [
+   748.4,
+   1429.27,
+   2.153
+  ],
+  [
+   768.19,
+   1510.55,
+   -3.448
+  ],
+  [
+   411.84,
+   1521.7,
+   -4.884
+  ],
+  [
+   622.4,
+   1485.31,
+   -4.136
+  ],
+  [
+   1102.83,
+   1477.75,
+   2.068
+  ],
+  [
+   607.89,
+   1394.85,
+   0.227
+  ],
+  [
+   358.63,
+   1447.31,
+   -13.567
+  ],
+  [
+   489.74,
+   1380.94,
+   -8.395
+  ],
+  [
+   -690.02,
+   1469.21,
+   0.758
+  ],
+  [
+   711.43,
+   1483.98,
+   0.571
+  ],
+  [
+   -580.21,
+   1356.77,
+   0.565
+  ],
+  [
+   893.09,
+   1408.84,
+   1.337
+  ],
+  [
+   964.24,
+   1497.16,
+   2.228
+  ],
+  [
+   -662.21,
+   1488.99,
+   1.4
+  ],
+  [
+   255.02,
+   1456.81,
+   -15.577
+  ],
+  [
+   374.28,
+   1440.08,
+   -12.836
+  ],
+  [
+   166.23,
+   1387.12,
+   -18.385
+  ],
+  [
+   246.02,
+   1432.63,
+   -13.826
+  ],
+  [
+   179.69,
+   1477.14,
+   -18.395
+  ],
+  [
+   496.37,
+   1381.05,
+   -9.143
+  ],
+  [
+   -402.4,
+   1526.69,
+   -8.8
+  ],
+  [
+   929.55,
+   1451.97,
+   1.815
+  ],
+  [
+   255.54,
+   1406.05,
+   -12.441
+  ],
+  [
+   941.83,
+   1495.25,
+   1.519
+  ],
+  [
+   902.69,
+   1480.59,
+   0.361
+  ],
+  [
+   876.97,
+   1355.71,
+   1.473
+  ],
+  [
+   -103.75,
+   1371.27,
+   0.214
+  ],
+  [
+   837.4,
+   1527.59,
+   -2.17
+  ],
+  [
+   -452.91,
+   1526.31,
+   -5.654
+  ],
+  [
+   365.5,
+   1366.02,
+   -9.429
+  ],
+  [
+   -698.92,
+   1356.73,
+   1.376
+  ],
+  [
+   202.92,
+   1443.95,
+   -16.907
+  ],
+  [
+   -542.44,
+   1504.63,
+   0.999
+  ],
+  [
+   -80.74,
+   1448.56,
+   -2.496
+  ],
+  [
+   314.97,
+   1368.83,
+   -9.623
+  ],
+  [
+   107.3,
+   1391.14,
+   -14.706
+  ],
+  [
+   536.98,
+   1459.17,
+   -1.212
+  ],
+  [
+   -719.2,
+   1484.13,
+   -0.64
+  ],
+  [
+   269.47,
+   1421.8,
+   -13.709
+  ],
+  [
+   890.59,
+   1484.08,
+   -0.076
+  ],
+  [
+   49.7,
+   1398.4,
+   -6.35
+  ],
+  [
+   -576.63,
+   1365.29,
+   0.122
+  ],
+  [
+   476.48,
+   1468.62,
+   -7.986
+  ],
+  [
+   988.98,
+   1455.16,
+   3.253
+  ],
+  [
+   1137.96,
+   1514.86,
+   0.76
+  ],
+  [
+   679.57,
+   1368.69,
+   0.635
+  ],
+  [
+   377.28,
+   1446.92,
+   -12.456
+  ],
+  [
+   689.34,
+   1416.99,
+   -1.34
+  ],
+  [
+   1022.91,
+   1526.57,
+   3.983
+  ],
+  [
+   887.63,
+   1504.1,
+   -0.356
+  ],
+  [
+   1158.05,
+   1354.6,
+   0.982
+  ],
+  [
+   -117.14,
+   1484.56,
+   1.621
+  ],
+  [
+   317.35,
+   1413.83,
+   -11.993
+  ],
+  [
+   47.13,
+   1446.1,
+   -7.503
+  ],
+  [
+   1071.43,
+   1465.72,
+   2.341
+  ],
+  [
+   1253.33,
+   1456.38,
+   0.674
+  ],
+  [
+   -547.49,
+   1469.47,
+   1.415
+  ],
+  [
+   1090.52,
+   1518.43,
+   2.339
+  ],
+  [
+   539.88,
+   1428.46,
+   -1.245
+  ],
+  [
+   1097.45,
+   1478.41,
+   2.047
+  ],
+  [
+   564.02,
+   1435.27,
+   -1.195
+  ],
+  [
+   107.62,
+   1506.39,
+   -16.981
+  ],
+  [
+   1041.2,
+   1531.54,
+   3.475
+  ],
+  [
+   1039.98,
+   1438.51,
+   3.317
+  ],
+  [
+   1118.54,
+   1429.95,
+   2.261
+  ],
+  [
+   -531.89,
+   1357.51,
+   -3.24
+  ],
+  [
+   1032.29,
+   1510.96,
+   3.38
+  ],
+  [
+   14.07,
+   1421.79,
+   -3.572
+  ],
+  [
+   -703.22,
+   1500.26,
+   -0.042
+  ],
+  [
+   -130.45,
+   1412.57,
+   0.121
+  ],
+  [
+   223.41,
+   1366.68,
+   -14.134
+  ],
+  [
+   47.46,
+   1339.38,
+   -8.373
+  ],
+  [
+   289.42,
+   1345.78,
+   -8.732
+  ],
+  [
+   -59.3,
+   1463.03,
+   -1.618
+  ],
+  [
+   833.29,
+   1452.59,
+   -1.453
+  ],
+  [
+   -752.2,
+   1437.62,
+   0.468
+  ],
+  [
+   654.1,
+   1470.95,
+   -2.337
+  ],
+  [
+   305.69,
+   1347.57,
+   -8.82
+  ],
+  [
+   71.66,
+   1344.34,
+   -11.03
+  ],
+  [
+   -673.59,
+   1452.49,
+   1.549
+  ],
+  [
+   -627.08,
+   1496.26,
+   1.704
+  ],
+  [
+   279.43,
+   1386.08,
+   -9.86
+  ],
+  [
+   1010.64,
+   1411.39,
+   3.855
+  ],
+  [
+   1021.62,
+   1487.76,
+   3.005
+  ],
+  [
+   199.21,
+   1496.39,
+   -18.24
+  ],
+  [
+   1172.48,
+   1504.34,
+   -0.198
+  ],
+  [
+   258.77,
+   1341.21,
+   -11.053
+  ],
+  [
+   -200.62,
+   1452.95,
+   1.849
+  ],
+  [
+   678.36,
+   1418.88,
+   -1.455
+  ],
+  [
+   -739.89,
+   1470.29,
+   -0.916
+  ],
+  [
+   1263.69,
+   1512.31,
+   -0.056
+  ],
+  [
+   834.49,
+   1483.33,
+   -2.34
+  ],
+  [
+   454.84,
+   1476.35,
+   -5.281
+  ],
+  [
+   637.51,
+   1343.06,
+   0.416
+  ],
+  [
+   125.83,
+   1483.25,
+   -17.779
+  ],
+  [
+   -185.99,
+   1407.42,
+   0.788
+  ],
+  [
+   118.22,
+   1420.1,
+   -13.757
+  ],
+  [
+   587.29,
+   1480.95,
+   -3.358
+  ],
+  [
+   1188.71,
+   1336.14,
+   1.196
+  ],
+  [
+   -143.33,
+   1499.08,
+   2.215
+  ],
+  [
+   1203.33,
+   1427.8,
+   0.447
+  ],
+  [
+   566.76,
+   1476.6,
+   -1.736
+  ],
+  [
+   479.09,
+   1365.51,
+   -8.24
+  ],
+  [
+   440.07,
+   1499.86,
+   -5.321
+  ],
+  [
+   -192.21,
+   1441.42,
+   1.998
+  ],
+  [
+   588.12,
+   1390.64,
+   -0.173
+  ],
+  [
+   123.7,
+   1367.01,
+   -15.686
+  ],
+  [
+   -522.45,
+   1331.17,
+   -3.173
+  ],
+  [
+   -562.24,
+   1461.49,
+   2.136
+  ],
+  [
+   31.61,
+   1386.48,
+   -4.194
+  ],
+  [
+   -76.74,
+   1421.5,
+   -2.073
+  ],
+  [
+   1146.3,
+   1357.41,
+   1.072
+  ],
+  [
+   1166.74,
+   1421.76,
+   0.603
+  ],
+  [
+   96.45,
+   1338.58,
+   -14.416
+  ],
+  [
+   72.3,
+   1411.45,
+   -9.69
+  ],
+  [
+   1059.06,
+   1485.03,
+   2.635
+  ],
+  [
+   543.69,
+   1468.12,
+   -1.869
+  ],
+  [
+   305.41,
+   1491.67,
+   -13.109
+  ],
+  [
+   313.51,
+   1414.44,
+   -12.038
+  ],
+  [
+   684.87,
+   1420.79,
+   -1.585
+  ],
+  [
+   1159.64,
+   1430.45,
+   0.642
+  ],
+  [
+   1233.4,
+   1453.06,
+   0.385
+  ],
+  [
+   -574.3,
+   1413.36,
+   -1.113
+  ],
+  [
+   570.2,
+   1418.09,
+   -1.071
+  ],
+  [
+   -130.79,
+   1496.65,
+   2.082
+  ],
+  [
+   1068.51,
+   1470.76,
+   2.358
+  ],
+  [
+   665.98,
+   1422.5,
+   -1.959
+  ],
+  [
+   -608.81,
+   1415.16,
+   0.632
+  ],
+  [
+   -615.19,
+   1519.66,
+   0.9
+  ],
+  [
+   762.68,
+   1386.47,
+   2.067
+  ],
+  [
+   84.06,
+   1430.48,
+   -12.521
+  ],
+  [
+   121.59,
+   1374.38,
+   -15.67
+  ],
+  [
+   -641.21,
+   1339.8,
+   1.714
+  ],
+  [
+   910.05,
+   1498.73,
+   0.429
+  ],
+  [
+   37.3,
+   1333.25,
+   -8.052
+  ],
+  [
+   330.73,
+   1527.01,
+   -11.684
+  ],
+  [
+   208.47,
+   1513.47,
+   -18.658
+  ],
+  [
+   1230.32,
+   1332.14,
+   1.652
+  ],
+  [
+   -384.38,
+   1524.54,
+   -8.815
+  ],
+  [
+   998.06,
+   1417.95,
+   4.009
+  ],
+  [
+   622.77,
+   1486.53,
+   -4.224
+  ],
+  [
+   78.27,
+   1501.88,
+   -13.351
+  ]
+ ],
+ "dtmResidualsPython": {
+  "gridPoints2m": 91676,
+  "open": {
+   "n": 62924,
+   "medianAbs": 0.023,
+   "p90Abs": 0.116,
+   "p95Abs": 0.194,
+   "p99Abs": 0.569,
+   "bias": 0.004
+  },
+  "underBuildings": {
+   "n": 28752,
+   "medianAbs": 0.019,
+   "p95Abs": 0.178
+  }
+ }
+}

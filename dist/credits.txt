@@ -1,0 +1,79 @@
+GTA Texas — unofficial standalone offline UT Austin campus explorer
+
+Everything shown is loaded from this folder by the local server: independently authored campus geometry, a baked contour terrain, local textures, the personal character and tree models, plus MIT-licensed independent drone photogrammetry of the UT Tower and parts of DKR stadium (credited below). No map tiles, Google/Apple imagery or provider services are used or bundled. See the individual local asset source records below.
+
+Campus footprint and contour data: City of Austin, Watershed Protection Department. Building footprint survey 2023; elevation contours 2021. Informational data, not survey-grade reconstruction. Vertical units provisionally interpreted as US survey feet.
+Campus identities: University of Texas at Austin public campus building layer.
+Roads and paths: © OpenStreetMap contributors, Open Database License. https://www.openstreetmap.org/copyright
+Base character rig and locomotion animations: Microsoft Rocketbox, Male_Adult_01, MIT License, Copyright (c) 2020 Microsoft. https://github.com/microsoft/Microsoft-Rocketbox
+Base license: /assets/personal-character/LICENSE.txt. Conversion/source manifest: /assets/personal-character/sources.json.
+Personal character: complete Rocketbox head, ears, neck, hair and body; appearance inspired by the user-supplied video through generated head/clothing atlases and modeled accessories. The appearance is approximate, not a personal scan. Base rig and animations retain their MIT license; the user reference and derived personal textures are separate personal project assets. Jump pose is procedural.
+Brick/concrete textures: Poly Haven, CC0. https://polyhaven.com/a/red_brick_03 and https://polyhaven.com/a/concrete_floor_02
+Main Building east limestone mineral color: Tiles 139 from ambientCG, CC0 1.0. https://ambientcg.com/a/Tiles139. Only a joint-free inset is sampled, with mirrored boundaries and adjusted color; this is a generic surface reference, not a UT limestone scan. Its published capture-method metadata conflicts, so physical scan provenance is unverified. Original bitmap and source hash are recorded in /assets/sources.json.
+Three.js: MIT. Rapier: Apache-2.0.
+
+Architecture, vegetation placement and materials are approximations. Buildings outside the detailed authored packages use generated context massing (see below). This is not an official UT product and does not claim to reproduce current campus conditions.
+
+Architecture reference consulted: “University of Texas at Austin Tower viewed from the east,” Insightwm, March 3, 2024, CC BY-SA 4.0. Research photograph is not bundled in this game. https://commons.wikimedia.org/wiki/File:University_of_Texas_at_Austin_Tower_viewed_from_the_east.jpg
+Tower dimensions: University of Texas at Austin, “Tower by the Numbers” and “Dr. Battle’s Tower,” December 2025. PCL levels and entrance: UT Libraries PCL Floor Plan.
+
+Speedway walkway paving:
+Herringbone Pavement by Charlotte Baglioni / Poly Haven, CC0.
+https://polyhaven.com/a/herringbone_pavement
+Generic 2 m repeating paving material; not captured at UT Austin.
+
+Foreground trees and landscape:
+Island Tree 02 / Poly Haven, CC0. https://polyhaven.com/a/island_tree_02
+Earlier releases used three simplified LODs of this tree; this build keeps only its bark/branch and leaf texture maps (used by the procedural live oaks below).
+These are generic broadleaf trees. Selected positions follow the public UT TreeKeeper inventory; crown shapes and capped display heights are approximate. Exact tree species matching is outside this simplified scenery pass.
+Preparation and source checksums: /assets/foreground-tree/sources.json.
+Ground transitions between authored paving and the contour terrain are development approximations.
+
+Norman Hackerman Building: independently authored geometry guided by user-supplied photographs, UT official building footprint OBJECTID 429, and CO Architects' project photographs. Dimensions and materials are approximate. Reference photographs are research files, not pasted onto the game building.
+https://coarchitects.com/projects/science-technology/university-of-texas-at-austin-hackerman-building/
+Monochrome for Austin (2015), Nancy Rubins: photo-guided approximation of the artwork, including 70 aluminum canoes, steel support and cables. Geometry is authored for this game and is not an exact scan or engineering model. Artwork information and location: UT Landmarks.
+https://landmarks.utexas.edu/artwork/monochrome-austin
+Speedway paving/streetscape references: PWP Landscape Architecture, UT Austin Speedway and the East Mall; user-supplied Speedway photographs. Golden paving color, drain dimensions and forecourt details are approximations.
+https://www.pwpla.com/projects/uta-speedway-and-the-east-mall
+
+Gates-Dell west wings and courtyard: independently authored six-storey exteriors, stepped atrium and graded frontage, guided by UT building footprint OBJECTID 402, Pelli Clarke & Partners, STG Design, UT Landmarks, and Michael Barera's August 3, 2019 photograph (CC BY-SA 4.0). Reference photographs are retained in research, not pasted onto the game building. Building heights, finish details and adapted courtyard paths are approximate.
+https://www.stgdesign.com/projects/gates-dell-complex
+https://pcparch.com/work/gates-dell-complex-the-university-of-texas-at-austin
+https://www.mchap.co/mchap-2014-projects/bill-and-melinda-gates-computer-science-complex
+https://commons.wikimedia.org/wiki/File:University_of_Texas_at_Austin_August_2019_21_(Gates-Dell_Complex).jpg
+Circle with Towers (2005/2012), Sol LeWitt: independently modeled approximation of the eight concrete-block towers and connecting low circular wall. Overall diameter and height follow UT Landmarks; its courtyard registration and surrounding landscape are approximate.
+https://landmarks.utexas.edu/artwork/circle-towers
+
+MLK memorial / East Mall: independently authored approximate model of the campus monument by Jeffrey Varilla and Anna Koh-Varilla, guided by the user's street-level reference photographs and the sculptors' 1999 KUT interview. Official UT Landmarks & Art feature 212 supplies the map anchor. The model is not an exact scan or portrait; paving, planting and platform details are approximate. Reference photographs are retained only as research, not used as surface textures.
+https://americanarchive.org/catalog/cpb-aacip-529-jd4pk0887s
+https://alcalde.texasexes.org/2012/02/mlk-on-the-east-mall
+
+MLK East Mall ground: Clean Pebbles (Charlotte Baglioni and Dario Barresi) and Gravel Embedded Concrete (Charlotte Baglioni), Poly Haven, CC0.
+https://polyhaven.com/a/clean_pebbles
+https://polyhaven.com/a/gravel_embedded_concrete
+Local color maps are reduced to 1024px in linear light; OpenGL normal maps to 512px with vector renormalization. Color and shallow surface relief are adjusted to the user's reference photographs; these are generic material scans, not UT pavement scans. Source and derived hashes: /assets/sources.json.
+Mall lawn finish: borrows the existing Withered Grass photograph (Poly Haven, CC0), with muted dry/live color variation and approximate millimetre shading relief. Ground geometry and photographic cleanup regions remain development approximations.
+
+Texas State Capitol upper dome: independently authored geometry guided by the State Preservation Board north-facade photograph and official Capitol exterior photographs. Colonnades, arched windows, galleries, curved painted-metal shell and lantern are approximate; the tiny Goddess of Liberty silhouette is not an exact replica. Reference photographs are research only, not bundled surface textures. The upper dome is joined by an independently authored exterior and bounded grounds replacement. Window counts, trim, bronze monument silhouettes and ground elevations remain approximations.
+https://tspb.texas.gov/prop/tcg/tcg-photos/index.html
+https://capitol.texas.gov/Resources/Images.aspx
+https://www.tspb.texas.gov/prop/tc/tc-architecture/index.html
+
+Texas State Capitol exterior and grounds: City of Austin 2023 building footprint 533822 supplies alignment and approximate massing; State Preservation Board north/south photographs, site map and monument guide supply architectural and landscape references. Reference photographs and PDFs are not bundled textures. Independently authored stone, paving and lawn shaders; reused bundled foreground tree asset (credited above).
+https://tspb.texas.gov/plan/maps/maps.html
+https://tspb.texas.gov/prop/tcg/tcg-monuments/index.html
+
+Capitol south portico: photo-guided deep arch, radial stonework, paired piers, balcony and medallions; approximate authored geometry.
+
+Generated context scenery (this offline build): buildings without an authored package are generated at load time from the packaged City of Austin footprints (public/data/campus.json), measured USGS LiDAR roof heights/tiers where available, and a per-building archetype catalogue (public/data/building-catalog.json; each entry records whether it is a known building, a named estimate or a district default). Near the camera, windows, doors and storefronts are recessed geometry; farther away a matching shader draws the same openings. Materials are CC0 Poly Haven textures (listed below). The Darrell K Royal–Texas Memorial Stadium bowl is generated from the North/South End Zone footprints (approximate). Asphalt infill for bare mapped roads (mainly I-35) follows OpenStreetMap centerlines (© OpenStreetMap contributors, ODbL). None of this reproduces individual buildings exactly.
+
+
+Realism overhaul (October 2026):
+Measured LiDAR: U.S. Geological Survey 3D Elevation Program, USGS_LPC_TX_Central_B1_2017 (StratMap 2017, 50 cm), four LAZ tiles, public domain. Derived per-building roof heights/tiers (public/data/derived/roofs-lidar.json) and canopy tree tops (canopy-trees.json); 2017 vintage, newer buildings fall back to the City of Austin 2023 footprint heights. Provenance: public/data/derived/sources.json and README-lidar.md. Credit: U.S. Geological Survey.
+Context building materials: Poly Haven (CC0): brick_wall_003, yellow_brick, sandstone_blocks_08, clay_roof_tiles_02, gravel_concrete_04 and further sets listed in /assets/materials/context/sources.json. Per-building archetypes in /data/building-catalog.json are reference-guided estimates (basis recorded per entry), not surveys.
+Ground finishes: ambientCG Grass004, Grass001, ScatteredLeaves009 (CC0). Live-oak foliage atlas derived from ambientCG LeafSet022 (CC0). Tree forms are procedural, reference-guided estimates of Southern live oaks; positions come from authored placements, the UT TreeKeeper sample and the USGS canopy model.
+Gates–Dell east volume/envelope and Hackerman rear/core faces: independently authored, guided by the official footprint, City roof outline and the photo references credited above; curtain-wall module, screen extents and penthouse sizes are estimates.
+UT Tower and DKR field photogrammetry: "Austin 3D Photogrammetry / UT Imagery" by Sean Hardesty Lewis (drone piloted by Shashank Kota; funded by the UT Urban Information Lab; flights permitted by UT Austin, per the repository README), https://github.com/seanhlewis/utimagery @13f08efe, MIT License, Copyright (c) 2025 Sean Hardesty Lewis — full text in /assets/scans/LICENSE-utimagery.txt. Derived assets: the Tower above the Main Building roof (cropped, re-atlased, aligned to the official footprint at 0.60 m RMS corner residual; the lantern-top lid is an added infill, not scanned) and the stadium turf from the north end zone to the south 20-yard line (visual only, sits on the generated field collider). The scanned DKR west stand (lower bowl and overhanging upper deck) is also used: cropped, simplified and re-baked into one atlas from the original scan, with a collision surface sampled from its visible top (median 0.012 m, 96% within 0.1 m). Torn capture edges (upper rim, press-box fragments, streaks) were trimmed; the parapet, roof cap, coping and plain press-box block replacing them are authored estimates. The scan's original photo UV charts are kept and re-packed at 1:1 source texels; 622 hole cells are filled with a separate flat authored material. Generated stadium seat/concrete colours are medians measured through the scan's own UVs. The generated stadium outer wall is an authored interpretation of street-level observation (no imagery used). The east stand, ends and corners remain generated; nothing is mirrored. Provenance and transforms: /assets/scans/sources.json, ut-tower.json, dkr-field.json.
+Tree positions: UT Austin TreeKeeper public campus tree map (Davey Resource Group TreeKeeper, layer UofTAustin_CampusTrees, https://utaustin.treekeepersoftware.com/), point export captured 2026-09-06. Only site positions and site ids of numeric tree_type 1 are used (types 2/3 excluded: their meaning is unpublished and inventory sites can be trees, stumps or vacant planting sites); these are official inventory site positions, not individually verified living trunks. No explicit open license is stated by the map service; no species, photos or attributes are shipped. Tree heights/crowns at those sites are estimated from the nearest USGS LiDAR crown (or a local median when none is within 7 m); outside inventory coverage, trees stand at LiDAR crown peaks (approximate trunk positions).
+
+Whole-campus block corrections (2026-10-20): building footprints, splits and identities were checked block by block against the official UT Austin campus building polygons (gis.utexas.edu Campus_Buildings feature service) and UT building pages; heights and roof tiers against the 2017 USGS 3DEP LiDAR (public domain) in the same campus datum. The Capitol south strip (south of the original data limit) uses a ground patch from the 2017 USGS 3DEP DTM (public domain) and City of Austin 2023 building footprints (City of Austin open data, PlanimetricsSurvey service). OpenStreetMap (© OpenStreetMap contributors, ODbL) was used only for building names/identities, never geometry. Reference photographs and screenshots (UT, Commons, research captures) informed shapes only and are not shipped. Per-record evidence, sources and remaining estimates are recorded outside the build (research/whole-campus-92). Most facades remain generic archetypes; this is not a 1:1 model.

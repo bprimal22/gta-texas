@@ -1,0 +1,48 @@
+[
+ {
+  "id": "b05-r1",
+  "file": "public/data/mall-buildings-plan.json yards (consumed by lib/campus/mall-buildings.ts, 'Smooth East Mall buildings: Mall planting soil') and the 'Ground tie-in graded ground (Mall planting soil)' tie-in source",
+  "change": "Drop every yard-soil triangle whose centroid lies inside, or within 0.5 m of, the official UT polygons of BAT (object 557), MEZ (553), BEN (559), CBA (415) and GSB (424) (rings in lib/campus/blocks/b05-southmall/context.json massing 714471/733879, research/whole-campus-92/b05-southmall/derived/official-compare.json). Do not move any other cell.",
+  "reason": "Batts, Mezes and Benedict Halls (City record 714471:1095) and the McCombs CBA + GSB buildings (733879:1251) are MISSING from the scene: planContextBuildings classifies both 'route' because generated yard soil (no survey basis) overlaps the buildings' north edges: 23 coverage cells at z ~132 inside Batts (x -174..-144, soil y 12.7) plus one tie-in cell at (-143.9, 138); one cell at (-43.7, 156.9) inside CBA. After the clip both regenerate with the b05 massing already in context.json (measured LiDAR tiers, verified in a sandbox by the b05 block check: BAT/MEZ/BEN roof medians within 1 m of LiDAR, CBA/GSB 0.0 m).",
+  "evidence": {
+   "source": "lane probe .work/b05/probe-routes.mjs (real headless scene, 2026-10-20) -> research/whole-campus-92/b05-southmall/derived/probe-routes.json; official polygons research/raw/ut-official-buildings.geojson; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/BAT/ (and MEZ, BEN, CBA, GSB), fetched 2026-10-20",
+   "basis": "measured",
+   "note": "Verify with node scripts/harness/run-block-checks.mjs b05-southmall: report.own.decisions['714471:1095'] and ['733879:1251'] should become 'generated'; run-context-check ROUTE-CELLS-INSIDE-GENERATED must stay 0. Same mechanism as b03-r1."
+  },
+  "status": "applied by root (round 2 lane): 714471 and 733879 now generate; verified by block check S6"
+ },
+ {
+  "id": "b05-r2",
+  "file": "lib/campus/central-malls.ts / public/data/central-mall-plan.json (owner b04-tower) \u2014 South Mall south end",
+  "change": "REVIEW REQUEST to b04 (no edit by b05): the South Mall axis x -236 from z 60 to 290 is bare 'Offline local contour terrain' (campus Y 17.25 -> 5.41, a smooth 12 m fall, no terrace, stair or balustrade), and the Littlefield Fountain (1933, Coppini/Cret, 'three-tiered semicircular granite pool' at the 21st St entrance of the South Mall, z ~262-285 inside b05's rectangle) is absent. If b04's central-malls owns the South Mall lawn/paths, please confirm the south-end tie-in level at 21st St (terrain Y ~5.7 at z 280) and whether b04 or b05 authors the fountain; b05 will author it in install() if b04 agrees and no b04 surface occupies z > 255 on the axis.",
+  "reason": "Cret's South Mall ends at the Littlefield Fountain; the fountain is a primary visual landmark of the block. No published dimensions were found, so it would be an estimate from reference photos.",
+  "evidence": {
+   "source": "b05 block check report.own.southMallAxisProfile (2026-10-20); https://en.wikipedia.org/wiki/Littlefield_Fountain (fetched 2026-10-20); research/whole-campus-92/b05-southmall/derived/sources.json southMall",
+   "basis": "reference-interpreted",
+   "note": "Terraces/stairs/lawn levels between the Main Building and 21st St are not described by any fetched source; the 2017 LiDAR terrain is the only measured level."
+  },
+  "status": "superseded in round 2: b05 authored the South Mall south of z 170 and the Littlefield Fountain in install(); b04 keeps z < 170"
+ },
+ {
+  "id": "b05-r3",
+  "file": "ground/ (baked offline contour terrain) inside the b05 South Mall / Littlefield Fountain plaza: world x -262..-206, z 216..266",
+  "change": "Re-bake the visible terrain in that rectangle to at most the 2017 LiDAR DTM in lib/campus/blocks/b05-southmall/south-mall-lidar.json (dtm grid, 1 m). Largest differences: terrace z 218-223 terrain 0.3-0.6 m BELOW the LiDAR 9.1 plateau (fine, authored terrace covers it), plaza/basin z 228-250 terrain 0.3-0.7 m ABOVE the LiDAR (7.5 -> 6.5).",
+  "reason": "install() lays every surface at max(LiDAR, ground + 0.03) and keeps the fountain water above the ground inside the basins, so where the terrain is too high the fountain floats: lower basin water 7.31 / coping 7.51 vs LiDAR ~6.5 / 6.7, upper pool water 8.33 vs ~7.7, and the terrace stairs reach only ~8.6-8.4 instead of the measured 8.1 (they become shallow steps). After the re-bake the same code lands on the LiDAR levels with no b05 change.",
+  "evidence": {
+   "source": "USGS 3DEP TX_Central_B1_2017 DTM/DSM via research/whole-campus-92/b04-tower/derived/lidar_patch.py; b05 block check report.own.fountain.install and southMallSurfaces.plaza (median +0.18, p95 +0.36 m vs LiDAR)",
+   "basis": "measured",
+   "note": "Same mechanism as b04-r2-4."
+  }
+ },
+ {
+  "id": "b05-r4",
+  "file": "lib/campus/blocks/b04-tower (coordination, no edit)",
+  "change": "b05 surfaces start exactly at world z = 170.0 (clipped) at height max(LiDAR DTM, visible ground + 0.03): lawn axis x -229.6 Y ~12.15-12.2, west walk x -251 Y ~11.8, east walk x -208 Y ~12.1 (LiDAR 2017). Please meet these levels at z 170 (or tell b05 your published edge levels; none were in b04-tower/shared-requests.json at the time of this round).",
+  "reason": "Shared z 170 seam between the Main Mall (b04) and the South Mall (b05).",
+  "evidence": {
+   "source": "lib/campus/blocks/b05-southmall/south-mall.ts SM.zMin; south-mall-lidar.json",
+   "basis": "measured",
+   "note": "Lawn panel t -20..18.5 and walks t -23..-20 / 18.5..21.5 in the central-malls axis frame (O -217.36,36.64; S -0.0838766,0.9964762)."
+  }
+ }
+]

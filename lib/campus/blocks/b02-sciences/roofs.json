@@ -1,0 +1,126 @@
+{
+ "note": "Pitched-roof sections fitted to USGS 3DEP TX_Central_B1_2017 (0.5 m class-6 raster, game-aligned, campus Y = NAVD88-165) by research/whole-campus-92/b02-sciences/derived/r2/roofs_fit.py. Frame: s = x*0.0875039-z*0.9961642, t = x*0.9961642+z*0.0875039. H = min(cap, min over eave edges (eaveY + slope*inside distance)).",
+ "axisA": [
+  0.087503890742,
+  -0.996164177786
+ ],
+ "axisC": [
+  0.996164177786,
+  0.087503890742
+ ],
+ "sections": [
+  {
+   "id": "MBB-south-wing",
+   "record": "MBB",
+   "s0": 190.5,
+   "s1": 223.0,
+   "t0": -48.5,
+   "t1": -21.5,
+   "eaves": {
+    "s0": 21.09,
+    "t0": 21.41,
+    "t1": 21.44
+   },
+   "slope": 0.38,
+   "pitchDeg": 20.8,
+   "cap": 26.6,
+   "capLidarMedian": 26.77,
+   "fit": {
+    "n": 3292,
+    "medianAbs": 0.17,
+    "p90Abs": 0.57,
+    "inliers": 0.989
+   }
+  },
+  {
+   "id": "MBB-middle-wing",
+   "record": "MBB",
+   "s0": 223.0,
+   "s1": 300.5,
+   "t0": -44.5,
+   "t1": -19.5,
+   "eaves": {
+    "t0": 25.82,
+    "t1": 25.36
+   },
+   "slope": 0.4052,
+   "pitchDeg": 22.1,
+   "cap": 30.5,
+   "capLidarMedian": 30.41,
+   "fit": {
+    "n": 7430,
+    "medianAbs": 0.12,
+    "p90Abs": 0.93,
+    "inliers": 0.905
+   }
+  },
+  {
+   "id": "MBB-north-wing",
+   "record": "MBB",
+   "s0": 300.5,
+   "s1": 337.0,
+   "t0": -48.5,
+   "t1": -21.5,
+   "eaves": {
+    "s1": 20.65,
+    "t0": 21.38,
+    "t1": 21.46
+   },
+   "slope": 0.3736,
+   "pitchDeg": 20.5,
+   "cap": 26.6,
+   "capLidarMedian": 26.83,
+   "fit": {
+    "n": 3638,
+    "medianAbs": 0.24,
+    "p90Abs": 0.79,
+    "inliers": 0.932
+   }
+  },
+  {
+   "id": "NMS-central-hip",
+   "record": "NMS",
+   "s0": 325.5,
+   "s1": 358.0,
+   "t0": -101.5,
+   "t1": -50.0,
+   "eaves": {
+    "s0": 37.45,
+    "s1": 35.39,
+    "t0": 35.31,
+    "t1": 36.67
+   },
+   "slope": 0.4733,
+   "pitchDeg": 25.3,
+   "cap": 40.6,
+   "capLidarMedian": 40.58,
+   "fit": {
+    "n": 6304,
+    "medianAbs": 0.15,
+    "p90Abs": 3.27,
+    "inliers": 0.799
+   }
+  },
+  {
+   "id": "WEL-middle-bar-shed",
+   "record": "WEL",
+   "s0": 29.5,
+   "s1": 40.0,
+   "t0": -87.0,
+   "t1": -46.0,
+   "eaves": {
+    "s0": 10.05
+   },
+   "slope": 0.383,
+   "pitchDeg": 21.0,
+   "cap": 13.9,
+   "capLidarMedian": 13.9,
+   "fit": {
+    "n": 1413,
+    "medianAbs": 0.06,
+    "p90Abs": 0.14,
+    "inliers": 0.987
+   }
+  }
+ ]
+}

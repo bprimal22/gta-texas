@@ -1,0 +1,402 @@
+[
+ {
+  "id": "d37-orbit-southwest",
+  "district": "D37",
+  "kind": "aerial",
+  "label": "D37 deep west \u00b7 southwest orbit (reference pose)",
+  "position": [
+   -1543.64,
+   21.48,
+   3.64
+  ],
+  "target": [
+   -1480,
+   7.67,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": -8.518,
+  "focus": [
+   -1480,
+   -0.33,
+   -60
+  ],
+  "referenceReview": "usable-context",
+  "note": "Reference capture d37-orbit-southwest horizontal pose. Camera Y = baked extension terrain -8.52 + 30 m (packet used clamped planning terrain 12.862); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d37-orbit-southeast",
+  "district": "D37",
+  "kind": "aerial",
+  "label": "D37 deep west \u00b7 southeast orbit (reference pose)",
+  "position": [
+   -1416.36,
+   38.3,
+   3.64
+  ],
+  "target": [
+   -1480,
+   7.67,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 8.304,
+  "focus": [
+   -1480,
+   -0.33,
+   -60
+  ],
+  "referenceReview": "usable-context",
+  "note": "Reference capture d37-orbit-southeast horizontal pose. Camera Y = baked extension terrain 8.30 + 30 m (packet used clamped planning terrain 12.862); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d37-orbit-northeast",
+  "district": "D37",
+  "kind": "aerial",
+  "label": "D37 deep west \u00b7 northeast orbit (reference pose)",
+  "position": [
+   -1416.36,
+   30.21,
+   -123.64
+  ],
+  "target": [
+   -1480,
+   7.67,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 0.207,
+  "focus": [
+   -1480,
+   -0.33,
+   -60
+  ],
+  "referenceReview": "context-limited",
+  "note": "Reference capture d37-orbit-northeast horizontal pose. Camera Y = baked extension terrain 0.21 + 30 m (packet used clamped planning terrain 14.314); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d37-orbit-northwest",
+  "district": "D37",
+  "kind": "aerial",
+  "label": "D37 deep west \u00b7 northwest orbit (reference pose)",
+  "position": [
+   -1543.64,
+   20.69,
+   -123.64
+  ],
+  "target": [
+   -1480,
+   7.67,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": -9.312,
+  "focus": [
+   -1480,
+   -0.33,
+   -60
+  ],
+  "referenceReview": "usable-context",
+  "note": "Reference capture d37-orbit-northwest horizontal pose. Camera Y = baked extension terrain -9.31 + 30 m (packet used clamped planning terrain 14.314); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d38-orbit-southwest",
+  "district": "D38",
+  "kind": "aerial",
+  "label": "D38 deep west \u00b7 southwest orbit (reference pose)",
+  "position": [
+   -1363.64,
+   37.98,
+   3.64
+  ],
+  "target": [
+   -1300.0,
+   17.7,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 7.98,
+  "focus": [
+   -1300.0,
+   9.7,
+   -60
+  ],
+  "referenceReview": "usable-context",
+  "note": "Reference capture d38-orbit-southwest horizontal pose. Camera Y = baked extension terrain 7.98 + 30 m (packet used clamped planning terrain 12.862); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d38-orbit-southeast",
+  "district": "D38",
+  "kind": "aerial",
+  "label": "D38 deep west \u00b7 southeast orbit (reference pose)",
+  "position": [
+   -1236.36,
+   41.05,
+   3.64
+  ],
+  "target": [
+   -1300.0,
+   17.7,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 11.053,
+  "focus": [
+   -1300.0,
+   9.7,
+   -60
+  ],
+  "referenceReview": "context-limited",
+  "note": "Reference capture d38-orbit-southeast horizontal pose. Camera Y = baked extension terrain 11.05 + 30 m (packet used clamped planning terrain 12.862); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d38-orbit-northeast",
+  "district": "D38",
+  "kind": "aerial",
+  "label": "D38 deep west \u00b7 northeast orbit (reference pose)",
+  "position": [
+   -1236.36,
+   42.58,
+   -123.64
+  ],
+  "target": [
+   -1300.0,
+   17.7,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 12.578,
+  "focus": [
+   -1300.0,
+   9.7,
+   -60
+  ],
+  "referenceReview": "context-limited",
+  "note": "Reference capture d38-orbit-northeast horizontal pose. Camera Y = baked extension terrain 12.58 + 30 m (packet used clamped planning terrain 14.314); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d38-orbit-northwest",
+  "district": "D38",
+  "kind": "aerial",
+  "label": "D38 deep west \u00b7 northwest orbit (reference pose)",
+  "position": [
+   -1363.64,
+   36.05,
+   -123.64
+  ],
+  "target": [
+   -1300.0,
+   17.7,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 6.054,
+  "focus": [
+   -1300.0,
+   9.7,
+   -60
+  ],
+  "referenceReview": "usable-context",
+  "note": "Reference capture d38-orbit-northwest horizontal pose. Camera Y = baked extension terrain 6.05 + 30 m (packet used clamped planning terrain 14.314); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d39-orbit-southwest",
+  "district": "D39",
+  "kind": "aerial",
+  "label": "D39 deep west \u00b7 southwest orbit (reference pose)",
+  "position": [
+   -1183.64,
+   43.35,
+   3.64
+  ],
+  "target": [
+   -1120,
+   23.36,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 13.352,
+  "focus": [
+   -1120,
+   15.36,
+   -60
+  ],
+  "referenceReview": "context-limited",
+  "note": "Reference capture d39-orbit-southwest horizontal pose. Camera Y = baked extension terrain 13.35 + 30 m (packet used clamped planning terrain 12.862); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d39-orbit-southeast",
+  "district": "D39",
+  "kind": "aerial",
+  "label": "D39 deep west \u00b7 southeast orbit (reference pose)",
+  "position": [
+   -1056.36,
+   46.97,
+   3.64
+  ],
+  "target": [
+   -1120,
+   23.36,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 16.975,
+  "focus": [
+   -1120,
+   15.36,
+   -60
+  ],
+  "referenceReview": "context-limited",
+  "note": "Reference capture d39-orbit-southeast horizontal pose. Camera Y = baked extension terrain 16.97 + 30 m (packet used clamped planning terrain 12.862); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d39-orbit-northeast",
+  "district": "D39",
+  "kind": "aerial",
+  "label": "D39 deep west \u00b7 northeast orbit (reference pose)",
+  "position": [
+   -1056.36,
+   46.85,
+   -123.64
+  ],
+  "target": [
+   -1120,
+   23.36,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 16.849,
+  "focus": [
+   -1120,
+   15.36,
+   -60
+  ],
+  "referenceReview": "usable-context",
+  "note": "Reference capture d39-orbit-northeast horizontal pose. Camera Y = baked extension terrain 16.85 + 30 m (packet used clamped planning terrain 14.314); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d39-orbit-northwest",
+  "district": "D39",
+  "kind": "aerial",
+  "label": "D39 deep west \u00b7 northwest orbit (reference pose)",
+  "position": [
+   -1183.64,
+   43.73,
+   -123.64
+  ],
+  "target": [
+   -1120,
+   23.36,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 13.729,
+  "focus": [
+   -1120,
+   15.36,
+   -60
+  ],
+  "referenceReview": "usable-context",
+  "note": "Reference capture d39-orbit-northwest horizontal pose. Camera Y = baked extension terrain 13.73 + 30 m (packet used clamped planning terrain 14.314); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d40-orbit-southwest",
+  "district": "D40",
+  "kind": "aerial",
+  "label": "D40 deep west \u00b7 southwest orbit (reference pose)",
+  "position": [
+   -958.64,
+   46.54,
+   3.64
+  ],
+  "target": [
+   -895,
+   24.27,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 16.537,
+  "focus": [
+   -895,
+   16.27,
+   -60
+  ],
+  "referenceReview": "context-limited",
+  "note": "Reference capture d40-orbit-southwest horizontal pose. Camera Y = baked extension terrain 16.54 + 30 m (packet used clamped planning terrain 12.862); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d40-orbit-southeast",
+  "district": "D40",
+  "kind": "aerial",
+  "label": "D40 deep west \u00b7 southeast orbit (reference pose)",
+  "position": [
+   -831.36,
+   44.97,
+   3.64
+  ],
+  "target": [
+   -895,
+   24.27,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 14.965,
+  "focus": [
+   -895,
+   16.27,
+   -60
+  ],
+  "referenceReview": "usable-context",
+  "note": "Reference capture d40-orbit-southeast horizontal pose. Camera Y = baked extension terrain 14.97 + 30 m (packet used clamped planning terrain 12.862); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d40-orbit-northeast",
+  "district": "D40",
+  "kind": "aerial",
+  "label": "D40 deep west \u00b7 northeast orbit (reference pose)",
+  "position": [
+   -831.36,
+   45.91,
+   -123.64
+  ],
+  "target": [
+   -895,
+   24.27,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 15.906,
+  "focus": [
+   -895,
+   16.27,
+   -60
+  ],
+  "referenceReview": "context-limited",
+  "note": "Reference capture d40-orbit-northeast horizontal pose. Camera Y = baked extension terrain 15.91 + 30 m (packet used clamped planning terrain 14.314); target Y = extension terrain + 8 m. Not surveyed AGL."
+ },
+ {
+  "id": "d40-orbit-northwest",
+  "district": "D40",
+  "kind": "aerial",
+  "label": "D40 deep west \u00b7 northwest orbit (reference pose)",
+  "position": [
+   -958.64,
+   47.68,
+   -123.64
+  ],
+  "target": [
+   -895,
+   24.27,
+   -60
+  ],
+  "fov": 60.0,
+  "groundY": 17.676,
+  "focus": [
+   -895,
+   16.27,
+   -60
+  ],
+  "referenceReview": "usable-context",
+  "note": "Reference capture d40-orbit-northwest horizontal pose. Camera Y = baked extension terrain 17.68 + 30 m (packet used clamped planning terrain 14.314); target Y = extension terrain + 8 m. Not surveyed AGL."
+ }
+]

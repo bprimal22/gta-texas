@@ -1,0 +1,15 @@
+[
+ {
+  "file": "public/data/campus.json paths (or a b14-owned road-finish mechanism) + lib/campus/road-infill.ts",
+  "change": "Import street/sidewalk centrelines for z 1288..1536 (Congress Ave, 11th/12th/13th St, Colorado, Lavaca, Brazos, San Jacinto, Trinity, Red River, I-35 frontage) so the generated road infill paves the strip; they would lie on the b14 strip patch (world.terrain.height already returns it there).",
+  "reason": "Round 2 added the strip ground (b14 strip-ground.ts) and the City 2023 buildings, but there are no path records south of z 1288: every street in the strip renders as lawn terrain.",
+  "evidence": "research/whole-campus-92/b14-capitol/EVIDENCE.md round 2 ('No streets'); campus.json bounds z <= 1288",
+  "supersedes": "round-1 requests 1-2 (terrain extension + City footprints) - implemented as b14 block data per the integrator decision"
+ },
+ {
+  "file": "public/assets/campus/offline-terrain-61.bin.gz (bake) - review only",
+  "change": "REVIEW: the baked terrain sits 2.0-2.6 m below the authored Capitol lawn edge along the west grounds side north of z 1288 (u -112, v 30..55, e.g. x -444 z 1284: baked -2.15 vs lawn 0.58). The b14 strip patch keeps this offset at the z 1288 seam (no step) and fades it out by z 1328.",
+  "reason": "Visible edge step / exposed lawn edge outside the grounds; root terrain data, not b14 data.",
+  "evidence": "research/whole-campus-92/b14-capitol/derived/r2 (block check seamBandEdgeWorst 2.633 at u -112 v 63)"
+ }
+]

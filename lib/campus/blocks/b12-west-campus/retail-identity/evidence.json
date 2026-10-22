@@ -1,0 +1,44 @@
+{
+  "module": "lib/campus/blocks/b12-west-campus/retail-identity/index.ts",
+  "massingBasis": "All four records keep the exact City of Austin 2023 footprint ring and the frozen context.json massing (one flat volume): campus Y = LiDAR groundY datum + USGS 3DEP TX_Central_B1_2017 P95. The 2017 massing is the baseline geometry, NOT a claim that the 2026 buildings match it 1:1. No massing entry is edited.",
+  "photoPolicy": "Reference photographs were collected by the coordinator into .work/retail-references (sha256 + page URLs in .work/retail-references/sources.json). They are research inputs only: no image is shipped or loaded at runtime; colours are hand-read rendered averages and all dimensions not stated below are estimates from pixel proportions.",
+  "sites": {
+    "canes": {
+      "key": "718451:1176", "address": "415 W Martin Luther King Jr Blvd", "confidence": "high (OSM way 381834157 name/address + location-specific photo)",
+      "official": "https://locations.raisingcanes.com/tx/austin/415-west-martin-luther-king-blvd",
+      "photos": [{ "file": "canes-415.jpg", "page": "https://www.tripadvisor.com/Restaurant_Review-g30196-d6714437-Reviews-Raising_Cane_s_Chicken_Fingers-Austin_Texas.html", "captureDate": "unverified" }],
+      "frozenTopY": 8.2, "lidar": "P50 6.88, P90 7.25, P95 8.13, max 8.56 (campus Y)",
+      "modelled": ["terra-cotta orange entry tower on the MLK (north) short edge with an arched top: circular arc, crown = frozen top 8.2 (photo crown is higher; capped by request), dark arched coping band 0.15 m out", "entry recess 2.5 m wide, 1.5 m deep (inside the ring) with glass door + sidelites (detail)", "black box canopy 0.45 m out, underside >= ground + 2.85 m", "oval CANE'S sign (detail)", "buff brick base to floor + 0.9 m, tan stucco wings, orange wrap 2.4 m onto the side faces with a reveal groove", "wing windows 2.4 x 2.0 m recessed 0.2 m under black standing-seam shed awnings (solid wedge, 0.85 m out, bottom >= ground + 2.85 m)", "drive-thru pickup window + black hood + DRIVE THRU letters on the east face", "dark parapet coping band 0.1 m out"],
+      "notModelled": ["roof railing and taller tower crown (would exceed the frozen 2017 top)", "raised entry ramp / stairs and handrails (no ground change)", "menu boards / drive-thru pylon (outside the ring, unsupported placement)"],
+      "caveats": ["capture date of the photo unknown", "awning count / window positions are estimates per face length"]
+    },
+    "chickfila": {
+      "key": "596959:677", "address": "503 W Martin Luther King Jr Blvd (drive-thru only)", "confidence": "high (OSM way 381834166, 88% of the ring + official restaurant 02992 photo)",
+      "official": "https://www.chick-fil-a.com/locations/tx/martin-luther-king-drive-thru-only",
+      "photos": [{ "file": "cfa-503-official.jpg", "page": "official location page", "captureDate": "unverified (opening-era 'Breakfast now open' banner visible)" }],
+      "frozenTopY": 7.5, "lidar": "P50 6.09, P90 7.41, P95 7.6, max 8.88 (campus Y)",
+      "modelled": ["red-brown brick to the canopy line with recessed storefront bays (0.25 m) between brick piers", "beige upper band with CHICK-FIL-A letters (detail)", "red-brown cornice 0.6 m tall, 0.22 m out", "red curved (quarter-barrel) storefront canopy 1.1 m out, bottom >= ground + 2.85 m", "entry door bay, walk-up order window recess with counter", "red square logo cabinet with white C under the cornice on the MLK face", "drive-thru pickup window with a small red curved canopy on the west face"],
+      "notModelled": ["tall pylon / tower and patio umbrellas (outside the ring or above the frozen top)"],
+      "caveats": ["photo orientation is not geolocated: the storefront canopy is placed on the longest east face (estimate)", "drive-thru-only operation means the walk-up window is the only pedestrian service point (assumption from the page name)"]
+    },
+    "pterrys": {
+      "key": "675359:960", "address": "517 W Martin Luther King Jr Blvd", "confidence": "high (OSM way 381834194; data inventory lists the older pterrys.com/locations/west-mlk URL, same store)",
+      "official": "https://pterrys.com/locations/mlk-517-w-mlk-jr-blvd-austin-texas-78701/",
+      "photos": [{ "file": "pterrys-517-photo.jpg", "page": "https://www.restaurantji.com/tx/austin/p-terrys-burger-stand-22-/", "captureDate": "unknown (bottom-right collage tile = actual exterior)" }, { "file": "pterrys-mlk-2019-render.jpg", "page": "https://austin.culturemap.com/news/restaurants-bars/12-22-19-taco-ranch-campus-location-closed-p-terrys-burger-stand-opening/", "captureDate": "2019 architect rendering (Michael Hsu) = design intent, not as-built" }],
+      "frozenTopY": 7.4, "lidar": "P50 6.23, P90 7.15, P95 7.39, max 8.11, coverage 0.76 (campus Y)",
+      "modelled": ["white box with white coping 0.08 m out", "the two City-ring lobes that trace the umbrella canopies are undercrofts under the frozen roof (soffit = highest lobe ground + 3.4 m) with an aqua rim band 0.15 m out", "aqua inverted-pyramid umbrellas (0.75 m deep) on single aqua columns placed inside the lobe and outside every mapped path corridor: 2 in the north lobe; the east lobe has none because the mapped drive-thru lane covers it", "storefront windows with wood eyebrows, full-height wood-slat infill bays (slats = explicit detail trim)", "wood-clad drive-thru pickup bay with a red-framed window on the east face", "red P.TERRY'S letters with a black drop shadow on the MLK fascia and the west face (detail)"],
+      "notModelled": ["the free-standing lower umbrella canopies of the rendering (the frozen massing caps the whole ring at 7.4)", "patio furniture, planters"],
+      "caveats": ["mapped service lane(s) 1318482717/1318482718/1318482719 overlap the 2023 City ring (pre-existing data conflict, reported by the harness, unchanged)"]
+    },
+    "dominos": {
+      "key": "505467:200", "address": "1900 Guadalupe St (south lobe of the merged City record; 1904 Guadalupe = Monkies Vintage & Thrift)",
+      "confidence": "high (~0.95) that the Domino's building is ring vertices (-518.87,430.11)..(-499.60,431.58) of 505467:200: the OSM Domino's way (1900 Guadalupe, City of Austin import, ref 6601) matches those 10 ring vertices within ~0.2 m",
+      "official": "https://pizza.dominos.com/texas/austin/1900-guadalupe-ave (address still listed; not proof of the physical building)",
+      "photos": [{ "file": "dominos-1900-2022.jpg", "page": "https://www.linkedglenn.com/post/new-austin-developments-in-for-approval-8-29-9-2", "captureDate": "published 2022-09-05 (development proposal; not proof of demolition)" }],
+      "frozenTopY": 8.2, "lidar": "whole merged record: P50 7.73, P90 7.98, P95 8.19, max 11.29 (campus Y)",
+      "modelled": ["cream walls, continuous deep-red fascia 1.5 m tall, 0.18 m out, around the lobe", "forecourt canopy = the lobe's SE block, open on its south / east / north sides under the frozen roof (soffit = top - 1.5 m), downlights (detail)", "thin red posts at its two free corners INSIDE the footprint, each placed only after a bounded clearance test (inside the ring, clear of mapped path corridors)", "recessed storefront glazing and door on the canopy back wall and the block's east face, south window band", "red/blue tile logos and DOMINO'S letters on the fascia (detail)", "unbranded remainder: stucco storefront strip with dark coping and recessed shop windows / doors on the Guadalupe and forecourt faces"],
+      "notModelled": ["the canopy's higher fascia relative to the shop roof (single frozen top)", "the mural wall and parking"],
+      "caveats": ["which faces the canopy covers is interpreted from footprint shape + photo (SE block)", "2026 existence of the building unverified"]
+    }
+  }
+}

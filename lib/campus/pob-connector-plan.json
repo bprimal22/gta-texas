@@ -1,0 +1,31 @@
+{
+  "northWest": [46.14581877916907,-60.36006759294672],
+  "southWest": [45.425352431628866,-51.00959458045281],
+  "southEast": [57.60115631756116,-49.94489820567529],
+  "floor": 2.45,
+  "slabDepth": 0.4,
+  "floorOut": 0.16,
+  "recess": 0.75,
+  "glazingTop": 6.55,
+  "doorHeight": 2.5,
+  "doorWidth": 1.72,
+  "northJamb": 1.05,
+  "southJamb": 0.78,
+  "eaveOut": 0.65,
+  "eave": 6.95,
+  "ridgeDepth": 3,
+  "ridge": 8.55,
+  "roofThickness": 0.18,
+  "roofSideOverhang": 0.08,
+  "sourceCutTop": 9.08,
+  "airOut": 4.85,
+  "airBottom": 4.45,
+  "notes": [
+    "Official UT437 west edge defines entrance width; the south edge joins GDC. The hidden northeast roof/floor corner is the inferred parallelogram completion of those two official edges.",
+    "Floor2.45 meets the actual authored GDC entry surface. A closed0.4m slab backs the interior cut; interior source-ray misses are not treated as evidence of exterior holes.",
+    "The west-facing glazed entrance, dark standing-seam front slope, fascia, soffit, transom and stone/brick jambs follow viewed L001-detail-090 and L179-h090. Recess, door dimensions, exact eave and roof pitch are explicit estimates.",
+    "Low roof observations Y8.02..8.66 guide an inferred8.55m ridge/rear roof. The front eave is photo-informed; exact roof shape is not recovered from the warped scan.",
+    "The upper cut remains9.08 to meet the accepted upper candidate. The exterior4.85m high-air clearance encompasses the measured protruding sheet nearX41.5. It does not reach the pedestrian floor.",
+    "No unrelated GDC east/interior fold is included. The accepted south apron, cap and upper/main facade are never trimmed or moved."
+  ]
+}

@@ -1,0 +1,534 @@
+[
+ {
+  "id": "b13-w-whitis-north",
+  "block": "b13-north-perimeter",
+  "kind": "street",
+  "label": "Whitis Ave north of Dean Keeton looking north-west: the Whitis Court Residence Hall (under construction, official Z20 footprint with its court, 7-floor estimate) where the demolished LLA-LLF apartments stood, Almetris Duren Hall's per-tier red-tile hips beyond",
+  "position": [
+   -283,
+   20.9,
+   -500
+  ],
+  "target": [
+   -330,
+   30,
+   -575
+  ],
+  "fov": 62,
+  "groundY": 19.27,
+  "note": "groundY = game terrain.height at the camera. The new hall is drawn as its finished massing (UT CP1003754, opening fall 2027): height is an estimate, facade a modernist-dorm archetype; the accepted c2/b2 overviews predate the demolition."
+ },
+ {
+  "id": "b13-w-speedway-swg-ase",
+  "block": "b13-north-perimeter",
+  "kind": "street",
+  "label": "Speedway north of Dean Keeton looking north-west: Speedway Garage deck (17.8 m above LiDAR ground) and the Aerospace Engineering Building split out of the same City ring (official ASE polygon, 28.5 m body + 32.3 m tier)",
+  "position": [
+   52,
+   7.9,
+   -505
+  ],
+  "target": [
+   0,
+   22,
+   -565
+  ],
+  "fov": 62,
+  "groundY": 6.28,
+  "note": "City 588195 'SWG' was one ring over SWG + ASE with one garage skin at 34.4 m. Facades remain generic archetypes (garage / modernist-lab)."
+ },
+ {
+  "id": "b13-w-27th-scottish-rite",
+  "block": "b13-north-perimeter",
+  "kind": "street",
+  "label": "West 27th St looking north-west at the Scottish Rite Dormitory (red-tile hip, ridge at the LiDAR P95; was a capped shingle plateau 4.5 m too high) and All Saints' Episcopal Church/School",
+  "position": [
+   -200,
+   20.3,
+   -645
+  ],
+  "target": [
+   -225,
+   28,
+   -705
+  ],
+  "fov": 62,
+  "groundY": 18.64,
+  "note": "Identities from OSM (non-UT). One hip per ring; the dormitory's gables/dormers and the church gables/tower are not modelled."
+ },
+ {
+  "id": "b13-w-aerial-north-campus",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "Aerial from Dean Keeton at Whitis looking north-east over the Whitis Court hall site, Duren Hall, the 27th Street Garage, the SWG/ASE split and the Animal Resources Center / CS5 cooling-tower block",
+  "position": [
+   -300,
+   118,
+   -470
+  ],
+  "target": [
+   -60,
+   10,
+   -640
+  ],
+  "fov": 62,
+  "groundY": 18.32,
+  "note": "Roof heights from the 2017 LiDAR in the same datum (211/211 checked records within tolerance); post-2017 / under-construction records use the City 2023 h or a floor-count estimate."
+ },
+ {
+  "id": "b13-e-duncan-lane",
+  "block": "b13-north-perimeter",
+  "kind": "street",
+  "label": "Duncan Lane looking south-east to 913 Duncan Lane (probable post-2017 rebuild, City 2023 h 9.4-9.6 m instead of the stale 2017 LiDAR tier) and the Keith Lane townhouse rows (UT master-plan default replaced by apartment-lowrise)",
+  "position": [
+   1162.5,
+   19.82,
+   -683.9
+  ],
+  "target": [
+   1190,
+   22.5,
+   -636
+  ],
+  "fov": 62,
+  "groundY": 18.12,
+  "note": "Houses are generic catalogue archetypes (no per-facade source). Identity of private houses unverified; addresses from OSM only."
+ },
+ {
+  "id": "b13-e-hampton-school",
+  "block": "b13-north-perimeter",
+  "kind": "street",
+  "label": "Hampton Road looking north to the school at 3308 Hampton Rd (OSM building=school): LiDAR tiers 5.9 / 8.2 / 12.2 m restated above the LiDAR ground instead of the generator grade",
+  "position": [
+   902.6,
+   6.49,
+   -678.2
+  ],
+  "target": [
+   930,
+   13,
+   -800
+  ],
+  "fov": 60,
+  "groundY": 4.79,
+  "note": "Facade generic (wc-midrise archetype); playground shade structure not modelled."
+ },
+ {
+  "id": "b13-e-32nd-street",
+  "block": "b13-north-perimeter",
+  "kind": "street",
+  "label": "East 32nd Street (g1 houses) looking east: pitched house roofs re-fitted to the 2017 LiDAR (hip ridge at raster P95 closing toward P10, no capped plateau)",
+  "position": [
+   612.4,
+   9.01,
+   -744.8
+  ],
+  "target": [
+   700,
+   11.5,
+   -715
+  ],
+  "fov": 62,
+  "groundY": 7.31,
+  "note": "Street trees and house facades are generic; individual porches/dormers not modelled."
+ },
+ {
+  "id": "b13-e-j1-aerial",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "Aerial over Duncan Lane looking north-east to the 3407 Red River school (City h 31 m slab + penthouse rejected; hip-metal at the LiDAR 10.5 m) and the courtyard apartment complexes",
+  "position": [
+   1150,
+   95,
+   -640
+  ],
+  "target": [
+   1240,
+   22,
+   -790
+  ],
+  "fov": 55,
+  "groundY": 14.87,
+  "note": "School wings, gable steeple and church nave are one generic hip-metal volume; apartment complexes keep their City courtyard rings."
+ },
+ {
+  "id": "b13-d29-orbit-southwest",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D29 actual orbit southwest: matching viewpoint of capture d29-orbit-southwest toward the 2700 Rio Grande apartments (734784:1264, 654096:874, authored)",
+  "position": [
+   -720.84,
+   47.41,
+   -704.36
+  ],
+  "target": [
+   -657.2,
+   25.96,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 17.69,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d29-orbit-southwest.jpg (sha256 beebfcf7e77a4aef..., review roof-only); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d29-orbit-southeast",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D29 actual orbit southeast: matching viewpoint of capture d29-orbit-southeast toward the 2700 Rio Grande apartments (734784:1264, 654096:874, authored)",
+  "position": [
+   -593.56,
+   47.78,
+   -704.36
+  ],
+  "target": [
+   -657.2,
+   25.96,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 17.63,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d29-orbit-southeast.jpg (sha256 3e6209800c189026..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d29-orbit-northeast",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D29 actual orbit northeast: matching viewpoint of capture d29-orbit-northeast toward the 2700 Rio Grande apartments (734784:1264, 654096:874, authored)",
+  "position": [
+   -593.56,
+   47.02,
+   -831.64
+  ],
+  "target": [
+   -657.2,
+   25.96,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 17.09,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d29-orbit-northeast.jpg (sha256 abf0c17d6e848a5e..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d29-orbit-northwest",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D29 actual orbit northwest: matching viewpoint of capture d29-orbit-northwest toward the 2700 Rio Grande apartments (734784:1264, 654096:874, authored)",
+  "position": [
+   -720.84,
+   45.03,
+   -831.64
+  ],
+  "target": [
+   -657.2,
+   25.96,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 14.95,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d29-orbit-northwest.jpg (sha256 aac95ef16ac10b9c..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d30-orbit-southwest",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D30 actual orbit southwest: matching viewpoint of capture d30-orbit-southwest toward Scottish Rite Dormitory (677852:991, authored)",
+  "position": [
+   -309.64,
+   47.69,
+   -704.36
+  ],
+  "target": [
+   -246.0,
+   24.23,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 17.75,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d30-orbit-southwest.jpg (sha256 795dde22c6a8968f..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d30-orbit-southeast",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D30 actual orbit southeast: matching viewpoint of capture d30-orbit-southeast toward Scottish Rite Dormitory (677852:991, authored)",
+  "position": [
+   -182.36,
+   48.77,
+   -704.36
+  ],
+  "target": [
+   -246.0,
+   24.23,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 18.75,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d30-orbit-southeast.jpg (sha256 dd55955174226e53..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d30-orbit-northeast",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D30 actual orbit northeast: matching viewpoint of capture d30-orbit-northeast toward Scottish Rite Dormitory (677852:991, authored)",
+  "position": [
+   -182.36,
+   35.54,
+   -831.64
+  ],
+  "target": [
+   -246.0,
+   24.23,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 5.39,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d30-orbit-northeast.jpg (sha256 3b9d8b442935bc1f..., review context-limited); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d30-orbit-northwest",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D30 actual orbit northwest: matching viewpoint of capture d30-orbit-northwest toward Scottish Rite Dormitory (677852:991, authored)",
+  "position": [
+   -309.64,
+   43.01,
+   -831.64
+  ],
+  "target": [
+   -246.0,
+   24.23,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 13.1,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d30-orbit-northwest.jpg (sha256 7271b1bd994e040d..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d31-orbit-southwest",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D31 actual orbit southwest: matching viewpoint of capture d31-orbit-southwest toward the courtyard apartments 717036:1152 and red-tile house 529398:335 (authored)",
+  "position": [
+   307.16,
+   33.9,
+   -704.36
+  ],
+  "target": [
+   370.8,
+   18.8,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 3.96,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d31-orbit-southwest.jpg (sha256 33413cf0bdfc7f51..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d31-orbit-southeast",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D31 actual orbit southeast: matching viewpoint of capture d31-orbit-southeast toward the courtyard apartments 717036:1152 and red-tile house 529398:335 (authored)",
+  "position": [
+   434.44,
+   39.58,
+   -704.36
+  ],
+  "target": [
+   370.8,
+   18.8,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 9.24,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d31-orbit-southeast.jpg (sha256 2fbfefe2726ac53b..., review context-limited); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d31-orbit-northeast",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D31 actual orbit northeast: matching viewpoint of capture d31-orbit-northeast toward the courtyard apartments 717036:1152 and red-tile house 529398:335 (authored)",
+  "position": [
+   434.44,
+   44.79,
+   -831.64
+  ],
+  "target": [
+   370.8,
+   18.8,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 14.9,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d31-orbit-northeast.jpg (sha256 f047249dd5826660..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d31-orbit-northwest",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D31 actual orbit northwest: matching viewpoint of capture d31-orbit-northwest toward the courtyard apartments 717036:1152 and red-tile house 529398:335 (authored)",
+  "position": [
+   307.16,
+   34.57,
+   -831.64
+  ],
+  "target": [
+   370.8,
+   18.8,
+   -768
+  ],
+  "fov": 60.0,
+  "groundY": 4.9,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d31-orbit-northwest.jpg (sha256 b93cc431b9a791a4..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d32-orbit-southwest",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D32 actual orbit southwest: matching viewpoint of capture d32-orbit-southwest toward the stuccoed tile-roof houses 614187:743 / 569864:510 and their NW porch (authored)",
+  "position": [
+   512.76,
+   30.21,
+   -512.36
+  ],
+  "target": [
+   576.4,
+   10.73,
+   -576
+  ],
+  "fov": 60.0,
+  "groundY": 0.18,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d32-orbit-southwest.jpg (sha256 291b60aa2e50a968..., review context-limited); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d32-orbit-southeast",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D32 actual orbit southeast: matching viewpoint of capture d32-orbit-southeast toward the stuccoed tile-roof houses 614187:743 / 569864:510 and their NW porch (authored)",
+  "position": [
+   640.04,
+   29.41,
+   -512.36
+  ],
+  "target": [
+   576.4,
+   10.73,
+   -576
+  ],
+  "fov": 60.0,
+  "groundY": -0.47,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d32-orbit-southeast.jpg (sha256 5e4703103e036eea..., review context-limited); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d32-orbit-northeast",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D32 actual orbit northeast: matching viewpoint of capture d32-orbit-northeast toward the stuccoed tile-roof houses 614187:743 / 569864:510 and their NW porch (authored)",
+  "position": [
+   640.04,
+   36.87,
+   -639.64
+  ],
+  "target": [
+   576.4,
+   10.73,
+   -576
+  ],
+  "fov": 60.0,
+  "groundY": 6.85,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d32-orbit-northeast.jpg (sha256 aab940cbaba81c26..., review context-limited); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d32-orbit-northwest",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D32 actual orbit northwest: matching viewpoint of capture d32-orbit-northwest toward the stuccoed tile-roof houses 614187:743 / 569864:510 and their NW porch (authored)",
+  "position": [
+   512.76,
+   33.26,
+   -639.64
+  ],
+  "target": [
+   576.4,
+   10.73,
+   -576
+  ],
+  "fov": 60.0,
+  "groundY": 3.0,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d32-orbit-northwest.jpg (sha256 599e9d735842a1d3..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d33-orbit-southwest",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D33 actual orbit southwest: matching viewpoint of capture d33-orbit-southwest toward the buff-brick school 587556:560 (authored)",
+  "position": [
+   923.96,
+   36.23,
+   -704.36
+  ],
+  "target": [
+   987.6,
+   18.11,
+   -768.0
+  ],
+  "fov": 60.0,
+  "groundY": 5.93,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d33-orbit-southwest.jpg (sha256 c00fffb42f897785..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d33-orbit-southeast",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D33 actual orbit southeast: matching viewpoint of capture d33-orbit-southeast toward the buff-brick school 587556:560 (authored)",
+  "position": [
+   1051.24,
+   41.42,
+   -704.36
+  ],
+  "target": [
+   987.6,
+   18.11,
+   -768.0
+  ],
+  "fov": 60.0,
+  "groundY": 11.16,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d33-orbit-southeast.jpg (sha256 059105b9996669a6..., review context-limited); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d33-orbit-northeast",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D33 actual orbit northeast: matching viewpoint of capture d33-orbit-northeast toward the buff-brick school 587556:560 (authored)",
+  "position": [
+   1051.24,
+   41.36,
+   -831.64
+  ],
+  "target": [
+   987.6,
+   18.11,
+   -768.0
+  ],
+  "fov": 60.0,
+  "groundY": 11.32,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d33-orbit-northeast.jpg (sha256 256e63f561754c16..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ },
+ {
+  "id": "b13-d33-orbit-northwest",
+  "block": "b13-north-perimeter",
+  "kind": "aerial",
+  "label": "D33 actual orbit northwest: matching viewpoint of capture d33-orbit-northwest toward the buff-brick school 587556:560 (authored)",
+  "position": [
+   923.96,
+   37.56,
+   -831.64
+  ],
+  "target": [
+   987.6,
+   18.11,
+   -768.0
+  ],
+  "fov": 60.0,
+  "groundY": 7.21,
+  "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d33-orbit-northwest.jpg (sha256 63282fbec0288f2c..., review context-limited); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; the reference image is never a runtime texture."
+ }
+]

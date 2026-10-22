@@ -1,0 +1,1185 @@
+{
+ "generatedBy": "scripts/harness/b12-highrise-identity-check.ts",
+ "status": "reference-guided facade identity; not a survey, not 1:1",
+ "criteria": "campus.json centre x < -360 and City h > 45 m (21 records, incl. Dobie b05) + Union / Waterloo (measured massing top > 45 m, City h < 45) + deep-West raw > 45 m (3) vs runtime (2)",
+ "original21": 21,
+ "records": [
+  {
+   "key": "484112:83",
+   "name": "Dobie Center (b05)",
+   "owner": "b05-southmall",
+   "cityH": 92.76,
+   "center": [
+    -401.11,
+    301.31
+   ],
+   "massTop": null,
+   "disposition": "delegated-other-lane",
+   "identity": null,
+   "basis": null,
+   "evidence": [],
+   "observed": null,
+   "limits": "separate b05 Dobie lane (not touched here)",
+   "trim": null,
+   "archetypes": null,
+   "rootPatches": null,
+   "measured": null
+  },
+  {
+   "key": "486277:108",
+   "name": "William P. Clements, Jr. Building (tower volumes)",
+   "owner": "b12-west-campus",
+   "cityH": 73.79,
+   "center": [
+    -487.45,
+    868.89
+   ],
+   "massTop": 72.8,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "named-unverified",
+    "source": "b12 catalog note (City ring spans 2 OSM buildings)"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    "Cesium research frames d28-orbit-northwest, d23-orbit-northeast (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/486277-108.jpg)"
+   ],
+   "observed": "pale precast with horizontal dark ribbon windows; stepped upper mass",
+   "limits": "only volumes >= 35 m above the datum get the profile (the merged 7-level neighbour wing keeps state-office); the stepped terraces are the existing LiDAR tiers",
+   "trim": null,
+   "archetypes": {
+    "catalog": null,
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 21.5,
+      "archetype": null
+     },
+     {
+      "index": 1,
+      "role": "tier",
+      "bottom": 21.5,
+      "top": 62.3,
+      "archetype": "b12-west-campus:clements"
+     },
+     {
+      "index": 2,
+      "role": "tier",
+      "bottom": 21.5,
+      "top": 62.3,
+      "archetype": "b12-west-campus:clements"
+     },
+     {
+      "index": 3,
+      "role": "tier",
+      "bottom": 21.5,
+      "top": 72.8,
+      "archetype": "b12-west-campus:clements"
+     },
+     {
+      "index": 4,
+      "role": "tier",
+      "bottom": 21.5,
+      "top": 67.3,
+      "archetype": "b12-west-campus:clements"
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.276,
+     "now": 0.36,
+     "ratio": 1.3,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#e2e0d9",
+     "rendered": "#e4e2dc",
+     "prior": "#ddd3c3",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "486699:114",
+   "name": "Signature 1909, 1909 Rio Grande St",
+   "owner": "b12-west-campus",
+   "cityH": 57.97,
+   "center": [
+    -733.15,
+    266.67
+   ],
+   "massTop": 56.77,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "named-unverified",
+    "source": "b12 catalog note (listing only)"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    "Cesium research frames west-extension-c4-r5, d27-orbit-southeast, b12-r0-a4-30m-r2 (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/486699-114.jpg)"
+   ],
+   "observed": "white panels, horizontal light blue-grey window bands",
+   "limits": "official gallery (prospectportal) returned HTTP 403 (not viewed); Cesium mesh only",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b12-west-campus:signature-1909",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 56.77,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.221,
+     "now": 0.41,
+     "ratio": 1.85,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#e5e6e3",
+     "rendered": "#e5e6e3",
+     "prior": "#dbd1c0",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "490461:139",
+   "name": "Torre",
+   "owner": "b12-west-campus",
+   "cityH": 57.67,
+   "center": [
+    -691.65,
+    274.88
+   ],
+   "massTop": 56.47,
+   "disposition": "retained-authored-verified",
+   "identity": null,
+   "basis": null,
+   "evidence": [
+    "west-campus-dataset-pass/photos/torre-02.jpg"
+   ],
+   "observed": null,
+   "limits": "white body with dark punched windows and glazed amenity band is the photographed finish; unchanged (genuinely white)",
+   "trim": null,
+   "archetypes": null,
+   "rootPatches": null,
+   "measured": null
+  },
+  {
+   "key": "503131:167",
+   "name": "21 Rio, 2101 Rio Grande St",
+   "owner": "b12-west-campus",
+   "cityH": 73.17,
+   "center": [
+    -728.35,
+    200.33
+   ],
+   "massTop": 72.3,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "named-unverified",
+    "source": "b12 catalog note (OSM 21 levels)"
+   },
+   "basis": "estimate",
+   "evidence": [
+    "Cesium research frames b12-r0-a4-30m-r2, d26-orbit-northwest, d27-orbit-southeast (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/503131-167.jpg)"
+   ],
+   "observed": "white panels, wide glazed bays, glass band",
+   "limits": "adjacent towers overlap in the oblique frames; facade split per face not expressed; low confidence",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b12-west-campus:21-rio",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 67.1,
+      "archetype": null
+     },
+     {
+      "index": 1,
+      "role": "mech",
+      "bottom": 67.1,
+      "top": 72.3,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.257,
+     "now": 0.508,
+     "ratio": 1.98,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#e6e6e2",
+     "rendered": "#e4e4df",
+     "prior": "#dacebb",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "525341:252",
+   "name": "2400 Nueces + Nueces Garage",
+   "owner": "b12-west-campus",
+   "cityH": 59.49,
+   "center": [
+    -604.04,
+    -257.68
+   ],
+   "massTop": 57.4,
+   "disposition": "retained-authored-verified",
+   "identity": null,
+   "basis": null,
+   "evidence": [
+    "west-campus-dataset-pass/photos/nueces2400-00.jpg"
+   ],
+   "observed": null,
+   "limits": "maroon / tan / zinc tiers, balconies and multicolour garage slats match; unchanged",
+   "trim": null,
+   "archetypes": null,
+   "rootPatches": null,
+   "measured": null
+  },
+  {
+   "key": "525515:254",
+   "name": "TMA office + union garage",
+   "owner": "b12-west-campus",
+   "cityH": 48.87,
+   "center": [
+    -624.77,
+    923.3
+   ],
+   "massTop": 44.8,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "confirmed-by-root",
+    "source": "root reconciliation: 3-level garage + 10-level TMA office in one City union"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    "Cesium research frames b12-r0-a8-30m, d28-orbit-northwest, b14-r0-a1-30m (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/525515-254.jpg)"
+   ],
+   "observed": "taupe-brown punched-window office beside an open precast garage",
+   "limits": "office = the tallest non-mech volume, garage = the other non-mech volumes (podium/tower split preserved; no ring changes)",
+   "trim": null,
+   "archetypes": {
+    "catalog": null,
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 15.1,
+      "archetype": "b12-west-campus:tma-garage"
+     },
+     {
+      "index": 1,
+      "role": "tier",
+      "bottom": 15.1,
+      "top": 44.8,
+      "archetype": "b12-west-campus:tma-office"
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.383,
+     "now": 0.271,
+     "ratio": 0.71,
+     "expect": "less",
+     "ok": true
+    },
+    "colour": {
+     "source": "#8f7466",
+     "rendered": "#987b6b",
+     "prior": "#cdc8bd",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "525738:260",
+   "name": "DoubleTree Suites Austin Downtown Capitol, 303 W 15th St",
+   "owner": "b12-west-campus",
+   "cityH": 57.74,
+   "center": [
+    -525.57,
+    963.07
+   ],
+   "massTop": 52.7,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "named-unverified",
+    "source": "b12 catalog note (OSM 15 levels)"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    "Cesium research frames b12-r0-b8-30m, d34-orbit-southeast, b14-r0-a1-30m (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/525738-260.jpg)"
+   ],
+   "observed": "beige precast, small punched windows; pink brick portion",
+   "limits": "SXSW Center glass ribbons sit next to it in the same frames; the pink-brick portion is not expressed (volume split unknown)",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b12-west-campus:doubletree",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 3.4,
+      "archetype": null
+     },
+     {
+      "index": 1,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 52.7,
+      "archetype": null
+     },
+     {
+      "index": 2,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 11.5,
+      "archetype": null
+     },
+     {
+      "index": 3,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 48.4,
+      "archetype": null
+     },
+     {
+      "index": 4,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 48.4,
+      "archetype": null
+     },
+     {
+      "index": 5,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 44.9,
+      "archetype": null
+     },
+     {
+      "index": 6,
+      "role": "tier",
+      "bottom": 3.4,
+      "top": 44.9,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.378,
+     "now": 0.289,
+     "ratio": 0.76,
+     "expect": "less",
+     "ok": true
+    },
+    "colour": {
+     "source": "#cbbfa9",
+     "rendered": "#cec3ad",
+     "prior": "#ccc7bb",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "528581:317",
+   "name": "Hilton Garden Inn Austin University Capitol District, 301 W 17th St",
+   "owner": "b11-south-medical",
+   "cityH": 66.44,
+   "center": [
+    -427.83,
+    748.63
+   ],
+   "massTop": null,
+   "disposition": "outside-parent-patch",
+   "identity": {
+    "status": "named-unverified",
+    "source": "b11 catalog (basis known, OSM way 960180825; DPR / HRI pages)"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    "Cesium research frames b12-r0-b7-30m, priority-14-r2, d28-orbit-southwest (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/528581-317.jpg)"
+   ],
+   "observed": "pale precast hotel with punched windows in vertical groups; beige stone section",
+   "limits": "outside parent (b11-south-medical owns the record): delivered as a b11 patch only; the beige section is not expressed",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b11-south-medical:hilton-garden-inn-17th",
+    "volumes": []
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.434,
+     "now": 0.289,
+     "ratio": 0.67,
+     "expect": "less",
+     "ok": true
+    },
+    "colour": {
+     "source": "#dedfdc",
+     "rendered": "#dddedb",
+     "prior": "#c9c3b6",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "550397:416",
+   "name": "Skyloft",
+   "owner": "b12-west-campus",
+   "cityH": 68.03,
+   "center": [
+    -612.58,
+    -12.05
+   ],
+   "massTop": 68.03,
+   "disposition": "authored-root-patch",
+   "identity": null,
+   "basis": null,
+   "evidence": [
+    "west-campus-dataset-pass/photos/skyloft-01.jpg"
+   ],
+   "observed": null,
+   "limits": "skyloft-01 shows cool white / light-grey panels; the authored N/S-face colour is warm sand. One-literal colour patch proposed (medium confidence: single photo, daylight white balance)",
+   "trim": null,
+   "archetypes": null,
+   "rootPatches": [
+    {
+     "file": "lib/campus/blocks/b12-west-campus/towers.ts",
+     "old": "  const pale = C('#dcd7cb'), warm = C('#c9b796');",
+     "new": "  const pale = C('#dcd7cb'), warm = C('#c4c7c5'); // N/S faces: cool light-grey panels in skyloft-01 (was warm sand #c9b796)",
+     "why": "source colour correction; geometry, windows and colliders unchanged"
+    }
+   ],
+   "measured": null
+  },
+  {
+   "key": "554717:450",
+   "name": "Rise at West Campus, 2206 Nueces St",
+   "owner": "b12-west-campus",
+   "cityH": 85.28,
+   "center": [
+    -672.34,
+    26.5
+   ],
+   "massTop": 84.08,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "named-unverified",
+    "source": "b12 catalog note; contractor page https://gmitexas.com/project/rise-at-west-campus/"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    ".work/references/rise-gmi-1-683x1024.jpg (https://gmitexas.com/wp-content/uploads/2026/06/GMI_RISE_Kristian-Alveo_Hires-1-683x1024.jpg)",
+    "Cesium research frames d26-orbit-southeast, west-extension-c4-r4 (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/554717-450.jpg)"
+   ],
+   "observed": "white/very light grey panel body with dense dark and blue punched windows; charcoal podium screen; recessed glazed base",
+   "limits": "pale body is accurate (kept pale); the official Entrata gallery returned HTTP 403 (not viewed); blue vertical window stacks and the charcoal corner recess are not expressed separately",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b12-west-campus:rise",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 84.08,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.26,
+     "now": 0.459,
+     "ratio": 1.76,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#e4e4e0",
+     "rendered": "#e1e1dd",
+     "prior": "#d9cdbb",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "592244:630",
+   "name": "Moody Bank Tower",
+   "owner": "b12-west-campus",
+   "cityH": 72.52,
+   "center": [
+    -587.95,
+    860.3
+   ],
+   "massTop": 71.8,
+   "disposition": "authored-root-patch",
+   "identity": null,
+   "basis": null,
+   "evidence": [
+    ".work/references/linden-architect-aerial.jpg (background, Rhode Partners)"
+   ],
+   "observed": null,
+   "limits": "tan piers (#bca889) and dark slots (#4a4643) match; the black crown sign band is missing (top band all pale). Patch splits the existing flush 3.6 m top-band quad: pale lower 1.4 m, black upper 2.2 m (band height estimated from the photo); same plane, so colliders keep the same surface. Note: the b12 harness moodyUpperWalls family tally will gain a metal share",
+   "trim": null,
+   "archetypes": null,
+   "rootPatches": [
+    {
+     "file": "lib/campus/blocks/b12-west-campus/pbr.ts",
+     "old": "mbSoffit: ['#d8d2c4', 'limestone'],",
+     "new": "mbSoffit: ['#d8d2c4', 'limestone'], mbCrown: ['#1f2022', 'metal'],",
+     "why": "palette entry for the black crown sign band (PBR family metal)"
+    },
+    {
+     "file": "lib/campus/blocks/b12-west-campus/district.ts",
+     "old": "    Q(e, 0, e.L, yT, T, 0, 0, col('mbBand'), e.n);",
+     "new": "    Q(e, 0, e.L, yT, T - 2.2, 0, 0, col('mbBand'), e.n);\n    Q(e, 0, e.L, T - 2.2, T, 0, 0, col('mbCrown'), e.n); // black crown sign band (linden-architect-aerial background)",
+     "why": "crown band colour; same flush plane, no new relief"
+    }
+   ],
+   "measured": null
+  },
+  {
+   "key": "597128:680",
+   "name": "Travis County Civil and Family Courts Facility, 1700 Guadalupe St",
+   "owner": "b12-west-campus",
+   "cityH": 82.79,
+   "center": [
+    -512.83,
+    645.96
+   ],
+   "massTop": 81.59,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "named-unverified",
+    "source": "b12 catalog note"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    "Cesium research frames b12-r0-a7-30m, d10-orbit-northeast (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/597128-680.jpg)"
+   ],
+   "observed": "silver-white panels, continuous dark vertical glass slots, glass corner",
+   "limits": "Cesium mesh only (no ground photo); the glass corner is not expressed; storey height 4.5 m is an estimate",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b12-west-campus:travis-courts",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 81.59,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.419,
+     "now": 0.354,
+     "ratio": 0.85,
+     "expect": "similar",
+     "ok": true
+    },
+    "colour": {
+     "source": "#d2d5d4",
+     "rendered": "#d1d4d3",
+     "prior": "#c9c4b7",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "622603:771",
+   "name": "Ion Austin, 2100 San Antonio St (tower volumes)",
+   "owner": "b12-west-campus",
+   "cityH": 65.52,
+   "center": [
+    -603.52,
+    166.9
+   ],
+   "massTop": 63.6,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "confirmed-by-root",
+    "source": "root reconciliation: OSM way 516283026 Ion Austin (98 % inside the City ring, 29 % of it; the host union also holds 2103 Nueces, 382 m2)"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    "Cesium research frames b12-r0-a4-30m-r2, d26-orbit-northwest (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/622603-771.jpg)",
+    ".work/references/frames/multi-b12-r0-a4-30m-r2.jpg"
+   ],
+   "observed": "off-white tower with red-brick vertical piers / end walls; red-brick garage podium; teal crown caps",
+   "limits": "only the tall volumes (>= 30 m above datum) get the profile; the shared main volume (podium + the 2103 Nueces wing) keeps its prior archetype; brick piers are expressed only as brick trim bands",
+   "trim": null,
+   "archetypes": {
+    "catalog": null,
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 9.3,
+      "archetype": null
+     },
+     {
+      "index": 1,
+      "role": "tier",
+      "bottom": 9.3,
+      "top": 56.6,
+      "archetype": "b12-west-campus:ion"
+     },
+     {
+      "index": 2,
+      "role": "tier",
+      "bottom": 9.3,
+      "top": 20.8,
+      "archetype": null
+     },
+     {
+      "index": 3,
+      "role": "mech",
+      "bottom": 9.3,
+      "top": 24.7,
+      "archetype": null
+     },
+     {
+      "index": 4,
+      "role": "mech",
+      "bottom": 9.3,
+      "top": 24.7,
+      "archetype": null
+     },
+     {
+      "index": 5,
+      "role": "mech",
+      "bottom": 9.3,
+      "top": 12.1,
+      "archetype": null
+     },
+     {
+      "index": 6,
+      "role": "mech",
+      "bottom": 9.3,
+      "top": 29.1,
+      "archetype": null
+     },
+     {
+      "index": 7,
+      "role": "mech",
+      "bottom": 9.3,
+      "top": 63.6,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.23,
+     "now": 0.282,
+     "ratio": 1.22,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#e5e1d6",
+     "rendered": "#e8e5db",
+     "prior": "#dfd5c6",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "641335:834",
+   "name": "Villas on Rio, 2111 Rio Grande St",
+   "owner": "b12-west-campus",
+   "cityH": 57.25,
+   "center": [
+    -721.57,
+    149.74
+   ],
+   "massTop": 56.05,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "named-unverified",
+    "source": "b12 catalog note (listing only)"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    "Cesium research frames b12-r0-a4-30m, d26-orbit-northwest (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/641335-834.jpg)",
+    ".work/references/frames/multi-b12-r0-a4-30m-r2.jpg"
+   ],
+   "observed": "white sawtooth facade, dense dark punched windows (diagonal pattern), teal glass side",
+   "limits": "the sawtooth plan and diagonal window pattern are not expressible by the generator; the teal glass side is not expressed",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b12-west-campus:villas-on-rio",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 56.05,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.239,
+     "now": 0.324,
+     "ratio": 1.35,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#e8e8e4",
+     "rendered": "#e9e9e5",
+     "prior": "#ded3c0",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "657418:943",
+   "name": "The Castilian",
+   "owner": "b12-west-campus",
+   "cityH": 63.25,
+   "center": [
+    -503.87,
+    -135.74
+   ],
+   "massTop": 61.2,
+   "disposition": "retained-authored-verified",
+   "identity": null,
+   "basis": null,
+   "evidence": [
+    "west-campus-dataset-pass/photos/castilian-10.jpg"
+   ],
+   "observed": null,
+   "limits": "pale tower piers with dark vertical glazing, blue-grey finned glass podium and dark band match; unchanged (genuinely light)",
+   "trim": null,
+   "archetypes": null,
+   "rootPatches": null,
+   "measured": null
+  },
+  {
+   "key": "683551:996",
+   "name": "The Linden, 313 W 17th St",
+   "owner": "b12-west-campus",
+   "cityH": 100.96,
+   "center": [
+    -473.68,
+    738.58
+   ],
+   "massTop": 99.76,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "named-unverified",
+    "source": "b12 catalog note (OSM 28 levels); architect gallery https://www.rhodepartners.com/the-linden/"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    ".work/references/linden-architect-aerial.jpg (https://www.rhodepartners.com/the-linden/, root-acquired)",
+    "Cesium research frames d28-orbit-southwest, priority-14-r2 (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/683551-996.jpg)"
+   ],
+   "observed": "tower: storey-high glass bays (blue/teal by sky reflection) between ~0.6 m light-taupe piers and thin slab bands; dark open amenity level; ribbed pale-silver podium screen ~8 storeys; ribbed metal crown screen",
+   "limits": "generator ground storey is capped at 15 m, so the podium screen reads to 15 m only (the real screen reaches ~25 m); the dark amenity level and crown screen are not expressed; glass tint is the shared context glass",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b12-west-campus:linden",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 99.76,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.435,
+     "now": 0.611,
+     "ratio": 1.41,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#d8d0c3",
+     "rendered": "#d5cbbe",
+     "prior": "#c5bfb3",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "697152:1015",
+   "name": "Inspire on 22nd, 2200 Nueces St",
+   "owner": "b12-west-campus",
+   "cityH": 56.88,
+   "center": [
+    -674.6,
+    75.8
+   ],
+   "massTop": 55.68,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "confirmed-by-root",
+    "source": "root reconciliation: OSM way 380922461, 97 % matched"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    "Cesium research frames d26-orbit-northeast, b12-r0-a4-30m, west-extension-c4-r4 (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/697152-1015.jpg)"
+   ],
+   "observed": "light grey panels, charcoal vertical bands, teal-tinted windows",
+   "limits": "charcoal vertical bands expressed only as charcoal trim/base (no per-stripe colour)",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b12-west-campus:inspire",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 55.68,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.24,
+     "now": 0.447,
+     "ratio": 1.86,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#cfd1cf",
+     "rendered": "#cdcfcd",
+     "prior": "#dacfbc",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "717464:1161",
+   "name": "SXSW Center, 1400 Lavaca St",
+   "owner": "b12-west-campus",
+   "cityH": 55.15,
+   "center": [
+    -536.7,
+    997.95
+   ],
+   "massTop": 53.95,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "confirmed-by-root",
+    "source": "root reconciliation"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    "Cesium research frames b12-r0-b8-30m, d34-orbit-southeast, b14-r0-a1-30m (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/717464-1161.jpg)"
+   ],
+   "observed": "glass ribbons + pale spandrels, pale ribbed podium screen",
+   "limits": "podium screen height (12 m) estimated from the frames",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b12-west-campus:sxsw-center",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 53.95,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.405,
+     "now": 0.603,
+     "ratio": 1.49,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#b9bdbf",
+     "rendered": "#b7babc",
+     "prior": "#c6c2b6",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "732897:1231",
+   "name": "Moontower",
+   "owner": "b12-west-campus",
+   "cityH": 56.82,
+   "center": [
+    -574.32,
+    47.91
+   ],
+   "massTop": 55.62,
+   "disposition": "retained-authored-verified",
+   "identity": null,
+   "basis": null,
+   "evidence": [
+    "west-campus-dataset-pass/photos/moontower-architect-01.jpg"
+   ],
+   "observed": null,
+   "limits": "white offset panels on a dark body, glass corner column and orange crown frame match the photo; unchanged",
+   "trim": null,
+   "archetypes": null,
+   "rootPatches": null,
+   "measured": null
+  },
+  {
+   "key": "735333:1272",
+   "name": "Lark Austin (probable), 2100 Nueces St",
+   "owner": "b12-west-campus",
+   "cityH": 60.89,
+   "center": [
+    -685.92,
+    204.2
+   ],
+   "massTop": 59.69,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "probable",
+    "source": "b12 catalog note (listing only)"
+   },
+   "basis": "estimate",
+   "evidence": [
+    "Cesium research frames d26-orbit-northwest, d27-orbit-southwest, b12-r0-a4-30m (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/735333-1272.jpg)"
+   ],
+   "observed": "frames conflict: one shows a teal glass curtain wall, another white panels",
+   "limits": "conflicting frames; a middle profile (large glazed bays in light panels) is used; identity probable only",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b12-west-campus:lark",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 59.69,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.231,
+     "now": 0.53,
+     "ratio": 2.29,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#dcdedd",
+     "rendered": "#dbdddc",
+     "prior": "#dbcfbe",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "512858:245",
+   "name": "Union on San Antonio, 2011 San Antonio St",
+   "owner": "b12-west-campus",
+   "cityH": 44.36,
+   "center": [
+    -542.28,
+    321.95
+   ],
+   "massTop": 101.2,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "named-unverified",
+    "source": "b12 catalog note (OSM way 380922462); Greystar page https://www.greystar.com/union-on-san-antonio-austin-tx/p_20476 (2011 San Antonio)"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    "../references/union-san-antonio.jpg (root-acquired; https://s7d9.scene7.com/is/image/greystarprod/20476BDG1, page https://www.greystar.com/union-on-san-antonio-austin-tx/p_20476, sha256 b851fe7fed6938501f78982d84ab209929f104b097d397945875f21395a038a5)"
+   ],
+   "observed": "partial finished facade (one face, upper storeys): slim vertical silver metal cladding, storey-high glass doors / windows with dark frames, projecting concrete balcony slabs with dark vertical railings",
+   "limits": "partial photo of one face only: other faces assumed alike (estimate); balcony slabs / railings not modelled (no exact balcony geometry claimed); ground storey not shown, so it keeps the prior wc-tower ground values (the wc-tower name-based storefront rule no longer applies); Cesium frames predate completion",
+   "trim": "storey-high balcony doors (sill 0.1 m) fail the generator belt condition (window sill > 0.3 m), so the 5 cm belt course at the ground-storey line is not built; the photo shows no belt course on the visible upper facade (the ground storey is not shown)",
+   "archetypes": {
+    "catalog": "b12-west-campus:union-san-antonio",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 92.7,
+      "archetype": null
+     },
+     {
+      "index": 1,
+      "role": "mech",
+      "bottom": 92.7,
+      "top": 101.2,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.244,
+     "now": 0.477,
+     "ratio": 1.95,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#b8bab7",
+     "rendered": "#b8bab7",
+     "prior": "#dcd1be",
+     "ok": true
+    }
+   }
+  },
+  {
+   "key": "594352:667",
+   "name": "Yugo Austin Waterloo, 2400 Seton Ave",
+   "owner": "b12-west-campus",
+   "cityH": 32,
+   "center": [
+    -666.91,
+    -237.89
+   ],
+   "massTop": 96.3,
+   "disposition": "changed-profile",
+   "identity": {
+    "status": "named-unverified",
+    "source": "b12 catalog note; developer article https://lvcollective.com/rendering-reality-waterloo/"
+   },
+   "basis": "reference-interpreted",
+   "evidence": [
+    ".work/references/waterloo-DSC06440-1.jpg (https://lvcollective.com/wp-content/uploads/2023/04/DSC06440-1.jpg)",
+    "https://lvcollective.com/rendering-reality-waterloo/ (\"the exterior of Waterloo facing 24th Street features copper panels\")",
+    "Cesium research frames d26-orbit-southeast, west-extension-c3-r2 (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/594352-667.jpg)"
+   ],
+   "observed": "black textured masonry podium, glazed ground storey, pale grey panels with large blue glass bays; Cesium frames show charcoal and white grid sections",
+   "limits": "copper panels on the 24th St face need a per-face colour the generator does not have (optional hook, not implemented); podium white herringbone panels and podium windows not expressed; podium reads to 15 m (generator cap)",
+   "trim": null,
+   "archetypes": {
+    "catalog": "b12-west-campus:waterloo",
+    "volumes": [
+     {
+      "index": 0,
+      "role": "main",
+      "bottom": 0,
+      "top": 96.3,
+      "archetype": null
+     }
+    ]
+   },
+   "rootPatches": null,
+   "measured": {
+    "glass": {
+     "prior": 0.26,
+     "now": 0.621,
+     "ratio": 2.39,
+     "expect": "more",
+     "ok": true
+    },
+    "colour": {
+     "source": "#cdd0d0",
+     "rendered": "#c8cbcc",
+     "prior": "#d9cdb8",
+     "ok": true
+    }
+   }
+  }
+ ],
+ "deepWest": [
+  {
+   "key": "coa-2023:726333",
+   "runtime": true,
+   "heightMeters": 58.239,
+   "identity": "unverified (a \"THE STANDARD\" podium sign is visible near it in d40-orbit-northwest; not confirmed)",
+   "disposition": "deep-west-profile",
+   "wall": {
+    "family": "precast",
+    "rgb": [
+     204,
+     206,
+     205
+    ]
+   },
+   "evidence": [
+    "Cesium research frames d40-orbit-southwest, west-extension-c4-r3 (envelope projected from the frame camera; crop .work/references/frames/coa-2023-726333.jpg)"
+   ],
+   "limits": "baked wall was brownBrick 160,86,64; every frame shows a light-grey panel tower with charcoal vertical panel columns and green-tinted glass, so the wall becomes light-grey precast; charcoal columns not expressible (one wall colour per building)"
+  },
+  {
+   "key": "coa-2023:615176",
+   "runtime": true,
+   "heightMeters": 58.993,
+   "identity": "unverified",
+   "disposition": "deep-west-retained",
+   "evidence": [
+    "Cesium research frames d40-orbit-southwest, west-extension-c4-r3, d39-orbit-southwest (envelope projected from the frame camera; crop .work/references/frames/coa-2023-615176.jpg)"
+   ],
+   "limits": "baked precast 214,214,208 matches the white/light-grey body seen in the frames; orange-brown vertical accent strips are not expressible; unchanged"
+  },
+  {
+   "key": "coa-2023:470235",
+   "runtime": false,
+   "heightMeters": 89.792,
+   "identity": "unverified (charcoal grid glass tower in d40-orbit-southwest)",
+   "disposition": "seam-excluded-gap",
+   "evidence": [
+    "Cesium research frames d40-orbit-southwest, d26-orbit-southeast, west-extension-c4-r3 (envelope projected from the frame camera; crop .work/references/frames/coa-2023-470235.jpg)",
+    "public/assets/extension/deep-west-v1.manifest.json excluded: \"crosses or within 3 m of the east seam x=-760\""
+   ],
+   "limits": "not in the runtime binary and not in campus.json: root decision needed (seam-crossing addition); no profile applied"
+  }
+ ]
+}

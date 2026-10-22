@@ -1,0 +1,335 @@
+[
+ {
+  "id": "b04-west-mall-approach",
+  "block": "b04-tower",
+  "kind": "street",
+  "label": "West Mall from the Guadalupe end: Union (left) / restored Goldsmith Hall tower and north range (right), Tower beyond",
+  "position": [
+   -424,
+   13.9,
+   26
+  ],
+  "target": [
+   -300,
+   22,
+   20
+  ],
+  "fov": 62,
+  "groundY": 12.16,
+  "note": "Compare with streetview-reference-survey 08-west-mall (Mar 2025) and the Cret paired-tower portal (Speck, The Heroic Decades). Goldsmith facade rhythm is an estimate."
+ },
+ {
+  "id": "b04-goldsmith-north",
+  "block": "b04-tower",
+  "kind": "side",
+  "label": "Goldsmith Hall north (West Mall) face and NW tower from the mall paving",
+  "position": [
+   -372,
+   16.1,
+   30
+  ],
+  "target": [
+   -396,
+   27,
+   50
+  ],
+  "fov": 58,
+  "groundY": 14.4,
+  "note": "Tower and main hipped range heights from 2017 LiDAR tiers in campus Y; door position estimated."
+ },
+ {
+  "id": "b04-main-north-gebauer",
+  "block": "b04-tower",
+  "kind": "side",
+  "label": "Inner Campus Drive north of the Main Building, looking SE to the restored Gebauer Building",
+  "position": [
+   -190,
+   15.7,
+   -75
+  ],
+  "target": [
+   -150,
+   24,
+   -28
+  ],
+  "fov": 60,
+  "groundY": 13.95,
+  "note": "Gebauer: GIS footprint, flat deck at LiDAR tier 22.1 m above groundY 11.0; Gothic-revival parapet detail not modelled."
+ },
+ {
+  "id": "b04-union-frontage",
+  "block": "b04-tower",
+  "kind": "street",
+  "label": "Texas Union south frontage on the West Mall",
+  "position": [
+   -385,
+   15.5,
+   24
+  ],
+  "target": [
+   -385,
+   21,
+   -5
+  ],
+  "fov": 60,
+  "groundY": 13.74,
+  "note": "Existing authored union-building.ts; reviewed, unchanged in this pass."
+ },
+ {
+  "id": "b04-aerial",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Aerial over the West Mall, Main Building and Gebauer from the south-west",
+  "position": [
+   -300,
+   120,
+   150
+  ],
+  "target": [
+   -250,
+   15,
+   0
+  ],
+  "fov": 55,
+  "groundY": 13.0,
+  "note": "Shows the GOL courtyard plan, hipped tile roofs and the GEB flat deck against the Tower scan."
+ },
+ {
+  "id": "b04-main-mall-north",
+  "block": "b04-tower",
+  "kind": "street",
+  "label": "Main Mall plaza looking north: terrace flight, south front (arcade, 35.2 balustraded terrace, 41-43.5 south block) and Tower",
+  "position": [
+   -221.13,
+   18.45,
+   81.48
+  ],
+  "target": [
+   -217.36,
+   31.0,
+   36.64
+  ],
+  "fov": 62,
+  "groundY": 16.72,
+  "note": "Round 2. Body heights from the 2017 LiDAR DSM; plaza/stairs from the LiDAR ground profile (plaza clamped to the baked terrain where it is higher, up to +0.43 m). Compare with screenshot-dataset b04-r0-b2 (accepted overview). Facade rhythm is an estimate."
+ },
+ {
+  "id": "b04-main-south-aerial",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Aerial from the South Mall over the Main Mall lawns to the Main Building roofs",
+  "position": [
+   -227.4,
+   75.0,
+   156.2
+  ],
+  "target": [
+   -216.0,
+   30.0,
+   10.0
+  ],
+  "fov": 60,
+  "groundY": 13.03,
+  "note": "Round 2. Matches the framing of screenshot-dataset b04-r0-b2/b04-r0-b1 for roof-zone comparison (tile wings, flat south wing roofs at 35.3, terraces at 31.6, south block hip 41-43.5). The 39.9 cap over the old Tower square is a documented deviation."
+ },
+ {
+  "id": "b04-south-mall-lawn-statue",
+  "block": "b04-tower",
+  "kind": "street",
+  "label": "South Mall head green from the south: flanking walks, Washington on its deck, drive crossing, Main Mall steps and the Tower",
+  "position": [
+   -227.85,
+   14.62,
+   161.2
+  ],
+  "target": [
+   -222.0,
+   24.0,
+   100.0
+  ],
+  "fov": 60,
+  "groundY": 12.9,
+  "note": "Round 2b. Green/walks are reference-interpreted outlines on the contour terrain; statue placement measured (LiDAR), figure dimensions estimated."
+ },
+ {
+  "id": "b04-washington-close",
+  "block": "b04-tower",
+  "kind": "side",
+  "label": "George Washington (Coppini 1955) close-up from the south-east on the apron",
+  "position": [
+   -221.4,
+   16.3,
+   138.1
+  ],
+  "target": [
+   -225.6,
+   17.6,
+   130.9
+  ],
+  "fov": 55,
+  "groundY": 14.58,
+  "note": "Round 2b. Compare with the Daderot 2015 CC0 photograph (both arms lowered, hat in right hand, cloak, tall boots). Authored approximation, not a likeness."
+ },
+ {
+  "id": "b04-tower-south-facade-source-pose",
+  "block": "b04-tower",
+  "kind": "street",
+  "label": "Camera-only QA at the exact pose of user-landmarks/tower-south-facade-photo-only.jpg",
+  "position": [
+   -226.0,
+   27.0,
+   150.0
+  ],
+  "target": [
+   -217.0,
+   33.0,
+   20.0
+  ],
+  "focus": [
+   -217.0,
+   33.0,
+   20.0
+  ],
+  "fov": 60,
+  "groundY": 13.58,
+  "note": "Round 2b, camera-only (13 m above ground, matching the source research-viewer pose). Facade composition: arcade, tall window bays, terrace balustrade, set-back brick storey, red hip."
+ },
+ {
+  "id": "b04-main-mall-overview-aerial",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "Aerial matching the accepted overview b04-r0-b2 (Main Mall, lawns, forecourt finish, South Mall head)",
+  "position": [
+   -239.5,
+   289.42,
+   130.0
+  ],
+  "target": [
+   -239.5,
+   15.9,
+   90.0
+  ],
+  "focus": [
+   -239.5,
+   15.9,
+   90.0
+  ],
+  "fov": 60,
+  "groundY": 14.0,
+  "note": "Round 2b. Same camera/FOV as screenshot-dataset b04-r0-b2-overview (viewport 1204x954)."
+ },
+ {
+  "id": "b04-d06-orbit-northeast-actual",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "D06 actual orbit pose (Union / West Mall) — compare with d06-orbit-northeast",
+  "position": [
+   -314.86,
+   47.778,
+   -133.64
+  ],
+  "target": [
+   -378.5,
+   24.156,
+   -70.0
+  ],
+  "fov": 60,
+  "groundY": 13.4,
+  "note": "District round. Same pose as screenshot-dataset/collections/district-orbits-30m/captures/d06-orbit-northeast.jpg. Union/Flawn/Hogg are root-authored (walkway) and unchanged by b04."
+ },
+ {
+  "id": "b04-goldsmith-courtyard-gallery",
+  "block": "b04-tower",
+  "kind": "side",
+  "label": "D06 subject: Goldsmith courtyard arcade and tower gallery (textured limestone / clay tile)",
+  "position": [
+   -373,
+   14.64,
+   76
+  ],
+  "target": [
+   -385,
+   24,
+   57
+  ],
+  "fov": 62,
+  "groundY": 12.94,
+  "note": "District round. Compare with the UT directory photograph ut-gol-576 (courtyard). Pool in the photo not modelled. Shot-clearance fix: camera moved 1 m west of (-372, 13.1, 76), which sat 0.17 m above the court ground (overlapping it) beside a small planting capsule at (-371.5, 14.72, 76.27); now 1.7 m above the measured physical court ground (Y 12.94), no collider within 1.0 m, clear sight line to the unchanged target (.work/GOLDSMITH-SHOT-CHECKPOINT.json)."
+ },
+ {
+  "id": "b04-d07-orbit-southwest-actual",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "D07 actual orbit pose (Inner Campus / Tower) — compare with d07-orbit-southwest",
+  "position": [
+   -303.14,
+   40.687,
+   153.64
+  ],
+  "target": [
+   -239.5,
+   23.914,
+   90.0
+  ],
+  "fov": 60,
+  "groundY": 14.0,
+  "note": "District round. Same pose as screenshot-dataset/collections/district-orbits-30m/captures/d07-orbit-southwest.jpg. Main Building/Tower envelope is root-owned and unchanged."
+ },
+ {
+  "id": "b04-r0-b1-30m-actual",
+  "block": "b04-tower",
+  "kind": "aerial",
+  "label": "D07 actual full-map pose over BIO / greenhouse block",
+  "position": [
+   -257.2,
+   45.828,
+   -22
+  ],
+  "target": [
+   -239.5,
+   27.387,
+   -70
+  ],
+  "fov": 60,
+  "groundY": 13.0,
+  "note": "District round. Same pose as full-map-30m b04-r0-b1-30m."
+ },
+ {
+  "id": "b04-bot-greenhouse",
+  "block": "b04-tower",
+  "kind": "street",
+  "label": "D07 subject: measured Biological Greenhouse (knee wall, glass walls, curved eave, glazing bars)",
+  "position": [
+   -259,
+   17.4,
+   -93
+  ],
+  "target": [
+   -276,
+   18.6,
+   -96
+  ],
+  "fov": 60,
+  "groundY": 15.6,
+  "note": "District round. Compare with ut-bot-577 (facade direction unverified; entrance gable/door not modelled)."
+ },
+ {
+  "id": "b04-geb-cornice-corner",
+  "block": "b04-tower",
+  "kind": "side",
+  "label": "D07 subject: Gebauer east face — arched second-from-top row, string courses and dentilled cornice",
+  "position": [
+   -112,
+   14.5,
+   -36
+  ],
+  "target": [
+   -142,
+   25,
+   -22
+  ],
+  "fov": 58,
+  "groundY": 11.0,
+  "note": "District round. Compare with ut-geb-433 (corner view)."
+ }
+]

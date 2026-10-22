@@ -1,0 +1,220 @@
+{
+  "baseElevation": 5.8,
+  "eaveElevation": 25.5,
+  "upperFloors": 3,
+  "roofPitch": 0.45,
+  "roofStripDepth": 1.5,
+  "cutDepth": 1.55,
+  "cutFringe": 0.45,
+  "cutGroundBuffer": 0.2,
+  "sourceFootprint": [
+    [
+      -90.86887865664026,
+      -49.69840001163229
+    ],
+    [
+      -112.09097987682817,
+      -51.47569363780523
+    ],
+    [
+      -105.85733209565375,
+      -122.80407577856496
+    ],
+    [
+      -14.620623488504755,
+      -114.85494277558686
+    ],
+    [
+      -28.522101433023714,
+      38.83838313366168
+    ],
+    [
+      -49.28846312439674,
+      37.039597638216705
+    ],
+    [
+      -46.69394869297108,
+      7.453386502074483
+    ],
+    [
+      -63.69250078755063,
+      5.946586697554807
+    ],
+    [
+      -67.46332824783892,
+      -1.4496560362376307
+    ],
+    [
+      -67.37821932516854,
+      -2.412115886501226
+    ],
+    [
+      -67.27209717558299,
+      -2.402635642760913
+    ],
+    [
+      -66.60056973057031,
+      -10.001606720685135
+    ],
+    [
+      -66.7067965041156,
+      -10.01088937218162
+    ],
+    [
+      -66.61963659037929,
+      -10.997007397490151
+    ],
+    [
+      -59.96664850635815,
+      -19.742311423739668
+    ],
+    [
+      -44.46543418683485,
+      -18.373706179776093
+    ],
+    [
+      -43.232184256496154,
+      -32.30308478864113
+    ],
+    [
+      -86.0173310464081,
+      -36.18346447073283
+    ],
+    [
+      -86.24189046769382,
+      -36.205812963601474
+    ],
+    [
+      -83.43053877818669,
+      -67.56822571065987
+    ],
+    [
+      -40.384901248044756,
+      -63.92371633785109
+    ],
+    [
+      -38.952470913192485,
+      -80.86921842263808
+    ],
+    [
+      -38.18598924498053,
+      -80.80430351165236
+    ],
+    [
+      -37.60648352923896,
+      -87.65773109068178
+    ],
+    [
+      -38.343339432012115,
+      -87.72015360548389
+    ],
+    [
+      -37.6762872953525,
+      -95.61040313367097
+    ],
+    [
+      -51.7455034267422,
+      -96.80163322060714
+    ],
+    [
+      -52.058830058939826,
+      -93.09459760976901
+    ],
+    [
+      -54.494138856031945,
+      -93.30081446774818
+    ],
+    [
+      -54.83849835843156,
+      -89.22730931942436
+    ],
+    [
+      -71.00905479511434,
+      -90.59632515536839
+    ],
+    [
+      -70.74169898606448,
+      -93.75949488840918
+    ],
+    [
+      -70.65679296740427,
+      -94.76467052830318
+    ],
+    [
+      -73.48631587256851,
+      -95.00429577153069
+    ],
+    [
+      -73.1807631780166,
+      -98.61828947126132
+    ],
+    [
+      -86.6375151311568,
+      -99.75776039929696
+    ],
+    [
+      -90.86887865664026,
+      -49.69840001163229
+    ]
+  ],
+  "sourceFootprintId": 561,
+  "sourceFootprintSource": "research/raw/ut-official-buildings.geojson, official UT WEL OBJECTID561",
+  "photoRatios": {
+    "arcadeOverStory": 1.09,
+    "glassOverStory": 0.615,
+    "headOverStory": 0.185,
+    "corniceHeight": 0.25
+  },
+  "schema": 1,
+  "building": "WEL",
+  "scope": "Modern Speedway gap between current south facade and historic north bar",
+  "a": [
+    -22.90445034296711,
+    -23.26979581496102
+  ],
+  "b": [
+    -16.759340959081825,
+    -91.2095
+  ],
+  "length": 68.2170489986962,
+  "upperBays": 14,
+  "upperOrdinaryBays": 13,
+  "transitionGlazingWidth": 2.05,
+  "ordinaryLowerCenters": [
+    2.4,
+    7.199999999999999,
+    12.0,
+    16.799999999999997,
+    21.599999999999998,
+    26.4,
+    31.199999999999996,
+    36.0,
+    40.8,
+    45.599999999999994
+  ],
+  "ordinaryLowerWidth": 3.32,
+  "serviceOpening": {
+    "center": 55.9,
+    "width": 7.5,
+    "heightRatio": 0.77,
+    "archRiseRatio": 0.075
+  },
+  "northLowerOpening": {
+    "center": 64.4,
+    "width": 3.32
+  },
+  "floorElevation": 5.8,
+  "photoIds": [
+    "L001-h270",
+    "L002-h270",
+    "L177-h270"
+  ],
+  "sourceModule": "game/lib/campus/welch-south.ts",
+  "sourceModuleSha256": "a42da778f3a30fef533f4c07010eca0bd6057b19311de69f9ed0f7ead044e048",
+  "limits": [
+    "Exact official wall line and existing package seam; last seam projected from rounded west24 plan corner.",
+    "14 upper positions preserve the existing south facade cadence; total bay count estimated, not surveyed.",
+    "Wider north service recess and dark vertical connector are photo-supported forms; their lateral extents are provisional estimates.",
+    "No whole roof, historic bar, lecture projection, doorway, street, garden or route replacement."
+  ]
+}

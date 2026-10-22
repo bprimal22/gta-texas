@@ -1,0 +1,96 @@
+{
+ "repository": "https://github.com/seanhlewis/utimagery",
+ "commit": "13f08efebe2a0488283e09c47365878d0904a49e",
+ "license": "MIT",
+ "copyright": "Copyright (c) 2025 Sean Hardesty Lewis",
+ "licenseFile": "LICENSE-utimagery.txt",
+ "credits": "Austin 3D Photogrammetry / UT Imagery by Sean Hardesty Lewis; drone piloted by Shashank Kota; funded by the UT Urban Information Lab; flights permitted by UT Austin (per the repository README).",
+ "inputs": [
+  {
+   "name": "tower.glb",
+   "url": "https://raw.githubusercontent.com/seanhlewis/utimagery/13f08efebe2a0488283e09c47365878d0904a49e/tower.glb",
+   "bytes": 66916220,
+   "sha256": "be80720f22224735d9b558e0007d4288915cd3e84ecba1529a8e290153d0dc4f"
+  },
+  {
+   "name": "stadium.glb",
+   "url": "https://raw.githubusercontent.com/seanhlewis/utimagery/13f08efebe2a0488283e09c47365878d0904a49e/stadium.glb",
+   "bytes": 59856712,
+   "sha256": "21d2b1e5a0db45ea38e58d22aab244363aba46908ae205c80a9d1447030bb5d9"
+  },
+  {
+   "name": "LICENSE",
+   "url": "https://raw.githubusercontent.com/seanhlewis/utimagery/13f08efebe2a0488283e09c47365878d0904a49e/LICENSE",
+   "bytes": 1076,
+   "sha256": "77d20d458794e0dda9bdb7086289fea907a97a08150dd77956cea80c0944f42f"
+  }
+ ],
+ "derivation": {
+  "tower": "tools/scans/align-tower.mjs + global-reg.mjs + finalize-tower.mjs (alignment) then tools/scans/build-tower.mjs (crop, fragment removal, chart re-atlas to one JPEG, meshoptimizer LODs, lantern-top infill, collider heightfield)",
+  "field": "tools/scans/stadium-level.mjs + stadium-align.mjs (alignment) then tools/scans/build-stadium.mjs (field-only crop, flatten, re-atlas)",
+  "tools": "@gltf-transform/core 4, sharp, meshoptimizer (tools/package.json)",
+  "westStand": "tools/scans/stand-probe.mjs (bowl section reach from the real authored scene) then tools/scans/build-stand.mjs (west-straight crop, fragment removal, clean rim line + trim of torn rim/press-box remnants; original source photo UV charts kept (tools/scans/stand-charts.mjs: no position weld across UV seams), used source texel regions re-packed at scale 1 into a 4096x2048 atlas (exact source texels, no colour/exposure edits), UV-aware meshoptimizer simplifyWithAttributes LODs that keep chart seams, far LOD embeds the same full-resolution atlas JPEG (no downsampling); reduced collider surface, seam profiles); transform = dkr-field.json. Fidelity: tools/scans/stand-fidelity.mjs"
+ },
+ "authoredInfill": [
+  "ut-tower GLBs: flat grey lid closing the open scanned lantern top (material \"UT Tower lantern lid (authored infill)\")",
+  "ut-tower atlas: 7758 sky-blue bleed texels on the lantern rim desaturated",
+  "dkr-west-stand GLBs: 622 interior hole cells (1,244 triangles) surfaced at the hole-filled collider height - 0.03 m, separate untextured unlit material \"DKR west stand authored infill (flat approximate capture tone)\" (extras.authoredInfill), tone = median source texel of nearby captured faces",
+  "stadium-bowl.ts (generated, not in the GLB): rim parapet + roof cap from the clean rim line to the outer wall, and a press-box box fitted to the surviving scanned slab extents (dkr-west-stand.json sector.pressBox)"
+ ],
+ "files": [
+  {
+   "name": "LICENSE-utimagery.txt",
+   "bytes": 1076,
+   "sha256": "77d20d458794e0dda9bdb7086289fea907a97a08150dd77956cea80c0944f42f",
+   "kind": "license text"
+  },
+  {
+   "name": "dkr-field.glb",
+   "bytes": 1885964,
+   "sha256": "575aec5896585bbb3ad72404beb0dbde0eaeb951e8c01c0c36501ad814291499",
+   "kind": "derived 3D asset (MIT, see LICENSE-utimagery.txt)"
+  },
+  {
+   "name": "dkr-field.json",
+   "bytes": 2582,
+   "sha256": "c0a874c7541f8906db8c17515b82f09af190ccf25013b9975bddb09b508cb35b",
+   "kind": "alignment/collider metadata (derived)"
+  },
+  {
+   "name": "dkr-west-stand-far.glb",
+   "bytes": 12730604,
+   "sha256": "695fac16d792432c62837b7765ea00e47b1fbbc4b9d348ccb40353f63cddaf71",
+   "kind": "derived 3D asset (MIT, see LICENSE-utimagery.txt)"
+  },
+  {
+   "name": "dkr-west-stand-near.glb",
+   "bytes": 15365496,
+   "sha256": "6dcdef6d7aec4f8e4a9ee4a272a34e9dce60c969bdad510380454dbc6390ef3b",
+   "kind": "derived 3D asset (MIT, see LICENSE-utimagery.txt)"
+  },
+  {
+   "name": "dkr-west-stand.json",
+   "bytes": 8484,
+   "sha256": "f832f80513d4fac49780cfa0590be3bc96fc81a61a580492067a94f1cc149db8",
+   "kind": "alignment/collider metadata (derived)"
+  },
+  {
+   "name": "ut-tower-far.glb",
+   "bytes": 602192,
+   "sha256": "af5005d7be8138c953259e9f8bca80e7f73eac6e0e310b1b268cbc8f41ad4458",
+   "kind": "derived 3D asset (MIT, see LICENSE-utimagery.txt)"
+  },
+  {
+   "name": "ut-tower-near.glb",
+   "bytes": 2294484,
+   "sha256": "f637f8d22ec91df78f9d5069c07368bbdf38ed2128d7037ecbb430bb77dad6b7",
+   "kind": "derived 3D asset (MIT, see LICENSE-utimagery.txt)"
+  },
+  {
+   "name": "ut-tower.json",
+   "bytes": 67084,
+   "sha256": "75c8d055227ba545420ebae0a61e559f2d55de82ff95ccbeec94381bda6bd57a",
+   "kind": "alignment/collider metadata (derived)"
+  }
+ ]
+}

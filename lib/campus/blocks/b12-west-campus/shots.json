@@ -1,0 +1,1218 @@
+[
+  {
+    "id": "b12-drag-21st",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "The Drag: west sidewalk of Guadalupe St at W 21st looking south toward MLK Blvd: St. Austin Catholic Church + school (post-2017 school building, City 2023 h), Union on San Antonio behind, Guadalupe frontage shops",
+    "position": [
+      -468,
+      8.41,
+      268
+    ],
+    "target": [
+      -490,
+      10.5,
+      420
+    ],
+    "fov": 62,
+    "groundY": 6.71,
+    "note": "Guadalupe roadway geometry is shared with b04/b05/b06 and was not moved. Church/school facades are generic archetypes (stone-civic for the church is an estimate); no accepted facade reference. groundY = baked terrain height at the camera (the headless scene has no ground collider under West Campus streets; physical rays hit only building colliders)."
+  },
+  {
+    "id": "b12-nueces-highrise",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "High-rise cluster: Nueces St at W 21st looking north: Torre (left, post-2017), 21 Rio / Villas on Rio / 735333 beyond, Inspire on 22nd and Rise at West Campus (post-2017 towers at City 2023 h) up Nueces",
+    "position": [
+      -664,
+      10.44,
+      250
+    ],
+    "target": [
+      -652,
+      30,
+      60
+    ],
+    "fov": 62,
+    "groundY": 8.74,
+    "note": "Post-2017 towers: one flat volume to City 2023 h - 1.2 m above the 2017 DTM street level (no setbacks/crowns sourced). 21 Rio and 2400 Nueces are LiDAR-measured. groundY = baked terrain height at the camera (the headless scene has no ground collider under West Campus streets; physical rays hit only building colliders)."
+  },
+  {
+    "id": "b12-24th-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "West Campus street: W 24th St at San Antonio St looking west: The Castilian (left, LiDAR tiers), San Antonio Garage / 2400 Nueces + Nueces Garage (UT, split per official UT GIS wings) on the right, Yugo Waterloo/Rio beyond",
+    "position": [
+      -512,
+      15.97,
+      -178
+    ],
+    "target": [
+      -700,
+      22,
+      -200
+    ],
+    "fov": 60,
+    "groundY": 14.27,
+    "note": "N24/NUG: one City ring split into the official UT wings (garage vs tower archetype). Facades generic. groundY = baked terrain height at the camera (the headless scene has no ground collider under West Campus streets; physical rays hit only building colliders)."
+  },
+  {
+    "id": "b12-drag-18th",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Guadalupe St at W 18th looking south: Travis County Civil and Family Courts Facility (2022, City 2023 h) on the right, The Linden (313 W 17th, post-2017) on the left, Guadalupe Garage / UT Administration Building (split per UT GIS) beyond",
+    "position": [
+      -472,
+      4.63,
+      612
+    ],
+    "target": [
+      -520,
+      12,
+      760
+    ],
+    "fov": 62,
+    "groundY": 2.93,
+    "note": "South of MLK the street grid is rotated: this part of b12 lies on both sides of Guadalupe. groundY = baked terrain height at the camera (the headless scene has no ground collider under West Campus streets; physical rays hit only building colliders)."
+  },
+  {
+    "id": "b12-aerial-west-campus",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Aerial over MLK/San Antonio looking north-north-west across West Campus: the 21st-24th St high-rise cluster, 2400 Nueces, the Drag frontage on the right",
+    "position": [
+      -600,
+      150,
+      360
+    ],
+    "target": [
+      -620,
+      13.6,
+      60
+    ],
+    "fov": 60,
+    "groundY": 4.3,
+    "note": "Roof heights: 2017 LiDAR in the LiDAR groundY datum for measured records; City 2023 h for 26 post-2017 records (labelled). groundY = baked terrain height at the camera (the headless scene has no ground collider under West Campus streets; physical rays hit only building colliders)."
+  },
+  {
+    "id": "b12-coop-drag",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "The Drag: west sidewalk of Guadalupe at the West Mall (Sunset) crosswalk looking north along the frontage: low shop fronts (LiDAR roof breaks) and the University Co-op storefront (cream parapet bays, taller centre bay with dark portal, dark base, hooded shop windows) beyond",
+    "position": [
+      -449.0,
+      13.4,
+      31.5
+    ],
+    "target": [
+      -452.3,
+      17.5,
+      -7.25
+    ],
+    "fov": 60,
+    "groundY": 11.7,
+    "note": "Round 2. Camera 1.7 m above the physical ground (11.70, ray-measured). Compare with research/whole-campus-92/west-campus-dataset-pass/photos/coop-19.jpg (owner photo, taken from the east side of Guadalupe looking west: see b12-coop-guadalupe-low-aerial). Shop materials south of the Co-op are estimates."
+  },
+  {
+    "id": "b12-coop-guadalupe-low-aerial",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Low aerial (10 m) over the EAST sidewalk of Guadalupe opposite the University Co-op (2246 Guadalupe), looking west at the storefront: centre bay to LiDAR 24.4, flanks 22.1 / 19.0, portal, letter-block sign, banner panel",
+    "position": [
+      -426.0,
+      22.5,
+      -7.25
+    ],
+    "target": [
+      -452.3,
+      17.0,
+      -7.25
+    ],
+    "fov": 55,
+    "groundY": 12.54,
+    "note": "Round 2. The camera stands outside b12's rectangle (x < -448), so G5 only allows it as an aerial (+-40 m); it is honestly 10 m up, not eye level. An eye-level pose at [-426.0, 14.2, -7.25] (same target) is requested in shared-requests.json for the integrator-owned atlas shots. Reference: coop-19.jpg."
+  },
+  {
+    "id": "b12-ubc-sanctuary",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "University Baptist Church sanctuary (2130 Guadalupe) from the Guadalupe / W 22nd St corner looking south-west: brick, red tile cross gables (LiDAR ridges 26.7 / 26.85), pale-stone frontispiece with three arched windows at the Guadalupe primary entrance, pale window surround on the 22nd St gable",
+    "position": [
+      -457.0,
+      11.8,
+      123.5
+    ],
+    "target": [
+      -478.0,
+      19.5,
+      143.0
+    ],
+    "fov": 62,
+    "groundY": 10.12,
+    "note": "Round 2. Camera 1.68 m above the physical ground (10.12, ray-measured). Similar viewpoint to ubc-historic-1958.jpg (1958-09-29; historical, architectural vocabulary only). The San Antonio education building / chapel annex (714509:1097) is a separate generated record behind."
+  },
+  {
+    "id": "b12-d25-orbit-southwest",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D25 actual orbit southwest: matching viewpoint of capture d25-orbit-southwest (2529 Rio Grande townhouses 571123:534 / Delta Gamma 549218:389)",
+    "position": [
+      -745.64,
+      46.63,
+      -317.61
+    ],
+    "target": [
+      -682.0,
+      24.41,
+      -381.25
+    ],
+    "fov": 60.0,
+    "groundY": 16.56,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d25-orbit-southwest.jpg (sha256 ea9e0a31a6a2db72..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d25-orbit-southeast",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D25 actual orbit southeast: matching viewpoint of capture d25-orbit-southeast (2529 Rio Grande townhouses 571123:534 / Delta Gamma 549218:389)",
+    "position": [
+      -618.36,
+      45.84,
+      -317.61
+    ],
+    "target": [
+      -682.0,
+      24.41,
+      -381.25
+    ],
+    "fov": 60.0,
+    "groundY": 15.84,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d25-orbit-southeast.jpg (sha256 44a356f0ac985076..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d25-orbit-northeast",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D25 actual orbit northeast: matching viewpoint of capture d25-orbit-northeast (2529 Rio Grande townhouses 571123:534 / Delta Gamma 549218:389)",
+    "position": [
+      -618.36,
+      46.66,
+      -444.89
+    ],
+    "target": [
+      -682.0,
+      24.41,
+      -381.25
+    ],
+    "fov": 60.0,
+    "groundY": 16.53,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d25-orbit-northeast.jpg (sha256 a19a60a05b212e2a..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d25-orbit-northwest",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D25 actual orbit northwest: matching viewpoint of capture d25-orbit-northwest (2529 Rio Grande townhouses 571123:534 / Delta Gamma 549218:389)",
+    "position": [
+      -745.64,
+      47.46,
+      -444.89
+    ],
+    "target": [
+      -682.0,
+      24.41,
+      -381.25
+    ],
+    "fov": 60.0,
+    "groundY": 17.74,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d25-orbit-northwest.jpg (sha256 e5fe24b11a3ff1d1..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d26-orbit-southwest",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D26 actual orbit southwest: matching viewpoint of capture d26-orbit-southwest (Twenty Two 15 528395:313)",
+    "position": [
+      -745.64,
+      41.51,
+      77.39
+    ],
+    "target": [
+      -682,
+      20.53,
+      13.75
+    ],
+    "fov": 60.0,
+    "groundY": 11.44,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d26-orbit-southwest.jpg (sha256 fa2618c3fb95538e..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d26-orbit-southeast",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D26 actual orbit southeast: matching viewpoint of capture d26-orbit-southeast (Twenty Two 15 528395:313)",
+    "position": [
+      -618.36,
+      42.95,
+      77.39
+    ],
+    "target": [
+      -682,
+      20.53,
+      13.75
+    ],
+    "fov": 60.0,
+    "groundY": 13.75,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d26-orbit-southeast.jpg (sha256 1c55a21ff80261ad..., review roof-only); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d26-orbit-northeast",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D26 actual orbit northeast: matching viewpoint of capture d26-orbit-northeast (Twenty Two 15 528395:313)",
+    "position": [
+      -618.36,
+      43.65,
+      -49.89
+    ],
+    "target": [
+      -682,
+      20.53,
+      13.75
+    ],
+    "fov": 60.0,
+    "groundY": 13.71,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d26-orbit-northeast.jpg (sha256 a58c363803161748..., review context-limited); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d26-orbit-northwest",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D26 actual orbit northwest: matching viewpoint of capture d26-orbit-northwest (Twenty Two 15 528395:313)",
+    "position": [
+      -745.64,
+      43.35,
+      -49.89
+    ],
+    "target": [
+      -682,
+      20.53,
+      13.75
+    ],
+    "fov": 60.0,
+    "groundY": 13.23,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d26-orbit-northwest.jpg (sha256 093a76c47bd831f8..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d27-orbit-southwest",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D27 actual orbit southwest: matching viewpoint of capture d27-orbit-southwest (red-brick block 652834:858)",
+    "position": [
+      -745.64,
+      36.15,
+      472.39
+    ],
+    "target": [
+      -682,
+      12.02,
+      408.75
+    ],
+    "fov": 60.0,
+    "groundY": 6.37,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d27-orbit-southwest.jpg (sha256 66e8c4a082eb4802..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d27-orbit-southeast",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D27 actual orbit southeast: matching viewpoint of capture d27-orbit-southeast (red-brick block 652834:858)",
+    "position": [
+      -618.36,
+      31.42,
+      472.39
+    ],
+    "target": [
+      -682,
+      12.02,
+      408.75
+    ],
+    "fov": 60.0,
+    "groundY": 1.79,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d27-orbit-southeast.jpg (sha256 2bc927fd7fac1f1f..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d27-orbit-northeast",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D27 actual orbit northeast: matching viewpoint of capture d27-orbit-northeast (red-brick block 652834:858)",
+    "position": [
+      -618.36,
+      35.26,
+      345.11
+    ],
+    "target": [
+      -682,
+      12.02,
+      408.75
+    ],
+    "fov": 60.0,
+    "groundY": 5.23,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d27-orbit-northeast.jpg (sha256 0b852e616e9eeda4..., review obstructed); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d27-orbit-northwest",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D27 actual orbit northwest: matching viewpoint of capture d27-orbit-northwest (red-brick block 652834:858)",
+    "position": [
+      -745.64,
+      37.75,
+      345.11
+    ],
+    "target": [
+      -682,
+      12.02,
+      408.75
+    ],
+    "fov": 60.0,
+    "groundY": 7.95,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d27-orbit-northwest.jpg (sha256 02c56d805f6d7165..., review roof-only); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d28-orbit-southwest",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D28 actual orbit southwest: matching viewpoint of capture d28-orbit-southwest (Moody Bank Tower 592244:630)",
+    "position": [
+      -745.64,
+      24.42,
+      867.39
+    ],
+    "target": [
+      -682,
+      3.39,
+      803.75
+    ],
+    "fov": 60.0,
+    "groundY": -5.65,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d28-orbit-southwest.jpg (sha256 18dc9e08b768d2f4..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d28-orbit-southeast",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D28 actual orbit southeast: matching viewpoint of capture d28-orbit-southeast (Moody Bank Tower 592244:630)",
+    "position": [
+      -618.36,
+      27.05,
+      867.39
+    ],
+    "target": [
+      -682,
+      3.39,
+      803.75
+    ],
+    "fov": 60.0,
+    "groundY": -3.08,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d28-orbit-southeast.jpg (sha256 4908961209dc51f9..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d28-orbit-northeast",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D28 actual orbit northeast: matching viewpoint of capture d28-orbit-northeast (Moody Bank Tower 592244:630)",
+    "position": [
+      -618.36,
+      26.6,
+      740.11
+    ],
+    "target": [
+      -682,
+      3.39,
+      803.75
+    ],
+    "fov": 60.0,
+    "groundY": -3.42,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d28-orbit-northeast.jpg (sha256 b9123d204f4eb79d..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-d28-orbit-northwest",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "D28 actual orbit northwest: matching viewpoint of capture d28-orbit-northwest (Moody Bank Tower 592244:630)",
+    "position": [
+      -745.64,
+      26.4,
+      740.11
+    ],
+    "target": [
+      -682,
+      3.39,
+      803.75
+    ],
+    "fov": 60.0,
+    "groundY": -3.55,
+    "note": "Pose copied from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d28-orbit-northwest.jpg (sha256 deb93adc3cbc70a9..., review usable-context); camera Y is planning terrain + 30 m (not surveyed AGL); groundY = 2017 USGS 3DEP DTM at the camera. Research comparison pose only; never a runtime texture."
+  },
+  {
+    "id": "b12-hi-linden-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "The Linden, 313 W 17th St (683551:996) from the street",
+    "position": [
+      -525.13,
+      1.36,
+      794.55
+    ],
+    "target": [
+      -473.68,
+      41.72,
+      738.58
+    ],
+    "fov": 62,
+    "groundY": -0.34,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-linden-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "The Linden, 313 W 17th St (683551:996) from 30 m",
+    "position": [
+      -425.67,
+      32.35,
+      836.77
+    ],
+    "target": [
+      -473.68,
+      41.72,
+      738.58
+    ],
+    "fov": 62,
+    "groundY": 2.35,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-rise-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Rise at West Campus, 2206 Nueces St (554717:450) from the street",
+    "position": [
+      -638.25,
+      15.31,
+      -49.47
+    ],
+    "target": [
+      -672.34,
+      52.84,
+      26.5
+    ],
+    "fov": 62,
+    "groundY": 13.61,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-rise-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Rise at West Campus, 2206 Nueces St (554717:450) from 30 m",
+    "position": [
+      -756.67,
+      41.19,
+      97.78
+    ],
+    "target": [
+      -672.34,
+      52.84,
+      26.5
+    ],
+    "fov": 62,
+    "groundY": 11.19,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-travis-courts-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Travis County Civil and Family Courts Facility, 1700 Guadalupe St (597128:680) from the street",
+    "position": [
+      -498.93,
+      2.37,
+      713.38
+    ],
+    "target": [
+      -512.83,
+      40.65,
+      645.96
+    ],
+    "fov": 62,
+    "groundY": 0.67,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-travis-courts-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Travis County Civil and Family Courts Facility, 1700 Guadalupe St (597128:680) from 30 m",
+    "position": [
+      -449.23,
+      34.49,
+      555.87
+    ],
+    "target": [
+      -512.83,
+      40.65,
+      645.96
+    ],
+    "fov": 62,
+    "groundY": 4.49,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-clements-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "William P. Clements, Jr. Building (tower volumes) (486277:108) from the street",
+    "position": [
+      -519.67,
+      1.42,
+      806.36
+    ],
+    "target": [
+      -487.45,
+      35.5,
+      868.89
+    ],
+    "fov": 62,
+    "groundY": -0.28,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-clements-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "William P. Clements, Jr. Building (tower volumes) (486277:108) from 30 m",
+    "position": [
+      -417.43,
+      31.54,
+      919.56
+    ],
+    "target": [
+      -487.45,
+      35.5,
+      868.89
+    ],
+    "fov": 62,
+    "groundY": 1.54,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-21-rio-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "21 Rio, 2101 Rio Grande St (503131:167) from the street",
+    "position": [
+      -758,
+      11.66,
+      200.33
+    ],
+    "target": [
+      -728.35,
+      45.45,
+      200.33
+    ],
+    "fov": 62,
+    "groundY": 9.96,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-21-rio-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "21 Rio, 2101 Rio Grande St (503131:167) from 30 m",
+    "position": [
+      -608.54,
+      42.43,
+      108.32
+    ],
+    "target": [
+      -728.35,
+      45.45,
+      200.33
+    ],
+    "fov": 62,
+    "groundY": 12.43,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-ion-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Ion Austin, 2100 San Antonio St (tower volumes) (622603:771) from the street",
+    "position": [
+      -641.42,
+      13.83,
+      106.64
+    ],
+    "target": [
+      -603.52,
+      39.4,
+      166.9
+    ],
+    "fov": 62,
+    "groundY": 12.13,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-ion-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Ion Austin, 2100 San Antonio St (tower volumes) (622603:771) from 30 m",
+    "position": [
+      -503.22,
+      39.76,
+      118.7
+    ],
+    "target": [
+      -603.52,
+      39.4,
+      166.9
+    ],
+    "fov": 62,
+    "groundY": 9.76,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-lark-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Lark Austin (probable), 2100 Nueces St (735333:1272) from the street",
+    "position": [
+      -611.63,
+      10.41,
+      242.02
+    ],
+    "target": [
+      -685.92,
+      39.81,
+      204.2
+    ],
+    "fov": 62,
+    "groundY": 8.71,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-lark-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Lark Austin (probable), 2100 Nueces St (735333:1272) from 30 m",
+    "position": [
+      -650.77,
+      42.13,
+      97.83
+    ],
+    "target": [
+      -685.92,
+      39.81,
+      204.2
+    ],
+    "fov": 62,
+    "groundY": 12.13,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-signature-1909-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Signature 1909, 1909 Rio Grande St (486699:114) from the street",
+    "position": [
+      -757.53,
+      11.24,
+      228.43
+    ],
+    "target": [
+      -733.15,
+      30.58,
+      266.67
+    ],
+    "fov": 62,
+    "groundY": 9.54,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-signature-1909-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Signature 1909, 1909 Rio Grande St (486699:114) from 30 m",
+    "position": [
+      -673.99,
+      34.54,
+      387.83
+    ],
+    "target": [
+      -733.15,
+      30.58,
+      266.67
+    ],
+    "fov": 62,
+    "groundY": 4.54,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-doubletree-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "DoubleTree Suites Austin Downtown Capitol, 303 W 15th St (525738:260) from the street",
+    "position": [
+      -559.19,
+      0.28,
+      901.52
+    ],
+    "target": [
+      -525.57,
+      24.25,
+      963.07
+    ],
+    "fov": 62,
+    "groundY": -1.42,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-doubletree-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "DoubleTree Suites Austin Downtown Capitol, 303 W 15th St (525738:260) from 30 m",
+    "position": [
+      -543.55,
+      28.97,
+      852.68
+    ],
+    "target": [
+      -525.57,
+      24.25,
+      963.07
+    ],
+    "fov": 62,
+    "groundY": -1.03,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-villas-on-rio-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Villas on Rio, 2111 Rio Grande St (641335:834) from the street",
+    "position": [
+      -668.42,
+      13.48,
+      104.41
+    ],
+    "target": [
+      -721.57,
+      38.74,
+      149.74
+    ],
+    "fov": 62,
+    "groundY": 11.78,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-villas-on-rio-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Villas on Rio, 2111 Rio Grande St (641335:834) from 30 m",
+    "position": [
+      -739.98,
+      41.74,
+      67.54
+    ],
+    "target": [
+      -721.57,
+      38.74,
+      149.74
+    ],
+    "fov": 62,
+    "groundY": 11.74,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-inspire-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Inspire on 22nd, 2200 Nueces St (697152:1015) from the street",
+    "position": [
+      -740.09,
+      12.88,
+      99.05
+    ],
+    "target": [
+      -674.6,
+      39.9,
+      75.8
+    ],
+    "fov": 62,
+    "groundY": 11.18,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-inspire-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Inspire on 22nd, 2200 Nueces St (697152:1015) from 30 m",
+    "position": [
+      -756.29,
+      41.24,
+      92.07
+    ],
+    "target": [
+      -674.6,
+      39.9,
+      75.8
+    ],
+    "fov": 62,
+    "groundY": 11.24,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-sxsw-center-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "SXSW Center, 1400 Lavaca St (717464:1161) from the street",
+    "position": [
+      -606.41,
+      -1.65,
+      1011.06
+    ],
+    "target": [
+      -536.7,
+      25.85,
+      997.95
+    ],
+    "fov": 62,
+    "groundY": -3.35,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-sxsw-center-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "SXSW Center, 1400 Lavaca St (717464:1161) from 30 m",
+    "position": [
+      -446.66,
+      29.47,
+      1061.32
+    ],
+    "target": [
+      -536.7,
+      25.85,
+      997.95
+    ],
+    "fov": 62,
+    "groundY": -0.53,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-tma-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "TMA office + union garage (525515:254) from the street",
+    "position": [
+      -677.21,
+      -2.96,
+      876.6
+    ],
+    "target": [
+      -624.77,
+      17.8,
+      923.3
+    ],
+    "fov": 62,
+    "groundY": -4.66,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-tma-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "TMA office + union garage (525515:254) from 30 m",
+    "position": [
+      -645.87,
+      25.94,
+      813.5
+    ],
+    "target": [
+      -624.77,
+      17.8,
+      923.3
+    ],
+    "fov": 62,
+    "groundY": -4.06,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-waterloo-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Yugo Austin Waterloo, 2400 Seton Ave (594352:667) from the street",
+    "position": [
+      -624.47,
+      16.27,
+      -186.64
+    ],
+    "target": [
+      -666.91,
+      55.21,
+      -237.89
+    ],
+    "fov": 62,
+    "groundY": 14.57,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-waterloo-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Yugo Austin Waterloo, 2400 Seton Ave (594352:667) from 30 m",
+    "position": [
+      -635.23,
+      45.57,
+      -342.35
+    ],
+    "target": [
+      -666.91,
+      55.21,
+      -237.89
+    ],
+    "fov": 62,
+    "groundY": 15.57,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-union-san-antonio-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Union on San Antonio, 2011 San Antonio St (512858:245) from the street",
+    "position": [
+      -575.4,
+      4.49,
+      373.66
+    ],
+    "target": [
+      -542.28,
+      44.1,
+      321.95
+    ],
+    "fov": 62,
+    "groundY": 2.79,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-union-san-antonio-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Union on San Antonio, 2011 San Antonio St (512858:245) from 30 m",
+    "position": [
+      -611.63,
+      38.71,
+      242.02
+    ],
+    "target": [
+      -542.28,
+      44.1,
+      321.95
+    ],
+    "fov": 62,
+    "groundY": 8.71,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-skyloft-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Skyloft (550397:416) from the street",
+    "position": [
+      -637.01,
+      15.32,
+      -62.79
+    ],
+    "target": [
+      -612.58,
+      46.51,
+      -12.05
+    ],
+    "fov": 62,
+    "groundY": 13.62,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-skyloft-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Skyloft (550397:416) from 30 m",
+    "position": [
+      -685.06,
+      43.32,
+      -59.8
+    ],
+    "target": [
+      -612.58,
+      46.51,
+      -12.05
+    ],
+    "fov": 62,
+    "groundY": 13.32,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-moody-bank-tower-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Moody Bank Tower (592244:630) from the street",
+    "position": [
+      -656.55,
+      -2.56,
+      848.33
+    ],
+    "target": [
+      -587.95,
+      32.7,
+      860.3
+    ],
+    "fov": 62,
+    "groundY": -4.25,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-hi-moody-bank-tower-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Moody Bank Tower (592244:630) from 30 m",
+    "position": [
+      -697.19,
+      25.15,
+      870.07
+    ],
+    "target": [
+      -587.95,
+      32.7,
+      860.3
+    ],
+    "fov": 62,
+    "groundY": -4.85,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-retail-canes-mlk",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Raising Cane's, 415 W MLK: arched orange entry tower (crown = frozen 2017 top), recessed entry under the black box canopy, oval sign, black shed awnings on the west wing",
+    "position": [
+      -499.6,
+      4.32,
+      479.8
+    ],
+    "target": [
+      -506.9,
+      6.25,
+      494
+    ],
+    "fov": 60,
+    "groundY": 2.62,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-retail-chickfila-east",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Chick-fil-A, 503 W MLK: red curved storefront canopy over recessed bays between red-brown brick piers, beige band with CHICK-FIL-A letters, red-brown cornice",
+    "position": [
+      -557.8,
+      2.48,
+      489.6
+    ],
+    "target": [
+      -573.2,
+      4.6,
+      488.9
+    ],
+    "fov": 60,
+    "groundY": 0.78,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-retail-chickfila-mlk",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Chick-fil-A from W MLK: red logo cabinet under the cornice on the north face",
+    "position": [
+      -560.8,
+      3.12,
+      458.7
+    ],
+    "target": [
+      -565.6,
+      5.3,
+      473.9
+    ],
+    "fov": 60,
+    "groundY": 1.42,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-retail-pterrys-mlk",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "P. Terry's, 517 W MLK: white box with red P.TERRY'S letters over the aqua umbrella rim, north patio / drive-thru undercroft with two aqua inverted-pyramid umbrellas on columns",
+    "position": [
+      -610.2,
+      3.8,
+      435.7
+    ],
+    "target": [
+      -612.3,
+      4.6,
+      452
+    ],
+    "fov": 60,
+    "groundY": 2.1,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-retail-pterrys-east",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "P. Terry's east side: east umbrella undercroft (no column: the mapped drive-thru lane covers the lobe), wood-clad drive-thru pickup bay",
+    "position": [
+      -590,
+      2.82,
+      481
+    ],
+    "target": [
+      -605.5,
+      3.6,
+      475
+    ],
+    "fov": 60,
+    "groundY": 1.12,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  {
+    "id": "b12-retail-dominos-corner",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Domino's, 1900 Guadalupe (south lobe of 505467:200): deep-red fascia, forecourt canopy undercroft with thin red corner posts, cream storefront glazing, red/blue tile logos; unbranded Monkies storefront strip behind",
+    "position": [
+      -482,
+      5,
+      458
+    ],
+    "target": [
+      -499,
+      6.9,
+      443
+    ],
+    "fov": 62,
+    "groundY": 3.3,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  }
+]

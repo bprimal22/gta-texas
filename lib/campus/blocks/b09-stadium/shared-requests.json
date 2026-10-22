@@ -1,0 +1,26 @@
+[
+ {
+  "file": "lib/campus/stadium-bowl.ts",
+  "change": "APPLIED by root after round 1 (per-side rim cap: east 43.0, north/corners 40.5 m above the field). No further change requested.",
+  "reason": "Measured over-height vs the 2017 LiDAR on the 1998 east deck and the 2008 north end.",
+  "evidence": "research/whole-campus-92/b09-stadium/derived/lidar-b09.json; round-2 bowl baseline in lib/campus/blocks/b09-stadium/exterior-plan.json"
+ },
+ {
+  "file": "lib/campus/local-context.ts (coverage raster) — information, no change requested",
+  "change": "b09 round 2 marks its exterior meshes userData.localContext = true so rasterizeMeshes skips them and the bowl does not retract its stands behind the new Bellmont bays / towers / videoboard. If root prefers an explicit flag (e.g. userData.skipCoverage), rename it in both places; the b09 check asserts the bowl equals the no-install baseline (triangles, collider triangles, retracted metres, mean depth).",
+  "reason": "The bowl is built after blocks and retracts from authored elevated coverage within 2 m of its reach edge; the exterior features stand 0.1-8 m outside the measured outer wall by design.",
+  "evidence": "scripts/harness/blocks/b09-stadium.ts check 5 (bowlVsBaseline)"
+ },
+ {
+  "file": "lib/campus/stadium-bowl.ts / context-textures.ts (optional, lower priority)",
+  "change": "SEZ south outer wall: the accepted atlas b09-r1-a2 overview shows rounded cream drums at the SEZ west/east ends and a broad flat pale roof/terrace deck south of the seats; the generic bowl section has neither. Only build them if an architect drawing or measured outline becomes available (the UT SEZ ring has no clear drum arcs; the 2021 building postdates the LiDAR).",
+  "reason": "Recognisable SEZ massing beyond the b09 bands/videoboard.",
+  "evidence": "screenshot-dataset/captures/b09-r1-a2-overview.jpg (accepted, geographic arrangement only)"
+ },
+ {
+  "file": "coordination with b11-south-medical",
+  "change": "No file change requested. FYI: the 2026 Denius Football Training Complex (UT FTC 1806, FTG garage 2234) straddles z = 640 (b09/b11). City 550711 still shows the pre-2026 site; b09 kept the generated fallback.",
+  "reason": "Temporal: City 2023 footprints and 2017 LiDAR predate the 2026 complex.",
+  "evidence": "UT LIS objects 1806/2234/2235 (last edited 2026-09-01); https://utdirect.utexas.edu/apps/campus/buildings/information/nlogon/maps/UTM/FTC/ (fetched 2026-10-20)"
+ }
+]

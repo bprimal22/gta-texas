@@ -1,0 +1,31 @@
+{
+  "scope": "POB southwest wing south face only; preserve central projection, connector and all existing west/north assets",
+  "a": [26.069526722358884, -62.19388495307754],
+  "b": [46.1458187792, -60.3600675929],
+  "front": 0.66,
+  "back": -1.65,
+  "wallDepth": 1.15,
+  "inset": 0.55,
+  "stoneTop": 8.25,
+  "roof": 25.3,
+  "floor": [[0, 3.2], [10, 2.78], [20.1598707551, 2.45]],
+  "floorThickness": 0.4,
+  "upperRows": [9.25, 13.15, 17.05],
+  "upperWindowHeight": 2.0,
+  "upperWindowWidth": 1.5,
+  "upperCount": 6,
+  "clerestoryBottom": 23.3,
+  "clerestoryHeight": 0.65,
+  "clerestoryWidth": 1.75,
+  "lowerCount": 4,
+  "lowerSillAboveGrade": 0.3,
+  "lowerTop": 7.63,
+  "lowerWidth": 3.4,
+  "notes": [
+    "Horizontal wall endpoints are official UT437 geometry. Southward offset0.66m covers directly measured source triangle protrusion0.56073m with0.09927m margin; it is registration tolerance, not a claim about real architectural projection.",
+    "Roof25.3m matches loaded source samples25.124/25.302; source geometricError2.006m is positional/LOD uncertainty, not survey precision.",
+    "Pale south stone, deeply recessed square/horizontal windows, broad lower glazing and restrained projecting courses are visible in March2025 L179-h090/L001-detail-090. Exact counts, dimensions and hidden rows are photo-informed estimates.",
+    "Narrow structural floor under the wall is interpolated from existing west facade3.2m, nearby exterior source2.782m and GDC connector floor2.45m. This is a closed replacement base, not a new courtyard grading survey.",
+    "Central projection and connector roof untouched: (48,-58) has source high roof27.559m, (49,-53) only low roof8.662m; the height transition is not sufficiently measured for a full-height return."
+  ]
+}

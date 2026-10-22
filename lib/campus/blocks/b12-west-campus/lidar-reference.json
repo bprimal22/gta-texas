@@ -1,0 +1,4449 @@
+{
+ "source": "USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster + DTM (realism-lanes/lidar work/rasters.npz) sampled in the City ring (research/whole-campus-92/b12-west-campus/derived/inventory-b12.json); campus Y = NAVD88 - 165, raster shift dx -0.23 dz -1.07",
+ "records": {
+  "462904:2": {
+   "abbr": "",
+   "roofY_P10": 5.33,
+   "roofY_P50": 5.42,
+   "roofY_P90": 8.15,
+   "roofY_P95": 8.3,
+   "roofY_max": 9.63,
+   "coverage": 0.86,
+   "groundY": -0.5,
+   "restated": true
+  },
+  "463418:14": {
+   "abbr": "",
+   "roofY_P10": 24.6,
+   "roofY_P50": 25.12,
+   "roofY_P90": 26.05,
+   "roofY_P95": 26.22,
+   "roofY_max": 28.1,
+   "coverage": 0.87,
+   "groundY": 14.1,
+   "restated": true
+  },
+  "463452:15": {
+   "abbr": "",
+   "roofY_P10": 8.99,
+   "roofY_P50": 11.67,
+   "roofY_P90": 14.47,
+   "roofY_P95": 14.79,
+   "roofY_max": 15.35,
+   "coverage": 0.95,
+   "groundY": 3.4,
+   "restated": true
+  },
+  "463996:22": {
+   "abbr": "",
+   "roofY_P10": 27.59,
+   "roofY_P50": 28.72,
+   "roofY_P90": 30.33,
+   "roofY_P95": 30.58,
+   "roofY_max": 31.63,
+   "coverage": 0.93,
+   "groundY": 15.6,
+   "restated": true
+  },
+  "464938:43": {
+   "abbr": "",
+   "roofY_P10": 6.22,
+   "roofY_P50": 7.31,
+   "roofY_P90": 8.65,
+   "roofY_P95": 8.94,
+   "roofY_max": 9.92,
+   "coverage": 0.96,
+   "groundY": -1.0,
+   "restated": true
+  },
+  "465421:49": {
+   "abbr": "",
+   "roofY_P10": 19.29,
+   "roofY_P50": 19.58,
+   "roofY_P90": 21.07,
+   "roofY_P95": 21.12,
+   "roofY_max": 28.36,
+   "coverage": 0.96,
+   "groundY": 1.8,
+   "restated": true
+  },
+  "465688:52": {
+   "abbr": "SAG",
+   "roofY_P10": 32.5,
+   "roofY_P50": 34.47,
+   "roofY_P90": 34.54,
+   "roofY_P95": 35.38,
+   "roofY_max": 39.5,
+   "coverage": 0.78,
+   "groundY": 14.5,
+   "restated": true
+  },
+  "466495:66": {
+   "abbr": "",
+   "roofY_P10": 16.47,
+   "roofY_P50": 19.54,
+   "roofY_P90": 21.89,
+   "roofY_P95": 22.39,
+   "roofY_max": 24.38,
+   "coverage": 0.86,
+   "groundY": 12.1,
+   "restated": true
+  },
+  "466649:68": {
+   "abbr": "",
+   "roofY_P10": 1.1,
+   "roofY_P50": 1.12,
+   "roofY_P90": 2.42,
+   "roofY_P95": 2.42,
+   "roofY_max": 10.38,
+   "coverage": 0.94,
+   "groundY": -1.8,
+   "restated": true
+  },
+  "468129:78": {
+   "abbr": "",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 14.2,
+   "restated": true
+  },
+  "484377:88": {
+   "abbr": "",
+   "roofY_P10": 17.62,
+   "roofY_P50": 19.97,
+   "roofY_P90": 21.27,
+   "roofY_P95": 21.51,
+   "roofY_max": 22.09,
+   "coverage": 0.93,
+   "groundY": 13.6,
+   "restated": true
+  },
+  "484729:89": {
+   "abbr": "",
+   "roofY_P10": 20.32,
+   "roofY_P50": 21.28,
+   "roofY_P90": 22.63,
+   "roofY_P95": 23.0,
+   "roofY_max": 24.4,
+   "coverage": 0.93,
+   "groundY": 13.4,
+   "restated": true
+  },
+  "484744:90": {
+   "abbr": "",
+   "roofY_P10": 2.75,
+   "roofY_P50": 3.6,
+   "roofY_P90": 4.74,
+   "roofY_P95": 4.9,
+   "roofY_max": 5.78,
+   "coverage": 0.85,
+   "groundY": -4.3,
+   "restated": true
+  },
+  "485593:102": {
+   "abbr": "",
+   "roofY_P10": 1.42,
+   "roofY_P50": 2.6,
+   "roofY_P90": 3.72,
+   "roofY_P95": 3.88,
+   "roofY_max": 4.13,
+   "coverage": 0.89,
+   "groundY": -3.3,
+   "restated": true
+  },
+  "486265:107": {
+   "abbr": "",
+   "roofY_P10": 1.42,
+   "roofY_P50": 1.48,
+   "roofY_P90": 4.19,
+   "roofY_P95": 4.21,
+   "roofY_max": 4.25,
+   "coverage": 0.8,
+   "groundY": -4.7,
+   "restated": true
+  },
+  "486277:108": {
+   "abbr": "",
+   "roofY_P10": 19.21,
+   "roofY_P50": 53.33,
+   "roofY_P90": 68.81,
+   "roofY_P95": 71.83,
+   "roofY_max": 72.77,
+   "coverage": 0.85,
+   "groundY": -0.9,
+   "restated": false,
+   "exempt": "one City ring = William P. Clements Jr. Building (15 levels) + a 7-level building (OSM 516187604); record P50 mixes the 21.5 m and 62.3-72.8 m tiers; checked per tier (486277:108:*)"
+  },
+  "486476:113": {
+   "abbr": "",
+   "roofY_P10": 8.34,
+   "roofY_P50": 8.4,
+   "roofY_P90": 8.86,
+   "roofY_P95": 8.99,
+   "roofY_max": 15.5,
+   "coverage": 0.95,
+   "groundY": 4.9,
+   "restated": true
+  },
+  "487144:117": {
+   "abbr": "",
+   "roofY_P10": 22.13,
+   "roofY_P50": 22.89,
+   "roofY_P90": 23.97,
+   "roofY_P95": 24.17,
+   "roofY_max": 24.37,
+   "coverage": 0.75,
+   "groundY": 14.7,
+   "restated": true
+  },
+  "487224:119": {
+   "abbr": "",
+   "roofY_P10": 3.78,
+   "roofY_P50": 4.48,
+   "roofY_P90": 5.43,
+   "roofY_P95": 5.7,
+   "roofY_max": 7.03,
+   "coverage": 0.94,
+   "groundY": -3.3,
+   "restated": true
+  },
+  "487370:124": {
+   "abbr": "",
+   "roofY_P10": 2.46,
+   "roofY_P50": 4.66,
+   "roofY_P90": 4.93,
+   "roofY_P95": 4.94,
+   "roofY_max": 9.4,
+   "coverage": 0.77,
+   "groundY": -2.6,
+   "restated": true
+  },
+  "487825:132": {
+   "abbr": "",
+   "roofY_P10": 18.25,
+   "roofY_P50": 19.45,
+   "roofY_P90": 20.64,
+   "roofY_P95": 20.82,
+   "roofY_max": 23.81,
+   "coverage": 0.95,
+   "groundY": 13.9,
+   "restated": true
+  },
+  "501829:143": {
+   "abbr": "",
+   "roofY_P10": 23.8,
+   "roofY_P50": 23.84,
+   "roofY_P90": 23.96,
+   "roofY_P95": 24.13,
+   "roofY_max": 26.23,
+   "coverage": 0.94,
+   "groundY": 15.6,
+   "restated": true
+  },
+  "503131:167": {
+   "abbr": "",
+   "roofY_P10": 74.07,
+   "roofY_P50": 76.4,
+   "roofY_P90": 81.54,
+   "roofY_P95": 81.65,
+   "roofY_max": 83.31,
+   "coverage": 0.92,
+   "groundY": 9.3,
+   "restated": true
+  },
+  "503527:172": {
+   "abbr": "",
+   "roofY_P10": -3.16,
+   "roofY_P50": -2.43,
+   "roofY_P90": -1.63,
+   "roofY_P95": -1.4,
+   "roofY_max": -1.07,
+   "coverage": 0.84,
+   "groundY": -7.4,
+   "restated": true
+  },
+  "503847:175": {
+   "abbr": "",
+   "roofY_P10": 15.82,
+   "roofY_P50": 16.49,
+   "roofY_P90": 18.13,
+   "roofY_P95": 19.0,
+   "roofY_max": 30.12,
+   "coverage": 0.86,
+   "groundY": -4.0,
+   "restated": true
+  },
+  "504571:188": {
+   "abbr": "",
+   "roofY_P10": 2.57,
+   "roofY_P50": 4.13,
+   "roofY_P90": 5.7,
+   "roofY_P95": 6.12,
+   "roofY_max": 6.75,
+   "coverage": 0.82,
+   "groundY": -5.0,
+   "restated": true
+  },
+  "505467:200": {
+   "abbr": "",
+   "roofY_P10": 6.96,
+   "roofY_P50": 7.73,
+   "roofY_P90": 7.98,
+   "roofY_P95": 8.19,
+   "roofY_max": 11.29,
+   "coverage": 0.95,
+   "groundY": 2.1,
+   "restated": true
+  },
+  "506944:215": {
+   "abbr": "",
+   "roofY_P10": -0.7,
+   "roofY_P50": 0.06,
+   "roofY_P90": 1.53,
+   "roofY_P95": 1.7,
+   "roofY_max": 3.83,
+   "coverage": 0.9,
+   "groundY": -3.8,
+   "restated": true
+  },
+  "507576:227": {
+   "abbr": "",
+   "roofY_P10": 25.85,
+   "roofY_P50": 27.08,
+   "roofY_P90": 27.83,
+   "roofY_P95": 27.9,
+   "roofY_max": 27.95,
+   "coverage": 0.91,
+   "groundY": 16.2,
+   "restated": true
+  },
+  "507834:231": {
+   "abbr": "",
+   "roofY_P10": -0.93,
+   "roofY_P50": 0.63,
+   "roofY_P90": 2.46,
+   "roofY_P95": 2.88,
+   "roofY_max": 3.64,
+   "coverage": 0.95,
+   "groundY": -4.1,
+   "restated": true
+  },
+  "508176:237": {
+   "abbr": "",
+   "roofY_P10": 8.07,
+   "roofY_P50": 9.21,
+   "roofY_P90": 10.67,
+   "roofY_P95": 11.01,
+   "roofY_max": 11.7,
+   "coverage": 0.88,
+   "groundY": -0.2,
+   "restated": true
+  },
+  "525341:252": {
+   "abbr": "N24",
+   "roofY_P10": 31.99,
+   "roofY_P50": 61.21,
+   "roofY_P90": 68.36,
+   "roofY_P95": 69.83,
+   "roofY_max": 74.84,
+   "coverage": 0.84,
+   "groundY": 14.6,
+   "restated": false,
+   "exempt": "two UT buildings in one ring; checked per wing (NUG, N24:*)"
+  },
+  "525515:254": {
+   "abbr": "",
+   "roofY_P10": 8.48,
+   "roofY_P50": 40.06,
+   "roofY_P90": 42.24,
+   "roofY_P95": 44.12,
+   "roofY_max": 44.25,
+   "coverage": 0.85,
+   "groundY": -4.6,
+   "restated": false,
+   "exempt": "Texas Medical Association + garage (OSM) in one ring; record P95 0.04 m under the band from rooftop equipment; tower tier checked (525515:254:44.8)"
+  },
+  "525591:255": {
+   "abbr": "",
+   "roofY_P10": -3.8,
+   "roofY_P50": -3.26,
+   "roofY_P90": -2.4,
+   "roofY_P95": -2.29,
+   "roofY_max": -2.24,
+   "coverage": 0.72,
+   "groundY": -6.2,
+   "restated": true
+  },
+  "525738:260": {
+   "abbr": "",
+   "roofY_P10": 1.28,
+   "roofY_P50": 46.28,
+   "roofY_P90": 50.67,
+   "roofY_P95": 51.37,
+   "roofY_max": 55.66,
+   "coverage": 0.83,
+   "groundY": -2.1,
+   "restated": true
+  },
+  "526061:268": {
+   "abbr": "",
+   "roofY_P10": 12.25,
+   "roofY_P50": 13.25,
+   "roofY_P90": 14.2,
+   "roofY_P95": 14.31,
+   "roofY_max": 14.86,
+   "coverage": 0.94,
+   "groundY": 5.3,
+   "restated": true
+  },
+  "526440:278": {
+   "abbr": "",
+   "roofY_P10": 5.54,
+   "roofY_P50": 7.56,
+   "roofY_P90": 8.64,
+   "roofY_P95": 8.84,
+   "roofY_max": 13.4,
+   "coverage": 0.9,
+   "groundY": -1.9,
+   "restated": true
+  },
+  "526587:282": {
+   "abbr": "",
+   "roofY_P10": 33.24,
+   "roofY_P50": 39.63,
+   "roofY_P90": 40.38,
+   "roofY_P95": 40.79,
+   "roofY_max": 42.18,
+   "coverage": 0.87,
+   "groundY": 13.4,
+   "restated": true
+  },
+  "526589:283": {
+   "abbr": "",
+   "roofY_P10": 3.54,
+   "roofY_P50": 4.7,
+   "roofY_P90": 5.53,
+   "roofY_P95": 5.65,
+   "roofY_max": 7.86,
+   "coverage": 0.96,
+   "groundY": -0.2,
+   "restated": true
+  },
+  "527464:299": {
+   "abbr": "",
+   "roofY_P10": 3.52,
+   "roofY_P50": 4.9,
+   "roofY_P90": 6.44,
+   "roofY_P95": 6.87,
+   "roofY_max": 10.38,
+   "coverage": 0.84,
+   "groundY": -1.7,
+   "restated": true
+  },
+  "527491:300": {
+   "abbr": "",
+   "roofY_P10": 1.07,
+   "roofY_P50": 1.83,
+   "roofY_P90": 2.46,
+   "roofY_P95": 2.55,
+   "roofY_max": 2.62,
+   "coverage": 0.92,
+   "groundY": -3.6,
+   "restated": true
+  },
+  "527728:303": {
+   "abbr": "",
+   "roofY_P10": 5.85,
+   "roofY_P50": 5.93,
+   "roofY_P90": 6.03,
+   "roofY_P95": 6.04,
+   "roofY_max": 6.07,
+   "coverage": 0.99,
+   "groundY": 0.6,
+   "restated": true
+  },
+  "527760:304": {
+   "abbr": "",
+   "roofY_P10": 14.95,
+   "roofY_P50": 16.88,
+   "roofY_P90": 18.32,
+   "roofY_P95": 18.51,
+   "roofY_max": 18.62,
+   "coverage": 0.97,
+   "groundY": 4.3,
+   "restated": true
+  },
+  "528017:309": {
+   "abbr": "",
+   "roofY_P10": 2.73,
+   "roofY_P50": 2.75,
+   "roofY_P90": 2.79,
+   "roofY_P95": 2.8,
+   "roofY_max": 3.88,
+   "coverage": 0.82,
+   "groundY": -4.1,
+   "restated": true
+  },
+  "528395:313": {
+   "abbr": "",
+   "roofY_P10": 32.27,
+   "roofY_P50": 38.62,
+   "roofY_P90": 39.29,
+   "roofY_P95": 39.66,
+   "roofY_max": 41.55,
+   "coverage": 0.86,
+   "groundY": 12.4,
+   "restated": true
+  },
+  "528721:322": {
+   "abbr": "",
+   "roofY_P10": -2.29,
+   "roofY_P50": 0.55,
+   "roofY_P90": 0.61,
+   "roofY_P95": 0.62,
+   "roofY_max": 1.34,
+   "coverage": 0.84,
+   "groundY": -6.1,
+   "restated": true
+  },
+  "530132:343": {
+   "abbr": "",
+   "roofY_P10": 5.16,
+   "roofY_P50": 7.09,
+   "roofY_P90": 9.3,
+   "roofY_P95": 9.58,
+   "roofY_max": 10.01,
+   "coverage": 0.95,
+   "groundY": -0.8,
+   "restated": true
+  },
+  "530446:346": {
+   "abbr": "",
+   "roofY_P10": 5.25,
+   "roofY_P50": 6.31,
+   "roofY_P90": 7.24,
+   "roofY_P95": 7.45,
+   "roofY_max": 7.64,
+   "coverage": 0.96,
+   "groundY": 0.6,
+   "restated": true
+  },
+  "547838:356": {
+   "abbr": "",
+   "roofY_P10": 18.23,
+   "roofY_P50": 21.3,
+   "roofY_P90": 22.22,
+   "roofY_P95": 22.52,
+   "roofY_max": 22.8,
+   "coverage": 0.86,
+   "groundY": 9.6,
+   "restated": true
+  },
+  "548283:367": {
+   "abbr": "",
+   "roofY_P10": 2.53,
+   "roofY_P50": 4.36,
+   "roofY_P90": 6.35,
+   "roofY_P95": 6.76,
+   "roofY_max": 9.72,
+   "coverage": 0.83,
+   "groundY": -1.1,
+   "restated": true
+  },
+  "549218:389": {
+   "abbr": "",
+   "roofY_P10": 20.4,
+   "roofY_P50": 24.11,
+   "roofY_P90": 28.26,
+   "roofY_P95": 28.27,
+   "roofY_max": 29.49,
+   "coverage": 0.89,
+   "groundY": 15.7,
+   "restated": true
+  },
+  "549820:405": {
+   "abbr": "",
+   "roofY_P10": 1.15,
+   "roofY_P50": 2.54,
+   "roofY_P90": 3.77,
+   "roofY_P95": 3.89,
+   "roofY_max": 7.96,
+   "coverage": 0.95,
+   "groundY": -3.4,
+   "restated": true
+  },
+  "549828:406": {
+   "abbr": "",
+   "roofY_P10": 30.2,
+   "roofY_P50": 30.31,
+   "roofY_P90": 31.84,
+   "roofY_P95": 35.22,
+   "roofY_max": 39.04,
+   "coverage": 0.87,
+   "groundY": 12.8,
+   "restated": true
+  },
+  "550399:417": {
+   "abbr": "",
+   "roofY_P10": 4.4,
+   "roofY_P50": 5.53,
+   "roofY_P90": 6.43,
+   "roofY_P95": 6.58,
+   "roofY_max": 7.17,
+   "coverage": 0.93,
+   "groundY": -0.0,
+   "restated": true
+  },
+  "550587:419": {
+   "abbr": "",
+   "roofY_P10": 9.43,
+   "roofY_P50": 9.48,
+   "roofY_P90": 9.52,
+   "roofY_P95": 9.67,
+   "roofY_max": 10.56,
+   "coverage": 0.96,
+   "groundY": -0.4,
+   "restated": true
+  },
+  "550612:420": {
+   "abbr": "",
+   "roofY_P10": 24.34,
+   "roofY_P50": 25.59,
+   "roofY_P90": 26.99,
+   "roofY_P95": 27.35,
+   "roofY_max": 27.89,
+   "coverage": 0.81,
+   "groundY": 14.4,
+   "restated": true
+  },
+  "551002:426": {
+   "abbr": "",
+   "roofY_P10": 21.16,
+   "roofY_P50": 21.46,
+   "roofY_P90": 21.7,
+   "roofY_P95": 21.75,
+   "roofY_max": 23.09,
+   "coverage": 0.88,
+   "groundY": 14.4,
+   "restated": true
+  },
+  "551120:427": {
+   "abbr": "",
+   "roofY_P10": 15.56,
+   "roofY_P50": 19.89,
+   "roofY_P90": 21.68,
+   "roofY_P95": 21.93,
+   "roofY_max": 23.07,
+   "coverage": 0.86,
+   "groundY": 10.8,
+   "restated": true
+  },
+  "551139:429": {
+   "abbr": "",
+   "roofY_P10": 2.0,
+   "roofY_P50": 2.05,
+   "roofY_P90": 2.68,
+   "roofY_P95": 2.69,
+   "roofY_max": 2.99,
+   "coverage": 0.89,
+   "groundY": -1.4,
+   "restated": true
+  },
+  "551343:433": {
+   "abbr": "",
+   "roofY_P10": 35.57,
+   "roofY_P50": 36.38,
+   "roofY_P90": 38.85,
+   "roofY_P95": 40.22,
+   "roofY_max": 42.09,
+   "coverage": 0.93,
+   "groundY": 15.9,
+   "restated": true
+  },
+  "551391:436": {
+   "abbr": "",
+   "roofY_P10": 18.72,
+   "roofY_P50": 19.44,
+   "roofY_P90": 20.17,
+   "roofY_P95": 20.27,
+   "roofY_max": 20.36,
+   "coverage": 0.87,
+   "groundY": 11.8,
+   "restated": true
+  },
+  "551525:438": {
+   "abbr": "",
+   "roofY_P10": 9.64,
+   "roofY_P50": 10.45,
+   "roofY_P90": 10.95,
+   "roofY_P95": 11.05,
+   "roofY_max": 17.34,
+   "coverage": 0.84,
+   "groundY": 7.0,
+   "restated": true
+  },
+  "551764:445": {
+   "abbr": "",
+   "roofY_P10": 20.12,
+   "roofY_P50": 20.14,
+   "roofY_P90": 20.16,
+   "roofY_P95": 20.17,
+   "roofY_max": 21.24,
+   "coverage": 0.89,
+   "groundY": 12.4,
+   "restated": true
+  },
+  "551981:446": {
+   "abbr": "",
+   "roofY_P10": 21.38,
+   "roofY_P50": 22.05,
+   "roofY_P90": 22.91,
+   "roofY_P95": 23.04,
+   "roofY_max": 23.77,
+   "coverage": 0.96,
+   "groundY": 14.2,
+   "restated": true
+  },
+  "567165:454": {
+   "abbr": "",
+   "roofY_P10": 9.84,
+   "roofY_P50": 10.2,
+   "roofY_P90": 12.21,
+   "roofY_P95": 12.23,
+   "roofY_max": 12.47,
+   "coverage": 0.88,
+   "groundY": 5.8,
+   "restated": true
+  },
+  "567606:459": {
+   "abbr": "",
+   "roofY_P10": 14.72,
+   "roofY_P50": 15.85,
+   "roofY_P90": 17.06,
+   "roofY_P95": 17.31,
+   "roofY_max": 17.96,
+   "coverage": 0.96,
+   "groundY": 7.8,
+   "restated": true
+  },
+  "567669:461": {
+   "abbr": "",
+   "roofY_P10": 0.81,
+   "roofY_P50": 1.34,
+   "roofY_P90": 3.13,
+   "roofY_P95": 3.33,
+   "roofY_max": 15.41,
+   "coverage": 0.96,
+   "groundY": -2.4,
+   "restated": true
+  },
+  "567907:469": {
+   "abbr": "",
+   "roofY_P10": 15.12,
+   "roofY_P50": 16.3,
+   "roofY_P90": 18.12,
+   "roofY_P95": 18.49,
+   "roofY_max": 18.83,
+   "coverage": 0.93,
+   "groundY": 3.0,
+   "restated": true
+  },
+  "568054:474": {
+   "abbr": "",
+   "roofY_P10": 4.95,
+   "roofY_P50": 6.05,
+   "roofY_P90": 6.94,
+   "roofY_P95": 7.04,
+   "roofY_max": 7.89,
+   "coverage": 0.84,
+   "groundY": 1.1,
+   "restated": true
+  },
+  "568072:475": {
+   "abbr": "",
+   "roofY_P10": -2.65,
+   "roofY_P50": -2.46,
+   "roofY_P90": -2.26,
+   "roofY_P95": -2.25,
+   "roofY_max": -2.22,
+   "coverage": 0.8,
+   "groundY": -5.8,
+   "restated": true
+  },
+  "569015:494": {
+   "abbr": "",
+   "roofY_P10": 12.12,
+   "roofY_P50": 12.18,
+   "roofY_P90": 15.42,
+   "roofY_P95": 15.5,
+   "roofY_max": 16.15,
+   "coverage": 0.94,
+   "groundY": 3.2,
+   "restated": true
+  },
+  "570571:523": {
+   "abbr": "",
+   "roofY_P10": 20.31,
+   "roofY_P50": 21.17,
+   "roofY_P90": 21.91,
+   "roofY_P95": 22.04,
+   "roofY_max": 22.22,
+   "coverage": 0.88,
+   "groundY": 13.3,
+   "restated": true
+  },
+  "570632:525": {
+   "abbr": "",
+   "roofY_P10": -1.33,
+   "roofY_P50": -1.25,
+   "roofY_P90": -1.16,
+   "roofY_P95": -1.12,
+   "roofY_max": 6.05,
+   "coverage": 0.83,
+   "groundY": -6.0,
+   "restated": true
+  },
+  "570690:528": {
+   "abbr": "",
+   "roofY_P10": 3.93,
+   "roofY_P50": 5.15,
+   "roofY_P90": 6.12,
+   "roofY_P95": 6.23,
+   "roofY_max": 7.58,
+   "coverage": 0.97,
+   "groundY": 0.3,
+   "restated": true
+  },
+  "571123:534": {
+   "abbr": "",
+   "roofY_P10": 20.4,
+   "roofY_P50": 26.0,
+   "roofY_P90": 28.0,
+   "roofY_P95": 28.35,
+   "roofY_max": 29.79,
+   "coverage": 0.92,
+   "groundY": 15.9,
+   "restated": true
+  },
+  "587313:551": {
+   "abbr": "",
+   "roofY_P10": 6.28,
+   "roofY_P50": 7.89,
+   "roofY_P90": 9.14,
+   "roofY_P95": 9.37,
+   "roofY_max": 10.2,
+   "coverage": 0.93,
+   "groundY": 1.8,
+   "restated": true
+  },
+  "588082:565": {
+   "abbr": "",
+   "roofY_P10": -2.02,
+   "roofY_P50": -0.93,
+   "roofY_P90": -0.14,
+   "roofY_P95": 0.15,
+   "roofY_max": 0.19,
+   "coverage": 0.82,
+   "groundY": -6.3,
+   "restated": true
+  },
+  "588941:578": {
+   "abbr": "",
+   "roofY_P10": 11.9,
+   "roofY_P50": 16.59,
+   "roofY_P90": 32.78,
+   "roofY_P95": 35.84,
+   "roofY_max": 37.12,
+   "coverage": 0.95,
+   "groundY": 6.5,
+   "restated": true
+  },
+  "589454:589": {
+   "abbr": "",
+   "roofY_P10": 5.97,
+   "roofY_P50": 6.18,
+   "roofY_P90": 6.39,
+   "roofY_P95": 6.42,
+   "roofY_max": 6.58,
+   "coverage": 0.96,
+   "groundY": 1.7,
+   "restated": false,
+   "exempt": "104 m2 low building: the generator's minimum wall height (floor0 + 2.4 m) holds the eave ~0.9 m above the measured 4.9 m roof"
+  },
+  "591550:617": {
+   "abbr": "",
+   "roofY_P10": 19.23,
+   "roofY_P50": 20.84,
+   "roofY_P90": 25.15,
+   "roofY_P95": 25.74,
+   "roofY_max": 31.18,
+   "coverage": 0.78,
+   "groundY": 14.0,
+   "restated": true
+  },
+  "592244:630": {
+   "abbr": "",
+   "roofY_P10": 63.95,
+   "roofY_P50": 63.99,
+   "roofY_P90": 68.69,
+   "roofY_P95": 68.71,
+   "roofY_max": 69.59,
+   "coverage": 0.9,
+   "groundY": -3.2,
+   "restated": true
+  },
+  "592250:631": {
+   "abbr": "",
+   "roofY_P10": 3.78,
+   "roofY_P50": 6.05,
+   "roofY_P90": 7.54,
+   "roofY_P95": 7.93,
+   "roofY_max": 8.75,
+   "coverage": 0.86,
+   "groundY": -7.4,
+   "restated": true
+  },
+  "592757:640": {
+   "abbr": "",
+   "roofY_P10": 1.3,
+   "roofY_P50": 1.95,
+   "roofY_P90": 3.07,
+   "roofY_P95": 3.31,
+   "roofY_max": 3.69,
+   "coverage": 0.83,
+   "groundY": -7.0,
+   "restated": true
+  },
+  "593004:643": {
+   "abbr": "",
+   "roofY_P10": 12.02,
+   "roofY_P50": 12.81,
+   "roofY_P90": 13.71,
+   "roofY_P95": 13.86,
+   "roofY_max": 15.98,
+   "coverage": 0.97,
+   "groundY": 4.9,
+   "restated": true
+  },
+  "593088:644": {
+   "abbr": "",
+   "roofY_P10": 2.66,
+   "roofY_P50": 3.72,
+   "roofY_P90": 5.06,
+   "roofY_P95": 5.37,
+   "roofY_max": 10.63,
+   "coverage": 0.93,
+   "groundY": -1.9,
+   "restated": true
+  },
+  "593712:656": {
+   "abbr": "",
+   "roofY_P10": 0.67,
+   "roofY_P50": 2.64,
+   "roofY_P90": 4.55,
+   "roofY_P95": 5.04,
+   "roofY_max": 6.0,
+   "coverage": 0.87,
+   "groundY": -6.8,
+   "restated": true
+  },
+  "594155:663": {
+   "abbr": "",
+   "roofY_P10": 16.18,
+   "roofY_P50": 18.35,
+   "roofY_P90": 19.48,
+   "roofY_P95": 19.79,
+   "roofY_max": 20.73,
+   "coverage": 0.86,
+   "groundY": 11.4,
+   "restated": true
+  },
+  "594257:666": {
+   "abbr": "",
+   "roofY_P10": 20.57,
+   "roofY_P50": 22.68,
+   "roofY_P90": 25.39,
+   "roofY_P95": 26.18,
+   "roofY_max": 27.07,
+   "coverage": 0.86,
+   "groundY": 9.7,
+   "restated": true
+  },
+  "596959:677": {
+   "abbr": "",
+   "roofY_P10": 5.85,
+   "roofY_P50": 6.09,
+   "roofY_P90": 7.41,
+   "roofY_P95": 7.6,
+   "roofY_max": 8.88,
+   "coverage": 0.91,
+   "groundY": 0.8,
+   "restated": true
+  },
+  "610994:687": {
+   "abbr": "",
+   "roofY_P10": 8.49,
+   "roofY_P50": 9.95,
+   "roofY_P90": 10.83,
+   "roofY_P95": 10.96,
+   "roofY_max": 11.68,
+   "coverage": 0.96,
+   "groundY": -2.3,
+   "restated": true
+  },
+  "611181:694": {
+   "abbr": "",
+   "roofY_P10": 0.62,
+   "roofY_P50": 0.69,
+   "roofY_P90": 0.76,
+   "roofY_P95": 1.63,
+   "roofY_max": 2.36,
+   "coverage": 0.87,
+   "groundY": -4.0,
+   "restated": true
+  },
+  "611339:697": {
+   "abbr": "",
+   "roofY_P10": 18.02,
+   "roofY_P50": 19.32,
+   "roofY_P90": 20.98,
+   "roofY_P95": 21.4,
+   "roofY_max": 22.51,
+   "coverage": 0.89,
+   "groundY": 10.9,
+   "restated": true
+  },
+  "611499:703": {
+   "abbr": "",
+   "roofY_P10": 18.35,
+   "roofY_P50": 28.18,
+   "roofY_P90": 29.72,
+   "roofY_P95": 29.75,
+   "roofY_max": 30.28,
+   "coverage": 0.94,
+   "groundY": 15.5,
+   "restated": true
+  },
+  "612372:717": {
+   "abbr": "",
+   "roofY_P10": 6.44,
+   "roofY_P50": 7.59,
+   "roofY_P90": 9.36,
+   "roofY_P95": 9.83,
+   "roofY_max": 10.47,
+   "coverage": 0.85,
+   "groundY": -4.2,
+   "restated": true
+  },
+  "613667:737": {
+   "abbr": "",
+   "roofY_P10": 20.72,
+   "roofY_P50": 21.38,
+   "roofY_P90": 22.22,
+   "roofY_P95": 22.42,
+   "roofY_max": 23.0,
+   "coverage": 0.89,
+   "groundY": 12.1,
+   "restated": true
+  },
+  "614324:746": {
+   "abbr": "",
+   "roofY_P10": 19.54,
+   "roofY_P50": 20.27,
+   "roofY_P90": 21.24,
+   "roofY_P95": 21.42,
+   "roofY_max": 23.91,
+   "coverage": 0.89,
+   "groundY": 15.6,
+   "restated": true
+  },
+  "617500:756": {
+   "abbr": "",
+   "roofY_P10": 16.75,
+   "roofY_P50": 18.16,
+   "roofY_P90": 22.15,
+   "roofY_P95": 22.41,
+   "roofY_max": 24.15,
+   "coverage": 0.84,
+   "groundY": 12.4,
+   "restated": true
+  },
+  "621473:760": {
+   "abbr": "",
+   "roofY_P10": 21.28,
+   "roofY_P50": 21.32,
+   "roofY_P90": 21.34,
+   "roofY_P95": 21.35,
+   "roofY_max": 22.23,
+   "coverage": 0.9,
+   "groundY": 15.6,
+   "restated": true
+  },
+  "622603:771": {
+   "abbr": "",
+   "roofY_P10": 19.58,
+   "roofY_P50": 62.39,
+   "roofY_P90": 64.82,
+   "roofY_P95": 66.37,
+   "roofY_max": 72.38,
+   "coverage": 0.83,
+   "groundY": 7.6,
+   "restated": true
+  },
+  "622884:774": {
+   "abbr": "",
+   "roofY_P10": 22.52,
+   "roofY_P50": 23.48,
+   "roofY_P90": 23.73,
+   "roofY_P95": 23.74,
+   "roofY_max": 24.13,
+   "coverage": 0.84,
+   "groundY": 14.1,
+   "restated": true
+  },
+  "624567:794": {
+   "abbr": "",
+   "roofY_P10": 3.12,
+   "roofY_P50": 3.47,
+   "roofY_P90": 4.94,
+   "roofY_P95": 5.4,
+   "roofY_max": 6.49,
+   "coverage": 0.83,
+   "groundY": -5.0,
+   "restated": true
+  },
+  "625082:799": {
+   "abbr": "",
+   "roofY_P10": 12.26,
+   "roofY_P50": 27.46,
+   "roofY_P90": 30.07,
+   "roofY_P95": 30.14,
+   "roofY_max": 31.12,
+   "coverage": 0.86,
+   "groundY": 5.9,
+   "restated": true
+  },
+  "625189:801": {
+   "abbr": "",
+   "roofY_P10": 6.83,
+   "roofY_P50": 9.82,
+   "roofY_P90": 11.44,
+   "roofY_P95": 11.74,
+   "roofY_max": 20.48,
+   "coverage": 0.95,
+   "groundY": 2.5,
+   "restated": true
+  },
+  "625285:807": {
+   "abbr": "",
+   "roofY_P10": 15.42,
+   "roofY_P50": 18.06,
+   "roofY_P90": 19.6,
+   "roofY_P95": 19.74,
+   "roofY_max": 23.65,
+   "coverage": 0.88,
+   "groundY": 7.1,
+   "restated": true
+  },
+  "625389:809": {
+   "abbr": "",
+   "roofY_P10": 17.32,
+   "roofY_P50": 17.98,
+   "roofY_P90": 21.76,
+   "roofY_P95": 21.92,
+   "roofY_max": 22.1,
+   "coverage": 0.88,
+   "groundY": 14.4,
+   "restated": false,
+   "exempt": "144 m2 low building: the generator's minimum wall height holds the eave above the measured roof (P50 3.6 m)"
+  },
+  "633539:817": {
+   "abbr": "",
+   "roofY_P10": 17.19,
+   "roofY_P50": 18.01,
+   "roofY_P90": 20.45,
+   "roofY_P95": 20.5,
+   "roofY_max": 22.24,
+   "coverage": 0.81,
+   "groundY": 14.3,
+   "restated": true
+  },
+  "633760:823": {
+   "abbr": "",
+   "roofY_P10": 10.16,
+   "roofY_P50": 12.42,
+   "roofY_P90": 15.14,
+   "roofY_P95": 15.18,
+   "roofY_max": 17.13,
+   "coverage": 0.93,
+   "groundY": -3.9,
+   "restated": false,
+   "exempt": "record P50 mixes three LiDAR tiers (14.3/17.1/19.0 m); upper tier checked (633760:823:19.0)"
+  },
+  "634062:827": {
+   "abbr": "",
+   "roofY_P10": 10.6,
+   "roofY_P50": 11.65,
+   "roofY_P90": 12.92,
+   "roofY_P95": 13.1,
+   "roofY_max": 13.23,
+   "coverage": 0.85,
+   "groundY": 6.3,
+   "restated": true
+  },
+  "634149:829": {
+   "abbr": "",
+   "roofY_P10": 9.63,
+   "roofY_P50": 10.67,
+   "roofY_P90": 12.56,
+   "roofY_P95": 12.7,
+   "roofY_max": 15.08,
+   "coverage": 0.88,
+   "groundY": 5.0,
+   "restated": true
+  },
+  "634316:831": {
+   "abbr": "",
+   "roofY_P10": 16.43,
+   "roofY_P50": 17.06,
+   "roofY_P90": 17.69,
+   "roofY_P95": 17.79,
+   "roofY_max": 17.85,
+   "coverage": 0.86,
+   "groundY": 12.9,
+   "restated": true
+  },
+  "652605:850": {
+   "abbr": "",
+   "roofY_P10": 5.03,
+   "roofY_P50": 5.07,
+   "roofY_P90": 5.23,
+   "roofY_P95": 6.4,
+   "roofY_max": 6.85,
+   "coverage": 0.84,
+   "groundY": -7.4,
+   "restated": true
+  },
+  "652611:851": {
+   "abbr": "",
+   "roofY_P10": 5.5,
+   "roofY_P50": 6.01,
+   "roofY_P90": 6.32,
+   "roofY_P95": 6.4,
+   "roofY_max": 7.52,
+   "coverage": 0.84,
+   "groundY": 1.1,
+   "restated": true
+  },
+  "652834:858": {
+   "abbr": "",
+   "roofY_P10": 14.73,
+   "roofY_P50": 32.83,
+   "roofY_P90": 34.0,
+   "roofY_P95": 34.13,
+   "roofY_max": 34.86,
+   "coverage": 0.95,
+   "groundY": 5.2,
+   "restated": true
+  },
+  "653895:868": {
+   "abbr": "",
+   "roofY_P10": 8.33,
+   "roofY_P50": 8.69,
+   "roofY_P90": 8.88,
+   "roofY_P95": 9.43,
+   "roofY_max": 10.36,
+   "coverage": 0.93,
+   "groundY": 2.2,
+   "restated": true
+  },
+  "653900:870": {
+   "abbr": "",
+   "roofY_P10": 15.01,
+   "roofY_P50": 16.01,
+   "roofY_P90": 16.9,
+   "roofY_P95": 17.02,
+   "roofY_max": 20.88,
+   "coverage": 0.85,
+   "groundY": 10.4,
+   "restated": true
+  },
+  "654185:875": {
+   "abbr": "",
+   "roofY_P10": 5.59,
+   "roofY_P50": 6.4,
+   "roofY_P90": 7.36,
+   "roofY_P95": 7.56,
+   "roofY_max": 9.18,
+   "coverage": 0.97,
+   "groundY": -0.9,
+   "restated": true
+  },
+  "654196:876": {
+   "abbr": "",
+   "roofY_P10": 18.78,
+   "roofY_P50": 21.86,
+   "roofY_P90": 22.42,
+   "roofY_P95": 22.48,
+   "roofY_max": 23.72,
+   "coverage": 0.82,
+   "groundY": 14.4,
+   "restated": true
+  },
+  "654319:881": {
+   "abbr": "",
+   "roofY_P10": 22.82,
+   "roofY_P50": 22.93,
+   "roofY_P90": 26.09,
+   "roofY_P95": 27.02,
+   "roofY_max": 30.41,
+   "coverage": 0.86,
+   "groundY": -6.1,
+   "restated": true
+  },
+  "654487:884": {
+   "abbr": "",
+   "roofY_P10": 19.05,
+   "roofY_P50": 21.15,
+   "roofY_P90": 26.35,
+   "roofY_P95": 26.85,
+   "roofY_max": 27.32,
+   "coverage": 0.86,
+   "groundY": 12.1,
+   "restated": false,
+   "exempt": "Congregational Church: steep church roof (LiDAR P50 9.1 m, max 15.2 m above groundY); hip-shingle rise cap (4.2 m) cannot reach both P50 and the P95 band; residual P50 +2.2 m"
+  },
+  "654793:887": {
+   "abbr": "",
+   "roofY_P10": -2.0,
+   "roofY_P50": -1.64,
+   "roofY_P90": -1.33,
+   "roofY_P95": -1.29,
+   "roofY_max": -1.23,
+   "coverage": 0.84,
+   "groundY": -4.8,
+   "restated": true
+  },
+  "655109:893": {
+   "abbr": "",
+   "roofY_P10": -0.01,
+   "roofY_P50": 0.8,
+   "roofY_P90": 2.25,
+   "roofY_P95": 2.38,
+   "roofY_max": 6.1,
+   "coverage": 0.85,
+   "groundY": -4.8,
+   "restated": true
+  },
+  "655347:898": {
+   "abbr": "",
+   "roofY_P10": 4.49,
+   "roofY_P50": 5.46,
+   "roofY_P90": 6.44,
+   "roofY_P95": 6.54,
+   "roofY_max": 6.65,
+   "coverage": 0.95,
+   "groundY": -0.3,
+   "restated": true
+  },
+  "655813:907": {
+   "abbr": "",
+   "roofY_P10": 26.86,
+   "roofY_P50": 28.22,
+   "roofY_P90": 30.0,
+   "roofY_P95": 30.39,
+   "roofY_max": 32.57,
+   "coverage": 0.8,
+   "groundY": 15.2,
+   "restated": true
+  },
+  "656198:916": {
+   "abbr": "",
+   "roofY_P10": -0.78,
+   "roofY_P50": -0.44,
+   "roofY_P90": 0.34,
+   "roofY_P95": 0.81,
+   "roofY_max": 1.18,
+   "coverage": 0.85,
+   "groundY": -5.9,
+   "restated": true
+  },
+  "656285:921": {
+   "abbr": "",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 0.2,
+   "restated": true
+  },
+  "656333:922": {
+   "abbr": "",
+   "roofY_P10": 9.8,
+   "roofY_P50": 9.94,
+   "roofY_P90": 10.08,
+   "roofY_P95": 10.09,
+   "roofY_max": 10.96,
+   "coverage": 0.9,
+   "groundY": 2.2,
+   "restated": true
+  },
+  "656509:926": {
+   "abbr": "",
+   "roofY_P10": -2.46,
+   "roofY_P50": -1.38,
+   "roofY_P90": -0.46,
+   "roofY_P95": -0.2,
+   "roofY_max": 0.57,
+   "coverage": 0.82,
+   "groundY": -6.8,
+   "restated": true
+  },
+  "656857:929": {
+   "abbr": "",
+   "roofY_P10": 5.58,
+   "roofY_P50": 6.0,
+   "roofY_P90": 6.44,
+   "roofY_P95": 6.48,
+   "roofY_max": 7.17,
+   "coverage": 0.98,
+   "groundY": 0.1,
+   "restated": true
+  },
+  "657289:939": {
+   "abbr": "",
+   "roofY_P10": 20.25,
+   "roofY_P50": 22.96,
+   "roofY_P90": 25.16,
+   "roofY_P95": 25.58,
+   "roofY_max": 26.46,
+   "coverage": 0.87,
+   "groundY": 13.7,
+   "restated": true
+  },
+  "657418:943": {
+   "abbr": "",
+   "roofY_P10": 36.89,
+   "roofY_P50": 37.15,
+   "roofY_P90": 73.87,
+   "roofY_P95": 73.89,
+   "roofY_max": 75.77,
+   "coverage": 0.82,
+   "groundY": 12.7,
+   "restated": true
+  },
+  "663258:951": {
+   "abbr": "",
+   "roofY_P10": 9.51,
+   "roofY_P50": 15.96,
+   "roofY_P90": 16.5,
+   "roofY_P95": 16.58,
+   "roofY_max": 31.16,
+   "coverage": 0.84,
+   "groundY": 3.4,
+   "restated": true
+  },
+  "675359:960": {
+   "abbr": "",
+   "roofY_P10": 5.32,
+   "roofY_P50": 6.23,
+   "roofY_P90": 7.15,
+   "roofY_P95": 7.39,
+   "roofY_max": 8.11,
+   "coverage": 0.76,
+   "groundY": 0.9,
+   "restated": true
+  },
+  "676030:966": {
+   "abbr": "",
+   "roofY_P10": -2.14,
+   "roofY_P50": -2.13,
+   "roofY_P90": -2.11,
+   "roofY_P95": -2.11,
+   "roofY_max": 0.21,
+   "coverage": 0.82,
+   "groundY": -6.4,
+   "restated": true
+  },
+  "676064:967": {
+   "abbr": "",
+   "roofY_P10": 13.46,
+   "roofY_P50": 13.5,
+   "roofY_P90": 13.55,
+   "roofY_P95": 13.56,
+   "roofY_max": 13.58,
+   "coverage": 0.88,
+   "groundY": 9.7,
+   "restated": true
+  },
+  "676217:969": {
+   "abbr": "",
+   "roofY_P10": -0.59,
+   "roofY_P50": 2.93,
+   "roofY_P90": 3.76,
+   "roofY_P95": 3.96,
+   "roofY_max": 5.61,
+   "coverage": 0.84,
+   "groundY": -5.0,
+   "restated": true
+  },
+  "676294:971": {
+   "abbr": "",
+   "roofY_P10": 20.98,
+   "roofY_P50": 22.5,
+   "roofY_P90": 24.24,
+   "roofY_P95": 24.49,
+   "roofY_max": 24.77,
+   "coverage": 0.86,
+   "groundY": 13.3,
+   "restated": true
+  },
+  "676884:978": {
+   "abbr": "",
+   "roofY_P10": 9.56,
+   "roofY_P50": 10.03,
+   "roofY_P90": 10.59,
+   "roofY_P95": 10.63,
+   "roofY_max": 10.67,
+   "coverage": 0.95,
+   "groundY": 1.4,
+   "restated": true
+  },
+  "678041:994": {
+   "abbr": "",
+   "roofY_P10": 3.12,
+   "roofY_P50": 3.94,
+   "roofY_P90": 5.2,
+   "roofY_P95": 5.47,
+   "roofY_max": 5.73,
+   "coverage": 0.83,
+   "groundY": -3.8,
+   "restated": true
+  },
+  "696457:1005": {
+   "abbr": "",
+   "roofY_P10": 19.92,
+   "roofY_P50": 20.42,
+   "roofY_P90": 20.96,
+   "roofY_P95": 21.03,
+   "roofY_max": 21.15,
+   "coverage": 0.94,
+   "groundY": 13.8,
+   "restated": true
+  },
+  "696525:1006": {
+   "abbr": "",
+   "roofY_P10": 16.95,
+   "roofY_P50": 17.31,
+   "roofY_P90": 17.66,
+   "roofY_P95": 17.7,
+   "roofY_max": 17.8,
+   "coverage": 0.98,
+   "groundY": 5.3,
+   "restated": true
+  },
+  "696851:1012": {
+   "abbr": "",
+   "roofY_P10": -2.17,
+   "roofY_P50": -1.64,
+   "roofY_P90": -1.09,
+   "roofY_P95": -1.01,
+   "roofY_max": -0.93,
+   "coverage": 0.81,
+   "groundY": -5.7,
+   "restated": true
+  },
+  "697180:1018": {
+   "abbr": "",
+   "roofY_P10": 8.93,
+   "roofY_P50": 8.97,
+   "roofY_P90": 9.26,
+   "roofY_P95": 9.39,
+   "roofY_max": 9.48,
+   "coverage": 0.99,
+   "groundY": 3.9,
+   "restated": true
+  },
+  "697660:1024": {
+   "abbr": "",
+   "roofY_P10": -2.6,
+   "roofY_P50": -1.81,
+   "roofY_P90": -1.77,
+   "roofY_P95": -1.76,
+   "roofY_max": 3.86,
+   "coverage": 0.79,
+   "groundY": -5.5,
+   "restated": true
+  },
+  "698296:1035": {
+   "abbr": "",
+   "roofY_P10": 20.44,
+   "roofY_P50": 23.88,
+   "roofY_P90": 26.26,
+   "roofY_P95": 26.64,
+   "roofY_max": 28.64,
+   "coverage": 0.91,
+   "groundY": 15.7,
+   "restated": true
+  },
+  "698614:1037": {
+   "abbr": "",
+   "roofY_P10": 18.6,
+   "roofY_P50": 19.18,
+   "roofY_P90": 20.73,
+   "roofY_P95": 21.19,
+   "roofY_max": 22.06,
+   "coverage": 0.65,
+   "groundY": 12.6,
+   "restated": true
+  },
+  "699548:1060": {
+   "abbr": "",
+   "roofY_P10": 16.59,
+   "roofY_P50": 24.19,
+   "roofY_P90": 26.55,
+   "roofY_P95": 26.82,
+   "roofY_max": 27.52,
+   "coverage": 0.96,
+   "groundY": 8.3,
+   "restated": true
+  },
+  "699640:1062": {
+   "abbr": "",
+   "roofY_P10": 2.04,
+   "roofY_P50": 3.03,
+   "roofY_P90": 4.06,
+   "roofY_P95": 4.27,
+   "roofY_max": 4.77,
+   "coverage": 0.78,
+   "groundY": -5.1,
+   "restated": true
+  },
+  "700253:1074": {
+   "abbr": "",
+   "roofY_P10": 11.12,
+   "roofY_P50": 13.13,
+   "roofY_P90": 13.67,
+   "roofY_P95": 14.23,
+   "roofY_max": 16.3,
+   "coverage": 0.86,
+   "groundY": 3.0,
+   "restated": true
+  },
+  "700441:1076": {
+   "abbr": "",
+   "roofY_P10": 12.83,
+   "roofY_P50": 12.89,
+   "roofY_P90": 12.98,
+   "roofY_P95": 13.0,
+   "roofY_max": 15.13,
+   "coverage": 0.96,
+   "groundY": 6.1,
+   "restated": true
+  },
+  "713798:1081": {
+   "abbr": "",
+   "roofY_P10": -2.22,
+   "roofY_P50": -1.51,
+   "roofY_P90": 0.99,
+   "roofY_P95": 1.6,
+   "roofY_max": 2.61,
+   "coverage": 0.83,
+   "groundY": -5.2,
+   "restated": true
+  },
+  "713806:1082": {
+   "abbr": "",
+   "roofY_P10": -0.43,
+   "roofY_P50": 1.39,
+   "roofY_P90": 3.48,
+   "roofY_P95": 3.66,
+   "roofY_max": 12.47,
+   "coverage": 0.92,
+   "groundY": -3.9,
+   "restated": true
+  },
+  "714121:1089": {
+   "abbr": "",
+   "roofY_P10": 12.07,
+   "roofY_P50": 13.97,
+   "roofY_P90": 15.56,
+   "roofY_P95": 15.93,
+   "roofY_max": 17.8,
+   "coverage": 0.96,
+   "groundY": 2.5,
+   "restated": true
+  },
+  "714376:1092": {
+   "abbr": "",
+   "roofY_P10": 1.98,
+   "roofY_P50": 5.47,
+   "roofY_P90": 5.93,
+   "roofY_P95": 6.01,
+   "roofY_max": 6.11,
+   "coverage": 0.92,
+   "groundY": -2.0,
+   "restated": true
+  },
+  "714509:1097": {
+   "abbr": "",
+   "roofY_P10": 13.08,
+   "roofY_P50": 18.67,
+   "roofY_P90": 20.68,
+   "roofY_P95": 20.73,
+   "roofY_max": 22.05,
+   "coverage": 0.91,
+   "groundY": 8.4,
+   "restated": true
+  },
+  "714860:1106": {
+   "abbr": "",
+   "roofY_P10": 2.91,
+   "roofY_P50": 3.12,
+   "roofY_P90": 6.5,
+   "roofY_P95": 6.78,
+   "roofY_max": 7.54,
+   "coverage": 0.95,
+   "groundY": -1.0,
+   "restated": true
+  },
+  "715097:1110": {
+   "abbr": "",
+   "roofY_P10": 13.96,
+   "roofY_P50": 16.79,
+   "roofY_P90": 16.98,
+   "roofY_P95": 17.01,
+   "roofY_max": 18.92,
+   "coverage": 0.96,
+   "groundY": 6.7,
+   "restated": true
+  },
+  "715120:1111": {
+   "abbr": "",
+   "roofY_P10": 1.76,
+   "roofY_P50": 2.57,
+   "roofY_P90": 3.62,
+   "roofY_P95": 3.92,
+   "roofY_max": 5.25,
+   "coverage": 0.84,
+   "groundY": -5.9,
+   "restated": true
+  },
+  "715564:1120": {
+   "abbr": "",
+   "roofY_P10": 4.54,
+   "roofY_P50": 4.61,
+   "roofY_P90": 4.68,
+   "roofY_P95": 4.69,
+   "roofY_max": 5.47,
+   "coverage": 0.97,
+   "groundY": -0.3,
+   "restated": true
+  },
+  "715722:1125": {
+   "abbr": "",
+   "roofY_P10": 1.91,
+   "roofY_P50": 2.78,
+   "roofY_P90": 3.7,
+   "roofY_P95": 3.9,
+   "roofY_max": 4.96,
+   "coverage": 0.86,
+   "groundY": -6.0,
+   "restated": true
+  },
+  "715914:1130": {
+   "abbr": "",
+   "roofY_P10": 0.89,
+   "roofY_P50": 1.07,
+   "roofY_P90": 1.22,
+   "roofY_P95": 1.24,
+   "roofY_max": 1.76,
+   "coverage": 0.96,
+   "groundY": -3.7,
+   "restated": true
+  },
+  "715959:1131": {
+   "abbr": "",
+   "roofY_P10": 11.12,
+   "roofY_P50": 11.19,
+   "roofY_P90": 11.25,
+   "roofY_P95": 11.27,
+   "roofY_max": 11.89,
+   "coverage": 0.98,
+   "groundY": 3.5,
+   "restated": true
+  },
+  "716227:1137": {
+   "abbr": "",
+   "roofY_P10": 3.96,
+   "roofY_P50": 4.71,
+   "roofY_P90": 5.47,
+   "roofY_P95": 5.54,
+   "roofY_max": 5.6,
+   "coverage": 0.97,
+   "groundY": -2.4,
+   "restated": true
+  },
+  "716280:1139": {
+   "abbr": "",
+   "roofY_P10": 1.74,
+   "roofY_P50": 3.74,
+   "roofY_P90": 5.88,
+   "roofY_P95": 6.31,
+   "roofY_max": 10.46,
+   "coverage": 0.91,
+   "groundY": -2.5,
+   "restated": true
+  },
+  "716494:1140": {
+   "abbr": "",
+   "roofY_P10": 3.96,
+   "roofY_P50": 4.57,
+   "roofY_P90": 5.46,
+   "roofY_P95": 5.65,
+   "roofY_max": 5.82,
+   "coverage": 0.96,
+   "groundY": -3.8,
+   "restated": true
+  },
+  "716862:1147": {
+   "abbr": "",
+   "roofY_P10": -1.84,
+   "roofY_P50": -1.39,
+   "roofY_P90": -0.89,
+   "roofY_P95": -0.78,
+   "roofY_max": -0.65,
+   "coverage": 0.77,
+   "groundY": -4.7,
+   "restated": true
+  },
+  "717188:1155": {
+   "abbr": "",
+   "roofY_P10": 3.59,
+   "roofY_P50": 5.34,
+   "roofY_P90": 7.26,
+   "roofY_P95": 7.6,
+   "roofY_max": 9.37,
+   "coverage": 0.91,
+   "groundY": -1.0,
+   "restated": true
+  },
+  "717271:1157": {
+   "abbr": "",
+   "roofY_P10": 21.39,
+   "roofY_P50": 22.06,
+   "roofY_P90": 22.99,
+   "roofY_P95": 23.18,
+   "roofY_max": 23.43,
+   "coverage": 0.87,
+   "groundY": 14.2,
+   "restated": true
+  },
+  "717342:1159": {
+   "abbr": "",
+   "roofY_P10": 22.07,
+   "roofY_P50": 22.08,
+   "roofY_P90": 22.13,
+   "roofY_P95": 24.47,
+   "roofY_max": 24.59,
+   "coverage": 0.86,
+   "groundY": 14.5,
+   "restated": true
+  },
+  "717743:1165": {
+   "abbr": "",
+   "roofY_P10": 9.93,
+   "roofY_P50": 10.64,
+   "roofY_P90": 12.04,
+   "roofY_P95": 12.21,
+   "roofY_max": 12.97,
+   "coverage": 0.97,
+   "groundY": 1.1,
+   "restated": true
+  },
+  "718120:1168": {
+   "abbr": "",
+   "roofY_P10": 8.74,
+   "roofY_P50": 8.85,
+   "roofY_P90": 8.99,
+   "roofY_P95": 9.02,
+   "roofY_max": 10.32,
+   "coverage": 0.97,
+   "groundY": 3.7,
+   "restated": true
+  },
+  "718135:1170": {
+   "abbr": "",
+   "roofY_P10": 19.27,
+   "roofY_P50": 20.45,
+   "roofY_P90": 21.69,
+   "roofY_P95": 22.01,
+   "roofY_max": 22.65,
+   "coverage": 0.87,
+   "groundY": 11.3,
+   "restated": true
+  },
+  "718451:1176": {
+   "abbr": "",
+   "roofY_P10": 6.8,
+   "roofY_P50": 6.88,
+   "roofY_P90": 7.25,
+   "roofY_P95": 8.13,
+   "roofY_max": 8.56,
+   "coverage": 0.95,
+   "groundY": 1.2,
+   "restated": true
+  },
+  "718803:1182": {
+   "abbr": "GUG",
+   "roofY_P10": 13.93,
+   "roofY_P50": 16.48,
+   "roofY_P90": 32.91,
+   "roofY_P95": 32.92,
+   "roofY_max": 37.74,
+   "coverage": 0.89,
+   "groundY": -3.4,
+   "restated": false,
+   "exempt": "two UT buildings in one ring; checked per wing (GUG, UTA:*)"
+  },
+  "718906:1184": {
+   "abbr": "",
+   "roofY_P10": 12.32,
+   "roofY_P50": 12.68,
+   "roofY_P90": 13.04,
+   "roofY_P95": 13.09,
+   "roofY_max": 13.13,
+   "coverage": 0.88,
+   "groundY": 9.0,
+   "restated": true
+  },
+  "719066:1186": {
+   "abbr": "",
+   "roofY_P10": 19.89,
+   "roofY_P50": 20.51,
+   "roofY_P90": 21.46,
+   "roofY_P95": 21.71,
+   "roofY_max": 22.6,
+   "coverage": 0.88,
+   "groundY": 13.1,
+   "restated": true
+  },
+  "719826:1200": {
+   "abbr": "",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": 6.8,
+   "restated": true
+  },
+  "719964:1203": {
+   "abbr": "",
+   "roofY_P10": 2.33,
+   "roofY_P50": 3.64,
+   "roofY_P90": 5.12,
+   "roofY_P95": 5.51,
+   "roofY_max": 10.22,
+   "coverage": 0.96,
+   "groundY": -1.9,
+   "restated": true
+  },
+  "719999:1204": {
+   "abbr": "",
+   "roofY_P10": 1.9,
+   "roofY_P50": 2.51,
+   "roofY_P90": 3.32,
+   "roofY_P95": 3.58,
+   "roofY_max": 4.33,
+   "coverage": 0.96,
+   "groundY": -2.6,
+   "restated": true
+  },
+  "720585:1214": {
+   "abbr": "",
+   "roofY_P10": null,
+   "roofY_P50": null,
+   "roofY_P90": null,
+   "roofY_P95": null,
+   "roofY_max": null,
+   "coverage": null,
+   "groundY": -4.9,
+   "restated": true
+  },
+  "732368:1223": {
+   "abbr": "",
+   "roofY_P10": 19.83,
+   "roofY_P50": 22.52,
+   "roofY_P90": 23.45,
+   "roofY_P95": 23.68,
+   "roofY_max": 24.01,
+   "coverage": 0.82,
+   "groundY": 15.0,
+   "restated": true
+  },
+  "733646:1244": {
+   "abbr": "",
+   "roofY_P10": 0.67,
+   "roofY_P50": 1.89,
+   "roofY_P90": 2.58,
+   "roofY_P95": 2.79,
+   "roofY_max": 6.96,
+   "coverage": 0.97,
+   "groundY": -3.3,
+   "restated": true
+  },
+  "733792:1248": {
+   "abbr": "",
+   "roofY_P10": 16.15,
+   "roofY_P50": 19.91,
+   "roofY_P90": 23.88,
+   "roofY_P95": 23.93,
+   "roofY_max": 27.3,
+   "coverage": 0.78,
+   "groundY": 9.9,
+   "restated": true
+  },
+  "734144:1256": {
+   "abbr": "",
+   "roofY_P10": 5.05,
+   "roofY_P50": 6.22,
+   "roofY_P90": 7.54,
+   "roofY_P95": 7.72,
+   "roofY_max": 7.92,
+   "coverage": 0.94,
+   "groundY": 1.4,
+   "restated": true
+  },
+  "734171:1257": {
+   "abbr": "",
+   "roofY_P10": 1.75,
+   "roofY_P50": 2.78,
+   "roofY_P90": 3.99,
+   "roofY_P95": 4.27,
+   "roofY_max": 4.79,
+   "coverage": 0.84,
+   "groundY": -5.6,
+   "restated": true
+  },
+  "734384:1259": {
+   "abbr": "",
+   "roofY_P10": 7.61,
+   "roofY_P50": 8.64,
+   "roofY_P90": 9.49,
+   "roofY_P95": 9.83,
+   "roofY_max": 15.24,
+   "coverage": 0.96,
+   "groundY": 3.0,
+   "restated": true
+  },
+  "734406:1260": {
+   "abbr": "",
+   "roofY_P10": 2.84,
+   "roofY_P50": 2.89,
+   "roofY_P90": 3.42,
+   "roofY_P95": 3.5,
+   "roofY_max": 5.86,
+   "coverage": 0.9,
+   "groundY": -0.9,
+   "restated": true
+  },
+  "735105:1266": {
+   "abbr": "",
+   "roofY_P10": 2.67,
+   "roofY_P50": 3.51,
+   "roofY_P90": 4.36,
+   "roofY_P95": 4.55,
+   "roofY_max": 4.98,
+   "coverage": 0.82,
+   "groundY": -4.6,
+   "restated": true
+  },
+  "735235:1268": {
+   "abbr": "",
+   "roofY_P10": 4.51,
+   "roofY_P50": 4.54,
+   "roofY_P90": 6.38,
+   "roofY_P95": 6.8,
+   "roofY_max": 7.27,
+   "coverage": 0.83,
+   "groundY": -1.3,
+   "restated": true
+  },
+  "735332:1271": {
+   "abbr": "",
+   "roofY_P10": -1.89,
+   "roofY_P50": 1.33,
+   "roofY_P90": 1.94,
+   "roofY_P95": 2.02,
+   "roofY_max": 5.57,
+   "coverage": 0.85,
+   "groundY": -4.9,
+   "restated": true
+  }
+ },
+ "volumes": {
+  "GUG": {
+   "ring": [
+    [
+     -590.88,
+     685.53
+    ],
+    [
+     -614.24,
+     758.19
+    ],
+    [
+     -578.79,
+     769.44
+    ],
+    [
+     -555.41,
+     697.25
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 14.9,
+   "roofY_P10": 13.49,
+   "roofY_P50": 14.92,
+   "roofY_P90": 16.35,
+   "roofY_P95": 16.46,
+   "roofY_max": 24.95,
+   "coverage": 0.89
+  },
+  "UTA:36.3": {
+   "ring": [
+    [
+     -545.11,
+     776.74
+    ],
+    [
+     -540.16,
+     758.91
+    ],
+    [
+     -536.61,
+     748.28
+    ],
+    [
+     -535.16,
+     745.86
+    ],
+    [
+     -534.68,
+     742.46
+    ],
+    [
+     -530.85,
+     731.46
+    ],
+    [
+     -531.55,
+     730.76
+    ],
+    [
+     -535.32,
+     729.35
+    ],
+    [
+     -546.69,
+     726.03
+    ],
+    [
+     -547.81,
+     727.22
+    ],
+    [
+     -556.79,
+     756.63
+    ],
+    [
+     -559.02,
+     759.98
+    ],
+    [
+     -563.2,
+     759.36
+    ],
+    [
+     -563.2,
+     763.55
+    ],
+    [
+     -564.52,
+     765.2
+    ],
+    [
+     -561.84,
+     766.06
+    ],
+    [
+     -560.58,
+     768.12
+    ],
+    [
+     -562.2,
+     771.91
+    ],
+    [
+     -561.96,
+     774.03
+    ],
+    [
+     -549.29,
+     778.42
+    ],
+    [
+     -546.64,
+     778.66
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 32.9,
+   "roofY_P10": 32.88,
+   "roofY_P50": 32.9,
+   "roofY_P90": 32.92,
+   "roofY_P95": 32.93,
+   "roofY_max": 35.06,
+   "coverage": 0.9
+  },
+  "NUG": {
+   "ring": [
+    [
+     -633.6,
+     -227.82
+    ],
+    [
+     -595.12,
+     -224.8
+    ],
+    [
+     -593.75,
+     -242.5
+    ],
+    [
+     -631.52,
+     -245.42
+    ],
+    [
+     -630.72,
+     -255.71
+    ],
+    [
+     -629.35,
+     -255.61
+    ],
+    [
+     -625.72,
+     -302.54
+    ],
+    [
+     -577.37,
+     -298.8
+    ],
+    [
+     -578.12,
+     -289.16
+    ],
+    [
+     -575.41,
+     -288.94
+    ],
+    [
+     -574.33,
+     -301.82
+    ],
+    [
+     -626.89,
+     -305.89
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 32.0,
+   "roofY_P10": 31.98,
+   "roofY_P50": 32.04,
+   "roofY_P90": 35.81,
+   "roofY_P95": 42.02,
+   "roofY_max": 68.87,
+   "coverage": 0.73
+  },
+  "N24:52.7": {
+   "ring": [
+    [
+     -628.27,
+     -253.5
+    ],
+    [
+     -628.66,
+     -249.18
+    ],
+    [
+     -627.59,
+     -248.1
+    ],
+    [
+     -620.81,
+     -248.1
+    ],
+    [
+     -618.31,
+     -247.1
+    ],
+    [
+     -614.26,
+     -247.1
+    ],
+    [
+     -611.99,
+     -245.96
+    ],
+    [
+     -610.71,
+     -245.87
+    ],
+    [
+     -608.08,
+     -246.62
+    ],
+    [
+     -603.61,
+     -246.06
+    ],
+    [
+     -602.5,
+     -245.23
+    ],
+    [
+     -596.5,
+     -244.76
+    ],
+    [
+     -595.55,
+     -244.79
+    ],
+    [
+     -594.04,
+     -245.92
+    ],
+    [
+     -592.72,
+     -249.56
+    ],
+    [
+     -589.49,
+     -249.75
+    ],
+    [
+     -588.78,
+     -252.6
+    ],
+    [
+     -581.47,
+     -252.6
+    ],
+    [
+     -580.17,
+     -254.19
+    ],
+    [
+     -579.74,
+     -259.42
+    ],
+    [
+     -580.49,
+     -260.18
+    ],
+    [
+     -582.63,
+     -260.61
+    ],
+    [
+     -605.17,
+     -262.11
+    ],
+    [
+     -610.58,
+     -263.59
+    ],
+    [
+     -615.37,
+     -263.05
+    ],
+    [
+     -616.7,
+     -264.39
+    ],
+    [
+     -616.7,
+     -274.36
+    ],
+    [
+     -615.65,
+     -282.73
+    ],
+    [
+     -614.31,
+     -284.26
+    ],
+    [
+     -610.86,
+     -283.11
+    ],
+    [
+     -601.83,
+     -283.61
+    ],
+    [
+     -596.88,
+     -281.63
+    ],
+    [
+     -590.44,
+     -282.62
+    ],
+    [
+     -584.87,
+     -281.1
+    ],
+    [
+     -574.97,
+     -281.1
+    ],
+    [
+     -575.4,
+     -281.37
+    ],
+    [
+     -574.9,
+     -286.85
+    ],
+    [
+     -580.37,
+     -287.31
+    ],
+    [
+     -579.57,
+     -296.91
+    ],
+    [
+     -622.84,
+     -300.27
+    ],
+    [
+     -623.72,
+     -288.03
+    ],
+    [
+     -624.98,
+     -285.5
+    ],
+    [
+     -624.18,
+     -279.77
+    ],
+    [
+     -625.2,
+     -275.68
+    ],
+    [
+     -625.2,
+     -270.09
+    ],
+    [
+     -626.39,
+     -267.32
+    ],
+    [
+     -626.56,
+     -265.08
+    ],
+    [
+     -625.64,
+     -264.16
+    ],
+    [
+     -626.6,
+     -256.98
+    ],
+    [
+     -625.71,
+     -256.9
+    ],
+    [
+     -625.96,
+     -253.36
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 67.3,
+   "roofY_P10": 67.25,
+   "roofY_P50": 67.33,
+   "roofY_P90": 70.53,
+   "roofY_P95": 71.54,
+   "roofY_max": 74.84,
+   "coverage": 0.89
+  },
+  "N24:46.6": {
+   "ring": [
+    [
+     -635.19,
+     -225.89
+    ],
+    [
+     -635.61,
+     -221.2
+    ],
+    [
+     -630.52,
+     -220.7
+    ],
+    [
+     -631.25,
+     -211.66
+    ],
+    [
+     -631.43,
+     -210.81
+    ],
+    [
+     -632.28,
+     -210.88
+    ],
+    [
+     -632.41,
+     -209.47
+    ],
+    [
+     -631.19,
+     -209.31
+    ],
+    [
+     -630.79,
+     -211.18
+    ],
+    [
+     -586.08,
+     -206.89
+    ],
+    [
+     -585.38,
+     -214.5
+    ],
+    [
+     -585.85,
+     -215.25
+    ],
+    [
+     -582.84,
+     -221.26
+    ],
+    [
+     -584.2,
+     -223.52
+    ],
+    [
+     -584.2,
+     -228.88
+    ],
+    [
+     -583.64,
+     -232.22
+    ],
+    [
+     -581.7,
+     -234.65
+    ],
+    [
+     -581.7,
+     -235.47
+    ],
+    [
+     -583.2,
+     -237.47
+    ],
+    [
+     -582.17,
+     -250.16
+    ],
+    [
+     -587.3,
+     -250.53
+    ],
+    [
+     -588.26,
+     -247.67
+    ],
+    [
+     -591.2,
+     -247.39
+    ],
+    [
+     -591.2,
+     -246.47
+    ],
+    [
+     -592.7,
+     -244.47
+    ],
+    [
+     -591.58,
+     -244.38
+    ],
+    [
+     -592.73,
+     -225.34
+    ],
+    [
+     -593.05,
+     -225.04
+    ],
+    [
+     -593.23,
+     -222.64
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 61.2,
+   "roofY_P10": 61.14,
+   "roofY_P50": 61.21,
+   "roofY_P90": 62.42,
+   "roofY_P95": 63.06,
+   "roofY_max": 70.52,
+   "coverage": 0.86
+  },
+  "486277:108:62.3": {
+   "ring": [
+    [
+     -528.31,
+     899.77
+    ],
+    [
+     -507.88,
+     906.43
+    ],
+    [
+     -505.59,
+     899.21
+    ],
+    [
+     -515.05,
+     895.76
+    ],
+    [
+     -516.84,
+     893.97
+    ],
+    [
+     -516.08,
+     891.68
+    ],
+    [
+     -514.44,
+     889.9
+    ],
+    [
+     -512.34,
+     889.9
+    ],
+    [
+     -510.2,
+     890.61
+    ],
+    [
+     -510.83,
+     889.98
+    ],
+    [
+     -507.59,
+     879.19
+    ],
+    [
+     -505.94,
+     877.4
+    ],
+    [
+     -500.79,
+     877.4
+    ],
+    [
+     -497.78,
+     878.69
+    ],
+    [
+     -496.1,
+     876.72
+    ],
+    [
+     -493.57,
+     867.61
+    ],
+    [
+     -491.4,
+     865.95
+    ],
+    [
+     -490.56,
+     865.82
+    ],
+    [
+     -493.61,
+     861.75
+    ],
+    [
+     -512.87,
+     855.5
+    ],
+    [
+     -514.54,
+     856.54
+    ],
+    [
+     -516.26,
+     862.56
+    ],
+    [
+     -517.19,
+     864.29
+    ],
+    [
+     -516.44,
+     865.04
+    ],
+    [
+     -518.25,
+     868.07
+    ],
+    [
+     -519.76,
+     875.62
+    ],
+    [
+     -521.2,
+     877.53
+    ],
+    [
+     -521.2,
+     880.04
+    ],
+    [
+     -522.64,
+     881.89
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 61.4,
+   "roofY_P10": 60.25,
+   "roofY_P50": 61.42,
+   "roofY_P90": 61.65,
+   "roofY_P95": 62.72,
+   "roofY_max": 64.11,
+   "coverage": 0.9
+  },
+  "486277:108:72.8": {
+   "ring": [
+    [
+     -481.66,
+     889.92
+    ],
+    [
+     -479.65,
+     881.39
+    ],
+    [
+     -476.7,
+     874.49
+    ],
+    [
+     -476.7,
+     873.4
+    ],
+    [
+     -489.36,
+     868.7
+    ],
+    [
+     -499.56,
+     900.92
+    ],
+    [
+     -498.96,
+     901.53
+    ],
+    [
+     -488.87,
+     904.89
+    ],
+    [
+     -486.92,
+     904.75
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 71.9,
+   "roofY_P10": 70.92,
+   "roofY_P50": 72.14,
+   "roofY_P90": 72.67,
+   "roofY_P95": 72.71,
+   "roofY_max": 72.77,
+   "coverage": 0.93
+  },
+  "486277:108:67.3": {
+   "ring": [
+    [
+     -500.1,
+     895.32
+    ],
+    [
+     -494.75,
+     878.22
+    ],
+    [
+     -497.22,
+     881.11
+    ],
+    [
+     -501.21,
+     879.4
+    ],
+    [
+     -505.06,
+     879.4
+    ],
+    [
+     -505.81,
+     880.21
+    ],
+    [
+     -508.57,
+     889.42
+    ],
+    [
+     -507.97,
+     890.02
+    ],
+    [
+     -501.22,
+     892.09
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 66.4,
+   "roofY_P10": 65.9,
+   "roofY_P50": 66.0,
+   "roofY_P90": 66.41,
+   "roofY_P95": 66.47,
+   "roofY_max": 66.57,
+   "coverage": 0.89
+  },
+  "525515:254:44.8": {
+   "ring": [
+    [
+     -596.14,
+     947.63
+    ],
+    [
+     -595.84,
+     946.63
+    ],
+    [
+     -589.3,
+     948.91
+    ],
+    [
+     -583.17,
+     931.69
+    ],
+    [
+     -586.66,
+     930.45
+    ],
+    [
+     -585.79,
+     927.39
+    ],
+    [
+     -583.66,
+     926.95
+    ],
+    [
+     -582.96,
+     923.56
+    ],
+    [
+     -584.22,
+     920.64
+    ],
+    [
+     -587.34,
+     918.39
+    ],
+    [
+     -592.98,
+     917.76
+    ],
+    [
+     -592.2,
+     915.64
+    ],
+    [
+     -620.52,
+     905.78
+    ],
+    [
+     -621.83,
+     909.22
+    ],
+    [
+     -624.82,
+     912.71
+    ],
+    [
+     -630.2,
+     928.37
+    ],
+    [
+     -630.2,
+     935.06
+    ],
+    [
+     -626.92,
+     936.57
+    ],
+    [
+     -624.46,
+     939.03
+    ],
+    [
+     -608.27,
+     944.42
+    ],
+    [
+     -604.73,
+     944.93
+    ],
+    [
+     -596.74,
+     948.22
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 40.2,
+   "roofY_P10": 40.08,
+   "roofY_P50": 40.18,
+   "roofY_P90": 44.13,
+   "roofY_P95": 44.16,
+   "roofY_max": 44.25,
+   "coverage": 0.87
+  },
+  "525738:260:52.7": {
+   "ring": [
+    [
+     -519.97,
+     972.62
+    ],
+    [
+     -518.1,
+     973.3
+    ],
+    [
+     -518.44,
+     973.08
+    ],
+    [
+     -515.67,
+     966.4
+    ],
+    [
+     -513.29,
+     966.4
+    ],
+    [
+     -512.36,
+     969.06
+    ],
+    [
+     -509.56,
+     970.99
+    ],
+    [
+     -500.59,
+     973.82
+    ],
+    [
+     -497.2,
+     967.95
+    ],
+    [
+     -497.2,
+     964.61
+    ],
+    [
+     -498.06,
+     963.75
+    ],
+    [
+     -502.8,
+     961.86
+    ],
+    [
+     -507.5,
+     960.81
+    ],
+    [
+     -509.89,
+     958.43
+    ],
+    [
+     -509.15,
+     956.71
+    ],
+    [
+     -516.84,
+     954.17
+    ],
+    [
+     -516.46,
+     955.08
+    ],
+    [
+     -519.4,
+     957.03
+    ],
+    [
+     -523.21,
+     955.4
+    ],
+    [
+     -525.3,
+     955.4
+    ],
+    [
+     -528.37,
+     953.36
+    ],
+    [
+     -531.03,
+     952.98
+    ],
+    [
+     -534.2,
+     957.51
+    ],
+    [
+     -534.2,
+     962.51
+    ],
+    [
+     -524.13,
+     966.28
+    ],
+    [
+     -521.15,
+     964.3
+    ],
+    [
+     -518.84,
+     965.07
+    ],
+    [
+     -517.48,
+     967.28
+    ],
+    [
+     -519.7,
+     970.05
+    ],
+    [
+     -519.7,
+     972.6
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 50.6,
+   "roofY_P10": 50.49,
+   "roofY_P50": 50.56,
+   "roofY_P90": 51.39,
+   "roofY_P95": 52.18,
+   "roofY_max": 53.03,
+   "coverage": 0.92
+  },
+  "525738:260:11.5": {
+   "ring": [
+    [
+     -544.2,
+     954.78
+    ],
+    [
+     -544.2,
+     959.17
+    ],
+    [
+     -547.06,
+     961.55
+    ],
+    [
+     -546.06,
+     965.07
+    ],
+    [
+     -548.52,
+     967.04
+    ],
+    [
+     -548.42,
+     967.3
+    ],
+    [
+     -493.07,
+     985.53
+    ],
+    [
+     -489.43,
+     974.45
+    ],
+    [
+     -490.28,
+     975.63
+    ],
+    [
+     -491.3,
+     979.73
+    ],
+    [
+     -493.11,
+     981.4
+    ],
+    [
+     -495.71,
+     981.4
+    ],
+    [
+     -500.21,
+     979.4
+    ],
+    [
+     -503.71,
+     979.4
+    ],
+    [
+     -507.21,
+     977.9
+    ],
+    [
+     -511.18,
+     977.9
+    ],
+    [
+     -515.18,
+     976.4
+    ],
+    [
+     -518.21,
+     976.4
+    ],
+    [
+     -545.37,
+     964.27
+    ],
+    [
+     -543.72,
+     957.66
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 9.4,
+   "roofY_P10": 9.41,
+   "roofY_P50": 9.44,
+   "roofY_P90": 9.89,
+   "roofY_P95": 10.19,
+   "roofY_max": 10.56,
+   "coverage": 0.77
+  },
+  "633760:823:19.0": {
+   "ring": [
+    [
+     -633.47,
+     1078.29
+    ],
+    [
+     -631.77,
+     1073.1
+    ],
+    [
+     -628.49,
+     1074.08
+    ],
+    [
+     -626.15,
+     1066.64
+    ],
+    [
+     -656.36,
+     1056.66
+    ],
+    [
+     -660.94,
+     1070.57
+    ],
+    [
+     -636.36,
+     1078.89
+    ],
+    [
+     -633.64,
+     1078.72
+    ]
+   ],
+   "roof": "flat",
+   "targetY": 15.1,
+   "roofY_P10": 14.91,
+   "roofY_P50": 15.04,
+   "roofY_P90": 15.17,
+   "roofY_P95": 15.69,
+   "roofY_max": 17.13,
+   "coverage": 0.91
+  }
+ },
+ "post2017": {
+  "486446:110": {
+   "ring": [
+    [
+     -493.53,
+     -390.21
+    ],
+    [
+     -514.12,
+     -392.2
+    ],
+    [
+     -514.21,
+     -391.07
+    ],
+    [
+     -515.23,
+     -391.15
+    ],
+    [
+     -515.7,
+     -385.33
+    ],
+    [
+     -514.78,
+     -385.25
+    ],
+    [
+     -515.29,
+     -378.98
+    ],
+    [
+     -497.97,
+     -377.58
+    ],
+    [
+     -498.13,
+     -375.63
+    ],
+    [
+     -494.74,
+     -375.35
+    ],
+    [
+     -493.53,
+     -390.21
+    ]
+   ],
+   "groundY": 15.64,
+   "targetTop": 43.84,
+   "cityH": 29.4,
+   "name": null
+  },
+  "486699:114": {
+   "ring": [
+    [
+     -730.0,
+     241.89
+    ],
+    [
+     -729.88,
+     240.4
+    ],
+    [
+     -735.75,
+     239.92
+    ],
+    [
+     -735.89,
+     241.65
+    ],
+    [
+     -748.05,
+     240.53
+    ],
+    [
+     -752.58,
+     290.55
+    ],
+    [
+     -717.93,
+     292.68
+    ],
+    [
+     -713.91,
+     243.2
+    ],
+    [
+     -730.0,
+     241.89
+    ]
+   ],
+   "groundY": 2.19,
+   "targetTop": 58.96,
+   "cityH": 57.97,
+   "name": "Signature 1909"
+  },
+  "490461:139": {
+   "ring": [
+    [
+     -671.25,
+     245.09
+    ],
+    [
+     -702.58,
+     242.6
+    ],
+    [
+     -702.87,
+     246.24
+    ],
+    [
+     -707.37,
+     245.88
+    ],
+    [
+     -712.03,
+     304.7
+    ],
+    [
+     -680.12,
+     307.23
+    ],
+    [
+     -679.76,
+     302.79
+    ],
+    [
+     -675.86,
+     303.1
+    ],
+    [
+     -671.25,
+     245.09
+    ]
+   ],
+   "groundY": 8.2,
+   "targetTop": 64.67,
+   "cityH": 57.67,
+   "name": "Torre Student Living"
+  },
+  "510490:241": {
+   "ring": [
+    [
+     -692.87,
+     825.56
+    ],
+    [
+     -691.27,
+     820.63
+    ],
+    [
+     -694.24,
+     819.66
+    ],
+    [
+     -697.51,
+     829.74
+    ],
+    [
+     -703.3,
+     827.85
+    ],
+    [
+     -708.03,
+     842.45
+    ],
+    [
+     -688.14,
+     848.93
+    ],
+    [
+     -687.26,
+     846.24
+    ],
+    [
+     -670.7,
+     851.62
+    ],
+    [
+     -664.82,
+     833.52
+    ],
+    [
+     -670.87,
+     831.55
+    ],
+    [
+     -671.21,
+     832.6
+    ],
+    [
+     -692.87,
+     825.56
+    ]
+   ],
+   "groundY": -4.78,
+   "targetTop": 14.02,
+   "cityH": 18.8,
+   "name": "The Gallery on 15th"
+  },
+  "512858:245": {
+   "ring": [
+    [
+     -520.79,
+     282.89
+    ],
+    [
+     -556.68,
+     279.87
+    ],
+    [
+     -563.76,
+     360.95
+    ],
+    [
+     -527.91,
+     364.11
+    ],
+    [
+     -520.79,
+     282.89
+    ]
+   ],
+   "groundY": 4.1,
+   "targetTop": 105.3,
+   "cityH": 101.2,
+   "name": "Union on San Antonio"
+  },
+  "528179:312": {
+   "ring": [
+    [
+     -561.0,
+     361.19
+    ],
+    [
+     -565.92,
+     418.59
+    ],
+    [
+     -568.72,
+     418.45
+    ],
+    [
+     -570.06,
+     435.28
+    ],
+    [
+     -556.44,
+     439.76
+    ],
+    [
+     -556.09,
+     438.48
+    ],
+    [
+     -534.72,
+     445.45
+    ],
+    [
+     -531.13,
+     425.92
+    ],
+    [
+     -533.16,
+     425.1
+    ],
+    [
+     -527.99,
+     364.69
+    ],
+    [
+     -561.0,
+     361.19
+    ]
+   ],
+   "groundY": 2.54,
+   "targetTop": 41.35,
+   "cityH": 40.01,
+   "name": "The Otis Hotel / AC Hotel Austin-University"
+  },
+  "533878:353": {
+   "ring": [
+    [
+     -478.31,
+     295.27
+    ],
+    [
+     -475.47,
+     265.03
+    ],
+    [
+     -476.76,
+     264.91
+    ],
+    [
+     -476.57,
+     262.87
+    ],
+    [
+     -513.68,
+     259.38
+    ],
+    [
+     -516.73,
+     291.88
+    ],
+    [
+     -496.41,
+     293.79
+    ],
+    [
+     -498.13,
+     312.1
+    ],
+    [
+     -479.06,
+     313.89
+    ],
+    [
+     -477.32,
+     295.36
+    ],
+    [
+     -478.31,
+     295.27
+    ]
+   ],
+   "groundY": 5.98,
+   "targetTop": 32.47,
+   "cityH": 27.69,
+   "name": "St. Austin Catholic parish building / school"
+  },
+  "550397:416": {
+   "ring": [
+    [
+     -628.01,
+     -45.3
+    ],
+    [
+     -632.58,
+     18.67
+    ],
+    [
+     -597.15,
+     21.2
+    ],
+    [
+     -592.58,
+     -42.76
+    ],
+    [
+     -628.01,
+     -45.3
+    ]
+   ],
+   "groundY": 12.49,
+   "targetTop": 80.52,
+   "cityH": 68.03,
+   "name": "Skyloft Austin (probable)"
+  },
+  "554717:450": {
+   "ring": [
+    [
+     -658.41,
+     58.34
+    ],
+    [
+     -653.55,
+     -2.73
+    ],
+    [
+     -686.28,
+     -5.33
+    ],
+    [
+     -691.14,
+     55.73
+    ],
+    [
+     -658.41,
+     58.34
+    ]
+   ],
+   "groundY": 12.84,
+   "targetTop": 96.92,
+   "cityH": 85.28,
+   "name": "Rise at West Campus"
+  },
+  "568564:485": {
+   "ring": [
+    [
+     -707.18,
+     -270.45
+    ],
+    [
+     -712.03,
+     -213.53
+    ],
+    [
+     -685.14,
+     -211.24
+    ],
+    [
+     -684.15,
+     -222.83
+    ],
+    [
+     -684.88,
+     -222.89
+    ],
+    [
+     -681.01,
+     -268.21
+    ],
+    [
+     -707.18,
+     -270.45
+    ]
+   ],
+   "groundY": 15.29,
+   "targetTop": 40.58,
+   "cityH": 26.49,
+   "name": "Yugo Austin Rio"
+  },
+  "588089:566": {
+   "ring": [
+    [
+     -710.66,
+     704.85
+    ],
+    [
+     -711.9,
+     708.39
+    ],
+    [
+     -708.2,
+     709.36
+    ],
+    [
+     -707.25,
+     705.75
+    ],
+    [
+     -710.66,
+     704.85
+    ]
+   ],
+   "groundY": -2.88,
+   "targetTop": 0.11,
+   "cityH": 2.99,
+   "name": null
+  },
+  "594352:667": {
+   "ring": [
+    [
+     -677.28,
+     -268.0
+    ],
+    [
+     -679.56,
+     -238.4
+    ],
+    [
+     -682.96,
+     -238.66
+    ],
+    [
+     -683.88,
+     -226.7
+    ],
+    [
+     -681.22,
+     -226.49
+    ],
+    [
+     -682.46,
+     -210.46
+    ],
+    [
+     -655.52,
+     -208.38
+    ],
+    [
+     -651.09,
+     -265.98
+    ],
+    [
+     -677.28,
+     -268.0
+    ]
+   ],
+   "groundY": 15.21,
+   "targetTop": 111.51,
+   "cityH": 96.3,
+   "name": "Yugo Austin Waterloo (Waterloo)"
+  },
+  "596823:675": {
+   "ring": [
+    [
+     -564.35,
+     -397.9
+    ],
+    [
+     -557.04,
+     -485.9
+    ],
+    [
+     -612.79,
+     -490.54
+    ],
+    [
+     -618.67,
+     -419.72
+    ],
+    [
+     -617.24,
+     -419.6
+    ],
+    [
+     -617.42,
+     -417.42
+    ],
+    [
+     -612.64,
+     -417.02
+    ],
+    [
+     -612.7,
+     -416.34
+    ],
+    [
+     -595.27,
+     -414.89
+    ],
+    [
+     -596.46,
+     -400.57
+    ],
+    [
+     -564.35,
+     -397.9
+    ]
+   ],
+   "groundY": 16.55,
+   "targetTop": 45.46,
+   "cityH": 30.11,
+   "name": "Rambler (probable)"
+  },
+  "597128:680": {
+   "ring": [
+    [
+     -517.48,
+     599.83
+    ],
+    [
+     -518.58,
+     603.34
+    ],
+    [
+     -521.19,
+     602.56
+    ],
+    [
+     -527.49,
+     621.31
+    ],
+    [
+     -528.2,
+     621.09
+    ],
+    [
+     -539.84,
+     657.97
+    ],
+    [
+     -543.26,
+     669.01
+    ],
+    [
+     -539.58,
+     670.0
+    ],
+    [
+     -543.17,
+     681.39
+    ],
+    [
+     -531.43,
+     685.1
+    ],
+    [
+     -530.86,
+     683.28
+    ],
+    [
+     -525.84,
+     684.87
+    ],
+    [
+     -526.49,
+     686.91
+    ],
+    [
+     -507.78,
+     692.83
+    ],
+    [
+     -504.21,
+     681.51
+    ],
+    [
+     -501.58,
+     682.35
+    ],
+    [
+     -479.62,
+     612.33
+    ],
+    [
+     -497.85,
+     606.38
+    ],
+    [
+     -498.62,
+     608.82
+    ],
+    [
+     -506.07,
+     606.46
+    ],
+    [
+     -505.2,
+     603.71
+    ],
+    [
+     -517.48,
+     599.83
+    ]
+   ],
+   "groundY": 0.65,
+   "targetTop": 82.24,
+   "cityH": 82.79,
+   "name": "Travis County Civil and Family Courts Facility"
+  },
+  "613461:731": {
+   "ring": [
+    [
+     -595.99,
+     23.06
+    ],
+    [
+     -601.0,
+     22.63
+    ],
+    [
+     -600.92,
+     21.72
+    ],
+    [
+     -618.46,
+     20.2
+    ],
+    [
+     -618.51,
+     20.76
+    ],
+    [
+     -626.03,
+     20.11
+    ],
+    [
+     -626.09,
+     20.81
+    ],
+    [
+     -632.87,
+     20.22
+    ],
+    [
+     -633.36,
+     25.96
+    ],
+    [
+     -634.32,
+     25.88
+    ],
+    [
+     -635.74,
+     42.3
+    ],
+    [
+     -636.47,
+     42.24
+    ],
+    [
+     -637.08,
+     49.22
+    ],
+    [
+     -635.92,
+     49.32
+    ],
+    [
+     -637.83,
+     71.39
+    ],
+    [
+     -619.92,
+     72.94
+    ],
+    [
+     -620.12,
+     75.23
+    ],
+    [
+     -618.99,
+     75.33
+    ],
+    [
+     -620.88,
+     98.52
+    ],
+    [
+     -602.66,
+     100.1
+    ],
+    [
+     -595.99,
+     23.06
+    ]
+   ],
+   "groundY": 13.27,
+   "targetTop": 41.32,
+   "cityH": 29.25,
+   "name": null
+  },
+  "641335:834": {
+   "ring": [
+    [
+     -702.45,
+     127.14
+    ],
+    [
+     -703.78,
+     127.03
+    ],
+    [
+     -702.38,
+     109.4
+    ],
+    [
+     -715.99,
+     108.32
+    ],
+    [
+     -717.83,
+     131.64
+    ],
+    [
+     -740.67,
+     129.43
+    ],
+    [
+     -744.44,
+     177.01
+    ],
+    [
+     -706.69,
+     180.51
+    ],
+    [
+     -702.45,
+     127.14
+    ]
+   ],
+   "groundY": 10.72,
+   "targetTop": 66.77,
+   "cityH": 57.25,
+   "name": "Villas on Rio"
+  },
+  "683551:996": {
+   "ring": [
+    [
+     -458.96,
+     755.17
+    ],
+    [
+     -451.03,
+     730.48
+    ],
+    [
+     -487.43,
+     718.77
+    ],
+    [
+     -496.38,
+     746.64
+    ],
+    [
+     -459.47,
+     758.51
+    ],
+    [
+     -458.45,
+     755.34
+    ],
+    [
+     -458.96,
+     755.17
+    ]
+   ],
+   "groundY": 1.72,
+   "targetTop": 101.48,
+   "cityH": 100.96,
+   "name": "The Linden"
+  },
+  "683590:998": {
+   "ring": [
+    [
+     -558.72,
+     588.78
+    ],
+    [
+     -563.4,
+     603.18
+    ],
+    [
+     -565.2,
+     602.6
+    ],
+    [
+     -566.91,
+     607.86
+    ],
+    [
+     -566.01,
+     608.15
+    ],
+    [
+     -569.39,
+     618.55
+    ],
+    [
+     -565.05,
+     619.96
+    ],
+    [
+     -580.06,
+     666.2
+    ],
+    [
+     -552.89,
+     675.04
+    ],
+    [
+     -551.64,
+     671.17
+    ],
+    [
+     -541.09,
+     674.8
+    ],
+    [
+     -539.58,
+     670.0
+    ],
+    [
+     -543.26,
+     669.01
+    ],
+    [
+     -528.2,
+     621.09
+    ],
+    [
+     -527.49,
+     621.31
+    ],
+    [
+     -522.6,
+     606.75
+    ],
+    [
+     -523.88,
+     606.34
+    ],
+    [
+     -522.15,
+     600.85
+    ],
+    [
+     -558.72,
+     588.78
+    ]
+   ],
+   "groundY": -1.13,
+   "targetTop": 8.58,
+   "cityH": 10.91,
+   "name": "Travis County Civil and Family Courts Facility (low part of the same site)"
+  },
+  "697152:1015": {
+   "ring": [
+    [
+     -654.98,
+     60.04
+    ],
+    [
+     -691.52,
+     57.05
+    ],
+    [
+     -694.07,
+     88.29
+    ],
+    [
+     -691.68,
+     88.48
+    ],
+    [
+     -691.97,
+     92.1
+    ],
+    [
+     -657.92,
+     94.61
+    ],
+    [
+     -654.98,
+     60.04
+    ]
+   ],
+   "groundY": 12.06,
+   "targetTop": 67.74,
+   "cityH": 56.88,
+   "name": "Inspire on 22nd"
+  },
+  "716217:1136": {
+   "ring": [
+    [
+     -482.88,
+     -227.65
+    ],
+    [
+     -483.32,
+     -222.15
+    ],
+    [
+     -477.6,
+     -221.69
+    ],
+    [
+     -476.64,
+     -227.14
+    ],
+    [
+     -482.88,
+     -227.65
+    ]
+   ],
+   "groundY": 14.45,
+   "targetTop": 17.13,
+   "cityH": 2.68,
+   "name": null
+  },
+  "717464:1161": {
+   "ring": [
+    [
+     -490.29,
+     1000.58
+    ],
+    [
+     -501.07,
+     993.47
+    ],
+    [
+     -508.11,
+     991.7
+    ],
+    [
+     -514.78,
+     991.58
+    ],
+    [
+     -522.77,
+     993.04
+    ],
+    [
+     -523.88,
+     988.54
+    ],
+    [
+     -552.69,
+     978.71
+    ],
+    [
+     -556.19,
+     981.58
+    ],
+    [
+     -567.71,
+     969.53
+    ],
+    [
+     -573.54,
+     987.08
+    ],
+    [
+     -570.28,
+     991.08
+    ],
+    [
+     -577.9,
+     1001.01
+    ],
+    [
+     -520.34,
+     1019.66
+    ],
+    [
+     -517.01,
+     1008.85
+    ],
+    [
+     -509.77,
+     1008.2
+    ],
+    [
+     -505.96,
+     1009.64
+    ],
+    [
+     -502.25,
+     1012.47
+    ],
+    [
+     -496.12,
+     1018.86
+    ],
+    [
+     -490.29,
+     1000.58
+    ]
+   ],
+   "groundY": -1.13,
+   "targetTop": 52.82,
+   "cityH": 55.15,
+   "name": "SXSW Center"
+  },
+  "732897:1231": {
+   "ring": [
+    [
+     -590.03,
+     23.8
+    ],
+    [
+     -593.84,
+     69.05
+    ],
+    [
+     -558.61,
+     72.02
+    ],
+    [
+     -554.8,
+     26.77
+    ],
+    [
+     -590.03,
+     23.8
+    ]
+   ],
+   "groundY": 13.17,
+   "targetTop": 68.79,
+   "cityH": 56.82,
+   "name": "Moontower"
+  },
+  "733549:1241": {
+   "ring": [
+    [
+     -681.21,
+     308.23
+    ],
+    [
+     -703.54,
+     307.06
+    ],
+    [
+     -703.82,
+     312.41
+    ],
+    [
+     -681.49,
+     313.58
+    ],
+    [
+     -681.21,
+     308.23
+    ]
+   ],
+   "groundY": 7.01,
+   "targetTop": 11.24,
+   "cityH": 4.23,
+   "name": null
+  },
+  "735333:1272": {
+   "ring": [
+    [
+     -702.55,
+     181.85
+    ],
+    [
+     -705.76,
+     223.37
+    ],
+    [
+     -669.29,
+     226.21
+    ],
+    [
+     -666.05,
+     184.52
+    ],
+    [
+     -679.76,
+     183.46
+    ],
+    [
+     -679.94,
+     185.78
+    ],
+    [
+     -687.12,
+     185.22
+    ],
+    [
+     -686.95,
+     183.06
+    ],
+    [
+     -702.55,
+     181.85
+    ]
+   ],
+   "groundY": 9.97,
+   "targetTop": 69.66,
+   "cityH": 60.89,
+   "name": "Lark Austin (probable)"
+  },
+  "735685:1276": {
+   "ring": [
+    [
+     -475.53,
+     -227.48
+    ],
+    [
+     -475.95,
+     -222.13
+    ],
+    [
+     -472.22,
+     -221.84
+    ],
+    [
+     -471.8,
+     -227.19
+    ],
+    [
+     -475.53,
+     -227.48
+    ]
+   ],
+   "groundY": 14.5,
+   "targetTop": 17.8,
+   "cityH": 3.3,
+   "name": null
+  }
+ },
+ "excluded": {
+  "614399:747": [
+   [
+    -697.41,
+    -191.62
+   ],
+   [
+    -711.33,
+    -193.0
+   ],
+   [
+    -712.24,
+    -183.17
+   ],
+   [
+    -715.88,
+    -180.65
+   ],
+   [
+    -717.13,
+    -167.47
+   ],
+   [
+    -697.56,
+    -165.61
+   ],
+   [
+    -696.68,
+    -176.18
+   ],
+   [
+    -699.06,
+    -176.4
+   ],
+   [
+    -697.84,
+    -181.09
+   ],
+   [
+    -696.62,
+    -181.01
+   ],
+   [
+    -696.27,
+    -186.63
+   ],
+   [
+    -697.89,
+    -186.82
+   ],
+   [
+    -697.41,
+    -191.62
+   ]
+  ]
+ },
+ "d25": {"source":"D25 correction (.work/d25/derive.py): raw 0.5 m class-6 (bld) / DTM of the same raster; per cell (0.75 m inset) P50 / P90 / ridge P90 and a 1.5 m sample grid inside the City ring (0.75 m inset): [x, z, bldY|null, dtmY, class, homogeneous]. class from the raster only: court 2.0 <= bld-dtm < 5.0 (podium deck / pool surround / link), roof >= 5.5, void = no return; homogeneous = every returned cell of the 1.5 m window (>= 6 of 9) in the same class","cells":{"neck":{"kind":"flat","n":10,"inset":0.25,"dsmP50":21.7,"dsmP90":22.71},"n-end-row":{"kind":"gableV","n":287,"inset":0.75,"dsmP50":27.64,"dsmP90":28.47,"ridgeP90":28.64,"ridgeN":66},"n-pavilion":{"kind":"flat","n":177,"inset":0.75,"dsmP50":23.98,"dsmP90":24.38},"n-w-row-a":{"kind":"gableV","n":401,"inset":0.75,"dsmP50":27.27,"dsmP90":28.03,"ridgeP90":28.17,"ridgeN":87},"n-w-row-b":{"kind":"gableV","n":973,"inset":0.75,"dsmP50":27.83,"dsmP90":28.66,"ridgeP90":28.92,"ridgeN":197},"n-e-row-a":{"kind":"gableV","n":399,"inset":0.75,"dsmP50":27.21,"dsmP90":28.02,"ridgeP90":28.18,"ridgeN":81},"n-e-row-b":{"kind":"gableV","n":1098,"inset":0.75,"dsmP50":27.74,"dsmP90":28.61,"ridgeP90":28.91,"ridgeN":200},"n-court":{"kind":"deck","n":1280,"inset":0.75,"dsmP50":20.71,"dsmP90":20.87},"n-w-strip":{"kind":"flat","n":1164,"inset":0.75,"dsmP50":24.36,"dsmP90":24.72},"n-e-strip":{"kind":"flat","n":896,"inset":0.75,"dsmP50":24.11,"dsmP90":24.43},"m-w-strip-0":{"kind":"gableU","n":169,"inset":0.75,"dsmP50":26.67,"dsmP90":28.23,"ridgeP90":28.58,"ridgeN":19},"m-w-strip-1":{"kind":"shedU","n":58,"inset":0.75,"dsmP50":24.1,"dsmP90":24.73},"m-w-strip-2":{"kind":"shedV","n":26,"inset":0.75,"dsmP50":26.35,"dsmP90":26.59},"m-w-strip-3":{"kind":"gableU","n":146,"inset":0.75,"dsmP50":27.25,"dsmP90":28.38,"ridgeP90":28.6,"ridgeN":32},"m-w-strip-4":{"kind":"shedU","n":8,"inset":0.75,"dsmP50":24.12,"dsmP90":24.86},"m-e-strip-0":{"kind":"shedU","n":26,"inset":0.25,"dsmP50":24.88,"dsmP90":25.78},"m-e-strip-1":{"kind":"gableU","n":176,"inset":0.75,"dsmP50":27.43,"dsmP90":28.39,"ridgeP90":28.59,"ridgeN":33},"m-e-strip-2":{"kind":"flat","n":15,"inset":0.25,"dsmP50":26.13,"dsmP90":26.21},"m-e-strip-3":{"kind":"shedU","n":105,"inset":0.75,"dsmP50":24.8,"dsmP90":26.01},"m-e-strip-4":{"kind":"gableU","n":144,"inset":0.75,"dsmP50":27.51,"dsmP90":28.46,"ridgeP90":28.57,"ridgeN":31},"m-e-strip-5":{"kind":"shedU","n":22,"inset":0.75,"dsmP50":24.94,"dsmP90":25.66},"m-e-ledge":{"kind":"flat","n":71,"inset":0.75,"dsmP50":26.17,"dsmP90":26.81},"m-pool":{"kind":"flat","n":343,"inset":0.75,"dsmP50":21.54,"dsmP90":21.57},"m-w-row-a":{"kind":"gableV","n":348,"inset":0.75,"dsmP50":27.03,"dsmP90":28.5,"ridgeP90":28.84,"ridgeN":39},"m-w-row-b":{"kind":"gableV","n":572,"inset":0.75,"dsmP50":27.18,"dsmP90":28.34,"ridgeP90":28.47,"ridgeN":93},"m-w-row-c":{"kind":"gableV","n":370,"inset":0.75,"dsmP50":27.14,"dsmP90":28.22,"ridgeP90":28.47,"ridgeN":59},"m-w-row-d":{"kind":"gableV","n":587,"inset":0.75,"dsmP50":27.15,"dsmP90":28.54,"ridgeP90":28.83,"ridgeN":76},"m-e-row-a":{"kind":"gableV","n":340,"inset":0.75,"dsmP50":27.52,"dsmP90":28.61,"ridgeP90":28.8,"ridgeN":62},"m-e-row-b":{"kind":"gableV","n":539,"inset":0.75,"dsmP50":27.52,"dsmP90":28.32,"ridgeP90":28.42,"ridgeN":137},"m-e-row-c":{"kind":"gableV","n":431,"inset":0.75,"dsmP50":27.4,"dsmP90":28.56,"ridgeP90":28.8,"ridgeN":70},"m-court":{"kind":"deck","n":727,"inset":0.75,"dsmP50":20.4,"dsmP90":21.8},"s-end-row":{"kind":"gableV","n":334,"inset":0.75,"dsmP50":26.84,"dsmP90":28.1,"ridgeP90":28.31,"ridgeN":74},"s-pavilion":{"kind":"flat","n":145,"inset":0.75,"dsmP50":23.37,"dsmP90":23.71},"s-w-row-a":{"kind":"gableV","n":994,"inset":0.75,"dsmP50":27.03,"dsmP90":27.9,"ridgeP90":28.11,"ridgeN":194},"s-w-row-b":{"kind":"gableV","n":530,"inset":0.75,"dsmP50":26.55,"dsmP90":27.39,"ridgeP90":27.45,"ridgeN":110},"s-e-row-a":{"kind":"gableV","n":1076,"inset":0.75,"dsmP50":27.03,"dsmP90":27.92,"ridgeP90":28.13,"ridgeN":205},"s-e-row-b":{"kind":"gableV","n":492,"inset":0.75,"dsmP50":26.54,"dsmP90":27.33,"ridgeP90":27.46,"ridgeN":103},"s-court":{"kind":"deck","n":1499,"inset":0.75,"dsmP50":19.97,"dsmP90":21.32},"s-sw-edge":{"kind":"shedV","n":56,"inset":0.75,"dsmP50":22.06,"dsmP90":22.56},"s-se-edge":{"kind":"shedV","n":74,"inset":0.75,"dsmP50":22.64,"dsmP90":23.15},"s-w-strip":{"kind":"flat","n":1037,"inset":0.75,"dsmP50":23.43,"dsmP90":23.83},"s-e-strip":{"kind":"flat","n":840,"inset":0.75,"dsmP50":23.48,"dsmP90":23.88}},"samples":[[-686.5,-494.48,21.64,17.32,"court",0],[-685.0,-494.48,21.44,17.34,"court",0],[-673.0,-494.48,27.34,17.28,"roof",1],[-671.5,-494.48,26.89,17.24,"roof",1],[-670.0,-494.48,23.26,17.22,"roof",1],[-668.5,-494.48,23.2,17.21,"roof",1],[-667.0,-494.48,23.23,17.22,"roof",1],[-665.5,-494.48,23.19,17.22,"roof",0],[-686.5,-492.98,23.72,17.32,"roof",1],[-685.0,-492.98,23.6,17.33,"roof",1],[-683.5,-492.98,23.61,17.34,"roof",1],[-682.0,-492.98,23.58,17.36,"roof",1],[-680.5,-492.98,24.06,17.37,"roof",1],[-679.0,-492.98,26.62,17.37,"roof",1],[-677.5,-492.98,27.18,17.34,"roof",1],[-676.0,-492.98,27.78,17.33,"roof",1],[-674.5,-492.98,27.98,17.29,"roof",1],[-673.0,-492.98,27.38,17.25,"roof",1],[-671.5,-492.98,26.89,17.23,"roof",1],[-670.0,-492.98,26.63,17.22,"roof",1],[-668.5,-492.98,null,17.21,"void",0],[-667.0,-492.98,22.92,17.21,"roof",0],[-665.5,-492.98,20.73,17.21,"court",0],[-664.0,-492.98,26.48,17.22,"roof",1],[-662.5,-492.98,27.23,17.22,"roof",1],[-653.5,-492.98,23.31,17.11,"roof",1],[-652.0,-492.98,23.18,17.09,"roof",1],[-650.5,-492.98,23.27,17.08,"roof",1],[-686.5,-491.48,null,17.32,"void",0],[-685.0,-491.48,24.42,17.34,"roof",1],[-683.5,-491.48,24.24,17.35,"roof",1],[-682.0,-491.48,24.21,17.35,"roof",1],[-680.5,-491.48,24.2,17.35,"roof",1],[-679.0,-491.48,26.54,17.33,"roof",1],[-677.5,-491.48,27.3,17.33,"roof",1],[-676.0,-491.48,27.8,17.3,"roof",1],[-674.5,-491.48,27.98,17.26,"roof",1],[-673.0,-491.48,27.31,17.24,"roof",1],[-671.5,-491.48,26.8,17.23,"roof",1],[-670.0,-491.48,26.56,17.21,"roof",1],[-668.5,-491.48,null,17.2,"void",0],[-667.0,-491.48,null,17.2,"void",0],[-665.5,-491.48,20.72,17.21,"court",1],[-664.0,-491.48,null,17.21,"void",0],[-662.5,-491.48,27.41,17.21,"roof",1],[-661.0,-491.48,28.22,17.19,"roof",1],[-659.5,-491.48,28.51,17.16,"roof",1],[-658.0,-491.48,27.84,17.15,"roof",1],[-656.5,-491.48,27.05,17.14,"roof",1],[-655.0,-491.48,26.24,17.11,"roof",1],[-653.5,-491.48,20.74,17.09,"court",1],[-652.0,-491.48,22.96,17.08,"roof",0],[-650.5,-491.48,26.39,17.07,"roof",1],[-649.0,-491.48,26.63,17.05,"roof",1],[-647.5,-491.48,27.01,17.06,"roof",1],[-646.0,-491.48,27.5,17.1,"roof",1],[-686.5,-489.98,null,17.33,"void",0],[-685.0,-489.98,null,17.33,"void",0],[-683.5,-489.98,24.76,17.34,"roof",1],[-682.0,-489.98,24.37,17.33,"roof",1],[-680.5,-489.98,24.42,17.32,"roof",1],[-679.0,-489.98,26.66,17.33,"roof",1],[-677.5,-489.98,27.37,17.31,"roof",1],[-676.0,-489.98,27.9,17.27,"roof",1],[-674.5,-489.98,27.98,17.24,"roof",1],[-673.0,-489.98,27.2,17.23,"roof",1],[-671.5,-489.98,26.82,17.22,"roof",1],[-670.0,-489.98,26.56,17.2,"roof",1],[-668.5,-489.98,20.69,17.19,"court",0],[-667.0,-489.98,20.71,17.19,"court",1],[-665.5,-489.98,20.71,17.2,"court",0],[-664.0,-489.98,26.77,17.2,"roof",1],[-662.5,-489.98,27.31,17.2,"roof",1],[-661.0,-489.98,28.22,17.18,"roof",1],[-659.5,-489.98,28.5,17.15,"roof",1],[-658.0,-489.98,27.74,17.15,"roof",1],[-656.5,-489.98,27.04,17.13,"roof",1],[-655.0,-489.98,26.26,17.1,"roof",1],[-653.5,-489.98,20.71,17.09,"court",1],[-652.0,-489.98,21.96,17.07,"court",0],[-650.5,-489.98,26.41,17.06,"roof",0],[-649.0,-489.98,26.72,17.05,"roof",1],[-647.5,-489.98,null,17.03,"void",0],[-646.0,-489.98,27.61,17.03,"roof",1],[-644.5,-489.98,28.15,17.07,"roof",1],[-643.0,-489.98,27.58,17.07,"roof",1],[-641.5,-489.98,26.93,17.07,"roof",1],[-640.0,-489.98,24.33,17.08,"roof",1],[-638.5,-489.98,null,17.07,"void",0],[-637.0,-489.98,22.86,17.05,"roof",1],[-635.5,-489.98,22.59,17.02,"roof",0],[-634.0,-489.98,21.22,17.0,"court",0],[-686.5,-488.48,24.07,17.32,"roof",1],[-685.0,-488.48,24.37,17.32,"roof",1],[-683.5,-488.48,24.4,17.31,"roof",1],[-682.0,-488.48,24.38,17.31,"roof",1],[-680.5,-488.48,25.03,17.32,"roof",1],[-679.0,-488.48,26.63,17.31,"roof",1],[-677.5,-488.48,27.37,17.27,"roof",1],[-676.0,-488.48,28.07,17.25,"roof",1],[-674.5,-488.48,27.77,17.24,"roof",1],[-673.0,-488.48,27.25,17.22,"roof",1],[-671.5,-488.48,26.8,17.21,"roof",1],[-670.0,-488.48,26.52,17.19,"roof",1],[-668.5,-488.48,20.69,17.18,"court",0],[-667.0,-488.48,20.69,17.19,"court",1],[-665.5,-488.48,20.71,17.19,"court",0],[-664.0,-488.48,26.8,17.19,"roof",1],[-662.5,-488.48,27.54,17.19,"roof",1],[-661.0,-488.48,28.19,17.16,"roof",1],[-659.5,-488.48,28.39,17.14,"roof",1],[-658.0,-488.48,27.57,17.14,"roof",1],[-656.5,-488.48,26.89,17.12,"roof",1],[-655.0,-488.48,26.2,17.09,"roof",0],[-653.5,-488.48,20.7,17.08,"court",1],[-652.0,-488.48,20.85,17.06,"court",1],[-650.5,-488.48,26.45,17.05,"roof",1],[-649.0,-488.48,26.69,17.04,"roof",1],[-647.5,-488.48,27.05,17.03,"roof",1],[-646.0,-488.48,27.56,17.01,"roof",1],[-644.5,-488.48,28.16,17.01,"roof",1],[-643.0,-488.48,null,17.04,"void",0],[-641.5,-488.48,26.93,17.03,"roof",1],[-640.0,-488.48,24.22,17.03,"roof",1],[-638.5,-488.48,23.57,17.03,"roof",1],[-637.0,-488.48,23.46,17.02,"roof",1],[-635.5,-488.48,23.33,16.99,"roof",1],[-634.0,-488.48,23.34,16.94,"roof",1],[-686.5,-486.98,24.14,17.3,"roof",1],[-685.0,-486.98,24.36,17.3,"roof",1],[-683.5,-486.98,24.38,17.31,"roof",1],[-682.0,-486.98,24.39,17.32,"roof",1],[-680.5,-486.98,24.42,17.32,"roof",1],[-679.0,-486.98,26.78,17.28,"roof",1],[-677.5,-486.98,27.33,17.26,"roof",1],[-676.0,-486.98,28.05,17.25,"roof",1],[-674.5,-486.98,27.77,17.23,"roof",1],[-673.0,-486.98,27.16,17.22,"roof",1],[-671.5,-486.98,26.74,17.2,"roof",1],[-670.0,-486.98,26.46,17.18,"roof",1],[-668.5,-486.98,20.7,17.17,"court",0],[-667.0,-486.98,20.69,17.18,"court",1],[-665.5,-486.98,null,17.18,"void",0],[-664.0,-486.98,26.88,17.19,"roof",1],[-662.5,-486.98,null,17.17,"void",0],[-661.0,-486.98,28.34,17.14,"roof",1],[-659.5,-486.98,28.32,17.14,"roof",1],[-658.0,-486.98,27.64,17.13,"roof",1],[-656.5,-486.98,26.95,17.11,"roof",1],[-655.0,-486.98,null,17.08,"void",0],[-653.5,-486.98,20.7,17.07,"court",0],[-652.0,-486.98,20.69,17.05,"court",1],[-650.5,-486.98,26.38,17.04,"roof",1],[-649.0,-486.98,26.76,17.03,"roof",1],[-647.5,-486.98,27.05,17.02,"roof",1],[-646.0,-486.98,28.0,17.01,"roof",1],[-644.5,-486.98,28.18,16.99,"roof",1],[-643.0,-486.98,27.48,16.98,"roof",1],[-641.5,-486.98,26.84,17.01,"roof",1],[-640.0,-486.98,24.26,16.99,"roof",1],[-638.5,-486.98,24.16,16.98,"roof",1],[-637.0,-486.98,24.18,16.99,"roof",1],[-635.5,-486.98,24.08,16.97,"roof",1],[-634.0,-486.98,24.15,16.93,"roof",1],[-686.5,-485.48,24.17,17.3,"roof",1],[-685.0,-485.48,24.37,17.3,"roof",1],[-683.5,-485.48,null,17.31,"void",0],[-682.0,-485.48,24.4,17.32,"roof",1],[-680.5,-485.48,25.08,17.29,"roof",1],[-679.0,-485.48,26.85,17.26,"roof",1],[-677.5,-485.48,27.51,17.26,"roof",1],[-676.0,-485.48,28.12,17.24,"roof",1],[-674.5,-485.48,null,17.22,"void",0],[-673.0,-485.48,27.17,17.21,"roof",1],[-671.5,-485.48,null,17.19,"void",0],[-670.0,-485.48,26.48,17.17,"roof",1],[-668.5,-485.48,20.68,17.16,"court",1],[-667.0,-485.48,20.71,17.17,"court",1],[-665.5,-485.48,26.21,17.17,"roof",0],[-664.0,-485.48,26.99,17.18,"roof",1],[-662.5,-485.48,27.7,17.16,"roof",1],[-661.0,-485.48,28.29,17.13,"roof",1],[-659.5,-485.48,28.34,17.13,"roof",1],[-658.0,-485.48,27.53,17.12,"roof",1],[-656.5,-485.48,26.89,17.09,"roof",1],[-655.0,-485.48,23.36,17.07,"roof",0],[-653.5,-485.48,20.69,17.06,"court",0],[-652.0,-485.48,20.69,17.05,"court",0],[-650.5,-485.48,26.45,17.03,"roof",1],[-649.0,-485.48,26.83,17.02,"roof",1],[-647.5,-485.48,27.2,17.01,"roof",1],[-646.0,-485.48,27.69,17.0,"roof",1],[-644.5,-485.48,28.07,16.99,"roof",1],[-643.0,-485.48,27.45,16.96,"roof",1],[-641.5,-485.48,26.73,16.96,"roof",1],[-640.0,-485.48,24.16,16.98,"roof",1],[-638.5,-485.48,24.15,16.95,"roof",1],[-637.0,-485.48,24.17,16.95,"roof",1],[-635.5,-485.48,24.08,16.94,"roof",1],[-634.0,-485.48,23.9,16.91,"roof",1],[-688.0,-483.98,24.03,17.28,"roof",1],[-686.5,-483.98,null,17.3,"void",0],[-685.0,-483.98,24.35,17.31,"roof",1],[-683.5,-483.98,24.38,17.31,"roof",1],[-682.0,-483.98,24.4,17.3,"roof",1],[-680.5,-483.98,24.44,17.27,"roof",1],[-679.0,-483.98,26.98,17.26,"roof",1],[-677.5,-483.98,27.56,17.25,"roof",1],[-676.0,-483.98,28.12,17.23,"roof",1],[-674.5,-483.98,27.63,17.21,"roof",1],[-673.0,-483.98,27.09,17.2,"roof",1],[-671.5,-483.98,26.72,17.18,"roof",1],[-670.0,-483.98,26.38,17.16,"roof",1],[-668.5,-483.98,24.73,17.16,"roof",0],[-667.0,-483.98,20.71,17.16,"court",1],[-665.5,-483.98,23.45,17.17,"roof",0],[-664.0,-483.98,26.99,17.17,"roof",1],[-662.5,-483.98,27.52,17.14,"roof",1],[-661.0,-483.98,28.47,17.12,"roof",1],[-659.5,-483.98,28.2,17.12,"roof",1],[-658.0,-483.98,27.37,17.11,"roof",1],[-656.5,-483.98,26.77,17.08,"roof",1],[-655.0,-483.98,20.7,17.06,"court",0],[-653.5,-483.98,20.7,17.05,"court",1],[-652.0,-483.98,20.7,17.04,"court",0],[-650.5,-483.98,26.43,17.02,"roof",1],[-649.0,-483.98,26.76,17.01,"roof",1],[-647.5,-483.98,27.15,17.0,"roof",1],[-646.0,-483.98,28.06,16.99,"roof",1],[-644.5,-483.98,27.93,16.98,"roof",1],[-643.0,-483.98,27.25,16.97,"roof",1],[-641.5,-483.98,26.78,16.94,"roof",1],[-640.0,-483.98,24.15,16.94,"roof",1],[-638.5,-483.98,24.13,16.95,"roof",1],[-637.0,-483.98,24.12,16.91,"roof",1],[-635.5,-483.98,24.11,16.9,"roof",1],[-634.0,-483.98,23.79,16.89,"roof",1],[-688.0,-482.48,24.91,17.28,"roof",1],[-686.5,-482.48,24.73,17.3,"roof",1],[-685.0,-482.48,24.72,17.31,"roof",1],[-683.5,-482.48,24.54,17.3,"roof",1],[-682.0,-482.48,24.42,17.28,"roof",1],[-680.5,-482.48,25.15,17.27,"roof",1],[-679.0,-482.48,26.97,17.26,"roof",1],[-677.5,-482.48,27.63,17.24,"roof",1],[-676.0,-482.48,28.1,17.22,"roof",1],[-674.5,-482.48,27.65,17.2,"roof",1],[-673.0,-482.48,26.98,17.19,"roof",1],[-671.5,-482.48,26.75,17.17,"roof",1],[-670.0,-482.48,26.44,17.15,"roof",1],[-668.5,-482.48,null,17.15,"void",0],[-667.0,-482.48,20.7,17.15,"court",0],[-665.5,-482.48,20.72,17.16,"court",1],[-664.0,-482.48,20.71,17.15,"court",1],[-662.5,-482.48,29.68,17.13,"roof",0],[-661.0,-482.48,20.72,17.12,"court",0],[-659.5,-482.48,28.38,17.12,"roof",0],[-658.0,-482.48,23.35,17.11,"roof",0],[-656.5,-482.48,26.17,17.07,"roof",0],[-655.0,-482.48,20.71,17.05,"court",0],[-653.5,-482.48,null,17.04,"void",0],[-652.0,-482.48,23.68,17.03,"roof",0],[-650.5,-482.48,26.46,17.02,"roof",0],[-649.0,-482.48,26.86,17.0,"roof",1],[-647.5,-482.48,27.26,16.99,"roof",1],[-646.0,-482.48,27.89,16.98,"roof",1],[-644.5,-482.48,27.97,16.97,"roof",1],[-643.0,-482.48,27.34,16.96,"roof",1],[-641.5,-482.48,26.6,16.94,"roof",1],[-640.0,-482.48,24.16,16.92,"roof",1],[-638.5,-482.48,24.15,16.91,"roof",1],[-637.0,-482.48,24.11,16.91,"roof",1],[-635.5,-482.48,24.1,16.87,"roof",1],[-634.0,-482.48,23.73,16.86,"roof",1],[-688.0,-480.98,25.36,17.29,"roof",1],[-686.5,-480.98,25.35,17.3,"roof",1],[-685.0,-480.98,25.25,17.3,"roof",1],[-683.5,-480.98,25.32,17.28,"roof",1],[-682.0,-480.98,24.47,17.28,"roof",1],[-680.5,-480.98,26.19,17.26,"roof",1],[-679.0,-480.98,26.84,17.25,"roof",1],[-677.5,-480.98,27.5,17.23,"roof",1],[-676.0,-480.98,27.96,17.21,"roof",1],[-674.5,-480.98,28.64,17.2,"roof",1],[-673.0,-480.98,28.04,17.18,"roof",1],[-671.5,-480.98,27.54,17.16,"roof",1],[-670.0,-480.98,26.8,17.14,"roof",1],[-668.5,-480.98,23.1,17.14,"roof",0],[-667.0,-480.98,20.93,17.14,"court",1],[-665.5,-480.98,20.72,17.15,"court",1],[-664.0,-480.98,20.72,17.14,"court",1],[-662.5,-480.98,20.71,17.11,"court",1],[-661.0,-480.98,20.71,17.11,"court",1],[-659.5,-480.98,20.72,17.11,"court",1],[-658.0,-480.98,20.7,17.1,"court",1],[-656.5,-480.98,20.71,17.06,"court",1],[-655.0,-480.98,20.71,17.04,"court",1],[-653.5,-480.98,20.72,17.03,"court",1],[-652.0,-480.98,22.9,17.02,"roof",0],[-650.5,-480.98,26.62,17.01,"roof",1],[-649.0,-480.98,26.83,16.99,"roof",1],[-647.5,-480.98,27.32,16.98,"roof",1],[-646.0,-480.98,28.02,16.97,"roof",1],[-644.5,-480.98,27.94,16.96,"roof",1],[-643.0,-480.98,27.31,16.95,"roof",1],[-641.5,-480.98,26.57,16.94,"roof",1],[-640.0,-480.98,24.16,16.92,"roof",1],[-638.5,-480.98,24.13,16.9,"roof",1],[-637.0,-480.98,24.13,16.89,"roof",1],[-635.5,-480.98,24.1,16.88,"roof",1],[-634.0,-480.98,23.69,16.84,"roof",1],[-688.0,-479.48,24.39,17.29,"roof",1],[-686.5,-479.48,24.57,17.3,"roof",1],[-685.0,-479.48,24.54,17.29,"roof",1],[-683.5,-479.48,24.69,17.29,"roof",1],[-682.0,-479.48,24.75,17.27,"roof",1],[-680.5,-479.48,24.41,17.26,"roof",1],[-679.0,-479.48,26.73,17.24,"roof",1],[-677.5,-479.48,27.47,17.22,"roof",1],[-676.0,-479.48,28.12,17.2,"roof",1],[-674.5,-479.48,28.63,17.19,"roof",1],[-673.0,-479.48,28.09,17.17,"roof",1],[-671.5,-479.48,27.42,17.15,"roof",1],[-670.0,-479.48,26.66,17.13,"roof",1],[-668.5,-479.48,23.03,17.13,"roof",0],[-667.0,-479.48,20.73,17.14,"court",1],[-665.5,-479.48,20.69,17.14,"court",1],[-664.0,-479.48,20.71,17.12,"court",1],[-662.5,-479.48,20.72,17.1,"court",1],[-661.0,-479.48,20.72,17.11,"court",1],[-659.5,-479.48,20.71,17.11,"court",1],[-658.0,-479.48,20.69,17.09,"court",1],[-656.5,-479.48,20.72,17.05,"court",1],[-655.0,-479.48,20.7,17.03,"court",1],[-653.5,-479.48,null,17.02,"void",0],[-652.0,-479.48,26.65,17.01,"roof",0],[-650.5,-479.48,27.32,17.0,"roof",1],[-649.0,-479.48,27.87,16.99,"roof",1],[-647.5,-479.48,27.38,16.97,"roof",1],[-646.0,-479.48,27.99,16.96,"roof",1],[-644.5,-479.48,27.82,16.95,"roof",1],[-643.0,-479.48,27.2,16.94,"roof",1],[-641.5,-479.48,26.65,16.93,"roof",1],[-640.0,-479.48,24.18,16.92,"roof",1],[-638.5,-479.48,24.15,16.9,"roof",1],[-637.0,-479.48,25.31,16.88,"roof",1],[-635.5,-479.48,24.1,16.86,"roof",1],[-634.0,-479.48,23.56,16.84,"roof",1],[-688.0,-477.98,23.65,17.3,"roof",1],[-686.5,-477.98,24.31,17.3,"roof",1],[-685.0,-477.98,24.31,17.3,"roof",1],[-683.5,-477.98,24.37,17.28,"roof",1],[-682.0,-477.98,24.4,17.26,"roof",1],[-680.5,-477.98,null,17.25,"void",0],[-679.0,-477.98,26.87,17.23,"roof",1],[-677.5,-477.98,null,17.21,"void",0],[-676.0,-477.98,28.17,17.19,"roof",1],[-674.5,-477.98,null,17.18,"void",0],[-673.0,-477.98,28.0,17.16,"roof",1],[-671.5,-477.98,27.39,17.14,"roof",1],[-670.0,-477.98,26.77,17.13,"roof",1],[-668.5,-477.98,20.72,17.12,"court",0],[-667.0,-477.98,20.71,17.13,"court",1],[-665.5,-477.98,20.69,17.13,"court",1],[-664.0,-477.98,20.71,17.11,"court",1],[-662.5,-477.98,20.7,17.1,"court",1],[-661.0,-477.98,20.72,17.1,"court",1],[-659.5,-477.98,21.23,17.1,"court",1],[-658.0,-477.98,20.68,17.08,"court",1],[-656.5,-477.98,20.69,17.05,"court",1],[-655.0,-477.98,20.71,17.02,"court",1],[-653.5,-477.98,20.72,17.01,"court",0],[-652.0,-477.98,26.73,17.0,"roof",1],[-650.5,-477.98,27.33,16.99,"roof",1],[-649.0,-477.98,27.82,16.98,"roof",1],[-647.5,-477.98,28.61,16.96,"roof",1],[-646.0,-477.98,28.29,16.95,"roof",1],[-644.5,-477.98,27.62,16.94,"roof",1],[-643.0,-477.98,26.97,16.93,"roof",1],[-641.5,-477.98,26.31,16.92,"roof",1],[-640.0,-477.98,24.21,16.91,"roof",1],[-638.5,-477.98,24.47,16.89,"roof",1],[-637.0,-477.98,25.41,16.88,"roof",1],[-635.5,-477.98,24.49,16.86,"roof",1],[-634.0,-477.98,24.39,16.83,"roof",1],[-688.0,-476.48,null,17.3,"void",0],[-686.5,-476.48,24.32,17.31,"roof",1],[-685.0,-476.48,24.34,17.29,"roof",1],[-683.5,-476.48,24.36,17.27,"roof",1],[-682.0,-476.48,24.39,17.25,"roof",1],[-680.5,-476.48,26.25,17.24,"roof",1],[-679.0,-476.48,27.02,17.22,"roof",1],[-677.5,-476.48,27.58,17.2,"roof",1],[-676.0,-476.48,28.22,17.18,"roof",1],[-674.5,-476.48,28.41,17.17,"roof",1],[-673.0,-476.48,27.86,17.15,"roof",1],[-671.5,-476.48,27.27,17.13,"roof",1],[-670.0,-476.48,26.61,17.12,"roof",1],[-668.5,-476.48,null,17.12,"void",0],[-667.0,-476.48,20.71,17.12,"court",1],[-665.5,-476.48,20.7,17.12,"court",1],[-664.0,-476.48,20.7,17.09,"court",1],[-662.5,-476.48,20.72,17.09,"court",1],[-661.0,-476.48,20.71,17.1,"court",1],[-659.5,-476.48,20.69,17.09,"court",1],[-658.0,-476.48,20.69,17.07,"court",1],[-656.5,-476.48,20.68,17.04,"court",1],[-655.0,-476.48,20.69,17.01,"court",1],[-653.5,-476.48,20.72,17.0,"court",0],[-652.0,-476.48,26.74,16.99,"roof",1],[-650.5,-476.48,27.43,16.98,"roof",1],[-649.0,-476.48,27.98,16.97,"roof",1],[-647.5,-476.48,28.64,16.96,"roof",1],[-646.0,-476.48,28.13,16.94,"roof",1],[-644.5,-476.48,27.4,16.93,"roof",1],[-643.0,-476.48,26.91,16.92,"roof",1],[-641.5,-476.48,26.18,16.91,"roof",1],[-640.0,-476.48,24.17,16.9,"roof",1],[-638.5,-476.48,24.63,16.89,"roof",1],[-637.0,-476.48,24.78,16.87,"roof",1],[-635.5,-476.48,25.0,16.86,"roof",1],[-634.0,-476.48,25.01,16.83,"roof",1],[-688.0,-474.98,23.7,17.31,"roof",1],[-686.5,-474.98,24.3,17.3,"roof",1],[-685.0,-474.98,24.35,17.28,"roof",1],[-683.5,-474.98,24.38,17.26,"roof",1],[-682.0,-474.98,24.55,17.24,"roof",1],[-680.5,-474.98,26.46,17.23,"roof",1],[-679.0,-474.98,26.95,17.21,"roof",1],[-677.5,-474.98,27.7,17.19,"roof",1],[-676.0,-474.98,28.29,17.18,"roof",1],[-674.5,-474.98,28.49,17.16,"roof",1],[-673.0,-474.98,27.77,17.14,"roof",1],[-671.5,-474.98,27.23,17.12,"roof",1],[-670.0,-474.98,26.63,17.11,"roof",1],[-668.5,-474.98,null,17.11,"void",0],[-667.0,-474.98,20.71,17.11,"court",1],[-665.5,-474.98,20.71,17.1,"court",1],[-664.0,-474.98,23.56,17.08,"roof",0],[-662.5,-474.98,23.74,17.09,"roof",1],[-661.0,-474.98,23.67,17.09,"roof",1],[-659.5,-474.98,23.68,17.08,"roof",0],[-658.0,-474.98,20.7,17.06,"court",0],[-656.5,-474.98,20.71,17.03,"court",1],[-655.0,-474.98,null,17.0,"void",0],[-653.5,-474.98,20.73,16.99,"court",0],[-652.0,-474.98,26.82,16.98,"roof",1],[-650.5,-474.98,27.44,16.97,"roof",1],[-649.0,-474.98,28.08,16.96,"roof",1],[-647.5,-474.98,28.66,16.95,"roof",1],[-646.0,-474.98,27.97,16.93,"roof",1],[-644.5,-474.98,27.51,16.92,"roof",1],[-643.0,-474.98,26.82,16.91,"roof",1],[-641.5,-474.98,24.16,16.9,"roof",1],[-640.0,-474.98,24.17,16.89,"roof",1],[-638.5,-474.98,24.12,16.88,"roof",1],[-637.0,-474.98,24.21,16.86,"roof",1],[-635.5,-474.98,24.13,16.85,"roof",1],[-689.5,-473.48,23.19,17.21,"roof",0],[-688.0,-473.48,23.78,17.29,"roof",1],[-686.5,-473.48,24.32,17.29,"roof",1],[-685.0,-473.48,24.35,17.27,"roof",1],[-683.5,-473.48,24.37,17.25,"roof",1],[-682.0,-473.48,25.11,17.23,"roof",1],[-680.5,-473.48,26.51,17.22,"roof",1],[-679.0,-473.48,27.07,17.2,"roof",1],[-677.5,-473.48,27.77,17.18,"roof",1],[-676.0,-473.48,28.18,17.17,"roof",1],[-674.5,-473.48,28.63,17.15,"roof",1],[-673.0,-473.48,27.68,17.13,"roof",1],[-671.5,-473.48,27.21,17.11,"roof",1],[-670.0,-473.48,26.51,17.1,"roof",1],[-668.5,-473.48,20.74,17.1,"court",0],[-667.0,-473.48,20.74,17.1,"court",1],[-665.5,-473.48,null,17.09,"void",0],[-664.0,-473.48,23.69,17.08,"roof",0],[-662.5,-473.48,null,17.08,"void",0],[-661.0,-473.48,24.35,17.09,"roof",1],[-659.5,-473.48,23.96,17.07,"roof",0],[-658.0,-473.48,23.59,17.05,"roof",0],[-656.5,-473.48,20.72,17.02,"court",1],[-655.0,-473.48,null,16.99,"void",0],[-653.5,-473.48,26.32,16.98,"roof",0],[-652.0,-473.48,26.84,16.97,"roof",1],[-650.5,-473.48,27.55,16.96,"roof",1],[-649.0,-473.48,28.07,16.95,"roof",1],[-647.5,-473.48,28.62,16.94,"roof",1],[-646.0,-473.48,28.04,16.93,"roof",1],[-644.5,-473.48,27.3,16.91,"roof",1],[-643.0,-473.48,26.83,16.9,"roof",1],[-641.5,-473.48,24.15,16.89,"roof",1],[-640.0,-473.48,24.15,16.88,"roof",1],[-638.5,-473.48,24.12,16.87,"roof",1],[-637.0,-473.48,24.08,16.86,"roof",1],[-635.5,-473.48,24.06,16.84,"roof",1],[-689.5,-471.98,23.25,17.17,"roof",1],[-688.0,-471.98,24.03,17.23,"roof",1],[-686.5,-471.98,24.33,17.26,"roof",1],[-685.0,-471.98,24.35,17.26,"roof",1],[-683.5,-471.98,24.37,17.24,"roof",1],[-682.0,-471.98,24.96,17.23,"roof",1],[-680.5,-471.98,26.52,17.21,"roof",1],[-679.0,-471.98,27.21,17.19,"roof",1],[-677.5,-471.98,27.77,17.17,"roof",1],[-676.0,-471.98,28.47,17.16,"roof",1],[-674.5,-471.98,28.43,17.14,"roof",1],[-673.0,-471.98,27.76,17.12,"roof",1],[-671.5,-471.98,27.04,17.11,"roof",1],[-670.0,-471.98,26.56,17.09,"roof",1],[-668.5,-471.98,null,17.09,"void",0],[-667.0,-471.98,20.72,17.09,"court",1],[-665.5,-471.98,20.72,17.07,"court",1],[-664.0,-471.98,23.74,17.07,"roof",1],[-662.5,-471.98,24.09,17.08,"roof",1],[-661.0,-471.98,24.39,17.08,"roof",1],[-659.5,-471.98,23.87,17.07,"roof",1],[-658.0,-471.98,20.7,17.04,"court",0],[-656.5,-471.98,20.73,17.01,"court",1],[-655.0,-471.98,null,16.99,"void",0],[-653.5,-471.98,26.22,16.97,"roof",1],[-652.0,-471.98,26.91,16.96,"roof",1],[-650.5,-471.98,27.55,16.95,"roof",1],[-649.0,-471.98,null,16.94,"void",0],[-647.5,-471.98,28.5,16.93,"roof",1],[-646.0,-471.98,27.93,16.92,"roof",1],[-644.5,-471.98,27.29,16.9,"roof",1],[-643.0,-471.98,26.69,16.89,"roof",1],[-641.5,-471.98,24.35,16.88,"roof",1],[-640.0,-471.98,24.14,16.87,"roof",1],[-638.5,-471.98,24.09,16.86,"roof",1],[-637.0,-471.98,24.08,16.85,"roof",1],[-635.5,-471.98,23.96,16.83,"roof",1],[-689.5,-470.48,23.65,17.13,"roof",0],[-688.0,-470.48,24.07,17.17,"roof",1],[-686.5,-470.48,24.32,17.21,"roof",1],[-685.0,-470.48,24.36,17.24,"roof",1],[-683.5,-470.48,24.39,17.23,"roof",1],[-682.0,-470.48,24.42,17.22,"roof",1],[-680.5,-470.48,26.87,17.2,"roof",1],[-679.0,-470.48,27.42,17.18,"roof",1],[-677.5,-470.48,28.1,17.16,"roof",1],[-676.0,-470.48,28.77,17.15,"roof",1],[-674.5,-470.48,28.68,17.13,"roof",1],[-673.0,-470.48,27.9,17.11,"roof",1],[-671.5,-470.48,27.23,17.1,"roof",1],[-670.0,-470.48,26.59,17.08,"roof",0],[-668.5,-470.48,20.73,17.08,"court",1],[-667.0,-470.48,20.7,17.08,"court",1],[-665.5,-470.48,20.69,17.06,"court",1],[-664.0,-470.48,23.68,17.07,"roof",0],[-662.5,-470.48,24.23,17.07,"roof",1],[-661.0,-470.48,24.34,17.08,"roof",1],[-659.5,-470.48,23.93,17.06,"roof",1],[-658.0,-470.48,20.7,17.03,"court",0],[-656.5,-470.48,20.71,17.0,"court",1],[-655.0,-470.48,20.72,16.98,"court",1],[-653.5,-470.48,26.45,16.97,"roof",0],[-652.0,-470.48,27.01,16.95,"roof",1],[-650.5,-470.48,27.64,16.94,"roof",1],[-649.0,-470.48,28.29,16.93,"roof",1],[-647.5,-470.48,28.56,16.92,"roof",1],[-646.0,-470.48,27.85,16.91,"roof",1],[-644.5,-470.48,27.28,16.9,"roof",1],[-643.0,-470.48,26.61,16.88,"roof",1],[-641.5,-470.48,24.15,16.87,"roof",1],[-640.0,-470.48,24.13,16.86,"roof",1],[-638.5,-470.48,24.18,16.85,"roof",1],[-637.0,-470.48,null,16.84,"void",0],[-635.5,-470.48,23.88,16.83,"roof",1],[-689.5,-468.98,24.39,17.11,"roof",1],[-688.0,-468.98,24.27,17.12,"roof",1],[-686.5,-468.98,24.32,17.15,"roof",1],[-685.0,-468.98,25.14,17.19,"roof",1],[-683.5,-468.98,24.61,17.22,"roof",1],[-682.0,-468.98,25.23,17.21,"roof",1],[-680.5,-468.98,26.91,17.19,"roof",1],[-679.0,-468.98,27.55,17.17,"roof",1],[-677.5,-468.98,28.16,17.16,"roof",1],[-676.0,-468.98,28.8,17.14,"roof",1],[-674.5,-468.98,29.28,17.12,"roof",1],[-673.0,-468.98,27.94,17.1,"roof",1],[-671.5,-468.98,27.28,17.09,"roof",1],[-670.0,-468.98,24.08,17.07,"roof",0],[-668.5,-468.98,20.71,17.07,"court",1],[-667.0,-468.98,20.7,17.07,"court",1],[-665.5,-468.98,20.69,17.06,"court",0],[-664.0,-468.98,23.8,17.06,"roof",1],[-662.5,-468.98,24.3,17.07,"roof",1],[-661.0,-468.98,24.28,17.07,"roof",1],[-659.5,-468.98,23.83,17.05,"roof",1],[-658.0,-468.98,20.68,17.02,"court",0],[-656.5,-468.98,20.7,16.99,"court",1],[-655.0,-468.98,20.72,16.97,"court",0],[-653.5,-468.98,26.41,16.96,"roof",0],[-652.0,-468.98,26.97,16.94,"roof",1],[-650.5,-468.98,27.67,16.93,"roof",1],[-649.0,-468.98,28.4,16.92,"roof",1],[-647.5,-468.98,28.48,16.91,"roof",1],[-646.0,-468.98,27.88,16.9,"roof",1],[-644.5,-468.98,27.21,16.89,"roof",1],[-643.0,-468.98,26.54,16.87,"roof",1],[-641.5,-468.98,24.67,16.86,"roof",1],[-640.0,-468.98,24.14,16.85,"roof",1],[-638.5,-468.98,24.11,16.84,"roof",1],[-637.0,-468.98,24.08,16.83,"roof",1],[-635.5,-468.98,23.87,16.81,"roof",1],[-689.5,-467.48,24.24,17.09,"roof",1],[-688.0,-467.48,24.5,17.09,"roof",1],[-686.5,-467.48,24.41,17.11,"roof",1],[-685.0,-467.48,null,17.13,"void",0],[-683.5,-467.48,24.39,17.17,"roof",1],[-682.0,-467.48,24.41,17.19,"roof",1],[-680.5,-467.48,27.01,17.18,"roof",1],[-679.0,-467.48,27.61,17.16,"roof",1],[-677.5,-467.48,28.12,17.15,"roof",1],[-676.0,-467.48,28.91,17.13,"roof",1],[-674.5,-467.48,28.43,17.11,"roof",1],[-673.0,-467.48,27.82,17.09,"roof",1],[-671.5,-467.48,27.27,17.08,"roof",1],[-670.0,-467.48,null,17.06,"void",0],[-668.5,-467.48,20.72,17.07,"court",1],[-667.0,-467.48,20.69,17.05,"court",1],[-665.5,-467.48,20.7,17.05,"court",0],[-664.0,-467.48,23.9,17.06,"roof",1],[-662.5,-467.48,24.26,17.06,"roof",1],[-661.0,-467.48,24.19,17.07,"roof",1],[-659.5,-467.48,23.81,17.04,"roof",1],[-658.0,-467.48,20.7,17.01,"court",0],[-656.5,-467.48,20.71,16.98,"court",1],[-655.0,-467.48,20.72,16.96,"court",1],[-653.5,-467.48,21.08,16.95,"court",0],[-652.0,-467.48,27.44,16.94,"roof",1],[-650.5,-467.48,27.93,16.92,"roof",1],[-649.0,-467.48,28.63,16.91,"roof",1],[-647.5,-467.48,28.66,16.9,"roof",1],[-646.0,-467.48,28.03,16.89,"roof",1],[-644.5,-467.48,27.49,16.88,"roof",1],[-643.0,-467.48,null,16.87,"void",0],[-641.5,-467.48,24.14,16.85,"roof",1],[-640.0,-467.48,24.15,16.84,"roof",1],[-638.5,-467.48,24.11,16.83,"roof",1],[-637.0,-467.48,24.06,16.82,"roof",1],[-635.5,-467.48,23.69,16.86,"roof",1],[-689.5,-465.98,23.52,17.07,"roof",1],[-688.0,-465.98,24.3,17.06,"roof",1],[-686.5,-465.98,24.35,17.08,"roof",1],[-685.0,-465.98,null,17.09,"void",0],[-683.5,-465.98,24.39,17.1,"roof",1],[-682.0,-465.98,24.41,17.15,"roof",1],[-680.5,-465.98,27.0,17.17,"roof",1],[-679.0,-465.98,27.71,17.15,"roof",1],[-677.5,-465.98,28.3,17.14,"roof",1],[-676.0,-465.98,28.79,17.12,"roof",1],[-674.5,-465.98,28.33,17.1,"roof",1],[-673.0,-465.98,27.81,17.09,"roof",1],[-671.5,-465.98,27.16,17.07,"roof",1],[-670.0,-465.98,26.55,17.06,"roof",1],[-668.5,-465.98,22.43,17.06,"mixed",0],[-667.0,-465.98,null,17.04,"void",0],[-665.5,-465.98,20.71,17.05,"court",0],[-664.0,-465.98,23.69,17.05,"roof",0],[-662.5,-465.98,23.6,17.06,"roof",0],[-661.0,-465.98,23.74,17.06,"roof",1],[-659.5,-465.98,23.66,17.03,"roof",1],[-658.0,-465.98,null,17.0,"void",0],[-656.5,-465.98,20.74,16.97,"court",1],[-655.0,-465.98,null,16.95,"void",0],[-653.5,-465.98,26.74,16.94,"roof",1],[-652.0,-465.98,27.46,16.93,"roof",1],[-650.5,-465.98,28.05,16.91,"roof",1],[-649.0,-465.98,29.43,16.9,"roof",1],[-647.5,-465.98,28.6,16.89,"roof",1],[-646.0,-465.98,28.07,16.88,"roof",1],[-644.5,-465.98,27.36,16.87,"roof",1],[-643.0,-465.98,26.69,16.86,"roof",1],[-641.5,-465.98,24.14,16.84,"roof",1],[-640.0,-465.98,24.11,16.83,"roof",1],[-638.5,-465.98,24.15,16.82,"roof",1],[-637.0,-465.98,24.08,16.87,"roof",1],[-635.5,-465.98,23.62,16.93,"roof",1],[-689.5,-464.48,23.62,17.05,"roof",1],[-688.0,-464.48,24.31,17.04,"roof",1],[-686.5,-464.48,24.35,17.05,"roof",1],[-685.0,-464.48,24.37,17.08,"roof",1],[-683.5,-464.48,24.39,17.08,"roof",1],[-682.0,-464.48,26.47,17.09,"roof",1],[-680.5,-464.48,27.07,17.12,"roof",1],[-679.0,-464.48,27.75,17.14,"roof",1],[-677.5,-464.48,28.27,17.13,"roof",1],[-676.0,-464.48,28.93,17.11,"roof",1],[-674.5,-464.48,28.43,17.09,"roof",1],[-673.0,-464.48,27.76,17.08,"roof",1],[-671.5,-464.48,27.02,17.06,"roof",1],[-670.0,-464.48,null,17.05,"void",0],[-668.5,-464.48,20.71,17.05,"court",1],[-667.0,-464.48,20.72,17.04,"court",1],[-665.5,-464.48,20.73,17.04,"court",1],[-664.0,-464.48,20.72,17.05,"court",1],[-662.5,-464.48,20.73,17.05,"court",1],[-661.0,-464.48,20.73,17.06,"court",1],[-659.5,-464.48,20.72,17.02,"court",1],[-658.0,-464.48,20.72,16.99,"court",1],[-656.5,-464.48,21.76,16.97,"court",0],[-655.0,-464.48,22.74,16.94,"roof",0],[-653.5,-464.48,26.91,16.93,"roof",1],[-652.0,-464.48,27.44,16.92,"roof",1],[-650.5,-464.48,28.17,16.91,"roof",1],[-649.0,-464.48,28.79,16.89,"roof",1],[-647.5,-464.48,28.54,16.88,"roof",1],[-646.0,-464.48,null,16.87,"void",0],[-644.5,-464.48,27.39,16.86,"roof",1],[-643.0,-464.48,26.75,16.85,"roof",1],[-641.5,-464.48,24.27,16.84,"roof",1],[-640.0,-464.48,null,16.82,"void",0],[-638.5,-464.48,24.09,16.85,"roof",1],[-637.0,-464.48,24.06,16.92,"roof",1],[-635.5,-464.48,27.34,16.9,"roof",1],[-689.5,-462.98,null,17.04,"void",0],[-688.0,-462.98,24.33,17.02,"roof",1],[-686.5,-462.98,24.37,17.02,"roof",1],[-685.0,-462.98,24.36,17.04,"roof",1],[-683.5,-462.98,24.38,17.07,"roof",1],[-682.0,-462.98,24.43,17.07,"roof",1],[-680.5,-462.98,27.2,17.07,"roof",1],[-679.0,-462.98,27.74,17.1,"roof",1],[-677.5,-462.98,28.4,17.12,"roof",1],[-676.0,-462.98,28.93,17.1,"roof",1],[-674.5,-462.98,28.3,17.08,"roof",1],[-673.0,-462.98,27.66,17.07,"roof",1],[-671.5,-462.98,27.12,17.05,"roof",1],[-670.0,-462.98,20.68,17.04,"court",0],[-668.5,-462.98,null,17.04,"void",0],[-667.0,-462.98,20.71,17.03,"court",1],[-665.5,-462.98,20.68,17.04,"court",1],[-664.0,-462.98,20.7,17.04,"court",1],[-662.5,-462.98,20.73,17.05,"court",1],[-661.0,-462.98,20.71,17.05,"court",1],[-659.5,-462.98,20.73,17.01,"court",1],[-658.0,-462.98,20.7,16.98,"court",1],[-656.5,-462.98,20.72,16.96,"court",1],[-655.0,-462.98,23.74,16.93,"roof",0],[-653.5,-462.98,26.98,16.92,"roof",0],[-652.0,-462.98,27.62,16.91,"roof",1],[-650.5,-462.98,28.11,16.9,"roof",1],[-649.0,-462.98,null,16.88,"void",0],[-647.5,-462.98,28.57,16.87,"roof",1],[-646.0,-462.98,27.87,16.86,"roof",1],[-644.5,-462.98,27.19,16.85,"roof",1],[-643.0,-462.98,26.74,16.84,"roof",1],[-641.5,-462.98,24.12,16.82,"roof",1],[-640.0,-462.98,24.12,16.86,"roof",1],[-638.5,-462.98,24.35,16.9,"roof",1],[-637.0,-462.98,24.31,16.89,"roof",1],[-635.5,-462.98,24.4,16.88,"roof",1],[-689.5,-461.48,23.77,16.98,"roof",1],[-688.0,-461.48,24.32,17.01,"roof",1],[-686.5,-461.48,24.35,16.99,"roof",1],[-685.0,-461.48,24.37,17.01,"roof",1],[-683.5,-461.48,24.4,17.04,"roof",1],[-682.0,-461.48,26.66,17.06,"roof",1],[-680.5,-461.48,27.08,17.05,"roof",1],[-679.0,-461.48,27.83,17.06,"roof",1],[-677.5,-461.48,28.49,17.08,"roof",1],[-676.0,-461.48,28.91,17.09,"roof",1],[-674.5,-461.48,28.29,17.07,"roof",1],[-673.0,-461.48,27.61,17.06,"roof",1],[-671.5,-461.48,27.05,17.04,"roof",1],[-670.0,-461.48,20.74,17.03,"court",0],[-668.5,-461.48,null,17.02,"void",0],[-667.0,-461.48,20.69,17.03,"court",1],[-665.5,-461.48,20.69,17.03,"court",1],[-664.0,-461.48,null,17.04,"void",0],[-662.5,-461.48,20.72,17.04,"court",1],[-661.0,-461.48,20.73,17.04,"court",1],[-659.5,-461.48,20.72,17.0,"court",1],[-658.0,-461.48,20.73,16.97,"court",1],[-656.5,-461.48,null,16.95,"void",0],[-655.0,-461.48,23.7,16.92,"roof",0],[-653.5,-461.48,26.93,16.91,"roof",1],[-652.0,-461.48,null,16.9,"void",0],[-650.5,-461.48,28.25,16.89,"roof",1],[-649.0,-461.48,28.9,16.88,"roof",1],[-647.5,-461.48,28.49,16.86,"roof",1],[-646.0,-461.48,27.91,16.85,"roof",1],[-644.5,-461.48,27.25,16.84,"roof",1],[-643.0,-461.48,26.57,16.83,"roof",1],[-641.5,-461.48,24.14,16.84,"roof",1],[-640.0,-461.48,24.12,16.89,"roof",1],[-638.5,-461.48,24.08,16.88,"roof",1],[-637.0,-461.48,24.06,16.86,"roof",1],[-635.5,-461.48,23.69,16.85,"roof",1],[-689.5,-459.98,24.05,16.97,"roof",1],[-688.0,-459.98,24.31,16.96,"roof",1],[-686.5,-459.98,25.19,16.98,"roof",1],[-685.0,-459.98,24.44,16.97,"roof",1],[-683.5,-459.98,24.41,17.0,"roof",1],[-682.0,-459.98,26.57,17.04,"roof",1],[-680.5,-459.98,27.16,17.05,"roof",1],[-679.0,-459.98,27.88,17.04,"roof",1],[-677.5,-459.98,28.78,17.04,"roof",1],[-676.0,-459.98,null,17.06,"void",0],[-674.5,-459.98,28.22,17.07,"roof",1],[-673.0,-459.98,27.52,17.05,"roof",1],[-671.5,-459.98,null,17.03,"void",0],[-670.0,-459.98,28.65,17.02,"roof",0],[-668.5,-459.98,20.67,17.02,"court",1],[-667.0,-459.98,20.69,17.02,"court",1],[-665.5,-459.98,20.71,17.03,"court",1],[-664.0,-459.98,21.2,17.03,"court",1],[-662.5,-459.98,20.72,17.04,"court",1],[-661.0,-459.98,21.1,17.03,"court",1],[-659.5,-459.98,20.69,16.99,"court",1],[-658.0,-459.98,20.68,16.96,"court",1],[-656.5,-459.98,null,16.94,"void",0],[-655.0,-459.98,23.95,16.91,"roof",0],[-653.5,-459.98,27.05,16.9,"roof",1],[-652.0,-459.98,27.65,16.89,"roof",1],[-650.5,-459.98,28.16,16.88,"roof",1],[-649.0,-459.98,28.91,16.87,"roof",1],[-647.5,-459.98,28.6,16.85,"roof",1],[-646.0,-459.98,27.79,16.84,"roof",1],[-644.5,-459.98,27.25,16.83,"roof",1],[-643.0,-459.98,24.14,16.85,"roof",1],[-641.5,-459.98,24.14,16.88,"roof",1],[-640.0,-459.98,24.12,16.87,"roof",1],[-638.5,-459.98,24.1,16.85,"roof",1],[-637.0,-459.98,24.07,16.84,"roof",1],[-689.5,-458.48,24.71,16.94,"roof",1],[-688.0,-458.48,24.61,16.94,"roof",1],[-686.5,-458.48,24.72,16.94,"roof",1],[-685.0,-458.48,24.69,16.95,"roof",1],[-683.5,-458.48,24.68,16.96,"roof",1],[-682.0,-458.48,26.68,17.0,"roof",1],[-680.5,-458.48,27.29,17.04,"roof",1],[-679.0,-458.48,27.89,17.04,"roof",1],[-677.5,-458.48,28.57,17.03,"roof",1],[-676.0,-458.48,28.71,17.03,"roof",1],[-674.5,-458.48,28.18,17.04,"roof",1],[-673.0,-458.48,27.58,17.04,"roof",1],[-671.5,-458.48,26.88,17.02,"roof",1],[-670.0,-458.48,null,17.01,"void",0],[-668.5,-458.48,20.71,17.01,"court",1],[-667.0,-458.48,20.68,17.02,"court",1],[-665.5,-458.48,20.71,17.02,"court",1],[-664.0,-458.48,20.7,17.03,"court",1],[-662.5,-458.48,20.71,17.04,"court",1],[-661.0,-458.48,20.73,17.03,"court",1],[-659.5,-458.48,20.7,16.98,"court",1],[-658.0,-458.48,20.68,16.96,"court",1],[-656.5,-458.48,20.71,16.93,"court",1],[-655.0,-458.48,28.5,16.91,"roof",0],[-653.5,-458.48,null,16.89,"void",0],[-652.0,-458.48,27.75,16.88,"roof",1],[-650.5,-458.48,28.38,16.87,"roof",1],[-649.0,-458.48,28.86,16.86,"roof",1],[-647.5,-458.48,28.31,16.85,"roof",1],[-646.0,-458.48,27.64,16.83,"roof",1],[-644.5,-458.48,27.1,16.84,"roof",1],[-643.0,-458.48,26.47,16.87,"roof",1],[-641.5,-458.48,null,16.85,"void",0],[-640.0,-458.48,24.12,16.84,"roof",1],[-638.5,-458.48,24.09,16.82,"roof",1],[-637.0,-458.48,24.01,16.8,"roof",1],[-689.5,-456.98,24.05,16.92,"roof",0],[-688.0,-456.98,24.13,16.91,"roof",1],[-686.5,-456.98,24.14,16.91,"roof",1],[-685.0,-456.98,24.25,16.92,"roof",1],[-683.5,-456.98,24.3,16.93,"roof",1],[-682.0,-456.98,26.74,16.96,"roof",1],[-680.5,-456.98,27.34,16.99,"roof",1],[-679.0,-456.98,27.92,17.03,"roof",1],[-677.5,-456.98,28.63,17.02,"roof",1],[-676.0,-456.98,28.63,17.02,"roof",1],[-674.5,-456.98,28.1,17.01,"roof",1],[-673.0,-456.98,27.53,17.02,"roof",1],[-671.5,-456.98,26.73,17.01,"roof",1],[-670.0,-456.98,20.71,17.0,"court",0],[-668.5,-456.98,20.69,17.01,"court",1],[-667.0,-456.98,20.67,17.01,"court",1],[-665.5,-456.98,20.7,17.02,"court",1],[-664.0,-456.98,20.73,17.02,"court",1],[-662.5,-456.98,null,17.03,"void",0],[-661.0,-456.98,20.75,17.02,"court",1],[-659.5,-456.98,20.7,16.97,"court",1],[-658.0,-456.98,20.67,16.95,"court",1],[-656.5,-456.98,20.69,16.92,"court",1],[-655.0,-456.98,26.52,16.9,"roof",0],[-653.5,-456.98,27.17,16.88,"roof",1],[-652.0,-456.98,27.8,16.87,"roof",1],[-650.5,-456.98,28.45,16.86,"roof",1],[-649.0,-456.98,null,16.85,"void",0],[-647.5,-456.98,28.32,16.83,"roof",1],[-646.0,-456.98,27.72,16.84,"roof",1],[-644.5,-456.98,26.99,16.85,"roof",1],[-643.0,-456.98,24.13,16.84,"roof",1],[-641.5,-456.98,24.12,16.83,"roof",1],[-640.0,-456.98,24.08,16.8,"roof",1],[-638.5,-456.98,24.08,16.77,"roof",1],[-637.0,-456.98,23.91,16.73,"roof",1],[-688.0,-455.48,23.1,16.87,"roof",0],[-686.5,-455.48,23.43,16.88,"roof",0],[-685.0,-455.48,23.44,16.89,"roof",0],[-683.5,-455.48,23.48,16.9,"roof",1],[-682.0,-455.48,null,16.92,"void",0],[-680.5,-455.48,27.45,16.95,"roof",1],[-679.0,-455.48,28.01,16.99,"roof",1],[-677.5,-455.48,28.74,17.02,"roof",1],[-676.0,-455.48,28.61,17.01,"roof",1],[-674.5,-455.48,28.01,17.01,"roof",1],[-673.0,-455.48,27.45,17.0,"roof",1],[-671.5,-455.48,26.73,17.0,"roof",1],[-670.0,-455.48,20.71,17.0,"court",1],[-668.5,-455.48,20.71,17.0,"court",1],[-667.0,-455.48,20.71,17.01,"court",1],[-665.5,-455.48,20.73,17.01,"court",1],[-664.0,-455.48,20.53,17.02,"court",1],[-662.5,-455.48,null,17.03,"void",0],[-661.0,-455.48,null,17.01,"void",0],[-659.5,-455.48,20.52,16.96,"court",0],[-658.0,-455.48,20.69,16.94,"court",1],[-656.5,-455.48,20.7,16.91,"court",1],[-655.0,-455.48,26.59,16.89,"roof",0],[-653.5,-455.48,27.28,16.87,"roof",1],[-652.0,-455.48,null,16.86,"void",0],[-650.5,-455.48,28.46,16.85,"roof",1],[-649.0,-455.48,28.82,16.84,"roof",1],[-647.5,-455.48,28.28,16.83,"roof",1],[-646.0,-455.48,27.66,16.84,"roof",1],[-644.5,-455.48,27.04,16.83,"roof",1],[-643.0,-455.48,24.35,16.81,"roof",1],[-641.5,-455.48,24.14,16.77,"roof",1],[-640.0,-455.48,24.46,16.73,"roof",1],[-638.5,-455.48,24.73,16.7,"roof",1],[-637.0,-455.48,23.89,16.7,"roof",1],[-665.5,-453.98,21.34,17.01,"court",1],[-664.0,-453.98,20.74,17.01,"court",1],[-662.5,-453.98,20.8,17.02,"court",1],[-661.0,-453.98,20.75,17.0,"court",1],[-659.5,-453.98,20.75,16.95,"court",0],[-658.0,-453.98,null,16.93,"void",0],[-656.5,-453.98,null,16.9,"void",0],[-655.0,-453.98,26.57,16.88,"roof",0],[-653.5,-453.98,27.25,16.86,"roof",1],[-652.0,-453.98,27.83,16.85,"roof",1],[-650.5,-453.98,28.48,16.84,"roof",1],[-649.0,-453.98,28.7,16.83,"roof",1],[-647.5,-453.98,28.05,16.83,"roof",1],[-646.0,-453.98,27.5,16.8,"roof",1],[-644.5,-453.98,26.8,16.77,"roof",1],[-643.0,-453.98,24.21,16.73,"roof",1],[-641.5,-453.98,24.22,16.69,"roof",1],[-640.0,-453.98,24.49,16.66,"roof",1],[-638.5,-453.98,24.32,16.64,"roof",1],[-637.0,-453.98,24.47,16.68,"roof",1],[-649.0,-452.48,28.8,16.81,"roof",1],[-647.5,-452.48,28.13,16.77,"roof",1],[-646.0,-452.48,27.46,16.73,"roof",1],[-644.5,-452.48,26.8,16.69,"roof",1],[-643.0,-452.48,null,16.66,"void",0],[-641.5,-452.48,23.51,16.63,"roof",1],[-640.0,-452.48,23.67,16.6,"roof",1],[-638.5,-452.48,23.67,16.61,"roof",1],[-637.0,-452.48,23.82,16.65,"roof",1],[-685.0,-447.98,27.6,16.96,"roof",1],[-683.5,-447.98,26.17,16.96,"roof",1],[-682.0,-447.98,26.14,17.0,"roof",1],[-680.5,-447.98,26.89,16.98,"roof",1],[-679.0,-447.98,27.64,16.96,"roof",1],[-677.5,-447.98,28.25,16.98,"roof",1],[-689.5,-446.48,25.77,16.97,"roof",1],[-688.0,-446.48,25.87,16.96,"roof",1],[-686.5,-446.48,25.8,16.97,"roof",1],[-685.0,-446.48,26.37,16.96,"roof",1],[-683.5,-446.48,26.16,16.99,"roof",1],[-682.0,-446.48,26.73,16.97,"roof",1],[-680.5,-446.48,26.94,16.96,"roof",1],[-679.0,-446.48,27.72,16.97,"roof",1],[-677.5,-446.48,28.45,16.98,"roof",1],[-676.0,-446.48,28.61,16.99,"roof",1],[-674.5,-446.48,27.86,16.99,"roof",1],[-673.0,-446.48,27.07,16.99,"roof",1],[-671.5,-446.48,26.4,17.0,"roof",1],[-670.0,-446.48,26.02,17.0,"roof",1],[-668.5,-446.48,22.48,17.01,"mixed",0],[-667.0,-446.48,21.0,17.02,"court",0],[-665.5,-446.48,20.42,17.02,"court",1],[-664.0,-446.48,null,17.02,"void",0],[-662.5,-446.48,null,17.01,"void",0],[-661.0,-446.48,20.04,16.98,"court",1],[-689.5,-444.98,26.49,16.94,"roof",1],[-688.0,-444.98,26.4,16.97,"roof",1],[-686.5,-444.98,26.49,16.96,"roof",1],[-685.0,-444.98,26.59,16.99,"roof",1],[-683.5,-444.98,26.17,16.97,"roof",1],[-682.0,-444.98,26.35,16.96,"roof",1],[-680.5,-444.98,27.06,16.97,"roof",1],[-679.0,-444.98,27.78,16.98,"roof",1],[-677.5,-444.98,28.54,16.98,"roof",1],[-676.0,-444.98,28.7,16.98,"roof",1],[-674.5,-444.98,27.73,16.98,"roof",1],[-673.0,-444.98,26.98,16.99,"roof",1],[-671.5,-444.98,26.57,16.99,"roof",1],[-670.0,-444.98,20.41,16.99,"court",0],[-668.5,-444.98,null,17.0,"void",0],[-667.0,-444.98,20.41,17.0,"court",1],[-665.5,-444.98,20.4,17.0,"court",1],[-664.0,-444.98,20.39,17.01,"court",1],[-662.5,-444.98,20.38,17.01,"court",1],[-661.0,-444.98,20.41,16.97,"court",1],[-659.5,-444.98,null,16.95,"void",0],[-689.5,-443.48,27.37,16.95,"roof",1],[-688.0,-443.48,27.32,16.97,"roof",1],[-686.5,-443.48,27.33,16.98,"roof",1],[-685.0,-443.48,27.27,16.97,"roof",1],[-683.5,-443.48,26.15,16.96,"roof",1],[-682.0,-443.48,26.46,16.97,"roof",1],[-680.5,-443.48,27.13,16.98,"roof",1],[-679.0,-443.48,27.77,16.97,"roof",1],[-677.5,-443.48,28.54,16.97,"roof",1],[-676.0,-443.48,28.56,16.97,"roof",1],[-674.5,-443.48,27.65,16.97,"roof",1],[-673.0,-443.48,27.01,16.98,"roof",1],[-671.5,-443.48,26.34,16.98,"roof",1],[-670.0,-443.48,26.01,16.99,"roof",0],[-668.5,-443.48,22.24,16.99,"mixed",0],[-667.0,-443.48,22.71,16.99,"roof",0],[-665.5,-443.48,20.4,17.0,"court",1],[-664.0,-443.48,20.38,17.0,"court",1],[-662.5,-443.48,20.37,17.0,"court",1],[-661.0,-443.48,20.39,16.98,"court",1],[-659.5,-443.48,20.39,16.94,"court",1],[-658.0,-443.48,null,16.92,"void",0],[-656.5,-443.48,26.09,16.9,"roof",1],[-655.0,-443.48,26.34,16.87,"roof",1],[-653.5,-443.48,27.28,16.85,"roof",1],[-652.0,-443.48,27.98,16.83,"roof",1],[-650.5,-443.48,28.74,16.82,"roof",1],[-649.0,-443.48,28.26,16.8,"roof",1],[-647.5,-443.48,27.47,16.76,"roof",1],[-646.0,-443.48,26.76,16.73,"roof",1],[-644.5,-443.48,26.37,16.67,"roof",1],[-643.0,-443.48,26.11,16.64,"roof",1],[-689.5,-441.98,null,16.97,"void",0],[-688.0,-441.98,28.09,16.98,"roof",1],[-686.5,-441.98,27.92,16.97,"roof",1],[-685.0,-441.98,28.12,16.97,"roof",1],[-683.5,-441.98,26.19,16.97,"roof",1],[-682.0,-441.98,26.33,16.96,"roof",1],[-680.5,-441.98,27.17,16.95,"roof",1],[-679.0,-441.98,27.95,16.96,"roof",1],[-677.5,-441.98,28.54,16.96,"roof",1],[-676.0,-441.98,28.45,16.96,"roof",1],[-674.5,-441.98,27.76,16.97,"roof",1],[-673.0,-441.98,26.94,16.97,"roof",1],[-671.5,-441.98,26.26,16.98,"roof",1],[-670.0,-441.98,25.84,16.98,"roof",0],[-668.5,-441.98,20.39,16.99,"court",1],[-667.0,-441.98,22.06,17.0,"mixed",0],[-665.5,-441.98,20.4,17.0,"court",1],[-664.0,-441.98,20.4,16.99,"court",1],[-662.5,-441.98,20.41,16.99,"court",1],[-661.0,-441.98,20.58,16.97,"court",0],[-659.5,-441.98,21.98,16.95,"mixed",0],[-658.0,-441.98,22.86,16.91,"roof",0],[-656.5,-441.98,26.17,16.89,"roof",1],[-655.0,-441.98,26.43,16.87,"roof",1],[-653.5,-441.98,27.41,16.84,"roof",1],[-652.0,-441.98,28.02,16.82,"roof",1],[-650.5,-441.98,28.74,16.81,"roof",1],[-649.0,-441.98,28.21,16.8,"roof",1],[-647.5,-441.98,27.42,16.78,"roof",1],[-646.0,-441.98,null,16.74,"void",0],[-644.5,-441.98,26.96,16.71,"roof",1],[-643.0,-441.98,26.17,16.67,"roof",1],[-641.5,-441.98,null,16.64,"void",0],[-640.0,-441.98,24.94,16.64,"roof",1],[-638.5,-441.98,24.26,16.68,"roof",1],[-689.5,-440.48,28.46,16.97,"roof",1],[-688.0,-440.48,28.43,16.97,"roof",1],[-686.5,-440.48,28.55,16.97,"roof",1],[-685.0,-440.48,28.6,16.97,"roof",1],[-683.5,-440.48,26.19,16.95,"roof",1],[-682.0,-440.48,null,16.94,"void",0],[-680.5,-440.48,27.11,16.95,"roof",1],[-679.0,-440.48,27.98,16.95,"roof",1],[-677.5,-440.48,null,16.95,"void",0],[-676.0,-440.48,28.6,16.96,"roof",1],[-674.5,-440.48,27.57,16.96,"roof",1],[-673.0,-440.48,26.95,16.97,"roof",1],[-671.5,-440.48,26.05,16.98,"roof",1],[-670.0,-440.48,null,16.99,"void",0],[-668.5,-440.48,21.36,16.99,"court",0],[-667.0,-440.48,20.38,16.99,"court",1],[-665.5,-440.48,null,16.99,"void",0],[-664.0,-440.48,20.98,16.98,"court",1],[-662.5,-440.48,20.4,16.98,"court",1],[-661.0,-440.48,20.4,16.97,"court",1],[-659.5,-440.48,20.4,16.95,"court",0],[-658.0,-440.48,null,16.92,"void",0],[-656.5,-440.48,26.15,16.88,"roof",1],[-655.0,-440.48,26.58,16.86,"roof",1],[-653.5,-440.48,27.48,16.84,"roof",1],[-652.0,-440.48,28.17,16.82,"roof",1],[-650.5,-440.48,28.82,16.79,"roof",1],[-649.0,-440.48,28.14,16.78,"roof",1],[-647.5,-440.48,27.29,16.78,"roof",1],[-646.0,-440.48,26.71,16.76,"roof",1],[-644.5,-440.48,26.57,16.73,"roof",1],[-643.0,-440.48,26.18,16.71,"roof",1],[-641.5,-440.48,26.2,16.67,"roof",1],[-640.0,-440.48,26.28,16.64,"roof",1],[-638.5,-440.48,null,16.67,"void",0],[-689.5,-438.98,27.75,16.97,"roof",1],[-688.0,-438.98,27.81,16.97,"roof",1],[-686.5,-438.98,27.72,16.95,"roof",1],[-685.0,-438.98,27.96,16.93,"roof",1],[-683.5,-438.98,26.2,16.93,"roof",1],[-682.0,-438.98,26.37,16.93,"roof",1],[-680.5,-438.98,27.23,16.94,"roof",1],[-679.0,-438.98,27.97,16.94,"roof",1],[-677.5,-438.98,28.84,16.95,"roof",1],[-676.0,-438.98,28.4,16.95,"roof",1],[-674.5,-438.98,27.66,16.96,"roof",1],[-673.0,-438.98,26.91,16.98,"roof",1],[-671.5,-438.98,23.43,16.99,"roof",0],[-670.0,-438.98,25.86,16.99,"roof",0],[-668.5,-438.98,22.04,16.98,"mixed",0],[-667.0,-438.98,21.15,16.98,"court",0],[-665.5,-438.98,20.41,16.97,"court",1],[-664.0,-438.98,20.4,16.97,"court",1],[-662.5,-438.98,20.39,16.96,"court",1],[-661.0,-438.98,20.41,16.96,"court",1],[-659.5,-438.98,20.4,16.94,"court",1],[-658.0,-438.98,20.38,16.92,"court",0],[-656.5,-438.98,26.19,16.89,"roof",1],[-655.0,-438.98,null,16.86,"void",0],[-653.5,-438.98,27.45,16.83,"roof",1],[-652.0,-438.98,null,16.81,"void",0],[-650.5,-438.98,28.81,16.79,"roof",1],[-649.0,-438.98,28.09,16.77,"roof",1],[-647.5,-438.98,27.26,16.76,"roof",1],[-646.0,-438.98,26.43,16.75,"roof",1],[-644.5,-438.98,26.22,16.74,"roof",1],[-643.0,-438.98,26.99,16.71,"roof",1],[-641.5,-438.98,26.88,16.7,"roof",1],[-640.0,-438.98,26.96,16.67,"roof",1],[-638.5,-438.98,26.9,16.66,"roof",1],[-691.0,-437.48,22.85,16.96,"roof",1],[-689.5,-437.48,26.97,16.96,"roof",1],[-688.0,-437.48,26.86,16.93,"roof",1],[-686.5,-437.48,28.49,16.92,"roof",1],[-685.0,-437.48,27.15,16.92,"roof",1],[-683.5,-437.48,null,16.92,"void",0],[-682.0,-437.48,null,16.93,"void",0],[-680.5,-437.48,27.42,16.93,"roof",1],[-679.0,-437.48,29.27,16.94,"roof",1],[-677.5,-437.48,28.22,16.95,"roof",1],[-676.0,-437.48,27.5,16.97,"roof",1],[-674.5,-437.48,26.64,16.98,"roof",1],[-673.0,-437.48,22.9,16.98,"roof",0],[-671.5,-437.48,20.32,16.98,"court",1],[-670.0,-437.48,null,16.98,"void",0],[-668.5,-437.48,20.37,16.97,"court",1],[-667.0,-437.48,20.4,16.97,"court",1],[-665.5,-437.48,20.4,16.96,"court",1],[-664.0,-437.48,20.39,16.96,"court",1],[-662.5,-437.48,20.39,16.95,"court",1],[-661.0,-437.48,20.4,16.95,"court",0],[-659.5,-437.48,22.33,16.94,"mixed",0],[-658.0,-437.48,23.4,16.91,"roof",0],[-656.5,-437.48,26.17,16.89,"roof",0],[-655.0,-437.48,null,16.86,"void",0],[-653.5,-437.48,27.51,16.83,"roof",1],[-652.0,-437.48,28.35,16.8,"roof",1],[-650.5,-437.48,28.66,16.78,"roof",1],[-649.0,-437.48,28.05,16.76,"roof",1],[-647.5,-437.48,27.19,16.74,"roof",1],[-646.0,-437.48,26.59,16.73,"roof",1],[-644.5,-437.48,26.9,16.73,"roof",1],[-643.0,-437.48,27.7,16.72,"roof",1],[-641.5,-437.48,27.66,16.69,"roof",1],[-640.0,-437.48,null,16.69,"void",0],[-638.5,-437.48,27.65,16.67,"roof",1],[-691.0,-435.98,null,16.94,"void",0],[-689.5,-435.98,26.29,16.91,"roof",1],[-688.0,-435.98,null,16.91,"void",0],[-686.5,-435.98,26.36,16.91,"roof",1],[-685.0,-435.98,26.21,16.91,"roof",1],[-683.5,-435.98,26.87,16.92,"roof",1],[-682.0,-435.98,26.69,16.93,"roof",1],[-680.5,-435.98,27.38,16.94,"roof",1],[-679.0,-435.98,28.2,16.95,"roof",1],[-677.5,-435.98,28.04,16.97,"roof",1],[-676.0,-435.98,27.43,16.98,"roof",1],[-674.5,-435.98,26.67,16.98,"roof",1],[-673.0,-435.98,null,16.97,"void",0],[-671.5,-435.98,20.36,16.97,"court",1],[-670.0,-435.98,20.38,16.96,"court",1],[-668.5,-435.98,20.4,16.96,"court",1],[-667.0,-435.98,20.39,16.96,"court",1],[-665.5,-435.98,20.43,16.95,"court",1],[-664.0,-435.98,20.39,16.95,"court",1],[-662.5,-435.98,20.39,16.94,"court",1],[-661.0,-435.98,20.39,16.94,"court",0],[-659.5,-435.98,22.12,16.93,"mixed",0],[-658.0,-435.98,26.16,16.91,"roof",0],[-656.5,-435.98,26.21,16.88,"roof",1],[-655.0,-435.98,26.78,16.86,"roof",1],[-653.5,-435.98,27.65,16.83,"roof",1],[-652.0,-435.98,28.36,16.8,"roof",1],[-650.5,-435.98,28.63,16.77,"roof",1],[-649.0,-435.98,27.99,16.75,"roof",1],[-647.5,-435.98,27.2,16.73,"roof",1],[-646.0,-435.98,26.39,16.71,"roof",1],[-644.5,-435.98,26.15,16.71,"roof",1],[-643.0,-435.98,28.53,16.7,"roof",1],[-641.5,-435.98,28.37,16.7,"roof",1],[-640.0,-435.98,28.47,16.68,"roof",1],[-638.5,-435.98,28.39,16.68,"roof",1],[-691.0,-434.48,23.36,16.89,"roof",0],[-689.5,-434.48,24.11,16.89,"roof",1],[-688.0,-434.48,24.87,16.9,"roof",1],[-686.5,-434.48,25.68,16.91,"roof",1],[-685.0,-434.48,26.15,16.92,"roof",1],[-683.5,-434.48,26.17,16.93,"roof",1],[-682.0,-434.48,26.77,16.94,"roof",1],[-680.5,-434.48,27.43,16.95,"roof",1],[-679.0,-434.48,28.29,16.97,"roof",1],[-677.5,-434.48,28.14,16.97,"roof",1],[-676.0,-434.48,27.38,16.97,"roof",1],[-674.5,-434.48,26.54,16.97,"roof",1],[-673.0,-434.48,null,16.96,"void",0],[-671.5,-434.48,20.38,16.96,"court",1],[-670.0,-434.48,20.4,16.95,"court",1],[-668.5,-434.48,22.28,16.95,"mixed",0],[-667.0,-434.48,20.93,16.94,"court",1],[-665.5,-434.48,20.41,16.94,"court",0],[-664.0,-434.48,21.53,16.93,"court",0],[-662.5,-434.48,20.4,16.93,"court",0],[-661.0,-434.48,20.39,16.92,"court",1],[-659.5,-434.48,20.4,16.92,"court",1],[-658.0,-434.48,20.37,16.9,"court",1],[-656.5,-434.48,20.34,16.88,"court",1],[-655.0,-434.48,null,16.85,"void",0],[-653.5,-434.48,26.95,16.83,"roof",1],[-652.0,-434.48,27.56,16.8,"roof",1],[-650.5,-434.48,28.15,16.77,"roof",1],[-649.0,-434.48,null,16.74,"void",0],[-647.5,-434.48,27.18,16.72,"roof",1],[-646.0,-434.48,26.46,16.7,"roof",1],[-644.5,-434.48,26.2,16.69,"roof",1],[-643.0,-434.48,28.08,16.68,"roof",1],[-641.5,-434.48,28.14,16.68,"roof",1],[-640.0,-434.48,null,16.67,"void",0],[-638.5,-434.48,28.19,16.66,"roof",1],[-691.0,-432.98,23.42,16.89,"roof",0],[-689.5,-432.98,24.24,16.9,"roof",1],[-688.0,-432.98,24.93,16.91,"roof",1],[-686.5,-432.98,25.58,16.92,"roof",1],[-685.0,-432.98,26.14,16.93,"roof",1],[-683.5,-432.98,26.65,16.94,"roof",1],[-682.0,-432.98,26.83,16.96,"roof",1],[-680.5,-432.98,27.5,16.97,"roof",1],[-679.0,-432.98,28.31,16.97,"roof",1],[-677.5,-432.98,27.95,16.96,"roof",1],[-676.0,-432.98,27.3,16.96,"roof",1],[-674.5,-432.98,23.18,16.95,"roof",0],[-673.0,-432.98,20.36,16.95,"court",1],[-671.5,-432.98,null,16.95,"void",0],[-670.0,-432.98,20.45,16.94,"court",0],[-668.5,-432.98,21.53,16.94,"court",1],[-667.0,-432.98,21.53,16.93,"court",0],[-665.5,-432.98,21.52,16.93,"court",0],[-664.0,-432.98,21.53,16.92,"court",1],[-662.5,-432.98,21.51,16.92,"court",0],[-661.0,-432.98,21.53,16.91,"court",0],[-659.5,-432.98,20.39,16.91,"court",1],[-658.0,-432.98,20.39,16.9,"court",1],[-656.5,-432.98,20.37,16.87,"court",1],[-655.0,-432.98,26.1,16.85,"roof",0],[-653.5,-432.98,null,16.82,"void",0],[-652.0,-432.98,27.64,16.8,"roof",1],[-650.5,-432.98,28.42,16.77,"roof",1],[-649.0,-432.98,27.73,16.74,"roof",1],[-647.5,-432.98,27.02,16.72,"roof",1],[-646.0,-432.98,26.4,16.69,"roof",1],[-644.5,-432.98,null,16.67,"void",0],[-643.0,-432.98,27.32,16.66,"roof",1],[-641.5,-432.98,27.43,16.66,"roof",1],[-640.0,-432.98,27.47,16.65,"roof",1],[-638.5,-432.98,27.36,16.65,"roof",1],[-691.0,-431.48,23.49,16.9,"roof",1],[-689.5,-431.48,24.32,16.91,"roof",1],[-688.0,-431.48,27.48,16.92,"roof",1],[-686.5,-431.48,25.72,16.93,"roof",1],[-685.0,-431.48,26.09,16.94,"roof",1],[-683.5,-431.48,26.14,16.96,"roof",1],[-682.0,-431.48,null,16.96,"void",0],[-680.5,-431.48,27.64,16.96,"roof",1],[-679.0,-431.48,28.34,16.95,"roof",1],[-677.5,-431.48,27.91,16.95,"roof",1],[-676.0,-431.48,27.09,16.95,"roof",1],[-674.5,-431.48,23.09,16.94,"roof",1],[-673.0,-431.48,20.36,16.94,"court",1],[-671.5,-431.48,20.39,16.94,"court",1],[-670.0,-431.48,21.54,16.93,"court",0],[-668.5,-431.48,21.54,16.93,"court",1],[-667.0,-431.48,21.55,16.92,"court",1],[-665.5,-431.48,21.56,16.92,"court",1],[-664.0,-431.48,21.54,16.91,"court",1],[-662.5,-431.48,21.54,16.91,"court",1],[-661.0,-431.48,21.54,16.9,"court",0],[-659.5,-431.48,20.47,16.9,"court",0],[-658.0,-431.48,20.4,16.89,"court",1],[-656.5,-431.48,20.39,16.87,"court",1],[-655.0,-431.48,26.34,16.84,"roof",0],[-653.5,-431.48,26.83,16.82,"roof",1],[-652.0,-431.48,27.77,16.79,"roof",1],[-650.5,-431.48,28.42,16.77,"roof",1],[-649.0,-431.48,27.63,16.74,"roof",1],[-647.5,-431.48,null,16.71,"void",0],[-646.0,-431.48,26.53,16.69,"roof",1],[-644.5,-431.48,26.76,16.66,"roof",1],[-643.0,-431.48,26.62,16.65,"roof",1],[-641.5,-431.48,26.56,16.64,"roof",1],[-640.0,-431.48,null,16.63,"void",0],[-638.5,-431.48,26.61,16.63,"roof",0],[-691.0,-429.98,23.65,16.91,"roof",1],[-689.5,-429.98,24.32,16.92,"roof",1],[-688.0,-429.98,25.15,16.93,"roof",1],[-686.5,-429.98,25.87,16.94,"roof",1],[-685.0,-429.98,26.11,16.95,"roof",1],[-683.5,-429.98,26.14,16.95,"roof",1],[-682.0,-429.98,26.92,16.95,"roof",1],[-680.5,-429.98,27.55,16.95,"roof",1],[-679.0,-429.98,28.47,16.94,"roof",1],[-677.5,-429.98,27.89,16.94,"roof",1],[-676.0,-429.98,26.96,16.94,"roof",1],[-674.5,-429.98,26.35,16.93,"roof",1],[-673.0,-429.98,20.38,16.93,"court",1],[-671.5,-429.98,20.39,16.92,"court",1],[-670.0,-429.98,20.4,16.92,"court",0],[-668.5,-429.98,21.55,16.91,"court",1],[-667.0,-429.98,21.43,16.91,"court",1],[-665.5,-429.98,21.43,16.9,"court",1],[-664.0,-429.98,null,16.9,"void",0],[-662.5,-429.98,null,16.9,"void",0],[-661.0,-429.98,21.54,16.89,"court",1],[-659.5,-429.98,21.54,16.89,"court",0],[-658.0,-429.98,20.39,16.88,"court",1],[-656.5,-429.98,20.37,16.87,"court",1],[-655.0,-429.98,26.36,16.84,"roof",0],[-653.5,-429.98,27.03,16.81,"roof",1],[-652.0,-429.98,27.86,16.79,"roof",1],[-650.5,-429.98,28.35,16.76,"roof",1],[-649.0,-429.98,27.58,16.74,"roof",1],[-647.5,-429.98,26.99,16.71,"roof",1],[-646.0,-429.98,26.32,16.68,"roof",1],[-644.5,-429.98,26.18,16.66,"roof",1],[-643.0,-429.98,26.11,16.64,"roof",1],[-691.0,-428.48,23.67,16.92,"roof",1],[-689.5,-428.48,24.35,16.93,"roof",1],[-688.0,-428.48,25.1,16.94,"roof",1],[-686.5,-428.48,25.89,16.95,"roof",1],[-685.0,-428.48,26.11,16.95,"roof",1],[-683.5,-428.48,26.32,16.94,"roof",1],[-682.0,-428.48,27.03,16.94,"roof",1],[-680.5,-428.48,27.67,16.94,"roof",1],[-679.0,-428.48,28.43,16.93,"roof",1],[-677.5,-428.48,27.68,16.93,"roof",1],[-676.0,-428.48,27.13,16.93,"roof",1],[-674.5,-428.48,26.3,16.92,"roof",1],[-673.0,-428.48,20.39,16.92,"court",1],[-671.5,-428.48,20.37,16.91,"court",1],[-670.0,-428.48,20.39,16.91,"court",0],[-668.5,-428.48,21.55,16.9,"court",1],[-667.0,-428.48,21.43,16.9,"court",1],[-665.5,-428.48,21.43,16.89,"court",0],[-664.0,-428.48,null,16.89,"void",0],[-662.5,-428.48,null,16.88,"void",0],[-661.0,-428.48,21.54,16.88,"court",1],[-659.5,-428.48,22.21,16.87,"mixed",0],[-658.0,-428.48,20.4,16.87,"court",1],[-656.5,-428.48,20.38,16.86,"court",1],[-655.0,-428.48,22.99,16.84,"roof",0],[-653.5,-428.48,27.18,16.81,"roof",1],[-652.0,-428.48,27.94,16.78,"roof",1],[-650.5,-428.48,28.41,16.76,"roof",1],[-649.0,-428.48,null,16.73,"void",0],[-647.5,-428.48,26.8,16.71,"roof",1],[-646.0,-428.48,26.14,16.68,"roof",1],[-644.5,-428.48,26.15,16.65,"roof",1],[-643.0,-428.48,26.13,16.63,"roof",1],[-691.0,-426.98,23.72,16.93,"roof",1],[-689.5,-426.98,26.44,16.94,"roof",1],[-688.0,-426.98,26.42,16.94,"roof",1],[-686.5,-426.98,26.29,16.94,"roof",1],[-685.0,-426.98,26.14,16.94,"roof",1],[-683.5,-426.98,26.25,16.93,"roof",1],[-682.0,-426.98,null,16.93,"void",0],[-680.5,-426.98,27.75,16.93,"roof",1],[-679.0,-426.98,28.43,16.92,"roof",1],[-677.5,-426.98,27.61,16.92,"roof",1],[-676.0,-426.98,27.05,16.91,"roof",1],[-674.5,-426.98,26.27,16.91,"roof",0],[-673.0,-426.98,20.36,16.91,"court",1],[-671.5,-426.98,20.39,16.9,"court",1],[-670.0,-426.98,20.41,16.9,"court",0],[-668.5,-426.98,21.54,16.89,"court",1],[-667.0,-426.98,null,16.89,"void",0],[-665.5,-426.98,null,16.88,"void",0],[-664.0,-426.98,null,16.88,"void",0],[-662.5,-426.98,null,16.87,"void",0],[-661.0,-426.98,21.53,16.87,"court",1],[-659.5,-426.98,20.37,16.86,"court",0],[-658.0,-426.98,20.38,16.86,"court",1],[-656.5,-426.98,null,16.85,"void",0],[-655.0,-426.98,26.37,16.83,"roof",1],[-653.5,-426.98,27.24,16.81,"roof",1],[-652.0,-426.98,27.97,16.78,"roof",1],[-650.5,-426.98,28.29,16.75,"roof",1],[-649.0,-426.98,27.4,16.73,"roof",1],[-647.5,-426.98,26.75,16.7,"roof",1],[-646.0,-426.98,26.6,16.68,"roof",1],[-644.5,-426.98,26.16,16.65,"roof",1],[-643.0,-426.98,26.36,16.62,"roof",1],[-641.5,-426.98,26.37,16.6,"roof",1],[-689.5,-425.48,26.33,16.94,"roof",1],[-688.0,-425.48,26.23,16.93,"roof",1],[-686.5,-425.48,26.41,16.93,"roof",1],[-685.0,-425.48,26.13,16.93,"roof",1],[-683.5,-425.48,26.39,16.92,"roof",1],[-682.0,-425.48,27.05,16.92,"roof",1],[-680.5,-425.48,27.89,16.92,"roof",1],[-679.0,-425.48,28.35,16.91,"roof",1],[-677.5,-425.48,27.63,16.91,"roof",1],[-676.0,-425.48,26.98,16.9,"roof",1],[-674.5,-425.48,20.35,16.9,"court",0],[-673.0,-425.48,20.34,16.9,"court",1],[-671.5,-425.48,20.37,16.89,"court",1],[-670.0,-425.48,21.63,16.89,"court",0],[-668.5,-425.48,21.54,16.88,"court",1],[-667.0,-425.48,null,16.88,"void",0],[-665.5,-425.48,null,16.87,"void",0],[-664.0,-425.48,null,16.87,"void",0],[-662.5,-425.48,21.55,16.86,"court",0],[-661.0,-425.48,21.51,16.86,"court",1],[-659.5,-425.48,20.41,16.85,"court",0],[-658.0,-425.48,20.39,16.85,"court",1],[-656.5,-425.48,20.38,16.84,"court",0],[-655.0,-425.48,26.46,16.83,"roof",1],[-653.5,-425.48,null,16.8,"void",0],[-652.0,-425.48,27.99,16.78,"roof",1],[-650.5,-425.48,28.1,16.75,"roof",1],[-649.0,-425.48,27.41,16.72,"roof",1],[-647.5,-425.48,26.72,16.7,"roof",1],[-646.0,-425.48,26.16,16.67,"roof",1],[-644.5,-425.48,26.97,16.65,"roof",1],[-643.0,-425.48,25.74,16.62,"roof",1],[-641.5,-425.48,24.81,16.59,"roof",1],[-640.0,-425.48,24.2,16.57,"roof",1],[-689.5,-423.98,26.13,16.93,"roof",1],[-688.0,-423.98,null,16.92,"void",0],[-686.5,-423.98,26.33,16.92,"roof",1],[-685.0,-423.98,26.14,16.92,"roof",1],[-683.5,-423.98,26.49,16.91,"roof",1],[-682.0,-423.98,27.2,16.91,"roof",1],[-680.5,-423.98,27.81,16.9,"roof",1],[-679.0,-423.98,28.41,16.9,"roof",1],[-677.5,-423.98,27.57,16.9,"roof",1],[-676.0,-423.98,26.14,16.89,"roof",1],[-674.5,-423.98,20.35,16.89,"court",0],[-673.0,-423.98,20.36,16.88,"court",1],[-671.5,-423.98,20.4,16.88,"court",0],[-670.0,-423.98,21.53,16.87,"court",1],[-668.5,-423.98,21.53,16.87,"court",1],[-667.0,-423.98,null,16.86,"void",0],[-665.5,-423.98,null,16.86,"void",0],[-664.0,-423.98,null,16.85,"void",0],[-662.5,-423.98,21.55,16.85,"court",1],[-661.0,-423.98,21.53,16.84,"court",1],[-659.5,-423.98,21.54,16.84,"court",0],[-658.0,-423.98,20.41,16.83,"court",1],[-656.5,-423.98,20.39,16.83,"court",0],[-655.0,-423.98,26.63,16.82,"roof",1],[-653.5,-423.98,27.37,16.8,"roof",1],[-652.0,-423.98,27.91,16.77,"roof",1],[-650.5,-423.98,29.49,16.75,"roof",1],[-649.0,-423.98,27.36,16.72,"roof",1],[-647.5,-423.98,26.68,16.69,"roof",1],[-646.0,-423.98,null,16.67,"void",0],[-644.5,-423.98,26.1,16.64,"roof",1],[-643.0,-423.98,25.8,16.62,"roof",1],[-641.5,-423.98,24.85,16.59,"roof",1],[-640.0,-423.98,23.98,16.56,"roof",1],[-692.5,-422.48,23.09,16.86,"roof",0],[-691.0,-422.48,26.56,16.92,"roof",1],[-689.5,-422.48,26.51,16.92,"roof",1],[-688.0,-422.48,26.43,16.91,"roof",1],[-686.5,-422.48,26.28,16.91,"roof",1],[-685.0,-422.48,26.15,16.9,"roof",1],[-683.5,-422.48,26.58,16.9,"roof",1],[-682.0,-422.48,27.31,16.9,"roof",1],[-680.5,-422.48,27.94,16.89,"roof",1],[-679.0,-422.48,28.35,16.89,"roof",1],[-677.5,-422.48,27.48,16.89,"roof",1],[-676.0,-422.48,26.85,16.88,"roof",1],[-674.5,-422.48,20.41,16.88,"court",0],[-673.0,-422.48,20.38,16.87,"court",1],[-671.5,-422.48,20.4,16.87,"court",0],[-670.0,-422.48,21.54,16.86,"court",0],[-668.5,-422.48,21.54,16.86,"court",1],[-667.0,-422.48,null,16.85,"void",0],[-665.5,-422.48,null,16.85,"void",0],[-664.0,-422.48,null,16.84,"void",0],[-662.5,-422.48,21.53,16.84,"court",1],[-661.0,-422.48,21.52,16.83,"court",1],[-659.5,-422.48,20.41,16.83,"court",0],[-658.0,-422.48,20.42,16.82,"court",1],[-656.5,-422.48,20.4,16.82,"court",0],[-655.0,-422.48,26.72,16.81,"roof",1],[-653.5,-422.48,27.51,16.8,"roof",1],[-652.0,-422.48,28.07,16.77,"roof",1],[-650.5,-422.48,28.48,16.74,"roof",1],[-649.0,-422.48,27.31,16.72,"roof",1],[-647.5,-422.48,null,16.69,"void",0],[-646.0,-422.48,26.15,16.66,"roof",1],[-644.5,-422.48,26.11,16.64,"roof",1],[-643.0,-422.48,25.52,16.61,"roof",1],[-641.5,-422.48,24.8,16.59,"roof",1],[-640.0,-422.48,23.92,16.56,"roof",1],[-692.5,-420.98,23.31,16.84,"roof",0],[-691.0,-420.98,27.25,16.9,"roof",1],[-689.5,-420.98,27.17,16.9,"roof",1],[-688.0,-420.98,28.94,16.9,"roof",1],[-686.5,-420.98,26.74,16.9,"roof",1],[-685.0,-420.98,26.19,16.89,"roof",1],[-683.5,-420.98,26.67,16.89,"roof",1],[-682.0,-420.98,27.34,16.89,"roof",1],[-680.5,-420.98,27.99,16.88,"roof",1],[-679.0,-420.98,28.22,16.88,"roof",1],[-677.5,-420.98,27.47,16.88,"roof",1],[-676.0,-420.98,null,16.87,"void",0],[-674.5,-420.98,26.21,16.87,"roof",0],[-673.0,-420.98,20.38,16.86,"court",1],[-671.5,-420.98,20.39,16.86,"court",1],[-670.0,-420.98,21.6,16.85,"court",0],[-668.5,-420.98,21.54,16.85,"court",1],[-667.0,-420.98,null,16.84,"void",0],[-665.5,-420.98,null,16.84,"void",0],[-664.0,-420.98,null,16.83,"void",0],[-662.5,-420.98,21.52,16.83,"court",1],[-661.0,-420.98,null,16.82,"void",0],[-659.5,-420.98,21.55,16.82,"court",0],[-658.0,-420.98,20.4,16.81,"court",1],[-656.5,-420.98,20.36,16.81,"court",1],[-655.0,-420.98,23.36,16.8,"roof",1],[-653.5,-420.98,27.56,16.79,"roof",1],[-652.0,-420.98,28.27,16.77,"roof",1],[-650.5,-420.98,28.1,16.74,"roof",1],[-649.0,-420.98,27.54,16.71,"roof",1],[-647.5,-420.98,26.48,16.69,"roof",1],[-646.0,-420.98,null,16.66,"void",0],[-644.5,-420.98,26.13,16.63,"roof",1],[-643.0,-420.98,25.43,16.61,"roof",1],[-641.5,-420.98,24.79,16.58,"roof",1],[-640.0,-420.98,23.92,16.56,"roof",1],[-692.5,-419.48,25.97,16.82,"roof",1],[-691.0,-419.48,28.01,16.87,"roof",1],[-689.5,-419.48,27.87,16.89,"roof",1],[-688.0,-419.48,27.85,16.89,"roof",1],[-686.5,-419.48,27.38,16.89,"roof",1],[-685.0,-419.48,26.74,16.88,"roof",1],[-683.5,-419.48,26.73,16.88,"roof",1],[-682.0,-419.48,27.36,16.88,"roof",1],[-680.5,-419.48,28.16,16.87,"roof",1],[-679.0,-419.48,28.21,16.87,"roof",1],[-677.5,-419.48,27.44,16.86,"roof",1],[-676.0,-419.48,26.73,16.86,"roof",1],[-674.5,-419.48,null,16.85,"void",0],[-673.0,-419.48,20.34,16.85,"court",1],[-671.5,-419.48,20.35,16.84,"court",1],[-670.0,-419.48,20.38,16.84,"court",1],[-668.5,-419.48,21.54,16.83,"court",0],[-667.0,-419.48,21.51,16.83,"court",1],[-665.5,-419.48,null,16.82,"void",0],[-664.0,-419.48,21.55,16.82,"court",1],[-662.5,-419.48,21.54,16.81,"court",1],[-661.0,-419.48,21.54,16.81,"court",1],[-659.5,-419.48,21.55,16.8,"court",0],[-658.0,-419.48,20.41,16.8,"court",1],[-656.5,-419.48,20.39,16.79,"court",0],[-655.0,-419.48,26.77,16.79,"roof",1],[-653.5,-419.48,27.53,16.78,"roof",1],[-652.0,-419.48,28.4,16.76,"roof",1],[-650.5,-419.48,27.97,16.74,"roof",1],[-649.0,-419.48,27.25,16.71,"roof",1],[-647.5,-419.48,26.34,16.68,"roof",1],[-646.0,-419.48,26.8,16.66,"roof",1],[-644.5,-419.48,26.13,16.63,"roof",1],[-643.0,-419.48,25.5,16.6,"roof",1],[-641.5,-419.48,24.79,16.58,"roof",1],[-640.0,-419.48,23.88,16.55,"roof",1],[-692.5,-417.98,26.78,16.8,"roof",1],[-691.0,-417.98,28.61,16.83,"roof",1],[-689.5,-417.98,28.61,16.88,"roof",1],[-688.0,-417.98,28.6,16.88,"roof",1],[-686.5,-417.98,28.62,16.88,"roof",1],[-685.0,-417.98,26.33,16.87,"roof",1],[-683.5,-417.98,26.84,16.87,"roof",1],[-682.0,-417.98,27.49,16.86,"roof",1],[-680.5,-417.98,28.25,16.86,"roof",1],[-679.0,-417.98,28.82,16.86,"roof",1],[-677.5,-417.98,28.22,16.85,"roof",1],[-676.0,-417.98,27.28,16.85,"roof",1],[-674.5,-417.98,26.64,16.84,"roof",0],[-673.0,-417.98,25.97,16.84,"roof",0],[-671.5,-417.98,20.4,16.83,"court",0],[-670.0,-417.98,20.39,16.83,"court",1],[-668.5,-417.98,20.42,16.82,"court",0],[-667.0,-417.98,21.52,16.82,"court",1],[-665.5,-417.98,21.5,16.81,"court",0],[-664.0,-417.98,20.98,16.81,"court",0],[-662.5,-417.98,21.56,16.8,"court",0],[-661.0,-417.98,21.53,16.8,"court",0],[-659.5,-417.98,21.61,16.79,"court",1],[-658.0,-417.98,20.4,16.79,"court",1],[-656.5,-417.98,21.76,16.78,"court",0],[-655.0,-417.98,26.91,16.78,"roof",1],[-653.5,-417.98,27.62,16.77,"roof",1],[-652.0,-417.98,28.42,16.76,"roof",1],[-650.5,-417.98,27.85,16.73,"roof",1],[-649.0,-417.98,27.27,16.71,"roof",1],[-647.5,-417.98,26.36,16.68,"roof",1],[-646.0,-417.98,26.14,16.65,"roof",1],[-644.5,-417.98,26.21,16.63,"roof",1],[-643.0,-417.98,26.12,16.6,"roof",1],[-641.5,-417.98,25.97,16.57,"roof",1],[-640.0,-417.98,25.82,16.55,"roof",1],[-692.5,-416.48,27.64,16.78,"roof",1],[-691.0,-416.48,null,16.81,"void",0],[-689.5,-416.48,27.87,16.85,"roof",1],[-688.0,-416.48,null,16.87,"void",0],[-686.5,-416.48,null,16.86,"void",0],[-685.0,-416.48,26.21,16.86,"roof",1],[-683.5,-416.48,26.7,16.86,"roof",1],[-682.0,-416.48,27.5,16.85,"roof",1],[-680.5,-416.48,28.32,16.85,"roof",1],[-679.0,-416.48,28.72,16.85,"roof",1],[-677.5,-416.48,28.1,16.84,"roof",1],[-676.0,-416.48,27.38,16.84,"roof",1],[-674.5,-416.48,26.67,16.83,"roof",1],[-673.0,-416.48,26.03,16.83,"roof",1],[-671.5,-416.48,20.43,16.82,"court",0],[-670.0,-416.48,20.39,16.82,"court",1],[-668.5,-416.48,20.4,16.81,"court",1],[-667.0,-416.48,20.43,16.81,"court",0],[-665.5,-416.48,20.39,16.8,"court",0],[-664.0,-416.48,20.39,16.8,"court",0],[-662.5,-416.48,20.39,16.79,"court",1],[-661.0,-416.48,null,16.79,"void",0],[-659.5,-416.48,20.4,16.78,"court",1],[-658.0,-416.48,20.41,16.78,"court",1],[-656.5,-416.48,26.17,16.77,"roof",0],[-655.0,-416.48,26.85,16.77,"roof",1],[-653.5,-416.48,27.75,16.76,"roof",1],[-652.0,-416.48,28.43,16.75,"roof",1],[-650.5,-416.48,27.89,16.73,"roof",1],[-649.0,-416.48,27.14,16.7,"roof",1],[-647.5,-416.48,26.32,16.68,"roof",1],[-646.0,-416.48,26.14,16.65,"roof",1],[-644.5,-416.48,26.93,16.62,"roof",1],[-643.0,-416.48,26.8,16.6,"roof",1],[-641.5,-416.48,26.71,16.57,"roof",1],[-640.0,-416.48,26.7,16.55,"roof",1],[-692.5,-414.98,27.12,16.76,"roof",1],[-691.0,-414.98,27.11,16.79,"roof",1],[-689.5,-414.98,27.25,16.82,"roof",1],[-688.0,-414.98,27.32,16.86,"roof",1],[-686.5,-414.98,26.19,16.85,"roof",1],[-685.0,-414.98,26.22,16.85,"roof",1],[-683.5,-414.98,26.78,16.85,"roof",1],[-682.0,-414.98,27.58,16.84,"roof",1],[-680.5,-414.98,28.35,16.84,"roof",1],[-679.0,-414.98,28.76,16.83,"roof",1],[-677.5,-414.98,27.86,16.83,"roof",1],[-676.0,-414.98,27.28,16.82,"roof",1],[-674.5,-414.98,26.56,16.82,"roof",1],[-673.0,-414.98,26.06,16.81,"roof",1],[-671.5,-414.98,null,16.81,"void",0],[-670.0,-414.98,20.42,16.8,"court",1],[-668.5,-414.98,20.41,16.8,"court",1],[-667.0,-414.98,20.42,16.79,"court",1],[-665.5,-414.98,20.4,16.79,"court",1],[-664.0,-414.98,20.4,16.78,"court",1],[-662.5,-414.98,20.4,16.78,"court",1],[-661.0,-414.98,20.41,16.77,"court",1],[-659.5,-414.98,26.07,16.77,"roof",0],[-658.0,-414.98,23.39,16.76,"roof",0],[-656.5,-414.98,26.94,16.76,"roof",1],[-655.0,-414.98,27.01,16.75,"roof",1],[-653.5,-414.98,27.68,16.75,"roof",1],[-652.0,-414.98,28.38,16.74,"roof",1],[-650.5,-414.98,27.75,16.73,"roof",1],[-649.0,-414.98,27.0,16.7,"roof",1],[-647.5,-414.98,26.31,16.67,"roof",1],[-646.0,-414.98,26.25,16.65,"roof",1],[-644.5,-414.98,27.56,16.62,"roof",1],[-643.0,-414.98,27.55,16.59,"roof",1],[-641.5,-414.98,27.54,16.57,"roof",1],[-640.0,-414.98,27.46,16.56,"roof",1],[-692.5,-413.48,26.38,16.74,"roof",1],[-691.0,-413.48,null,16.77,"void",0],[-689.5,-413.48,26.5,16.8,"roof",1],[-688.0,-413.48,26.37,16.84,"roof",1],[-686.5,-413.48,26.23,16.84,"roof",1],[-685.0,-413.48,26.19,16.84,"roof",1],[-683.5,-413.48,27.05,16.84,"roof",1],[-682.0,-413.48,27.66,16.83,"roof",1],[-680.5,-413.48,28.3,16.83,"roof",1],[-679.0,-413.48,28.76,16.82,"roof",1],[-677.5,-413.48,27.86,16.82,"roof",1],[-676.0,-413.48,27.18,16.81,"roof",1],[-674.5,-413.48,26.42,16.81,"roof",1],[-673.0,-413.48,26.05,16.8,"roof",0],[-671.5,-413.48,22.64,16.8,"roof",0],[-670.0,-413.48,21.91,16.79,"mixed",0],[-668.5,-413.48,20.42,16.79,"court",1],[-667.0,-413.48,null,16.78,"void",0],[-665.5,-413.48,20.39,16.78,"court",1],[-664.0,-413.48,20.4,16.77,"court",1],[-662.5,-413.48,20.42,16.77,"court",1],[-661.0,-413.48,20.42,16.76,"court",1],[-659.5,-413.48,26.19,16.76,"roof",1],[-658.0,-413.48,26.43,16.75,"roof",1],[-656.5,-413.48,27.1,16.75,"roof",1],[-655.0,-413.48,27.78,16.74,"roof",1],[-653.5,-413.48,28.58,16.74,"roof",1],[-652.0,-413.48,null,16.73,"void",0],[-650.5,-413.48,27.76,16.72,"roof",1],[-649.0,-413.48,26.82,16.7,"roof",1],[-647.5,-413.48,26.22,16.67,"roof",1],[-646.0,-413.48,26.18,16.64,"roof",1],[-644.5,-413.48,28.34,16.62,"roof",1],[-643.0,-413.48,28.26,16.59,"roof",1],[-641.5,-413.48,28.15,16.57,"roof",1],[-692.5,-411.98,23.59,16.72,"roof",1],[-691.0,-411.98,25.69,16.75,"roof",1],[-689.5,-411.98,null,16.78,"void",0],[-688.0,-411.98,25.85,16.81,"roof",1],[-686.5,-411.98,27.3,16.83,"roof",1],[-685.0,-411.98,26.3,16.83,"roof",1],[-683.5,-411.98,27.01,16.83,"roof",1],[-682.0,-411.98,27.75,16.82,"roof",1],[-680.5,-411.98,28.41,16.82,"roof",1],[-679.0,-411.98,28.65,16.81,"roof",1],[-677.5,-411.98,27.89,16.81,"roof",1],[-676.0,-411.98,27.11,16.8,"roof",1],[-674.5,-411.98,28.6,16.8,"roof",1],[-673.0,-411.98,26.01,16.79,"roof",0],[-671.5,-411.98,20.34,16.79,"court",0],[-670.0,-411.98,22.11,16.78,"mixed",0],[-668.5,-411.98,20.43,16.78,"court",1],[-667.0,-411.98,20.36,16.77,"court",1],[-665.5,-411.98,20.39,16.77,"court",1],[-664.0,-411.98,20.38,16.76,"court",1],[-662.5,-411.98,22.18,16.76,"mixed",0],[-661.0,-411.98,20.39,16.75,"court",0],[-659.5,-411.98,26.16,16.75,"roof",1],[-658.0,-411.98,28.1,16.74,"roof",1],[-656.5,-411.98,27.07,16.74,"roof",1],[-655.0,-411.98,27.95,16.73,"roof",1],[-653.5,-411.98,28.61,16.73,"roof",1],[-652.0,-411.98,null,16.72,"void",0],[-650.5,-411.98,27.59,16.71,"roof",1],[-649.0,-411.98,26.87,16.69,"roof",1],[-647.5,-411.98,26.43,16.67,"roof",1],[-646.0,-411.98,null,16.64,"void",0],[-644.5,-411.98,28.19,16.61,"roof",1],[-643.0,-411.98,28.32,16.59,"roof",1],[-641.5,-411.98,28.39,16.57,"roof",1],[-691.0,-410.48,24.49,16.73,"roof",0],[-689.5,-410.48,25.32,16.76,"roof",1],[-688.0,-410.48,25.95,16.79,"roof",1],[-686.5,-410.48,26.28,16.82,"roof",1],[-685.0,-410.48,26.3,16.82,"roof",1],[-683.5,-410.48,27.18,16.81,"roof",1],[-682.0,-410.48,27.64,16.81,"roof",1],[-680.5,-410.48,28.43,16.8,"roof",1],[-679.0,-410.48,28.56,16.8,"roof",1],[-677.5,-410.48,27.81,16.79,"roof",1],[-676.0,-410.48,27.08,16.79,"roof",1],[-674.5,-410.48,26.21,16.78,"roof",1],[-673.0,-410.48,26.04,16.78,"roof",0],[-671.5,-410.48,20.37,16.77,"court",1],[-670.0,-410.48,20.41,16.77,"court",1],[-668.5,-410.48,20.41,16.76,"court",1],[-667.0,-410.48,20.4,16.76,"court",1],[-665.5,-410.48,20.36,16.75,"court",1],[-664.0,-410.48,20.38,16.75,"court",1],[-662.5,-410.48,21.72,16.74,"court",0],[-661.0,-410.48,23.13,16.74,"roof",0],[-659.5,-410.48,26.15,16.73,"roof",1],[-658.0,-410.48,26.5,16.73,"roof",1],[-656.5,-410.48,27.15,16.72,"roof",1],[-655.0,-410.48,27.96,16.72,"roof",1],[-653.5,-410.48,28.78,16.71,"roof",1],[-652.0,-410.48,28.22,16.71,"roof",1],[-650.5,-410.48,27.54,16.7,"roof",1],[-649.0,-410.48,26.78,16.69,"roof",1],[-647.5,-410.48,26.7,16.66,"roof",1],[-646.0,-410.48,26.17,16.64,"roof",1],[-644.5,-410.48,27.4,16.61,"roof",1],[-643.0,-410.48,27.59,16.58,"roof",1],[-641.5,-410.48,27.63,16.6,"roof",1],[-686.5,-408.98,26.16,16.8,"roof",1],[-685.0,-408.98,26.19,16.81,"roof",1],[-683.5,-408.98,27.13,16.8,"roof",1],[-682.0,-408.98,27.75,16.8,"roof",1],[-680.5,-408.98,28.58,16.79,"roof",1],[-679.0,-408.98,28.53,16.79,"roof",1],[-677.5,-408.98,27.79,16.78,"roof",1],[-676.0,-408.98,26.99,16.78,"roof",1],[-674.5,-408.98,26.23,16.77,"roof",1],[-673.0,-408.98,26.03,16.77,"roof",0],[-671.5,-408.98,20.41,16.76,"court",1],[-670.0,-408.98,20.42,16.76,"court",1],[-668.5,-408.98,20.4,16.75,"court",1],[-667.0,-408.98,20.4,16.75,"court",1],[-665.5,-408.98,null,16.74,"void",0],[-664.0,-408.98,20.4,16.74,"court",1],[-662.5,-408.98,20.44,16.73,"court",0],[-661.0,-408.98,20.38,16.73,"court",0],[-659.5,-408.98,26.19,16.72,"roof",1],[-658.0,-408.98,26.62,16.72,"roof",1],[-656.5,-408.98,27.24,16.71,"roof",1],[-655.0,-408.98,27.98,16.71,"roof",1],[-653.5,-408.98,28.81,16.7,"roof",1],[-652.0,-408.98,28.22,16.7,"roof",1],[-650.5,-408.98,27.54,16.69,"roof",1],[-649.0,-408.98,26.75,16.68,"roof",1],[-647.5,-408.98,26.38,16.66,"roof",1],[-646.0,-408.98,26.18,16.63,"roof",1],[-644.5,-408.98,null,16.61,"void",0],[-643.0,-408.98,26.66,16.59,"roof",1],[-641.5,-408.98,26.89,16.62,"roof",1],[-685.0,-407.48,26.43,16.79,"roof",0],[-683.5,-407.48,27.24,16.79,"roof",0],[-682.0,-407.48,27.94,16.79,"roof",1],[-680.5,-407.48,28.58,16.78,"roof",1],[-679.0,-407.48,28.41,16.78,"roof",1],[-677.5,-407.48,27.54,16.77,"roof",1],[-676.0,-407.48,26.84,16.77,"roof",1],[-674.5,-407.48,26.17,16.76,"roof",1],[-673.0,-407.48,25.99,16.76,"roof",0],[-671.5,-407.48,20.42,16.75,"court",1],[-670.0,-407.48,20.41,16.75,"court",1],[-668.5,-407.48,20.41,16.74,"court",1],[-667.0,-407.48,20.41,16.74,"court",1],[-665.5,-407.48,20.42,16.73,"court",1],[-664.0,-407.48,20.42,16.73,"court",1],[-662.5,-407.48,20.43,16.72,"court",1],[-661.0,-407.48,20.39,16.72,"court",0],[-659.5,-407.48,26.15,16.71,"roof",1],[-658.0,-407.48,26.63,16.71,"roof",1],[-656.5,-407.48,27.33,16.7,"roof",1],[-655.0,-407.48,28.04,16.7,"roof",1],[-653.5,-407.48,28.72,16.69,"roof",1],[-652.0,-407.48,28.07,16.69,"roof",1],[-650.5,-407.48,27.44,16.68,"roof",1],[-649.0,-407.48,26.67,16.68,"roof",1],[-647.5,-407.48,null,16.66,"void",0],[-646.0,-407.48,26.12,16.63,"roof",1],[-644.5,-407.48,26.27,16.61,"roof",1],[-643.0,-407.48,26.08,16.66,"roof",1],[-641.5,-407.48,26.16,16.57,"roof",1],[-685.0,-405.98,19.99,16.78,"court",0],[-683.5,-405.98,19.96,16.79,"court",0],[-682.0,-405.98,null,16.78,"void",0],[-680.5,-405.98,null,16.77,"void",0],[-679.0,-405.98,null,16.77,"void",0],[-677.5,-405.98,null,16.76,"void",0],[-676.0,-405.98,19.97,16.76,"court",0],[-674.5,-405.98,null,16.75,"void",0],[-673.0,-405.98,20.09,16.75,"court",0],[-671.5,-405.98,19.95,16.74,"court",1],[-670.0,-405.98,19.99,16.73,"court",1],[-668.5,-405.98,20.2,16.73,"court",1],[-667.0,-405.98,null,16.72,"void",0],[-665.5,-405.98,20.24,16.72,"court",1],[-664.0,-405.98,20.46,16.71,"court",1],[-662.5,-405.98,20.44,16.71,"court",1],[-661.0,-405.98,20.42,16.7,"court",0],[-659.5,-405.98,26.14,16.7,"roof",1],[-658.0,-405.98,26.69,16.69,"roof",1],[-656.5,-405.98,27.37,16.69,"roof",1],[-655.0,-405.98,28.21,16.68,"roof",1],[-653.5,-405.98,28.76,16.68,"roof",1],[-652.0,-405.98,28.15,16.67,"roof",1],[-650.5,-405.98,27.41,16.67,"roof",1],[-649.0,-405.98,26.5,16.66,"roof",1],[-647.5,-405.98,26.79,16.65,"roof",1],[-646.0,-405.98,26.15,16.63,"roof",1],[-644.5,-405.98,26.02,16.64,"roof",1],[-643.0,-405.98,null,16.66,"void",0],[-641.5,-405.98,24.0,16.57,"roof",1],[-694.0,-404.48,20.09,16.6,"court",0],[-692.5,-404.48,22.84,16.6,"roof",0],[-691.0,-404.48,22.76,16.59,"roof",1],[-685.0,-404.48,26.39,16.63,"roof",1],[-683.5,-404.48,27.01,16.64,"roof",1],[-682.0,-404.48,27.58,16.65,"roof",1],[-680.5,-404.48,27.78,16.66,"roof",1],[-679.0,-404.48,27.2,16.67,"roof",1],[-677.5,-404.48,26.57,16.68,"roof",1],[-676.0,-404.48,25.99,16.69,"roof",0],[-674.5,-404.48,25.73,16.7,"roof",0],[-673.0,-404.48,23.11,16.71,"roof",0],[-671.5,-404.48,21.67,16.71,"court",0],[-670.0,-404.48,19.97,16.71,"court",1],[-668.5,-404.48,19.98,16.7,"court",1],[-667.0,-404.48,19.99,16.7,"court",1],[-665.5,-404.48,null,16.69,"void",0],[-664.0,-404.48,19.93,16.69,"court",1],[-662.5,-404.48,19.95,16.69,"court",1],[-661.0,-404.48,20.0,16.69,"court",0],[-659.5,-404.48,22.93,16.69,"roof",1],[-658.0,-404.48,24.01,16.68,"roof",1],[-656.5,-404.48,29.76,16.68,"roof",0],[-655.0,-404.48,29.72,16.67,"roof",0],[-653.5,-404.48,19.98,16.67,"court",0],[-652.0,-404.48,27.9,16.66,"roof",0],[-650.5,-404.48,27.32,16.66,"roof",0],[-649.0,-404.48,26.58,16.65,"roof",0],[-647.5,-404.48,26.03,16.65,"roof",0],[-694.0,-402.98,23.59,16.59,"roof",1],[-692.5,-402.98,23.54,16.58,"roof",1],[-691.0,-402.98,23.45,16.58,"roof",1],[-689.5,-402.98,23.29,16.61,"roof",1],[-688.0,-402.98,23.43,16.61,"roof",1],[-686.5,-402.98,23.56,16.62,"roof",1],[-685.0,-402.98,26.53,16.62,"roof",1],[-683.5,-402.98,27.0,16.61,"roof",1],[-682.0,-402.98,27.71,16.62,"roof",1],[-680.5,-402.98,27.79,16.62,"roof",1],[-679.0,-402.98,27.03,16.62,"roof",1],[-677.5,-402.98,26.52,16.62,"roof",1],[-676.0,-402.98,25.77,16.62,"roof",1],[-674.5,-402.98,25.71,16.63,"roof",1],[-673.0,-402.98,19.94,16.63,"court",0],[-671.5,-402.98,null,16.63,"void",0],[-670.0,-402.98,19.98,16.63,"court",1],[-668.5,-402.98,20.0,16.63,"court",1],[-667.0,-402.98,null,16.63,"void",0],[-665.5,-402.98,19.98,16.64,"court",1],[-664.0,-402.98,19.96,16.64,"court",1],[-662.5,-402.98,19.94,16.65,"court",1],[-661.0,-402.98,19.97,16.65,"court",0],[-659.5,-402.98,25.73,16.65,"roof",1],[-658.0,-402.98,25.96,16.65,"roof",1],[-656.5,-402.98,26.49,16.65,"roof",0],[-655.0,-402.98,27.22,16.65,"roof",1],[-653.5,-402.98,29.79,16.64,"roof",0],[-652.0,-402.98,27.68,16.64,"roof",0],[-650.5,-402.98,null,16.64,"void",0],[-694.0,-401.48,23.59,16.56,"roof",1],[-692.5,-401.48,23.62,16.56,"roof",1],[-691.0,-401.48,23.78,16.58,"roof",1],[-689.5,-401.48,23.75,16.6,"roof",1],[-688.0,-401.48,23.75,16.62,"roof",1],[-686.5,-401.48,25.89,16.62,"roof",1],[-685.0,-401.48,26.5,16.61,"roof",1],[-683.5,-401.48,27.06,16.59,"roof",1],[-682.0,-401.48,27.59,16.6,"roof",1],[-680.5,-401.48,27.88,16.6,"roof",1],[-679.0,-401.48,27.13,16.6,"roof",1],[-677.5,-401.48,26.42,16.61,"roof",1],[-676.0,-401.48,25.82,16.61,"roof",1],[-674.5,-401.48,25.72,16.61,"roof",0],[-673.0,-401.48,19.92,16.61,"court",1],[-671.5,-401.48,null,16.62,"void",0],[-670.0,-401.48,19.97,16.62,"court",1],[-668.5,-401.48,19.96,16.62,"court",1],[-667.0,-401.48,19.98,16.62,"court",1],[-665.5,-401.48,19.98,16.62,"court",1],[-664.0,-401.48,19.99,16.63,"court",1],[-662.5,-401.48,21.28,16.63,"court",1],[-661.0,-401.48,21.33,16.63,"court",0],[-659.5,-401.48,25.72,16.63,"roof",1],[-658.0,-401.48,25.8,16.63,"roof",1],[-656.5,-401.48,null,16.64,"void",0],[-655.0,-401.48,27.17,16.64,"roof",1],[-653.5,-401.48,27.85,16.64,"roof",1],[-652.0,-401.48,27.61,16.64,"roof",1],[-650.5,-401.48,27.04,16.65,"roof",1],[-694.0,-399.98,22.94,16.54,"roof",1],[-692.5,-399.98,23.4,16.56,"roof",1],[-691.0,-399.98,23.41,16.57,"roof",1],[-689.5,-399.98,23.57,16.6,"roof",1],[-688.0,-399.98,23.45,16.62,"roof",1],[-686.5,-399.98,25.93,16.62,"roof",1],[-685.0,-399.98,26.56,16.6,"roof",1],[-683.5,-399.98,27.19,16.58,"roof",1],[-682.0,-399.98,27.77,16.58,"roof",1],[-680.5,-399.98,27.7,16.59,"roof",1],[-679.0,-399.98,27.03,16.59,"roof",1],[-677.5,-399.98,26.41,16.59,"roof",1],[-676.0,-399.98,25.75,16.59,"roof",1],[-674.5,-399.98,25.63,16.6,"roof",0],[-673.0,-399.98,19.93,16.6,"court",1],[-671.5,-399.98,null,16.6,"void",0],[-670.0,-399.98,19.97,16.6,"court",1],[-668.5,-399.98,19.97,16.6,"court",1],[-667.0,-399.98,19.96,16.61,"court",1],[-665.5,-399.98,19.98,16.61,"court",1],[-664.0,-399.98,19.97,16.61,"court",1],[-662.5,-399.98,null,16.61,"void",0],[-661.0,-399.98,19.96,16.61,"court",0],[-659.5,-399.98,25.73,16.62,"roof",1],[-658.0,-399.98,25.9,16.62,"roof",1],[-656.5,-399.98,null,16.62,"void",0],[-655.0,-399.98,27.26,16.62,"roof",1],[-653.5,-399.98,27.9,16.63,"roof",1],[-652.0,-399.98,null,16.63,"void",0],[-650.5,-399.98,26.85,16.63,"roof",1],[-649.0,-399.98,26.36,16.63,"roof",1],[-647.5,-399.98,23.04,16.63,"roof",1],[-646.0,-399.98,22.93,16.6,"roof",1],[-644.5,-399.98,22.9,16.54,"roof",1],[-643.0,-399.98,22.82,16.51,"roof",1],[-641.5,-399.98,20.37,16.54,"court",0],[-694.0,-398.48,23.05,16.53,"roof",1],[-692.5,-398.48,23.38,16.55,"roof",1],[-691.0,-398.48,23.41,16.59,"roof",1],[-689.5,-398.48,23.43,16.62,"roof",1],[-688.0,-398.48,23.45,16.62,"roof",1],[-686.5,-398.48,26.04,16.61,"roof",1],[-685.0,-398.48,26.64,16.59,"roof",1],[-683.5,-398.48,27.13,16.57,"roof",1],[-682.0,-398.48,27.87,16.57,"roof",1],[-680.5,-398.48,27.79,16.57,"roof",1],[-679.0,-398.48,26.87,16.57,"roof",1],[-677.5,-398.48,26.35,16.58,"roof",1],[-676.0,-398.48,25.77,16.58,"roof",1],[-674.5,-398.48,25.69,16.58,"roof",0],[-673.0,-398.48,19.95,16.58,"court",1],[-671.5,-398.48,19.96,16.58,"court",1],[-670.0,-398.48,19.95,16.59,"court",1],[-668.5,-398.48,19.94,16.59,"court",1],[-667.0,-398.48,19.96,16.59,"court",1],[-665.5,-398.48,19.99,16.59,"court",1],[-664.0,-398.48,19.96,16.59,"court",1],[-662.5,-398.48,19.92,16.6,"court",1],[-661.0,-398.48,null,16.6,"void",0],[-659.5,-398.48,25.75,16.6,"roof",1],[-658.0,-398.48,25.96,16.6,"roof",1],[-656.5,-398.48,26.81,16.61,"roof",1],[-655.0,-398.48,27.4,16.61,"roof",1],[-653.5,-398.48,28.23,16.61,"roof",1],[-652.0,-398.48,27.42,16.61,"roof",1],[-650.5,-398.48,26.93,16.61,"roof",1],[-649.0,-398.48,26.32,16.62,"roof",1],[-647.5,-398.48,23.87,16.61,"roof",1],[-646.0,-398.48,23.69,16.58,"roof",1],[-644.5,-398.48,23.6,16.52,"roof",1],[-643.0,-398.48,null,16.46,"void",0],[-641.5,-398.48,null,16.41,"void",0],[-694.0,-396.98,23.22,16.53,"roof",1],[-692.5,-396.98,23.38,16.57,"roof",1],[-691.0,-396.98,23.38,16.61,"roof",1],[-689.5,-396.98,23.45,16.62,"roof",1],[-688.0,-396.98,23.48,16.61,"roof",1],[-686.5,-396.98,26.12,16.59,"roof",1],[-685.0,-396.98,26.71,16.57,"roof",1],[-683.5,-396.98,27.24,16.55,"roof",1],[-682.0,-396.98,27.88,16.54,"roof",1],[-680.5,-396.98,27.67,16.56,"roof",1],[-679.0,-396.98,26.81,16.56,"roof",1],[-677.5,-396.98,26.19,16.56,"roof",1],[-676.0,-396.98,25.76,16.56,"roof",1],[-674.5,-396.98,19.95,16.56,"court",0],[-673.0,-396.98,19.94,16.57,"court",1],[-671.5,-396.98,19.97,16.57,"court",1],[-670.0,-396.98,19.97,16.57,"court",1],[-668.5,-396.98,19.96,16.57,"court",1],[-667.0,-396.98,19.92,16.57,"court",1],[-665.5,-396.98,19.96,16.58,"court",1],[-664.0,-396.98,19.95,16.58,"court",1],[-662.5,-396.98,null,16.58,"void",0],[-661.0,-396.98,19.97,16.58,"court",0],[-659.5,-396.98,null,16.59,"void",0],[-658.0,-396.98,26.15,16.59,"roof",1],[-656.5,-396.98,26.72,16.59,"roof",1],[-655.0,-396.98,27.35,16.59,"roof",1],[-653.5,-396.98,null,16.59,"void",0],[-652.0,-396.98,27.36,16.6,"roof",1],[-650.5,-396.98,26.82,16.6,"roof",1],[-649.0,-396.98,26.37,16.6,"roof",1],[-647.5,-396.98,23.53,16.58,"roof",1],[-646.0,-396.98,23.56,16.56,"roof",1],[-644.5,-396.98,23.6,16.5,"roof",1],[-643.0,-396.98,null,16.44,"void",0],[-641.5,-396.98,23.63,16.38,"roof",1],[-694.0,-395.48,23.31,16.56,"roof",1],[-692.5,-395.48,23.39,16.6,"roof",1],[-691.0,-395.48,23.42,16.62,"roof",1],[-689.5,-395.48,23.45,16.62,"roof",1],[-688.0,-395.48,23.49,16.6,"roof",1],[-686.5,-395.48,26.15,16.58,"roof",1],[-685.0,-395.48,26.58,16.56,"roof",1],[-683.5,-395.48,27.26,16.54,"roof",1],[-682.0,-395.48,27.91,16.53,"roof",1],[-680.5,-395.48,27.84,16.54,"roof",1],[-679.0,-395.48,null,16.54,"void",0],[-677.5,-395.48,26.4,16.54,"roof",1],[-676.0,-395.48,25.74,16.55,"roof",1],[-674.5,-395.48,null,16.55,"void",0],[-673.0,-395.48,19.93,16.55,"court",1],[-671.5,-395.48,19.95,16.55,"court",1],[-670.0,-395.48,19.97,16.55,"court",1],[-668.5,-395.48,19.96,16.56,"court",1],[-667.0,-395.48,19.92,16.56,"court",1],[-665.5,-395.48,19.97,16.56,"court",1],[-664.0,-395.48,19.92,16.56,"court",1],[-662.5,-395.48,19.93,16.57,"court",1],[-661.0,-395.48,19.96,16.57,"court",0],[-659.5,-395.48,25.77,16.57,"roof",1],[-658.0,-395.48,26.24,16.57,"roof",1],[-656.5,-395.48,26.84,16.57,"roof",1],[-655.0,-395.48,27.42,16.58,"roof",1],[-653.5,-395.48,27.98,16.58,"roof",1],[-652.0,-395.48,27.31,16.58,"roof",1],[-650.5,-395.48,26.81,16.58,"roof",1],[-649.0,-395.48,null,16.57,"void",0],[-647.5,-395.48,23.57,16.55,"roof",1],[-646.0,-395.48,23.48,16.53,"roof",1],[-644.5,-395.48,23.45,16.49,"roof",1],[-643.0,-395.48,null,16.42,"void",0],[-641.5,-395.48,23.18,16.36,"roof",1],[-695.5,-393.98,23.47,16.54,"roof",1],[-694.0,-393.98,23.34,16.59,"roof",1],[-692.5,-393.98,23.38,16.62,"roof",1],[-691.0,-393.98,25.38,16.62,"roof",1],[-689.5,-393.98,23.48,16.61,"roof",1],[-688.0,-393.98,23.5,16.59,"roof",1],[-686.5,-393.98,26.14,16.57,"roof",1],[-685.0,-393.98,26.72,16.55,"roof",1],[-683.5,-393.98,27.36,16.53,"roof",1],[-682.0,-393.98,27.96,16.51,"roof",1],[-680.5,-393.98,27.7,16.5,"roof",1],[-679.0,-393.98,27.03,16.53,"roof",1],[-677.5,-393.98,26.4,16.53,"roof",1],[-676.0,-393.98,25.79,16.53,"roof",1],[-674.5,-393.98,22.35,16.53,"roof",0],[-673.0,-393.98,21.48,16.54,"court",0],[-671.5,-393.98,19.96,16.54,"court",1],[-670.0,-393.98,19.98,16.54,"court",1],[-668.5,-393.98,19.95,16.54,"court",1],[-667.0,-393.98,19.93,16.54,"court",1],[-665.5,-393.98,19.98,16.55,"court",1],[-664.0,-393.98,19.98,16.55,"court",0],[-662.5,-393.98,19.98,16.55,"court",0],[-661.0,-393.98,19.98,16.55,"court",0],[-659.5,-393.98,null,16.55,"void",0],[-658.0,-393.98,26.33,16.56,"roof",1],[-656.5,-393.98,26.89,16.56,"roof",1],[-655.0,-393.98,27.57,16.56,"roof",1],[-653.5,-393.98,27.9,16.56,"roof",1],[-652.0,-393.98,27.42,16.57,"roof",1],[-650.5,-393.98,26.8,16.56,"roof",1],[-649.0,-393.98,26.27,16.55,"roof",1],[-647.5,-393.98,23.53,16.52,"roof",1],[-646.0,-393.98,24.25,16.5,"roof",1],[-644.5,-393.98,23.45,16.47,"roof",1],[-643.0,-393.98,null,16.4,"void",0],[-641.5,-393.98,23.3,16.34,"roof",1],[-695.5,-392.48,23.61,16.57,"roof",1],[-694.0,-392.48,23.68,16.61,"roof",1],[-692.5,-392.48,23.75,16.62,"roof",1],[-691.0,-392.48,25.4,16.62,"roof",1],[-689.5,-392.48,23.92,16.6,"roof",1],[-688.0,-392.48,23.49,16.58,"roof",1],[-686.5,-392.48,26.19,16.56,"roof",1],[-685.0,-392.48,26.75,16.54,"roof",1],[-683.5,-392.48,27.29,16.52,"roof",1],[-682.0,-392.48,28.06,16.5,"roof",1],[-680.5,-392.48,27.61,16.49,"roof",1],[-679.0,-392.48,26.87,16.51,"roof",1],[-677.5,-392.48,26.32,16.51,"roof",1],[-676.0,-392.48,25.68,16.52,"roof",0],[-674.5,-392.48,null,16.52,"void",0],[-673.0,-392.48,20.49,16.52,"court",1],[-671.5,-392.48,19.96,16.52,"court",1],[-670.0,-392.48,19.96,16.52,"court",1],[-668.5,-392.48,19.95,16.53,"court",1],[-667.0,-392.48,19.96,16.53,"court",1],[-665.5,-392.48,19.97,16.53,"court",1],[-664.0,-392.48,19.98,16.53,"court",0],[-662.5,-392.48,21.6,16.53,"mixed",0],[-661.0,-392.48,null,16.54,"void",0],[-659.5,-392.48,25.94,16.54,"roof",1],[-658.0,-392.48,26.67,16.54,"roof",1],[-656.5,-392.48,27.29,16.54,"roof",1],[-655.0,-392.48,27.86,16.55,"roof",1],[-653.5,-392.48,27.87,16.55,"roof",1],[-652.0,-392.48,27.3,16.55,"roof",1],[-650.5,-392.48,26.65,16.54,"roof",1],[-649.0,-392.48,26.03,16.52,"roof",1],[-647.5,-392.48,23.54,16.5,"roof",1],[-646.0,-392.48,23.5,16.47,"roof",1],[-644.5,-392.48,23.45,16.45,"roof",1],[-643.0,-392.48,23.39,16.39,"roof",1],[-641.5,-392.48,23.1,16.32,"roof",1],[-695.5,-390.98,22.8,16.6,"roof",1],[-694.0,-390.98,23.38,16.62,"roof",1],[-692.5,-390.98,23.39,16.61,"roof",1],[-691.0,-390.98,23.47,16.61,"roof",1],[-689.5,-390.98,23.46,16.59,"roof",1],[-688.0,-390.98,24.24,16.57,"roof",1],[-686.5,-390.98,26.16,16.55,"roof",1],[-685.0,-390.98,26.85,16.53,"roof",1],[-683.5,-390.98,27.5,16.51,"roof",1],[-682.0,-390.98,28.04,16.49,"roof",1],[-680.5,-390.98,null,16.47,"void",0],[-679.0,-390.98,26.99,16.48,"roof",1],[-677.5,-390.98,26.38,16.5,"roof",1],[-676.0,-390.98,25.71,16.5,"roof",0],[-674.5,-390.98,19.95,16.5,"court",1],[-673.0,-390.98,19.96,16.5,"court",1],[-671.5,-390.98,null,16.51,"void",0],[-670.0,-390.98,19.97,16.51,"court",0],[-668.5,-390.98,19.96,16.51,"court",0],[-667.0,-390.98,19.97,16.51,"court",0],[-665.5,-390.98,19.97,16.51,"court",1],[-664.0,-390.98,19.97,16.52,"court",1],[-662.5,-390.98,19.96,16.52,"court",1],[-661.0,-390.98,23.05,16.52,"roof",0],[-659.5,-390.98,26.01,16.52,"roof",1],[-658.0,-390.98,26.72,16.53,"roof",1],[-656.5,-390.98,27.36,16.53,"roof",1],[-655.0,-390.98,null,16.53,"void",0],[-653.5,-390.98,27.89,16.53,"roof",1],[-652.0,-390.98,27.17,16.53,"roof",1],[-650.5,-390.98,26.51,16.51,"roof",1],[-649.0,-390.98,25.95,16.49,"roof",1],[-647.5,-390.98,23.54,16.47,"roof",1],[-646.0,-390.98,23.49,16.45,"roof",1],[-644.5,-390.98,23.46,16.42,"roof",1],[-643.0,-390.98,23.39,16.37,"roof",1],[-641.5,-390.98,23.05,16.3,"roof",1],[-695.5,-389.48,22.82,16.62,"roof",1],[-694.0,-389.48,23.37,16.61,"roof",1],[-692.5,-389.48,23.38,16.62,"roof",1],[-691.0,-389.48,23.4,16.6,"roof",1],[-689.5,-389.48,23.47,16.58,"roof",1],[-688.0,-389.48,23.49,16.56,"roof",1],[-686.5,-389.48,26.27,16.54,"roof",1],[-685.0,-389.48,26.84,16.52,"roof",1],[-683.5,-389.48,27.53,16.5,"roof",1],[-682.0,-389.48,28.1,16.48,"roof",1],[-680.5,-389.48,27.48,16.46,"roof",1],[-679.0,-389.48,26.91,16.45,"roof",1],[-677.5,-389.48,26.3,16.48,"roof",1],[-676.0,-389.48,25.72,16.48,"roof",0],[-674.5,-389.48,19.94,16.49,"court",1],[-673.0,-389.48,19.94,16.49,"court",1],[-671.5,-389.48,22.8,16.49,"roof",0],[-670.0,-389.48,23.13,16.49,"roof",1],[-668.5,-389.48,23.03,16.49,"roof",1],[-667.0,-389.48,22.98,16.5,"roof",1],[-665.5,-389.48,22.95,16.5,"roof",0],[-664.0,-389.48,19.96,16.5,"court",1],[-662.5,-389.48,19.97,16.5,"court",1],[-661.0,-389.48,19.97,16.51,"court",1],[-659.5,-389.48,26.16,16.51,"roof",1],[-658.0,-389.48,26.75,16.51,"roof",1],[-656.5,-389.48,27.27,16.51,"roof",1],[-655.0,-389.48,27.92,16.51,"roof",1],[-653.5,-389.48,27.78,16.52,"roof",1],[-652.0,-389.48,27.17,16.51,"roof",1],[-650.5,-389.48,26.6,16.49,"roof",1],[-649.0,-389.48,26.04,16.46,"roof",1],[-647.5,-389.48,23.76,16.44,"roof",1],[-646.0,-389.48,23.5,16.42,"roof",1],[-644.5,-389.48,25.47,16.4,"roof",1],[-643.0,-389.48,23.43,16.36,"roof",1],[-641.5,-389.48,23.29,16.28,"roof",1],[-695.5,-387.98,22.73,16.61,"roof",1],[-694.0,-387.98,23.35,16.62,"roof",1],[-692.5,-387.98,23.39,16.61,"roof",1],[-691.0,-387.98,23.42,16.59,"roof",1],[-689.5,-387.98,23.46,16.57,"roof",1],[-688.0,-387.98,23.5,16.55,"roof",1],[-686.5,-387.98,26.38,16.52,"roof",1],[-685.0,-387.98,26.94,16.5,"roof",1],[-683.5,-387.98,27.57,16.48,"roof",1],[-682.0,-387.98,28.14,16.46,"roof",1],[-680.5,-387.98,27.56,16.45,"roof",1],[-679.0,-387.98,26.94,16.43,"roof",1],[-677.5,-387.98,26.23,16.45,"roof",1],[-676.0,-387.98,19.91,16.47,"court",0],[-674.5,-387.98,19.92,16.47,"court",1],[-673.0,-387.98,19.95,16.47,"court",1],[-671.5,-387.98,22.84,16.47,"roof",0],[-670.0,-387.98,23.33,16.48,"roof",1],[-668.5,-387.98,23.77,16.48,"roof",1],[-667.0,-387.98,23.32,16.48,"roof",1],[-665.5,-387.98,22.85,16.48,"roof",0],[-664.0,-387.98,19.95,16.49,"court",1],[-662.5,-387.98,null,16.49,"void",0],[-661.0,-387.98,19.95,16.49,"court",0],[-659.5,-387.98,26.13,16.49,"roof",1],[-658.0,-387.98,26.82,16.49,"roof",1],[-656.5,-387.98,null,16.5,"void",0],[-655.0,-387.98,29.22,16.5,"roof",1],[-653.5,-387.98,27.8,16.5,"roof",1],[-652.0,-387.98,27.05,16.48,"roof",1],[-650.5,-387.98,26.47,16.46,"roof",1],[-649.0,-387.98,25.87,16.44,"roof",1],[-647.5,-387.98,24.29,16.41,"roof",1],[-646.0,-387.98,23.48,16.39,"roof",1],[-644.5,-387.98,23.47,16.37,"roof",1],[-643.0,-387.98,23.62,16.34,"roof",1],[-641.5,-387.98,23.71,16.27,"roof",1],[-695.5,-386.48,22.92,16.61,"roof",1],[-694.0,-386.48,23.37,16.61,"roof",1],[-692.5,-386.48,23.4,16.59,"roof",1],[-691.0,-386.48,23.43,16.57,"roof",1],[-689.5,-386.48,24.24,16.55,"roof",1],[-688.0,-386.48,25.73,16.53,"roof",1],[-686.5,-386.48,26.32,16.51,"roof",1],[-685.0,-386.48,27.06,16.49,"roof",1],[-683.5,-386.48,27.81,16.47,"roof",1],[-682.0,-386.48,28.13,16.45,"roof",1],[-680.5,-386.48,27.33,16.43,"roof",1],[-679.0,-386.48,26.86,16.42,"roof",1],[-677.5,-386.48,26.24,16.41,"roof",1],[-676.0,-386.48,19.94,16.45,"court",0],[-674.5,-386.48,null,16.45,"void",0],[-673.0,-386.48,19.95,16.46,"court",1],[-671.5,-386.48,22.91,16.46,"roof",0],[-670.0,-386.48,23.38,16.46,"roof",1],[-668.5,-386.48,23.77,16.46,"roof",1],[-667.0,-386.48,23.19,16.47,"roof",1],[-665.5,-386.48,22.84,16.47,"roof",0],[-664.0,-386.48,19.92,16.47,"court",1],[-662.5,-386.48,19.93,16.47,"court",1],[-661.0,-386.48,19.96,16.47,"court",0],[-659.5,-386.48,26.24,16.48,"roof",1],[-658.0,-386.48,26.83,16.48,"roof",1],[-656.5,-386.48,27.41,16.48,"roof",1],[-655.0,-386.48,28.12,16.48,"roof",1],[-653.5,-386.48,27.67,16.48,"roof",1],[-652.0,-386.48,27.08,16.45,"roof",1],[-650.5,-386.48,26.43,16.43,"roof",1],[-649.0,-386.48,25.87,16.41,"roof",1],[-647.5,-386.48,24.23,16.39,"roof",1],[-646.0,-386.48,23.49,16.36,"roof",1],[-644.5,-386.48,23.45,16.34,"roof",1],[-643.0,-386.48,23.4,16.32,"roof",1],[-641.5,-386.48,22.97,16.26,"roof",1],[-695.5,-384.98,22.86,16.62,"roof",0],[-694.0,-384.98,23.39,16.6,"roof",1],[-692.5,-384.98,23.4,16.58,"roof",1],[-691.0,-384.98,23.55,16.56,"roof",1],[-689.5,-384.98,23.49,16.54,"roof",1],[-688.0,-384.98,25.89,16.52,"roof",1],[-686.5,-384.98,26.44,16.5,"roof",1],[-685.0,-384.98,27.03,16.48,"roof",1],[-683.5,-384.98,null,16.46,"void",0],[-682.0,-384.98,28.84,16.44,"roof",1],[-680.5,-384.98,27.42,16.42,"roof",1],[-679.0,-384.98,26.81,16.41,"roof",1],[-677.5,-384.98,26.18,16.39,"roof",1],[-676.0,-384.98,23.54,16.43,"roof",0],[-674.5,-384.98,19.98,16.44,"court",1],[-673.0,-384.98,19.97,16.44,"court",1],[-671.5,-384.98,22.98,16.44,"roof",0],[-670.0,-384.98,23.37,16.45,"roof",1],[-668.5,-384.98,null,16.45,"void",0],[-667.0,-384.98,23.3,16.45,"roof",1],[-665.5,-384.98,19.94,16.45,"court",0],[-664.0,-384.98,19.95,16.45,"court",1],[-662.5,-384.98,19.95,16.46,"court",1],[-661.0,-384.98,22.39,16.46,"roof",0],[-659.5,-384.98,26.2,16.46,"roof",1],[-658.0,-384.98,26.95,16.46,"roof",1],[-656.5,-384.98,27.54,16.47,"roof",1],[-655.0,-384.98,28.03,16.47,"roof",1],[-653.5,-384.98,27.48,16.45,"roof",1],[-652.0,-384.98,26.92,16.43,"roof",1],[-650.5,-384.98,26.35,16.4,"roof",1],[-649.0,-384.98,25.69,16.38,"roof",1],[-647.5,-384.98,null,16.36,"void",0],[-646.0,-384.98,23.46,16.34,"roof",1],[-644.5,-384.98,23.46,16.31,"roof",1],[-643.0,-384.98,null,16.29,"void",0],[-641.5,-384.98,22.94,16.25,"roof",1],[-697.0,-383.48,22.24,16.61,"roof",0],[-695.5,-383.48,23.01,16.62,"roof",1],[-694.0,-383.48,23.37,16.59,"roof",1],[-692.5,-383.48,23.43,16.57,"roof",1],[-691.0,-383.48,23.47,16.55,"roof",1],[-689.5,-383.48,23.51,16.53,"roof",1],[-688.0,-383.48,25.89,16.51,"roof",1],[-686.5,-383.48,26.53,16.49,"roof",1],[-685.0,-383.48,27.12,16.47,"roof",1],[-683.5,-383.48,27.71,16.45,"roof",1],[-682.0,-383.48,28.03,16.43,"roof",1],[-680.5,-383.48,27.28,16.41,"roof",1],[-679.0,-383.48,26.69,16.39,"roof",1],[-677.5,-383.48,26.11,16.38,"roof",1],[-676.0,-383.48,19.92,16.39,"court",0],[-674.5,-383.48,19.94,16.42,"court",1],[-673.0,-383.48,19.95,16.43,"court",1],[-671.5,-383.48,22.96,16.43,"roof",1],[-670.0,-383.48,23.35,16.43,"roof",1],[-668.5,-383.48,23.67,16.43,"roof",1],[-667.0,-383.48,23.25,16.43,"roof",1],[-665.5,-383.48,19.96,16.44,"court",0],[-664.0,-383.48,19.99,16.44,"court",1],[-662.5,-383.48,19.98,16.44,"court",1],[-661.0,-383.48,25.79,16.44,"roof",0],[-659.5,-383.48,26.31,16.45,"roof",1],[-658.0,-383.48,26.91,16.45,"roof",1],[-656.5,-383.48,27.59,16.45,"roof",1],[-655.0,-383.48,28.13,16.44,"roof",1],[-653.5,-383.48,27.56,16.42,"roof",1],[-652.0,-383.48,null,16.4,"void",0],[-650.5,-383.48,26.35,16.38,"roof",1],[-649.0,-383.48,23.54,16.35,"roof",1],[-647.5,-383.48,null,16.33,"void",0],[-646.0,-383.48,23.48,16.31,"roof",1],[-644.5,-383.48,23.44,16.29,"roof",1],[-643.0,-383.48,23.44,16.26,"roof",1],[-641.5,-383.48,22.85,16.23,"roof",1],[-697.0,-381.98,22.37,16.59,"roof",0],[-695.5,-381.98,23.05,16.62,"roof",1],[-694.0,-381.98,23.4,16.59,"roof",1],[-692.5,-381.98,23.43,16.56,"roof",1],[-691.0,-381.98,23.44,16.54,"roof",1],[-689.5,-381.98,23.53,16.52,"roof",1],[-688.0,-381.98,25.9,16.5,"roof",1],[-686.5,-381.98,26.52,16.48,"roof",1],[-685.0,-381.98,27.19,16.46,"roof",1],[-683.5,-381.98,27.84,16.44,"roof",1],[-682.0,-381.98,27.92,16.42,"roof",1],[-680.5,-381.98,27.32,16.4,"roof",1],[-679.0,-381.98,26.75,16.38,"roof",1],[-677.5,-381.98,25.99,16.37,"roof",1],[-676.0,-381.98,19.9,16.36,"court",1],[-674.5,-381.98,19.9,16.4,"court",1],[-673.0,-381.98,19.89,16.41,"court",1],[-671.5,-381.98,22.98,16.41,"roof",0],[-670.0,-381.98,23.25,16.41,"roof",1],[-668.5,-381.98,23.58,16.42,"roof",1],[-667.0,-381.98,23.15,16.42,"roof",1],[-665.5,-381.98,19.93,16.42,"court",0],[-664.0,-381.98,19.98,16.42,"court",1],[-662.5,-381.98,19.98,16.43,"court",1],[-661.0,-381.98,25.7,16.43,"roof",0],[-659.5,-381.98,26.41,16.43,"roof",1],[-658.0,-381.98,27.04,16.43,"roof",1],[-656.5,-381.98,27.65,16.43,"roof",1],[-655.0,-381.98,28.12,16.42,"roof",1],[-653.5,-381.98,27.54,16.39,"roof",1],[-652.0,-381.98,26.94,16.37,"roof",1],[-650.5,-381.98,26.29,16.35,"roof",1],[-649.0,-381.98,23.55,16.33,"roof",1],[-647.5,-381.98,23.53,16.3,"roof",1],[-646.0,-381.98,23.45,16.28,"roof",1],[-644.5,-381.98,23.44,16.26,"roof",1],[-643.0,-381.98,23.41,16.24,"roof",1],[-697.0,-380.48,22.8,16.56,"roof",1],[-695.5,-380.48,23.88,16.61,"roof",1],[-694.0,-380.48,23.8,16.59,"roof",1],[-692.5,-380.48,23.43,16.56,"roof",1],[-691.0,-380.48,24.07,16.53,"roof",1],[-689.5,-380.48,23.49,16.51,"roof",1],[-688.0,-380.48,26.05,16.49,"roof",1],[-686.5,-380.48,26.59,16.47,"roof",1],[-685.0,-380.48,27.22,16.45,"roof",1],[-683.5,-380.48,null,16.43,"void",0],[-682.0,-380.48,28.83,16.41,"roof",1],[-680.5,-380.48,27.33,16.39,"roof",1],[-679.0,-380.48,26.58,16.37,"roof",1],[-677.5,-380.48,26.0,16.35,"roof",1],[-676.0,-380.48,null,16.33,"void",0],[-674.5,-380.48,19.91,16.37,"court",1],[-673.0,-380.48,19.93,16.39,"court",1],[-671.5,-380.48,19.98,16.4,"court",0],[-670.0,-380.48,19.98,16.4,"court",0],[-668.5,-380.48,22.83,16.4,"roof",0],[-667.0,-380.48,22.82,16.4,"roof",0],[-665.5,-380.48,19.95,16.41,"court",0],[-664.0,-380.48,19.99,16.41,"court",1],[-662.5,-380.48,null,16.41,"void",0],[-661.0,-380.48,25.73,16.41,"roof",0],[-659.5,-380.48,26.5,16.41,"roof",1],[-658.0,-380.48,null,16.42,"void",0],[-656.5,-380.48,27.64,16.41,"roof",1],[-655.0,-380.48,28.1,16.39,"roof",1],[-653.5,-380.48,27.45,16.37,"roof",1],[-652.0,-380.48,26.85,16.34,"roof",1],[-650.5,-380.48,26.14,16.32,"roof",1],[-649.0,-380.48,null,16.3,"void",0],[-647.5,-380.48,23.52,16.28,"roof",1],[-646.0,-380.48,23.47,16.25,"roof",1],[-644.5,-380.48,23.42,16.23,"roof",1],[-643.0,-380.48,23.42,16.21,"roof",1],[-697.0,-378.98,24.21,16.52,"roof",1],[-695.5,-378.98,24.26,16.58,"roof",1],[-694.0,-378.98,24.28,16.58,"roof",1],[-692.5,-378.98,23.52,16.56,"roof",1],[-691.0,-378.98,null,16.53,"void",0],[-689.5,-378.98,23.49,16.5,"roof",1],[-688.0,-378.98,26.06,16.48,"roof",1],[-686.5,-378.98,26.56,16.46,"roof",1],[-685.0,-378.98,27.31,16.44,"roof",1],[-683.5,-378.98,27.92,16.41,"roof",1],[-682.0,-378.98,27.85,16.39,"roof",1],[-680.5,-378.98,27.21,16.37,"roof",1],[-679.0,-378.98,26.6,16.35,"roof",1],[-677.5,-378.98,25.85,16.34,"roof",0],[-676.0,-378.98,19.88,16.32,"court",1],[-674.5,-378.98,19.93,16.33,"court",1],[-673.0,-378.98,19.96,16.37,"court",1],[-671.5,-378.98,null,16.38,"void",0],[-670.0,-378.98,19.98,16.38,"court",1],[-668.5,-378.98,null,16.39,"void",0],[-667.0,-378.98,19.99,16.39,"court",1],[-665.5,-378.98,19.99,16.39,"court",1],[-664.0,-378.98,20.0,16.39,"court",1],[-662.5,-378.98,19.94,16.39,"court",1],[-661.0,-378.98,25.94,16.4,"roof",0],[-659.5,-378.98,26.51,16.4,"roof",1],[-658.0,-378.98,null,16.4,"void",0],[-656.5,-378.98,27.79,16.39,"roof",1],[-655.0,-378.98,28.08,16.36,"roof",1],[-653.5,-378.98,27.44,16.34,"roof",1],[-652.0,-378.98,26.74,16.32,"roof",1],[-650.5,-378.98,26.14,16.29,"roof",1],[-649.0,-378.98,23.55,16.27,"roof",1],[-647.5,-378.98,23.53,16.25,"roof",1],[-646.0,-378.98,23.5,16.23,"roof",1],[-644.5,-378.98,23.43,16.2,"roof",1],[-643.0,-378.98,23.37,16.18,"roof",1],[-697.0,-377.48,23.41,16.48,"roof",1],[-695.5,-377.48,23.59,16.54,"roof",1],[-694.0,-377.48,23.66,16.55,"roof",1],[-692.5,-377.48,25.41,16.55,"roof",1],[-691.0,-377.48,23.45,16.53,"roof",1],[-689.5,-377.48,24.2,16.5,"roof",1],[-688.0,-377.48,26.19,16.47,"roof",1],[-686.5,-377.48,26.68,16.44,"roof",1],[-685.0,-377.48,27.44,16.42,"roof",1],[-683.5,-377.48,28.01,16.4,"roof",1],[-682.0,-377.48,27.68,16.38,"roof",1],[-680.5,-377.48,27.12,16.36,"roof",1],[-679.0,-377.48,26.5,16.34,"roof",1],[-677.5,-377.48,25.91,16.32,"roof",1],[-676.0,-377.48,19.9,16.32,"court",1],[-674.5,-377.48,19.95,16.29,"court",1],[-673.0,-377.48,19.97,16.35,"court",1],[-671.5,-377.48,20.55,16.37,"court",1],[-670.0,-377.48,19.96,16.37,"court",1],[-668.5,-377.48,19.98,16.37,"court",1],[-667.0,-377.48,20.47,16.37,"court",1],[-665.5,-377.48,19.98,16.37,"court",1],[-664.0,-377.48,19.99,16.38,"court",1],[-662.5,-377.48,19.97,16.38,"court",1],[-661.0,-377.48,25.91,16.38,"roof",0],[-659.5,-377.48,26.43,16.38,"roof",1],[-658.0,-377.48,27.11,16.38,"roof",1],[-656.5,-377.48,27.69,16.36,"roof",1],[-655.0,-377.48,27.87,16.34,"roof",1],[-653.5,-377.48,27.33,16.31,"roof",1],[-652.0,-377.48,26.63,16.29,"roof",1],[-650.5,-377.48,25.98,16.27,"roof",1],[-649.0,-377.48,23.55,16.24,"roof",1],[-647.5,-377.48,23.51,16.22,"roof",1],[-646.0,-377.48,23.48,16.2,"roof",1],[-644.5,-377.48,23.44,16.18,"roof",1],[-643.0,-377.48,23.26,16.16,"roof",1],[-697.0,-375.98,22.61,16.45,"roof",1],[-695.5,-375.98,23.34,16.5,"roof",1],[-694.0,-375.98,23.4,16.51,"roof",1],[-692.5,-375.98,23.45,16.52,"roof",1],[-691.0,-375.98,23.48,16.52,"roof",1],[-689.5,-375.98,23.53,16.5,"roof",1],[-688.0,-375.98,26.14,16.47,"roof",1],[-686.5,-375.98,26.78,16.43,"roof",1],[-685.0,-375.98,27.4,16.41,"roof",1],[-683.5,-375.98,26.93,16.39,"roof",1],[-682.0,-375.98,26.33,16.37,"roof",1],[-680.5,-375.98,25.89,16.35,"roof",1],[-679.0,-375.98,25.67,16.33,"roof",1],[-677.5,-375.98,21.77,16.31,"mixed",0],[-676.0,-375.98,20.85,16.3,"court",0],[-674.5,-375.98,19.95,16.28,"court",1],[-673.0,-375.98,19.98,16.3,"court",1],[-671.5,-375.98,19.96,16.35,"court",1],[-670.0,-375.98,19.94,16.35,"court",1],[-668.5,-375.98,19.97,16.35,"court",1],[-667.0,-375.98,20.01,16.36,"court",1],[-665.5,-375.98,20.03,16.36,"court",1],[-664.0,-375.98,20.02,16.36,"court",0],[-662.5,-375.98,19.95,16.36,"court",0],[-661.0,-375.98,25.98,16.37,"roof",0],[-659.5,-375.98,26.52,16.37,"roof",1],[-658.0,-375.98,27.19,16.35,"roof",1],[-656.5,-375.98,27.82,16.33,"roof",1],[-655.0,-375.98,27.89,16.31,"roof",1],[-653.5,-375.98,27.24,16.29,"roof",1],[-652.0,-375.98,26.64,16.26,"roof",1],[-650.5,-375.98,26.09,16.24,"roof",1],[-649.0,-375.98,23.97,16.22,"roof",1],[-647.5,-375.98,23.52,16.19,"roof",1],[-646.0,-375.98,23.52,16.17,"roof",1],[-644.5,-375.98,23.92,16.15,"roof",1],[-643.0,-375.98,23.81,16.13,"roof",1],[-697.0,-374.48,22.75,16.41,"roof",1],[-695.5,-374.48,23.36,16.45,"roof",1],[-694.0,-374.48,23.43,16.48,"roof",1],[-692.5,-374.48,23.44,16.48,"roof",1],[-691.0,-374.48,23.48,16.49,"roof",1],[-689.5,-374.48,24.22,16.49,"roof",1],[-688.0,-374.48,26.26,16.47,"roof",1],[-686.5,-374.48,null,16.43,"void",0],[-685.0,-374.48,27.39,16.4,"roof",1],[-683.5,-374.48,26.8,16.38,"roof",1],[-682.0,-374.48,26.22,16.36,"roof",1],[-680.5,-374.48,25.95,16.34,"roof",1],[-679.0,-374.48,25.65,16.32,"roof",1],[-677.5,-374.48,22.92,16.3,"roof",0],[-676.0,-374.48,19.93,16.29,"court",1],[-674.5,-374.48,19.94,16.27,"court",1],[-673.0,-374.48,19.95,16.26,"court",1],[-671.5,-374.48,19.96,16.32,"court",0],[-670.0,-374.48,null,16.34,"void",0],[-668.5,-374.48,19.97,16.34,"court",1],[-667.0,-374.48,19.98,16.34,"court",0],[-665.5,-374.48,20.02,16.34,"court",1],[-664.0,-374.48,20.2,16.35,"court",1],[-662.5,-374.48,21.93,16.35,"roof",0],[-661.0,-374.48,21.98,16.35,"roof",0],[-659.5,-374.48,25.75,16.35,"roof",1],[-658.0,-374.48,26.08,16.33,"roof",1],[-656.5,-374.48,26.47,16.3,"roof",1],[-655.0,-374.48,27.75,16.28,"roof",1],[-653.5,-374.48,27.14,16.26,"roof",1],[-652.0,-374.48,26.57,16.24,"roof",1],[-650.5,-374.48,25.88,16.21,"roof",1],[-649.0,-374.48,24.29,16.19,"roof",1],[-647.5,-374.48,23.51,16.16,"roof",1],[-646.0,-374.48,23.53,16.15,"roof",1],[-644.5,-374.48,24.27,16.13,"roof",1],[-643.0,-374.48,24.4,16.1,"roof",1],[-697.0,-372.98,22.81,16.36,"roof",1],[-695.5,-372.98,23.37,16.4,"roof",1],[-694.0,-372.98,23.43,16.45,"roof",1],[-692.5,-372.98,23.43,16.44,"roof",1],[-691.0,-372.98,23.49,16.45,"roof",1],[-689.5,-372.98,23.54,16.46,"roof",1],[-688.0,-372.98,26.25,16.46,"roof",1],[-686.5,-372.98,null,16.44,"void",0],[-685.0,-372.98,28.13,16.39,"roof",1],[-683.5,-372.98,26.83,16.37,"roof",1],[-682.0,-372.98,26.18,16.35,"roof",1],[-680.5,-372.98,null,16.33,"void",0],[-679.0,-372.98,25.61,16.31,"roof",1],[-677.5,-372.98,null,16.29,"void",0],[-676.0,-372.98,19.94,16.27,"court",1],[-674.5,-372.98,25.57,16.26,"roof",0],[-673.0,-372.98,26.31,16.23,"roof",1],[-671.5,-372.98,29.19,16.28,"roof",1],[-670.0,-372.98,27.81,16.32,"roof",0],[-668.5,-372.98,29.18,16.32,"roof",0],[-667.0,-372.98,26.56,16.33,"roof",0],[-665.5,-372.98,23.03,16.33,"roof",0],[-664.0,-372.98,20.0,16.33,"court",1],[-662.5,-372.98,19.98,16.33,"court",1],[-661.0,-372.98,22.83,16.33,"roof",0],[-659.5,-372.98,25.79,16.32,"roof",1],[-658.0,-372.98,26.1,16.3,"roof",1],[-656.5,-372.98,26.61,16.28,"roof",1],[-655.0,-372.98,27.23,16.25,"roof",1],[-653.5,-372.98,27.12,16.23,"roof",1],[-652.0,-372.98,26.61,16.21,"roof",1],[-650.5,-372.98,25.83,16.18,"roof",1],[-649.0,-372.98,23.73,16.16,"roof",1],[-647.5,-372.98,23.55,16.14,"roof",1],[-646.0,-372.98,25.45,16.13,"roof",1],[-644.5,-372.98,23.49,16.1,"roof",1],[-643.0,-372.98,23.52,16.07,"roof",1],[-697.0,-371.48,22.81,16.36,"roof",0],[-695.5,-371.48,23.37,16.36,"roof",1],[-694.0,-371.48,23.46,16.4,"roof",1],[-692.5,-371.48,23.43,16.42,"roof",1],[-691.0,-371.48,23.46,16.41,"roof",1],[-689.5,-371.48,null,16.42,"void",0],[-688.0,-371.48,26.26,16.43,"roof",1],[-686.5,-371.48,26.97,16.43,"roof",1],[-685.0,-371.48,28.2,16.42,"roof",1],[-683.5,-371.48,26.71,16.37,"roof",1],[-682.0,-371.48,26.15,16.34,"roof",1],[-680.5,-371.48,25.87,16.32,"roof",1],[-679.0,-371.48,25.51,16.3,"roof",0],[-677.5,-371.48,19.93,16.28,"court",1],[-676.0,-371.48,19.98,16.26,"court",0],[-674.5,-371.48,25.59,16.25,"roof",0],[-673.0,-371.48,26.47,16.22,"roof",1],[-671.5,-371.48,27.19,16.24,"roof",1],[-670.0,-371.48,27.91,16.3,"roof",1],[-668.5,-371.48,27.24,16.31,"roof",1],[-667.0,-371.48,26.62,16.31,"roof",1],[-665.5,-371.48,25.81,16.31,"roof",1],[-664.0,-371.48,null,16.31,"void",0],[-662.5,-371.48,19.98,16.32,"court",1],[-661.0,-371.48,19.91,16.31,"court",0],[-659.5,-371.48,25.74,16.29,"roof",1],[-658.0,-371.48,26.09,16.27,"roof",1],[-656.5,-371.48,26.68,16.25,"roof",1],[-655.0,-371.48,27.24,16.23,"roof",1],[-653.5,-371.48,27.13,16.2,"roof",1],[-652.0,-371.48,26.54,16.18,"roof",1],[-650.5,-371.48,25.88,16.15,"roof",1],[-649.0,-371.48,23.56,16.13,"roof",1],[-647.5,-371.48,23.51,16.12,"roof",1],[-646.0,-371.48,23.5,16.1,"roof",1],[-644.5,-371.48,23.46,16.06,"roof",1],[-643.0,-371.48,23.04,16.03,"roof",1],[-697.0,-369.98,23.39,16.37,"roof",1],[-695.5,-369.98,23.4,16.34,"roof",1],[-694.0,-369.98,23.45,16.35,"roof",1],[-692.5,-369.98,23.48,16.39,"roof",1],[-691.0,-369.98,23.51,16.37,"roof",1],[-689.5,-369.98,25.78,16.38,"roof",1],[-688.0,-369.98,26.39,16.39,"roof",1],[-686.5,-369.98,26.98,16.4,"roof",1],[-685.0,-369.98,null,16.4,"void",0],[-683.5,-369.98,26.74,16.39,"roof",1],[-682.0,-369.98,26.12,16.34,"roof",1],[-680.5,-369.98,25.85,16.31,"roof",1],[-679.0,-369.98,25.52,16.28,"roof",0],[-677.5,-369.98,19.95,16.26,"court",1],[-676.0,-369.98,22.75,16.24,"roof",0],[-674.5,-369.98,null,16.23,"void",0],[-673.0,-369.98,26.44,16.22,"roof",1],[-671.5,-369.98,27.3,16.19,"roof",1],[-670.0,-369.98,27.9,16.26,"roof",1],[-668.5,-369.98,27.25,16.29,"roof",1],[-667.0,-369.98,26.56,16.29,"roof",1],[-665.5,-369.98,25.62,16.3,"roof",1],[-664.0,-369.98,22.38,16.3,"roof",0],[-662.5,-369.98,19.99,16.3,"court",1],[-661.0,-369.98,25.5,16.29,"roof",0],[-659.5,-369.98,25.84,16.27,"roof",1],[-658.0,-369.98,26.17,16.24,"roof",1],[-656.5,-369.98,26.66,16.22,"roof",1],[-655.0,-369.98,27.21,16.2,"roof",1],[-653.5,-369.98,27.1,16.17,"roof",1],[-652.0,-369.98,26.41,16.14,"roof",1],[-650.5,-369.98,25.73,16.13,"roof",1],[-649.0,-369.98,23.55,16.11,"roof",1],[-647.5,-369.98,23.53,16.09,"roof",1],[-646.0,-369.98,23.49,16.06,"roof",1],[-644.5,-369.98,23.44,16.03,"roof",1],[-697.0,-368.48,22.99,16.39,"roof",1],[-695.5,-368.48,23.19,16.35,"roof",1],[-694.0,-368.48,23.16,16.32,"roof",1],[-692.5,-368.48,23.34,16.35,"roof",1],[-691.0,-368.48,23.38,16.35,"roof",1],[-689.5,-368.48,25.9,16.34,"roof",1],[-688.0,-368.48,26.36,16.35,"roof",1],[-686.5,-368.48,27.1,16.36,"roof",1],[-685.0,-368.48,27.26,16.37,"roof",1],[-683.5,-368.48,26.63,16.37,"roof",1],[-682.0,-368.48,26.11,16.36,"roof",1],[-680.5,-368.48,25.79,16.3,"roof",1],[-679.0,-368.48,22.41,16.27,"roof",0],[-677.5,-368.48,null,16.25,"void",0],[-676.0,-368.48,20.0,16.23,"court",0],[-674.5,-368.48,25.69,16.22,"roof",1],[-673.0,-368.48,26.55,16.21,"roof",1],[-671.5,-368.48,28.1,16.18,"roof",1],[-670.0,-368.48,28.36,16.22,"roof",1],[-668.5,-368.48,28.1,16.27,"roof",1],[-667.0,-368.48,26.44,16.28,"roof",1],[-665.5,-368.48,25.7,16.28,"roof",1],[-664.0,-368.48,null,16.28,"void",0],[-662.5,-368.48,19.95,16.28,"court",1],[-661.0,-368.48,25.6,16.26,"roof",0],[-659.5,-368.48,25.91,16.24,"roof",1],[-658.0,-368.48,26.25,16.22,"roof",1],[-656.5,-368.48,26.78,16.19,"roof",1],[-655.0,-368.48,28.16,16.16,"roof",1],[-653.5,-368.48,27.09,16.14,"roof",1],[-652.0,-368.48,26.46,16.12,"roof",1],[-650.5,-368.48,25.69,16.11,"roof",1],[-649.0,-368.48,23.64,16.09,"roof",1],[-647.5,-368.48,23.51,16.06,"roof",1],[-646.0,-368.48,23.47,16.03,"roof",1],[-644.5,-368.48,23.46,16.0,"roof",1],[-697.0,-366.98,22.3,16.39,"roof",0],[-695.5,-366.98,22.43,16.37,"roof",1],[-694.0,-366.98,22.53,16.33,"roof",1],[-692.5,-366.98,22.64,16.32,"roof",1],[-691.0,-366.98,23.26,16.33,"roof",1],[-689.5,-366.98,25.74,16.3,"roof",1],[-688.0,-366.98,26.55,16.31,"roof",1],[-686.5,-366.98,27.12,16.32,"roof",1],[-685.0,-366.98,27.21,16.33,"roof",1],[-683.5,-366.98,26.59,16.34,"roof",1],[-682.0,-366.98,26.11,16.34,"roof",1],[-680.5,-366.98,25.79,16.33,"roof",1],[-679.0,-366.98,19.86,16.27,"court",0],[-677.5,-366.98,20.0,16.24,"court",0],[-676.0,-366.98,null,16.22,"void",0],[-674.5,-366.98,25.72,16.2,"roof",1],[-673.0,-366.98,26.71,16.2,"roof",1],[-671.5,-366.98,28.1,16.17,"roof",1],[-670.0,-366.98,28.13,16.17,"roof",1],[-668.5,-366.98,28.08,16.24,"roof",1],[-667.0,-366.98,26.47,16.26,"roof",1],[-665.5,-366.98,25.68,16.26,"roof",0],[-664.0,-366.98,19.99,16.27,"court",1],[-662.5,-366.98,19.97,16.26,"court",1],[-661.0,-366.98,25.51,16.23,"roof",0],[-659.5,-366.98,25.93,16.21,"roof",1],[-658.0,-366.98,26.21,16.18,"roof",1],[-656.5,-366.98,26.67,16.15,"roof",1],[-655.0,-366.98,null,16.13,"void",0],[-653.5,-366.98,26.98,16.11,"roof",1],[-652.0,-366.98,26.36,16.1,"roof",1],[-650.5,-366.98,25.77,16.08,"roof",1],[-649.0,-366.98,23.87,16.06,"roof",1],[-647.5,-366.98,23.49,16.03,"roof",1],[-646.0,-366.98,23.49,16.0,"roof",1],[-644.5,-366.98,23.43,16.0,"roof",1],[-697.0,-365.48,20.33,16.34,"court",1],[-695.5,-365.48,21.5,16.35,"mixed",0],[-694.0,-365.48,21.7,16.33,"mixed",0],[-692.5,-365.48,22.58,16.31,"roof",1],[-691.0,-365.48,23.39,16.31,"roof",1],[-689.5,-365.48,25.96,16.28,"roof",1],[-688.0,-365.48,26.59,16.27,"roof",1],[-686.5,-365.48,27.19,16.29,"roof",1],[-685.0,-365.48,27.17,16.29,"roof",1],[-683.5,-365.48,26.5,16.3,"roof",1],[-682.0,-365.48,26.06,16.31,"roof",1],[-680.5,-365.48,25.84,16.32,"roof",1],[-679.0,-365.48,22.65,16.29,"roof",0],[-677.5,-365.48,19.96,16.24,"court",0],[-676.0,-365.48,20.01,16.21,"court",0],[-674.5,-365.48,25.93,16.19,"roof",1],[-673.0,-365.48,26.64,16.18,"roof",1],[-671.5,-365.48,null,16.17,"void",0],[-670.0,-365.48,null,16.14,"void",0],[-668.5,-365.48,28.11,16.2,"roof",1],[-667.0,-365.48,26.26,16.24,"roof",1],[-665.5,-365.48,25.58,16.25,"roof",0],[-664.0,-365.48,19.95,16.25,"court",1],[-662.5,-365.48,20.53,16.23,"court",0],[-661.0,-365.48,25.64,16.21,"roof",0],[-659.5,-365.48,25.94,16.18,"roof",1],[-658.0,-365.48,26.31,16.15,"roof",1],[-656.5,-365.48,26.79,16.12,"roof",1],[-655.0,-365.48,27.46,16.11,"roof",1],[-653.5,-365.48,26.98,16.09,"roof",1],[-652.0,-365.48,26.3,16.08,"roof",1],[-650.5,-365.48,null,16.06,"void",0],[-649.0,-365.48,23.58,16.03,"roof",1],[-647.5,-365.48,23.59,16.01,"roof",1],[-646.0,-365.48,23.55,16.01,"roof",1],[-644.5,-365.48,23.46,16.01,"roof",1],[-682.0,-363.98,null,16.27,"void",0],[-680.5,-363.98,25.77,16.28,"roof",1],[-679.0,-363.98,null,16.29,"void",0],[-677.5,-363.98,null,16.27,"void",0],[-676.0,-363.98,20.0,16.2,"court",0],[-674.5,-363.98,null,16.18,"void",0],[-673.0,-363.98,26.66,16.17,"roof",1],[-671.5,-363.98,27.48,16.16,"roof",1],[-670.0,-363.98,27.8,16.12,"roof",1],[-668.5,-363.98,26.99,16.15,"roof",1],[-667.0,-363.98,26.32,16.22,"roof",1],[-665.5,-363.98,25.44,16.23,"roof",0],[-664.0,-363.98,19.96,16.22,"court",1],[-662.5,-363.98,21.66,16.2,"mixed",0],[-661.0,-363.98,25.64,16.17,"roof",1],[-659.5,-363.98,25.93,16.14,"roof",1],[-658.0,-363.98,26.24,16.12,"roof",1],[-656.5,-363.98,26.92,16.1,"roof",1],[-655.0,-363.98,27.43,16.09,"roof",1],[-653.5,-363.98,26.83,16.07,"roof",1],[-652.0,-363.98,26.26,16.05,"roof",1],[-650.5,-363.98,null,16.03,"void",0],[-649.0,-363.98,23.07,16.02,"roof",1],[-647.5,-363.98,23.15,16.02,"roof",1],[-646.0,-363.98,23.23,16.0,"roof",1],[-644.5,-363.98,23.11,15.99,"roof",1],[-680.5,-362.48,null,16.24,"void",0],[-679.0,-362.48,22.32,16.25,"roof",0],[-677.5,-362.48,22.3,16.26,"roof",0],[-676.0,-362.48,null,16.23,"void",0],[-667.0,-362.48,25.46,16.17,"roof",1],[-665.5,-362.48,25.42,16.22,"roof",0],[-664.0,-362.48,19.98,16.19,"court",0],[-662.5,-362.48,22.73,16.16,"roof",1],[-661.0,-362.48,25.69,16.13,"roof",1],[-659.5,-362.48,25.98,16.11,"roof",1],[-658.0,-362.48,26.28,16.09,"roof",1],[-656.5,-362.48,26.9,16.08,"roof",1],[-655.0,-362.48,27.43,16.07,"roof",1],[-653.5,-362.48,26.83,16.05,"roof",1],[-652.0,-362.48,26.16,16.03,"roof",1],[-650.5,-362.48,23.52,16.02,"roof",1],[-649.0,-362.48,22.91,16.01,"roof",1],[-647.5,-362.48,22.35,15.99,"roof",1],[-646.0,-362.48,22.47,15.98,"roof",1],[-644.5,-362.48,22.4,15.96,"roof",0],[-664.0,-360.98,22.22,16.1,"roof",0],[-662.5,-360.98,22.25,16.08,"roof",0],[-661.0,-360.98,22.22,16.08,"roof",1],[-659.5,-360.98,19.92,16.08,"court",0],[-658.0,-360.98,22.36,16.05,"roof",0],[-644.5,-360.98,20.43,15.94,"court",1]]}
+}

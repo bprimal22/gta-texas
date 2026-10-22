@@ -1,0 +1,46 @@
+{
+ "title": "Live-oak foliage spray atlas (derived)",
+ "license": "CC0 1.0 \u2014 derived from ambientCG LeafSet022 (CC0); derivative released CC0",
+ "source": {
+  "url": "https://ambientcg.com/get?file=LeafSet022_1K-PNG.zip",
+  "page": "https://ambientcg.com/view?id=LeafSet022",
+  "license": "CC0 1.0 (ambientCG)",
+  "archiveBytes": 11120618,
+  "archiveSha256": "5a137508f47324e754b5700797991a3295b3169e96b047b67ae4baa7b7c739ee"
+ },
+ "preparation": "tools/vegetation/build_foliage_atlas.py: the 6 photographed leaves are cut by their opacity masks, recoloured toward dark olive live-oak green (luminance detail kept), scaled to ~4-8 cm on a 1 m card, stamped along procedurally drawn twigs (3 open sprays + 1 dense clump), colour-bled into transparent texels; normal map stamped with rotated tangent-space normals. Reference-guided authoring: not a scan of Quercus virginiana. Follow-up 2 (2026-10-19): brighter, more varied leaf palette (9 greens incl. sunlit and grey-green underside tones).",
+ "files": [
+  {
+   "file": "live-oak-foliage-color.png",
+   "bytes": 1033212,
+   "sha256": "a40d27c6bbb85c6e611381f59e435d308f45968461eac12b2da3d757ddd99c35",
+   "derivedFrom": "LeafSet022_1K-PNG_Color.png + _Opacity.png"
+  },
+  {
+   "file": "live-oak-foliage-normal.jpg",
+   "bytes": 27952,
+   "sha256": "65bc5dc5f8f2e83a09b09a6be367cf010374455084af5be16889ace98b98ca19",
+   "derivedFrom": "LeafSet022_1K-PNG_NormalGL.png"
+  }
+ ],
+ "treeSites": {
+  "file": "tree-sites.json",
+  "bytes": 111418,
+  "sha256": "23b758b06e3cd46c43a18fb12bbf391363d7a6f485cffad4a5db0b6e1daf1ea2",
+  "source": "UT Austin TreeKeeper public map (Davey Resource Group TreeKeeper), GeoServer service https://geocomyt.daveytreekeeper.com/geoserver/Treekeeper/wms (public map config: research/raw/ut-tree-public-map-service.json), layer UofTAustin_CampusTrees; public site viewer https://utaustin.treekeepersoftware.com/",
+  "captured": "2026-09-06 (GeoJSON point export, EPSG:4326, 4,860 features; WFS timeStamp of the same service sample 2026-09-06T10:57Z). The exact export query URL was not recorded with the capture.",
+  "input": {
+   "file": "ut-tree-inventory-2026-09-06.geojson (research capture, not shipped)",
+   "bytes": 1047940,
+   "sha256": "0d41532d77947408ff73f6c48d0dd6b9258980b9f78071738299197b8f1f4ea2"
+  },
+  "license": "No explicit open license is stated by the public UT map service. Only point positions, site_id and the numeric tree_type are used; no species, photos, attributes or imagery are shipped. Integrator/UT to confirm terms before public release.",
+  "fieldsUsed": [
+   "site_id",
+   "tree_type",
+   "geometry (point)"
+  ],
+  "preparation": "tools/vegetation/build_tree_sites.py: projected with the campus formula (origin -97.73716, 30.2861; SX = 111320*cos(30.2861 deg), SZ = 110851), clipped to campus bounds [-760,-864,1296,1536], rounded to 0.01 m. 4,812 sites in bounds (type 1: 4,753; type 2: 43; type 3: 16).",
+  "interpretation": "Inventory SITE positions, not verified living trunks. tree_type enum is unpublished; TreeKeeper sites can be existing trees, stumps or vacant planting sites (https://daveyresourcegroup.atlassian.net/wiki/spaces/TKS/pages/691568708/Life%2BCycle%2Bof%2Ba%2BTree%2BSite). The game instantiates type 1 only; types 2/3 only extend inventory coverage."
+ }
+}

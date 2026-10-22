@@ -1,0 +1,634 @@
+{
+ "description": "CC0 PBR material sets for generated UT/Austin context buildings (lib/campus/context). Downloaded at build time by tools/context/fetch-materials.mjs; shipped locally, no runtime network.",
+ "files": [
+  {
+   "file": "buffBrick-color.jpg",
+   "key": "buffBrick",
+   "map": "color",
+   "asset": "brick_wall_003",
+   "source": "https://polyhaven.com/a/brick_wall_003",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_003/brick_wall_003_diffuse_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel",
+    "Dimitrios Savva"
+   ],
+   "tileMetres": 4,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 665706,
+   "sourceSha256": "cb691df78201bd292c1004a796b76ef8ee9895548fb545a4a4d6d77903eeec01",
+   "bytes": 265907,
+   "sha256": "781d9ce8729a17856620bbcf1c66cff812d155903d4d33e416734e5dc0433d96",
+   "meanSrgb": [
+    150,
+    124,
+    102
+   ],
+   "note": "tan running-bond brick, clean joints (stand-in for UT buff \"Texas blend\" brick)"
+  },
+  {
+   "file": "buffBrick-normal.jpg",
+   "key": "buffBrick",
+   "map": "normal",
+   "asset": "brick_wall_003",
+   "source": "https://polyhaven.com/a/brick_wall_003",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_003/brick_wall_003_nor_gl_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel",
+    "Dimitrios Savva"
+   ],
+   "tileMetres": 4,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 1242175,
+   "sourceSha256": "9bca29b5277b4d5be16ed2198ab705f2d754dfba509e9aec567ab4d2ed8a0981",
+   "bytes": 437525,
+   "sha256": "a92f7c47e57b81de45532811b4e1756dc0d6d6475aa63095215057886650090d",
+   "note": "tan running-bond brick, clean joints (stand-in for UT buff \"Texas blend\" brick)"
+  },
+  {
+   "file": "buffBrick-rough.jpg",
+   "key": "buffBrick",
+   "map": "rough",
+   "asset": "brick_wall_003",
+   "source": "https://polyhaven.com/a/brick_wall_003",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_wall_003/brick_wall_003_rough_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel",
+    "Dimitrios Savva"
+   ],
+   "tileMetres": 4,
+   "processing": "resize 512px; JPEG re-encode",
+   "sourceBytes": 345775,
+   "sourceSha256": "7fc63700443845bd6065bc47aa79e6782ba555870c23c0e6426638ac15133752",
+   "bytes": 43647,
+   "sha256": "8bd8e7b37c61bd83e3796eb3ad673075798406bff81412fc8dc5c59675e58ace",
+   "note": "tan running-bond brick, clean joints (stand-in for UT buff \"Texas blend\" brick)"
+  },
+  {
+   "file": "brownBrick-color.jpg",
+   "key": "brownBrick",
+   "map": "color",
+   "asset": "yellow_brick",
+   "source": "https://polyhaven.com/a/yellow_brick",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/yellow_brick/yellow_brick_diff_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 2,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 1176449,
+   "sourceSha256": "babf44008391330321730aed4334d4d9c9de35af6b2e50c4bac0ffaf384a36df",
+   "bytes": 366666,
+   "sha256": "2840ee7ba8d40ff2cadffe3412560b889fb820081a9315d613216a3799254ecd",
+   "meanSrgb": [
+    164,
+    137,
+    107
+   ],
+   "note": "mixed brown/tan brick (1960s-80s apartments and labs)"
+  },
+  {
+   "file": "brownBrick-normal.jpg",
+   "key": "brownBrick",
+   "map": "normal",
+   "asset": "yellow_brick",
+   "source": "https://polyhaven.com/a/yellow_brick",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/yellow_brick/yellow_brick_nor_gl_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 2,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 930252,
+   "sourceSha256": "f0b1ed10580c98b5bd84f87864732a91a61e66b1e9c60241831e361c0a5a21cb",
+   "bytes": 281647,
+   "sha256": "ecd1c3168c349db448ac27c068683cbeeb260d986c526b92cabb28a7935b8b5c",
+   "note": "mixed brown/tan brick (1960s-80s apartments and labs)"
+  },
+  {
+   "file": "brownBrick-rough.jpg",
+   "key": "brownBrick",
+   "map": "rough",
+   "asset": "yellow_brick",
+   "source": "https://polyhaven.com/a/yellow_brick",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/yellow_brick/yellow_brick_rough_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 2,
+   "processing": "resize 512px; JPEG re-encode",
+   "sourceBytes": 1024165,
+   "sourceSha256": "23270a57ecfafe379acc5b11279c88da6607a0b94e6b9ef8fca4d7d7e92048fb",
+   "bytes": 90322,
+   "sha256": "79f0877e12b726fd1cd4195063d7d6b02f7b5b93b34f2ea99519a94269093eeb",
+   "note": "mixed brown/tan brick (1960s-80s apartments and labs)"
+  },
+  {
+   "file": "limestone-color.jpg",
+   "key": "limestone",
+   "map": "color",
+   "asset": "sandstone_blocks_08",
+   "source": "https://polyhaven.com/a/sandstone_blocks_08",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sandstone_blocks_08/sandstone_blocks_08_diff_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 3,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 242776,
+   "sourceSha256": "0cac65461ba33003b8a27b03c2b87f3393a824a9a98036c4c8de6182a1449369",
+   "bytes": 73904,
+   "sha256": "d07db849446f4cd28eede68bf7f994b355c3c50fc1b13d2e04aa6d5a02bbe01c",
+   "meanSrgb": [
+    165,
+    146,
+    116
+   ],
+   "note": "smooth large ashlar blocks (stand-in for cream Texas limestone)"
+  },
+  {
+   "file": "limestone-normal.jpg",
+   "key": "limestone",
+   "map": "normal",
+   "asset": "sandstone_blocks_08",
+   "source": "https://polyhaven.com/a/sandstone_blocks_08",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sandstone_blocks_08/sandstone_blocks_08_nor_gl_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 3,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 167040,
+   "sourceSha256": "1203d5300dfc717db67220531fcdad75214d48b98d21114a155b3f01d54ab012",
+   "bytes": 55139,
+   "sha256": "53e4e7d0c61e4a9f9710a2ad6b390b98bcffcb1bb50cb4835e119245a9542702",
+   "note": "smooth large ashlar blocks (stand-in for cream Texas limestone)"
+  },
+  {
+   "file": "limestone-rough.jpg",
+   "key": "limestone",
+   "map": "rough",
+   "asset": "sandstone_blocks_08",
+   "source": "https://polyhaven.com/a/sandstone_blocks_08",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/sandstone_blocks_08/sandstone_blocks_08_rough_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 3,
+   "processing": "resize 512px; JPEG re-encode",
+   "sourceBytes": 161690,
+   "sourceSha256": "f4f3e78f08a5ca3a80509ca0af9f88cd12017ccac42b0f3b6e9f61a29d521379",
+   "bytes": 13757,
+   "sha256": "242c89c6926c6302568a2f13a96dc44590c260762f3755498ba27736c0a6f67e",
+   "note": "smooth large ashlar blocks (stand-in for cream Texas limestone)"
+  },
+  {
+   "file": "precast-color.jpg",
+   "key": "precast",
+   "map": "color",
+   "asset": "concrete_wall_008",
+   "source": "https://polyhaven.com/a/concrete_wall_008",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_diff_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Dario Barresi",
+    "Charlotte Baglioni"
+   ],
+   "tileMetres": 2.7100000381469727,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 623051,
+   "sourceSha256": "a203166d280d3cfc6a91bbc9ffdae406eb9555b4a4f658cd92619063eb17c147",
+   "bytes": 126638,
+   "sha256": "5d0ac28fbb0138584215470a9b0ff3623432a2b9b4401e788650884b91b89bc8",
+   "meanSrgb": [
+    140,
+    133,
+    111
+   ],
+   "note": "smooth precast panels with joints"
+  },
+  {
+   "file": "precast-normal.jpg",
+   "key": "precast",
+   "map": "normal",
+   "asset": "concrete_wall_008",
+   "source": "https://polyhaven.com/a/concrete_wall_008",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_nor_gl_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Dario Barresi",
+    "Charlotte Baglioni"
+   ],
+   "tileMetres": 2.7100000381469727,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 511519,
+   "sourceSha256": "83cd3fa2c7cbf4c81402386065daf8fa6f72e1f1f77e02ccb1eedb28496909ae",
+   "bytes": 72612,
+   "sha256": "1a251f6616c1bd2588ce432ccc70166ade3b09847023a91959356e43bc9baa31",
+   "note": "smooth precast panels with joints"
+  },
+  {
+   "file": "precast-rough.jpg",
+   "key": "precast",
+   "map": "rough",
+   "asset": "concrete_wall_008",
+   "source": "https://polyhaven.com/a/concrete_wall_008",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_wall_008/concrete_wall_008_rough_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Dario Barresi",
+    "Charlotte Baglioni"
+   ],
+   "tileMetres": 2.7100000381469727,
+   "processing": "resize 512px; JPEG re-encode",
+   "sourceBytes": 322313,
+   "sourceSha256": "2344fe72c4dc2fb9e4ce9b47079524ee8969f22c4af4bee85667511073fbf14a",
+   "bytes": 4011,
+   "sha256": "a94366c011259d287d4327e6005e6be813b9e223ebb798ac6080f7ea3cd622cd",
+   "note": "smooth precast panels with joints"
+  },
+  {
+   "file": "stucco-color.jpg",
+   "key": "stucco",
+   "map": "color",
+   "asset": "beige_wall_001",
+   "source": "https://polyhaven.com/a/beige_wall_001",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/beige_wall_001/beige_wall_001_diff_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Dimitrios Savva",
+    "Rico Cilliers"
+   ],
+   "tileMetres": 3,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 33074,
+   "sourceSha256": "72104704d0b9bd3713c5f6238971252b63eccf6e61263059c674caa8f3d0fa6d",
+   "bytes": 19731,
+   "sha256": "02eccfae7def889cdacc3e51e841c19bd3cdb8304827a652ada09a41093f14e3",
+   "meanSrgb": [
+    157,
+    140,
+    120
+   ],
+   "note": "smooth exterior plaster / stucco"
+  },
+  {
+   "file": "stucco-normal.jpg",
+   "key": "stucco",
+   "map": "normal",
+   "asset": "beige_wall_001",
+   "source": "https://polyhaven.com/a/beige_wall_001",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/beige_wall_001/beige_wall_001_nor_gl_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Dimitrios Savva",
+    "Rico Cilliers"
+   ],
+   "tileMetres": 3,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 153434,
+   "sourceSha256": "cec747be50f91da0693986080b6f59ef868d53cb2ab7d577982165ece63ed75e",
+   "bytes": 143683,
+   "sha256": "40257e03945f053b94942fd938a778bb890019f405ccf9bbef4ed1b6f926941c",
+   "note": "smooth exterior plaster / stucco"
+  },
+  {
+   "file": "stucco-rough.jpg",
+   "key": "stucco",
+   "map": "rough",
+   "asset": "beige_wall_001",
+   "source": "https://polyhaven.com/a/beige_wall_001",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/beige_wall_001/beige_wall_001_rough_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Dimitrios Savva",
+    "Rico Cilliers"
+   ],
+   "tileMetres": 3,
+   "processing": "resize 512px; JPEG re-encode",
+   "sourceBytes": 151256,
+   "sourceSha256": "fc8328f47f4d2d82d5311a75bcb5c8cd8979d171a0ee097ad9e44ca9c5a00d60",
+   "bytes": 23807,
+   "sha256": "870419209325cf7228b569a0b72908be478fb577a0d9b4074fd2ea45351e1717",
+   "note": "smooth exterior plaster / stucco"
+  },
+  {
+   "file": "siding-color.jpg",
+   "key": "siding",
+   "map": "color",
+   "asset": "white_planks_clean",
+   "source": "https://polyhaven.com/a/white_planks_clean",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_planks_clean/white_planks_clean_diff_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 1.8000000715255737,
+   "processing": "rotate 90; resize 1024px; JPEG re-encode",
+   "sourceBytes": 473124,
+   "sourceSha256": "1be65e3940b59a4e7eb902f47da5d00ddb2b427b5ef18e7959fd82f17a3afb2c",
+   "bytes": 81812,
+   "sha256": "659d5b74071e6080c68230d6766b56edd979402a514416d60f3d88f8530afc0e",
+   "meanSrgb": [
+    180,
+    166,
+    157
+   ],
+   "note": "painted boards, rotated 90 degrees to read as horizontal lap siding"
+  },
+  {
+   "file": "siding-normal.jpg",
+   "key": "siding",
+   "map": "normal",
+   "asset": "white_planks_clean",
+   "source": "https://polyhaven.com/a/white_planks_clean",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_planks_clean/white_planks_clean_nor_gl_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 1.8000000715255737,
+   "processing": "rotate 90; resize 1024px; JPEG re-encode",
+   "sourceBytes": 512902,
+   "sourceSha256": "8d9ceef61dbc4bd567ba1b10691c890caf74cddb9861b576f194533b7089ff7e",
+   "bytes": 83161,
+   "sha256": "8839a29f9524d75f72184595ba072d40ba92b7015149033da8e9dc645f976499",
+   "note": "painted boards, rotated 90 degrees to read as horizontal lap siding"
+  },
+  {
+   "file": "siding-rough.jpg",
+   "key": "siding",
+   "map": "rough",
+   "asset": "white_planks_clean",
+   "source": "https://polyhaven.com/a/white_planks_clean",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_planks_clean/white_planks_clean_rough_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 1.8000000715255737,
+   "processing": "rotate 90; resize 512px; JPEG re-encode",
+   "sourceBytes": 428932,
+   "sourceSha256": "a707c6ffc7cfa8f354e0e62e351009e1ced71a6150738d39eb20faa814ac39f1",
+   "bytes": 18199,
+   "sha256": "a454b5ad3fa8ed7d55b265fbd14699f69456391e923ba4b8508a92c0f8fa69af",
+   "note": "painted boards, rotated 90 degrees to read as horizontal lap siding"
+  },
+  {
+   "file": "metal-color.jpg",
+   "key": "metal",
+   "map": "color",
+   "asset": "corrugated_iron_03",
+   "source": "https://polyhaven.com/a/corrugated_iron_03",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/corrugated_iron_03/corrugated_iron_03_diff_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Charlotte Baglioni"
+   ],
+   "tileMetres": 2,
+   "processing": "modulate 100,20; resize 1024px; JPEG re-encode",
+   "sourceBytes": 479372,
+   "sourceSha256": "d1378cbe96c625f79180147873c586bfc653ef5a66ea7a4a58cd5b18701f2bb4",
+   "bytes": 76369,
+   "sha256": "d19a850315fa5b8718c7c6231f00f819ede0d518ee8b5f319e2537520e3bd42e",
+   "meanSrgb": [
+    112,
+    114,
+    115
+   ],
+   "note": "ribbed metal panel; desaturated for neutral tinting"
+  },
+  {
+   "file": "metal-normal.jpg",
+   "key": "metal",
+   "map": "normal",
+   "asset": "corrugated_iron_03",
+   "source": "https://polyhaven.com/a/corrugated_iron_03",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/corrugated_iron_03/corrugated_iron_03_nor_gl_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Charlotte Baglioni"
+   ],
+   "tileMetres": 2,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 524530,
+   "sourceSha256": "4d53371c5d615b0c60a6eb5c1944d85fc640c433d1468490bd01c4caa6a80bae",
+   "bytes": 137475,
+   "sha256": "41310952194070191a4a0526f5aefe9155dece3379c8eff4b5e582efc9bc9c26",
+   "note": "ribbed metal panel; desaturated for neutral tinting"
+  },
+  {
+   "file": "metal-rough.jpg",
+   "key": "metal",
+   "map": "rough",
+   "asset": "corrugated_iron_03",
+   "source": "https://polyhaven.com/a/corrugated_iron_03",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/corrugated_iron_03/corrugated_iron_03_rough_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Charlotte Baglioni"
+   ],
+   "tileMetres": 2,
+   "processing": "resize 512px; JPEG re-encode",
+   "sourceBytes": 175319,
+   "sourceSha256": "d708d5756decc80bf48abc2de2ced089053ee0d3f1ebff31202e284c2eeaed39",
+   "bytes": 4532,
+   "sha256": "027a2b68b9aacb22b6488fcf9c5ea4848c7ce9b1cfda2c50c48c0f0c8ce2130f",
+   "note": "ribbed metal panel; desaturated for neutral tinting"
+  },
+  {
+   "file": "clayTile-color.jpg",
+   "key": "clayTile",
+   "map": "color",
+   "asset": "clay_roof_tiles_02",
+   "source": "https://polyhaven.com/a/clay_roof_tiles_02",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/clay_roof_tiles_02/clay_roof_tiles_02_diff_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Amal Kumar"
+   ],
+   "tileMetres": 2.5,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 903929,
+   "sourceSha256": "227a062b38b170e02c27eaa513dae45dc8bc893a62cbd8d0c08e2c32b381fc25",
+   "bytes": 221331,
+   "sha256": "a13a6acf87f460cd3659467c5603762bb4cb85821e274a7c2d3f93f322e507fc",
+   "meanSrgb": [
+    145,
+    79,
+    43
+   ],
+   "note": "red clay barrel tile; courses run along texture v"
+  },
+  {
+   "file": "clayTile-normal.jpg",
+   "key": "clayTile",
+   "map": "normal",
+   "asset": "clay_roof_tiles_02",
+   "source": "https://polyhaven.com/a/clay_roof_tiles_02",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/clay_roof_tiles_02/clay_roof_tiles_02_nor_gl_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Amal Kumar"
+   ],
+   "tileMetres": 2.5,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 990101,
+   "sourceSha256": "1548d3ebce335a4590d9e421556c4189a7b63852c793a568c71b9e533f8b62d5",
+   "bytes": 310008,
+   "sha256": "2999b8b61f7f4211da1fdc1193063294e96ab3b611bad078973db7a61695a4a4",
+   "note": "red clay barrel tile; courses run along texture v"
+  },
+  {
+   "file": "clayTile-rough.jpg",
+   "key": "clayTile",
+   "map": "rough",
+   "asset": "clay_roof_tiles_02",
+   "source": "https://polyhaven.com/a/clay_roof_tiles_02",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/clay_roof_tiles_02/clay_roof_tiles_02_rough_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Amal Kumar"
+   ],
+   "tileMetres": 2.5,
+   "processing": "resize 512px; JPEG re-encode",
+   "sourceBytes": 341520,
+   "sourceSha256": "6d7596c4f3644ac50237381aeadf58f9b68a6dddeb66b6eef4f64462dcbbf82f",
+   "bytes": 16930,
+   "sha256": "0dd58771bba43646971a9b22550ffcf759f1280fbc139c7137d325b6bac2973e",
+   "note": "red clay barrel tile; courses run along texture v"
+  },
+  {
+   "file": "shingle-color.jpg",
+   "key": "shingle",
+   "map": "color",
+   "asset": "grey_roof_tiles",
+   "source": "https://polyhaven.com/a/grey_roof_tiles",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grey_roof_tiles/grey_roof_tiles_diff_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 3,
+   "processing": "modulate 92,10; resize 1024px; JPEG re-encode",
+   "sourceBytes": 596156,
+   "sourceSha256": "f61107b70cf56074c9db09384a332620c94c678ed2baabfae78029a8242e49a3",
+   "bytes": 204886,
+   "sha256": "d51f743fc675a5c31820f2f2a70b2c131a3e52be22429bf7c30fb6115cf23aeb",
+   "meanSrgb": [
+    79,
+    79,
+    77
+   ],
+   "note": "grey roof tiles, desaturated to remove lichen tint (asphalt-shingle stand-in)"
+  },
+  {
+   "file": "shingle-normal.jpg",
+   "key": "shingle",
+   "map": "normal",
+   "asset": "grey_roof_tiles",
+   "source": "https://polyhaven.com/a/grey_roof_tiles",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grey_roof_tiles/grey_roof_tiles_nor_gl_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 3,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 522186,
+   "sourceSha256": "99546fdc2978d0950a2c61fe94dbd4230bb7825944bb4e4e7ad586839fdc721d",
+   "bytes": 195563,
+   "sha256": "c22fcfe20ac6ceba90639bd6bf9c8b04782e651498710d15fa10e0ce4640735b",
+   "note": "grey roof tiles, desaturated to remove lichen tint (asphalt-shingle stand-in)"
+  },
+  {
+   "file": "shingle-rough.jpg",
+   "key": "shingle",
+   "map": "rough",
+   "asset": "grey_roof_tiles",
+   "source": "https://polyhaven.com/a/grey_roof_tiles",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/grey_roof_tiles/grey_roof_tiles_rough_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Rob Tuytel"
+   ],
+   "tileMetres": 3,
+   "processing": "resize 512px; JPEG re-encode",
+   "sourceBytes": 260780,
+   "sourceSha256": "edc3185b560a71b2b5f5f568710b8674da41becb39ca374f5e8efeca15b5794f",
+   "bytes": 28669,
+   "sha256": "fe19fdf2a41e98f2cb899c0eef57da16053b974f520e06fadc6cc01373f2de23",
+   "note": "grey roof tiles, desaturated to remove lichen tint (asphalt-shingle stand-in)"
+  },
+  {
+   "file": "membrane-color.jpg",
+   "key": "membrane",
+   "map": "color",
+   "asset": "gravel_concrete_04",
+   "source": "https://polyhaven.com/a/gravel_concrete_04",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/gravel_concrete_04/gravel_concrete_04_diff_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Dimitrios Savva"
+   ],
+   "tileMetres": 2,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 935651,
+   "sourceSha256": "04e0a3e81efe3b23209c6beec012e600652ff81534d9aa5931996f34bd29cdff",
+   "bytes": 239143,
+   "sha256": "81b7d1c845adaffe0febbbd8009d700c1cd76b66756a970f5135cf7b79c182ba",
+   "meanSrgb": [
+    122,
+    112,
+    94
+   ],
+   "note": "fine gravel/aggregate roof surface"
+  },
+  {
+   "file": "membrane-normal.jpg",
+   "key": "membrane",
+   "map": "normal",
+   "asset": "gravel_concrete_04",
+   "source": "https://polyhaven.com/a/gravel_concrete_04",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/gravel_concrete_04/gravel_concrete_04_nor_gl_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Dimitrios Savva"
+   ],
+   "tileMetres": 2,
+   "processing": "resize 1024px; JPEG re-encode",
+   "sourceBytes": 1338375,
+   "sourceSha256": "f0ba872db96d12b1bbba81757e075e756d12765fbac621c6e24c57dd9e0a103a",
+   "bytes": 479393,
+   "sha256": "f95b755afbaa62e3a3fdb6c2c8deaf1600fc6bcbac480f6ff33818d787b3f9ee",
+   "note": "fine gravel/aggregate roof surface"
+  },
+  {
+   "file": "membrane-rough.jpg",
+   "key": "membrane",
+   "map": "rough",
+   "asset": "gravel_concrete_04",
+   "source": "https://polyhaven.com/a/gravel_concrete_04",
+   "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/gravel_concrete_04/gravel_concrete_04_rough_1k.jpg",
+   "license": "CC0-1.0",
+   "authors": [
+    "Dimitrios Savva"
+   ],
+   "tileMetres": 2,
+   "processing": "resize 512px; JPEG re-encode",
+   "sourceBytes": 506342,
+   "sourceSha256": "b0e9c76fd64c514b83fd54500dcbab7e97b9c7de2f6e536ea1c9e97eaf54c32c",
+   "bytes": 23798,
+   "sha256": "7cf8d0c6283692d91434d4ce4d657a5ae4ee2047d7d6a308abe4d668811eed20",
+   "note": "fine gravel/aggregate roof surface"
+  }
+ ]
+}

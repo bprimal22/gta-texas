@@ -1,0 +1,1453 @@
+{
+  "schema": 1,
+  "building": "WEL",
+  "sourceObjectId": 561,
+  "scope": "Connected high T-shaped mechanical penthouse and its two observed three-fan service platforms only; lower tile roofs, whole-building facades, western mechanical wing and historic north bar remain retained.",
+  "frame": {
+    "origin": [
+      -22.90445034296711,
+      -23.26979581496102
+    ],
+    "along": [
+      0.09008172405702763,
+      -0.9959343768496564
+    ],
+    "out": [
+      0.9959343768496564,
+      0.09008172405702763
+    ]
+  },
+  "zones": [
+    {
+      "id": "east-spine-penthouse",
+      "localBounds": {
+        "s": [
+          6.4,
+          50.2
+        ],
+        "d": [
+          -22.13,
+          -5.7
+        ]
+      },
+      "ring": [
+        [
+          -44.36795506868502,
+          -31.637284380180844
+        ],
+        [
+          -28.004753257045174,
+          -30.15724165392388
+        ],
+        [
+          -24.059173743347365,
+          -73.77916735993884
+        ],
+        [
+          -40.42237555498721,
+          -75.2592100861958
+        ]
+      ],
+      "bottom": 28.4,
+      "cutBottom": 28.42,
+      "cutTop": 32.25,
+      "planes": [
+        {
+          "id": "nearly level measured top",
+          "ax": 0,
+          "az": 0,
+          "c": 31.44
+        }
+      ],
+      "material": "metal",
+      "parapetEdges": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "transverse-west-cover",
+      "localBounds": {
+        "s": [
+          22,
+          37.3
+        ],
+        "d": [
+          -64.18,
+          -31
+        ]
+      },
+      "ring": [
+        [
+          -84.84172071992346,
+          -50.9617971556335
+        ],
+        [
+          -51.796618096051844,
+          -47.97288555142132
+        ],
+        [
+          -50.41836771797932,
+          -63.21068151722106
+        ],
+        [
+          -83.46347034185094,
+          -66.19959312143324
+        ]
+      ],
+      "bottom": 28.4,
+      "cutBottom": 28.42,
+      "cutTop": 32.25,
+      "planes": [
+        {
+          "id": "nearly level measured top",
+          "ax": 0,
+          "az": 0,
+          "c": 31.36
+        }
+      ],
+      "material": "metal",
+      "parapetEdges": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "transverse-north-neck",
+      "localBounds": {
+        "s": [
+          32,
+          37.3
+        ],
+        "d": [
+          -31,
+          -22.13
+        ]
+      },
+      "ring": [
+        [
+          -50.89580085548157,
+          -57.93222931991788
+        ],
+        [
+          -42.06186293282512,
+          -57.13320442753204
+        ],
+        [
+          -41.584429795322876,
+          -62.411656624835224
+        ],
+        [
+          -50.41836771797932,
+          -63.21068151722106
+        ]
+      ],
+      "bottom": 28.4,
+      "cutBottom": 28.42,
+      "cutTop": 32.25,
+      "planes": [
+        {
+          "id": "nearly level measured top",
+          "ax": 0,
+          "az": 0,
+          "c": 31.4
+        }
+      ],
+      "material": "metal",
+      "parapetEdges": [
+        2
+      ]
+    },
+    {
+      "id": "transverse-fan-platform",
+      "localBounds": {
+        "s": [
+          21.5,
+          32
+        ],
+        "d": [
+          -31,
+          -22.13
+        ]
+      },
+      "ring": [
+        [
+          -51.84165895808036,
+          -47.47491836299649
+        ],
+        [
+          -43.00772103542391,
+          -46.67589347061065
+        ],
+        [
+          -42.06186293282512,
+          -57.13320442753204
+        ],
+        [
+          -50.89580085548157,
+          -57.93222931991788
+        ]
+      ],
+      "bottom": 28.4,
+      "cutBottom": 28.42,
+      "cutTop": 34.3,
+      "planes": [
+        {
+          "id": "nearly level measured top",
+          "ax": 0,
+          "az": 0,
+          "c": 30.68
+        }
+      ],
+      "material": "membrane",
+      "parapetEdges": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "southern-fan-platform",
+      "localBounds": {
+        "s": [
+          0.1,
+          6.4
+        ],
+        "d": [
+          -22.13,
+          -5.7
+        ]
+      },
+      "ring": [
+        [
+          -44.935469930244295,
+          -25.36289780602801
+        ],
+        [
+          -28.57226811860445,
+          -23.882855079771044
+        ],
+        [
+          -28.004753257045174,
+          -30.15724165392388
+        ],
+        [
+          -44.36795506868502,
+          -31.637284380180844
+        ]
+      ],
+      "bottom": 28.4,
+      "cutBottom": 28.42,
+      "cutTop": 34.3,
+      "planes": [
+        {
+          "id": "nearly level measured top",
+          "ax": 0,
+          "az": 0,
+          "c": 30.68
+        }
+      ],
+      "material": "membrane",
+      "parapetEdges": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "id": "west-perimeter-flashing",
+      "localBounds": {
+        "s": [
+          8.52,
+          11.18
+        ],
+        "d": [
+          -22.3,
+          -22.115
+        ]
+      },
+      "ring": [
+        [
+          -44.34629065774857,
+          -33.76397915219181
+        ],
+        [
+          -44.16204279803138,
+          -33.74731403324126
+        ],
+        [
+          -43.922425412039686,
+          -36.396499475661344
+        ],
+        [
+          -44.106673271756875,
+          -36.4131645946119
+        ]
+      ],
+      "bottom": 30.36,
+      "cutBottom": 30.38,
+      "cutTop": 31.9,
+      "planes": [
+        {
+          "id": "flush existing west curb cap",
+          "ax": 0,
+          "az": 0,
+          "c": 31.82
+        }
+      ],
+      "material": "metal",
+      "parapetEdges": []
+    }
+  ],
+  "equipment": [
+    {
+      "id": "south-fan-1",
+      "s": 1.9,
+      "d": -17.4,
+      "platformY": 30.68,
+      "topY": 33.5,
+      "radius": 1.02,
+      "housingWidth": 2.35
+    },
+    {
+      "id": "south-fan-2",
+      "s": 1.9,
+      "d": -14.05,
+      "platformY": 30.68,
+      "topY": 33.5,
+      "radius": 1.02,
+      "housingWidth": 2.35
+    },
+    {
+      "id": "south-fan-3",
+      "s": 1.9,
+      "d": -10.7,
+      "platformY": 30.68,
+      "topY": 33.5,
+      "radius": 1.02,
+      "housingWidth": 2.35
+    },
+    {
+      "id": "transverse-fan-1",
+      "s": 24.1,
+      "d": -26.45,
+      "platformY": 30.68,
+      "topY": 33.55,
+      "radius": 1.02,
+      "housingWidth": 2.35
+    },
+    {
+      "id": "transverse-fan-2",
+      "s": 27.4,
+      "d": -26.45,
+      "platformY": 30.68,
+      "topY": 33.55,
+      "radius": 1.02,
+      "housingWidth": 2.35
+    },
+    {
+      "id": "transverse-fan-3",
+      "s": 30.65,
+      "d": -26.45,
+      "platformY": 30.68,
+      "topY": 33.55,
+      "radius": 1.02,
+      "housingWidth": 2.35
+    }
+  ],
+  "sourceWitnesses": [
+    [
+      -43.688186961971425,
+      31.852479383436673,
+      -38.113417773282805
+    ],
+    [
+      -43.07045823510154,
+      31.69983777034451,
+      -45.022439704534435
+    ],
+    [
+      -43.37931186827599,
+      29.535234299990893,
+      -40.416412058371506
+    ],
+    [
+      -35.19485679372716,
+      30.936194465682238,
+      -26.75186996880821
+    ],
+    [
+      -33.496181896881325,
+      31.247616889133127,
+      -26.598330893711996
+    ],
+    [
+      -37.04796548194897,
+      32.01520397536368,
+      -26.137748051599537
+    ]
+  ],
+  "sourceSamples": [
+    {
+      "type": "surface",
+      "label": "roof-x-35-z-26.6",
+      "hit": {
+        "position": [
+          -34.999999999999986,
+          33.61540431974122,
+          -26.6
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-x-35-z-40",
+      "hit": {
+        "position": [
+          -34.999999999999986,
+          31.432913692879655,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-x-35-z-55",
+      "hit": {
+        "position": [
+          -34.99999999999999,
+          31.434362413913085,
+          -55.000000000000014
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-x-45-z-42",
+      "hit": {
+        "position": [
+          -45.00000000000001,
+          13.770765246996502,
+          -42.000000000000014
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-x-60-z-43",
+      "hit": {
+        "position": [
+          -60.000000000000014,
+          13.909435687043224,
+          -43
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-x-78-z-44",
+      "hit": {
+        "position": [
+          -77.99999999999999,
+          13.34396597301146,
+          -43.99999999999999
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-x-45-z-58",
+      "hit": {
+        "position": [
+          -45,
+          31.7583781370634,
+          -58.000000000000014
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-x-60-z-58",
+      "hit": {
+        "position": [
+          -60.00000000000001,
+          31.36975503436246,
+          -58.000000000000014
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-x-78-z-58",
+      "hit": {
+        "position": [
+          -77.99999999999999,
+          31.317560973033153,
+          -58.00000000000001
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-44.5-z-40-from45",
+      "hit": {
+        "position": [
+          -44.50000000000001,
+          13.05251735409508,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-44.5-z-40-from31",
+      "hit": {
+        "position": [
+          -44.50000000000001,
+          13.05251735409508,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-43.5-z-40-from45",
+      "hit": {
+        "position": [
+          -43.49999999999999,
+          31.814940172801013,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-43.5-z-40-from31",
+      "hit": {
+        "position": [
+          -43.50000000000001,
+          13.25217299039079,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-42.5-z-40-from45",
+      "hit": {
+        "position": [
+          -42.5,
+          31.761632387136924,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-42.5-z-40-from31",
+      "hit": {
+        "position": [
+          -42.500000000000014,
+          25.3543259006476,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-35-z-40-from45",
+      "hit": {
+        "position": [
+          -34.999999999999986,
+          31.432913692879655,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-35-z-40-from31",
+      "hit": {
+        "position": [
+          -35,
+          6.664280865921649,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-28-z-40-from45",
+      "hit": {
+        "position": [
+          -28.000000000000007,
+          31.696718524605433,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-28-z-40-from31",
+      "hit": {
+        "position": [
+          -28,
+          29.417922804581266,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-26-z-40-from45",
+      "hit": {
+        "position": [
+          -26,
+          24.93867643380832,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-26-z-40-from31",
+      "hit": {
+        "position": [
+          -26,
+          24.938676433808318,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-24-z-40-from45",
+      "hit": {
+        "position": [
+          -24,
+          24.94103128636516,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-24-z-40-from31",
+      "hit": {
+        "position": [
+          -24,
+          24.94103128636516,
+          -40
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-40-z-29-from45",
+      "hit": {
+        "position": [
+          -39.999999999999986,
+          32.83172717268384,
+          -29
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-40-z-29-from31",
+      "hit": {
+        "position": [
+          -39.999999999999986,
+          30.757414185585287,
+          -29
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-40-z-26-from45",
+      "hit": {
+        "position": [
+          -39.999999999999986,
+          33.48963453779602,
+          -26
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-40-z-26-from31",
+      "hit": {
+        "position": [
+          -39.999999999999986,
+          30.535835728659507,
+          -25.999999999999996
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-40-z-23-from45",
+      "hit": {
+        "position": [
+          -40.00000000000001,
+          26.835598311751582,
+          -23
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-40-z-23-from31",
+      "hit": {
+        "position": [
+          -40,
+          26.835598311751585,
+          -22.999999999999996
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-40-z-20-from45",
+      "hit": {
+        "position": [
+          -40,
+          24.92596058224062,
+          -19.999999999999996
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-40-z-20-from31",
+      "hit": {
+        "position": [
+          -40,
+          24.92596058224062,
+          -20
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-36-z-29-from45",
+      "hit": {
+        "position": [
+          -35.99999999999999,
+          30.806979583506997,
+          -29
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-36-z-29-from31",
+      "hit": {
+        "position": [
+          -35.999999999999986,
+          30.806979583506994,
+          -29
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-36-z-26-from45",
+      "hit": {
+        "position": [
+          -35.99999999999999,
+          33.375778207837335,
+          -26.000000000000004
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-36-z-26-from31",
+      "hit": {
+        "position": [
+          -35.99999999999999,
+          30.57505032212123,
+          -26
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-36-z-23-from45",
+      "hit": {
+        "position": [
+          -36,
+          25.077380813761764,
+          -23
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-36-z-23-from31",
+      "hit": {
+        "position": [
+          -36.00000000000001,
+          25.077380813761764,
+          -22.999999999999993
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-36-z-20-from45",
+      "hit": {
+        "position": [
+          -36,
+          25.148257272346598,
+          -20
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-36-z-20-from31",
+      "hit": {
+        "position": [
+          -36,
+          25.148257272346598,
+          -20
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-32-z-29-from45",
+      "hit": {
+        "position": [
+          -31.999999999999993,
+          31.050623988792964,
+          -29
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-32-z-29-from31",
+      "hit": {
+        "position": [
+          -32.00000000000001,
+          5.9382311005134145,
+          -29
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-32-z-26-from45",
+      "hit": {
+        "position": [
+          -31.999999999999993,
+          30.804801459269207,
+          -26
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-32-z-26-from31",
+      "hit": {
+        "position": [
+          -31.999999999999993,
+          30.80480145926921,
+          -26
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-32-z-23-from45",
+      "hit": {
+        "position": [
+          -32.00000000000001,
+          27.046688536886688,
+          -23
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-32-z-23-from31",
+      "hit": {
+        "position": [
+          -32,
+          27.0466885368867,
+          -22.999999999999996
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-32-z-20-from45",
+      "hit": {
+        "position": [
+          -32,
+          27.091298188059415,
+          -20
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roofsection-x-32-z-20-from31",
+      "hit": {
+        "position": [
+          -32,
+          27.09129818805942,
+          -20
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-final-recess-a40",
+      "hit": {
+        "position": [
+          -47,
+          33.33052699431901,
+          -53.000000000000014
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-final-recess-a31",
+      "hit": {
+        "position": [
+          -47,
+          30.709706611626938,
+          -53.000000000000014
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-final-recess-b40",
+      "hit": {
+        "position": [
+          -46.999999999999986,
+          33.6416133740013,
+          -49
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-final-recess-b31",
+      "hit": {
+        "position": [
+          -46.999999999999986,
+          30.525257059302646,
+          -49
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-final-recess-c40",
+      "hit": {
+        "position": [
+          -49,
+          30.85209564080678,
+          -57.000000000000014
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-final-recess-c31",
+      "hit": {
+        "position": [
+          -49,
+          30.852095640806773,
+          -57.000000000000014
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-final-north-out",
+      "hit": {
+        "position": [
+          -33,
+          25.06809099519329,
+          -76.00000000000001
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-final-north-in",
+      "hit": {
+        "position": [
+          -33,
+          31.441758062758176,
+          -72.00000000000001
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-final-south-a",
+      "hit": {
+        "position": [
+          -36,
+          28.087848305367743,
+          -23.999999999999996
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-final-south-b",
+      "hit": {
+        "position": [
+          -40,
+          26.983068884444883,
+          -23.999999999999993
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-overhang-north-41",
+      "hit": {
+        "position": [
+          -41,
+          12.031945519345074,
+          -70
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-overhang-north-40",
+      "hit": {
+        "position": [
+          -39.99999999999999,
+          31.708569824305016,
+          -70.00000000000001
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-overhang-north-39",
+      "hit": {
+        "position": [
+          -39,
+          31.556585452535476,
+          -70.00000000000001
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-overhang-south-43.5",
+      "hit": {
+        "position": [
+          -43.499999999999986,
+          31.369828588095803,
+          -26.999999999999996
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    },
+    {
+      "type": "surface",
+      "label": "roof-overhang-south-42.5",
+      "hit": {
+        "position": [
+          -42.49999999999999,
+          31.176227405271945,
+          -26.999999999999993
+        ],
+        "source": "streamed",
+        "geometricError": 2.006368774808128,
+        "children": 0,
+        "leaf": true
+      }
+    }
+  ],
+  "evidence": {
+    "sourceLog": "/tmp/ut-iteration-56/headless-replay.jsonl",
+    "sourceLogSHA256": "256766982c32b4d2c9c83668274d5063433ca7c807bddc1757a61db6b83f493b",
+    "footprint": "research/raw/ut-official-buildings.geojson / WEL561",
+    "overhead": [
+      "/tmp/ut-iteration-56/welch-inner-roof-overhead-corrected.jpg",
+      "/tmp/ut-iteration-56/welch-inner-roof-south-overhead-before.jpg"
+    ],
+    "primaryArchitect": "https://www.payette.com/projects/construction-update-ut-austin-welch-hall-renovation/",
+    "sourceGeometricError": 2.006368774808128,
+    "sourceErrorMeaning": "Declared source-tile geometricError, not a survey tolerance or guaranteed positional accuracy."
+  },
+  "interpretation": {
+    "observed": [
+      "Two connected light roofs in a T shape and two visibly three-fan recess/platform banks.",
+      "High source T roof center approximately31.3–31.45m; parapet returns approximately31.7–31.85m.",
+      "Southern bank and transverse bank equipment tops approximately33.3–33.6m; lower platform samples approximately30.5–30.85m.",
+      "North high roof transition between z-72 and-76 atx-33; south high platform transition between z-26 and-24."
+    ],
+    "inferred": [
+      "Local roof boundaries regularized to straight edges from the overhead silhouette; most edges are not surveyed. The high west edge is about 1.1m outside the official wall outline at the ends; bracketed north source rays support a high edge in this band, but cannot distinguish actual overhang from scan/GIS registration uncertainty.",
+      "Roof centers leveled to31.44/31.36/31.40m; fine drainage slope is unresolved.",
+      "Service floors leveled to30.68m within observed lower-return range.",
+      "Roof underside at28.40m and high-onlycutbottom28.42m are conservative closed-shell construction choices, not measured slab thickness.",
+      "Panel spacing, parapetsection, fanhousing shape, impellers and exact fan-center positions are simplified approximations; no specific mechanical equipment model claimed.",
+      "The retained north-end equipment and south-running ducts beyond these platforms are not reconstructed."
+    ],
+    "preserved": [
+      "Completed southern roof cap and northern historic bar.",
+      "Existing Speedway middle facade and narrow inner eave.",
+      "All street and courtyard ground below28.42m; no routefloor changes.",
+      "Low tiled shoulder roofs, western tall equipment block and roof equipment beyond the explicit cells."
+    ]
+  },
+  "perimeterCorrection": {
+    "sourceLabel": "roof-silhouette-notch-one",
+    "sourceTriangle": [
+      [
+        -44.171030290942525,
+        30.423171617992047,
+        -33.81446322173194
+      ],
+      [
+        -44.30590026051296,
+        31.23273377876778,
+        -33.81446835913188
+      ],
+      [
+        -43.94189815763036,
+        31.59793306231045,
+        -36.347724101307435
+      ]
+    ],
+    "sourceViewHit": {
+      "position": [
+        -44.158998557353044,
+        31.190956257263274,
+        -34.648912663307094
+      ],
+      "distance": 123.49145631936143,
+      "name": "mesh_0",
+      "source": "streamed",
+      "normal": [
+        -0.9731789327019147,
+        -0.16212893569656656,
+        -0.16320837342201855
+      ],
+      "triangle": [
+        [
+          -44.171030290942525,
+          30.423171617992047,
+          -33.81446322173194
+        ],
+        [
+          -44.30590026051296,
+          31.23273377876778,
+          -33.81446835913188
+        ],
+        [
+          -43.94189815763036,
+          31.59793306231045,
+          -36.347724101307435
+        ]
+      ]
+    },
+    "oldAuthoredHit": {
+      "position": [
+        -44.08779406016741,
+        31.20444261109065,
+        -34.734707663265006
+      ],
+      "distance": 123.60376279369302,
+      "name": "WEL high inner roof: Welch inner roof gray equipment enclosure",
+      "source": "authored",
+      "normal": [
+        -0.9959343764001192,
+        0,
+        -0.09008172902706704
+      ],
+      "triangle": [
+        [
+          -40.4223747253418,
+          28.399999618530273,
+          -75.25920867919922
+        ],
+        [
+          -44.36795425415039,
+          28.399999618530273,
+          -31.637285232543945
+        ],
+        [
+          -44.36795425415039,
+          31.440000534057617,
+          -31.637285232543945
+        ]
+      ]
+    },
+    "observedMaxOutwardOverrun": 0.134321969705875,
+    "currentWestEdge": -22.13,
+    "newWestEdge": -22.3,
+    "length": 2.66,
+    "outwardExtension": 0.17,
+    "overlapIntoOriginal": 0.015,
+    "uniqueAdditionalFootprintArea": 0.4522,
+    "fullCellFootprintArea": 0.4921,
+    "cutFloor": 30.38,
+    "inference": "Local closed metal flashing/edge-band simplification covering a measured scan residual. Not proof of this exact architectural flashing profile. It meets the existing parapet outer face at d=-22.115 and its cap at Y31.82.",
+    "preserves": "First five zones, all equipment, all source belowY30.38 in the added perimeter, facade/eave/south/north roof packages.",
+    "gis": "Entire new patch lies inside the official WEL561 transverse-wing footprint; does not increase the original maximum1.085m outline exception at roof ends."
+  }
+}

@@ -1,0 +1,274 @@
+{
+ "asset": "tower",
+ "source": {
+  "repository": "https://github.com/seanhlewis/utimagery",
+  "commit": "13f08efebe2a0488283e09c47365878d0904a49e",
+  "file": "tower.glb",
+  "sha256": "be80720f22224735d9b558e0007d4288915cd3e84ecba1529a8e290153d0dc4f"
+ },
+ "method": "Leveling from area-weighted facade normals (smallest eigenvector), then 2D Umeyama similarity from footprint corners (intersections of robust scan wall-line fits) against the official UT MAI526 GIS rings + campus.json FAC/WCH/GEB rings, seeded by a brute-force roof-mask registration; vertical offset = trimmed mean of baked-terrain minus scan open-ground heights. Author Cesium placement NOT used.",
+ "matrixColumnMajor_rawGltfToCampus": [
+  -27.91347951960885,
+  2.497362123319768,
+  -26.553973430550837,
+  0,
+  1.3494659391960189,
+  38.52055171960352,
+  2.204245520198444,
+  0,
+  26.636990524538266,
+  0.6655366701939738,
+  -27.938154165107253,
+  0,
+  -220.84696577368712,
+  73.35965953145337,
+  17.752760315192297,
+  1
+ ],
+ "components": {
+  "levelingUp_gltf": [
+   0.06468650483883835,
+   0.9977567257617149,
+   0.01723868582570573
+  ],
+  "tiltDeg": 3.8384866537707767,
+  "yawThetaRad_xz": -2.3805899278004743,
+  "scale_metresPerGltfUnit": 38.6071581629238,
+  "scaleRelativeToAuthor37": 1.0434367071060486,
+  "translation": [
+   -220.84696577368712,
+   73.35965953145337,
+   17.752760315192297
+  ]
+ },
+ "residuals": {
+  "cornersUsed": 20,
+  "cornersTotal": 20,
+  "cornerRms2D_m": 0.6012778655729535,
+  "corners": [
+   {
+    "name": "r0c1",
+    "gis": [
+     -197.63,
+     38.3
+    ],
+    "residual_m": 0.079,
+    "used": true
+   },
+   {
+    "name": "r0c2",
+    "gis": [
+     -237.09,
+     34.98
+    ],
+    "residual_m": 0.313,
+    "used": true
+   },
+   {
+    "name": "r0c3",
+    "gis": [
+     -238.25,
+     48.68
+    ],
+    "residual_m": 0.242,
+    "used": true
+   },
+   {
+    "name": "r0c4",
+    "gis": [
+     -253.63,
+     47.39
+    ],
+    "residual_m": 0.467,
+    "used": true
+   },
+   {
+    "name": "r0c9",
+    "gis": [
+     -245.98,
+     -32.59
+    ],
+    "residual_m": 0.547,
+    "used": true
+   },
+   {
+    "name": "r0c10",
+    "gis": [
+     -231.82,
+     -31.33
+    ],
+    "residual_m": 0.53,
+    "used": true
+   },
+   {
+    "name": "r0c11",
+    "gis": [
+     -233.53,
+     -11.62
+    ],
+    "residual_m": 0.296,
+    "used": true
+   },
+   {
+    "name": "r0c12",
+    "gis": [
+     -224.52,
+     -10.82
+    ],
+    "residual_m": 0.241,
+    "used": true
+   },
+   {
+    "name": "r0c13",
+    "gis": [
+     -222.83,
+     -30.5
+    ],
+    "residual_m": 0.481,
+    "used": true
+   },
+   {
+    "name": "r0c14",
+    "gis": [
+     -200.04,
+     -28.54
+    ],
+    "residual_m": 0.586,
+    "used": true
+   },
+   {
+    "name": "r0c15",
+    "gis": [
+     -201.81,
+     -8.83
+    ],
+    "residual_m": 0.306,
+    "used": true
+   },
+   {
+    "name": "r0c16",
+    "gis": [
+     -192.81,
+     -8
+    ],
+    "residual_m": 0.253,
+    "used": true
+   },
+   {
+    "name": "r0c17",
+    "gis": [
+     -191.06,
+     -27.78
+    ],
+    "residual_m": 0.491,
+    "used": true
+   },
+   {
+    "name": "r0c18",
+    "gis": [
+     -176.91,
+     -26.44
+    ],
+    "residual_m": 0.585,
+    "used": true
+   },
+   {
+    "name": "r0c23",
+    "gis": [
+     -183.33,
+     53.38
+    ],
+    "residual_m": 0.167,
+    "used": true
+   },
+   {
+    "name": "r0c0",
+    "gis": [
+     -198.79,
+     52.08
+    ],
+    "residual_m": 0.416,
+    "used": true
+   },
+   {
+    "name": "r1c1",
+    "gis": [
+     -227.08,
+     21.61
+    ],
+    "residual_m": 1.015,
+    "used": true
+   },
+   {
+    "name": "r2c0",
+    "gis": [
+     -204.47,
+     23.51
+    ],
+    "residual_m": 0.305,
+    "used": true
+   },
+   {
+    "name": "r4c1",
+    "gis": [
+     -146.72,
+     10.33
+    ],
+    "residual_m": 1.366,
+    "used": true
+   },
+   {
+    "name": "r5c5",
+    "gis": [
+     -163.13,
+     -18.27
+    ],
+    "residual_m": 1.272,
+    "used": true
+   }
+  ],
+  "verticalGroundCells": 4564,
+  "verticalRms_m": 0.322,
+  "verticalAllCellsMedianAbs_m": 0.665,
+  "umeyama3D": {
+   "n": 12,
+   "scale_metresPerGltfUnit": 38.647967600468874,
+   "rms_m": 0.44,
+   "residuals_m": [
+    0.247,
+    0.424,
+    0.401,
+    0.423,
+    0.452,
+    0.496,
+    0.527,
+    0.409,
+    0.332,
+    0.282,
+    0.22,
+    0.782
+   ],
+   "twoStageRmsSamePoints_m": 0.532
+  }
+ },
+ "checks": {
+  "shaftCentre": [
+   -212.59682487062307,
+   -17.728293611356307
+  ],
+  "shaftWidth_m": [
+   18.002014919449074,
+   18.14563751035243
+  ],
+  "shaftEdgeYawDeg_mod90": 5.352244385678645,
+  "topY": 110.21753283424745,
+  "bakedGroundAtCentre": 15.929489598615298,
+  "topAboveBakedGround_m": 94.28804323563216,
+  "authoredTowerCentre": [
+   -215.27,
+   10.4
+  ],
+  "offsetFromAuthored_m": 28.255030822120638
+ },
+ "createdBy": "tools/scans/finalize-tower.mjs"
+}

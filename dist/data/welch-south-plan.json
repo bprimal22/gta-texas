@@ -1,0 +1,287 @@
+{
+  "schema": 2,
+  "building": "WEL",
+  "scope": "Officially registered east/south frontages and full west face of southern leg",
+  "sourceOrigin": [
+    -97.73716,
+    30.2861
+  ],
+  "sourceFootprint": [
+    [
+      -90.86887865664026,
+      -49.69840001163229
+    ],
+    [
+      -112.09097987682817,
+      -51.47569363780523
+    ],
+    [
+      -105.85733209565375,
+      -122.80407577856496
+    ],
+    [
+      -14.620623488504755,
+      -114.85494277558686
+    ],
+    [
+      -28.522101433023714,
+      38.83838313366168
+    ],
+    [
+      -49.28846312439674,
+      37.039597638216705
+    ],
+    [
+      -46.69394869297108,
+      7.453386502074483
+    ],
+    [
+      -63.69250078755063,
+      5.946586697554807
+    ],
+    [
+      -67.46332824783892,
+      -1.4496560362376307
+    ],
+    [
+      -67.37821932516854,
+      -2.412115886501226
+    ],
+    [
+      -67.27209717558299,
+      -2.402635642760913
+    ],
+    [
+      -66.60056973057031,
+      -10.001606720685135
+    ],
+    [
+      -66.7067965041156,
+      -10.01088937218162
+    ],
+    [
+      -66.61963659037929,
+      -10.997007397490151
+    ],
+    [
+      -59.96664850635815,
+      -19.742311423739668
+    ],
+    [
+      -44.46543418683485,
+      -18.373706179776093
+    ],
+    [
+      -43.232184256496154,
+      -32.30308478864113
+    ],
+    [
+      -86.0173310464081,
+      -36.18346447073283
+    ],
+    [
+      -86.24189046769382,
+      -36.205812963601474
+    ],
+    [
+      -83.43053877818669,
+      -67.56822571065987
+    ],
+    [
+      -40.384901248044756,
+      -63.92371633785109
+    ],
+    [
+      -38.952470913192485,
+      -80.86921842263808
+    ],
+    [
+      -38.18598924498053,
+      -80.80430351165236
+    ],
+    [
+      -37.60648352923896,
+      -87.65773109068178
+    ],
+    [
+      -38.343339432012115,
+      -87.72015360548389
+    ],
+    [
+      -37.6762872953525,
+      -95.61040313367097
+    ],
+    [
+      -51.7455034267422,
+      -96.80163322060714
+    ],
+    [
+      -52.058830058939826,
+      -93.09459760976901
+    ],
+    [
+      -54.494138856031945,
+      -93.30081446774818
+    ],
+    [
+      -54.83849835843156,
+      -89.22730931942436
+    ],
+    [
+      -71.00905479511434,
+      -90.59632515536839
+    ],
+    [
+      -70.74169898606448,
+      -93.75949488840918
+    ],
+    [
+      -70.65679296740427,
+      -94.76467052830318
+    ],
+    [
+      -73.48631587256851,
+      -95.00429577153069
+    ],
+    [
+      -73.1807631780166,
+      -98.61828947126132
+    ],
+    [
+      -86.6375151311568,
+      -99.75776039929696
+    ],
+    [
+      -90.86887865664026,
+      -49.69840001163229
+    ]
+  ],
+  "sourceFootprintId": 561,
+  "sourceFootprintSource": "research/raw/ut-official-buildings.geojson, official UT WEL OBJECTID561",
+  "baseElevation": 5.8,
+  "arcadeHeight": 5.183496332518338,
+  "floorHeight": 4.755501222493888,
+  "upperFloors": 3,
+  "eaveHeight": 19.7,
+  "roofPitch": 0.45,
+  "roofStripDepth": 1.5,
+  "cutDepth": 1.55,
+  "cutFringe": 0.45,
+  "cutCeiling": 25.65,
+  "cutGroundBuffer": 0.2,
+  "photoIds": [
+    "L177-h270",
+    "L176-h270",
+    "L176-h000",
+    "L175-h270",
+    "L021-h090",
+    "UTeach IMG_8696",
+    "UT Direct 100473461"
+  ],
+  "facades": [
+    {
+      "id": "east",
+      "profile": "arcade",
+      "a": [
+        -28.522101433023714,
+        38.83838313366168
+      ],
+      "b": [
+        -22.90445034296711,
+        -23.26979581496102
+      ],
+      "upperBays": 13,
+      "arcadeBays": 13,
+      "entranceBay": 5,
+      "photoIds": [
+        "L177-h270",
+        "L176-h270",
+        "L176-h000"
+      ],
+      "confidence": "13-bay cadence inferred from horizontal/vertical pitch ratio; actual door within bay remains estimated"
+    },
+    {
+      "id": "south",
+      "profile": "south",
+      "a": [
+        -49.28846312439674,
+        37.039597638216705
+      ],
+      "b": [
+        -28.522101433023714,
+        38.83838313366168
+      ],
+      "upperBays": 4,
+      "arcadeBays": 0,
+      "photoIds": [
+        "L175-h270",
+        "L021-h090"
+      ],
+      "confidence": "Occluded end: conservative rectangular lower glazing and central closed doorway; no unsupported five-arch rhythm"
+    },
+    {
+      "id": "west",
+      "profile": "west",
+      "a": [
+        -46.69394869297108,
+        7.453386502074483
+      ],
+      "b": [
+        -49.28846312439674,
+        37.039597638216705
+      ],
+      "upperBays": 6,
+      "arcadeBays": 0,
+      "photoIds": [
+        "UTeach IMG_8696",
+        "L021-h090"
+      ],
+      "confidence": "Rectangular lower entrance and southwest tall bay supported;6-bay cadence/entry position estimates from photographed proportions"
+    }
+  ],
+  "assumptions": [
+    "Measured leaf scan has geometricError2.006m; roof eave25.5 reconciles east25.3\u201325.4 and south25.9 within acknowledged0.6m uncertainty.",
+    "Photo ratios determine coherent floor stack; official UT footprint corrects earlier City aerial outline.",
+    "Actual doorway locations are approximate within photographed frontage. Local threshold overrides and live checks remain necessary.",
+    "West entrance is visibly below approach grade in the photo; explicit6.0m threshold chosen for review. Melted scan10\u201311.7m is not accepted as ground. Parent owns recessed access steps/apron from~7.1m approach.",
+    "Ground, historic north, lecture projection and full northern roof unchanged. Separate roof package owns coherent south cap; north roof-edge strip only bridges retained roof above north part of east frontage.",
+    "South end windows not fully visible; do not claim exact bay count or decorative reproduction."
+  ],
+  "liveProbes": {
+    "files": [
+      "welch-roof-grid.json",
+      "welch-threshold-grid.json",
+      "welch-official-profiles.json",
+      "welch-west-door-profiles.json"
+    ],
+    "leafGeometricError": 2.006368774808128,
+    "selectedBase": 5.8,
+    "selectedEave": 25.5,
+    "eastEaveAtOfficialEdge": [
+      25.3111598848,
+      25.3994630097,
+      25.4166315234,
+      25.2640935886
+    ],
+    "southEaveAtOfficialEdge": [
+      25.890724142,
+      25.9388366582,
+      25.9206139414
+    ],
+    "selectedSouthThreshold": 6.2,
+    "interpretation": "Old outside-footprint samples were apron evidence, not sills. Corrected inward floors predominantly5.6\u20135.8; elevated near-wall samples likely intercepted wall/arcade shell."
+  },
+  "eaveElevation": 25.5,
+  "roofCapNorthAlong": 29.6999516474,
+  "photoRatios": {
+    "arcadeOverStory": 1.09,
+    "glassOverStory": 0.615,
+    "headOverStory": 0.185,
+    "corniceHeight": 0.25
+  },
+  "thresholds": {
+    "east": 5.8,
+    "south": 6.2,
+    "west": 6.0
+  }
+}

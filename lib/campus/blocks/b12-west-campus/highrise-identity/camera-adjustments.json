@@ -1,0 +1,648 @@
+{
+  "b12-hi-linden-street": {
+    "id": "b12-hi-linden-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "The Linden, 313 W 17th St (683551:996) from the street",
+    "position": [
+      -525.13,
+      1.36,
+      794.55
+    ],
+    "target": [
+      -473.68,
+      41.72,
+      738.58
+    ],
+    "fov": 62,
+    "groundY": -0.34,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-linden-30m": {
+    "id": "b12-hi-linden-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "The Linden, 313 W 17th St (683551:996) from 30 m",
+    "position": [
+      -425.67,
+      32.35,
+      836.77
+    ],
+    "target": [
+      -473.68,
+      41.72,
+      738.58
+    ],
+    "fov": 62,
+    "groundY": 2.35,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-rise-street": {
+    "id": "b12-hi-rise-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Rise at West Campus, 2206 Nueces St (554717:450) from the street",
+    "position": [
+      -638.25,
+      15.31,
+      -49.47
+    ],
+    "target": [
+      -672.34,
+      52.84,
+      26.5
+    ],
+    "fov": 62,
+    "groundY": 13.61,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-rise-30m": {
+    "id": "b12-hi-rise-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Rise at West Campus, 2206 Nueces St (554717:450) from 30 m",
+    "position": [
+      -756.67,
+      41.19,
+      97.78
+    ],
+    "target": [
+      -672.34,
+      52.84,
+      26.5
+    ],
+    "fov": 62,
+    "groundY": 11.19,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-travis-courts-street": {
+    "id": "b12-hi-travis-courts-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Travis County Civil and Family Courts Facility, 1700 Guadalupe St (597128:680) from the street",
+    "position": [
+      -498.93,
+      2.37,
+      713.38
+    ],
+    "target": [
+      -512.83,
+      40.65,
+      645.96
+    ],
+    "fov": 62,
+    "groundY": 0.67,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-travis-courts-30m": {
+    "id": "b12-hi-travis-courts-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Travis County Civil and Family Courts Facility, 1700 Guadalupe St (597128:680) from 30 m",
+    "position": [
+      -449.23,
+      34.49,
+      555.87
+    ],
+    "target": [
+      -512.83,
+      40.65,
+      645.96
+    ],
+    "fov": 62,
+    "groundY": 4.49,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-clements-street": {
+    "id": "b12-hi-clements-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "William P. Clements, Jr. Building (tower volumes) (486277:108) from the street",
+    "position": [
+      -519.67,
+      1.42,
+      806.36
+    ],
+    "target": [
+      -487.45,
+      35.5,
+      868.89
+    ],
+    "fov": 62,
+    "groundY": -0.28,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-clements-30m": {
+    "id": "b12-hi-clements-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "William P. Clements, Jr. Building (tower volumes) (486277:108) from 30 m",
+    "position": [
+      -417.43,
+      31.54,
+      919.56
+    ],
+    "target": [
+      -487.45,
+      35.5,
+      868.89
+    ],
+    "fov": 62,
+    "groundY": 1.54,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-21-rio-street": {
+    "id": "b12-hi-21-rio-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "21 Rio, 2101 Rio Grande St (503131:167) from the street",
+    "position": [
+      -758,
+      11.66,
+      200.33
+    ],
+    "target": [
+      -728.35,
+      45.45,
+      200.33
+    ],
+    "fov": 62,
+    "groundY": 9.96,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-21-rio-30m": {
+    "id": "b12-hi-21-rio-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "21 Rio, 2101 Rio Grande St (503131:167) from 30 m",
+    "position": [
+      -608.54,
+      42.43,
+      108.32
+    ],
+    "target": [
+      -728.35,
+      45.45,
+      200.33
+    ],
+    "fov": 62,
+    "groundY": 12.43,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-ion-street": {
+    "id": "b12-hi-ion-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Ion Austin, 2100 San Antonio St (tower volumes) (622603:771) from the street",
+    "position": [
+      -641.42,
+      13.83,
+      106.64
+    ],
+    "target": [
+      -603.52,
+      39.4,
+      166.9
+    ],
+    "fov": 62,
+    "groundY": 12.13,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-ion-30m": {
+    "id": "b12-hi-ion-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Ion Austin, 2100 San Antonio St (tower volumes) (622603:771) from 30 m",
+    "position": [
+      -503.22,
+      39.76,
+      118.7
+    ],
+    "target": [
+      -603.52,
+      39.4,
+      166.9
+    ],
+    "fov": 62,
+    "groundY": 9.76,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-lark-street": {
+    "id": "b12-hi-lark-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Lark Austin (probable), 2100 Nueces St (735333:1272) from the street",
+    "position": [
+      -611.63,
+      10.41,
+      242.02
+    ],
+    "target": [
+      -685.92,
+      39.81,
+      204.2
+    ],
+    "fov": 62,
+    "groundY": 8.71,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-lark-30m": {
+    "id": "b12-hi-lark-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Lark Austin (probable), 2100 Nueces St (735333:1272) from 30 m",
+    "position": [
+      -650.77,
+      42.13,
+      97.83
+    ],
+    "target": [
+      -685.92,
+      39.81,
+      204.2
+    ],
+    "fov": 62,
+    "groundY": 12.13,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-signature-1909-street": {
+    "id": "b12-hi-signature-1909-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Signature 1909, 1909 Rio Grande St (486699:114) from the street",
+    "position": [
+      -757.53,
+      11.24,
+      228.43
+    ],
+    "target": [
+      -733.15,
+      30.58,
+      266.67
+    ],
+    "fov": 62,
+    "groundY": 9.54,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-signature-1909-30m": {
+    "id": "b12-hi-signature-1909-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Signature 1909, 1909 Rio Grande St (486699:114) from 30 m",
+    "position": [
+      -673.99,
+      34.54,
+      387.83
+    ],
+    "target": [
+      -733.15,
+      30.58,
+      266.67
+    ],
+    "fov": 62,
+    "groundY": 4.54,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-doubletree-street": {
+    "id": "b12-hi-doubletree-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "DoubleTree Suites Austin Downtown Capitol, 303 W 15th St (525738:260) from the street",
+    "position": [
+      -559.19,
+      0.28,
+      901.52
+    ],
+    "target": [
+      -525.57,
+      24.25,
+      963.07
+    ],
+    "fov": 62,
+    "groundY": -1.42,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-doubletree-30m": {
+    "id": "b12-hi-doubletree-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "DoubleTree Suites Austin Downtown Capitol, 303 W 15th St (525738:260) from 30 m",
+    "position": [
+      -543.55,
+      28.97,
+      852.68
+    ],
+    "target": [
+      -525.57,
+      24.25,
+      963.07
+    ],
+    "fov": 62,
+    "groundY": -1.03,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-villas-on-rio-street": {
+    "id": "b12-hi-villas-on-rio-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Villas on Rio, 2111 Rio Grande St (641335:834) from the street",
+    "position": [
+      -668.42,
+      13.48,
+      104.41
+    ],
+    "target": [
+      -721.57,
+      38.74,
+      149.74
+    ],
+    "fov": 62,
+    "groundY": 11.78,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-villas-on-rio-30m": {
+    "id": "b12-hi-villas-on-rio-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Villas on Rio, 2111 Rio Grande St (641335:834) from 30 m",
+    "position": [
+      -739.98,
+      41.74,
+      67.54
+    ],
+    "target": [
+      -721.57,
+      38.74,
+      149.74
+    ],
+    "fov": 62,
+    "groundY": 11.74,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-inspire-street": {
+    "id": "b12-hi-inspire-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Inspire on 22nd, 2200 Nueces St (697152:1015) from the street",
+    "position": [
+      -740.09,
+      12.88,
+      99.05
+    ],
+    "target": [
+      -674.6,
+      39.9,
+      75.8
+    ],
+    "fov": 62,
+    "groundY": 11.18,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-inspire-30m": {
+    "id": "b12-hi-inspire-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Inspire on 22nd, 2200 Nueces St (697152:1015) from 30 m",
+    "position": [
+      -756.29,
+      41.24,
+      92.07
+    ],
+    "target": [
+      -674.6,
+      39.9,
+      75.8
+    ],
+    "fov": 62,
+    "groundY": 11.24,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-sxsw-center-street": {
+    "id": "b12-hi-sxsw-center-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "SXSW Center, 1400 Lavaca St (717464:1161) from the street",
+    "position": [
+      -606.41,
+      -1.65,
+      1011.06
+    ],
+    "target": [
+      -536.7,
+      25.85,
+      997.95
+    ],
+    "fov": 62,
+    "groundY": -3.35,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-sxsw-center-30m": {
+    "id": "b12-hi-sxsw-center-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "SXSW Center, 1400 Lavaca St (717464:1161) from 30 m",
+    "position": [
+      -446.66,
+      29.47,
+      1061.32
+    ],
+    "target": [
+      -536.7,
+      25.85,
+      997.95
+    ],
+    "fov": 62,
+    "groundY": -0.53,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-tma-street": {
+    "id": "b12-hi-tma-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "TMA office + union garage (525515:254) from the street",
+    "position": [
+      -677.21,
+      -2.96,
+      876.6
+    ],
+    "target": [
+      -624.77,
+      17.8,
+      923.3
+    ],
+    "fov": 62,
+    "groundY": -4.66,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-tma-30m": {
+    "id": "b12-hi-tma-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "TMA office + union garage (525515:254) from 30 m",
+    "position": [
+      -645.87,
+      25.94,
+      813.5
+    ],
+    "target": [
+      -624.77,
+      17.8,
+      923.3
+    ],
+    "fov": 62,
+    "groundY": -4.06,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-waterloo-street": {
+    "id": "b12-hi-waterloo-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Yugo Austin Waterloo, 2400 Seton Ave (594352:667) from the street",
+    "position": [
+      -624.47,
+      16.27,
+      -186.64
+    ],
+    "target": [
+      -666.91,
+      55.21,
+      -237.89
+    ],
+    "fov": 62,
+    "groundY": 14.57,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-waterloo-30m": {
+    "id": "b12-hi-waterloo-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Yugo Austin Waterloo, 2400 Seton Ave (594352:667) from 30 m",
+    "position": [
+      -635.23,
+      45.57,
+      -342.35
+    ],
+    "target": [
+      -666.91,
+      55.21,
+      -237.89
+    ],
+    "fov": 62,
+    "groundY": 15.57,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-union-san-antonio-street": {
+    "id": "b12-hi-union-san-antonio-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Union on San Antonio, 2011 San Antonio St (512858:245) from the street",
+    "position": [
+      -575.4,
+      4.49,
+      373.66
+    ],
+    "target": [
+      -542.28,
+      44.1,
+      321.95
+    ],
+    "fov": 62,
+    "groundY": 2.79,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-union-san-antonio-30m": {
+    "id": "b12-hi-union-san-antonio-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Union on San Antonio, 2011 San Antonio St (512858:245) from 30 m",
+    "position": [
+      -611.63,
+      38.71,
+      242.02
+    ],
+    "target": [
+      -542.28,
+      44.1,
+      321.95
+    ],
+    "fov": 62,
+    "groundY": 8.71,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-skyloft-street": {
+    "id": "b12-hi-skyloft-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Skyloft (550397:416) from the street",
+    "position": [
+      -637.01,
+      15.32,
+      -62.79
+    ],
+    "target": [
+      -612.58,
+      46.51,
+      -12.05
+    ],
+    "fov": 62,
+    "groundY": 13.62,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-skyloft-30m": {
+    "id": "b12-hi-skyloft-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Skyloft (550397:416) from 30 m",
+    "position": [
+      -685.06,
+      43.32,
+      -59.8
+    ],
+    "target": [
+      -612.58,
+      46.51,
+      -12.05
+    ],
+    "fov": 62,
+    "groundY": 13.32,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-moody-bank-tower-street": {
+    "id": "b12-hi-moody-bank-tower-street",
+    "block": "b12-west-campus",
+    "kind": "street",
+    "label": "Moody Bank Tower (592244:630) from the street",
+    "position": [
+      -656.55,
+      -2.56,
+      848.33
+    ],
+    "target": [
+      -587.95,
+      32.7,
+      860.3
+    ],
+    "fov": 62,
+    "groundY": -4.25,
+    "note": "Review camera 1.7 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  },
+  "b12-hi-moody-bank-tower-30m": {
+    "id": "b12-hi-moody-bank-tower-30m",
+    "block": "b12-west-campus",
+    "kind": "aerial",
+    "label": "Moody Bank Tower (592244:630) from 30 m",
+    "position": [
+      -697.19,
+      25.15,
+      870.07
+    ],
+    "target": [
+      -587.95,
+      32.7,
+      860.3
+    ],
+    "fov": 62,
+    "groundY": -4.85,
+    "note": "Review camera 30 m above the baked ground beneath the camera (not the building datum). Position refined with real Rapier camera clearance, footprint and block-bound checks. Same building target retained. This is an interpreted review view, not an exact source photograph pose."
+  }
+}

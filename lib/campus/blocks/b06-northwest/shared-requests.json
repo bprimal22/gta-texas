@@ -1,0 +1,25 @@
+[
+ {
+  "id": "b06-r1",
+  "file": "lib/campus/west24-buildings.ts + public/data/west24-buildings-plan.json (GEA entry only)",
+  "change": "Mary E. Gearing Hall (GEA, City 571451:540): raise the central E-W range (plan x-219..-176, z-195.5..-182.5) so its eave/median roof is ~31.2 campus Y and its hipped tile ridge ~35.5 (cap 37.1); lower the west/east wing roof tops by ~1.2 m (median ~25.9 campus Y; east wing has a raised element to 34.5-35.7 near its north end); and consider the one-storey court infill (x-209.5..-188.5, z-180.5..-165.5) whose roof is ~17.3 campus Y in the LiDAR where the module currently shows ground (~11.2-12.2).",
+  "reason": "Measured in the real headless scene by scripts/harness/blocks/b06-northwest.ts (report.geaZones, downward rays on colliders): central range physical P50 27.0 / top 30.8 vs LiDAR P50 31.2 / P95 35.5 / max 37.1 (4.2 m low, ridge 6 m low); west wing 27.2 vs 25.9, east wing 27.15 vs 25.9 (1.2-1.3 m high); court infill 11.2 vs 17.3. The plan uses base 11.9 + 3 floors x 4.65 m for every range; UT lists 7 floors (incl. basement/attic levels) and the LiDAR shows a taller central block.",
+  "evidence": {
+   "source": "public/data/derived/roofs-lidar.json 571451 (groundY 10.1; tiers 20.7 m central 634 m2, 15.8/15.9 m wings, 7.3 m court 211 m2; pitched 23.7 deg); USGS 3DEP 2017 0.5 m raster zones in lib/campus/blocks/b06-northwest/lidar-reference.json (gea); UT LIS Campus_Buildings objectId 436 GEA (Cret / Greene, LaRoche and Dahl, 1932); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/GEA/ (fetched 2026-10-20: 7 floors, 60,621 GSF)",
+   "basis": "measured",
+   "note": "b06 cannot edit the root-shared generator; GEA is the only b06 record it draws. Datum: all values absolute campus Y (NAVD88-165)."
+  },
+  "status": "round 2 (2026-10-20): root applied the range heights. Physical P50 now central 31.83 vs LiDAR 31.22, wings 25.88 vs 25.88/25.93. Still open: the one-storey court infill (physical 11.6 vs LiDAR 17.3 campus Y)."
+ },
+ {
+  "id": "b06-r2",
+  "file": "ground/* (baked terrain) under the Communications service drive",
+  "change": "Lower the baked terrain along the service drive between CMB and CMA/HSM (OSM service 129071807; corridor x -372..-361, z -354..-300 including the open court x -373..-358, z -346..-326) from the current 17.4-18.3 campus Y to the LiDAR bare earth (DSM/DTM 14.5-15.4 in the court; 15-17 in the corridor), tying into W 25th St (z -293, ~17.5) and W Dean Keeton (z -401, ~17.4).",
+  "reason": "The 8 m terrain raster fills the sunken drive. With ground at 17.4-18.3 the two plaza bridges (soffit 19.2) leave 0.9-1.8 m headroom, so b06 install() builds them as solid podium. That blocks the drive the way the generated podium did in round 1. Once the terrain is lowered, b06 install() switches them to open bridges automatically (asBridge when headroom >= 3.5 m; scripts/harness/blocks/b06-northwest.ts reports plaza.headroom).",
+  "evidence": {
+   "source": "USGS 3DEP 2017 0.5 m DSM: service court P10/P50/P90 14.54/14.58/15.39 campus Y (research/whole-campus-92/b06-northwest/derived/make_bodies.py, inventory notes); harness: physical ground 17.42 at (-365.5,-324.5), 18.08 at (-365.5,-350)",
+   "basis": "measured",
+   "note": "Integrator-owned ground; b06 must not edit it."
+  }
+ }
+]

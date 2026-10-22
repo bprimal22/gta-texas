@@ -1,0 +1,101 @@
+{
+  "scope": "POB west Speedway and north 24th facades; bounded west planting and lower-entry walk",
+  "dimensionStatus": "Official plan footprint; source-derived approximate roof elevations; window, wall depth and base heights inferred from public photos",
+  "base": 3.0,
+  "stoneTop": 8.25,
+  "roof": 25.3,
+  "pavilionRoof": 28.65,
+  "wallDepth": 1.25,
+  "backDepth": 2.8,
+  "windowInset": 0.52,
+  "upperRows": [
+    9.1,
+    13.0,
+    16.9,
+    20.8
+  ],
+  "upperWindowHeight": 2.42,
+  "upperWindowWidth": 1.28,
+  "upperPitch": 2.63,
+  "west": [
+    [
+      30.787698463172244,
+      -115.03865729064184
+    ],
+    [
+      26.069526722358884,
+      -62.19388495307754
+    ]
+  ],
+  "north": [
+    [
+      88.93377953681758,
+      -109.7914977478297
+    ],
+    [
+      66.09731244829159,
+      -111.80812106612967
+    ],
+    [
+      66.28151246916029,
+      -114.09990700641967
+    ],
+    [
+      53.831064966586034,
+      -115.2239424759853
+    ],
+    [
+      53.611550483159114,
+      -112.94348423324364
+    ],
+    [
+      30.787698463172244,
+      -115.03865729064184
+    ]
+  ],
+  "yard": {
+    "outerX": 19,
+    "shellDepth": 0.6,
+    "innerWalkWidth": 2.2,
+    "outerWalkWidth": 0.85,
+    "crossPathCenter": 28,
+    "crossPathWidth": 3.2,
+    "rowSpacing": 2,
+    "sourceCeiling": 14,
+    "fixedEdgeFallback": [
+      [
+        -115.03865729064184,
+        4.0928388206
+      ],
+      [
+        -114,
+        4.103710186368279
+      ],
+      [
+        -105,
+        4.228593730850081
+      ],
+      [
+        -95,
+        4.194841849970393
+      ],
+      [
+        -85,
+        3.8454019358115836
+      ],
+      [
+        -75,
+        3.50672235250373
+      ],
+      [
+        -64,
+        3.4456715023570537
+      ],
+      [
+        -62.19388495307754,
+        3.4301280097
+      ]
+    ],
+    "fallbackStatus": "All fallback heights are observed fixed authored Speedway-grass heights; interpolation remains approximate. Callback takes precedence. North/south inner endpoints are estimated level continuations."
+  }
+}

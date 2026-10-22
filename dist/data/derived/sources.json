@@ -1,0 +1,131 @@
+{
+ "dataset": "USGS Lidar Point Cloud TX_Central_B1_2017 (StratMap 2017 50cm), LAS 2019 delivery",
+ "publisher": "U.S. Geological Survey 3D Elevation Program (3DEP); TNRIS/StratMap acquisition",
+ "license": "Public domain (U.S. Government work, USGS 3DEP). Credit: U.S. Geological Survey.",
+ "catalog": "https://www.sciencebase.gov/catalog/item/5dcbcdc2e4b06957975eccdb (tile 3097433a3; others analogous)",
+ "acquisition": "2017-01-28 .. 2017-03-22 (from USGS tile metadata; leaf-off season for deciduous trees)",
+ "crs": "COMPOUNDCRS[\"NAD83(2011) / UTM zone 14N + NAVD88 height - Geoid12B (metre)\",PROJCRS[\"NAD83(2011) / UTM zone 14N\",BASEGEOGCRS[\"NAD83(2011)\",DATUM[\"NAD83 (National Spatial Reference System 2011)\",ELLIPS...",
+ "calibration": {
+  "shiftX": -0.23,
+  "shiftZ": -1.07,
+  "campusMinusNavd88m": -165.0,
+  "measuredMedianResidual": 0.024281005859375426,
+  "crsNote": "source EPSG:6343 NAD83(2011)/UTM 14N + EPSG:5703 NAVD88 (Geoid12B) metres -> EPSG:6318 lon/lat -> campus x=(lon+97.73716)*96182.6, z=-(lat-30.2861)*110851; then empirical shift dx=-0.23 m, dz=-1.07 m to match campus.json 2023 footprints; campus Y = NAVD88 m - 165"
+ },
+ "alignment": {
+  "horizontal": {
+   "global": {
+    "dx": -0.22101037326443843,
+    "dz": -1.0921881607020827,
+    "iou": 0.6191900102615102,
+    "iou0": 0.6014886709461208
+   },
+   "perBuilding": {
+    "n": 280,
+    "meanDx": -0.17615408300792104,
+    "meanDz": -1.1469972423731296,
+    "medianDx": -0.23356483339407844,
+    "medianDz": -1.0723042306610564,
+    "stdDx": 0.8611325910794633,
+    "stdDz": 0.5626245863572019,
+    "medianIouAtZero": 0.7812928636778216,
+    "medianIouBest": 0.8290327745484731
+   },
+   "convention": "shift (metres) to ADD to LiDAR campus x,z to best match campus.json footprints"
+  },
+  "vertical": {
+   "terrainJson": {
+    "n": 39453,
+    "median": 0.024281005859375426,
+    "p5": -0.7522880859375,
+    "p25": -0.12800268554687522,
+    "p75": 0.1748873291015629,
+    "p95": 0.6626566406250005,
+    "mad": 0.15138525390624957,
+    "meanAbsAfterMedian": 0.31792517924623626
+   },
+   "bakedTerrain": {
+    "n": 63056,
+    "median": 0.04333901405334473,
+    "p5": -0.6900062561035156,
+    "p25": -0.12600809335708618,
+    "p75": 0.21229326725006104,
+    "p95": 0.7050065994262695,
+    "mad": 0.1691570281982422,
+    "meanAbsAfterMedian": 0.3094668745645647
+   },
+   "convention": "residual = campusY - (NAVD88_m - 165) at observed-ground cells >=4 m from footprints"
+  }
+ },
+ "classCountsInCampusBounds": {
+  "1": 1076629,
+  "2": 18583407,
+  "3": 736270,
+  "4": 939820,
+  "5": 8806920,
+  "6": 8029170,
+  "7": 65670,
+  "9": 3319,
+  "10": 1203,
+  "13": 269027,
+  "14": 4234
+ },
+ "rawTiles": [
+  {
+   "file": "USGS_LPC_TX_Central_B1_2017_stratmap17_50cm_3097433a3_LAS_2019.laz",
+   "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/USGS_LPC_TX_Central_B1_2017_LAS_2019/laz/USGS_LPC_TX_Central_B1_2017_stratmap17_50cm_3097433a3_LAS_2019.laz",
+   "bytes": 82811261,
+   "sha256": "b223aa2f50321857d445f26cfabb6962fa1e64530655dfcdf96f80796f8d0bb1",
+   "pointCount": 20154601,
+   "keptInBounds": 11251422,
+   "lasVersion": "1.4",
+   "pointFormat": 6
+  },
+  {
+   "file": "USGS_LPC_TX_Central_B1_2017_stratmap17_50cm_3097433a4_LAS_2019.laz",
+   "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/USGS_LPC_TX_Central_B1_2017_LAS_2019/laz/USGS_LPC_TX_Central_B1_2017_stratmap17_50cm_3097433a4_LAS_2019.laz",
+   "bytes": 83281531,
+   "sha256": "f66ff798db4ba940af1f4db6b151f2f34262f3589e4ddb72a70ea48b25466a82",
+   "pointCount": 20716295,
+   "keptInBounds": 11630489,
+   "lasVersion": "1.4",
+   "pointFormat": 6
+  },
+  {
+   "file": "USGS_LPC_TX_Central_B1_2017_stratmap17_50cm_3097433c1_LAS_2019.laz",
+   "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/USGS_LPC_TX_Central_B1_2017_LAS_2019/laz/USGS_LPC_TX_Central_B1_2017_stratmap17_50cm_3097433c1_LAS_2019.laz",
+   "bytes": 69841680,
+   "sha256": "95bc339407b5426ede75ff23c187f97beebd5d75bbed70fa9eb310ebe2e5e93d",
+   "pointCount": 17965188,
+   "keptInBounds": 7705956,
+   "lasVersion": "1.4",
+   "pointFormat": 6
+  },
+  {
+   "file": "USGS_LPC_TX_Central_B1_2017_stratmap17_50cm_3097433c2_LAS_2019.laz",
+   "url": "https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/USGS_LPC_TX_Central_B1_2017_LAS_2019/laz/USGS_LPC_TX_Central_B1_2017_stratmap17_50cm_3097433c2_LAS_2019.laz",
+   "bytes": 72242081,
+   "sha256": "eba7a7499bdeb60f4edc518767f4967a6e8937a18f8641c0edee9ec88d802a2d",
+   "pointCount": 18999497,
+   "keptInBounds": 7927802,
+   "lasVersion": "1.4",
+   "pointFormat": 6
+  }
+ ],
+ "rawTilesShipped": false,
+ "derived": [
+  {
+   "file": "public/data/derived/roofs-lidar.json",
+   "bytes": 625188,
+   "sha256": "1862384be0b630b627a424ee59ebf5d508ff5f53ee18cdb9545c59725f9c84e9",
+   "license": "Public domain (derived from USGS 3DEP data)"
+  },
+  {
+   "file": "public/data/derived/canopy-trees.json",
+   "bytes": 1152944,
+   "sha256": "26716f0e95ce541aea525434f79e741dedc55fa3a13a0d663c388988b8f13dbb",
+   "license": "Public domain (derived from USGS 3DEP data)"
+  }
+ ],
+ "tools": "tools/lidar/01_extract.py .. 07_sources.py (Python 3.13, laspy+lazrs, pyproj, numpy, scipy, shapely, scikit-image)"
+}

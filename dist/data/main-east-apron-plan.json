@@ -1,0 +1,44 @@
+{
+  "center": [
+    -182.71750501957501,
+    46.036711322765186
+  ],
+  "outward": [
+    0.9964872667626598,
+    0.08374441581313764
+  ],
+  "along": [
+    -0.08374441581313764,
+    0.9964872667626598
+  ],
+  "width": 3.2,
+  "innerDistance": 0.1,
+  "outerDistance": 4.0,
+  "threshold": 18.52,
+  "outerHeights": [
+    18.474650127776943,
+    18.47611567027943,
+    18.47753878890788
+  ],
+  "outerMeasuredPoints": [
+    [
+      -178.59756486752,
+      18.474650127776943,
+      44.77730903632
+    ],
+    [
+      -178.73155593279998,
+      18.47611567027943,
+      46.3716886632
+    ],
+    [
+      -178.86554699807996,
+      18.47753878890788,
+      47.96606829008
+    ]
+  ],
+  "surveyPath": "/tmp/ut-iteration-50/door-apron-survey.json",
+  "surveySha256": "ca944daed7211707af917afc0cbdcfd360f790708e50d5a7f1742e45b77240e9",
+  "sourceFootprintSha256": "ba45d4455316c2b2b3919df61bde8a674577bcf2a22541f30e16b46b12175391",
+  "limits": "Narrow doorway fall repair. Interior apron heights smoothly interpolate measured sill and authored outer endpoints; they do not follow the unreliable streamed lip."
+}

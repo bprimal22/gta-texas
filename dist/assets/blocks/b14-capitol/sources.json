@@ -1,0 +1,35 @@
+{
+ "block": "b14-capitol",
+ "round": 2,
+ "note": "Runtime data for the south strip z 1288..1536 lives next to the block code (bundled, needed synchronously by capitolGroundReference): lib/campus/blocks/b14-capitol/strip-ground.json (height grid + footprint holes), context.json add[] (buildings), strip-reference.json (check reference only). No images or textures are shipped.",
+ "sources": [
+  {
+   "id": "usgs-3dep-2017",
+   "used_for": "strip ground height grid (DTM) and the roof massing of the added buildings (class-6 building raster, DSM)",
+   "product": "USGS 3D Elevation Program lidar, project TX_Central_B1_2017 (0.5 m rasters derived in realism-lanes/lidar: tools/lidar/work/rasters.npz 'dtm', 'bld', 'dsm')",
+   "url": "https://www.usgs.gov/3d-elevation-program",
+   "license": "Public domain (U.S. Government work, USGS data policy)",
+   "datum": "campus Y = NAVD88 metres - 165; raster frame + (dx -0.23, dz -1.07) m = campus frame",
+   "derivation": "research/whole-campus-92/b14-capitol/derived/r2/strip_ground.py (4 m cell means), strip_buildings.py (ring statistics, roof levels), strip_holes.py, strip_dtm_samples.py"
+  },
+  {
+   "id": "coa-building-footprints-2023",
+   "used_for": "262 added footprints (context.json add[] ids -14001..-14262)",
+   "product": "City of Austin, Building Footprints 2023 (Watershed Protection Dept., hand-digitized from early-2023 aerial imagery)",
+   "url": "https://maps.austintexas.gov/gis/rest/Shared/PlanimetricsSurvey_1/MapServer/0",
+   "query": "envelope lon -97.74517..-97.72357, lat 30.27215..30.27527 (campus x -770..1306, z 1200..1546), outSR 4326, f=geojson",
+   "fetched": "2026-10-20",
+   "license": "City of Austin public open data (Austin Open Data Portal terms: public domain / no restrictions on use)",
+   "projection": "x = (lon + 97.73716) * 111320 * cos(30.2861 deg), z = -(lat - 30.2861) * 110851 (identical to campus.json; shared records match vertex-for-vertex)",
+   "copy": "research/whole-campus-92/b14-capitol/sources/r2/coa-footprints-2023-strip.json"
+  },
+  {
+   "id": "osm-identity",
+   "used_for": "building names only (no geometry)",
+   "product": "OpenStreetMap building ways via Overpass API (2026-10-20)",
+   "url": "https://www.openstreetmap.org/copyright",
+   "license": "ODbL 1.0 (c) OpenStreetMap contributors",
+   "copy": "research/whole-campus-92/b14-capitol/sources/osm-buildings-b14-geom.json"
+  }
+ ]
+}

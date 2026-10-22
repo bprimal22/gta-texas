@@ -1,0 +1,5856 @@
+{
+  "block": "b11-south-medical",
+  "footprints": {
+    "466150:57": {
+      "rings": [
+        [
+          [
+            193.01,
+            907.18
+          ],
+          [
+            192.5,
+            907.01
+          ],
+          [
+            190.98,
+            911.77
+          ],
+          [
+            201.5,
+            915.16
+          ],
+          [
+            198.85,
+            923.36
+          ],
+          [
+            214.91,
+            928.54
+          ],
+          [
+            216.27,
+            924.05
+          ],
+          [
+            221.11,
+            921.57
+          ],
+          [
+            221.92,
+            921.33
+          ],
+          [
+            223.72,
+            925.02
+          ],
+          [
+            236.57,
+            918.49
+          ],
+          [
+            236.84,
+            919.01
+          ],
+          [
+            237.58,
+            918.65
+          ],
+          [
+            240.54,
+            924.71
+          ],
+          [
+            258.88,
+            915.76
+          ],
+          [
+            259.95,
+            917.96
+          ],
+          [
+            279.95,
+            907.85
+          ],
+          [
+            273.27,
+            894.79
+          ],
+          [
+            273.95,
+            894.44
+          ],
+          [
+            273.69,
+            893.9
+          ],
+          [
+            283.27,
+            889.22
+          ],
+          [
+            279.68,
+            882.2
+          ],
+          [
+            280.15,
+            881.96
+          ],
+          [
+            274.81,
+            870.99
+          ],
+          [
+            273.87,
+            865.44
+          ],
+          [
+            272.24,
+            862.26
+          ],
+          [
+            224.67,
+            847.07
+          ],
+          [
+            225.11,
+            845.72
+          ],
+          [
+            213.81,
+            842.07
+          ]
+        ]
+      ],
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json) objectId 548 HDB; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/HDB/ (fetched 2026-10-20: 9 floors, 289,701 GSF, UT building since 2016); public/data/derived/roofs-lidar.json 466150 (USGS 3DEP TX_Central_B1_2017; groundY -15.8, P50 25.9, P95 46.6, max 49.0, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "official",
+        "note": "City record 466150 ('HDB') is ONE ring over three official UT buildings: HDB (UT GIS 548, 98% inside), HTB (550, 97%) and HCG (545, 98%) - Dell Medical School, opened 2016, LiDAR (Jan-Mar 2017) post-dates completion. HDB ring = official polygon intersected with the City ring."
+      }
+    }
+  },
+  "exclude": {
+    "502069:148": {
+      "source": "https://en.wikipedia.org/wiki/Frank_Erwin_Center ; https://en.wikipedia.org/wiki/Denton_A._Cooley_Pavilion ; https://communityimpact.com/austin/south-central-austin/development/2024/05/20/erwin-center-comes-down-new-hospital-system-to-come-in/ ; https://www.kut.org/health/2026-02-18/university-of-texas-austin-tx-medical-center-md-anderson-cancer-hospital-erwin-center-domain (all fetched 2026-10-20); OpenStreetMap way 27397928 (https://www.openstreetmap.org/way/27397928, Overpass query 2026-10-20, ODbL; identity only) tagged building=ruins \"Permanently CLOSED: Frank Erwin Center\"",
+      "basis": "reference-interpreted",
+      "note": "Frank Erwin Center (1977 arena, 1701 Red River St). UT Regents approved demolition May 2023; deconstruction began Sept 2023 and the last supports came down 19 May 2024. The City 2023 footprint and the 2017 LiDAR (27.9 m flat drum) predate the demolition. As of Feb 2026 UT moved the planned medical center to a Domain-area site, so the cleared lot has no announced building; it is left as open ground (surface condition of the cleared site not modelled)."
+    },
+    "549486:398": {
+      "source": "https://en.wikipedia.org/wiki/Frank_Erwin_Center ; https://en.wikipedia.org/wiki/Denton_A._Cooley_Pavilion ; https://communityimpact.com/austin/south-central-austin/development/2024/05/20/erwin-center-comes-down-new-hospital-system-to-come-in/ ; https://www.kut.org/health/2026-02-18/university-of-texas-austin-tx-medical-center-md-anderson-cancer-hospital-erwin-center-domain (all fetched 2026-10-20); OpenStreetMap way 27397931 (https://www.openstreetmap.org/way/27397931, Overpass query 2026-10-20, ODbL; identity only) \"Denton A. Cooley Pavilion\"",
+      "basis": "reference-interpreted",
+      "note": "Denton A. Cooley Pavilion (2003 basketball practice facility, 1601 Red River St), demolished with the Erwin Center (2023-2024 project). City 2023 ring / 2017 LiDAR (17.9 m flat) predate the demolition."
+    }
+  },
+  "add": [
+    {
+      "id": -1101,
+      "name": "HEALTH TRANSFORMATION BUILDING",
+      "abbr": "HTB",
+      "h": 46.2,
+      "rings": [
+        [
+          [
+            185.56,
+            945.37
+          ],
+          [
+            160.9,
+            1022.38
+          ],
+          [
+            160.79,
+            1022.63
+          ],
+          [
+            156.23,
+            1021.16
+          ],
+          [
+            154.11,
+            1027.76
+          ],
+          [
+            158.66,
+            1029.23
+          ],
+          [
+            152.26,
+            1049.09
+          ],
+          [
+            187.9,
+            1060.7
+          ],
+          [
+            198.68,
+            1027.26
+          ],
+          [
+            199.16,
+            1027.42
+          ],
+          [
+            203.86,
+            1012.87
+          ],
+          [
+            216.86,
+            1016.93
+          ],
+          [
+            231.25,
+            972.36
+          ],
+          [
+            231.75,
+            972.52
+          ],
+          [
+            235.45,
+            960.99
+          ],
+          [
+            222.18,
+            956.73
+          ],
+          [
+            222.98,
+            954.22
+          ],
+          [
+            211.02,
+            950.39
+          ],
+          [
+            210.24,
+            952.81
+          ],
+          [
+            209.01,
+            952.41
+          ],
+          [
+            208.8,
+            953.07
+          ]
+        ]
+      ],
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json) objectId 550 HTB; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/HTB/ (fetched 2026-10-20: 5 floors, 243,435 GSF, UT building since 2016); public/data/derived/roofs-lidar.json 466150 (USGS 3DEP TX_Central_B1_2017; groundY -15.8, P50 25.9, P95 46.6, max 49.0, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "official",
+        "note": "City record 466150 ('HDB') is ONE ring over three official UT buildings: HDB (UT GIS 548, 98% inside), HTB (550, 97%) and HCG (545, 98%) - Dell Medical School, opened 2016, LiDAR (Jan-Mar 2017) post-dates completion. HTB ring = official polygon intersected with the City ring."
+      }
+    },
+    {
+      "id": -1102,
+      "name": "HEALTH CENTER GARAGE",
+      "abbr": "HCG",
+      "h": 42.9,
+      "rings": [
+        [
+          [
+            136.06,
+            1084.13
+          ],
+          [
+            154.91,
+            1090.18
+          ],
+          [
+            155.37,
+            1088.75
+          ],
+          [
+            190.16,
+            1099.91
+          ],
+          [
+            205.09,
+            1053.29
+          ],
+          [
+            206.66,
+            1053.79
+          ],
+          [
+            209.61,
+            1044.63
+          ],
+          [
+            208.09,
+            1044.14
+          ],
+          [
+            216.82,
+            1017.05
+          ],
+          [
+            203.86,
+            1012.87
+          ],
+          [
+            199.16,
+            1027.42
+          ],
+          [
+            198.68,
+            1027.26
+          ],
+          [
+            187.9,
+            1060.7
+          ],
+          [
+            147.75,
+            1047.63
+          ]
+        ]
+      ],
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json) objectId 545 HCG; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/HCG/ (fetched 2026-10-20: 6 floors, 464,759 GSF, UT building since 2016); public/data/derived/roofs-lidar.json 466150 (USGS 3DEP TX_Central_B1_2017; groundY -15.8, P50 25.9, P95 46.6, max 49.0, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "official",
+        "note": "City record 466150 ('HDB') is ONE ring over three official UT buildings: HDB (UT GIS 548, 98% inside), HTB (550, 97%) and HCG (545, 98%) - Dell Medical School, opened 2016, LiDAR (Jan-Mar 2017) post-dates completion. HCG ring = official polygon intersected with the City ring."
+      }
+    }
+  ],
+  "catalog": {
+    "466150": {
+      "abbr": "HDB",
+      "archetype": "medical-modern",
+      "basis": "known",
+      "note": "Health Discovery Building, Dell Medical School, 1601 Trinity St Bldg B (UT 2016, 9 floors); City ring corrected to the official HDB polygon",
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/HDB/ (fetched 2026-10-20: 9 floors, 289,701 GSF, UT building since 2016)",
+        "basis": "official",
+        "note": "identity"
+      }
+    },
+    "-1101": {
+      "abbr": "HTB",
+      "archetype": "medical-modern",
+      "basis": "known",
+      "district": "medical",
+      "note": "Health Transformation Building, Dell Medical School, 1601 Trinity St Bldg A (UT 2016, 5 floors)",
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/HTB/ (fetched 2026-10-20: 5 floors, 243,435 GSF, UT building since 2016)",
+        "basis": "official",
+        "note": "identity; facade = medical-modern archetype (estimate)"
+      }
+    },
+    "-1102": {
+      "abbr": "HCG",
+      "archetype": "garage",
+      "basis": "known",
+      "district": "medical",
+      "note": "Health Center Garage, 1601 Trinity St (UT 2016, 6 floors)",
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/HCG/ (fetched 2026-10-20: 6 floors, 464,759 GSF, UT building since 2016)",
+        "basis": "official",
+        "note": "identity; open garage archetype"
+      }
+    },
+    "652201": {
+      "archetype": "state-office",
+      "basis": "estimate",
+      "note": "Employees Retirement System of Texas (200 E 18th St) + 1836 San Jacinto office (2021); per-wing archetypes in massing",
+      "evidence": {
+        "source": "OpenStreetMap way 677725010 (https://www.openstreetmap.org/way/677725010, Overpass query 2026-10-20, ODbL; identity only); OpenStreetMap way 677725120 (https://www.openstreetmap.org/way/677725120, Overpass query 2026-10-20, ODbL; identity only)",
+        "basis": "reference-interpreted",
+        "note": "identity from OSM/listing"
+      }
+    },
+    "462975": {
+      "archetype": "garage",
+      "basis": "known",
+      "note": "State Parking Garage P (was state-office: windows/offices on an open parking structure)",
+      "evidence": {
+        "source": "OpenStreetMap way 93079495 (https://www.openstreetmap.org/way/93079495, Overpass query 2026-10-20, ODbL; identity only)",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "504039": {
+      "archetype": "garage",
+      "basis": "known",
+      "note": "State Parking Garage R (1708 San Jacinto) (was state-office: windows/offices on an open parking structure)",
+      "evidence": {
+        "source": "OpenStreetMap way 381834561 (https://www.openstreetmap.org/way/381834561, Overpass query 2026-10-20, ODbL; identity only)",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "527909": {
+      "archetype": "garage",
+      "basis": "known",
+      "note": "State Parking Garage Q (8 levels) (was state-office: windows/offices on an open parking structure)",
+      "evidence": {
+        "source": "OpenStreetMap way 381834314 (https://www.openstreetmap.org/way/381834314, Overpass query 2026-10-20, ODbL; identity only)",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "550724": {
+      "archetype": "garage",
+      "basis": "known",
+      "note": "parking garage, 6 levels (Lavaca/Colorado at 17th) (was state-office: windows/offices on an open parking structure)",
+      "evidence": {
+        "source": "OpenStreetMap way 381834578 (https://www.openstreetmap.org/way/381834578, Overpass query 2026-10-20, ODbL; identity only)",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "485226": {
+      "archetype": "utility",
+      "basis": "known",
+      "note": "UT Central Chilling Station #7 (CS7), 1914 Red River St, 4 floors, 2014",
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json) objectId 542; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CS7/ (fetched 2026-10-20: 4 floors, 59,629 GSF, UT building since 2014)",
+        "basis": "official",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "567913": {
+      "archetype": "utility",
+      "basis": "known",
+      "note": "UT Cooling Tower 7 (CT7), 2014",
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json) objectId 581; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/CT7/ (fetched 2026-10-20: 1 floors, 1 GSF, UT building since 2014)",
+        "basis": "official",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "571325": {
+      "archetype": "utility",
+      "basis": "known",
+      "note": "Capitol Complex North Central Utility Plant (TFC Phase 1, completed 2022; post-2017, City 2023 h)",
+      "evidence": {
+        "source": "OpenStreetMap way 363525956 (https://www.openstreetmap.org/way/363525956, Overpass query 2026-10-20, ODbL; identity only); https://www.wje.com/projects/detail/texas-capitol-complex (Phase 1 includes a new central utility plant)",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "529634": {
+      "archetype": "stone-civic",
+      "basis": "known",
+      "note": "Bullock Texas State History Museum, 1800 N Congress Ave (opened 2001; Texas State Preservation Board)",
+      "evidence": {
+        "source": "OpenStreetMap way 27397820 (https://www.openstreetmap.org/way/27397820, Overpass query 2026-10-20, ODbL; identity only)",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "715305": {
+      "archetype": "historic-19c",
+      "basis": "known",
+      "note": "Gethsemane Lutheran Church, 1510 Congress Ave (1883 Gothic Revival, limestone; steep pitched roof, LiDAR 46 deg)",
+      "evidence": {
+        "source": "OpenStreetMap way 236594058 (https://www.openstreetmap.org/way/236594058, Overpass query 2026-10-20, ODbL; identity only); https://en.wikipedia.org/wiki/Gethsemane_Lutheran_Church_(Austin,_Texas)",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "528450": {
+      "archetype": "historic-19c",
+      "basis": "known",
+      "note": "Carrington-Covert House, 1511 Colorado St (1857 limestone house)",
+      "evidence": {
+        "source": "OpenStreetMap way 236594060 (https://www.openstreetmap.org/way/236594060, Overpass query 2026-10-20, ODbL; identity only); https://en.wikipedia.org/wiki/Carrington-Covert_House",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "676989": {
+      "archetype": "house",
+      "basis": "known",
+      "note": "Arthur P. Watson House, 500 E 18th St (UT WAT, 2 floors, UT since 1993)",
+      "evidence": {
+        "source": "OpenStreetMap way 381834275 (https://www.openstreetmap.org/way/381834275, Overpass query 2026-10-20, ODbL; identity only); https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/WAT/ (fetched 2026-10-20: 2 floors, 1,650 GSF, UT building since 1993)",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "468112": {
+      "archetype": "shed",
+      "basis": "known",
+      "note": "Texas Capitol Mall \"Gulf Coast Portal\": one-storey garage-entrance pavilion (TFC Phase 1, opened Dec 2022; post-2017, City 2023 h)",
+      "evidence": {
+        "source": "OpenStreetMap way 1079169251 (https://www.openstreetmap.org/way/1079169251, Overpass query 2026-10-20, ODbL; identity only); https://tspb.texas.gov/PROP/tcm/tcm-regions/index.html ; https://www.planetizen.com/news/2022/12/120372-austins-texas-mall-opens-public",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "531548": {
+      "archetype": "shed",
+      "basis": "known",
+      "note": "Texas Capitol Mall \"Big Bend Country Portal\": one-storey garage-entrance pavilion (TFC Phase 1, opened Dec 2022; post-2017, City 2023 h)",
+      "evidence": {
+        "source": "OpenStreetMap way 1079169252 (https://www.openstreetmap.org/way/1079169252, Overpass query 2026-10-20, ODbL; identity only); https://tspb.texas.gov/PROP/tcm/tcm-regions/index.html ; https://www.planetizen.com/news/2022/12/120372-austins-texas-mall-opens-public",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "552406": {
+      "archetype": "shed",
+      "basis": "known",
+      "note": "Texas Capitol Mall \"Panhandle Plains Portal\": one-storey garage-entrance pavilion (TFC Phase 1, opened Dec 2022; post-2017, City 2023 h)",
+      "evidence": {
+        "source": "OpenStreetMap way 1052123298 (https://www.openstreetmap.org/way/1052123298, Overpass query 2026-10-20, ODbL; identity only); https://tspb.texas.gov/PROP/tcm/tcm-regions/index.html ; https://www.planetizen.com/news/2022/12/120372-austins-texas-mall-opens-public",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "573939": {
+      "archetype": "shed",
+      "basis": "known",
+      "note": "Texas Capitol Mall \"South Texas Plains Portal\": one-storey garage-entrance pavilion (TFC Phase 1, opened Dec 2022; post-2017, City 2023 h)",
+      "evidence": {
+        "source": "OpenStreetMap way 1049156814 (https://www.openstreetmap.org/way/1049156814, Overpass query 2026-10-20, ODbL; identity only); https://tspb.texas.gov/PROP/tcm/tcm-regions/index.html ; https://www.planetizen.com/news/2022/12/120372-austins-texas-mall-opens-public",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "702962": {
+      "archetype": "shed",
+      "basis": "known",
+      "note": "Texas Capitol Mall \"Hill Country Portal\": one-storey garage-entrance pavilion (TFC Phase 1, opened Dec 2022; post-2017, City 2023 h)",
+      "evidence": {
+        "source": "OpenStreetMap way 1049205938 (https://www.openstreetmap.org/way/1049205938, Overpass query 2026-10-20, ODbL; identity only); https://tspb.texas.gov/PROP/tcm/tcm-regions/index.html ; https://www.planetizen.com/news/2022/12/120372-austins-texas-mall-opens-public",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "724584": {
+      "archetype": "shed",
+      "basis": "known",
+      "note": "Texas Capitol Mall \"Prairies and Lakes Portal\": one-storey garage-entrance pavilion (TFC Phase 1, opened Dec 2022; post-2017, City 2023 h)",
+      "evidence": {
+        "source": "OpenStreetMap way 1052123299 (https://www.openstreetmap.org/way/1052123299, Overpass query 2026-10-20, ODbL; identity only); https://tspb.texas.gov/PROP/tcm/tcm-regions/index.html ; https://www.planetizen.com/news/2022/12/120372-austins-texas-mall-opens-public",
+        "basis": "reference-interpreted",
+        "note": "identity / archetype choice; facade composition remains the generic archetype"
+      }
+    },
+    "570925": {
+      "archetype": "state-office",
+      "basis": "known",
+      "note": "George H.W. Bush State Office Building, 1801 N Congress Ave (14 storeys, 603,000 sf, TFC Capitol Complex Phase 1, 2022; post-2017: City 2023 h 65.25 m kept, 4.7 m/floor)",
+      "evidence": {
+        "source": "OpenStreetMap way 960916213 (https://www.openstreetmap.org/way/960916213, Overpass query 2026-10-20, ODbL; identity only); https://flintco.com/projects/george-h-w-bush-state-office-building/ (fetched 2026-10-20)",
+        "basis": "reference-interpreted",
+        "note": "identity; height = City 2023 h (no 2017 LiDAR)"
+      }
+    },
+    "528581": {
+      "archetype": "b11-south-medical:hilton-garden-inn-17th",
+      "basis": "known",
+      "note": "Hilton Garden Inn Austin University Capitol District, 301 W 17th St (17 storeys, opened 2021; post-2017: City 2023 h 66.44 m kept) | facade: highrise-identity profile hilton-garden-inn-17th",
+      "evidence": {
+        "source": "OpenStreetMap way 960180825 (https://www.openstreetmap.org/way/960180825, Overpass query 2026-10-20, ODbL; identity only); https://www.dpr.com/projects/hilton-garden-inn-17th-and-lavaca-hotel ; https://www.hriproperties.com/2021/09/21/hilton-garden-inn-austin-university-launches-onto-the-downtown-scene/ (fetched 2026-10-20) ; facade sources: Cesium research frames b12-r0-b7-30m, priority-14-r2, d28-orbit-southwest (screenshot-dataset; envelope projected from the frame's recorded camera, crop .work/references/frames/528581-317.jpg)",
+        "basis": "reference-interpreted",
+        "note": "identity; 17 floors x 3.9 m = 66 m consistent with City h; facade = highrise-identity profile hilton-garden-inn-17th (facade basis reference-interpreted): pale precast hotel with punched windows in vertical groups; beige stone section; limits: outside parent (b11-south-medical owns the record): delivered as a b11 patch only; the beige section is not expressed"
+      }
+    },
+    "463088": {
+      "archetype": "state-office",
+      "basis": "known",
+      "note": "Barbara Jordan State Office Building, 1601 N Congress Ave (12 storeys, Kirksey, 2022)",
+      "evidence": {
+        "source": "OpenStreetMap way 93079527 (https://www.openstreetmap.org/way/93079527, Overpass query 2026-10-20, ODbL; identity only); https://skyscraperpage.com/cities/?buildingID=113648",
+        "basis": "reference-interpreted",
+        "note": "identity"
+      }
+    },
+    "623906": {
+      "archetype": "shed",
+      "basis": "known",
+      "note": "TSC Pump House (UT TSP, 1 floor, 2020; post-2017, City 2023 h)",
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json) objectId 641; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/TSP/ (fetched 2026-10-20: 1 floors, 1,163 GSF, UT building since 2020)",
+        "basis": "official",
+        "note": "identity"
+      }
+    },
+    "652137": {
+      "abbr": "SMC",
+      "archetype": "medical-modern",
+      "basis": "known",
+      "note": "Dell Seton Medical Center at UT (Ascension Seton teaching hospital, opened May 2017; tower expansion completing 2026)",
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json) objectId 251; https://www.kut.org/health/2023-04-10/dell-seton-medical-center-will-get-a-280-million-expansion ; https://communityimpact.com/austin/central-austin/health-care/2023/04/10/280m-dell-seton-medical-center-expansion-to-add-several-floors-to-austin-hospital/ ; https://en.wikipedia.org/wiki/Dell_Seton_Medical_Center (all fetched 2026-10-20)",
+        "basis": "reference-interpreted",
+        "note": "identity"
+      }
+    }
+  },
+  "massing": {
+    "462975:5": {
+      "datum": {
+        "aboveY": -9.6
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 20.5,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                -80.92,
+                989.84
+              ],
+              [
+                -81.12,
+                987.71
+              ],
+              [
+                -77.63,
+                976.74
+              ],
+              [
+                -76.48,
+                975.49
+              ],
+              [
+                -73.48,
+                976.49
+              ],
+              [
+                -70.99,
+                974.5
+              ],
+              [
+                -68.28,
+                976.24
+              ],
+              [
+                -68.28,
+                980.18
+              ],
+              [
+                -73.25,
+                992.6
+              ]
+            ]
+          ],
+          "bottom": 20.5,
+          "top": 29.1,
+          "roof": "flat",
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 462975 (USGS 3DEP TX_Central_B1_2017; groundY -9.6, P50 20.4, P95 26.8, max 32.2, flat 3.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY -9.6 instead of the generator grade (LiDAR perimeter ground P50 -6.13 campus Y, +3.5 m vs groundY)."
+      }
+    },
+    "464467:34": {
+      "datum": {
+        "aboveY": -9.8
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 4.9,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 464467 (USGS 3DEP TX_Central_B1_2017; groundY -9.8, P50 4.8, P95 4.9, max 5.8, flat 0.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY -9.8 instead of the generator grade (LiDAR perimeter ground P50 -9.28 campus Y, +0.5 m vs groundY)."
+      }
+    },
+    "464587:37": {
+      "datum": {
+        "aboveY": 4.0
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 5.7,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "ring": [
+            [
+              582.56,
+              868.94
+            ],
+            [
+              580.52,
+              875.21
+            ],
+            [
+              584.8,
+              876.61
+            ],
+            [
+              584.14,
+              878.63
+            ],
+            [
+              588.71,
+              880.12
+            ],
+            [
+              589.28,
+              880.12
+            ],
+            [
+              589.98,
+              877.97
+            ],
+            [
+              595.28,
+              879.7
+            ],
+            [
+              597.3,
+              873.5
+            ],
+            [
+              600.22,
+              874.45
+            ],
+            [
+              600.22,
+              866.3
+            ],
+            [
+              585.03,
+              861.0
+            ],
+            [
+              584.85,
+              861.56
+            ],
+            [
+              583.08,
+              860.98
+            ],
+            [
+              580.48,
+              860.98
+            ],
+            [
+              580.48,
+              868.26
+            ]
+          ],
+          "bottom": 5.7,
+          "top": 13.4,
+          "roof": "hip-metal",
+          "slope": 0.6,
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 464587 (USGS 3DEP TX_Central_B1_2017; groundY 4.0, P50 9.7, P95 11.3, max 13.5, pitched 14.7 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype historic-19c) restated above the LiDAR groundY 4.0 instead of the generator grade (LiDAR perimeter ground P50 4.45 campus Y, +0.5 m vs groundY). Re-massed: 5.7 m gallery/porch level over the ring (LiDAR tiers at both ends) + hip-metal core x580-600 with ridge at the LiDAR max 13.4 m (17.4 campus Y), slope 0.6 (estimate; LiDAR plane fit 14.7 deg mixes the galleries)."
+      }
+    },
+    "485226:96": {
+      "datum": {
+        "aboveY": 4.4
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 20.1,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 485226 (USGS 3DEP TX_Central_B1_2017; groundY 4.4, P50 19.8, P95 21.1, max 23.4, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype medical-modern) restated above the LiDAR groundY 4.4 instead of the generator grade (LiDAR perimeter ground P50 5.41 campus Y, +1.0 m vs groundY)."
+      }
+    },
+    "502010:146": {
+      "datum": {
+        "aboveY": 0.3
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 47.2,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                -212.95,
+                752.28
+              ],
+              [
+                -211.44,
+                744.97
+              ],
+              [
+                -208.07,
+                744.33
+              ],
+              [
+                -189.99,
+                750.68
+              ],
+              [
+                -189.26,
+                751.41
+              ],
+              [
+                -192.22,
+                758.6
+              ]
+            ]
+          ],
+          "bottom": 47.2,
+          "top": 52.2,
+          "roof": "flat",
+          "role": "mech"
+        },
+        {
+          "rings": [
+            [
+              [
+                -204.44,
+                767.96
+              ],
+              [
+                -205.98,
+                768.34
+              ],
+              [
+                -206.63,
+                766.89
+              ],
+              [
+                -205.24,
+                765.43
+              ],
+              [
+                -200.84,
+                766.9
+              ],
+              [
+                -199.32,
+                765.77
+              ],
+              [
+                -197.9,
+                768.61
+              ],
+              [
+                -194.97,
+                767.14
+              ],
+              [
+                -194.19,
+                769.1
+              ],
+              [
+                -189.73,
+                770.77
+              ],
+              [
+                -189.96,
+                771.93
+              ],
+              [
+                -192.91,
+                772.47
+              ]
+            ]
+          ],
+          "bottom": 47.2,
+          "top": 53.6,
+          "roof": "flat",
+          "role": "mech"
+        },
+        {
+          "rings": [
+            [
+              [
+                -225.88,
+                761.99
+              ],
+              [
+                -239.04,
+                757.76
+              ],
+              [
+                -238.85,
+                755.83
+              ],
+              [
+                -236.51,
+                754.88
+              ],
+              [
+                -229.47,
+                757.89
+              ],
+              [
+                -227.53,
+                756.92
+              ],
+              [
+                -222.68,
+                759.68
+              ],
+              [
+                -222.99,
+                761.84
+              ]
+            ]
+          ],
+          "bottom": 47.2,
+          "top": 53.6,
+          "roof": "flat",
+          "role": "mech"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 502010 (USGS 3DEP TX_Central_B1_2017; groundY 0.3, P50 47.2, P95 52.7, max 55.4, flat 0.7 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype office-tower) restated above the LiDAR groundY 0.3 instead of the generator grade (LiDAR perimeter ground P50 0.48 campus Y, +0.2 m vs groundY)."
+      }
+    },
+    "502381:153": {
+      "datum": {
+        "aboveY": -11.8
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 5.9,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 502381 (USGS 3DEP TX_Central_B1_2017; groundY -11.8, P50 4.2, P95 5.9, max 6.5, flat 0.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY -11.8 instead of the generator grade (LiDAR perimeter ground P50 -11.25 campus Y, +0.6 m vs groundY)."
+      }
+    },
+    "503051:166": {
+      "datum": {
+        "aboveY": -0.3
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 5.9,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 503051 (USGS 3DEP TX_Central_B1_2017; groundY -0.3, P50 5.4, P95 6.9, max 10.5, mixed 15.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype small-commercial) restated above the LiDAR groundY -0.3 instead of the generator grade (LiDAR perimeter ground P50 0.38 campus Y, +0.7 m vs groundY)."
+      }
+    },
+    "503474:171": {
+      "datum": {
+        "aboveY": -9.4
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 20.4,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "ring": [
+            [
+              320.24,
+              701.54
+            ],
+            [
+              332.15,
+              705.1
+            ],
+            [
+              345.5,
+              663.25
+            ],
+            [
+              331.45,
+              658.7
+            ],
+            [
+              324.38,
+              679.21
+            ],
+            [
+              324.38,
+              681.21
+            ],
+            [
+              318.39,
+              700.18
+            ]
+          ],
+          "bottom": 20.4,
+          "top": 24.8,
+          "roof": "hip-metal",
+          "slope": 0.35,
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 503474 (USGS 3DEP TX_Central_B1_2017; groundY -9.4, P50 20.6, P95 24.2, max 24.9, mixed 29.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype athletic) restated above the LiDAR groundY -9.4 instead of the generator grade (LiDAR perimeter ground P50 -7.72 campus Y, +1.7 m vs groundY). Re-massed: main flat at 20.4 m (raster P50 11.2 campus Y), east LiDAR tier (24.1 m) as a low hip-metal to the LiDAR max 24.8 m; the generator stacked the whole 24.1 m tier flat (P50 +3.5 m)."
+      }
+    },
+    "503596:174": {
+      "datum": {
+        "aboveY": 3.2
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 10,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 503596 (USGS 3DEP TX_Central_B1_2017; groundY 3.2, P50 9.5, P95 11.0, max 11.4, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype small-commercial) restated above the LiDAR groundY 3.2 instead of the generator grade (LiDAR perimeter ground P50 3.53 campus Y, +0.3 m vs groundY)."
+      }
+    },
+    "504039:178": {
+      "datum": {
+        "aboveY": -10.4
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 22.4,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                -21.05,
+                849.25
+              ],
+              [
+                -16.77,
+                835.86
+              ],
+              [
+                -13.59,
+                836.56
+              ],
+              [
+                -13.29,
+                835.62
+              ],
+              [
+                -10.1,
+                837.25
+              ],
+              [
+                -10.1,
+                839.53
+              ],
+              [
+                -14.28,
+                850.21
+              ]
+            ]
+          ],
+          "bottom": 22.4,
+          "top": 27.8,
+          "roof": "flat",
+          "role": "mech"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 504039 (USGS 3DEP TX_Central_B1_2017; groundY -10.4, P50 22.4, P95 24.3, max 29.7, flat 1.1 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY -10.4 instead of the generator grade (LiDAR perimeter ground P50 -9.45 campus Y, +1.0 m vs groundY)."
+      }
+    },
+    "505227:198": {
+      "datum": {
+        "aboveY": 6.4
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 7.0,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "ring": [
+            [
+              -352.9,
+              667.95
+            ],
+            [
+              -356.13,
+              680.24
+            ],
+            [
+              -357.1,
+              681.21
+            ],
+            [
+              -356.48,
+              682.27
+            ],
+            [
+              -356.02,
+              681.81
+            ],
+            [
+              -348.46,
+              684.33
+            ],
+            [
+              -345.47,
+              686.33
+            ],
+            [
+              -330.46,
+              690.83
+            ],
+            [
+              -329.11,
+              692.18
+            ],
+            [
+              -330.12,
+              695.21
+            ],
+            [
+              -329.93,
+              696.82
+            ],
+            [
+              -329.04,
+              696.82
+            ],
+            [
+              -328.95,
+              696.53
+            ],
+            [
+              -327.49,
+              696.82
+            ],
+            [
+              -320.25,
+              699.1
+            ],
+            [
+              -313.1,
+              674.56
+            ],
+            [
+              -322.74,
+              672.05
+            ],
+            [
+              -322.09,
+              672.7
+            ],
+            [
+              -324.47,
+              674.98
+            ],
+            [
+              -326.52,
+              674.98
+            ],
+            [
+              -329.53,
+              673.48
+            ],
+            [
+              -334.53,
+              672.48
+            ],
+            [
+              -337.02,
+              670.98
+            ],
+            [
+              -343.52,
+              670.48
+            ],
+            [
+              -351.5,
+              667.48
+            ]
+          ],
+          "bottom": 7.0,
+          "top": 13.5,
+          "roof": "hip-shingle",
+          "slope": 0.5,
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 505227 (USGS 3DEP TX_Central_B1_2017; groundY 6.4, P50 10.9, P95 13.5, max 15.8, pitched 13.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype state-office) restated above the LiDAR groundY 6.4 instead of the generator grade (LiDAR perimeter ground P50 7.1 campus Y, +0.7 m vs groundY). Re-massed: 7.0 m wings (LiDAR tiers 6.8/7.0 m) + hip-shingle main block on the LiDAR 11.9 m tier, ridge 13.5 m = LiDAR P95 (19.9 campus Y), slope 0.5 (estimate)."
+      }
+    },
+    "505874:203": {
+      "datum": {
+        "aboveY": -3.7
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 3.8,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                374.9,
+                827.15
+              ],
+              [
+                386.87,
+                788.24
+              ],
+              [
+                388.54,
+                786.45
+              ],
+              [
+                419.72,
+                796.36
+              ],
+              [
+                415.22,
+                810.6
+              ],
+              [
+                413.82,
+                810.3
+              ],
+              [
+                414.9,
+                811.41
+              ],
+              [
+                412.23,
+                812.64
+              ],
+              [
+                406.23,
+                833.17
+              ],
+              [
+                403.77,
+                837.1
+              ]
+            ]
+          ],
+          "bottom": 3.8,
+          "top": 13.2,
+          "roof": "flat",
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 505874 (USGS 3DEP TX_Central_B1_2017; groundY -3.7, P50 13.2, P95 13.3, max 14.9, flat 0.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype brutalist-precast) restated above the LiDAR groundY -3.7 instead of the generator grade (LiDAR perimeter ground P50 -1.9 campus Y, +1.8 m vs groundY)."
+      }
+    },
+    "505892:204": {
+      "datum": {
+        "aboveY": -6.9
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 10.6,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                -91.43,
+                885.93
+              ],
+              [
+                -82.58,
+                855.69
+              ],
+              [
+                -11.8,
+                878.25
+              ],
+              [
+                -21.77,
+                908.67
+              ]
+            ]
+          ],
+          "bottom": 10.6,
+          "top": 56.9,
+          "roof": "flat",
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 505892 (USGS 3DEP TX_Central_B1_2017; groundY -6.9, P50 56.9, P95 57.5, max 61.0, flat 0.8 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY -6.9 instead of the generator grade (LiDAR perimeter ground P50 -5.2 campus Y, +1.7 m vs groundY)."
+      }
+    },
+    "525176:251": {
+      "datum": {
+        "aboveY": 4.8
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 5.5,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 525176 (USGS 3DEP TX_Central_B1_2017; groundY 4.8, P50 5.5, P95 6.0, max 8.0, flat 1.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype small-commercial) restated above the LiDAR groundY 4.8 instead of the generator grade (LiDAR perimeter ground P50 5.87 campus Y, +1.1 m vs groundY)."
+      }
+    },
+    "525638:256": {
+      "datum": {
+        "aboveY": 1.8
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 4.3,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 525638 (USGS 3DEP TX_Central_B1_2017; groundY 1.8, P50 4.3, P95 4.7, max 10.6, flat 1.1 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype small-commercial) restated above the LiDAR groundY 1.8 instead of the generator grade (LiDAR perimeter ground P50 2.37 campus Y, +0.6 m vs groundY)."
+      }
+    },
+    "525930:265": {
+      "datum": {
+        "aboveY": 4.5
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 8,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 525930 (USGS 3DEP TX_Central_B1_2017; groundY 4.5, P50 7.7, P95 8.0, max 13.9, flat 1.5 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY 4.5 instead of the generator grade (LiDAR perimeter ground P50 5.19 campus Y, +0.7 m vs groundY)."
+      }
+    },
+    "526402:276": {
+      "datum": {
+        "aboveY": 2.1
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 21.9,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                -431.97,
+                672.79
+              ],
+              [
+                -445.6,
+                668.15
+              ],
+              [
+                -436.62,
+                639.22
+              ],
+              [
+                -436.31,
+                637.75
+              ],
+              [
+                -438.51,
+                636.81
+              ],
+              [
+                -439.82,
+                637.68
+              ],
+              [
+                -425.82,
+                653.35
+              ],
+              [
+                -448.15,
+                646.2
+              ],
+              [
+                -454.55,
+                665.3
+              ],
+              [
+                -468.65,
+                661.13
+              ],
+              [
+                -455.94,
+                621.98
+              ],
+              [
+                -419.41,
+                633.78
+              ]
+            ]
+          ],
+          "bottom": 21.9,
+          "top": 25.5,
+          "roof": "flat",
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 526402 (USGS 3DEP TX_Central_B1_2017; groundY 2.1, P50 25.4, P95 25.7, max 29.0, flat 1.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY 2.1 instead of the generator grade (LiDAR perimeter ground P50 4.13 campus Y, +2.0 m vs groundY)."
+      }
+    },
+    "526530:280": {
+      "datum": {
+        "aboveY": -7.6
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 3,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 526530 (USGS 3DEP TX_Central_B1_2017; groundY -7.6, P50 2.5, P95 2.7, max 5.3, flat 4.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY -7.6 instead of the generator grade (LiDAR perimeter ground P50 -7.13 campus Y, +0.5 m vs groundY)."
+      }
+    },
+    "527248:297": {
+      "datum": {
+        "aboveY": 4.1
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 8.8,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 527248 (USGS 3DEP TX_Central_B1_2017; groundY 4.1, P50 8.8, P95 9.6, max 10.1, flat 11.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype small-commercial) restated above the LiDAR groundY 4.1 instead of the generator grade (LiDAR perimeter ground P50 4.97 campus Y, +0.9 m vs groundY)."
+      }
+    },
+    "527909:306": {
+      "datum": {
+        "aboveY": -9.8
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 23.3,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                22.22,
+                973.04
+              ],
+              [
+                25.1,
+                965.82
+              ],
+              [
+                29.34,
+                965.95
+              ],
+              [
+                26.72,
+                974.13
+              ]
+            ]
+          ],
+          "bottom": 23.3,
+          "top": 29.1,
+          "roof": "flat",
+          "role": "mech"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 527909 (USGS 3DEP TX_Central_B1_2017; groundY -9.8, P50 23.4, P95 25.2, max 32.6, flat 2.8 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY -9.8 instead of the generator grade (LiDAR perimeter ground P50 -8.84 campus Y, +1.0 m vs groundY)."
+      }
+    },
+    "528450:314": {
+      "datum": {
+        "aboveY": 5.7
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 11,
+          "roof": "hip-shingle",
+          "slope": 0.304,
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 528450 (USGS 3DEP TX_Central_B1_2017; groundY 5.7, P50 9.2, P95 10.2, max 11.0, pitched 16.9 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype small-commercial) restated above the LiDAR groundY 5.7 instead of the generator grade (LiDAR perimeter ground P50 6.49 campus Y, +0.8 m vs groundY)."
+      }
+    },
+    "528667:318": {
+      "datum": {
+        "aboveY": 1.0
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 7.6,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 528667 (USGS 3DEP TX_Central_B1_2017; groundY 1.0, P50 7.6, P95 8.5, max 8.8, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype small-commercial) restated above the LiDAR groundY 1.0 instead of the generator grade (LiDAR perimeter ground P50 1.46 campus Y, +0.5 m vs groundY)."
+      }
+    },
+    "529634:338": {
+      "datum": {
+        "aboveY": -2.6
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 18.9,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                -209.44,
+                670.33
+              ],
+              [
+                -210.61,
+                667.7
+              ],
+              [
+                -202.1,
+                641.65
+              ],
+              [
+                -230.13,
+                631.98
+              ],
+              [
+                -223.61,
+                611.97
+              ],
+              [
+                -217.53,
+                615.47
+              ],
+              [
+                -196.46,
+                621.49
+              ],
+              [
+                -194.13,
+                617.73
+              ],
+              [
+                -191.41,
+                606.5
+              ],
+              [
+                -189.84,
+                606.73
+              ],
+              [
+                -185.06,
+                590.7
+              ],
+              [
+                -153.81,
+                599.99
+              ],
+              [
+                -154.96,
+                600.77
+              ],
+              [
+                -155.52,
+                599.23
+              ],
+              [
+                -154.78,
+                602.69
+              ],
+              [
+                -164.3,
+                628.74
+              ],
+              [
+                -156.55,
+                631.96
+              ],
+              [
+                -150.78,
+                640.23
+              ],
+              [
+                -150.78,
+                645.18
+              ],
+              [
+                -153.26,
+                650.14
+              ],
+              [
+                -163.78,
+                656.16
+              ],
+              [
+                -163.28,
+                663.22
+              ],
+              [
+                -159.77,
+                672.25
+              ],
+              [
+                -154.29,
+                676.23
+              ],
+              [
+                -156.27,
+                684.65
+              ],
+              [
+                -159.51,
+                686.31
+              ]
+            ]
+          ],
+          "bottom": 18.9,
+          "top": 24.5,
+          "roof": "flat",
+          "role": "tier"
+        },
+        {
+          "rings": [
+            [
+              [
+                -165.7,
+                649.99
+              ],
+              [
+                -169.83,
+                646.74
+              ],
+              [
+                -170.28,
+                640.04
+              ],
+              [
+                -165.62,
+                635.3
+              ],
+              [
+                -160.84,
+                635.3
+              ],
+              [
+                -156.57,
+                639.13
+              ],
+              [
+                -156.13,
+                645.35
+              ],
+              [
+                -160.59,
+                649.81
+              ]
+            ]
+          ],
+          "bottom": 18.9,
+          "top": 31.1,
+          "roof": "flat",
+          "role": "mech"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 529634 (USGS 3DEP TX_Central_B1_2017; groundY -2.6, P50 24.4, P95 26.1, max 34.8, flat 1.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY -2.6 instead of the generator grade (LiDAR perimeter ground P50 -0.05 campus Y, +2.6 m vs groundY)."
+      }
+    },
+    "529861:340": {
+      "datum": {
+        "aboveY": -14.2
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 17,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                350.02,
+                804.32
+              ],
+              [
+                339.54,
+                800.83
+              ],
+              [
+                337.53,
+                798.81
+              ],
+              [
+                334.51,
+                799.32
+              ],
+              [
+                319.91,
+                793.66
+              ],
+              [
+                321.54,
+                790.49
+              ],
+              [
+                333.04,
+                793.49
+              ],
+              [
+                336.38,
+                786.73
+              ],
+              [
+                338.38,
+                775.68
+              ],
+              [
+                337.53,
+                774.3
+              ],
+              [
+                335.55,
+                775.29
+              ],
+              [
+                334.56,
+                772.33
+              ],
+              [
+                326.62,
+                771.33
+              ],
+              [
+                328.54,
+                767.49
+              ],
+              [
+                352.47,
+                773.98
+              ],
+              [
+                362.69,
+                778.24
+              ],
+              [
+                359.22,
+                785.17
+              ],
+              [
+                354.24,
+                804.62
+              ]
+            ]
+          ],
+          "bottom": 17,
+          "top": 21.1,
+          "roof": "flat",
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 529861 (USGS 3DEP TX_Central_B1_2017; groundY -14.2, P50 17.1, P95 21.1, max 25.1, flat 0.9 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype garage) restated above the LiDAR groundY -14.2 instead of the generator grade (LiDAR perimeter ground P50 -11.09 campus Y, +3.1 m vs groundY)."
+      }
+    },
+    "549475:396": {
+      "datum": {
+        "aboveY": 2.1
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 19.5,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 549475 (USGS 3DEP TX_Central_B1_2017; groundY 2.1, P50 18.2, P95 21.8, max 24.1, flat 1.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype medical-modern) restated above the LiDAR groundY 2.1 instead of the generator grade (LiDAR perimeter ground P50 2.74 campus Y, +0.6 m vs groundY). Deck 19.5 m (raster P50 20.3 / P95 23.9 campus Y: rooftop equipment over a lower deck)."
+      }
+    },
+    "549696:403": {
+      "datum": {
+        "aboveY": 2.2
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 5.5,
+          "roof": "hip-shingle",
+          "slope": 0.311,
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 549696 (USGS 3DEP TX_Central_B1_2017; groundY 2.2, P50 4.8, P95 5.3, max 5.5, pitched 17.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY 2.2 instead of the generator grade (LiDAR perimeter ground P50 1.21 campus Y, -1.0 m vs groundY)."
+      }
+    },
+    "550107:413": {
+      "datum": {
+        "aboveY": 1.6
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 5.7,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 550107 (USGS 3DEP TX_Central_B1_2017; groundY 1.6, P50 5.7, P95 6.3, max 7.8, flat 0.7 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype small-commercial) restated above the LiDAR groundY 1.6 instead of the generator grade (LiDAR perimeter ground P50 2.84 campus Y, +1.2 m vs groundY)."
+      }
+    },
+    "550724:424": {
+      "datum": {
+        "aboveY": 2.9
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 20.1,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 550724 (USGS 3DEP TX_Central_B1_2017; groundY 2.9, P50 19.7, P95 21.1, max 27.9, flat 0.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype state-office) restated above the LiDAR groundY 2.9 instead of the generator grade (LiDAR perimeter ground P50 3.82 campus Y, +0.9 m vs groundY)."
+      }
+    },
+    "567901:468": {
+      "datum": {
+        "aboveY": -6.8
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 53.5,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                -95.05,
+                782.62
+              ],
+              [
+                -91.43,
+                772.01
+              ],
+              [
+                -76.36,
+                776.58
+              ],
+              [
+                -76.07,
+                781.24
+              ],
+              [
+                -68.43,
+                785.54
+              ],
+              [
+                -69.42,
+                787.31
+              ],
+              [
+                -76.82,
+                784.85
+              ],
+              [
+                -79.02,
+                787.65
+              ]
+            ]
+          ],
+          "bottom": 53.5,
+          "top": 58,
+          "roof": "flat",
+          "role": "mech"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 567901 (USGS 3DEP TX_Central_B1_2017; groundY -6.8, P50 53.5, P95 58.0, max 62.4, flat 1.1 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY -6.8 instead of the generator grade (LiDAR perimeter ground P50 -2.25 campus Y, +4.5 m vs groundY)."
+      }
+    },
+    "567913:470": {
+      "datum": {
+        "aboveY": 5.5
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 16.5,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 567913 (USGS 3DEP TX_Central_B1_2017; groundY 5.5, P50 15.8, P95 17.5, max 18.0, flat 0.4 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype medical-modern) restated above the LiDAR groundY 5.5 instead of the generator grade (LiDAR perimeter ground P50 5.7 campus Y, +0.2 m vs groundY)."
+      }
+    },
+    "568141:476": {
+      "datum": {
+        "aboveY": -11.9
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 8,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                96,
+                858.75
+              ],
+              [
+                112.57,
+                807.95
+              ],
+              [
+                141.73,
+                817.31
+              ],
+              [
+                142.79,
+                819.41
+              ],
+              [
+                141.23,
+                820.65
+              ],
+              [
+                131.71,
+                850.72
+              ],
+              [
+                135.71,
+                855.22
+              ],
+              [
+                132.73,
+                864.65
+              ],
+              [
+                130.49,
+                866.31
+              ],
+              [
+                127.98,
+                865.31
+              ],
+              [
+                125.19,
+                868.38
+              ]
+            ]
+          ],
+          "bottom": 8,
+          "top": 17.1,
+          "roof": "flat",
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 568141 (USGS 3DEP TX_Central_B1_2017; groundY -11.9, P50 8.1, P95 17.2, max 18.9, flat 1.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype medical-modern) restated above the LiDAR groundY -11.9 instead of the generator grade (LiDAR perimeter ground P50 -11.02 campus Y, +0.9 m vs groundY)."
+      }
+    },
+    "568174:478": {
+      "datum": {
+        "aboveY": -14.6
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 8.6,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                38.02,
+                1034.25
+              ],
+              [
+                48.54,
+                1001.58
+              ],
+              [
+                52.56,
+                1002.17
+              ],
+              [
+                53.46,
+                999.45
+              ],
+              [
+                49.4,
+                998.14
+              ],
+              [
+                51.65,
+                990.01
+              ],
+              [
+                56.45,
+                991.56
+              ],
+              [
+                57.23,
+                989.11
+              ],
+              [
+                53.37,
+                986.66
+              ],
+              [
+                63.36,
+                954.17
+              ],
+              [
+                65,
+                953.49
+              ],
+              [
+                95.05,
+                963.5
+              ],
+              [
+                99.88,
+                951.2
+              ],
+              [
+                99.18,
+                948.87
+              ],
+              [
+                101.74,
+                949.73
+              ],
+              [
+                102.26,
+                948.27
+              ],
+              [
+                106.47,
+                950.97
+              ],
+              [
+                115.55,
+                952.99
+              ],
+              [
+                126.89,
+                920.2
+              ],
+              [
+                126.03,
+                918.17
+              ],
+              [
+                157.64,
+                928.66
+              ],
+              [
+                131.06,
+                1011.22
+              ],
+              [
+                126.39,
+                1011.17
+              ],
+              [
+                122.35,
+                1023.22
+              ],
+              [
+                122.01,
+                1024.33
+              ],
+              [
+                126.18,
+                1025.94
+              ],
+              [
+                115.9,
+                1058.65
+              ]
+            ]
+          ],
+          "bottom": 8.6,
+          "top": 14.1,
+          "roof": "flat",
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 568174 (USGS 3DEP TX_Central_B1_2017; groundY -14.6, P50 14.1, P95 16.5, max 20.2, flat 2.5 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY -14.6 instead of the generator grade (LiDAR perimeter ground P50 -11.22 campus Y, +3.4 m vs groundY)."
+      }
+    },
+    "587273:550": {
+      "datum": {
+        "aboveY": -1.4
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 4.4,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 587273 (USGS 3DEP TX_Central_B1_2017; groundY -1.4, P50 4.4, P95 4.4, max 4.4, flat 0.9 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY -1.4 instead of the generator grade (LiDAR perimeter ground P50 2.34 campus Y, +3.7 m vs groundY)."
+      }
+    },
+    "587891:563": {
+      "datum": {
+        "aboveY": 1.5
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 3.8,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 587891 (USGS 3DEP TX_Central_B1_2017; groundY 1.5, P50 3.8, P95 3.9, max 3.9, flat 0.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY 1.5 instead of the generator grade (LiDAR perimeter ground P50 1.84 campus Y, +0.3 m vs groundY)."
+      }
+    },
+    "588260:568": {
+      "datum": {
+        "aboveY": -13.0
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 4.9,
+          "roof": "hip-shingle",
+          "slope": 0.55,
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 588260 (USGS 3DEP TX_Central_B1_2017; groundY -13.0, P50 4.7, P95 4.9, max 4.9, flat 8.1 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY -13.0 instead of the generator grade (LiDAR perimeter ground P50 -12.23 campus Y, +0.8 m vs groundY)."
+      }
+    },
+    "589065:580": {
+      "datum": {
+        "aboveY": -6.1
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 6.5,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 589065 (USGS 3DEP TX_Central_B1_2017; groundY -6.1, P50 6.5, P95 6.5, max 6.5, flat 0.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY -6.1 instead of the generator grade (LiDAR perimeter ground P50 -5.4 campus Y, +0.7 m vs groundY)."
+      }
+    },
+    "589793:594": {
+      "datum": {
+        "aboveY": 3.5
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 19.9,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 589793 (USGS 3DEP TX_Central_B1_2017; groundY 3.5, P50 17.9, P95 20.9, max 23.2, flat 1.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype state-office) restated above the LiDAR groundY 3.5 instead of the generator grade (LiDAR perimeter ground P50 4.4 campus Y, +0.9 m vs groundY)."
+      }
+    },
+    "613485:732": {
+      "datum": {
+        "aboveY": 4.1
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 3,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 613485 (USGS 3DEP TX_Central_B1_2017; groundY 4.1, P50 2.9, P95 3.0, max 3.0, flat 0.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY 4.1 instead of the generator grade (LiDAR perimeter ground P50 4.39 campus Y, +0.3 m vs groundY)."
+      }
+    },
+    "633570:818": {
+      "datum": {
+        "aboveY": -0.0
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 9.0,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "ring": [
+            [
+              499.05,
+              828.03
+            ],
+            [
+              493.62,
+              826.27
+            ],
+            [
+              487.26,
+              845.92
+            ],
+            [
+              506.47,
+              845.92
+            ],
+            [
+              508.27,
+              840.35
+            ],
+            [
+              507.55,
+              840.11
+            ],
+            [
+              510.19,
+              831.94
+            ],
+            [
+              505.6,
+              830.45
+            ],
+            [
+              506.36,
+              828.09
+            ],
+            [
+              499.73,
+              825.94
+            ]
+          ],
+          "bottom": 9.0,
+          "top": 15.86,
+          "roof": "hip-metal",
+          "slope": 0.6,
+          "role": "tier"
+        },
+        {
+          "ring": [
+            [
+              484.88,
+              853.28
+            ],
+            [
+              489.43,
+              854.75
+            ],
+            [
+              488.72,
+              856.92
+            ],
+            [
+              485.7,
+              855.94
+            ],
+            [
+              482.14,
+              866.92
+            ],
+            [
+              498.67,
+              866.92
+            ],
+            [
+              500.54,
+              861.12
+            ],
+            [
+              497.82,
+              860.24
+            ],
+            [
+              498.65,
+              857.68
+            ],
+            [
+              501.47,
+              858.59
+            ],
+            [
+              504.19,
+              850.2
+            ],
+            [
+              505.0,
+              850.46
+            ],
+            [
+              506.42,
+              846.08
+            ],
+            [
+              487.21,
+              846.08
+            ]
+          ],
+          "bottom": 9.0,
+          "top": 14.56,
+          "roof": "hip-metal",
+          "slope": 0.6,
+          "role": "tier"
+        },
+        {
+          "ring": [
+            [
+              479.84,
+              874.03
+            ],
+            [
+              480.5,
+              874.25
+            ],
+            [
+              479.7,
+              876.74
+            ],
+            [
+              478.87,
+              876.47
+            ],
+            [
+              476.84,
+              882.76
+            ],
+            [
+              478.34,
+              883.25
+            ],
+            [
+              479.64,
+              885.36
+            ],
+            [
+              481.2,
+              885.48
+            ],
+            [
+              482.44,
+              884.57
+            ],
+            [
+              486.97,
+              886.04
+            ],
+            [
+              487.37,
+              887.25
+            ],
+            [
+              488.55,
+              888.0
+            ],
+            [
+              490.6,
+              887.21
+            ],
+            [
+              492.03,
+              887.67
+            ],
+            [
+              494.42,
+              878.74
+            ],
+            [
+              494.93,
+              878.9
+            ],
+            [
+              496.72,
+              873.38
+            ],
+            [
+              498.35,
+              873.91
+            ],
+            [
+              500.36,
+              867.7
+            ],
+            [
+              498.62,
+              867.08
+            ],
+            [
+              482.09,
+              867.08
+            ]
+          ],
+          "bottom": 9.0,
+          "top": 12.79,
+          "roof": "hip-metal",
+          "slope": 0.6,
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 633570 (USGS 3DEP TX_Central_B1_2017; groundY -0.0, P50 12.1, P95 17.4, max 20.8, pitched 24.9 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype historic-19c) restated above the LiDAR groundY -0.0 instead of the generator grade (LiDAR perimeter ground P50 1.28 campus Y, +1.3 m vs groundY). Re-massed as three hip-metal sections (north 1891 / middle 1888 / south 1900 per UT GIS Architect_Notes) split at z 846/867 (section lines estimated, not surveyed), eaves 9.0 m, ridges at section raster P90 + 0.5 m (towers/chimneys above that not modelled); the generator drew one 18.9 m hip over the whole 33 x 62 m plan (rise capped -> plateau)."
+      }
+    },
+    "652137:842": {
+      "datum": {
+        "aboveY": -13.6
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 22.7,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                250.53,
+                1113.76
+              ],
+              [
+                253.25,
+                1105.25
+              ],
+              [
+                255.42,
+                1105.47
+              ],
+              [
+                278.54,
+                1033.03
+              ],
+              [
+                280.83,
+                1030.95
+              ],
+              [
+                284.98,
+                1034.49
+              ],
+              [
+                290,
+                1032.98
+              ],
+              [
+                301.93,
+                1036.96
+              ],
+              [
+                302.72,
+                1039.7
+              ],
+              [
+                300.72,
+                1047.18
+              ],
+              [
+                285.23,
+                1094.16
+              ],
+              [
+                283.53,
+                1096.24
+              ],
+              [
+                282.56,
+                1093.33
+              ],
+              [
+                278.99,
+                1092.31
+              ],
+              [
+                275.22,
+                1094.15
+              ],
+              [
+                274.92,
+                1099.99
+              ],
+              [
+                281.98,
+                1099.48
+              ],
+              [
+                287.2,
+                1102.24
+              ],
+              [
+                283.73,
+                1114.15
+              ],
+              [
+                281.99,
+                1115.31
+              ],
+              [
+                260.46,
+                1108.3
+              ],
+              [
+                257.13,
+                1116.01
+              ]
+            ]
+          ],
+          "bottom": 22.7,
+          "top": 61.2,
+          "roof": "flat",
+          "role": "tier"
+        },
+        {
+          "rings": [
+            [
+              [
+                299.03,
+                1164.32
+              ],
+              [
+                293.51,
+                1161.31
+              ],
+              [
+                291.56,
+                1161.8
+              ],
+              [
+                290.57,
+                1155.81
+              ],
+              [
+                286.01,
+                1156.32
+              ],
+              [
+                278,
+                1153.32
+              ],
+              [
+                275,
+                1154.31
+              ],
+              [
+                268.52,
+                1151.32
+              ],
+              [
+                260.04,
+                1150.82
+              ],
+              [
+                258.04,
+                1147.81
+              ],
+              [
+                251,
+                1149.32
+              ],
+              [
+                235.54,
+                1144.83
+              ],
+              [
+                233.39,
+                1142.68
+              ],
+              [
+                236.9,
+                1131.14
+              ],
+              [
+                229.99,
+                1129.74
+              ],
+              [
+                233.58,
+                1118.49
+              ],
+              [
+                237.24,
+                1118.82
+              ],
+              [
+                238.95,
+                1121.47
+              ],
+              [
+                256.47,
+                1126.47
+              ],
+              [
+                262.5,
+                1129.99
+              ],
+              [
+                264.86,
+                1128.76
+              ],
+              [
+                268.05,
+                1120.99
+              ],
+              [
+                275.91,
+                1122.96
+              ],
+              [
+                274.21,
+                1131.73
+              ],
+              [
+                277.96,
+                1134.97
+              ],
+              [
+                302.48,
+                1143.48
+              ],
+              [
+                312.46,
+                1144.48
+              ],
+              [
+                315.68,
+                1148.31
+              ],
+              [
+                309.74,
+                1166.92
+              ]
+            ]
+          ],
+          "bottom": 22.7,
+          "top": 35.3,
+          "roof": "flat",
+          "role": "tier"
+        },
+        {
+          "rings": [
+            [
+              [
+                225.6,
+                1143.64
+              ],
+              [
+                226.09,
+                1141.98
+              ],
+              [
+                229.99,
+                1141.75
+              ],
+              [
+                226.85,
+                1139.85
+              ],
+              [
+                229.94,
+                1138.22
+              ],
+              [
+                227.88,
+                1136.35
+              ],
+              [
+                228.8,
+                1133.46
+              ],
+              [
+                230.92,
+                1133.8
+              ],
+              [
+                229.82,
+                1130.45
+              ],
+              [
+                236.7,
+                1131.27
+              ],
+              [
+                233.21,
+                1142.72
+              ],
+              [
+                235.46,
+                1144.97
+              ],
+              [
+                251,
+                1149.48
+              ],
+              [
+                257.96,
+                1147.99
+              ],
+              [
+                259.96,
+                1150.98
+              ],
+              [
+                268.48,
+                1151.48
+              ],
+              [
+                275,
+                1154.49
+              ],
+              [
+                278,
+                1153.48
+              ],
+              [
+                285.99,
+                1156.48
+              ],
+              [
+                290.43,
+                1155.99
+              ],
+              [
+                291.43,
+                1161.96
+              ],
+              [
+                309.84,
+                1166.6
+              ],
+              [
+                308.72,
+                1170.09
+              ]
+            ]
+          ],
+          "bottom": 22.7,
+          "top": 31.5,
+          "roof": "flat",
+          "role": "tier"
+        },
+        {
+          "rings": [
+            [
+              [
+                291.21,
+                1025.81
+              ],
+              [
+                288.41,
+                1030.24
+              ],
+              [
+                292.69,
+                1020.5
+              ],
+              [
+                292.01,
+                1021.19
+              ],
+              [
+                292.36,
+                1022.22
+              ],
+              [
+                298.33,
+                1003.07
+              ],
+              [
+                298.82,
+                1004.62
+              ],
+              [
+                312.47,
+                1009.31
+              ],
+              [
+                309.97,
+                1012.81
+              ],
+              [
+                305.18,
+                1031.48
+              ]
+            ]
+          ],
+          "bottom": 22.7,
+          "top": 23.3,
+          "roof": "flat",
+          "role": "mech"
+        },
+        {
+          "rings": [
+            [
+              [
+                283.4,
+                1090.62
+              ],
+              [
+                284.31,
+                1087.44
+              ],
+              [
+                281.96,
+                1085.09
+              ],
+              [
+                268.46,
+                1081.59
+              ],
+              [
+                267.34,
+                1080.47
+              ],
+              [
+                270.5,
+                1071.68
+              ],
+              [
+                279.22,
+                1076.27
+              ],
+              [
+                287.6,
+                1077.44
+              ],
+              [
+                283.23,
+                1090.56
+              ]
+            ]
+          ],
+          "bottom": 22.7,
+          "top": 39.8,
+          "roof": "flat",
+          "role": "mech"
+        },
+        {
+          "rings": [
+            [
+              [
+                264.31,
+                1118.85
+              ],
+              [
+                264.35,
+                1117.46
+              ],
+              [
+                258.37,
+                1115.55
+              ],
+              [
+                259.6,
+                1110.71
+              ],
+              [
+                261.19,
+                1109.41
+              ],
+              [
+                280.32,
+                1115.47
+              ],
+              [
+                277.75,
+                1122.14
+              ]
+            ]
+          ],
+          "bottom": 22.7,
+          "top": 39.7,
+          "roof": "flat",
+          "role": "mech"
+        },
+        {
+          "rings": [
+            [
+              [
+                312.54,
+                1144.32
+              ],
+              [
+                302.52,
+                1143.32
+              ],
+              [
+                278.04,
+                1134.83
+              ],
+              [
+                274.38,
+                1131.67
+              ],
+              [
+                274.88,
+                1124.27
+              ],
+              [
+                278.19,
+                1123.8
+              ],
+              [
+                276.71,
+                1129.23
+              ],
+              [
+                281.16,
+                1133.07
+              ],
+              [
+                309.49,
+                1141.96
+              ],
+              [
+                302.87,
+                1137.75
+              ],
+              [
+                303.94,
+                1139.97
+              ],
+              [
+                316.12,
+                1144.14
+              ],
+              [
+                315.88,
+                1147.57
+              ]
+            ]
+          ],
+          "bottom": 22.7,
+          "top": 31.5,
+          "roof": "flat",
+          "role": "tier"
+        },
+        {
+          "rings": [
+            [
+              [
+                276.43,
+                1054.14
+              ],
+              [
+                280.47,
+                1041.85
+              ],
+              [
+                280.84,
+                1042.12
+              ],
+              [
+                280.34,
+                1046.14
+              ],
+              [
+                284.79,
+                1049.11
+              ],
+              [
+                283.14,
+                1056.51
+              ]
+            ]
+          ],
+          "bottom": 22.7,
+          "top": 39.7,
+          "roof": "flat",
+          "role": "mech"
+        },
+        {
+          "rings": [
+            [
+              [
+                265.96,
+                1095.44
+              ],
+              [
+                262.71,
+                1096.83
+              ],
+              [
+                262.34,
+                1096.46
+              ],
+              [
+                266.52,
+                1084.63
+              ],
+              [
+                267.9,
+                1085.27
+              ],
+              [
+                267.9,
+                1089.22
+              ],
+              [
+                271.2,
+                1091.11
+              ],
+              [
+                269.25,
+                1096.56
+              ]
+            ]
+          ],
+          "bottom": 22.7,
+          "top": 39.7,
+          "roof": "flat",
+          "role": "mech"
+        },
+        {
+          "rings": [
+            [
+              [
+                275.47,
+                1069.6
+              ],
+              [
+                274.31,
+                1068.44
+              ],
+              [
+                275.05,
+                1065.84
+              ],
+              [
+                277.06,
+                1064.87
+              ],
+              [
+                286.71,
+                1068.09
+              ],
+              [
+                287.33,
+                1071.4
+              ],
+              [
+                286.04,
+                1072.69
+              ]
+            ]
+          ],
+          "bottom": 22.7,
+          "top": 39.8,
+          "roof": "flat",
+          "role": "mech"
+        },
+        {
+          "rings": [
+            [
+              [
+                249.89,
+                1122.69
+              ],
+              [
+                239.05,
+                1121.33
+              ],
+              [
+                237.28,
+                1118.81
+              ],
+              [
+                261.07,
+                1126.43
+              ],
+              [
+                263.62,
+                1119.09
+              ],
+              [
+                267.44,
+                1120.46
+              ],
+              [
+                268.21,
+                1122.19
+              ],
+              [
+                263.77,
+                1129.6
+              ]
+            ]
+          ],
+          "bottom": 22.7,
+          "top": 31.5,
+          "roof": "flat",
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 652137 (USGS 3DEP TX_Central_B1_2017; groundY -13.6, P50 23.3, P95 44.4, max 47.1, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json; https://www.kut.org/health/2023-04-10/dell-seton-medical-center-will-get-a-280-million-expansion ; https://communityimpact.com/austin/central-austin/health-care/2023/04/10/280m-dell-seton-medical-center-expansion-to-add-several-floors-to-austin-hospital/ ; https://en.wikipedia.org/wiki/Dell_Seton_Medical_Center (all fetched 2026-10-20)",
+        "basis": "reference-interpreted",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype medical-modern) restated above the LiDAR groundY -13.6 instead of the generator grade (LiDAR perimeter ground P50 -11.82 campus Y, +1.8 m vs groundY). POST-2017 CHANGE: Ascension Seton expansion adds four floors on the patient tower and one floor on the Red River building (completion fall 2026). Modelled as LiDAR tier 44.0 m + 4 x 4.3 m = 61.2 m (floor height is an estimate) and the 18.2 m base + 4.5 m = 22.7 m over the whole podium (which podium parts got the floor is not sourced). Other tiers stay at the 2017 LiDAR."
+      }
+    },
+    "653863:867": {
+      "datum": {
+        "aboveY": -14.5
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 4.7,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 653863 (USGS 3DEP TX_Central_B1_2017; groundY -14.5, P50 4.5, P95 4.7, max 4.7, flat 4.8 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY -14.5 instead of the generator grade (LiDAR perimeter ground P50 -13.81 campus Y, +0.7 m vs groundY)."
+      }
+    },
+    "653947:871": {
+      "datum": {
+        "aboveY": 2.0
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 10.4,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 653947 (USGS 3DEP TX_Central_B1_2017; groundY 2.0, P50 8.8, P95 11.4, max 15.1, flat 0.4 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype state-office) restated above the LiDAR groundY 2.0 instead of the generator grade (LiDAR perimeter ground P50 2.97 campus Y, +1.0 m vs groundY)."
+      }
+    },
+    "656694:928": {
+      "datum": {
+        "aboveY": 6.5
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 9.4,
+          "roof": "hip-shingle",
+          "slope": 0.496,
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 656694 (USGS 3DEP TX_Central_B1_2017; groundY 6.5, P50 6.9, P95 8.5, max 9.4, pitched 26.4 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype small-commercial) restated above the LiDAR groundY 6.5 instead of the generator grade (LiDAR perimeter ground P50 7.45 campus Y, +1.0 m vs groundY)."
+      }
+    },
+    "657060:931": {
+      "datum": {
+        "aboveY": 2.1
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 5.7,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 657060 (USGS 3DEP TX_Central_B1_2017; groundY 2.1, P50 5.2, P95 5.7, max 6.3, flat 0.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY 2.1 instead of the generator grade (LiDAR perimeter ground P50 4.01 campus Y, +1.9 m vs groundY)."
+      }
+    },
+    "657371:940": {
+      "datum": {
+        "aboveY": -0.5
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 5,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 657371 (USGS 3DEP TX_Central_B1_2017; groundY -0.5, P50 4.6, P95 6.0, max 6.9, flat 1.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype small-commercial) restated above the LiDAR groundY -0.5 instead of the generator grade (LiDAR perimeter ground P50 0.59 campus Y, +1.1 m vs groundY)."
+      }
+    },
+    "663060:948": {
+      "datum": {
+        "aboveY": 4.6
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 19.1,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "ring": [
+            [
+              -378.61,
+              736.12
+            ],
+            [
+              -374.81,
+              737.31
+            ],
+            [
+              -373.78,
+              736.65
+            ],
+            [
+              -371.34,
+              737.1
+            ],
+            [
+              -371.79,
+              736.21
+            ],
+            [
+              -367.77,
+              723.65
+            ],
+            [
+              -365.51,
+              722.31
+            ],
+            [
+              -359.46,
+              724.33
+            ],
+            [
+              -358.12,
+              725.67
+            ],
+            [
+              -358.12,
+              727.71
+            ],
+            [
+              -362.6,
+              740.15
+            ],
+            [
+              -355.74,
+              742.1
+            ],
+            [
+              -354.78,
+              740.18
+            ],
+            [
+              -354.78,
+              734.68
+            ],
+            [
+              -352.79,
+              730.69
+            ],
+            [
+              -353.3,
+              729.16
+            ],
+            [
+              -352.28,
+              728.65
+            ],
+            [
+              -352.28,
+              726.18
+            ],
+            [
+              -350.27,
+              722.67
+            ],
+            [
+              -346.77,
+              710.16
+            ],
+            [
+              -342.84,
+              705.73
+            ],
+            [
+              -349.13,
+              703.48
+            ],
+            [
+              -351.44,
+              703.48
+            ],
+            [
+              -354.63,
+              712.25
+            ],
+            [
+              -355.97,
+              713.49
+            ],
+            [
+              -359.03,
+              712.98
+            ],
+            [
+              -361.79,
+              711.24
+            ],
+            [
+              -360.78,
+              706.67
+            ],
+            [
+              -359.28,
+              704.18
+            ],
+            [
+              -359.28,
+              702.24
+            ],
+            [
+              -362.63,
+              700.19
+            ],
+            [
+              -362.0,
+              698.25
+            ],
+            [
+              -365.95,
+              697.0
+            ],
+            [
+              -366.64,
+              698.76
+            ],
+            [
+              -367.95,
+              699.2
+            ],
+            [
+              -366.61,
+              699.65
+            ],
+            [
+              -367.12,
+              703.22
+            ],
+            [
+              -369.12,
+              707.72
+            ],
+            [
+              -369.62,
+              711.23
+            ],
+            [
+              -372.12,
+              715.23
+            ],
+            [
+              -374.13,
+              725.74
+            ],
+            [
+              -375.62,
+              727.23
+            ],
+            [
+              -375.62,
+              729.22
+            ],
+            [
+              -378.12,
+              733.23
+            ]
+          ],
+          "bottom": 19.1,
+          "top": 37.3,
+          "roof": "flat",
+          "role": "tier"
+        },
+        {
+          "ring": [
+            [
+              -359.1,
+              727.54
+            ],
+            [
+              -359.1,
+              726.07
+            ],
+            [
+              -359.97,
+              725.2
+            ],
+            [
+              -366.21,
+              723.42
+            ],
+            [
+              -366.9,
+              724.16
+            ],
+            [
+              -370.71,
+              736.06
+            ],
+            [
+              -370.13,
+              736.94
+            ],
+            [
+              -363.25,
+              739.08
+            ]
+          ],
+          "bottom": 19.1,
+          "top": 41.5,
+          "roof": "flat",
+          "role": "mech"
+        },
+        {
+          "ring": [
+            [
+              -358.36,
+              701.53
+            ],
+            [
+              -358.3,
+              704.45
+            ],
+            [
+              -359.85,
+              707.04
+            ],
+            [
+              -360.68,
+              710.78
+            ],
+            [
+              -358.7,
+              712.02
+            ],
+            [
+              -356.12,
+              712.26
+            ],
+            [
+              -355.01,
+              710.78
+            ],
+            [
+              -352.51,
+              703.29
+            ]
+          ],
+          "bottom": 19.1,
+          "top": 41.0,
+          "roof": "flat",
+          "role": "mech"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 663060 (USGS 3DEP TX_Central_B1_2017; groundY 4.6, P50 37.3, P95 42.4, max 43.7, flat 1.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY 4.6 instead of the generator grade (LiDAR perimeter ground P50 5.49 campus Y, +0.9 m vs groundY). Tower tier ring = LiDAR tier 37.3 m intersected with the City ring (the generator snaps it to footprint vertices and drew only ~40% of the tower)."
+      }
+    },
+    "677012:980": {
+      "datum": {
+        "aboveY": -6.3
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 28.2,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                -161.6,
+                1003.16
+              ],
+              [
+                -159.11,
+                995.69
+              ],
+              [
+                -160.45,
+                993.83
+              ],
+              [
+                -181.09,
+                987.12
+              ],
+              [
+                -164.44,
+                934.57
+              ],
+              [
+                -138.47,
+                943.06
+              ],
+              [
+                -158.25,
+                1004.59
+              ]
+            ]
+          ],
+          "bottom": 28.2,
+          "top": 32.4,
+          "roof": "flat",
+          "role": "tier"
+        },
+        {
+          "rings": [
+            [
+              [
+                -168.59,
+                980.6
+              ],
+              [
+                -166.36,
+                972.94
+              ],
+              [
+                -158.94,
+                974.38
+              ],
+              [
+                -162.23,
+                982.59
+              ]
+            ]
+          ],
+          "bottom": 28.2,
+          "top": 35.6,
+          "roof": "flat",
+          "role": "mech"
+        },
+        {
+          "rings": [
+            [
+              [
+                -122.52,
+                1014.19
+              ],
+              [
+                -119.98,
+                1008.01
+              ],
+              [
+                -112.86,
+                1010.28
+              ],
+              [
+                -115.24,
+                1017.02
+              ]
+            ]
+          ],
+          "bottom": 28.2,
+          "top": 30.9,
+          "roof": "flat",
+          "role": "mech"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 677012 (USGS 3DEP TX_Central_B1_2017; groundY -6.3, P50 28.3, P95 33.0, max 37.1, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY -6.3 instead of the generator grade (LiDAR perimeter ground P50 -2.01 campus Y, +4.3 m vs groundY)."
+      }
+    },
+    "677568:985": {
+      "datum": {
+        "aboveY": 2.9
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 7.6,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 677568 (USGS 3DEP TX_Central_B1_2017; groundY 2.9, P50 7.5, P95 7.6, max 11.4, flat 2.8 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY 2.9 instead of the generator grade (LiDAR perimeter ground P50 4.05 campus Y, +1.1 m vs groundY)."
+      }
+    },
+    "698213:1032": {
+      "datum": {
+        "aboveY": 6.6
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 4.5,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 698213 (USGS 3DEP TX_Central_B1_2017; groundY 6.6, P50 4.4, P95 4.5, max 10.1, flat 0.9 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY 6.6 instead of the generator grade (LiDAR perimeter ground P50 7.91 campus Y, +1.3 m vs groundY)."
+      }
+    },
+    "698635:1038": {
+      "datum": {
+        "aboveY": -12.0
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 4.4,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 698635 (USGS 3DEP TX_Central_B1_2017; groundY -12.0, P50 4.4, P95 4.7, max 4.7, flat 9.4 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY -12.0 instead of the generator grade (LiDAR perimeter ground P50 -11.43 campus Y, +0.6 m vs groundY)."
+      }
+    },
+    "698916:1043": {
+      "datum": {
+        "aboveY": -0.5
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 29.1,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 698916 (USGS 3DEP TX_Central_B1_2017; groundY -0.5, P50 28.6, P95 30.1, max 31.1, flat 0.7 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype state-office) restated above the LiDAR groundY -0.5 instead of the generator grade (LiDAR perimeter ground P50 1.43 campus Y, +1.9 m vs groundY)."
+      }
+    },
+    "702956:1077": {
+      "datum": {
+        "aboveY": -1.4
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 3.2,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 702956 (USGS 3DEP TX_Central_B1_2017; groundY -1.4, P50 2.8, P95 3.5, max 3.5, flat 0.0 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY -1.4 instead of the generator grade (LiDAR perimeter ground P50 1.52 campus Y, +2.9 m vs groundY)."
+      }
+    },
+    "715305:1116": {
+      "datum": {
+        "aboveY": 2.2
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 15.2,
+          "roof": "hip-metal",
+          "slope": 1.0,
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 715305 (USGS 3DEP TX_Central_B1_2017; groundY 2.2, P50 11.6, P95 14.1, max 16.5, pitched 46.4 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype state-office) restated above the LiDAR groundY 2.2 instead of the generator grade (LiDAR perimeter ground P50 4.09 campus Y, +1.9 m vs groundY). Hip-metal slope 1.0 to 15.2 m (17.4 campus Y): a steep hip approximates the Gothic Revival gabled nave; the tower/gable ends are not modelled."
+      }
+    },
+    "715702:1124": {
+      "datum": {
+        "aboveY": -13.6
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 12,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 715702 (USGS 3DEP TX_Central_B1_2017; groundY -13.6, P50 11.9, P95 12.0, max 12.0, flat 0.7 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY -13.6 instead of the generator grade (LiDAR perimeter ground P50 -8.79 campus Y, +4.8 m vs groundY)."
+      }
+    },
+    "715730:1126": {
+      "datum": {
+        "aboveY": -7.4
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 19.9,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 715730 (USGS 3DEP TX_Central_B1_2017; groundY -7.4, P50 19.9, P95 19.9, max 23.6, flat 0.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype athletic) restated above the LiDAR groundY -7.4 instead of the generator grade (LiDAR perimeter ground P50 -6.5 campus Y, +0.9 m vs groundY)."
+      }
+    },
+    "717353:1160": {
+      "datum": {
+        "aboveY": 2.4
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 6.2,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                -444.7,
+                774.05
+              ],
+              [
+                -441.75,
+                763.77
+              ],
+              [
+                -415.77,
+                771.72
+              ],
+              [
+                -419.17,
+                782.13
+              ]
+            ]
+          ],
+          "bottom": 6.2,
+          "top": 11.2,
+          "roof": "flat",
+          "role": "tier"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 717353 (USGS 3DEP TX_Central_B1_2017; groundY 2.4, P50 10.9, P95 11.7, max 13.0, flat 5.3 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY 2.4 instead of the generator grade (LiDAR perimeter ground P50 3.6 campus Y, +1.2 m vs groundY)."
+      }
+    },
+    "720544:1212": {
+      "datum": {
+        "aboveY": -3.5
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 3.7,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 720544 (USGS 3DEP TX_Central_B1_2017; groundY -3.5, P50 3.7, P95 3.7, max 3.7, flat 0.8 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype shed) restated above the LiDAR groundY -3.5 instead of the generator grade (LiDAR perimeter ground P50 -3.17 campus Y, +0.3 m vs groundY)."
+      }
+    },
+    "720630:1215": {
+      "datum": {
+        "aboveY": -8.6
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 11.3,
+          "roof": "hip-shingle",
+          "slope": 0.458,
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 720630 (USGS 3DEP TX_Central_B1_2017; groundY -8.6, P50 8.6, P95 10.4, max 11.3, pitched 24.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype house) restated above the LiDAR groundY -8.6 instead of the generator grade (LiDAR perimeter ground P50 -7.23 campus Y, +1.4 m vs groundY)."
+      }
+    },
+    "732950:1234": {
+      "datum": {
+        "aboveY": 3.2
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 21.7,
+          "roof": "flat",
+          "role": "main"
+        },
+        {
+          "rings": [
+            [
+              [
+                -321.37,
+                1043.65
+              ],
+              [
+                -322.84,
+                1040.71
+              ],
+              [
+                -325.11,
+                1039.7
+              ],
+              [
+                -323.42,
+                1034.24
+              ],
+              [
+                -322.39,
+                1033.45
+              ],
+              [
+                -318.89,
+                1035.13
+              ],
+              [
+                -319.06,
+                1035.47
+              ],
+              [
+                -324.79,
+                1035.37
+              ],
+              [
+                -320.08,
+                1039.63
+              ],
+              [
+                -319.46,
+                1045.6
+              ],
+              [
+                -314,
+                1035.42
+              ],
+              [
+                -303.6,
+                1037.59
+              ],
+              [
+                -306.21,
+                1048.03
+              ],
+              [
+                -304.19,
+                1049.14
+              ]
+            ]
+          ],
+          "bottom": 21.7,
+          "top": 26.3,
+          "roof": "flat",
+          "role": "mech"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 732950 (USGS 3DEP TX_Central_B1_2017; groundY 3.2, P50 21.7, P95 26.3, max 27.7, flat 0.6 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar-tiers, archetype state-office) restated above the LiDAR groundY 3.2 instead of the generator grade (LiDAR perimeter ground P50 3.86 campus Y, +0.7 m vs groundY)."
+      }
+    },
+    "733463:1238": {
+      "datum": {
+        "aboveY": -10.0
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 21.1,
+          "roof": "flat",
+          "role": "main"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 733463 (USGS 3DEP TX_Central_B1_2017; groundY -10.0, P50 21.1, P95 21.2, max 25.5, flat 0.5 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "Generator's own LiDAR volumes (lidar, archetype modernist-lab) restated above the LiDAR groundY -10.0 instead of the generator grade (LiDAR perimeter ground P50 -7.42 campus Y, +2.6 m vs groundY)."
+      }
+    },
+    "466150:57": {
+      "datum": {
+        "aboveY": -15.8
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 17.2,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "medical-modern"
+        },
+        {
+          "ring": [
+            [
+              193.64,
+              905.62
+            ],
+            [
+              191.41,
+              911.82
+            ],
+            [
+              201.6,
+              915.11
+            ],
+            [
+              198.95,
+              923.31
+            ],
+            [
+              204.17,
+              924.99
+            ],
+            [
+              205.72,
+              925.11
+            ],
+            [
+              205.72,
+              918.19
+            ],
+            [
+              206.71,
+              915.23
+            ],
+            [
+              203.22,
+              912.24
+            ],
+            [
+              203.22,
+              911.17
+            ],
+            [
+              205.01,
+              909.28
+            ],
+            [
+              207.03,
+              911.81
+            ],
+            [
+              210.03,
+              911.31
+            ],
+            [
+              210.88,
+              912.17
+            ],
+            [
+              210.38,
+              915.69
+            ],
+            [
+              212.87,
+              920.65
+            ],
+            [
+              215.03,
+              922.82
+            ],
+            [
+              217.46,
+              922.82
+            ],
+            [
+              219.47,
+              919.79
+            ],
+            [
+              222.99,
+              921.8
+            ],
+            [
+              225.7,
+              919.68
+            ],
+            [
+              223.22,
+              914.72
+            ],
+            [
+              222.91,
+              912.31
+            ],
+            [
+              227.48,
+              912.82
+            ],
+            [
+              229.98,
+              911.32
+            ],
+            [
+              231.55,
+              911.32
+            ],
+            [
+              232.54,
+              913.29
+            ],
+            [
+              234.54,
+              912.29
+            ],
+            [
+              235.55,
+              914.32
+            ],
+            [
+              236.96,
+              914.32
+            ],
+            [
+              237.71,
+              913.19
+            ],
+            [
+              236.71,
+              911.19
+            ],
+            [
+              238.68,
+              908.72
+            ],
+            [
+              235.22,
+              906.24
+            ],
+            [
+              235.22,
+              904.73
+            ],
+            [
+              232.73,
+              901.74
+            ],
+            [
+              232.21,
+              899.17
+            ],
+            [
+              233.99,
+              897.81
+            ],
+            [
+              235.05,
+              898.34
+            ],
+            [
+              237.37,
+              901.16
+            ],
+            [
+              237.87,
+              903.65
+            ],
+            [
+              240.01,
+              905.31
+            ],
+            [
+              245.45,
+              903.33
+            ],
+            [
+              247.72,
+              900.67
+            ],
+            [
+              247.72,
+              898.73
+            ],
+            [
+              245.23,
+              896.24
+            ],
+            [
+              244.23,
+              892.74
+            ],
+            [
+              242.72,
+              890.72
+            ],
+            [
+              242.93,
+              889.32
+            ],
+            [
+              244.98,
+              889.32
+            ],
+            [
+              247.38,
+              888.07
+            ],
+            [
+              247.38,
+              890.18
+            ],
+            [
+              251.37,
+              898.15
+            ],
+            [
+              253.03,
+              899.82
+            ],
+            [
+              254.46,
+              899.82
+            ],
+            [
+              256.95,
+              896.33
+            ],
+            [
+              259.97,
+              895.82
+            ],
+            [
+              262.5,
+              894.31
+            ],
+            [
+              263.94,
+              895.2
+            ],
+            [
+              260.42,
+              897.71
+            ],
+            [
+              261.02,
+              898.31
+            ],
+            [
+              263.03,
+              897.81
+            ],
+            [
+              264.52,
+              899.8
+            ],
+            [
+              266.68,
+              898.67
+            ],
+            [
+              265.21,
+              896.71
+            ],
+            [
+              265.7,
+              895.72
+            ],
+            [
+              264.18,
+              894.2
+            ],
+            [
+              269.49,
+              889.3
+            ],
+            [
+              270.88,
+              890.16
+            ],
+            [
+              270.88,
+              892.13
+            ],
+            [
+              271.97,
+              892.31
+            ],
+            [
+              273.45,
+              890.34
+            ],
+            [
+              275.98,
+              888.82
+            ],
+            [
+              278.53,
+              888.82
+            ],
+            [
+              280.02,
+              890.31
+            ],
+            [
+              283.08,
+              889.22
+            ],
+            [
+              274.96,
+              871.51
+            ],
+            [
+              260.54,
+              878.47
+            ],
+            [
+              258.04,
+              880.47
+            ],
+            [
+              252.53,
+              882.47
+            ],
+            [
+              231.53,
+              893.97
+            ],
+            [
+              227.05,
+              895.47
+            ],
+            [
+              226.38,
+              896.23
+            ],
+            [
+              226.58,
+              898.95
+            ],
+            [
+              223.52,
+              900.48
+            ],
+            [
+              221.54,
+              900.48
+            ],
+            [
+              220.53,
+              902.0
+            ],
+            [
+              218.01,
+              900.99
+            ],
+            [
+              215.89,
+              902.73
+            ],
+            [
+              216.37,
+              904.66
+            ],
+            [
+              218.03,
+              906.32
+            ],
+            [
+              219.97,
+              906.32
+            ],
+            [
+              223.0,
+              903.79
+            ],
+            [
+              224.44,
+              905.23
+            ],
+            [
+              220.05,
+              906.97
+            ],
+            [
+              217.88,
+              909.23
+            ],
+            [
+              217.88,
+              912.74
+            ],
+            [
+              217.0,
+              913.51
+            ],
+            [
+              214.21,
+              910.72
+            ],
+            [
+              214.72,
+              908.71
+            ],
+            [
+              213.72,
+              906.72
+            ],
+            [
+              213.91,
+              903.02
+            ],
+            [
+              210.59,
+              904.45
+            ],
+            [
+              210.89,
+              906.23
+            ],
+            [
+              210.0,
+              907.01
+            ],
+            [
+              208.48,
+              905.5
+            ],
+            [
+              202.53,
+              908.48
+            ],
+            [
+              197.47,
+              909.49
+            ],
+            [
+              195.96,
+              907.48
+            ],
+            [
+              194.18,
+              907.27
+            ],
+            [
+              194.69,
+              906.23
+            ]
+          ],
+          "bottom": 17.2,
+          "top": 46.2,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "medical-modern"
+        },
+        {
+          "ring": [
+            [
+              223.76,
+              924.91
+            ],
+            [
+              236.6,
+              918.38
+            ],
+            [
+              236.76,
+              918.68
+            ],
+            [
+              237.52,
+              918.3
+            ],
+            [
+              239.01,
+              920.29
+            ],
+            [
+              247.46,
+              913.33
+            ],
+            [
+              275.59,
+              899.51
+            ],
+            [
+              273.16,
+              894.76
+            ],
+            [
+              273.83,
+              894.41
+            ],
+            [
+              273.58,
+              893.86
+            ],
+            [
+              280.14,
+              890.66
+            ],
+            [
+              278.47,
+              888.98
+            ],
+            [
+              276.02,
+              888.98
+            ],
+            [
+              273.55,
+              890.46
+            ],
+            [
+              272.04,
+              892.48
+            ],
+            [
+              270.93,
+              892.48
+            ],
+            [
+              270.72,
+              890.25
+            ],
+            [
+              269.51,
+              889.5
+            ],
+            [
+              264.42,
+              894.2
+            ],
+            [
+              265.9,
+              895.68
+            ],
+            [
+              265.39,
+              896.69
+            ],
+            [
+              266.91,
+              898.71
+            ],
+            [
+              266.04,
+              899.47
+            ],
+            [
+              264.47,
+              899.99
+            ],
+            [
+              262.97,
+              897.99
+            ],
+            [
+              260.98,
+              898.49
+            ],
+            [
+              260.18,
+              897.69
+            ],
+            [
+              263.66,
+              895.2
+            ],
+            [
+              262.5,
+              894.49
+            ],
+            [
+              260.03,
+              895.98
+            ],
+            [
+              257.05,
+              896.47
+            ],
+            [
+              254.54,
+              899.98
+            ],
+            [
+              252.97,
+              899.98
+            ],
+            [
+              251.23,
+              898.25
+            ],
+            [
+              247.22,
+              890.22
+            ],
+            [
+              247.22,
+              888.33
+            ],
+            [
+              245.02,
+              889.48
+            ],
+            [
+              243.07,
+              889.48
+            ],
+            [
+              242.88,
+              890.68
+            ],
+            [
+              244.37,
+              892.66
+            ],
+            [
+              245.37,
+              896.16
+            ],
+            [
+              247.89,
+              898.67
+            ],
+            [
+              247.37,
+              901.74
+            ],
+            [
+              244.04,
+              904.47
+            ],
+            [
+              239.98,
+              905.49
+            ],
+            [
+              237.73,
+              903.75
+            ],
+            [
+              237.23,
+              901.24
+            ],
+            [
+              234.95,
+              898.46
+            ],
+            [
+              234.01,
+              897.99
+            ],
+            [
+              232.38,
+              899.24
+            ],
+            [
+              232.38,
+              900.67
+            ],
+            [
+              235.38,
+              904.67
+            ],
+            [
+              235.38,
+              906.16
+            ],
+            [
+              238.92,
+              908.68
+            ],
+            [
+              236.89,
+              911.21
+            ],
+            [
+              237.91,
+              913.75
+            ],
+            [
+              235.46,
+              914.5
+            ],
+            [
+              234.46,
+              912.51
+            ],
+            [
+              232.46,
+              913.51
+            ],
+            [
+              231.45,
+              911.48
+            ],
+            [
+              230.02,
+              911.48
+            ],
+            [
+              227.52,
+              912.98
+            ],
+            [
+              223.09,
+              912.49
+            ],
+            [
+              223.38,
+              914.67
+            ],
+            [
+              225.89,
+              918.69
+            ],
+            [
+              225.06,
+              920.46
+            ],
+            [
+              222.4,
+              922.13
+            ]
+          ],
+          "bottom": 17.2,
+          "top": 41.5,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "medical-modern"
+        },
+        {
+          "ring": [
+            [
+              274.58,
+              870.11
+            ],
+            [
+              272.47,
+              868.48
+            ],
+            [
+              270.52,
+              868.48
+            ],
+            [
+              249.55,
+              878.97
+            ],
+            [
+              248.05,
+              880.47
+            ],
+            [
+              227.04,
+              890.47
+            ],
+            [
+              219.04,
+              895.47
+            ],
+            [
+              212.55,
+              897.97
+            ],
+            [
+              211.39,
+              899.22
+            ],
+            [
+              212.39,
+              902.21
+            ],
+            [
+              211.86,
+              903.26
+            ],
+            [
+              208.43,
+              905.22
+            ],
+            [
+              210.0,
+              906.79
+            ],
+            [
+              210.71,
+              906.17
+            ],
+            [
+              210.2,
+              904.66
+            ],
+            [
+              214.09,
+              902.77
+            ],
+            [
+              213.88,
+              906.68
+            ],
+            [
+              214.88,
+              908.69
+            ],
+            [
+              214.39,
+              910.67
+            ],
+            [
+              217.24,
+              913.04
+            ],
+            [
+              217.72,
+              909.16
+            ],
+            [
+              219.95,
+              906.83
+            ],
+            [
+              224.16,
+              905.17
+            ],
+            [
+              223.0,
+              904.01
+            ],
+            [
+              220.03,
+              906.48
+            ],
+            [
+              217.97,
+              906.48
+            ],
+            [
+              216.22,
+              904.74
+            ],
+            [
+              215.91,
+              902.36
+            ],
+            [
+              217.99,
+              900.81
+            ],
+            [
+              220.47,
+              901.8
+            ],
+            [
+              221.46,
+              900.32
+            ],
+            [
+              223.48,
+              900.32
+            ],
+            [
+              226.42,
+              898.85
+            ],
+            [
+              226.22,
+              896.17
+            ],
+            [
+              226.95,
+              895.33
+            ],
+            [
+              231.47,
+              893.83
+            ],
+            [
+              252.47,
+              882.33
+            ],
+            [
+              257.96,
+              880.33
+            ],
+            [
+              260.46,
+              878.33
+            ],
+            [
+              272.96,
+              872.33
+            ],
+            [
+              274.72,
+              871.16
+            ]
+          ],
+          "bottom": 17.2,
+          "top": 40.8,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "medical-modern"
+        },
+        {
+          "ring": [
+            [
+              214.86,
+              928.44
+            ],
+            [
+              216.2,
+              923.99
+            ],
+            [
+              221.02,
+              921.53
+            ],
+            [
+              219.51,
+              920.03
+            ],
+            [
+              217.54,
+              922.98
+            ],
+            [
+              214.97,
+              922.98
+            ],
+            [
+              212.73,
+              920.75
+            ],
+            [
+              210.22,
+              915.71
+            ],
+            [
+              210.72,
+              912.23
+            ],
+            [
+              209.97,
+              911.49
+            ],
+            [
+              206.97,
+              911.99
+            ],
+            [
+              204.99,
+              909.52
+            ],
+            [
+              203.38,
+              911.23
+            ],
+            [
+              203.38,
+              912.16
+            ],
+            [
+              206.89,
+              915.17
+            ],
+            [
+              205.88,
+              918.21
+            ],
+            [
+              205.88,
+              925.3
+            ],
+            [
+              203.8,
+              924.87
+            ]
+          ],
+          "bottom": 17.2,
+          "top": 42.9,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "medical-modern"
+        }
+      ],
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json) objectId 548 HDB; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/HDB/ (fetched 2026-10-20: 9 floors, 289,701 GSF, UT building since 2016); public/data/derived/roofs-lidar.json 466150 (USGS 3DEP TX_Central_B1_2017; groundY -15.8, P50 25.9, P95 46.6, max 49.0, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "HDB: LiDAR tiers of record 466150 clipped to the HDB wing, above LiDAR groundY -15.8: base 17.2 m (campus Y 1.4), tier 46.2 m, tier 41.5 m, tier 40.8 m, tier 42.9 m; archetype medical-modern (UT: 9 floors)."
+      }
+    },
+    "-1101:add": {
+      "datum": {
+        "aboveY": -15.8
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 21.7,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "medical-modern"
+        },
+        {
+          "ring": [
+            [
+              185.66,
+              945.49
+            ],
+            [
+              160.83,
+              1022.73
+            ],
+            [
+              156.45,
+              1021.31
+            ],
+            [
+              155.89,
+              1022.6
+            ],
+            [
+              157.37,
+              1026.16
+            ],
+            [
+              160.05,
+              1029.33
+            ],
+            [
+              177.28,
+              1034.61
+            ],
+            [
+              181.96,
+              1030.83
+            ],
+            [
+              193.47,
+              1025.82
+            ],
+            [
+              197.47,
+              1024.82
+            ],
+            [
+              200.42,
+              1023.26
+            ],
+            [
+              203.81,
+              1012.77
+            ],
+            [
+              216.81,
+              1016.83
+            ],
+            [
+              231.2,
+              972.26
+            ],
+            [
+              231.7,
+              972.42
+            ],
+            [
+              235.17,
+              961.59
+            ],
+            [
+              234.16,
+              960.67
+            ],
+            [
+              224.31,
+              957.5
+            ],
+            [
+              222.87,
+              957.77
+            ],
+            [
+              222.37,
+              960.24
+            ],
+            [
+              221.03,
+              961.48
+            ],
+            [
+              218.99,
+              961.48
+            ],
+            [
+              202.96,
+              955.97
+            ],
+            [
+              201.71,
+              954.72
+            ],
+            [
+              202.71,
+              951.24
+            ],
+            [
+              202.34,
+              951.01
+            ]
+          ],
+          "bottom": 21.7,
+          "top": 42.9,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "medical-modern"
+        },
+        {
+          "ring": [
+            [
+              198.1,
+              1026.12
+            ],
+            [
+              198.58,
+              1026.28
+            ],
+            [
+              198.95,
+              1025.15
+            ],
+            [
+              193.79,
+              1026.76
+            ],
+            [
+              182.47,
+              1031.68
+            ],
+            [
+              177.15,
+              1035.93
+            ],
+            [
+              171.89,
+              1033.85
+            ],
+            [
+              172.24,
+              1035.26
+            ],
+            [
+              170.29,
+              1040.14
+            ],
+            [
+              171.11,
+              1041.63
+            ],
+            [
+              185.4,
+              1045.58
+            ],
+            [
+              187.41,
+              1047.08
+            ],
+            [
+              191.01,
+              1048.13
+            ]
+          ],
+          "bottom": 21.7,
+          "top": 25.8,
+          "roof": "flat",
+          "role": "mech"
+        },
+        {
+          "ring": [
+            [
+              202.88,
+              951.19
+            ],
+            [
+              201.89,
+              954.68
+            ],
+            [
+              203.04,
+              955.83
+            ],
+            [
+              219.01,
+              961.32
+            ],
+            [
+              221.26,
+              961.12
+            ],
+            [
+              222.23,
+              960.16
+            ],
+            [
+              222.73,
+              957.62
+            ],
+            [
+              223.52,
+              957.62
+            ],
+            [
+              222.08,
+              956.78
+            ],
+            [
+              222.6,
+              954.18
+            ],
+            [
+              211.14,
+              950.51
+            ],
+            [
+              210.29,
+              952.91
+            ],
+            [
+              209.01,
+              952.66
+            ],
+            [
+              208.85,
+              953.17
+            ]
+          ],
+          "bottom": 21.7,
+          "top": 46.2,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "medical-modern"
+        }
+      ],
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json) objectId 550 HTB; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/HTB/ (fetched 2026-10-20: 5 floors, 243,435 GSF, UT building since 2016); public/data/derived/roofs-lidar.json 466150 (USGS 3DEP TX_Central_B1_2017; groundY -15.8, P50 25.9, P95 46.6, max 49.0, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "HTB: LiDAR tiers of record 466150 clipped to the HTB wing, above LiDAR groundY -15.8: base 21.7 m (campus Y 5.9), tier 42.9 m, mech 25.8 m, tier 46.2 m; archetype medical-modern (UT: 5 floors)."
+      }
+    },
+    "-1102:add": {
+      "datum": {
+        "aboveY": -15.8
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 19.1,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "garage"
+        },
+        {
+          "ring": [
+            [
+              154.94,
+              1089.82
+            ],
+            [
+              155.32,
+              1088.65
+            ],
+            [
+              156.52,
+              1088.82
+            ],
+            [
+              190.15,
+              1099.6
+            ],
+            [
+              204.7,
+              1053.75
+            ],
+            [
+              191.77,
+              1048.96
+            ],
+            [
+              187.95,
+              1060.8
+            ],
+            [
+              147.89,
+              1047.76
+            ],
+            [
+              136.4,
+              1084.15
+            ]
+          ],
+          "bottom": 19.1,
+          "top": 21.7,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "garage"
+        },
+        {
+          "ring": [
+            [
+              205.02,
+              1053.25
+            ],
+            [
+              206.64,
+              1053.58
+            ],
+            [
+              209.51,
+              1044.68
+            ],
+            [
+              207.99,
+              1044.19
+            ],
+            [
+              216.6,
+              1017.48
+            ],
+            [
+              214.02,
+              1017.48
+            ],
+            [
+              210.53,
+              1019.48
+            ],
+            [
+              206.03,
+              1020.48
+            ],
+            [
+              200.55,
+              1023.38
+            ],
+            [
+              199.21,
+              1027.52
+            ],
+            [
+              198.73,
+              1027.36
+            ],
+            [
+              191.7,
+              1049.18
+            ],
+            [
+              202.54,
+              1052.33
+            ],
+            [
+              204.01,
+              1053.8
+            ]
+          ],
+          "bottom": 19.1,
+          "top": 25.8,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "garage"
+        },
+        {
+          "ring": [
+            [
+              216.72,
+              1017.1
+            ],
+            [
+              203.91,
+              1012.97
+            ],
+            [
+              200.62,
+              1023.16
+            ],
+            [
+              205.97,
+              1020.32
+            ],
+            [
+              210.47,
+              1019.32
+            ],
+            [
+              213.99,
+              1017.32
+            ],
+            [
+              216.47,
+              1017.81
+            ]
+          ],
+          "bottom": 19.1,
+          "top": 42.9,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "garage"
+        }
+      ],
+      "evidence": {
+        "source": "UT LIS Campus_Buildings FeatureServer/0 (https://gis.utexas.edu/lisgis/rest/services/Basemap/Campus_Buildings/FeatureServer/0, queried 2026-10-20; research/whole-campus-92/b11-south-medical/sources/ut-gis-b11-campus.json) objectId 545 HCG; https://utdirect.utexas.edu/apps/campus/buildings/nlogon/maps/UTM/HCG/ (fetched 2026-10-20: 6 floors, 464,759 GSF, UT building since 2016); public/data/derived/roofs-lidar.json 466150 (USGS 3DEP TX_Central_B1_2017; groundY -15.8, P50 25.9, P95 46.6, max 49.0, flat 1.2 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json",
+        "basis": "measured",
+        "note": "HCG: LiDAR tiers of record 466150 clipped to the HCG wing, above LiDAR groundY -15.8: base 19.1 m (campus Y 3.3), tier 21.7 m, tier 25.8 m, tier 42.9 m; archetype garage (UT: 6 floors)."
+      }
+    },
+    "652201:844": {
+      "datum": {
+        "aboveY": -10.8
+      },
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 3.0,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "state-office"
+        },
+        {
+          "ring": [
+            [
+              43.83,
+              745.11
+            ],
+            [
+              44.79,
+              745.38
+            ],
+            [
+              44.92,
+              744.95
+            ],
+            [
+              49.69,
+              746.48
+            ],
+            [
+              51.09,
+              742.42
+            ],
+            [
+              54.1,
+              743.39
+            ],
+            [
+              61.69,
+              719.86
+            ],
+            [
+              62.25,
+              720.04
+            ],
+            [
+              62.5,
+              719.27
+            ],
+            [
+              69.76,
+              721.59
+            ],
+            [
+              71.21,
+              717.1
+            ],
+            [
+              63.86,
+              714.74
+            ],
+            [
+              70.11,
+              695.42
+            ],
+            [
+              65.73,
+              694.01
+            ],
+            [
+              68.14,
+              686.56
+            ],
+            [
+              67.75,
+              686.43
+            ],
+            [
+              68.2,
+              685.05
+            ],
+            [
+              68.59,
+              685.16
+            ],
+            [
+              69.44,
+              682.54
+            ],
+            [
+              69.05,
+              682.42
+            ],
+            [
+              71.99,
+              673.26
+            ],
+            [
+              65.49,
+              671.18
+            ],
+            [
+              60.73,
+              685.92
+            ],
+            [
+              47.23,
+              681.6
+            ],
+            [
+              45.85,
+              685.86
+            ],
+            [
+              40.98,
+              684.3
+            ],
+            [
+              39.42,
+              689.14
+            ],
+            [
+              36.76,
+              688.3
+            ],
+            [
+              22.05,
+              733.84
+            ],
+            [
+              31.58,
+              736.89
+            ],
+            [
+              30.39,
+              740.59
+            ],
+            [
+              33.42,
+              741.56
+            ],
+            [
+              32.26,
+              745.14
+            ],
+            [
+              42.66,
+              748.47
+            ]
+          ],
+          "bottom": 3.0,
+          "top": 25.15,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "state-office"
+        },
+        {
+          "ring": [
+            [
+              68.58,
+              686.7
+            ],
+            [
+              66.31,
+              693.72
+            ],
+            [
+              70.36,
+              695.02
+            ],
+            [
+              70.59,
+              695.41
+            ],
+            [
+              64.44,
+              714.44
+            ],
+            [
+              71.43,
+              716.69
+            ],
+            [
+              71.68,
+              717.13
+            ],
+            [
+              69.91,
+              722.06
+            ],
+            [
+              62.79,
+              719.85
+            ],
+            [
+              62.68,
+              720.18
+            ],
+            [
+              69.58,
+              722.41
+            ],
+            [
+              54.84,
+              768.15
+            ],
+            [
+              91.87,
+              780.1
+            ],
+            [
+              107.38,
+              731.94
+            ],
+            [
+              108.87,
+              732.42
+            ],
+            [
+              123.38,
+              687.35
+            ],
+            [
+              84.66,
+              674.86
+            ],
+            [
+              79.03,
+              692.33
+            ],
+            [
+              68.2,
+              688.91
+            ],
+            [
+              68.88,
+              686.79
+            ]
+          ],
+          "bottom": 3.0,
+          "top": 40.61,
+          "roof": "flat",
+          "role": "tier",
+          "archetype": "office-tower"
+        }
+      ],
+      "evidence": {
+        "source": "public/data/derived/roofs-lidar.json 652201 (USGS 3DEP TX_Central_B1_2017; groundY -10.8, P50 20.9, P95 26.6, max 33.0, flat 0.4 deg); USGS 3DEP TX_Central_B1_2017 0.5 m class-6 raster (realism-lanes/lidar work/rasters.npz) sampled in the ring, research/whole-campus-92/b11-south-medical/derived/inventory-b11.json; OpenStreetMap way 677725010 (https://www.openstreetmap.org/way/677725010, Overpass query 2026-10-20, ODbL; identity only) \"Employees Retirement System of Texas\", 200 E 18th St; OpenStreetMap way 677725120 (https://www.openstreetmap.org/way/677725120, Overpass query 2026-10-20, ODbL; identity only) \"1836 San Jacinto\"; https://www.loopnet.com/Listing/1836-San-Jacinto-Blvd-Austin-TX/13873638/ (fetched 2026-10-20: office built 2021, 9th-level conference centre/terrace)",
+        "basis": "reference-interpreted",
+        "note": "City 2023 ring merges the ERS building (measured by the 2017 LiDAR inside the OSM ERS outline: roof P50 14.35 campus Y = 25.15 m above groundY -10.8) and the 2021 office at 1836 San Jacinto (absent from the 2017 LiDAR, hence the 'conflict'; height = City 2023 h 41.21 m, official/listing floor count ~9 + mechanical, not measured). The generator had drawn one 40.61 m slab + an invented penthouse over both. 3 m common base is an estimate (ground-floor retail/plaza edge)."
+      }
+    },
+    "463088:8": {
+      "datum": "grade",
+      "volumes": [
+        {
+          "bottom": 0,
+          "top": 60.0,
+          "roof": "flat",
+          "role": "main",
+          "archetype": "state-office"
+        },
+        {
+          "ring": [
+            [
+              -144.16,
+              886.38
+            ],
+            [
+              -142.37,
+              886.93
+            ],
+            [
+              -149.27,
+              908.96
+            ],
+            [
+              -114.28,
+              919.92
+            ],
+            [
+              -112.33,
+              913.7
+            ],
+            [
+              -128.27,
+              908.7
+            ],
+            [
+              -110.35,
+              851.39
+            ],
+            [
+              -131.18,
+              844.87
+            ]
+          ],
+          "bottom": 60.0,
+          "top": 63.6,
+          "roof": "flat",
+          "role": "mech"
+        }
+      ],
+      "evidence": {
+        "source": "https://skyscraperpage.com/cities/?buildingID=113648 (fetched 2026-10-20: 12 floors, 211 ft = 64 m to roof, main roof 200 ft, top floor 182 ft, setback at the 10th floor, completed 2022); https://whiteconst.com/project/barbara-jordan-state-office-building/ (12-story, 420,000 sf, Kirksey); https://phase1.tfc-ccp.org/ (TFC Capitol Complex Phase 1, 2019-2022); OpenStreetMap way 93079527 (https://www.openstreetmap.org/way/93079527, Overpass query 2026-10-20, ODbL; identity only)",
+        "basis": "reference-interpreted",
+        "note": "Post-2017 (not in the 2017 LiDAR: conflict). City 2023 h 81.33 m would be 6.8 m/floor for 12 floors and contradicts the published 64 m to roof; main roof 61 m (200 ft) = 60 m deck + parapet, 3.6 m mechanical/roof enclosure set 9 m in to 64 m (211 ft). The 10th-floor setback location is not sourced and is not modelled. Heights above the generator grade (ground below a new building is not in the 2017 data)."
+      }
+    }
+  },
+  "replaces": {
+    "463088:8": {
+      "source": "install() jordan.ts on the frozen City 2023 ring and this file's massing (60 m deck / 63.6 m enclosure above grade); envelope from research/whole-campus-92/screenshot-dataset/collections/district-orbits-30m/captures/d23-orbit-southwest.jpg, d23-orbit-southeast.jpg, d23-orbit-northwest.jpg (Google Photorealistic 3D Tiles research references, not runtime textures); heights https://skyscraperpage.com/cities/?buildingID=113648",
+      "basis": "reference-interpreted",
+      "note": "Barbara Jordan State Office Building: teal curtain wall, white floor bands, two-storey white fins staggered half a module between bands, Capitol Mall colonnade, east service base. Module, storey and colonnade dimensions are estimates. Mismatch kept: the SE frame reads the south plan quad as a low terrace; footprint/massing frozen pending a dated site plan."
+    },
+    "633570:818": {
+      "source": "install() hargis.ts on the frozen City 2023 ring and this file's massing (three hip-metal sections, tops 15.86/14.56/12.79, slope 0.6) as exact planar hips; cupola + north tower positions/tops from USGS 3DEP TX_Central_B1_2017 0.5 m class-6 maxima (realism-lanes/lidar work/rasters.npz); forms from district-orbits-30m d24-orbit-northeast/northwest/southeast.jpg and the UT directory photograph https://utdirect.utexas.edu/apps/campus/buildings/static/information/nlogon/imgs/utbuildings/main/JHH/ (online-photos/ut-jhh-568-directory-photo.jpg)",
+      "basis": "reference-interpreted",
+      "note": "John W. Hargis Hall: cream masonry, red-brick frieze and corner pilasters, two tall storeys of segmental-arched windows over a basement row, blue-grey standing-seam hips, square cupola with arched belfry, north end tower. Eave 10.0 m, bay 3.3 m and storey heights are estimates; centre pediment, porches and chimneys not modelled."
+    },
+    "531887:350": {
+      "source": "install() jordan.ts buildMallStructure on the frozen City 2023 ring (h 2.5; public/data/derived/roofs-lidar.json 531887: no 2017 roof returns, post-2017)",
+      "basis": "estimate",
+      "note": "Low structure ~1 m off the Barbara Jordan Capitol Mall face; with that face authored, the generated context's coverage rule would suppress this record, so b11 rebuilds it as the generator would (plain flat box 3.0 m above grade). Identity and form unverified."
+    }
+  },
+  "archetypes": {
+    "b11-south-medical:hilton-garden-inn-17th": {
+      "label": "Hilton Garden Inn 17th St: pale precast hotel with punched windows",
+      "era": "1970s-2020s",
+      "wall": "precast",
+      "wallColor": "#dedfdc",
+      "ground": "limestone",
+      "groundColor": "#cdbfa8",
+      "base": "limestone",
+      "baseColor": "#c1b39c",
+      "baseHeight": 0.6,
+      "trim": "precast",
+      "trimColor": "#e9e9e6",
+      "roof": "flat",
+      "roofColor": "#c4c2bd",
+      "roofSlope": 0,
+      "overhang": 0,
+      "brackets": false,
+      "parapet": 1.2,
+      "cornice": 0.4,
+      "belt": false,
+      "floor": 3.9,
+      "groundFloor": 5,
+      "window": {
+        "bay": 1.8,
+        "width": 1.1,
+        "sill": 0.8,
+        "head": 2.6,
+        "mullions": 0,
+        "transom": false,
+        "type": "punched",
+        "frame": "dark"
+      },
+      "groundWindow": {
+        "bay": 3,
+        "width": 2.7,
+        "sill": 0.3,
+        "head": 4.2,
+        "mullions": 2,
+        "transom": true,
+        "type": "glazed",
+        "frame": "dark"
+      },
+      "door": {
+        "width": 2.4,
+        "height": 3
+      },
+      "reference": "Cesium frames b12-r0-b7-30m / d28-orbit-southwest: pale grey-white precast with vertical bands of punched windows and a beige stone-textured section.",
+      "storefront": false
+    }
+  }
+}

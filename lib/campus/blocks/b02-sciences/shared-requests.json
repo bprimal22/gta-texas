@@ -1,0 +1,26 @@
+[
+ {
+  "file": "lib/campus/blocks/registry.ts",
+  "change": "Allow an add[] ring vertex anywhere inside the adding block's rectangles OR inside a ring the block owns (+3 m), or let a block relabel name/abbr of a record it owns (e.g. footprints[key].name/abbr).",
+  "reason": "City 655081 ('NORMAN HACKERMAN BUILDING') is a union of NHB, FNT, MBB, NMS, BME. MBB (x to 7.4) and NMS (x to 16.4) cross b02's x<0 rectangle, so they cannot be added as their own records; b02 had to re-cut 655081 itself to MBB+NMS, which keeps the wrong NHB label on that record.",
+  "evidence": "research/raw/ut-official-buildings.geojson objects 444 MBB, 401 NMS; research/whole-campus-92/b02-sciences/EVIDENCE.md"
+ },
+ {
+  "file": "lib/campus/context-buildings.ts (planContextBuildings) + blocks/types.ts",
+  "change": "Optional block-owned override context.json generate: { key: evidence } that skips the 'route' veto for that record (the block check must then prove no generated wall sits over a walkable route).",
+  "reason": "FNT (-201) and MBB+NMS (655081) were classified 'route' only because the authored NHB north wall (shared FNT/NHB edge) and b03's mbb-frontage closed interior / service walk sit on their official edges. b02 therefore rebuilt them with install() bodies (simple brick/limestone skin, flat roofs) instead of the richer generated facade grammar.",
+  "evidence": "route-why probe in research/whole-campus-92/b02-sciences/derived/route-why.mjs (NHB buff limestone at x-95..-84 z-187.5; MBB closed interior / MBB concrete walks at x-27..-19 z-198..-190)"
+ },
+ {
+  "file": "lib/campus/mbb-frontage.ts (b03-owned) — coordination only, no change requested",
+  "change": "None. Note: mbb-frontage builds the MBB south wing end (closed interior, cornice Y24.85, service walk) inside the b02-owned 655081 ring; b02's MBB bodies abut it (eroded 0.5-0.75 m from its walkable tops).",
+  "reason": "Whole-ring rule coordination; neither block should move the shared MBB south face.",
+  "evidence": "lib/campus/blocks/b02-sciences/bodies.json pieces MBB 22.6/25.9 near z -200"
+ },
+ {
+  "file": "lib/campus/west24-buildings.ts / welch-inner-roof.ts (review)",
+  "change": "None requested now; integrator to note that the authored Welch high inner roof sits ~5-6 m above the 2017 LiDAR Y27.3 tier.",
+  "reason": "Payette documents a NEW mechanical penthouse on the 1978 wing (2017-2021 renovation), after the LiDAR flight; the authored height may be right for 2026 but has no measured source.",
+  "evidence": "https://www.payette.com/projects/construction-update-ut-austin-welch-hall-renovation/ (accessed 2026-10-20)"
+ }
+]

@@ -1,0 +1,208 @@
+{
+ "source": "USGS 3DEP TX_Central_B1_2017 class-6 0.5 m raster (realism-lanes/lidar work/rasters.npz), campus Y = NAVD88-165, raster+(dx-0.23,dz-1.07); produced by research/whole-campus-92/b07-wcp-gregory/derived/lidar_sample.py",
+ "records": {
+  "485181:94": {
+   "abbr": "GRS",
+   "roofY_P50": 4.38,
+   "roofY_P90": 4.44,
+   "roofY_P95": 4.46,
+   "roofY_max": 4.48,
+   "groundY_med": 0.04,
+   "coverage": 0.9
+  },
+  "501737:142": {
+   "abbr": "CLK",
+   "roofY_P50": -5.18,
+   "roofY_P90": -4.5,
+   "roofY_P95": -4.39,
+   "roofY_max": -3.87,
+   "groundY_med": -9.59,
+   "coverage": 0.97
+  },
+  "504712:189": {
+   "abbr": "GRC",
+   "roofY_P50": 4.47,
+   "roofY_P90": 4.97,
+   "roofY_P95": 5.11,
+   "roofY_max": 5.24,
+   "groundY_med": 0.2,
+   "coverage": 0.84
+  },
+  "507336:222": {
+   "abbr": "WCP",
+   "roofY_P50": 22.75,
+   "roofY_P90": 25.96,
+   "roofY_P95": 26.65,
+   "roofY_max": 29.97,
+   "groundY_med": -0.03,
+   "coverage": 0.82
+  },
+  "526236:273": {
+   "abbr": "JCD",
+   "roofY_P50": 18.63,
+   "roofY_P90": 30.44,
+   "roofY_P95": 32.32,
+   "roofY_max": 36.58,
+   "groundY_med": -1.02,
+   "coverage": 0.93
+  },
+  "526723:286": {
+   "abbr": "JES",
+   "roofY_P50": 12.84,
+   "roofY_P90": 41.86,
+   "roofY_P95": 44.76,
+   "roofY_max": 49.39,
+   "groundY_med": -2.35,
+   "coverage": 0.77
+  },
+  "570462:521": {
+   "abbr": "",
+   "roofY_P50": 1.04,
+   "roofY_P90": 12.1,
+   "roofY_P95": 12.33,
+   "roofY_max": 14.31,
+   "groundY_med": -4.95,
+   "coverage": 0.84
+  },
+  "589099:581": {
+   "abbr": "BRG",
+   "roofY_P50": 15.68,
+   "roofY_P90": 15.85,
+   "roofY_P95": 16.78,
+   "roofY_max": 20.91,
+   "groundY_med": -5.35,
+   "coverage": 0.94
+  },
+  "611354:699": {
+   "abbr": "RHD",
+   "roofY_P50": 11.95,
+   "roofY_P90": 15.8,
+   "roofY_P95": 18.12,
+   "roofY_max": 20.34,
+   "groundY_med": -0.91,
+   "coverage": 0.95
+  },
+  "625251:802": {
+   "abbr": "SJH",
+   "roofY_P50": 14.3,
+   "roofY_P90": 16.63,
+   "roofY_P95": 17.04,
+   "roofY_max": 21.82,
+   "groundY_med": -7.85,
+   "coverage": 0.9
+  },
+  "651688:837": {
+   "abbr": "MHD",
+   "roofY_P50": 9.83,
+   "roofY_P90": 13.62,
+   "roofY_P95": 14.17,
+   "roofY_max": 16.23,
+   "groundY_med": -0.18,
+   "coverage": 0.95
+  },
+  "654836:889": {
+   "abbr": "",
+   "roofY_P50": 1.95,
+   "roofY_P90": 2.56,
+   "roofY_P95": 5.72,
+   "roofY_max": 13.02,
+   "groundY_med": -1.71,
+   "coverage": 1.0
+  },
+  "656127:915": {
+   "abbr": "GRE",
+   "roofY_P50": 16.56,
+   "roofY_P90": 23.56,
+   "roofY_P95": 24.49,
+   "roofY_max": 27.34,
+   "groundY_med": -0.17,
+   "coverage": 0.83
+  },
+  "676812:977": {
+   "abbr": "UTX",
+   "roofY_P50": -0.92,
+   "roofY_P90": 4.14,
+   "roofY_P95": 5.13,
+   "roofY_max": 9.19,
+   "groundY_med": -7.74,
+   "coverage": 0.95
+  },
+  "716175:1135": {
+   "abbr": "GRP",
+   "roofY_P50": 4.66,
+   "roofY_P90": 5.25,
+   "roofY_P95": 5.31,
+   "roofY_max": 5.48,
+   "groundY_med": 0.36,
+   "coverage": 0.83
+  },
+  "717973:1167": {
+   "abbr": "BSB",
+   "roofY_P50": 0.11,
+   "roofY_P90": 0.47,
+   "roofY_P95": 0.52,
+   "roofY_max": 0.56,
+   "groundY_med": -3.42,
+   "coverage": 0.96
+  },
+  "719550:1193": {
+   "abbr": "PHD",
+   "roofY_P50": 9.05,
+   "roofY_P90": 14.83,
+   "roofY_P95": 15.48,
+   "roofY_max": 16.72,
+   "groundY_med": -3.97,
+   "coverage": 0.94
+  }
+ },
+ "masses": {
+  "WCP:west-wing": {
+   "roofY_P10": 15.68,
+   "roofY_P50": 17.89,
+   "roofY_P90": 20.28,
+   "roofY_P95": 20.31,
+   "roofY_max": 20.62,
+   "coverage": 0.84
+  },
+  "WCP:dining": {
+   "roofY_P10": 11.15,
+   "roofY_P50": 11.25,
+   "roofY_P90": 16.15,
+   "roofY_P95": 16.92,
+   "roofY_max": 17.02,
+   "coverage": 0.82
+  },
+  "WCP:auditorium": {
+   "roofY_P10": 11.05,
+   "roofY_P50": 12.24,
+   "roofY_P90": 16.04,
+   "roofY_P95": 16.69,
+   "roofY_max": 17.05,
+   "coverage": 0.82
+  },
+  "WCP:office": {
+   "roofY_P10": 13.7,
+   "roofY_P50": 24.87,
+   "roofY_P90": 27.35,
+   "roofY_P95": 27.68,
+   "roofY_max": 29.97,
+   "coverage": 0.85
+  },
+  "RLP:north-bar": {
+   "roofY_P10": 1.64,
+   "roofY_P50": 22.8,
+   "roofY_P90": 25.01,
+   "roofY_P95": 25.95,
+   "roofY_max": 26.12,
+   "coverage": 0.83
+  },
+  "RLP:south-wing": {
+   "roofY_P10": 20.52,
+   "roofY_P50": 22.83,
+   "roofY_P90": 24.99,
+   "roofY_P95": 25.98,
+   "roofY_max": 26.85,
+   "coverage": 0.78
+  }
+ }
+}

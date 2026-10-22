@@ -1,0 +1,95 @@
+[
+ {
+  "file": "lib/campus/ground/tie-ins.ts",
+  "change": "When a level infill (\"level infill to the facade\") or its corner fan is emitted, clip the output in plan against the official building footprint ring (buildings[]), not only stop the march at inBuilding(). Repro: Gebauer (GIS 734466) south recess reflex corner (-149.82,-17.31): the WCH-yard tie-in graded ground reached ~0.2 m inside the footprint at (-150.2..-149.9, z -17.5, y 16.62).",
+  "reason": "Tie-in ground inside a real building footprint collides with the restored GEB body; b04 currently works around it with a 0.55 m GEB wall inset (GEB_INSET in lib/campus/blocks/b04-tower/index.ts) that could return to 0.35 m.",
+  "evidence": "run-block-checks G4 report before GEB_INSET: 2 samples [[-150.2,16.62,-17.5],[-149.9,16.62,-17.5]] \"Ground tie-in graded ground (WCH existing yard planting soil)\""
+ },
+ {
+  "file": "lib/campus/context-buildings.ts",
+  "change": "Classify \"route\" only when authored walkable ground covers more than a small fraction of the footprint interior AFTER eroding the footprint by one coverage cell (2 m), or report edge-only contacts separately (e.g. decision \"route-edge\" that still generates the building with a clearance inset).",
+  "reason": "Goldsmith Hall (734456, 2,780 m2) disappeared entirely because 7 edge cells (ground fraction 0.012) touched West Mall paving that research/WEST_MALL.md had already trimmed 0.15 m off the footprint. b04 now rebuilds GOL itself, but other blocks may lose real buildings the same way.",
+  "evidence": "research/whole-campus-92/b04-tower/EVIDENCE.md (coverage cells at z 42.6, x -401.4..-391.4 and (-407.4,54.6)); research/CENTRAL_MALLS.md (1.605 m2 West Mall/Goldsmith overlap) and WEST_MALL.md (15 cm building buffer)."
+ },
+ {
+  "file": "lib/campus/mall-buildings.ts (legacy \"Smooth East Mall buildings: Mall planting soil\")",
+  "change": "Review/identify GIS records 593475 (32 m2, LiDAR 4.2 m, x -58.8..-54.1 z 23.1..31.4) and 623102 (30 m2, LiDAR 4.0 m, x -61.0..-52.9 z 12.2..16.5) west of Speedway between WCH and Waggener. 593475 lies wholly under the authored Mall planting soil. If they are real structures, the planting soil must stop at their footprints so b04 can build them; if they are not buildings (e.g. vents/kiosks/vegetation misclassified as LiDAR class 6), exclude them with evidence.",
+  "reason": "Both are suppressed as \"route\" and drawn by nothing; b04 cannot build them without a solid over authored walkable soil.",
+  "evidence": "roofs-lidar.json (2017) status measured, tiers 0; campus.json h 3.34/3.37; no identification found in UT building pages or prior research."
+ },
+ {
+  "id": "b04-r2-4",
+  "file": "ground/ (baked offline contour terrain offline-terrain-61) inside the new Main Mall clearance ring (public/data/central-mall-plan.json clearance, last ring)",
+  "change": "Lower the baked terrain inside that ring to at most the 2017 LiDAR ground (central-malls.ts mainMallKnots): about -0.4 m for axis t 25-46 (z 61-83) and -0.5 to -0.7 m for t 78-90 (z 114-126).",
+  "reason": "The terrain is not cut by clearance volumes and smooths the real 1.45 m plaza-to-drive flight. central-malls.ts lays the plaza at max(LiDAR, terrain+0.04), so the upper plaza sits up to 0.43 m high and the south flight has 6 risers instead of the measured ~10. After the re-bake, the same code falls back to the pure LiDAR profile; no b04 change needed.",
+  "evidence": {
+   "source": "USGS 3DEP TX_Central_B1_2017 DSM/ground (realism-lanes/lidar rasters.npz); research/whole-campus-92/b04-tower/derived/axis_profile.py; b04 block check report.own.mainMall.plaza",
+   "basis": "measured",
+   "note": "Model-minus-LiDAR at t 26/31/36/41/46: +0.43/+0.38/+0.38/+0.40/+0.29 m; t 51-76 within 0.06 m."
+  }
+ },
+ {
+  "id": "b04-r2-5",
+  "file": "scripts/harness/run-scan-check.mjs (OLD-TOWER-COLUMN)",
+  "change": "Replace the fixed 40 m limit over the old authored-Tower square with 'first physical hit <= LiDAR DSM + 0.5 m' (or a limit of 45.5 m), keeping the check that nothing Tower-like remains there.",
+  "reason": "The real Main Building south block reaches Y 41-44.5 where it overlaps the old landmark square (LiDAR). To keep the check passing, b04 caps that 78 m2 overlap at Y 39.9 (zone tower-column-cap), 1.5-4.6 m below the LiDAR roof.",
+  "evidence": {
+   "source": "lib/campus/blocks/b04-tower/mai-lidar-dsm.json; main-building-envelope-plan.json zones[tower-column-cap].lidar (DSM median 42.11 vs 39.9)",
+   "basis": "measured",
+   "note": "Once relaxed, delete the tower-column-cap zone in research/.../derived/mai_zones.py and regenerate."
+  }
+ },
+ {
+  "id": "b04-r2b-1",
+  "file": "lib/campus/blocks/b05-southmall (b05 round 2: South Mall south of z 170, Littlefield approach)",
+  "change": "COORDINATION (no b04 edit requested). b04's South Mall head surfaces end on the world line z = 169.9. Continue them south from it: central green x -247.95..-210.74 at contour terrain + 0.06 m; west walk x -251.29..-248.48 and east walk x -210.99..-208.17 at terrain + 0.08 m (centre lines OSM footways 126328774 / 206164862, width 2.8 m). The green surface is the walkway grass material; the walks use 'South Mall pale concrete walks' (central-malls.ts). Axis level at z 170: Y 12.17 (LiDAR 12.22).",
+  "reason": "b05 owns the fountain and the ground south of z 170; matching levels and finishes avoid a seam on the mall axis.",
+  "evidence": {
+   "source": "research/whole-campus-92/b04-tower/derived/south_mall.py; b04 block check report.own.mainMall.axisLevelAtZ170",
+   "basis": "measured",
+   "note": "Levels follow the baked contour terrain; walk widths and green edges are reference-interpreted (overviews b04-r0-b2, b05-r0-a1)."
+  }
+ },
+ {
+  "id": "b04-d1",
+  "file": "lib/campus/main-building-envelope-plan.json + Main Building/Tower root modules",
+  "change": "ROOT REVIEW ONLY: the district round made NO change to the Main Building/Tower and claims no Tower improvement (D07 reported as Inner Campus partial). New shot b04-d07-orbit-southwest-actual reproduces district-orbits-30m d07-orbit-southwest for the root comparison.",
+  "reason": "Root-owned shared envelope.",
+  "evidence": {
+   "source": "district-orbits-30m d07-orbit-southwest (usable-context); ut-mai-526-campus-0/1",
+   "basis": "reference-interpreted"
+  }
+ },
+ {
+  "id": "b04-d2",
+  "file": "Goldsmith courtyard ground (root walkway / central-malls; inside COURT ring x -392.0..-364.8, z 56.5..79.2)",
+  "change": "The UT directory photograph ut-gol-576 shows a rectangular reflecting pool on the courtyard axis with flagstone walks, palms and benches. b04 did not model it (courtyard ground is not b04-owned and no measured pool dimensions exist). Root may add it after measuring (e.g. LiDAR ground returns / plan drawings).",
+  "reason": "Visible feature in evidence, outside b04 ownership; not invented.",
+  "evidence": {
+   "source": "screenshot-dataset/online-photos/ut-gol-576-directory-photo.jpg",
+   "basis": "reference-interpreted",
+   "note": "Pool size/position unmeasured."
+  }
+ },
+ {
+  "id": "b04-d3",
+  "file": "lib/campus/walkway.ts buildUnion / Flawn / Hogg (root-authored)",
+  "change": "Union, Flawn Academic Center and Hogg Auditorium are root-authored and unchanged. b04's Goldsmith now uses b04-OWN textured limestone (#cbc2b7 sampled) / clay tile (#a4553d) instead of borrowing the plain 'Union warm coursed limestone' / 'Union red clay barrel tiles' materials; root may apply the same offline limestone/clayTile maps at metre UVs to the Union materials so the West Mall pair matches.",
+  "reason": "Avoid a finish mismatch between neighbouring Union and Goldsmith; b04 cannot mutate borrowed materials.",
+  "evidence": {
+   "source": "lib/campus/blocks/b04-tower/index.ts (own materials), ut-gol-576 sampled tint",
+   "basis": "reference-interpreted"
+  }
+ },
+ {
+  "id": "b04-d4",
+  "file": "none (evidence gap)",
+  "change": "BOT greenhouse entrance gable, glazed door and steps (ut-bot-577) are not modelled: the photograph's facade direction is unverified and no mapped footway ends within 6 m of ring 591884. A bearing-tagged ground photo or path survey is needed to place them.",
+  "reason": "Door/steps omitted rather than invented.",
+  "evidence": {
+   "source": "packet D07 paths vs GIS ring 591884; ut-bot-577-directory-photo",
+   "basis": "measured",
+   "note": "nearest path vertex > 6 m from the ring"
+  }
+ }
+]

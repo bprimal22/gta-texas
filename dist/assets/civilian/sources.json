@@ -1,0 +1,142 @@
+{
+  "repository": "microsoft/Microsoft-Rocketbox",
+  "revision": "0943055db6ec570bcef9f2c8b41c9e5467c808f9",
+  "license": "MIT",
+  "character": "Male_Adult_01",
+  "triangles": 7440,
+  "scale": 0.009760491332059371,
+  "motion": {
+    "Idle": {
+      "source": "m_idle_breathe_01.max.fbx",
+      "duration": 2.7333333492279053,
+      "speedMetersPerSecond": 0
+    },
+    "Walk": {
+      "source": "m_walk_fast_01.max.fbx",
+      "duration": 1.0666667222976685,
+      "speedMetersPerSecond": 1.4595804928436562
+    },
+    "Run": {
+      "source": "m_run_fast_01.max.fbx",
+      "duration": 0.6000000238418579,
+      "speedMetersPerSecond": 5.699625699891423
+    }
+  },
+  "sourceFiles": [
+    {
+      "file": "Male_Adult_01.fbx",
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_01/Export/Male_Adult_01.fbx",
+      "bytes": 521472,
+      "sha256": "8d1edb51b4dc3427ae2456f4407fc105532c145dd019e53cd42bab31cc948a29",
+      "git_blob_sha": "fdaf4aa7d15054f1601740ea1a09cf111938d210"
+    },
+    {
+      "file": "m002_body_color.tga",
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_01/Textures/m002_body_color.tga",
+      "bytes": 12582956,
+      "sha256": "6a048a6b2140a1f5293798ca286be64fd0de6d79572e1273ff5765bd578f463f",
+      "git_blob_sha": "818ec72b6c69655c5853ab0eb1efdd6ab40b2bf0"
+    },
+    {
+      "file": "m002_body_normal.tga",
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_01/Textures/m002_body_normal.tga",
+      "bytes": 12582956,
+      "sha256": "c9892e80c56890f6f5365627835286c2d4d2cc34cc473f6788fe3d560a52fb69",
+      "git_blob_sha": "31168ae5dca1085bb433988ff18f37fefe7dba0a"
+    },
+    {
+      "file": "m002_head_color.tga",
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_01/Textures/m002_head_color.tga",
+      "bytes": 12582956,
+      "sha256": "f5b64e4894930d438f7c419c3c9d0bba1f95fa4de9af078b762ea55bfca1ab85",
+      "git_blob_sha": "0becf592ac705b4a2be8a63aa164266ac2a09d9c"
+    },
+    {
+      "file": "m002_head_normal.tga",
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_01/Textures/m002_head_normal.tga",
+      "bytes": 12582956,
+      "sha256": "5ef5ae404c9276f17641e392d0d4bdbe5fb23e94f28238b23a381e6a357c42ea",
+      "git_blob_sha": "9d2385bd43ec4e2bbc1712168d5317d06f9941e7"
+    },
+    {
+      "file": "m002_opacity_color.tga",
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Avatars/Adults/Male_Adult_01/Textures/m002_opacity_color.tga",
+      "bytes": 16777260,
+      "sha256": "53818d3f45519451edd2bc60d6e59cd4057ecd381827463c5503da0439d0a5cf",
+      "git_blob_sha": "a4088df07a8896761bd209d304b12310f90e5003"
+    },
+    {
+      "file": "m_idle_breathe_01.max.fbx",
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Animations/all_animations_max_motextr_static/m_idle_breathe_01.max.fbx",
+      "bytes": 1397280,
+      "sha256": "281735704260d96e882d13e3c77d0ede00ed5d2e40805cd305000b3e5cbb1090",
+      "git_blob_sha": "735b406c2f19cf233f042bfe0424c2a15c053c95"
+    },
+    {
+      "file": "m_walk_neutral_01.max.fbx",
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Animations/all_animations_max_motextr_xy/m_walk_neutral_01.max.fbx",
+      "bytes": 994336,
+      "sha256": "e6805ae6b6b49fe10f06c1b17b14ddde90d09b9fea689ac34793df252f44dcd0",
+      "git_blob_sha": "33955a38a7db608935477e7a0fd605dee5230c0c"
+    },
+    {
+      "file": "m_run_neutral_01.max.fbx",
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Animations/all_animations_max_motextr_xy/m_run_neutral_01.max.fbx",
+      "bytes": 868752,
+      "sha256": "5a22052ea750805ea7e097310f36cd448c838e7c88bc842a78632d9606869fa8",
+      "git_blob_sha": "409f02a546e6746f385e70a353b30c639fa3a99b"
+    },
+    {
+      "file": "m_walk_fast_01.max.fbx",
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Animations/all_animations_max_motextr_xy/m_walk_fast_01.max.fbx",
+      "bytes": 957776,
+      "sha256": "a8b7962c7dd016b1e9781a6c0983efbac62ad069feb2884d2b2e5686ffe90053",
+      "git_blob_sha": "c1c691e1b654565282bd15cf49df81af0b18626f"
+    },
+    {
+      "file": "m_run_fast_01.max.fbx",
+      "url": "https://raw.githubusercontent.com/microsoft/Microsoft-Rocketbox/0943055db6ec570bcef9f2c8b41c9e5467c808f9/Assets/Animations/all_animations_max_motextr_xy/m_run_fast_01.max.fbx",
+      "bytes": 833040,
+      "sha256": "81d096f62465ae038149e7726485133264e4a47d105d236370b00dc18c650526",
+      "git_blob_sha": "3c07e032de09173b6d9e0ffd6218943bc6ebcefd"
+    }
+  ],
+  "files": [
+    {
+      "file": "LICENSE.txt",
+      "bytes": 1066,
+      "sha256": "17474e386e0b9e1a700cc3d06b2b0882a2c376d9c6b49c7f8274409b8f8d2352"
+    },
+    {
+      "file": "body-color.jpg",
+      "bytes": 291894,
+      "sha256": "5e1420228a8a852a877800a6cb18c99f7b65f28f97f3f1365b5dc8e6ebe73773"
+    },
+    {
+      "file": "body-normal.png",
+      "bytes": 934132,
+      "sha256": "dd71989103271783c94a56434ad75c1d13541d896dfce23f5fe6fb3cdcc5e4e1"
+    },
+    {
+      "file": "character.glb",
+      "bytes": 1068064,
+      "sha256": "14b8a21b288778c9ca6eb8a8f6ef14865173c4f6ff5a80f2116018ee80939f6b"
+    },
+    {
+      "file": "hair-color.png",
+      "bytes": 1169734,
+      "sha256": "e00ee4257013dd432eb122bc8d7a42ea6bb837af65f35e2640551f9823f05350"
+    },
+    {
+      "file": "head-color.jpg",
+      "bytes": 222814,
+      "sha256": "d9ed7bb623ed9549b34242381b3bc422e5c90f610757dbb53df07c9cad028479"
+    },
+    {
+      "file": "head-normal.png",
+      "bytes": 903543,
+      "sha256": "d83904381f563cf8e1ac2807559615f2b66db698bf8b110e128a7e46395a1a7b"
+    }
+  ],
+  "processing": "TGA to 1K texture atlases with glTF image orientation and normal green-channel conversion; merged duplicate vertices; glTF standard materials; retained matching rig animation and vertical hip motion; removed horizontal root motion and static scale/helper tracks."
+}

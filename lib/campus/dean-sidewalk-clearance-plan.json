@@ -1,0 +1,39 @@
+{
+  "scope": "12m Dean Keeton sidewalk beneath mapped PMA pedestrian bridge; no bridge or building removal",
+  "way": 1425959533,
+  "bridgeWay": 25775199,
+  "westX": 128,
+  "eastX": 140,
+  "centerLine": [
+    [
+      127.195,
+      -354.125
+    ],
+    [
+      205.856,
+      -347.307
+    ]
+  ],
+  "offsets": [
+    -1.1,
+    0,
+    1.1
+  ],
+  "westY": [
+    1.4819992974153955,
+    1.5662932522963633,
+    1.8203576325134598
+  ],
+  "eastY": [
+    0.9753378299653868,
+    1.014244930812831,
+    1.0519813450150046
+  ],
+  "slabDepth": 0.45,
+  "sourceLowOffset": -0.015,
+  "sourceHighOffset": 2.1,
+  "northAirFringe": 0.55,
+  "northAirLowOffset": 0.45,
+  "measuredSourceError": 2.006368774808128,
+  "geometryInferredBetweenEnds": true
+}
