@@ -39,13 +39,13 @@ browser; `npm start` only starts the server. Stop it with Ctrl+C.
 
 | Key | Action |
 | --- | --- |
-| W A S D | Walk / steer relative to the camera; fly while airborne |
+| ↑ / ↓ | Run forward / backward; scooter throttle / brake; fly forward / descend |
+| ← / → | Turn, with the camera following; steer the scooter |
+| Hold W | Take off from foot or scooter / rise; release to hover |
 | Shift | Run; boost while flying |
 | Space | Jump on foot; brake on the scooter; climb while flying |
 | F | Get on / off the scooter (clear path needed; stairs need walking) |
-| Hold G | Take off (on foot or from the scooter) and rise; release to hover |
-| Hold ↑ | Rise, **only once already flying** (↑ never takes off) |
-| Hold C, Ctrl or ↓ | While flying: descend and land on supported ground; release to hover |
+| Hold ↓ in flight | Descend while steering; ease into landing; release to hover |
 | V | Campus overview / back to the character |
 | M | Travel map: click a destination (arrives on foot, outdoors under open sky) |
 | Mouse drag, scroll | Look, zoom. Double-click locks the pointer; Esc releases it |

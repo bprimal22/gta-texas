@@ -36,22 +36,18 @@ export class FlightMotion {
     const horizontal = new THREE.Vector3(input.strafe, 0, -input.forward);
     if (horizontal.lengthSq() > 1) horizontal.normalize();
     horizontal.applyAxisAngle(new THREE.Vector3(0, 1, 0), input.yaw);
-    const speed = this.mode === 'landing' ? 5 : input.boost ? FLIGHT_TUNING.boostSpeed : FLIGHT_TUNING.cruiseSpeed;
+    const speed = input.boost ? FLIGHT_TUNING.boostSpeed : FLIGHT_TUNING.cruiseSpeed;
     let climb = input.climb * (input.boost ? FLIGHT_TUNING.boostedClimbSpeed : FLIGHT_TUNING.climbSpeed);
     const target = horizontal.multiplyScalar(speed);
     if (this.mode === 'landing') {
       const spot = input.landingTarget;
-      const offset = spot && input.x !== undefined && input.z !== undefined
-        ? new THREE.Vector3(spot.x - input.x, 0, spot.z - input.z) : null;
-      // Missing/obstructed support means hover. A nearby clear spot is reached
-      // by swept movement, never by teleporting the capsule through an obstacle.
-      climb = 0;
-      if (!spot) this.velocity.y = Math.max(0, this.velocity.y);
-      if (offset && spot) {
-        if (horizontal.lengthSq() === 0) target.copy(offset).multiplyScalar(3).clampLength(0, FLIGHT_TUNING.landingApproachSpeed);
-        const gap = Math.max(0, input.y - spot.y);
-        if (offset.length() < .4) climb = -Math.min(FLIGHT_TUNING.landingSpeed, Math.max(.45, gap * 3));
-      }
+      // Descend anywhere; the real capsule sweep still prevents tunneling.
+      // Only ease off near support directly below, without pulling sideways
+      // toward a stale landing target while the player is steering.
+      const directlyBelow = spot && input.x !== undefined && input.z !== undefined
+        && Math.hypot(spot.x - input.x, spot.z - input.z) < .6;
+      const gap = directlyBelow && spot ? Math.max(0, input.y - spot.y) : Infinity;
+      climb = -Math.min(FLIGHT_TUNING.landingSpeed, Math.max(.6, gap * 3));
     }
     target.y = climb;
     // Vertical ascent/descent has its own limit; horizontal cruise no longer

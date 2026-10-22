@@ -77,7 +77,7 @@ export default function Home() {
           onBlur={() => game.current?.endFlightHold('up')}
           onKeyDown={e => { if((e.key === 'Enter' || e.key === ' ') && !e.repeat) { e.preventDefault(); game.current?.beginFlightHold(); } }}
           onKeyUp={e => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); game.current?.endFlightHold('up'); } }}>
-          <kbd>G</kbd> Hold to rise
+          <kbd>W</kbd> Hold to fly / rise
         </button>}
       </header>
       <div className="compass" aria-label="Compass">
@@ -87,7 +87,7 @@ export default function Home() {
         <div className="entry">
           <p className="eyebrow">THE UNIVERSITY OF TEXAS</p>
           <h2>Explore the Forty Acres.</h2>
-          <p>Walk, ride a scooter, or hold G to fly over the local campus.</p>
+          <p>Walk, ride a scooter, or hold W to fly over the local campus.</p>
           <Link href="/character" style={{ color: 'inherit', fontSize: 14 }}>
             View your character
           </Link>
@@ -138,25 +138,24 @@ export default function Home() {
       </aside>
       <footer className={`controls${flying ? ' flying-controls' : status.locomotion && status.locomotion !== 'foot' ? ' riding-controls' : ''}`}>
         {flying ? <>
-          <span><kbd>W A S D</kbd> Fly</span>
-          <span><kbd>SPACE</kbd> Up</span>
-          <span><kbd>↓ / C</kbd> Hold to descend</span>
+          <span><kbd>↑</kbd> Fly forward · <kbd>← →</kbd> Turn</span>
+          <span><kbd>W / SPACE</kbd> Rise</span>
+          <span><kbd>↓</kbd> Descend · release to hover</span>
           <span><kbd>SHIFT</kbd> Boost</span>
-          <span><kbd>↑ / G</kbd> Hold to rise · release to hover</span>
           <span className="flight-readout">{status.locomotion === 'landing' ? 'Landing' : 'Flight'} · {Math.round((status.flightSpeed ?? 0) * 2.23694)} mph · {Math.round(status.flightHeight ?? 0)} m up</span>
         </> : status.locomotion && status.locomotion !== 'foot' ? <>
-          <span><kbd>W</kbd> Ride</span>
-          <span><kbd>A / D</kbd> Steer</span>
-          <span><kbd>S / SPACE</kbd> Brake</span>
+          <span><kbd>↑</kbd> Ride</span>
+          <span><kbd>← →</kbd> Steer</span>
+          <span><kbd>↓ / SPACE</kbd> Brake</span>
           <span><kbd>F</kbd> Get off</span>
           <span>Scooter · {Math.round((status.scooterSpeed ?? 0)*2.23694)} mph</span>
-          <span><kbd>G</kbd> Hold to rise</span>
+          <span><kbd>W</kbd> Hold to fly / rise</span>
         </> : <>
-          <span><kbd>W A S D</kbd> Walk</span>
+          <span><kbd>↑ ↓</kbd> Run · <kbd>← →</kbd> Turn</span>
           <span><kbd>SHIFT</kbd> Run</span>
           <span><kbd>SPACE</kbd> Jump</span>
           <span><kbd>F</kbd> Scooter</span>
-          <span><kbd>G</kbd> Hold to rise</span>
+          <span><kbd>W</kbd> Hold to fly / rise</span>
         </>}
         <span>
           <kbd>MOUSE DRAG</kbd> Look

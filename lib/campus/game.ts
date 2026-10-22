@@ -849,7 +849,7 @@ export class CampusGame {
         if (e.code === 'KeyF' && this.active && !this.overview) {
           e.preventDefault(); if(!e.repeat)this.toggleScooter(); return;
         }
-        if ((e.code === 'KeyG' || (e.code === 'ArrowUp' && this.flight.active)) && this.active && !this.overview) {
+        if ((e.code === 'KeyW' || e.code === 'KeyG') && this.active && !this.overview) {
           e.preventDefault(); this.keys.add(e.code); if (!e.repeat) this.beginFlightHold('up'); return;
         }
         if (['KeyC', 'ControlLeft', 'ControlRight', 'ArrowDown'].includes(e.code) && this.active && this.flight.active && !this.overview) {
@@ -913,7 +913,7 @@ export class CampusGame {
     }, options);
     window.addEventListener('keyup', (e) => {
       this.keys.delete(e.code);
-      const upKeys = ['KeyG', 'ArrowUp'];
+      const upKeys = ['KeyW', 'KeyG'];
       const downKeys = ['KeyC', 'ControlLeft', 'ControlRight', 'ArrowDown'];
       if(upKeys.includes(e.code) && !upKeys.some(k => this.keys.has(k))) {
         this.endFlightHold('up');
@@ -1098,8 +1098,8 @@ export class CampusGame {
     }
     this.flightHolding = true; this.flightHoldDirection = direction;
     this.flight.mode = direction === 'down' ? 'landing' : 'flying';
-    this.flight.pause(); this.jumpQueued = false;
-    this.vertical = 0; this.velocity.set(0, 0, 0);
+    this.jumpQueued = false;
+    this.vertical = 0;
     this.flightLandingTarget = null; this.flightLandingProbeAt = 0;
     this.flightLandingMarker.visible = false;
     this.flightMessage = ''; this.scooterMessage = ''; this.lastHud = 0;
@@ -1126,7 +1126,7 @@ export class CampusGame {
     const p = this.body.translation();
     const enabled = this.active && !this.overview && !this.mapExpanded;
     const climb = this.flight.mode === 'landing' ? 0 : (held('Space') || (this.flightHolding && this.flightHoldDirection === 'up') ? 1 : 0);
-    const steering = held('KeyW') || held('KeyS') || held('KeyA') || held('KeyD');
+    const steering = held('ArrowUp') || held('ArrowLeft') || held('ArrowRight') || held('KeyS') || held('KeyA') || held('KeyD');
     if (enabled && this.flight.mode === 'landing' && performance.now() >= this.flightLandingProbeAt) {
       this.flightLandingProbeAt = performance.now() + 200;
       this.flightLandingTarget = this.scooterCollisionReady
@@ -1134,12 +1134,12 @@ export class CampusGame {
           undefined,
           steering ? null : this.flightLandingTarget) : null;
       if (!this.flightLandingTarget) {
-        this.flightMessage = this.scooterCollisionReady ? 'No clear landing below. Move toward an open path · release the descent key to hover.' : 'Preparing the landing surface…';
+        this.flightMessage = this.scooterCollisionReady ? 'Descending · steer toward an open path · release Down to hover.' : 'Preparing the landing surface…';
         this.flightMessageUntil = performance.now() + 600;
       }
     }
     const requested = this.flight.update(dt, {
-      forward: (held('KeyW') ? 1 : 0) - (held('KeyS') ? 1 : 0),
+      forward: (held('ArrowUp') ? 1 : 0) - (held('KeyS') ? 1 : 0),
       strafe: (held('KeyD') ? 1 : 0) - (held('KeyA') ? 1 : 0),
       climb, boost: held('ShiftLeft') || held('ShiftRight'), yaw: this.yaw, y: p.y, enabled,
       x: p.x, z: p.z, landingTarget: this.flightLandingTarget,
@@ -1202,7 +1202,7 @@ export class CampusGame {
     this.mixer?.update(dt);
     if (enabled && requested.y < -.1 && supported) {
       this.leaveFlight(); this.grounded = true;
-      this.flightMessage = 'Landed. WASD to walk · hold G to rise again.';
+      this.flightMessage = 'Landed. Arrow keys to run · hold W to rise again.';
       this.flightMessageUntil = performance.now() + 3000; this.lastHud = 0;
     }
   }
@@ -1235,7 +1235,7 @@ export class CampusGame {
       } else { motion.stop(); this.notifyRide('Move to a clearer spot to get off.'); }
     }
     const beforeHeading=motion.heading;
-    const requested=motion.update(dt,{throttle:allowInput&&held('KeyW'),brake:allowInput&&(held('KeyS')||held('Space')),left:allowInput&&held('KeyA'),right:allowInput&&held('KeyD')});
+    const requested=motion.update(dt,{throttle:allowInput&&held('ArrowUp'),brake:allowInput&&(held('ArrowDown')||held('KeyS')||held('Space')),left:allowInput&&(held('ArrowLeft')||held('KeyA')),right:allowInput&&(held('ArrowRight')||held('KeyD'))});
     let movement: {x:number;y:number;z:number} = {x:0,y:0,z:0};
     let supported=false;
     if(this.scooterDismount) {
@@ -1303,21 +1303,23 @@ export class CampusGame {
     const held = (code: string) =>
       this.keys.has(code) ||
       performance.now() - (this.pressedAt.get(code) ?? -1000) < 65;
-    const forward = (held('KeyW') ? 1 : 0) - (held('KeyS') ? 1 : 0),
+    const forward = (held('ArrowUp') ? 1 : 0) - (held('ArrowDown') || held('KeyS') ? 1 : 0),
       strafe = (held('KeyD') ? 1 : 0) - (held('KeyA') ? 1 : 0);
+    // Scooters steer their own heading; let the chase camera follow it.
+    if(this.scooter.mounted) {
+      this.stepScooter(dt,held);
+      const targetYaw = this.scooter.heading - Math.PI;
+      this.yaw += (THREE.MathUtils.euclideanModulo(targetYaw - this.yaw + Math.PI, Math.PI * 2) - Math.PI) * (1 - Math.exp(-dt * 5));
+      return;
+    }
     if (this.keys.has('ArrowLeft')) this.yaw += dt * 1.6;
     if (this.keys.has('ArrowRight')) this.yaw -= dt * 1.6;
-    if (!this.flight.active && this.keys.has('ArrowUp'))
-      this.pitch = Math.max(-0.9, this.pitch - dt * 0.8);
-    if (!this.flight.active && this.keys.has('ArrowDown'))
-      this.pitch = Math.min(1.12, this.pitch + dt * 0.8);
-    if(this.scooter.mounted) { this.stepScooter(dt,held);return; }
     if(this.flight.active) { this.stepFlight(dt,held);return; }
     const input = new THREE.Vector3(strafe, 0, -forward);
     if (input.lengthSq() > 0) input.normalize();
     input.applyAxisAngle(new THREE.Vector3(0, 1, 0), this.yaw);
     const speed =
-      this.keys.has('ShiftLeft') || this.keys.has('ShiftRight') ? RUN_SPEED : WALK_SPEED;
+      held('ArrowUp') || held('ArrowDown') || this.keys.has('ShiftLeft') || this.keys.has('ShiftRight') ? RUN_SPEED : WALK_SPEED;
     const alpha = 1 - Math.exp(-dt * (this.grounded ? 13 : 4));
     this.velocity.x = THREE.MathUtils.lerp(
       this.velocity.x,
