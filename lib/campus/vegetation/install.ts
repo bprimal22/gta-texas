@@ -32,6 +32,8 @@ export interface VegetationInstallOptions {
   headlessImpostors?: boolean;
   /** Decorate lawn materials under these roots (default: walkable). */
   lawnRoots?: T.Object3D[];
+  /** Footprints of buildings newer than campus.json (extension/west-campus towers): no campus tree inside them. */
+  extraFootprints?: { rings: [number, number][][] }[];
 }
 
 /** One call after walkway + offline terrain + local surfaces + local context. */
@@ -40,7 +42,7 @@ export async function installCampusVegetation(o: VegetationInstallOptions) {
   const group = new T.Group();
   group.name = 'Campus vegetation';
   const baked = new BakedGround(o.terrainPositions, 8, o.terrainFallback);
-  const footprints = new Footprints(o.data.buildings);
+  const footprints = new Footprints([...o.data.buildings, ...(o.extraFootprints ?? [])]);
   const skip = (mesh: T.Mesh) => mesh.name === 'Offline local contour terrain';
   const ground = new GroundIndex({ roots: o.walkable, pavedOverlays: o.paved, isLawn: isLawnMaterial, skip,
     terrain: (x, z) => baked.sample(x, z) ?? o.terrainFallback(x, z) });
@@ -72,6 +74,8 @@ export async function installCampusVegetation(o: VegetationInstallOptions) {
   });
   return {
     group, ground, footprints, canopy, stats,
+    /** Shared with extension tree populations (deep-west canopy); owned and disposed here. */
+    forms, materials, impostors,
     update(camera: T.Camera) { canopy.update(camera); },
     dispose() {
       group.removeFromParent();

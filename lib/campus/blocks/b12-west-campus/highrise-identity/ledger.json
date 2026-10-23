@@ -1153,10 +1153,20 @@
      205
     ]
    },
+   "facade": {
+    "accent": [
+     62,
+     64,
+     68
+    ],
+    "every": 2,
+    "glass": 1
+   },
    "evidence": [
-    "Cesium research frames d40-orbit-southwest, west-extension-c4-r3 (envelope projected from the frame camera; crop .work/references/frames/coa-2023-726333.jpg)"
+    "Cesium research frames d40-orbit-southwest, west-extension-c4-r3 (envelope projected from the frame camera; crop .work/references/frames/coa-2023-726333.jpg)",
+    "OSM way 380916747 \"The Standard\", 715 W 23rd St (name/address over this ring)"
    ],
-   "limits": "baked wall was brownBrick 160,86,64; every frame shows a light-grey panel tower with charcoal vertical panel columns and green-tinted glass, so the wall becomes light-grey precast; charcoal columns not expressible (one wall colour per building)"
+   "limits": "baked wall was brownBrick 160,86,64; every frame shows a light-grey panel tower with charcoal vertical panel columns and green-tinted glass, so the wall becomes light-grey precast; West Campus pass: charcoal piers every 2 bays + green glass tint (pier width/spacing estimated)"
   },
   {
    "key": "coa-2023:615176",
@@ -1164,22 +1174,30 @@
    "heightMeters": 58.993,
    "identity": "unverified",
    "disposition": "deep-west-retained",
+   "facade": {
+    "accent": [
+     166,
+     96,
+     60
+    ],
+    "every": 3
+   },
    "evidence": [
     "Cesium research frames d40-orbit-southwest, west-extension-c4-r3, d39-orbit-southwest (envelope projected from the frame camera; crop .work/references/frames/coa-2023-615176.jpg)"
    ],
-   "limits": "baked precast 214,214,208 matches the white/light-grey body seen in the frames; orange-brown vertical accent strips are not expressible; unchanged"
+   "limits": "baked precast 214,214,208 matches the white/light-grey body seen in the frames (wall unchanged); West Campus pass: orange-brown vertical accent strips every 3 bays (spacing estimated)"
   },
   {
    "key": "coa-2023:470235",
    "runtime": false,
    "heightMeters": 89.792,
-   "identity": "unverified (charcoal grid glass tower in d40-orbit-southwest)",
-   "disposition": "seam-excluded-gap",
+   "identity": "Union on 24th, 701 W 24th St (OSM way 1208654798 name/address; Perkins&Will project photos)",
+   "disposition": "west-campus-addition",
    "evidence": [
     "Cesium research frames d40-orbit-southwest, d26-orbit-southeast, west-extension-c4-r3 (envelope projected from the frame camera; crop .work/references/frames/coa-2023-470235.jpg)",
     "public/assets/extension/deep-west-v1.manifest.json excluded: \"crosses or within 3 m of the east seam x=-760\""
    ],
-   "limits": "not in the runtime binary and not in campus.json: root decision needed (seam-crossing addition); no profile applied"
+   "limits": "not in the deep-west binary and not in campus.json; built by lib/campus/extension/west-campus/towers.ts from the City ring and City height (no profile applied here)"
   }
  ]
 }

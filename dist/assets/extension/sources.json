@@ -27,6 +27,39 @@
   "2023 footprints are not a current-building survey",
   "facade materials, windows, parapets and pitched roofs are generic estimates",
   "road polygons do not establish permissions or markings",
-  "no trees or bridges are modelled in the extension"
+  "no bridges are modelled in the extension; Deep West trees (west-campus-v1.json) are 2017 LiDAR peaks",
+  "West Campus tower plans, podiums, crowns and all deep-west facade treatments are estimates"
+ ],
+ "westCampusAdditions": [
+  {
+   "dataset": "City of Austin Planimetrics 2023 - Building Footprints 2023 (layer 0)",
+   "publisher": "City of Austin",
+   "use": "Union on 24th footprint (OBJECTID 470235), BASE_ELEVATION and the older MAX_HEIGHT; tree clearance",
+   "url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/PlanimetricsSurvey_1/MapServer/0"
+  },
+  {
+   "dataset": "OpenStreetMap buildings (ways 1208654798, 1341073412)",
+   "publisher": "OpenStreetMap contributors",
+   "license": "ODbL 1.0 (https://www.openstreetmap.org/copyright)",
+   "use": "Union on 24th identity and community-sourced height 97.536 m; Villas on 24th outline"
+  },
+  {
+   "dataset": "USGS 3DEP LiDAR TX_Central_B1_2017 (EPT, depth-10 subset)",
+   "publisher": "U.S. Geological Survey",
+   "license": "Public domain (U.S. Government work). Credit: U.S. Geological Survey.",
+   "use": "Deep West canopy peaks (x, z, height, crown radius)",
+   "url": "https://usgs-lidar-public.s3.us-west-2.amazonaws.com/USGS_LPC_TX_Central_B1_2017_LAS_2019/"
+  },
+  {
+   "dataset": "Published project facts (research only; no images shipped)",
+   "use": "heights / storeys / plan type",
+   "sources": [
+    "https://perkinswill.com/project/union-on-24th/",
+    "https://www.datumengineers.com/our-work/union-24th.html",
+    "https://www.dci-engineers.com/work/villas-on-24th",
+    "https://villas-sh.com/project/",
+    "https://www.statesman.com/story/business/real-estate/2023/09/15/cain-and-abels-bar-austin-student-housing-tower-breaks-ground-ut-university-of-texas-west-campus/70849599007/"
+   ]
+  }
  ]
 }

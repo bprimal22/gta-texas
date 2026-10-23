@@ -19,6 +19,8 @@ export interface DeepWestBuilding {
   heightMeters: number; groundMin: number; groundMax: number; baseMinusGround: number;
   wall: { family: string; rgb: [number, number, number] };
   roof: RoofGable | RoofFlat;
+  /** Optional runtime-only facade override (photo-interpreted profile; never in the asset). */
+  facade?: { accent?: [number, number, number]; every?: number; glass?: number };
 }
 export interface DistrictStyle { rectangles: number[][]; style: string; floor: number; bay: number; window: [number, number, number]; frame: number; surround: number }
 export interface DeepWestMeta {

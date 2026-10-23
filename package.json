@@ -21,7 +21,8 @@
     "check:b12-highrise": "vite build --config scripts/harness/b12-highrise-identity.vite.config.mjs && node scripts/harness/run-b12-highrise-identity-check.mjs",
     "check:b12-retail": "vite build --config scripts/harness/b12-retail-identity.vite.config.mjs && node scripts/harness/run-b12-retail-identity.mjs && node scripts/harness/run-b12-retail-identity.mjs --scene",
     "check:performance": "node --experimental-strip-types scripts/check-performance.mjs",
-    "check:downtown": "vite build --config scripts/harness/downtown.vite.config.mjs && node scripts/harness/run-downtown-check.mjs"
+    "check:downtown": "vite build --config scripts/harness/downtown.vite.config.mjs && node scripts/harness/run-downtown-check.mjs",
+    "check:west-campus": "vite build --config scripts/harness/west-campus.vite.config.mjs && node scripts/harness/run-west-campus-check.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

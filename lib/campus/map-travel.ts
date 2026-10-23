@@ -52,7 +52,9 @@ export function travelProbe(data: CampusData, p: Point): TravelProbe {
 /** An optional walkable region beyond `data.bounds` (the deep-west and downtown extensions): points it contains
  * are judged against its own footprints only (or its own `outdoor` test when given, e.g. a spatially indexed
  * one). Omitted, every result is exactly as before. */
-export interface TravelRegion { contains: (p: Point) => boolean; footprints: Point[][][]; outdoor?: (p: Point) => boolean }
+export interface TravelRegion { contains: (p: Point) => boolean; footprints: Point[][][]; outdoor?: (p: Point) => boolean;
+  /** Extra walkable polylines (treated like mapped footways) where campus.json has no paths, e.g. around new towers. */
+  paths?: Point[][] }
 
 /** Several extension regions as one: each point is judged by the first region that contains it. */
 export function combineTravelRegions(regions: (TravelRegion | undefined | null)[]): TravelRegion | undefined {
@@ -61,6 +63,7 @@ export function combineTravelRegions(regions: (TravelRegion | undefined | null)[
   return {
     contains: p => list.some(r => r.contains(p)),
     footprints: list.flatMap(r => r.footprints),
+    paths: list.flatMap(r => r.paths ?? []),
     outdoor: p => {
       const r = list.find(q => q.contains(p));
       return !!r && (r.outdoor ? r.outdoor(p) : !r.footprints.some(rings => nearFootprint(p, rings)));
@@ -92,7 +95,7 @@ export function travelCandidates(data: CampusData, requested: Point, region?: Tr
   if (!requested.every(Number.isFinite)) return [];
   const candidates: Point[] = [requested];
   const kinds = new Set(['footway', 'path', 'pedestrian', 'steps', 'service', 'living_street', 'residential', 'unclassified']);
-  for (const path of data.paths) {
+  for (const path of [...data.paths, ...(region?.paths ?? []).map(points => ({ kind: 'footway', area: false, points }))]) {
     if (!kinds.has(path.kind) || path.area) continue;
     for (let i = 1; i < path.points.length; i++) {
       const a = path.points[i - 1], b = path.points[i], p = nearestOnSegment(requested, a, b);

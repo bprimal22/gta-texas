@@ -45,6 +45,7 @@ import { BakedGround } from './baked-ground';
 import { heroRouteExtraGround } from './ground/hero-route';
 import { createFlightPose } from './flight-pose';
 import { loadDeepWest, type DeepWest } from './extension/deep-west';
+import { WestCampus, prepareWestCampus, towerFootprints, type PreparedWestCampus } from './extension/west-campus';
 import { loadDowntown, type Downtown } from './extension/downtown';
 import { loadBackground, type DowntownBackground } from './extension/downtown/background';
 import type { DowntownMeta } from './extension/downtown/format';
@@ -60,6 +61,9 @@ const DEEP_WEST_EXTENSION = true;
 /** Downtown Austin extension (Capitol strip seam z = 1536 south to Lady Bird Lake). Installed only when its asset
  * validates against the Capitol strip seam; any failure keeps the original world and south wall. */
 const DOWNTOWN_EXTENSION = true;
+/** West Campus additions (Union on 24th across the deep-west seam, Villas on 24th, Deep West LiDAR canopy). Fail-closed:
+ * any failure keeps the world exactly as without it. */
+const WEST_CAMPUS_EXTENSION = true;
 
 export class CampusGame {
   renderer: THREE.WebGLRenderer;
@@ -91,6 +95,8 @@ export class CampusGame {
   /** Deep-west extension, present only after its asset validated and its colliders were created. */
   private deepWest?: DeepWest;
   private deepWestFailure?: string;
+  private westCampus?: WestCampus;
+  private westCampusFailure?: string;
   /** Downtown extension, present only after its asset validated and its colliders were created. */
   private downtown?: Downtown;
   private downtownFailure?: string;
@@ -341,6 +347,11 @@ export class CampusGame {
         if (!this.disposed) console.warn('Stand scan unavailable; keeping the generated west stand.', error);
         return null;
       });
+      // West Campus additions: fetched/validated early (their footprints keep campus trees out of the new towers).
+      const westCampusLoad = WEST_CAMPUS_EXTENSION ? prepareWestCampus(this.signal.signal).catch(error => {
+        if (!this.disposed) { this.westCampusFailure = error instanceof Error ? error.message : String(error); console.warn('West Campus additions unavailable.', error); }
+        return null;
+      }) : Promise.resolve(null);
       // Downtown decodes/validates/builds alongside the campus (no physics yet); committed after the vegetation.
       const downtownLoad = DOWNTOWN_EXTENSION ? loadDowntown({ strip: stripGround, signal: this.signal.signal, materials: {
         grass: this.world.mat.grass, asphalt: this.world.mat.asphalt, concrete: this.world.mat.concrete,
@@ -518,10 +529,13 @@ export class CampusGame {
       // Live oaks (authored placements), LiDAR canopy trees and the lawn finish.
       // After contact AO: its ground rays must not hit new tree colliders.
       markBoot('vegetation');
+      const westPrepared = await westCampusLoad;
+      if (this.disposed) return;
       const vegetation = await installCampusVegetation({ physics: this.physics, renderer: this.renderer, data,
         foreground: this.walkway.trees, walkable: [this.walkway.surfaces, this.world.group], paved: [localSurfaces.group],
         terrainPositions: localTerrain.mesh.geometry.getAttribute('position').array,
-        terrainFallback: (x, z) => this.world.terrain.height(x, z) });
+        terrainFallback: (x, z) => this.world.terrain.height(x, z),
+        extraFootprints: westPrepared ? towerFootprints(westPrepared, true) : undefined });
       if (this.disposed) { vegetation.dispose(); return; }
       this.vegetation = vegetation;
       this.scene.add(vegetation.group);
@@ -532,6 +546,7 @@ export class CampusGame {
           key => contextMaterials.materials.get(key));
         if (this.disposed) return;
       }
+      if (westPrepared) { markBoot('west-campus'); this.installWestCampus(westPrepared); }
       // Downtown extension: also last, after every campus system that traverses world.group at build time.
       if (DOWNTOWN_EXTENSION) {
         markBoot('downtown');
@@ -836,7 +851,7 @@ export class CampusGame {
   }
   travelTo(requested: Point) {
     if (!this.ready || !this.active || this.travel) return;
-    const candidates = travelCandidates(this.world.data, requested, combineTravelRegions([this.deepWest?.travelRegion, this.downtown?.travelRegion]));
+    const candidates = travelCandidates(this.world.data, requested, combineTravelRegions([this.westCampus?.travelRegion, this.deepWest?.travelRegion, this.downtown?.travelRegion]));
     if (!candidates.length) {
       this.travelMessage = this.downtown ? 'Choose a street, path or open area on land.' : 'Choose a path or an open area within campus.';
       this.travelMessageUntil = performance.now() + 5500; this.lastHud = 0;
@@ -1114,6 +1129,22 @@ export class CampusGame {
       console.warn('Deep West extension unavailable; keeping the original world.', error);
     }
   }
+  /** Towers + Deep West canopy after the deep-west extension (Union on 24th and the trees need its terrain). Solid
+   * towers go under world.group (ground probes see them as buildings); facade detail and trees are scene decor. */
+  private installWestCampus(prepared: PreparedWestCampus) {
+    try {
+      const v = this.vegetation;
+      const extension = new WestCampus({ prepared, reflection: this.lighting.reflectionEnvironment.texture, physics: this.physics, ground: (x, z) => this.groundHeight(x, z),
+        deepWest: this.deepWest ? { bounds: this.deepWest.bounds, height: (x, z) => this.deepWest!.height(x, z) } : null,
+        vegetation: v ? { forms: v.forms, materials: v.materials, impostors: v.impostors } : null });
+      this.world.group.add(extension.group);
+      this.scene.add(extension.decor);
+      this.westCampus = extension;
+    } catch (error) {
+      this.westCampusFailure = error instanceof Error ? error.message : String(error);
+      console.warn('West Campus additions unavailable; keeping the world without them.', error);
+    }
+  }
   /** Terrain height for movement, flight and travel: the deep-west extension where it is loaded
    * and owns (x, z), otherwise exactly the original terrain. */
   private groundHeight(x: number, z: number) {
@@ -1178,7 +1209,7 @@ export class CampusGame {
   }
   private toggleScooter() {
     if(!this.ready || !this.scooterClearance || !this.scooterVisual)return;
-    if (this.flight.active) { this.notifyRide('Hold C to land before riding.'); return; }
+    if (this.flight.active) { this.notifyRide('Hold Down to land before riding.'); return; }
     if(this.scooter.mode === 'foot') {
       if(!this.grounded || !this.scooterCollisionReady) { this.notifyRide('Move onto a clear path to ride.'); return; }
       this.prepareScooterGround();
@@ -1559,6 +1590,7 @@ export class CampusGame {
       this.downtown?.update(this.camera.position);
       this.background?.update(this.camera.position);
       this.vegetation?.update(this.camera);
+      this.westCampus?.update(this.camera);
       this.ambientOcclusion.render(false);
       if (now - this.lastHud > 250) {
         this.lastHud = now;
@@ -1649,6 +1681,7 @@ export class CampusGame {
     this.downtown?.update(this.camera.position);
     this.background?.update(this.camera.position);
     this.vegetation?.update(this.camera);
+    this.westCampus?.update(this.camera);
     if(this.active&&!overviewCamera)this.localReflection?.update(p,now);
     this.ambientOcclusion.render(!overviewCamera);
     this.profiler.end(performance.now() - cpuFrameStart);
@@ -1735,6 +1768,7 @@ export class CampusGame {
     ctx.scale(scale, scale);
     ctx.translate(-view.x, -view.z);
     this.deepWest?.drawMap(ctx);
+    this.westCampus?.drawMap(ctx);
     this.downtown?.drawMap(ctx);
     ctx.strokeStyle = '#d2cfb899';
     for (const path of this.world.data.paths) {
@@ -1854,6 +1888,7 @@ export class CampusGame {
       offline: this.offline,
       offlineTerrain: this.offlineTerrain,
       deepWest: this.deepWest ? this.deepWest.stats : { loaded: false, enabled: DEEP_WEST_EXTENSION, failure: this.deepWestFailure ?? null },
+      westCampus: this.westCampus ? { ...this.westCampus.stats, treeLod: this.westCampus.trees?.counts.slice() ?? null } : { loaded: false, enabled: WEST_CAMPUS_EXTENSION, failure: this.westCampusFailure ?? null },
       downtown: this.downtown ? { ...this.downtown.stats, visibleLodObjects: this.downtown.visibleLod(), physicsColliders: this.downtownColliders.length }
         : { loaded: false, enabled: DOWNTOWN_EXTENSION, failure: this.downtownFailure ?? null },
       background: this.background ? this.background.stats : { loaded: false, failure: this.backgroundFailure ?? null },
@@ -1894,6 +1929,7 @@ export class CampusGame {
     if (this.world) this.world.disposed = true;
     // Before physics.free(): scan disposal removes its own colliders.
     this.scanField?.dispose();
+    this.westCampus?.dispose();
     this.deepWest?.dispose();
     this.downtown?.dispose();
     this.background?.dispose();

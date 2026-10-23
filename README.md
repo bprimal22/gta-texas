@@ -210,6 +210,46 @@ bridges are rendered as visual-only context beyond walled edges.
 * Review shots: `?shot=<id>` for the 18 ids in `lib/campus/extension/downtown/shots.json` (skyline from the South Mall,
   north campus and the 100 m flight ceiling; Congress approach and seam; four obliques; routes; riverbank; landmarks).
 
+### West Campus pass (October 2026)
+
+West Campus (b12) and the deep-west extension (D37–D40) gained the two student towers missing from the City 2023
+data, a facade programme for the deep-west buildings and a measured tree canopy west of the seam
+(`lib/campus/extension/west-campus/`, one same-origin asset `public/assets/extension/west-campus-v1.json`, 93 kB).
+b12's authored towers, retail and district work are unchanged.
+
+* **Union on 24th** (701 W 24th St): City of Austin 2023 footprint 470235 (it crosses the deep-west seam, so the
+  deep-west bake had dropped it). Overall height 97.5 m is a **community-sourced estimate** (OpenStreetMap height tag,
+  320 ft, 29 levels; crown and roof plant counted inside it); the City 2023 MAX_HEIGHT 89.8 m, probably a
+  mid-construction snapshot, is kept in the asset as `cityHeightM`. Dark ribbed-metal podium on the whole City ring
+  (glazed ground storey on W 24th to the north and Rio Grande to the east), H-shaped residential tower (Datum
+  Engineers: H-shaped floors) with open courts north and south of the central bar: charcoal panels with white
+  "herringbone" patches on the outer perimeter, champagne-silver ribbed metal on the court faces (Perkins&Will photos).
+  Built only when the deep-west extension is loaded.
+* **Villas on 24th** (2313 Rio Grande St, delivered 2025): OpenStreetMap outline (ODbL), published 312 ft = 95.1 m
+  overall, 30 storeys. White panel tower with black window fins, dark glass corners, a two-storey glass amenity crown
+  over the north half and a south-facing pool deck, pleated perforated-metal garage screen (DCI Engineers / owner
+  photos). Replaces the demolished Cain & Abel's record b12 already excluded.
+* **Deep West facades** (`extension/deep-west/geometry.ts` `facadeProgram`): flat-roofed apartment blocks ≥ 9 m get
+  one of three window types (paired, tall narrow, ribbon), light or dark frames by wall family, coloured accent piers
+  between bays and a glazed ground storey (≥ 20 m), parapet trim bands; window glass takes one of four tints instead of
+  the near-black shared glass. The Standard (726333: charcoal piers, green glass) and 615176 (orange-brown strips) carry
+  photo-interpreted profiles. The wall planes are split into coplanar strips, so the render geometry is still the
+  collider. Houses keep the district punched window with a transom bar. All of it is estimated, not surveyed.
+* **Deep West canopy:** 3,012 trees from 2017 USGS LiDAR canopy peaks (x < −762; the campus canopy owns x ≥ −760),
+  trunks ≥ 1.2 m from every footprint and off mapped roads/sidewalks, drawn with the campus tree forms, materials and
+  impostors (one extra tree population, 3 draw calls, distance LODs); one trunk capsule each; trees are scene decor,
+  never a travel or landing floor. Positions are 2017; trees removed since are unknown.
+* **Gameplay:** both footprints are drawn on the map, keep campus trees out, refuse map-travel landings inside them
+  (clicks land on the street loop 7 m outside), and stay solid; W 24th remains walkable across the seam.
+* **Rebuild:** `python3 -I tools/extension/fetch-west-campus.py --out <raw>` (City 2023 + OSM for West Campus) and
+  `python3 -I tools/extension/fetch-west-campus.py --lidar --out <ept>` (the EPT subset with the West Campus envelope —
+  the downtown fetchers' defaults do not cover West Campus), then in the extension venv
+  `python -I tools/extension/bake-west-campus.py --lidar <ept>/downtown-lidar-ept-depth10.npz --city <raw>/building-footprints-2023.json --osm <raw>/osm-buildings.json`
+  and `python -I tools/extension/west-campus-shots.py`. Check: `npm run check:west-campus` (28 checks: fail-closed
+  asset, heights, H plan / courts, street sides, render = collider, no duplicates, canopy exclusion, seam walking,
+  travel, trees, shader anchor lint — not a GLSL compile — shots, budget, disposal).
+* Review shots: `?shot=<id>` for the 11 ids in `lib/campus/extension/west-campus/shots.json` (street and aerial).
+
 ### Review and switches (developer, read-only)
 
 * `?shot=<id>` or `__campus.shot(id)` puts the render camera at one of 14 fixed
@@ -283,6 +323,9 @@ context under Node (textures stubbed) and reports:
 
 ## Known limitations
 
+* West Campus pass: Union on 24th's 97.5 m is a community-sourced (OSM) height; both new towers' internal plans
+  (H proportions, podium heights, crown extents) and every deep-west facade treatment are photo-interpreted estimates;
+  Deep West trees are 2017 LiDAR peaks.
 * Downtown: only 13 landmarks have authored profiles; other towers are LiDAR-tiered or single-height extrusions with
   rule-based facades. Buildings built 2017–2023 that are not landmarks or OSM-updated keep a single City 2023 height
   (no LiDAR tiers). Tower plans inside block outlines, crowns and colours are estimates. Trees come from 2017 LiDAR

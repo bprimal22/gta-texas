@@ -1,0 +1,238 @@
+[
+ {
+  "id": "wc-union-24th-street",
+  "label": "Union on 24th from W 24th St (north side, street level)",
+  "kind": "street",
+  "position": [
+   -726.5,
+   16.6,
+   -206
+  ],
+  "target": [
+   -777.12,
+   58,
+   -168.96
+  ],
+  "fov": 58,
+  "groundY": 14.854,
+  "groundSource": "campus terrain.json",
+  "focus": null,
+  "note": "North sidewalk of W 24th (campus.json path 124953234 runs z~-206); Union podium + H legs on the north face."
+ },
+ {
+  "id": "wc-villas-24th-street",
+  "label": "Villas on 24th from W 24th at Seton Ave (street level)",
+  "kind": "street",
+  "position": [
+   -652,
+   16.57,
+   -210
+  ],
+  "target": [
+   -697.55,
+   52,
+   -173.69
+  ],
+  "fov": 60,
+  "groundY": 14.82,
+  "groundSource": "campus terrain.json",
+  "focus": null,
+  "note": "On the mapped W 24th / Seton footway (path 1206168882); Villas north (24th) face, lobby and garage screen."
+ },
+ {
+  "id": "wc-rio-grande-between",
+  "label": "Rio Grande St between Union (left) and Villas (right), looking south",
+  "kind": "street",
+  "position": [
+   -726.5,
+   16.6,
+   -206
+  ],
+  "target": [
+   -726,
+   30,
+   -60
+  ],
+  "fov": 62,
+  "groundY": 14.854,
+  "groundSource": "campus terrain.json",
+  "focus": null,
+  "note": "Rio Grande at W 24th (path 223301266 starts at z -202), looking down the gap between the two new towers."
+ },
+ {
+  "id": "wc-seam-24th-west",
+  "label": "W 24th St across the deep-west seam, looking west",
+  "kind": "street",
+  "position": [
+   -740,
+   16.73,
+   -208
+  ],
+  "target": [
+   -960,
+   8,
+   -214
+  ],
+  "fov": 58,
+  "groundY": 14.979,
+  "groundSource": "campus terrain.json",
+  "focus": null,
+  "note": "Seam crossing x=-760 on W 24th: Union podium on the left, Deep West canopy ahead."
+ },
+ {
+  "id": "wc-d40-street-facades",
+  "label": "D40 street: mid/high-rise facades near The Standard",
+  "kind": "street",
+  "position": [
+   -880,
+   18.22,
+   -128
+  ],
+  "target": [
+   -830,
+   22,
+   -100
+  ],
+  "fov": 60,
+  "groundY": 16.472,
+  "groundSource": "deep-west terrain (baked asset)",
+  "focus": null,
+  "note": "Street level west of The Standard (726333; charcoal piers, green glass) with 615176 to the north."
+ },
+ {
+  "id": "wc-d38-street-canopy",
+  "label": "D38 residential street under the 2017 LiDAR canopy",
+  "kind": "street",
+  "position": [
+   -1282.61,
+   8.83,
+   115.14
+  ],
+  "target": [
+   -1150,
+   6,
+   140
+  ],
+  "fov": 60,
+  "groundY": 7.084,
+  "groundSource": "deep-west terrain (baked asset)",
+  "focus": null,
+  "note": "Residential street in D38 (Judges' Hill / Pemberton side): houses under the Deep West canopy."
+ },
+ {
+  "id": "wc-d39-street-apartments",
+  "label": "D39 apartment street (storefront bases, accents, canopy)",
+  "kind": "street",
+  "position": [
+   -1018.07,
+   18.55,
+   -261.56
+  ],
+  "target": [
+   -940,
+   12,
+   -300
+  ],
+  "fov": 60,
+  "groundY": 16.797,
+  "groundSource": "deep-west terrain (baked asset)",
+  "focus": null,
+  "note": "D39 mixed 2-4 storey apartments with the new facade programme and street trees."
+ },
+ {
+  "id": "wc-union-north-aerial",
+  "label": "Union on 24th H courts from the north (aerial, 140 m)",
+  "kind": "aerial",
+  "position": [
+   -777.12,
+   157.01,
+   -318.96
+  ],
+  "target": [
+   -777.12,
+   20,
+   -168.96
+  ],
+  "fov": 55,
+  "groundY": 17.008,
+  "groundSource": "deep-west terrain (baked asset)",
+  "focus": [
+   -777.1186069577889,
+   15,
+   -168.9626405759927
+  ],
+  "note": "Looks down into the north court (roof garden) between the dark legs; south pool court beyond."
+ },
+ {
+  "id": "wc-towers-northeast-aerial",
+  "label": "Union + Villas from the northeast (aerial, 110 m)",
+  "kind": "aerial",
+  "position": [
+   -560,
+   126.04,
+   -360
+  ],
+  "target": [
+   -750,
+   45,
+   -170
+  ],
+  "fov": 55,
+  "groundY": 16.04,
+  "groundSource": "campus terrain.json",
+  "focus": [
+   -740,
+   15,
+   -170
+  ],
+  "note": "Both new towers with the b12 high-rises and the Deep West canopy behind."
+ },
+ {
+  "id": "wc-deep-west-canopy-aerial",
+  "label": "Deep West canopy and D40 facades from the east (aerial, 80 m)",
+  "kind": "aerial",
+  "position": [
+   -700,
+   91.84,
+   60
+  ],
+  "target": [
+   -1150,
+   5,
+   60
+  ],
+  "fov": 58,
+  "groundY": 11.836,
+  "groundSource": "campus terrain.json",
+  "focus": [
+   -950,
+   10,
+   60
+  ],
+  "note": "From over b12 looking west across the seam: D40 towers and the D38/D39 tree cover."
+ },
+ {
+  "id": "wc-d40-standard-aerial",
+  "label": "The Standard and 615176 oblique (aerial, 70 m)",
+  "kind": "aerial",
+  "position": [
+   -985,
+   86.87,
+   -20
+  ],
+  "target": [
+   -850,
+   30,
+   -140
+  ],
+  "fov": 58,
+  "groundY": 16.873,
+  "groundSource": "deep-west terrain (baked asset)",
+  "focus": [
+   -850,
+   15,
+   -140
+  ],
+  "note": "D40 high-rises with profile accents (charcoal / orange-brown piers) and the glazed ground storeys."
+ }
+]

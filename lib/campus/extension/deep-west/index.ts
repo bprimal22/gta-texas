@@ -21,6 +21,22 @@ export interface DeepWestMaterials {
 export type Point = [number, number];
 export interface DeepWestBounds { xmin: number; xmax: number; zmin: number; zmax: number }
 
+/** Extension-only glass: the shared context glass is near-black (0.03) and read as holes on the large deep-west slabs;
+ * here panes take a per-building tint (code / 512, set by geometry.ts facadeProgram) and a slightly rougher, less
+ * metallic finish so sky light reads in them. Anchors are asserted by the west-campus check. */
+export const DEEP_WEST_GLASS_GLSL = /* glsl */`
+if (ctxGlass > 0.0) {
+  float dwTint = floor(floor(vCtxWin.w + 0.5) / 512.0);
+  vec3 dwGlass = dwTint < 0.5 ? vec3(0.15, 0.18, 0.21) : dwTint < 1.5 ? vec3(0.12, 0.17, 0.15) : dwTint < 2.5 ? vec3(0.09, 0.13, 0.19) : vec3(0.16, 0.13, 0.10);
+  diffuseColor.rgb = mix(diffuseColor.rgb, dwGlass, ctxGlass * 0.8);
+}
+`;
+export const DEEP_WEST_SHADER_EDITS: [string, string][] = [
+  ['roughnessFactor = mix(roughnessFactor, 0.07, ctxGlass);', 'roughnessFactor = mix(roughnessFactor, 0.16, ctxGlass);'],
+  ['metalnessFactor = mix(metalnessFactor, 0.3, ctxGlass);', 'metalnessFactor = mix(metalnessFactor, 0.12, ctxGlass);'],
+  ['#include <emissivemap_fragment>', `${DEEP_WEST_GLASS_GLSL}\n#include <emissivemap_fragment>`],
+];
+
 /** Wall material that keeps the borrowed context textures and facade-opening shader, but with
  * openings always shader-drawn (detail radius pinned to 0): the extension has no recessed
  * opening geometry, so discarding them near the camera would show through the walls. */
@@ -36,8 +52,9 @@ function extensionWall(source: THREE.MeshStandardMaterial) {
     patch(shader, renderer);
     shader.uniforms.uCtxDetailRadius = { value: 0 };
     shader.uniforms.uCtxEye = { value: new THREE.Vector3() };
+    for (const [from, to] of DEEP_WEST_SHADER_EDITS) shader.fragmentShader = shader.fragmentShader.replace(from, to);
   };
-  m.customProgramCacheKey = () => 'deepwest-facade-v1';
+  m.customProgramCacheKey = () => 'deepwest-facade-v2';
   m.name = `Deep West ${source.name.replace('Local context ', '')}`;
   return m;
 }

@@ -283,12 +283,15 @@ export async function run(root: string, opts: { emit?: boolean; freeze?: boolean
   const mtxt = readFileSync(resolve(root, 'public/assets/extension/deep-west-v1.manifest.json'), 'utf8').replace(/\s+/g, ''), i470 = mtxt.indexOf('"coa-2023:470235"');
   const seamReason = i470 >= 0 && /eastseamx=-760/.test(mtxt.slice(i470, i470 + 260));
   const after = applyDeepWestProfiles(meta.buildings);
-  const geomSame = after.every((b, i) => { const { wall: _w1, ...x } = meta.buildings[i]; const { wall: _w2, ...y } = b; return JSON.stringify(x) === JSON.stringify(y); });
+  const geomSame = after.every((b, i) => { const { wall: _w1, facade: _f1, ...x } = meta.buildings[i]; const { wall: _w2, facade: _f2, ...y } = b; return JSON.stringify(x) === JSON.stringify(y); });
+  const accented = after.filter(b => b.facade).map(b => b.key).sort();
   const changed = after.filter((b, i) => JSON.stringify(b.wall) !== JSON.stringify(meta.buildings[i].wall)).map(b => ({ key: b.key, wall: b.wall, was: meta.buildings.find(x => x.key === b.key)!.wall }));
-  check('deep-West: runtime has exactly 615176 + 726333 over 45 m; raw 470235 seam-excluded and flagged as a gap',
+  // West Campus pass: 470235 is now Union on 24th, added by lib/campus/extension/west-campus (not by the deep-west binary).
+  check('deep-West: runtime has exactly 615176 + 726333 over 45 m; raw 470235 seam-excluded from the binary and added by the west-campus module',
     canon(runtimeTall) === canon(['coa-2023:615176', 'coa-2023:726333']) && seamReason && !meta.buildings.some(b => b.key === 'coa-2023:470235')
-    && DEEP_WEST_HIGHRISES.find(d => d.key === 'coa-2023:470235')?.disposition === 'seam-excluded-gap' && RAW_DEEP_WEST_OVER_45.length === 3, { runtimeTall, seamReason });
-  check('deep-West profile: only the wall of 726333 changes; rings / heights / roofs / districts identical', geomSame && changed.length === 1 && changed[0].key === 'coa-2023:726333', { changed });
+    && DEEP_WEST_HIGHRISES.find(d => d.key === 'coa-2023:470235')?.disposition === 'west-campus-addition' && RAW_DEEP_WEST_OVER_45.length === 3, { runtimeTall, seamReason });
+  check('deep-West profile: only the wall of 726333 changes, facade accents only on 615176 + 726333; rings / heights / roofs / districts identical',
+    geomSame && changed.length === 1 && changed[0].key === 'coa-2023:726333' && canon(accented) === canon(['coa-2023:615176', 'coa-2023:726333']), { changed, accented });
 
   // ------------------------------------------------------------ 6. ledger + review shots
   const massTop = (o: Owner, k: string) => { const m = baseCtx[o].massing?.[k]; return m ? +Math.max(...m.volumes.map(v => v.top)).toFixed(2) : null; };
@@ -360,7 +363,7 @@ export async function run(root: string, opts: { emit?: boolean; freeze?: boolean
       'Linden podium screen above 15 m, amenity level and crown screen: generator ground storey max 15 m; would need a visual overlay; not implemented.',
       'Union balconies (projecting concrete slabs, dark railings): not modelled (no exact balcony geometry claimed).',
       'Per-building glass tint: architecture.ts / materials.ts glass is shared; no field invented.',
-      'coa-2023:470235 (89.8 m, seam-excluded): root decision on a seam-crossing addition.'],
+      'coa-2023:470235 (89.8 m, seam-excluded from deep-west): Union on 24th, built by lib/campus/extension/west-campus (West Campus pass).'],
     measured: perProfile,
   };
   writeFileSync(resolve(root, '.work/INTEGRATION.json'), JSON.stringify(integration, null, 1) + '\n');

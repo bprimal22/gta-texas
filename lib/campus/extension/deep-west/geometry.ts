@@ -100,6 +100,58 @@ function outwardFactor(ring: Ring, hole: boolean) {
   return (signedArea(ring) > 0 ? 1 : -1) * (hole ? -1 : 1);
 }
 
+/** Deterministic [0,1) per building key and salt. */
+function keyHash(key: string, salt: number) {
+  let h = 2166136261 ^ salt;
+  for (let i = 0; i < key.length; i++) h = Math.imul(h ^ key.charCodeAt(i), 16777619);
+  return ((h >>> 0) % 100003) / 100003;
+}
+/** Opening code (context facade shader): type + 8*mullions + 32*transom + 64*frame + 256*surround; the extension's own
+ * material reads 512*glass tint (0 blue-grey, 1 green, 2 deep blue, 3 bronze) on top. */
+const openCode = (type: number, mull: number, transom: number, frame: number, surround: number, glass: number) =>
+  type + 8 * mull + 32 * transom + 64 * frame + 256 * surround + 512 * glass;
+/** Accent colours seen on West Campus / Judges' Hill apartment blocks (d39/d40 orbit pixels; ESTIMATED palette). */
+const ACCENTS: [number, number, number][] = [[58, 60, 64], [176, 98, 62], [196, 156, 82], [92, 112, 132], [134, 150, 120], [150, 84, 70]];
+
+export interface FacadeProgram {
+  upper: [number, number, number, number];
+  /** Glazed ground storey (taller flat buildings only). */
+  ground: [number, number, number, number] | null; groundColor: THREE.Color;
+  accent: THREE.Color | null; every: number; pierWidth: number;
+  base: THREE.Color | null; parapet: THREE.Color | null;
+}
+
+/** ESTIMATED per-building facade programme: no surveyed openings. Taller flat-roofed apartment blocks (D37/D39/D40,
+ * >= 9 m) get one of three window types, light or dark frames by wall family, and (by hash, always on >= 20 m) accent
+ * piers between bays plus a glazed ground storey; houses keep the district punched window with a transom bar. Profiles
+ * (highrise-identity/deep-west.ts) may fix the accent colour, spacing and glass tint. */
+export function facadeProgram(b: DeepWestBuilding, style: DistrictStyle, gable: boolean, height: number): FacadeProgram {
+  const h1 = keyHash(b.key, 1), h2 = keyHash(b.key, 2), h3 = keyHash(b.key, 3);
+  const light = b.wall.family !== 'brownBrick' && b.wall.family !== 'buffBrick';
+  const frame = light ? 2 : style.frame === 1 ? 1 : 0;
+  const glass = b.facade?.glass ?? (h3 < .45 ? 0 : h3 < .7 ? 2 : h3 < .88 ? 1 : 3);
+  const wall = srgb(b.wall.rgb);
+  const none: FacadeProgram = { upper: [style.window[0], style.window[1], style.window[2], openCode(1, 0, 1, frame, style.surround, glass)],
+    ground: null, groundColor: wall, accent: null, every: 3, pierWidth: 0, base: null, parapet: null };
+  if (gable || height < 9 || b.district === 'D38') return none;
+  const tall = height >= 20;
+  // Window type: wide paired casements, tall narrow units, or horizontal ribbons (precast/stucco only).
+  const kind = h1 < .45 ? 'pair' : h1 < .8 || !light ? 'tall' : 'ribbon';
+  const upper: [number, number, number, number] = kind === 'pair' ? [.62, .26, .8, openCode(1, 1, 0, frame, 0, glass)]
+    : kind === 'tall' ? [.4, .12, .9, openCode(1, 0, 1, frame, style.surround, glass)]
+    : [.88, .3, .78, openCode(2, 3, 0, frame, 0, glass)];
+  const accented = b.facade?.accent || tall || h2 < (b.district === 'D40' ? .55 : .3);
+  const pick = ACCENTS[Math.floor(h2 * 997) % ACCENTS.length];
+  const accent = b.facade?.accent ? srgb(b.facade.accent) : accented ? (light ? srgb(pick) : srgb(b.wall.rgb, .62)) : null;
+  const dark = srgb(b.wall.rgb, .45).lerp(new THREE.Color().setRGB(.05, .05, .055), .35);
+  return {
+    upper,
+    ground: tall ? [.86, .04, .86, openCode(3, 2, 1, 0, 0, glass)] : null, groundColor: dark,
+    accent, every: b.facade?.every ?? (kind === 'ribbon' ? 4 : 2 + Math.floor(h3 * 2)), pierWidth: tall ? 1.1 : .8,
+    base: tall ? dark : null, parapet: accent && tall ? accent.clone().multiplyScalar(.9) : null,
+  };
+}
+
 export interface BuildingStats { buildings: number; walls: number; roofTriangles: number; gable: number; flatParapet: number; flat: number; holes: number; windowsEdges: number }
 
 /** Clean massing from the measured footprint (holes kept) and MAX_HEIGHT, with generic,
@@ -130,8 +182,8 @@ export function buildingParts(buildings: DeepWestBuilding[], districts: Record<s
     const plinthTop = Math.max(y0 + .2, Math.min(b.groundMax + .45, limit - 2.2));
     const floors = Math.max(1, Math.round((limit - plinthTop) / style.floor));
     const floorH = (limit - plinthTop) / floors;
-    const code = 1 + 64 * style.frame + 256 * style.surround;
-    const win: [number, number, number, number] = [style.window[0], style.window[1], style.window[2], code];
+    const program = facadeProgram(b, style, !!gable, limit - b.groundMin);
+    const win = program.upper;
     const normal = gable ? [-gable.ridge[1][1], gable.ridge[1][0]] : [0, 0];
     const dist = (x: number, z: number) => gable ? (x - gable.ridge[0][0]) * normal[0] + (z - gable.ridge[0][1]) * normal[1] : 0;
     const top = (x: number, z: number) => gable ? gable.ridgeY - gable.slope * Math.abs(dist(x, z)) : topY;
@@ -159,17 +211,46 @@ export function buildingParts(buildings: DeepWestBuilding[], districts: Record<s
         const A0 = new THREE.Vector3(ax, y0, az), B0 = new THREE.Vector3(bx, y0, bz);
         const A1 = new THREE.Vector3(ax, plinthTop, az), B1 = new THREE.Vector3(bx, plinthTop, bz);
         const A2 = new THREE.Vector3(ax, ta, az), B2 = new THREE.Vector3(bx, tb, bz);
-        wall.quad(A0, B0, B1, A1, [0, y0], [len, y0], [len, plinthTop], [0, plinthTop], plinth, out);
-        let attr: FacadeAttr | undefined;
-        if (len >= 1.6) {
-          const bays = Math.max(1, Math.round(len / style.bay)), bayW = len / bays;
-          const v = (y: number) => (y - plinthTop) / floorH;
-          attr = { fac: [[0, 0, bayW, floorH], [bays, 0, bayW, floorH], [bays, v(tb), bayW, floorH], [0, v(ta), bayW, floorH]],
-            win, range: [0, floors - 1] };
-          stats.windowsEdges++;
-        }
-        wall.quad(A1, B1, B2, A2, [0, plinthTop], [len, plinthTop], [len, tb], [0, ta], color, out, attr);
+        wall.quad(A0, B0, B1, A1, [0, y0], [len, y0], [len, plinthTop], [0, plinthTop], program.base ?? plinth, out);
+        const bays = Math.max(1, Math.round(len / style.bay)), bayW = len / bays;
+        const v = (y: number) => (y - plinthTop) / floorH;
         stats.walls++;
+        if (gable || len < 1.6) {
+          let attr: FacadeAttr | undefined;
+          if (len >= 1.6) {
+            attr = { fac: [[0, 0, bayW, floorH], [bays, 0, bayW, floorH], [bays, v(tb), bayW, floorH], [0, v(ta), bayW, floorH]],
+              win, range: [0, floors - 1] };
+            stats.windowsEdges++;
+          }
+          wall.quad(A1, B1, B2, A2, [0, plinthTop], [len, plinthTop], [len, tb], [0, ta], color, out, attr);
+          continue;
+        }
+        // Flat roofs: the same wall plane, split into coplanar strips (render = collider unchanged in shape): optional
+        // accent piers between window bays, a glazed ground storey on taller buildings, the parapet as a trim band.
+        stats.windowsEdges++;
+        const ux = (bx - ax) / len, uz = (bz - az) / len;
+        const P = (s: number, y: number) => new THREE.Vector3(ax + ux * s, y, az + uz * s);
+        const cuts: [number, number, boolean][] = [];
+        const pier = program.accent ? Math.min(program.pierWidth, bayW * (1 - win[0]) - .25) : 0;
+        let s = 0;
+        if (pier >= .3 && bays >= 2) for (let k = program.every; k < bays; k += program.every) {
+          const c = k * bayW;
+          cuts.push([s, c - pier / 2, false], [c - pier / 2, c + pier / 2, true]);
+          s = c + pier / 2;
+        }
+        cuts.push([s, len, false]);
+        const deck = Math.min(limit, topY), groundTop = program.ground ? Math.min(plinthTop + floorH, deck) : plinthTop;
+        const strip = (s0: number, s1: number, y0s: number, y1s: number, c: THREE.Color, w?: [number, number, number, number], range?: [number, number]) => {
+          if (y1s - y0s < .01 || s1 - s0 < .01) return;
+          const attr: FacadeAttr | undefined = w ? { fac: [[s0 / bayW, v(y0s), bayW, floorH], [s1 / bayW, v(y0s), bayW, floorH], [s1 / bayW, v(y1s), bayW, floorH], [s0 / bayW, v(y1s), bayW, floorH]], win: w, range: range! } : undefined;
+          wall.quad(P(s0, y0s), P(s1, y0s), P(s1, y1s), P(s0, y1s), [s0, y0s], [s1, y0s], [s1, y1s], [s0, y1s], c, out, attr);
+        };
+        for (const [s0, s1, isPier] of cuts) {
+          if (isPier) { strip(s0, s1, plinthTop, topY, program.accent!); continue; }
+          if (program.ground) strip(s0, s1, plinthTop, groundTop, program.groundColor, program.ground, [0, 0]);
+          strip(s0, s1, groundTop, deck, color, win, [program.ground ? 1 : 0, floors - 1]);
+          strip(s0, s1, deck, topY, program.parapet ?? trim);
+        }
       }
     });
     const flat = (polys: PolygonRings[], y: number, target: Batch, c: THREE.Color) => {

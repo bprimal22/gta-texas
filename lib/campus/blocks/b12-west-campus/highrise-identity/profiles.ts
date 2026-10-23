@@ -201,7 +201,7 @@ export const PROFILES: HighriseProfile[] = [
     expect: { upperType: 'punched', glazing: 'less', reason: 'hotel punched windows grouped in a pale precast body vs the generic office near-continuous grid' } },
 ];
 
-export type Disposition = 'changed-profile' | 'retained-authored-verified' | 'authored-root-patch' | 'uncertain-unchanged' | 'outside-parent-patch' | 'delegated-other-lane' | 'seam-excluded-gap' | 'deep-west-profile' | 'deep-west-retained';
+export type Disposition = 'changed-profile' | 'retained-authored-verified' | 'authored-root-patch' | 'uncertain-unchanged' | 'outside-parent-patch' | 'delegated-other-lane' | 'seam-excluded-gap' | 'deep-west-profile' | 'deep-west-retained' | 'west-campus-addition';
 export interface RootPatch { file: string; old: string; new: string; why: string }
 export interface LedgerNote { key: string; name: string; owner: string; runtime: string; disposition: Disposition; evidence: string[]; uncertainty: string; rootPatches?: RootPatch[] }
 
