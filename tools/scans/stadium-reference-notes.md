@@ -5,7 +5,7 @@ Newly researched photographs are reference only; their pixels are not shipped. E
 (`lib/campus/context-textures.ts`, `lib/campus/blocks/b09-stadium/board-face.ts`).
 
 ## What the capture covers (why most of the bowl stays generated)
-The pinned MIT `stadium.glb` (sources.json) covers the west stand (shipped as the scanned sector), the SW corner up to
+The pinned MIT `stadium.glb` (sources.json) covers the west stand (shipped only for the `?stadiumscan=1` diagnostic since the 2026-10-23 correction), the SW corner up to
 ~45 m and the SEZ lower rows to ~16 m. East and north are captured only to ~6 m above the field. So the east, north,
 corners and south end are generated geometry, each side from its own evidence; nothing is mirrored from the west.
 
@@ -73,3 +73,44 @@ The added architecture has a small draw-call cost; this pass does not claim a fr
 saves 2,422,040 download bytes and one full 4096 x 2048 GPU atlas, while the additional procedural textures are
 small. Both stand LODs retain byte-identical geometry/UV accessor buffers; the near photograph bytes are also
 unchanged. Global graphics quality, AO, frame pacing, controls and Tower geometry are unchanged by this pass.
+
+## Targeted correction (2026-10-23): default west stand and turf
+
+Scope: only the dark/grey partial west-stand capture and the muddy partial field capture, which clashed with the
+authored bowl. Everything else in the stadium is unchanged: outside the west zone (field-frame u < -30 m) every bowl
+and b09 exterior triangle is identical to commit 253a2aa (headless comparison, 0 differences per mesh).
+
+* **Default mode:** the stadium is fully authored. `lib/campus/game.ts` requests `dkr-west-stand-*.glb` and
+  `dkr-field.glb` only when `stadiumScanRequested(location.search)` is true (`?stadiumscan=1`, or the legacy
+  `?stand=scan`); otherwise neither file is fetched, so no scan collider or ground root exists. The Tower scan is unchanged.
+* **West stand (default):** the existing generated west profile, built from the capture's measured section (STAND_PROFILES.west),
+  using the same seat/concrete/suite materials as the other stands. Bounded closure, west only:
+  * the Bellmont roof (b09 datum Y 32.2 = 35.1 m above the field) runs from the upper-deck rear to the measured west wall;
+  * the gantry sits on the upper-deck rim;
+  * a press box (v -49..-10.5 m, 7 m deep, top 66.0 m) is built in default mode too. Its along-field extent and depth preserve the previous authored box from scan metadata; its front meets the generated rim.
+* **Turf:** `fieldCanvas` (context-textures.ts) is the only painter changed: a 1024 x 2048 texture over the 71 x 126 m
+  plate (14.4 / 16.3 px/m).
+  * Exact NCAA dimensions: 53 1/3 x 120 yd, hashes 60 ft from the sidelines, 6 ft numbers with tops 9 yd from the
+    sidelines.
+  * Following the official 2022 aerials: TEXAS in the north end zone and LONGHORNS in the south, both reading from the
+    field; number tops toward the nearer sideline; white team-area bands.
+  * The midfield steer-head is a simplified authored silhouette, not the official artwork.
+  * Colours, lettering and band extents are estimates. No photo pixels.
+* **Diagnostic mode (`?stadiumscan=1`):** the previous scan sector, field decal and lifecycle are unchanged. They are
+  covered by `scripts/harness/run-stand-runtime-check.mjs` and `run-scan-lifecycle.mjs`.
+* **Checks:** `scripts/harness/run-stadium-default-check.mjs` covers:
+  * the gate;
+  * no dkr-* requests in default mode;
+  * visible = physical on the west stand, field and press box (0.05 m);
+  * STD travel and flight landing;
+  * turf text orientation and mirroring.
+* **Default runtime cost.** Before = the deployed default (with captures); after = the authored west and turf.
+
+| | Before | After |
+|---|---|---|
+| Bowl visual triangles | 34,103 | 45,301 (+11,198 generated west) |
+| Bowl collider triangles | 33,053 | 44,783 (the 15,410-triangle stand trimesh is removed) |
+| Stand capture | ~341k (near) / 255k (far) triangles, one 4096 x 2048 atlas (~45 MB GPU with mips), 25.7 MB download | not loaded |
+| Field decal | 43,119 triangles, 4096 x 1024 atlas (~22 MB GPU), 1.9 MB download | not loaded |
+| Turf canvas | 512 x 1024 (~2.8 MB GPU) | 1024 x 2048 (~11 MB GPU) |
+| Bowl draw calls | 13 | 13 (the stand and decal meshes are gone) |

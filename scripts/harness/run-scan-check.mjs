@@ -11,7 +11,7 @@ const THREE = await import('three');
 const root = resolve(import.meta.dirname, '../..');
 const tower = JSON.parse(readFileSync(resolve(root, 'public/assets/scans/ut-tower.json'), 'utf8'));
 const field = JSON.parse(readFileSync(resolve(root, 'public/assets/scans/dkr-field.json'), 'utf8'));
-const result = await run({ scan: true });
+const result = await run({ scan: true, stadiumScan: true });
 const { RAPIER, physics, player, scanTower, scanField, world, walkway, ground } = result;
 let failed = false;
 const fail = msg => { console.error('FAIL', msg); failed = true; };

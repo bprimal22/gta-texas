@@ -146,8 +146,9 @@ export const STAND_PROFILES: Record<'east' | 'north' | 'west' | 'south' | 'south
   north: { front: 2.3, lower: { rows: 30, depth: 0.85, rise: 0.24 }, aisle: 2.0, fascia: 3.0, overhang: 0, lip: 0,
     middle: { rows: 14, depth: 0.85, rise: 0.42 }, aisle2: 1.5, fascia2: 5.5, overhang2: 3.0, lip2: 1.2,
     upper: { rows: 30, depth: 0.85, rise: 0.52 }, roof: 0, cap: 40.5, parapet: 1.2, outerRoof: 33.7 },
-  // West (only built when the captured stand is absent): measured scan section — lower bowl 1.74 ->
-  // 15.8 m over 40 m, upper-deck front at 28 m by t 42, upper deck ~0.6 m/m; overhang estimated.
+  // West (the DEFAULT west stand since the partial capture became a ?stadiumscan=1 diagnostic): measured scan section —
+  // lower bowl 1.74 -> 15.8 m over 40 m, upper-deck front at 28 m by t 42, upper deck ~0.6 m/m; overhang estimated.
+  // The bounded west-straight closure below meets Bellmont without changing the adjoining corner profiles.
   west: { front: 1.74, lower: { rows: 47, depth: 0.85, rise: 0.3 }, aisle: 0.5, fascia: 11.8, overhang: 2.0, lip: 0.6,
     middle: NONE, aisle2: 0, fascia2: 0, overhang2: 0, lip2: 0, upper: { rows: 42, depth: 0.85, rise: 0.52 }, roof: 0, cap: 50, parapet: 1.2, outerRoof: null },
   // 2021 South End Zone, central (board) part of the south straight: steep measured lower terraces (0.51 m/m) with the
@@ -273,7 +274,8 @@ export function buildStadiumBowl(footprints: Building[], ground: (x: number, z: 
   };
   const blends = samples.map(p => blendOf(p));
   const section = (i: number) => {
-    const p = samples[i], tmax = smooth[i], { pts, cap, outerRoof } = blends[i];
+    const p = samples[i], tmax = smooth[i], { pts, cap, outerRoof: profileRoof } = blends[i];
+    const outerRoof = p.nu < -0.99 && Math.abs(p.v) <= 53 ? 35.1 : profileRoof;
     const points = pts.map(q => [q[0], q[1]] as [number, number]);
     for (let k = 1; k < points.length; k++)
       if (points[k][0] > tmax && points[k - 1][0] <= tmax + 1e-6 && Math.abs(points[k][1] - points[k - 1][1]) < 1e-9) points[k][0] = tmax;
@@ -459,6 +461,7 @@ export function buildStadiumBowl(footprints: Building[], ground: (x: number, z: 
       if (!visualOnly) collider.quad(a, b, cc, d);
     }
   };
+  let westRim: ((v: number) => [number, number]) | null = null;
   const detail = { gantryColumns: 0, flagpoles: 0, lightStandards: 0, eastPiers: 0, northPiers: 0, sezTower: 0, sezFlankTowers: 0, sezOutline: 0 };
   // West light gantry: the colonnade + beam over the upper-deck rear (ref-ut-dkr2, ref-ut-dji0226). Beam top 67.5 m above the
   // field = the continuous scanned top at t 74-81 for v -51..-7 (raw MIT capture,
@@ -467,8 +470,10 @@ export function buildStadiumBowl(footprints: Building[], ground: (x: number, z: 
     const rimAt = (v: number): [number, number] => {
       if (sector) return [lerpBy(sector.outer, v, 1), lerpBy(sector.outer, v, 2)];
       let best = 0; for (let i = 1; i < n; i++) if (samples[i].nu < -0.99 && Math.abs(samples[i].v - v) < Math.abs(samples[best].v - v)) best = i;
-      const r = sections[best][sections[best].length - 1]; return [Math.hypot(r.x - samples[best].x, r.z - samples[best].z), r.y - fieldY];
+      // Upper-deck rim (the point before the drop to the Bellmont roof).
+      const r = sections[best][BACK_K - 1]; return [Math.hypot(r.x - samples[best].x, r.z - samples[best].z), r.y - fieldY];
     };
+    westRim = rimAt;
     const beamTop = fieldY + 67.5, beamBottom = beamTop - 1.8;
     for (let v = -51; v <= 52; v += 12) {
       const [t, h] = rimAt(v), u = -hw - t;
@@ -553,12 +558,14 @@ export function buildStadiumBowl(footprints: Building[], ground: (x: number, z: 
     for (let k = 0; k < 20; k++) builder('trim').tri(c, at(((k + 1) / 20) * Math.PI * 2 + Math.PI / 20, r + 0.5, drumTop + 0.9), at((k / 20) * Math.PI * 2 + Math.PI / 20, r + 0.5, drumTop + 0.9), [0, 0], [1, 0], [0, 1], white, UP);
     detail.sezTower = 1;
   }
-  // Authored press-box massing on the cap, fitted to the surviving scanned slab extents.
-  const pressBox = sector?.pressBox ?? null;
-  if (sector && pressBox) {
+  // Authored press-box massing on the west rim. Scan mode: fitted to the surviving scanned slab extents (sector.pressBox).
+  // Default (generated west): preserve the existing authored box's along-field extent from dkr-west-stand.json,
+  // placing its front on the generated rim. Only the replaced west-stand region changes.
+  const pressBox = sector ? sector.pressBox ?? null : { vMin: -49, vMax: -10.5, t0: westRim!(0)[0], t1: westRim!(0)[0] + 7, top: 66.0 };
+  if (pressBox) {
     const Lx = Math.sin(angle), Lz = Math.cos(angle), Wx = Math.cos(angle), Wz = -Math.sin(angle);
     const fp = (t: number, v: number, y: number) => { const u = -hw - t; return new THREE.Vector3(fcx + u * Wx + v * Lx, y, fcz + u * Wz + v * Lz); };
-    let base = Infinity; for (let v = pressBox.vMin; v <= pressBox.vMax; v += 1) base = Math.min(base, lerpBy(sector.outer, v, 2));
+    let base = Infinity; for (let v = pressBox.vMin; v <= pressBox.vMax; v += 1) base = Math.min(base, sector ? lerpBy(sector.outer, v, 2) : westRim!(v)[1]);
     const y0 = fieldY + base - 0.3, y1 = fieldY + pressBox.top, { t0, t1, vMin: va, vMax: vb } = pressBox;
     const c = [fp(t0, va, y0), fp(t0, vb, y0), fp(t0, vb, y1), fp(t0, va, y1), fp(t1, va, y0), fp(t1, vb, y0), fp(t1, vb, y1), fp(t1, va, y1)];
     const toField = new THREE.Vector3(-Wx, 0, -Wz).negate(); // +u: toward the field

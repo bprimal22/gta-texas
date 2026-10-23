@@ -34,7 +34,9 @@ import type { CanopyData, TreeSitesData } from '../../lib/campus/vegetation/cano
 export { CATALOG } from '../../lib/campus/context/catalog';
 export { poleOfInaccessibility, cleanRing, orientRings } from '../../lib/campus/context-geometry';
 export * as THREE_NS from 'three';
-export { buildStadiumBowl, STADIUM_FIELD } from '../../lib/campus/stadium-bowl';
+export { buildStadiumBowl, STADIUM_FIELD, STADIUM_MARKINGS } from '../../lib/campus/stadium-bowl';
+export { fieldCanvas } from '../../lib/campus/context-textures';
+export { stadiumScanRequested } from '../../lib/campus/scan-landmarks';
 export { findFlightLanding } from '../../lib/campus/flight-landing';
 export { ScooterClearance } from '../../lib/campus/scooter-clearance';
 export { LocalGroundQuery } from '../../lib/campus/local-ground-query';
@@ -66,7 +68,14 @@ function failingColliderWorld(physics: RAPIER.World, counter: { attempts: number
   });
 }
 
-export async function run(options: { scan?: boolean; scanFailure?: boolean; standCommitFailure?: boolean } = {}) {
+/** Every scan URL any loader was asked for in the last run() (default game: Tower only, never dkr-*). */
+export const scanRequests: string[] = [];
+const trackedLoad = (url: string) => { scanRequests.push(url); return loadLocalGltf(url); };
+
+/** scan: Tower scan as in the default game. stadiumScan: ALSO the diagnostic DKR west stand + field captures
+ * (`?stadiumscan=1` in the game); without it the stadium is fully authored, exactly like the default game. */
+export async function run(options: { scan?: boolean; scanFailure?: boolean; standCommitFailure?: boolean; stadiumScan?: boolean } = {}) {
+  scanRequests.length = 0;
   await RAPIER.init();
   const physics = new RAPIER.World({ x: 0, y: -24, z: 0 });
   const data = json<CampusData>('public/data/campus.json');
@@ -86,7 +95,7 @@ export async function run(options: { scan?: boolean; scanFailure?: boolean; stan
   let scanTower: ScanTower | null = null, scanFallback = false;
   const beforeTower = new Set<number>(); physics.colliders.forEach(c => { beforeTower.add(c.handle); });
   if (options.scan || options.scanFailure) {
-    const load = options.scanFailure ? () => Promise.reject(new Error('injected scan load failure')) : loadLocalGltf;
+    const load = options.scanFailure ? () => Promise.reject(new Error('injected scan load failure')) : trackedLoad;
     const prepared = await prepareScanTower({ load }).catch(() => null);
     if (prepared) { scanTower = prepared.commit(physics); world.group.add(scanTower.group); }
     else { scanFallback = true; buildTower(world); }
@@ -120,8 +129,9 @@ export async function run(options: { scan?: boolean; scanFailure?: boolean; stan
     wall: walkway.materials.find(m => m.name === 'East Mall limestone walls and steps') ?? world.mat.concrete, physics, extraSources: heroRouteExtraGround });
   if (tieIns) { walkway.surfaces.add(...tieIns.meshes); walkway.colliders.push(...tieIns.colliders); }
   const dummy = new THREE.MeshBasicMaterial();
-  // DKR west stand, as in the game: decoded first; the bowl drops its west rows only if present.
-  const standLoad = options.scan || options.scanFailure ? prepareScanStand({ load: options.scanFailure ? () => Promise.reject(new Error('injected scan load failure')) : loadLocalGltf }).catch(() => null) : Promise.resolve(null);
+  // DKR west stand (diagnostic `stadiumScan` only, as `?stadiumscan=1` in the game): decoded first; the bowl drops its
+  // west rows only if present.
+  const standLoad = options.stadiumScan ? prepareScanStand({ load: options.scanFailure ? () => Promise.reject(new Error('injected scan load failure')) : trackedLoad }).catch(() => null) : Promise.resolve(null);
   const standPrepared = await standLoad;
   let scanStand: ScanStand | null = null;
   const standCommit = { injected: !!options.standCommitFailure, attempts: 0, preparedMeshes: 0, preparedDisposed: 0, collidersBefore: 0, collidersAfterCommit: 0 };
@@ -166,8 +176,8 @@ export async function run(options: { scan?: boolean; scanFailure?: boolean; stan
   // colliders around the GDC are live, as when the player stands nearby.
   vegetation.canopy.streamAt(new THREE.Vector3(69.64, 0, -18.48));
   let scanField: ScanField | null = null;
-  if (options.scan && !options.scanFailure) {
-    scanField = await loadScanField({ fieldY: context.stats.stadium.fieldY, load: loadLocalGltf });
+  if (options.stadiumScan && !options.scanFailure) {
+    scanField = await loadScanField({ fieldY: context.stats.stadium.fieldY, load: trackedLoad });
     context.group.add(scanField.group);
   }
   // Every generated vertex must be finite and every mesh non-empty.

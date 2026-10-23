@@ -23,7 +23,7 @@ const down = { x: 0, y: -1, z: 0 };
 // ---------- 1. commit failure: generated west stand restored, nothing of the scan left ----------
 {
   const generated = await run({});
-  const injected = await run({ scan: true, standCommitFailure: true });
+  const injected = await run({ scan: true, stadiumScan: true, standCommitFailure: true });
   const g = generated.stats.stadium, f = injected.stats.stadium, c = injected.standCommit;
   // West generated rows physically present at the same places as in the plain generated scene.
   const probe = r => { const out = []; for (const [t, v] of [[10, -40], [25, 0], [45, 30], [60, -10]]) {
@@ -50,7 +50,7 @@ const down = { x: 0, y: -1, z: 0 };
 }
 
 // ---------- 2. committed stand registered as ground ----------
-const r = await run({ scan: true });
+const r = await run({ scan: true, stadiumScan: true });
 const { physics, RAPIER, player, scanStand } = r;
 if (!scanStand) { fail('scan stand missing'); process.exit(1); }
 const standIds = new Set(scanStand.colliders.map(c => c.handle));

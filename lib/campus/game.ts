@@ -12,7 +12,7 @@ import { FrameProfiler } from './profiler';
 import {applyMainBuildingMaterials} from './main-building-materials';
 import { buildTower } from './landmarks';
 import { buildOfflineTowerBase } from './tower-offline-base';
-import { prepareScanTower, prepareScanStand, loadScanField, SCAN_STAND_SECTOR, type PreparedScanTower, type PreparedScanStand, type ScanTower, type ScanStand, type ScanField } from './scan-landmarks';
+import { prepareScanTower, prepareScanStand, loadScanField, stadiumScanRequested, SCAN_STAND_SECTOR, type PreparedScanTower, type PreparedScanStand, type ScanTower, type ScanStand, type ScanField } from './scan-landmarks';
 import { buildMainBuildingEnvelope } from './main-building-envelope';
 import { loadOfflineTerrain } from './offline-terrain-loader';
 import { loadLocalSurfaces } from './local-surfaces';
@@ -311,9 +311,10 @@ export class CampusGame {
         if (!this.disposed) console.warn('Tower scan unavailable; keeping the authored Tower.', error);
         return null;
       });
-      // Aligned DKR west-stand photogrammetry, same lifecycle: decode now, commit after the bowl.
-      // `?stand=generated` keeps the fully generated bowl (same-camera comparison / experimental gate).
-      const standScan = new URLSearchParams(location.search).get('stand') !== 'generated';
+      // DKR: the default stadium is fully authored (stadium-bowl.ts, authored turf). The partial MIT west-stand and field
+      // captures load ONLY for explicit diagnostic comparison (`?stadiumscan=1`, scan-landmarks.ts stadiumScanRequested);
+      // otherwise neither GLB is requested. Same transactional lifecycle as before: decode now, commit after the bowl.
+      const standScan = stadiumScanRequested(location.search);
       const scanStandLoad = !standScan ? Promise.resolve(null) : prepareScanStand({ signal: this.signal.signal }).then(prepared => {
         if (this.disposed) { prepared.dispose(); return null; }
         this.scanStandPrepared = prepared;
@@ -453,7 +454,7 @@ export class CampusGame {
         this.scanStandPrepared = undefined;
       }
       // Visual-only scanned DKR turf on the generated field plane (its collider stays).
-      loadScanField({ fieldY: localContext.stats.stadium.fieldY, signal: this.signal.signal }).then(field => {
+      if (standScan) loadScanField({ fieldY: localContext.stats.stadium.fieldY, signal: this.signal.signal }).then(field => {
         if (this.disposed) { field.dispose(); return; }
         this.scanField = field;
         localContext.group.add(field.group);

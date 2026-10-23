@@ -77,32 +77,10 @@ Sources, from most to least measured:
   top 94.3 m above ground vs published 93.6 m). It replaces the previously
   authored Tower, which turned out to sit about 28 m south of the real shaft
   (confirmed independently by LiDAR). Its collision is a shaft box plus a height
-  grid sampled from the visible tops. The DKR turf from the north end zone to
-  the south 20-yard line is from the partial stadium scan (visual only, on the
-  generated field collider). The scanned DKR west stand (lower bowl and
-  overhanging upper deck) is also used, with a collision surface sampled from
-  its visible top (median 0.012 m, 96% within 0.1 m). Its torn capture edges
-  (upper rim, press-box fragments, streak curtains) are trimmed off and
-  replaced by small authored shapes with colliders: a 1.1 m parapet on a
-  smoothed rim line, a roof cap and coping, and a plain press-box block sized
-  to the surviving scanned slab. The stand keeps the scan's own photo UV
-  charts (re-packed at 1:1 source texels; an earlier top-down re-bake had put
-  upper-deck photos on lower decks), so it is heavy: ~340k triangles near
-  (~254k far), 15.4 MB + 12.7 MB of GLB, and a 4096×2048 atlas per level
-  (~43 MiB of GPU texture each; up to ~85 MiB once both levels have been
-  shown). Its 622 filled hole cells use a
-  separate flat authored material, not photo pixels.
-  The seams to the generated stands are closed walls (a visible barrier, up to
-  ~10 m step), not walkable joins. East stand, ends and corners stay generated
-  (never captured); their seat and concrete colours are medians measured
-  through the scan's own photo UVs (grey aluminium benches, warm pale
-  concrete). The outer wall is an authored texture interpretation of street-
-  level observation (Street View, used only as visual reference): deep flat
-  concourse bands, structural piers, lintels/slots and framed glazing on the
-  buff north/east sides; tall piers with dense vertical fin panels and one
-  window band per level on the pale west (Bellmont) and south sides. Captured colour is
-  shown unlit (it already contains the photographed light, including a baked
-  afternoon shadow). `?stand=generated` shows the fully generated bowl instead.
+  grid sampled from the visible tops. DKR stadium: by default the whole stadium, including the west stand and
+  the complete turf, is authored geometry and texture; the partial MIT west-stand and field captures load only
+  for diagnostic comparison with `?stadiumscan=1` (otherwise neither file is requested). Captured Tower colour is
+  shown unlit (it already contains the photographed light, including a baked afternoon shadow).
 * **Measured (USGS 3DEP LiDAR, 2017):** per-building roof heights, roof form and
   height tiers for 1,145 footprints, and 13,245 canopy tree tops. Buildings built
   or changed since 2017 (133 conflicts) fall back to the City of Austin 2023
@@ -119,9 +97,9 @@ Sources, from most to least measured:
   the building is known, a named estimate or a district default), LiDAR heights
   and stepped tiers, CC0 Poly Haven materials, and real recessed windows, doors
   and storefronts within ~110 m (a matching shader farther away). Footprints with
-  authored bodies or walkable routes inside are left alone. DKR's bowl outside the
-  scanned west stand is generated (stepped stands, concourse, suites, arcade
-  wall); the outside facade seen from the street or the air is all generated.
+  authored bodies or walkable routes inside are left alone. DKR's bowl is generated
+  per side from measured rakes/LiDAR rims and reference photographs (stands, suites, press box, gantry, 2021 SEZ);
+  the outside facades are authored from reference photographs.
 * **Vegetation (11,651 trees):** the 173 authored placements (154 broad,
   crooked live oaks forking low into heavy limbs, 19 upright plaza trees), then
   official UT TreeKeeper inventory site positions (type 1 only, 4,220 placed)
@@ -189,8 +167,8 @@ same campus-Y datum), City of Austin data, OSM names and reference photographs, 
   views (`__campus.shots()` lists them; any key or click exits). With `?shot=` in
   the URL the intro panel is hidden so the view is unobstructed; the plain URL is
   unchanged. It never moves the player. For "before" lighting use `?lighting=legacy&occlusion=off&shot=<id>`.
-* `?stand=generated` replaces the scanned DKR west stand with the generated
-  bowl (for same-camera comparison).
+* `?stadiumscan=1` (diagnostic) loads the partial MIT DKR west-stand and field captures over the generated bowl
+  (the default game neither loads nor shows them).
 * `?occlusion=off` disables ambient occlusion; `?shadows=csm` tries cascaded
   shadows (opt-in, unmeasured); `?contactao=on` adds contact darkening bands.
 * `__campus.snapshot().timing` reports fps, draw calls, triangles and GPU time
@@ -266,16 +244,10 @@ context under Node (textures stubbed) and reports:
 * The Tower scan has photographed (baked) lighting: its north and east faces are
   in shade as captured. Its lantern top is an added lid. Ambient occlusion can
   still darken captured pixels at 30–65 m.
-* The stadium is partly captured: west stand and north end zone → south
-  20-yard line of turf. The rest of the bowl and the whole outside facade are
-  generated, and the facade is a flat textured wall up to the ~50 m rim (no
-  corner towers or relief; proportions estimated; south end generic; hard
-  material seam at the NW/SE corners). The west-stand scan is soft (6.6
-  source texels per metre, about 15 cm; seat rows exist only in the texture;
-  steps are rough) and keeps its photographed shadow; under the
-  overhang it is solid. The scooter can mount on the stand but cannot ride
-  along the seat rows. The generated field height (−2.9) and the LiDAR stadium
-  ground (−8.0) disagree.
+* The stadium is authored, not captured: sections, suites, press box, SEZ and facades are evidence-based
+  approximations (tools/scans/stadium-reference-notes.md), not a survey; the turf markings follow NCAA dimensions
+  with estimated styling. The partial MIT stadium capture is a `?stadiumscan=1` diagnostic only. The generated field
+  height (−2.9) and the LiDAR stadium ground (−8.0) disagree.
 * Tree positions: inventory type-1 sites may include stale, stump or newly
   planted sites (the type codes are unpublished); trees outside inventory
   coverage stand at 2017 LiDAR crown peaks, which can be a few metres from the

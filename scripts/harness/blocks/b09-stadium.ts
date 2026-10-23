@@ -7,7 +7,7 @@
 //  3. Stadium south end: the record 504014 ring is the official SEZ ring (area within 1%); no generated stand above
 //     the measured MNC roof inside the Moncrief-Neuhaus ring (it used to carry 38-47 m stands); MNC (-901) drawn at its
 //     LiDAR roof; the bowl's SEZ rim stays at or under the City 2023 SEZ top (groundY -5.6 + h 40.6 = 35.0) + 1 m.
-//  4. The captured DKR west stand sector is still committed (no scan sector error, 35 replaced sections).
+//  4. The default bowl builds its own west stand (no scan sector; the capture is a ?stadiumscan=1 diagnostic).
 // East-south lane (D17 TMM, D18 LBJ, D19 Manor Garage + MFH, D20 Myers east stand): records it replaces (B09_LANE_REPLACED)
 // must be decision 'authored' instead of 'generated' and are held to the same LiDAR roof test on their physical replacement;
 // section 11 checks the lane install (committed replacements, walkable stand treads on both Myers stands, triangle budget).
@@ -109,7 +109,9 @@ export const check: BlockCheck = scene => {
   // 4. Captured west stand.
   const st = scene.context.stats.stadium;
   report.stadium = { fieldY: st.fieldY, sections: st.sections, rimMaxHeight: st.rimMaxHeight, meanDepth: +st.meanDepth.toFixed(2), triangles: st.triangles, scanSector: st.scanSector, scanSectorError: st.scanSectorError };
-  if (st.scanSectorError || !st.scanSector || st.scanSector.replacedSections !== 35) failures.push(`west scan sector not committed as before: ${JSON.stringify(st.scanSector)} ${st.scanSectorError}`);
+  // Default game: the partial west-stand capture is a ?stadiumscan=1 diagnostic, so the bowl builds its own west stand (no
+  // scan sector, no scan error); the diagnostic commit/fallback is checked by run-stand-runtime-check.mjs.
+  if (st.scanSectorError || st.scanSector) failures.push(`default bowl carries a west scan sector: ${JSON.stringify(st.scanSector)} ${st.scanSectorError}`);
   // ---- Round 2: exterior features (lib/campus/blocks/b09-stadium/exterior.ts, exterior-plan.json) ----
   // 5. The bowl is identical to the no-install baseline (the exterior must not reshape it via the coverage raster).
   const base = ext.bowlBaseline as { triangles: number; colliderTriangles: number; retractedMetres: number; meanDepth: number };

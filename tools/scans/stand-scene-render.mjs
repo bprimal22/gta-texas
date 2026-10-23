@@ -10,7 +10,7 @@ globalThis.createImageBitmap = async () => ({ width: 1, height: 1, close() {} })
 const mod = await import(pathToFileURL(resolve(LANE, '.work/harness-dist/context-check.mjs')).href);
 const THREE = await import('three');
 const mode = process.argv[2] ?? 'scan';
-const r = await mod.run(mode === 'scan' ? { scan: true } : {});
+const r = await mod.run(mode === 'scan' ? { scan: true, stadiumScan: true } : {});
 const box = new THREE.Box3(new THREE.Vector3(300, -30, 150), new THREE.Vector3(600, 120, 440));
 const pos = [], idx = [], triMat = [];
 const add = (root, mat) => { root.updateWorldMatrix(true, true); root.traverse(o => {

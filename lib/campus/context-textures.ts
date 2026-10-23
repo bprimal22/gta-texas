@@ -311,31 +311,78 @@ function stadiumBrick(p: Painter) {
   noise(p, 1702, 7, 2);
 }
 
-function fieldCanvas() {
-  // u: sideline to sideline (71 m plate), v: end line to end line (126 m plate).
-  const w = 512, h = 1024, ctx = canvas(w);
+/** DKR turf (the complete field plate; the partial MIT field capture is a `?stadiumscan=1` diagnostic only). Authored from
+ * the official 2022 aerials (tools/scans/stadium-references.json ref-ut-pano0009 / ref-ut-dji0226): dark synthetic turf,
+ * burnt-orange end zones with TEXAS (north) and LONGHORNS (south) reading from the field, white 5-yard lines, college hash
+ * marks and sideline ticks every yard, 10-50 numbers with direction arrows (tops toward the nearer sideline), white
+ * team-area bands along both sidelines and a restrained steer-head mark at midfield (simplified silhouette, not the
+ * official artwork). NCAA dimensions (exact): 53 1/3 x 120 yd, hashes 60 ft from each sideline, number tops 9 yd from the
+ * sidelines, 6 ft numbers; band extents, colours and lettering style are estimates. No photo pixels.
+ * Canvas frame: drawn as a NORTH-UP map (x east, y south) under a vertical flip, because the turf UVs put field-frame
+ * v (south) up the texture and CanvasTexture.flipY puts canvas row 0 at v = 1. */
+export function fieldCanvas() {
+  // Plate: 71 m sideline to sideline (u) x 126 m end to end (v), STADIUM_MARKINGS frame (stadium-bowl.ts local()).
+  const w = 1024, h = 2048, ctx = canvas(w);
   ctx.canvas.height = h;
-  const halfW = 35.5, halfL = 63, px = (m: number) => ((m + halfW) / (2 * halfW)) * w, pz = (m: number) => ((m + halfL) / (2 * halfL)) * h;
-  ctx.fillStyle = '#3f6b33'; ctx.fillRect(0, 0, w, h);
-  const yard = 0.9144, play = 26.67 * yard, end = 60 * yard;
-  for (let k = -12; k < 12; k++) {
-    ctx.fillStyle = k % 2 ? '#4a7a3b' : '#43723a';
-    ctx.fillRect(px(-play), pz(k * 5 * yard), px(play) - px(-play), pz((k + 1) * 5 * yard) - pz(k * 5 * yard));
+  const halfW = 35.5, halfL = 63, sx = w / (2 * halfW), sz = h / (2 * halfL);
+  ctx.setTransform(1, 0, 0, -1, 0, h); // north-up map frame
+  const X = (u: number) => (u + halfW) * sx, Z = (v: number) => (v + halfL) * sz; // v + south, map y down = south
+  const box = (u0: number, v0: number, u1: number, v1: number, c: string) => { ctx.fillStyle = c; ctx.fillRect(X(u0), Z(v0), X(u1) - X(u0), Z(v1) - Z(v0)); };
+  const yd = 0.9144, hw = 80 * 0.3048, goal = 50 * yd, end = 60 * yd, line = 4 * 0.0254;
+  const turf = '#36602f', white = '#f2f0e8', orange = '#b9541a';
+  box(-halfW, -halfL, halfW, halfL, turf);
+  // Subtle 5-yard mowing-style bands (synthetic turf panels), low contrast to avoid shimmer.
+  for (let k = -10; k < 10; k++) box(-hw, k * 5 * yd, hw, (k + 1) * 5 * yd, k % 2 ? '#38632f' : '#345d2d');
+  // Team-area white bands outside both sidelines between the 25-yard lines (estimate from the aerials).
+  for (const sgn of [-1, 1]) box(sgn < 0 ? -hw - 1.83 : hw, -25 * yd, sgn < 0 ? -hw : hw + 1.83, 25 * yd, white);
+  // End zones.
+  box(-hw, -end, hw, -goal, orange); box(-hw, goal, hw, end, orange);
+  // Boundary (sidelines + end lines) and goal lines.
+  ctx.fillStyle = white;
+  box(-hw - 0.15, -end - 0.15, hw + 0.15, -end, white); box(-hw - 0.15, end, hw + 0.15, end + 0.15, white);
+  box(-hw - 0.15, -end, -hw, end, white); box(hw, -end, hw + 0.15, end, white);
+  // Yard lines every 5 yd (goal lines 8 in wide), hash marks and sideline ticks every yard.
+  for (let y = -50; y <= 50; y += 5) { const lw = Math.abs(y) === 50 ? 2 * line : line; box(-hw, y * yd - lw / 2, hw, y * yd + lw / 2, white); }
+  const hash = hw - 60 * 0.3048, tick = 2 * 0.3048;
+  for (let y = -49; y <= 49; y++) {
+    if (y % 5 === 0) continue;
+    for (const u of [-hw + 0.1, -hash - tick / 2, hash - tick / 2, hw - 0.1 - tick]) box(u, y * yd - line / 2, u + tick, y * yd + line / 2, white);
   }
-  ctx.fillStyle = '#bf5700';
-  ctx.fillRect(px(-play), pz(-end), px(play) - px(-play), pz(-50 * yard) - pz(-end));
-  ctx.fillRect(px(-play), pz(50 * yard), px(play) - px(-play), pz(end) - pz(50 * yard));
-  ctx.fillStyle = '#f4f2ea';
-  for (let y = -50; y <= 50; y += 5) ctx.fillRect(px(-play), pz(y * yard) - 1.5, px(play) - px(-play), 3);
-  for (let y = -50; y < 50; y += 1) for (const x of [-play + 0.6, -6.2 * yard, 6.2 * yard - 0.6, play - 1.2])
-    ctx.fillRect(px(x), pz(y * yard) - 0.75, px(x + 0.6) - px(x), 1.5);
-  ctx.strokeStyle = '#f4f2ea'; ctx.lineWidth = 3;
-  ctx.strokeRect(px(-play), pz(-end), px(play) - px(-play), pz(end) - pz(-end));
-  ctx.font = 'bold 44px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-  for (const [y, rot] of [[-55 * yard, Math.PI], [55 * yard, 0]] as const) {
-    ctx.save(); ctx.translate(w / 2, pz(y)); ctx.rotate(rot); ctx.fillText('TEXAS', 0, 0); ctx.restore();
+  // Numbers (6 ft tall, tops 9 yd from the sideline, tops toward that sideline) and arrows toward the nearer goal line.
+  const numH = 6 * 0.3048, numTop = 9 * yd;
+  ctx.font = `bold ${Math.round(numH * sx * 1.08)}px Arial, Helvetica, sans-serif`; // Rotated glyph height runs across u.
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  for (let y = -40; y <= 40; y += 10) {
+    const label = String(50 - Math.abs(y));
+    for (const sgn of [-1, 1]) {
+      const u = sgn * (hw - numTop + numH / 2), cx = X(u), cy = Z(y * yd);
+      ctx.save(); ctx.translate(cx, cy); ctx.rotate(sgn < 0 ? -Math.PI / 2 : Math.PI / 2); ctx.fillStyle = white; ctx.fillText(label, 0, 0, 2 * 4 * 0.3048 * sz + 4); ctx.restore();
+      if (y === 0) continue;
+      // Arrow: small triangle beside the number on the goal-line side.
+      const dir = y < 0 ? -1 : 1, ay = Z(y * yd + dir * 2.15), au = X(u + sgn * numH * 0.3), s3 = 0.42 * sz;
+      ctx.beginPath(); ctx.moveTo(au - s3 * 0.9, ay - dir * s3); ctx.lineTo(au + s3 * 0.9, ay - dir * s3); ctx.lineTo(au, ay + dir * s3); ctx.closePath(); ctx.fill();
+    }
   }
-  ctx.fillStyle = '#bf5700'; ctx.beginPath(); ctx.arc(w / 2, h / 2, 26, 0, Math.PI * 2); ctx.fill();
+  // End-zone words reading from the field: tops toward their end line (north = map up).
+  ctx.font = `bold ${Math.round(5.4 * sz)}px Georgia, "Times New Roman", serif`;
+  for (const [word, v, rot] of [['TEXAS', -55 * yd, 0], ['LONGHORNS', 55 * yd, Math.PI]] as const) {
+    ctx.save(); ctx.translate(X(0), Z(v)); ctx.rotate(rot); ctx.fillStyle = white; ctx.fillText(word, 0, 0, 2 * hw * sx * 0.86); ctx.restore();
+  }
+  // Midfield: simplified burnt-orange steer-head silhouette (~19 m across), upright for the west (press-box) side, i.e.
+  // horns toward the east. Authored shape, not the official artwork.
+  // Shape units: metres, x across the horns, y down the face (rotated so the horns point east; scale per rotated axis).
+  ctx.save(); ctx.translate(X(0), Z(0)); ctx.rotate(Math.PI / 2); ctx.scale(sz, sx);
+  ctx.fillStyle = orange; ctx.strokeStyle = white; ctx.lineWidth = 0.16;
+  ctx.beginPath();
+  ctx.moveTo(-9.5, -4.1); ctx.bezierCurveTo(-7.6, -1.7, -5.7, -0.5, -3.1, -0.4);
+  ctx.bezierCurveTo(-2.9, 0.4, -2.2, 1.7, -1.8, 2.8); ctx.lineTo(-1.5, 4.2);
+  ctx.lineTo(1.5, 4.2); ctx.lineTo(1.8, 2.8); // Flat muzzle rather than a pointed triangle.
+  ctx.bezierCurveTo(2.2, 1.7, 2.9, 0.4, 3.1, -0.4); ctx.bezierCurveTo(5.7, -0.5, 7.6, -1.7, 9.5, -4.1);
+  ctx.bezierCurveTo(7.3, -2.6, 5.5, -2.4, 3.7, -2.6); ctx.bezierCurveTo(2.8, -2.7, 2.0, -3.4, 0.9, -3.1);
+  ctx.lineTo(-0.9, -3.1); ctx.bezierCurveTo(-2.0, -3.4, -2.8, -2.7, -3.7, -2.6);
+  ctx.bezierCurveTo(-5.5, -2.4, -7.3, -2.6, -9.5, -4.1);
+  ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.restore();
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
   return ctx.canvas;
 }
 

@@ -22,7 +22,8 @@ import type { StadiumScanSector } from './stadium-bowl';
  * heightfield cap sampled from the visible tops (scan + authored crown stone; the roof rail and mast
  * are not landable) — never raw scan triangles.
  *
- * Field: a flattened, visual-only decal of the scanned DKR turf (north end zone to the south
+ * Field / west stand (DKR): diagnostic comparison only (`stadiumScanRequested`, `?stadiumscan=1`); the default stadium
+ * is fully authored. Field: a flattened, visual-only decal of the scanned DKR turf (north end zone to the south
  * 20-yard line), laid 3 cm above the generated stadium field plane, whose collider is kept.
  *
  * Ownership: loaders decode without physics; every failure, timeout, abort or late arrival
@@ -350,6 +351,13 @@ export async function loadScanField(options: ScanLoadOptions & { fieldY: number;
     stats: { source: 'seanhlewis/utimagery@13f08efe stadium.glb (MIT), field only, flattened', triangles: fieldMeta.file.triangles, y: group.position.y, coverageOfOpening: fieldMeta.crop.openingCoverage },
     dispose() { if (disposed) return; disposed = true; disposeTree(group); },
   };
+}
+
+/** DKR stadium scans (west stand + field decal) are a DIAGNOSTIC comparison only: the default game builds the complete
+ * authored stadium and requests neither GLB. Opt in with `?stadiumscan=1` (or the legacy `?stand=scan`). */
+export function stadiumScanRequested(search: string) {
+  const q = new URLSearchParams(search);
+  return q.get('stadiumscan') === '1' || q.get('stand') === 'scan';
 }
 
 /** The DKR west-stand sector replaced by the scan (pass to buildLocalContext({ stadium: { scanSector } })
