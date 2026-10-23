@@ -1,0 +1,1240 @@
+{
+ "about": "Downtown skyline identities. Placement = OpenStreetMap outline (ODbL) or City of Austin 2023 footprint; heights = cited sources; tower plan sizes inside block outlines, setbacks, crowns and palettes are ESTIMATES from reference photographs (not shipped) and architect/owner pages. Colours are sRGB 0-255 eyeballed from daylight photos, not measured. Used by tools/extension/bake-downtown.py (geometry) and lib/campus/extension/downtown/landmarks.ts (crowns).",
+ "palettes": {
+  "officeGlass": [
+   {
+    "w": [
+     176,
+     184,
+     190
+    ],
+    "a": [
+     70,
+     102,
+     132
+    ]
+   },
+   {
+    "w": [
+     92,
+     100,
+     108
+    ],
+    "a": [
+     60,
+     104,
+     114
+    ]
+   },
+   {
+    "w": [
+     160,
+     168,
+     174
+    ],
+    "a": [
+     86,
+     100,
+     112
+    ]
+   },
+   {
+    "w": [
+     70,
+     78,
+     86
+    ],
+    "a": [
+     48,
+     72,
+     104
+    ]
+   },
+   {
+    "w": [
+     190,
+     192,
+     188
+    ],
+    "a": [
+     98,
+     124,
+     140
+    ]
+   }
+  ],
+  "residentialGlass": [
+   {
+    "w": [
+     214,
+     212,
+     204
+    ],
+    "a": [
+     74,
+     108,
+     132
+    ]
+   },
+   {
+    "w": [
+     196,
+     178,
+     152
+    ],
+    "a": [
+     70,
+     96,
+     112
+    ]
+   },
+   {
+    "w": [
+     226,
+     224,
+     216
+    ],
+    "a": [
+     86,
+     116,
+     128
+    ]
+   },
+   {
+    "w": [
+     168,
+     150,
+     128
+    ],
+    "a": [
+     64,
+     90,
+     108
+    ]
+   },
+   {
+    "w": [
+     204,
+     200,
+     192
+    ],
+    "a": [
+     58,
+     84,
+     104
+    ]
+   }
+  ],
+  "granite": [
+   {
+    "w": [
+     158,
+     116,
+     102
+    ],
+    "a": [
+     44,
+     50,
+     58
+    ]
+   },
+   {
+    "w": [
+     178,
+     152,
+     126
+    ],
+    "a": [
+     48,
+     56,
+     62
+    ]
+   },
+   {
+    "w": [
+     132,
+     100,
+     86
+    ],
+    "a": [
+     40,
+     46,
+     52
+    ]
+   },
+   {
+    "w": [
+     196,
+     182,
+     160
+    ],
+    "a": [
+     52,
+     60,
+     68
+    ]
+   }
+  ],
+  "midrise": [
+   {
+    "w": [
+     212,
+     206,
+     192
+    ],
+    "a": [
+     62,
+     74,
+     84
+    ]
+   },
+   {
+    "w": [
+     190,
+     160,
+     122
+    ],
+    "a": [
+     58,
+     66,
+     72
+    ]
+   },
+   {
+    "w": [
+     146,
+     82,
+     62
+    ],
+    "a": [
+     52,
+     58,
+     62
+    ]
+   },
+   {
+    "w": [
+     206,
+     190,
+     166
+    ],
+    "a": [
+     60,
+     72,
+     80
+    ]
+   },
+   {
+    "w": [
+     172,
+     176,
+     178
+    ],
+    "a": [
+     64,
+     84,
+     100
+    ]
+   }
+  ],
+  "historic": [
+   {
+    "w": [
+     152,
+     86,
+     64
+    ],
+    "a": [
+     44,
+     50,
+     54
+    ]
+   },
+   {
+    "w": [
+     200,
+     182,
+     150
+    ],
+    "a": [
+     48,
+     54,
+     58
+    ]
+   },
+   {
+    "w": [
+     172,
+     120,
+     88
+    ],
+    "a": [
+     44,
+     50,
+     54
+    ]
+   },
+   {
+    "w": [
+     184,
+     170,
+     146
+    ],
+    "a": [
+     50,
+     56,
+     60
+    ]
+   },
+   {
+    "w": [
+     128,
+     74,
+     58
+    ],
+    "a": [
+     40,
+     46,
+     50
+    ]
+   }
+  ],
+  "podium": [
+   {
+    "w": [
+     198,
+     194,
+     184
+    ],
+    "a": [
+     70,
+     78,
+     84
+    ]
+   },
+   {
+    "w": [
+     150,
+     152,
+     150
+    ],
+    "a": [
+     62,
+     70,
+     76
+    ]
+   },
+   {
+    "w": [
+     182,
+     168,
+     146
+    ],
+    "a": [
+     66,
+     72,
+     76
+    ]
+   }
+  ]
+ },
+ "osmHeights": [
+  {
+   "osm": 1155613520,
+   "name": "The Travis",
+   "heightM": 171.3,
+   "source": "https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Austin (562 ft, 50 floors, 2025)"
+  },
+  {
+   "osm": 971496026,
+   "name": "Vesper",
+   "heightM": 138.7,
+   "source": "https://en.wikipedia.org/wiki/List_of_tallest_buildings_in_Austin (455 ft, 41 floors, 2024)"
+  }
+ ],
+ "landmarks": [
+  {
+   "key": "waterline",
+   "name": "Waterline",
+   "osm": 1195809570,
+   "heightM": 312.4,
+   "heightBasis": "1,025 ft completed height, DPR Construction completion release (2026-08-28); KPF design figure 1,022 ft. Frame crown counts within the 312.4 m overall.",
+   "sources": [
+    "https://www.dpr.com/media/press-releases/texas-tallest-tower-completes-construction-ahead-of-schedule",
+    "https://www.kpf.com/project/waterline",
+    "https://waterlineaustin.com/overview/",
+    "Wikimedia Commons File:Waterline (Austin).jpg (reference only)"
+   ],
+   "evidence": "Photo: slender rectangular shaft; lower hotel/office half glass with white horizontal slab bands, recessed dark reveal at the transition, upper residential half a white frame grid with staggered windows, flat top with an open white crown frame. Tower plan = OSM building:part 'Bosque Residences' (way 1213966766); podium = OSM site outline, height estimated.",
+   "sections": [
+    {
+     "poly": "outline",
+     "to": 28,
+     "f": "podium",
+     "w": [
+      204,
+      204,
+      198
+     ],
+     "a": [
+      70,
+      92,
+      110
+     ]
+    },
+    {
+     "poly": {
+      "osm": 1213966766
+     },
+     "to": 160,
+     "f": "banded",
+     "w": [
+      222,
+      222,
+      216
+     ],
+     "a": [
+      72,
+      104,
+      128
+     ]
+    },
+    {
+     "poly": {
+      "osm": 1213966766,
+      "inset": 2.2
+     },
+     "from": 160,
+     "to": 166,
+     "f": "curtain",
+     "w": [
+      60,
+      66,
+      72
+     ],
+     "a": [
+      40,
+      52,
+      62
+     ]
+    },
+    {
+     "poly": {
+      "osm": 1213966766
+     },
+     "from": 166,
+     "to": 305,
+     "f": "whitegrid",
+     "w": [
+      228,
+      228,
+      222
+     ],
+     "a": [
+      64,
+      92,
+      112
+     ]
+    }
+   ],
+   "crown": {
+    "type": "frame",
+    "height": 7.4,
+    "color": [
+     230,
+     230,
+     224
+    ]
+   }
+  },
+  {
+   "key": "sixth-guadalupe",
+   "name": "Sixth and Guadalupe",
+   "osm": 972654803,
+   "heightM": 263.65,
+   "heightBasis": "865 ft / 263.65 m overall per general contractor J.E. Dunn (primary source, used). Wikipedia lists 875 ft / 266.7 m; the 3 m difference is unexplained by either source (possibly a different top/grade definition - inference only). Parapet crown counts within the 263.65 m.",
+   "sources": [
+    "https://www.gensler.com/projects/600-guadalupe-street",
+    "https://jedunn.com/projects/sixth-and-guadalupe/",
+    "Wikimedia Commons File:Sixth and Guadalupe, Austin, TX.jpg (reference only)"
+   ],
+   "evidence": "Photo: opaque parking podium, wider glazed office block, narrower dark-blue residential shaft with a recessed vertical balcony slot; three stacked volumes narrowing upward. Tower plan sizes estimated (centred in the OSM block outline).",
+   "sections": [
+    {
+     "poly": "outline",
+     "to": 36,
+     "f": "podium",
+     "w": [
+      176,
+      182,
+      186
+     ],
+     "a": [
+      64,
+      76,
+      88
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       56,
+       46
+      ],
+      "offset": [
+       0,
+       0
+      ]
+     },
+     "to": 128,
+     "f": "curtain",
+     "w": [
+      70,
+      82,
+      94
+     ],
+     "a": [
+      56,
+      86,
+      118
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       46,
+       36
+      ],
+      "offset": [
+       0,
+       0
+      ]
+     },
+     "from": 128,
+     "to": 260.15,
+     "f": "balcony",
+     "w": [
+      96,
+      108,
+      120
+     ],
+     "a": [
+      52,
+      82,
+      116
+     ]
+    }
+   ],
+   "crown": {
+    "type": "parapet",
+    "height": 3.5,
+    "color": [
+     120,
+     132,
+     142
+    ]
+   }
+  },
+  {
+   "key": "republic",
+   "name": "The Republic",
+   "osm": 1120921408,
+   "heightM": 216.0,
+   "heightBasis": "710 ft, 48 floors, 2025 (Wikipedia list; OSM height 216)",
+   "sources": [
+    "https://republicaustin.com/",
+    "Wikimedia Commons File:Downtown Austin Skyline - Ann W. Richards Congress Avenue Bridge (54987518915).jpg (reference only)"
+   ],
+   "evidence": "Photo from the Congress Avenue Bridge: blue glass tower tapering slightly with a sloped (chamfered) crown face. Tower plan, podium height and crown slope estimated.",
+   "sections": [
+    {
+     "poly": "outline",
+     "to": 34,
+     "f": "podium",
+     "w": [
+      170,
+      176,
+      180
+     ],
+     "a": [
+      66,
+      84,
+      100
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       58,
+       44
+      ],
+      "offset": [
+       0,
+       0
+      ]
+     },
+     "to": 120,
+     "f": "curtain",
+     "w": [
+      150,
+      164,
+      176
+     ],
+     "a": [
+      64,
+      104,
+      142
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       54,
+       41
+      ],
+      "offset": [
+       0,
+       0
+      ]
+     },
+     "from": 120,
+     "to": 196,
+     "f": "curtain",
+     "w": [
+      150,
+      164,
+      176
+     ],
+     "a": [
+      64,
+      104,
+      142
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       54,
+       41
+      ],
+      "offset": [
+       0,
+       0
+      ]
+     },
+     "from": 196,
+     "to": 216,
+     "f": "curtain",
+     "w": [
+      150,
+      164,
+      176
+     ],
+     "a": [
+      70,
+      112,
+      150
+     ],
+     "chamfer": {
+      "axis": "long",
+      "dir": 1,
+      "low": 196
+     }
+    }
+   ]
+  },
+  {
+   "key": "independent",
+   "name": "The Independent",
+   "osm": 516271461,
+   "heightM": 211.4,
+   "heightBasis": "694 ft, 58 floors, 2019 (Wikipedia list); OSM 209",
+   "sources": [
+    "https://www.rhodepartners.com/the-independent/",
+    "https://theindependentaustin.com/",
+    "Wikimedia Commons File:The Independent from the Stacks Austin Texas 2023.jpg (reference only)"
+   ],
+   "evidence": "Photo: five stacked residential blocks shifted alternately along the long axis ('Jenga'), white frames with glass and inset balconies. Shift distances estimated.",
+   "sections": [
+    {
+     "poly": {
+      "rect": [
+       38,
+       34
+      ],
+      "offset": [
+       -3,
+       0
+      ]
+     },
+     "to": 44,
+     "f": "whitegrid",
+     "w": [
+      232,
+      232,
+      228
+     ],
+     "a": [
+      80,
+      108,
+      126
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       38,
+       34
+      ],
+      "offset": [
+       3.5,
+       0
+      ]
+     },
+     "from": 44,
+     "to": 86,
+     "f": "whitegrid",
+     "w": [
+      232,
+      232,
+      228
+     ],
+     "a": [
+      80,
+      108,
+      126
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       38,
+       34
+      ],
+      "offset": [
+       -4,
+       0
+      ]
+     },
+     "from": 86,
+     "to": 128,
+     "f": "whitegrid",
+     "w": [
+      232,
+      232,
+      228
+     ],
+     "a": [
+      80,
+      108,
+      126
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       38,
+       34
+      ],
+      "offset": [
+       4,
+       0
+      ]
+     },
+     "from": 128,
+     "to": 170,
+     "f": "whitegrid",
+     "w": [
+      232,
+      232,
+      228
+     ],
+     "a": [
+      80,
+      108,
+      126
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       38,
+       34
+      ],
+      "offset": [
+       -2.5,
+       0
+      ]
+     },
+     "from": 170,
+     "to": 211.4,
+     "f": "whitegrid",
+     "w": [
+      232,
+      232,
+      228
+     ],
+     "a": [
+      80,
+      108,
+      126
+     ]
+    }
+   ]
+  },
+  {
+   "key": "austonian",
+   "name": "The Austonian",
+   "osm": 204413181,
+   "heightM": 208.2,
+   "base": "city-lidar",
+   "heightBasis": "683 ft, 56 floors, 2010 (Wikipedia list); 2017 USGS LiDAR tiers + City 2023 MAX_HEIGHT. Overall height includes the crown; LiDAR/City body is clamped below the crown base.",
+   "sources": [
+    "Wikimedia Commons File:TheAustonian.jpg and Downtown Austin Skyline - Lady Bird Lake (54987239041).jpg (reference only)"
+   ],
+   "evidence": "Photos: slender rounded-end blue glass tower over a pale precast podium; the crown curves up into a thin fin at one end. Massing from LiDAR tiers; crown and colours estimated.",
+   "podium": {
+    "f": "podium",
+    "w": [
+     214,
+     206,
+     190
+    ],
+    "a": [
+     70,
+     86,
+     100
+    ]
+   },
+   "tower": {
+    "f": "curtain",
+    "w": [
+     150,
+     170,
+     186
+    ],
+    "a": [
+     70,
+     112,
+     150
+    ]
+   },
+   "crown": {
+    "type": "fin",
+    "height": 14,
+    "color": [
+     150,
+     176,
+     196
+    ]
+   }
+  },
+  {
+   "key": "frost",
+   "name": "Frost Bank Tower",
+   "osm": 37546502,
+   "heightM": 157.2,
+   "base": "city-lidar",
+   "heightBasis": "516 ft, 33 floors, 2004 (Wikipedia list); 2017 USGS LiDAR tiers + City 2023 MAX_HEIGHT. Overall height includes the crown; LiDAR/City body is clamped below the crown base.",
+   "sources": [
+    "https://www.dudapaine.com/project/frost-bank-tower/",
+    "Wikimedia Commons File:FrostTower-Feb2009.JPG (reference only)"
+   ],
+   "evidence": "Photo: blue-green reflective glass with stepped setbacks, a folded pyramidal crown with sharp spires, buff limestone podium. Spire geometry estimated.",
+   "podium": {
+    "f": "stone",
+    "w": [
+     206,
+     190,
+     158
+    ],
+    "a": [
+     60,
+     74,
+     82
+    ]
+   },
+   "tower": {
+    "f": "curtain",
+    "w": [
+     130,
+     160,
+     170
+    ],
+    "a": [
+     64,
+     118,
+     138
+    ]
+   },
+   "crown": {
+    "type": "spires",
+    "height": 26,
+    "color": [
+     96,
+     150,
+     156
+    ]
+   }
+  },
+  {
+   "key": "360-condos",
+   "name": "360 Condominiums",
+   "osm": 328839215,
+   "heightM": 177.1,
+   "base": "city-lidar",
+   "heightBasis": "581 ft incl. mast, 45 floors, 2008 (Wikipedia list); LiDAR tiers + City 2023. Overall height includes the crown; LiDAR/City body is clamped below the crown base.",
+   "sources": [
+    "Wikimedia Commons File:360Condos-Jul2010-a.JPG (reference only)"
+   ],
+   "evidence": "Photo: warm beige concrete frame with curved glass balconies, stepped top and a slender mast.",
+   "podium": {
+    "f": "podium",
+    "w": [
+     196,
+     182,
+     160
+    ],
+    "a": [
+     70,
+     80,
+     88
+    ]
+   },
+   "tower": {
+    "f": "balcony",
+    "w": [
+     206,
+     186,
+     156
+    ],
+    "a": [
+     86,
+     112,
+     128
+    ]
+   },
+   "crown": {
+    "type": "mast",
+    "height": 16,
+    "color": [
+     200,
+     200,
+     196
+    ]
+   }
+  },
+  {
+   "key": "block185",
+   "name": "Block 185",
+   "osm": 961789209,
+   "heightM": 180.0,
+   "heightBasis": "591 ft / 180 m per architect Pelli Clarke & Partners (primary, used; STG Design executive architect). Wikipedia lists 577 ft / 175.9 m (possibly roof vs. overall; inference only).",
+   "sources": [
+    "https://pcparch.com/work/601-west-2nd-street (Pelli Clarke & Partners)",
+    "Wikimedia Commons Block_185_from_Lady_Bird_Lake.jpg, Downtown Austin Skyline - Ann W. Richards Congress Avenue Bridge (reference only)"
+   ],
+   "evidence": "Photos: sail-shaped office tower; the lake-facing (south) side curves up in stepped white terrace bands to a peak on the north side; glass with white slab edges. Curve, low height and plan estimated.",
+   "sections": [
+    {
+     "poly": "outline",
+     "to": 22,
+     "f": "podium",
+     "w": [
+      196,
+      200,
+      200
+     ],
+     "a": [
+      80,
+      104,
+      122
+     ]
+    },
+    {
+     "poly": {
+      "inset": 4
+     },
+     "to": 180.0,
+     "f": "banded",
+     "w": [
+      236,
+      236,
+      232
+     ],
+     "a": [
+      92,
+      124,
+      146
+     ],
+     "sail": {
+      "axis": "long",
+      "dir": 1,
+      "low": 38,
+      "pow": 0.7,
+      "step": 4.4
+     }
+    }
+   ]
+  },
+  {
+   "key": "fairmont",
+   "name": "Fairmont Austin",
+   "osm": 134786106,
+   "heightM": 180.0,
+   "heightBasis": "591 ft / 180 m overall including the ~170 ft / 52 m spire (Wikipedia list) => main roof ~128 m (roofM, derived). Overall height includes the mast.",
+   "sources": [
+    "Wikimedia Commons File:Fairmont_Austin_on_an_Overcast_Day.jpg (reference only)"
+   ],
+   "evidence": "Photo: dark blue-grey glass slab with a recessed vertical slot and a tall thin rooftop spire. Slab plan estimated.",
+   "sections": [
+    {
+     "poly": "outline",
+     "to": 30,
+     "f": "podium",
+     "w": [
+      120,
+      126,
+      132
+     ],
+     "a": [
+      58,
+      70,
+      82
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       70,
+       30
+      ],
+      "offset": [
+       0,
+       0
+      ]
+     },
+     "to": 128,
+     "f": "curtain",
+     "w": [
+      70,
+      80,
+      90
+     ],
+     "a": [
+      54,
+      72,
+      94
+     ]
+    }
+   ],
+   "crown": {
+    "type": "mast",
+    "height": 52,
+    "color": [
+     160,
+     164,
+     166
+    ]
+   },
+   "roofM": 128.0
+  },
+  {
+   "key": "indeed",
+   "name": "Indeed Tower",
+   "osm": 957405853,
+   "heightM": 165.2,
+   "heightBasis": "542 ft, 36 floors (Wikipedia list); OSM 165",
+   "sources": [
+    "Wikimedia Commons File:Indeed_Tower_from_the_East_(cropped).png (reference only)"
+   ],
+   "evidence": "Photo: blue reflective glass tower of folded, angled planes with a chamfered top. Plan and fold estimated.",
+   "sections": [
+    {
+     "poly": "outline",
+     "to": 26,
+     "f": "podium",
+     "w": [
+      176,
+      180,
+      184
+     ],
+     "a": [
+      70,
+      90,
+      110
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       50,
+       36
+      ],
+      "offset": [
+       0,
+       0
+      ]
+     },
+     "to": 150,
+     "f": "curtain",
+     "w": [
+      120,
+      132,
+      150
+     ],
+     "a": [
+      66,
+      98,
+      140
+     ]
+    },
+    {
+     "poly": {
+      "rect": [
+       50,
+       36
+      ],
+      "offset": [
+       0,
+       0
+      ]
+     },
+     "from": 150,
+     "to": 165.2,
+     "f": "curtain",
+     "w": [
+      120,
+      132,
+      150
+     ],
+     "a": [
+      66,
+      98,
+      140
+     ],
+     "chamfer": {
+      "axis": "short",
+      "dir": 1,
+      "low": 150
+     }
+    }
+   ]
+  },
+  {
+   "key": "spring",
+   "name": "Spring",
+   "osm": 198245856,
+   "heightM": 132.3,
+   "base": "city-lidar",
+   "heightBasis": "434 ft, 43 floors, 2009 (Wikipedia list); LiDAR tiers + City 2023. Top tier set to the published height (City MAX_HEIGHT can include rooftop equipment).",
+   "sources": [
+    "Wikimedia Commons File:SpringCondosAustin-Sep2009-2.JPG (reference only)"
+   ],
+   "evidence": "Photo: slender teal-blue glass residential tower with a white frame band on one face.",
+   "podium": {
+    "f": "podium",
+    "w": [
+     196,
+     196,
+     190
+    ],
+    "a": [
+     70,
+     84,
+     96
+    ]
+   },
+   "tower": {
+    "f": "balcony",
+    "w": [
+     220,
+     222,
+     218
+    ],
+    "a": [
+     62,
+     136,
+     150
+    ]
+   }
+  },
+  {
+   "key": "one-american-center",
+   "name": "One American Center",
+   "osm": 206163832,
+   "heightM": 122.2,
+   "base": "city-lidar",
+   "heightBasis": "401 ft, 32 floors, 1984 (Wikipedia list); LiDAR tiers + City 2023. Top tier set to the published height (City MAX_HEIGHT can include rooftop equipment).",
+   "sources": [
+    "Wikimedia Commons File:OneAmericanCenter-Nov2007.JPG (reference only)"
+   ],
+   "evidence": "Photo: cream precast/stone with dark punched windows and a stepped 'wedding-cake' top (stepping captured by LiDAR tiers).",
+   "podium": {
+    "f": "punched",
+    "w": [
+     214,
+     204,
+     184
+    ],
+    "a": [
+     44,
+     50,
+     56
+    ]
+   },
+   "tower": {
+    "f": "punched",
+    "w": [
+     222,
+     214,
+     196
+    ],
+    "a": [
+     44,
+     50,
+     56
+    ]
+   }
+  },
+  {
+   "key": "111-congress",
+   "name": "111 Congress",
+   "osm": 328644625,
+   "heightM": 121.3,
+   "base": "city-lidar",
+   "heightBasis": "398 ft, 30 floors, 1987 (Wikipedia list); LiDAR tiers + City 2023. Top tier set to the published height (City MAX_HEIGHT can include rooftop equipment).",
+   "sources": [
+    "Wikimedia Commons File:Downtown Austin Skyline - Lady Bird Lake (54987239041).jpg (reference only)"
+   ],
+   "evidence": "Photo: rose granite with punched dark windows and a steep pitched/stepped top.",
+   "podium": {
+    "f": "punched",
+    "w": [
+     150,
+     108,
+     96
+    ],
+    "a": [
+     40,
+     44,
+     50
+    ]
+   },
+   "tower": {
+    "f": "punched",
+    "w": [
+     160,
+     118,
+     104
+    ],
+    "a": [
+     40,
+     44,
+     50
+    ]
+   }
+  }
+ ],
+ "heightPolicy": "heightM = published OVERALL height (architectural top including crown, spire or mast) above the lowest terrain under the footprint; the rendered top (tiers + crown) is asserted equal to it by the bake and by check:downtown. roofM, when given, is the main roof below a mast."
+}

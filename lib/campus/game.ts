@@ -31,7 +31,7 @@ import { CameraShotController } from './render/camera-shots';
 import { ViewportSync } from './render/viewport';
 import { buildContactAo } from './render/contact-ao';
 import { installCampusVegetation } from './vegetation/install';
-import { mapPoint, mapView, travelCandidates, travelLanding, travelProbe, WALK_SPEED, RUN_SPEED, type MapView } from './map-travel';
+import { combineTravelRegions, mapPoint, mapView, travelCandidates, travelLanding, travelProbe, WALK_SPEED, RUN_SPEED, type MapView } from './map-travel';
 import { LocalGroundQuery } from './local-ground-query';
 import { ScooterMotion, SCOOTER_TUNING } from './scooter-motion';
 import { buildScooterModel } from './scooter-model';
@@ -40,17 +40,26 @@ import { ScooterClearance } from './scooter-clearance';
 import { FlightMotion, FLIGHT_TUNING } from './flight-motion';
 import { findFlightLanding } from './flight-landing';
 import { buildGroundTieIns } from './ground/tie-ins';
-import { applyBlockData, installBlocks, type InstalledBlocks, type BlockDataReport } from './blocks/registry';
+import { applyBlockData, installBlocks, BLOCK_REPLACES, type InstalledBlocks, type BlockDataReport } from './blocks/registry';
 import { BakedGround } from './baked-ground';
 import { heroRouteExtraGround } from './ground/hero-route';
 import { createFlightPose } from './flight-pose';
 import { loadDeepWest, type DeepWest } from './extension/deep-west';
-import { clampToWorld, mapBounds, worldBoundaryWalls } from './extension/deep-west/bounds';
+import { loadDowntown, type Downtown } from './extension/downtown';
+import { loadBackground, type DowntownBackground } from './extension/downtown/background';
+import type { DowntownMeta } from './extension/downtown/format';
+import { clampToWorld, mapBounds, worldWalls } from './extension/world-bounds';
+import stripGround from './blocks/b14-capitol/strip-ground.json' with { type: 'json' };
 import type { CampusData, TerrainData, GameStatus, Point } from './types';
+import { CAMERA_FAR } from './game-constants';
+import { guardDescent, isWaterbedTarget, overWater, waterHoverFeet } from './extension/downtown/water-safety';
 
 /** Deep-west campus extension (D37-D40, x < -760). Installed only when its asset validates against
  * the loaded offline terrain seam; any failure keeps the original world, bounds and west wall. */
 const DEEP_WEST_EXTENSION = true;
+/** Downtown Austin extension (Capitol strip seam z = 1536 south to Lady Bird Lake). Installed only when its asset
+ * validates against the Capitol strip seam; any failure keeps the original world and south wall. */
+const DOWNTOWN_EXTENSION = true;
 
 export class CampusGame {
   renderer: THREE.WebGLRenderer;
@@ -59,7 +68,7 @@ export class CampusGame {
   skyEnvironment: THREE.WebGLRenderTarget;
   private sky: Sky;
   private localReflection?: CampusLocalReflection;
-  camera = new THREE.PerspectiveCamera(55, 1, 0.12, 2100);
+  camera = new THREE.PerspectiveCamera(55, 1, 0.12, CAMERA_FAR);
   physics!: RAPIER.World;
   world!: CampusWorld;
   private mainBorrowedTextures = new Set<THREE.Texture>();
@@ -82,6 +91,13 @@ export class CampusGame {
   /** Deep-west extension, present only after its asset validated and its colliders were created. */
   private deepWest?: DeepWest;
   private deepWestFailure?: string;
+  /** Downtown extension, present only after its asset validated and its colliders were created. */
+  private downtown?: Downtown;
+  private downtownFailure?: string;
+  private downtownColliders: RAPIER.Collider[] = [];
+  /** Visual-only measured backdrop around the playable world (scene only: no colliders, no travel). */
+  private background?: DowntownBackground;
+  private backgroundFailure?: string;
   private groundTieIns?: ReturnType<typeof buildGroundTieIns>['stats'];
   private localContext?: ReturnType<typeof buildLocalContext>['stats'];
   /** Generated buildings and stadium: visible surfaces with matching colliders. */
@@ -122,6 +138,8 @@ export class CampusGame {
   private flightPose?: ReturnType<typeof createFlightPose>;
   private flightLean = 0;
   private flightMessage = '';
+  /** Descending over downtown water with no landing target (held at hover height). */
+  private flightOverWater = false;
   private flightMessageUntil = 0;
   private flightGroundTarget: number | null = null;
   private flightGroundLift = 0;
@@ -323,6 +341,25 @@ export class CampusGame {
         if (!this.disposed) console.warn('Stand scan unavailable; keeping the generated west stand.', error);
         return null;
       });
+      // Downtown decodes/validates/builds alongside the campus (no physics yet); committed after the vegetation.
+      const downtownLoad = DOWNTOWN_EXTENSION ? loadDowntown({ strip: stripGround, signal: this.signal.signal, materials: {
+        grass: this.world.mat.grass, asphalt: this.world.mat.asphalt, concrete: this.world.mat.concrete,
+        envMap: this.lighting.reflectionEnvironment.texture } }).then(d => {
+        if (this.disposed) { d.dispose(); return null; }
+        return d;
+      }, error => {
+        if (!this.disposed) { this.downtownFailure = error instanceof Error ? error.message : String(error); console.warn('Downtown extension unavailable; keeping the original world.', error); }
+        return null;
+      }) : Promise.resolve(null);
+      const backgroundLoad = DOWNTOWN_EXTENSION ? loadBackground({ signal: this.signal.signal, borrowed: {
+        grass: this.world.mat.grass, asphalt: this.world.mat.asphalt, concrete: this.world.mat.concrete,
+        envMap: this.lighting.reflectionEnvironment.texture } }).then(b => {
+        if (this.disposed) { b.dispose(); return null; }
+        return b;
+      }, error => {
+        if (!this.disposed) { this.backgroundFailure = error instanceof Error ? error.message : String(error); console.warn('Downtown backdrop unavailable.', error); }
+        return null;
+      }) : Promise.resolve(null);
       const localTerrain = await loadOfflineTerrain(this.world.mat.grass);
       if (this.disposed) { localTerrain.dispose(); return; }
       this.world.group.add(localTerrain.mesh);
@@ -429,6 +466,12 @@ export class CampusGame {
       // The bowl omits its west-straight rows only when the scanned stand is ready to replace them.
       const standPrepared = await scanStandLoad;
       if (this.disposed) return; // dispose() already released this.scanStandPrepared
+      // Seam stitching: a validated downtown renders the whole City footprints of the Capitol-strip fragments clipped
+      // at z = 1536, so the generated context skips those fragments (same hook as committed block replacements).
+      // Without downtown nothing is skipped and the strip is exactly as before.
+      const downtownPrepared = await downtownLoad;
+      if (this.disposed) { downtownPrepared?.dispose(); return; }
+      if (downtownPrepared) for (const key of downtownPrepared.replacedKeys) BLOCK_REPLACES.set(key, 'downtown');
       const localContext = buildLocalContext({
         data, physics: this.physics,
         contourHeight: (x, z) => this.world.terrain.height(x, z),
@@ -489,6 +532,14 @@ export class CampusGame {
           key => contextMaterials.materials.get(key));
         if (this.disposed) return;
       }
+      // Downtown extension: also last, after every campus system that traverses world.group at build time.
+      if (DOWNTOWN_EXTENSION) {
+        markBoot('downtown');
+        if (downtownPrepared) this.commitDowntown(downtownPrepared);
+        const background = await backgroundLoad;
+        if (this.disposed) { background?.dispose(); return; }
+        if (background) { this.background = background; this.scene.add(background.group); }
+      }
     }
     if (this.disposed) return;
     const model = gltf.scene;
@@ -546,12 +597,18 @@ export class CampusGame {
     this.controller.setMinSlopeSlideAngle(Math.PI * 0.28);
     this.scooterClearance = new ScooterClearance({ world: this.physics, controller: this.controller,
       collider: this.collider, renderedGround: (x, z, fromY, distance) => this.scooterGround.sample(x,z,fromY,distance) });
-    // Without the extension these are exactly the original four walls; with it the west wall
-    // opens only along the seam span and the extension is closed (extension/deep-west/bounds.ts).
-    for (const [cx, cz, hx, hz] of worldBoundaryWalls(data.bounds, this.deepWest?.bounds))
-      this.physics.createCollider(
-        RAPIER.ColliderDesc.cuboid(hx, 150, hz).setTranslation(cx, 0, cz),
-      );
+    // Without the extensions these are exactly the original four walls; deep west opens the west wall along its
+    // seam span, downtown opens the south wall along the Capitol strip seam and adds its own walled edges
+    // (shoreline, Lamar, I-35 frontage) plus low barriers at the creek-mouth inlets (extension/world-bounds.ts).
+    const dtMeta = this.downtownMeta();
+    const downtownEdges = this.downtown && dtMeta ? { bounds: this.downtown.bounds, barriers: dtMeta.barriers,
+      barrierBottom: dtMeta.water.y - 2, barrierTop: dtMeta.barrierTop } : null;
+    for (const w of worldWalls(data.bounds, this.deepWest?.bounds, downtownEdges)) {
+      const desc = RAPIER.ColliderDesc.cuboid(w.hx, w.hy, w.hz).setTranslation(w.cx, w.cy, w.cz);
+      if (w.angle) desc.setRotation({ x: 0, y: Math.sin(w.angle / 2), z: 0, w: Math.cos(w.angle / 2) });
+      const c = this.physics.createCollider(desc);
+      if (w.kind !== 'edge') this.downtownColliders.push(c);
+    }
     markBoot('physics');
     this.physics.step();
     this.previousPosition.set(x, y, z);
@@ -779,9 +836,9 @@ export class CampusGame {
   }
   travelTo(requested: Point) {
     if (!this.ready || !this.active || this.travel) return;
-    const candidates = travelCandidates(this.world.data, requested, this.deepWest?.travelRegion);
+    const candidates = travelCandidates(this.world.data, requested, combineTravelRegions([this.deepWest?.travelRegion, this.downtown?.travelRegion]));
     if (!candidates.length) {
-      this.travelMessage = 'Choose a path or an open area within campus.';
+      this.travelMessage = this.downtown ? 'Choose a street, path or open area on land.' : 'Choose a path or an open area within campus.';
       this.travelMessageUntil = performance.now() + 5500; this.lastHud = 0;
       return;
     }
@@ -1060,7 +1117,31 @@ export class CampusGame {
   /** Terrain height for movement, flight and travel: the deep-west extension where it is loaded
    * and owns (x, z), otherwise exactly the original terrain. */
   private groundHeight(x: number, z: number) {
-    return this.deepWest?.height(x, z) ?? this.world.terrain.height(x, z);
+    return this.deepWest?.height(x, z) ?? this.downtown?.height(x, z) ?? this.world.terrain.height(x, z);
+  }
+  private downtownMeta(): DowntownMeta | null { return this.downtown?.meta ?? null; }
+  /** Install the validated downtown extension (fetched, seam-checked float-identical to the Capitol strip patch, and
+   * built before the generated context): trimesh colliders from the rendered triangles and trunk capsules, then its
+   * ground group under world.group (travel, scooter and flight see it) and its water/trees in the scene. A failure
+   * removes partial colliders and keeps the original world (the south wall stays closed: this.downtown stays unset).
+   * Only Rapier collider creation from already validated arrays can fail here. */
+  private commitDowntown(extension: Downtown) {
+    const colliders: RAPIER.Collider[] = [];
+    try {
+      for (const c of extension.colliders)
+        colliders.push(this.physics.createCollider(RAPIER.ColliderDesc.trimesh(c.position, c.index).setFriction(0.8)));
+      for (const t of extension.treeTrunks)
+        colliders.push(this.physics.createCollider(RAPIER.ColliderDesc.capsule(t.height / 2, t.radius).setTranslation(t.x, t.y + t.height / 2, t.z)));
+      this.world.group.add(extension.group);
+      this.scene.add(extension.decor);
+      this.downtown = extension;
+      this.downtownColliders = colliders;
+    } catch (error) {
+      for (const c of colliders) this.physics.removeCollider(c, false);
+      extension.dispose();
+      this.downtownFailure = error instanceof Error ? error.message : String(error);
+      console.warn('Downtown extension unavailable; keeping the original world.', error);
+    }
   }
   /** Visible surfaces that also have colliders (authored and generated). */
   private groundRoots(): THREE.Object3D[] {
@@ -1154,12 +1235,18 @@ export class CampusGame {
     const steering = held('ArrowUp') || held('ArrowLeft') || held('ArrowRight') || held('KeyS') || held('KeyA') || held('KeyD');
     if (enabled && this.flight.mode === 'landing' && performance.now() >= this.flightLandingProbeAt) {
       this.flightLandingProbeAt = performance.now() + 200;
+      const water = this.downtown?.water;
       this.flightLandingTarget = this.scooterCollisionReady
         ? findFlightLanding(this.physics, this.collider, p,
-          undefined,
-          steering ? null : this.flightLandingTarget) : null;
+          water && overWater(water, p.x, p.z)
+            ? (x, z, fromY, distance) => this.scooterGround.sample(x, z, fromY, distance)
+            : undefined,
+          steering ? null : this.flightLandingTarget,
+          water ? t => !isWaterbedTarget(water, t.x, t.y - .905, t.z) : undefined) : null;
       if (!this.flightLandingTarget) {
-        this.flightMessage = this.scooterCollisionReady ? 'Descending · steer toward an open path · release Down to hover.' : 'Preparing the landing surface…';
+        this.flightMessage = !this.scooterCollisionReady ? 'Preparing the landing surface…'
+          : this.flightOverWater ? 'Over water · steer to the shore or a bridge to land · release Down to hover.'
+            : 'Descending · steer toward an open path · release Down to hover.';
         this.flightMessageUntil = performance.now() + 600;
       }
     }
@@ -1173,7 +1260,7 @@ export class CampusGame {
     if (this.flightLandingTarget) this.flightLandingMarker.position.set(this.flightLandingTarget.x, this.flightLandingTarget.y - .87, this.flightLandingTarget.z);
     const terrainY = this.groundHeight(p.x, p.z);
     const delta = requested.clone().multiplyScalar(dt);
-    const [clampedX, clampedZ] = clampToWorld(this.world.data.bounds, this.deepWest?.bounds, p.x + delta.x, p.z + delta.z);
+    const [clampedX, clampedZ] = clampToWorld(this.world.data.bounds, this.deepWest?.bounds, this.downtown?.bounds, p.x + delta.x, p.z + delta.z);
     delta.x = clampedX - p.x;
     delta.z = clampedZ - p.z;
     this.flightGroundTarget = null; this.flightGroundLift = 0;
@@ -1198,6 +1285,21 @@ export class CampusGame {
         this.flightGroundTarget = floorY + .905 + FLIGHT_TUNING.groundClearance;
         this.flightGroundLift = THREE.MathUtils.clamp((this.flightGroundTarget - p.y) * 4, 0, FLIGHT_TUNING.climbSpeed);
         delta.y = Math.max(delta.y, this.flightGroundLift * dt);
+      }
+    }
+    // Over open water, stop above the surface unless a visible deck is directly below. A lateral shore target must
+    // not disable this guard, and invisible inlet barriers must never count as landing floors.
+    this.flightOverWater = false;
+    if (this.downtown && enabled && this.flight.mode === 'landing'
+      && overWater(this.downtown.water, p.x + delta.x, p.z + delta.z)) {
+      const nx = p.x + delta.x, nz = p.z + delta.z;
+      const shown = this.scooterGround.sample(nx, nz, p.y, 300);
+      const hover = waterHoverFeet(this.downtown.water, nx, nz, shown?.point.y ?? null);
+      if (hover !== null) {
+        this.flightOverWater = true;
+        delta.y = guardDescent(delta.y, p.y - .905, hover, FLIGHT_TUNING.climbSpeed * dt);
+        this.flightMessage = 'Over water · steer to the shore or a bridge to land · release Down to hover.';
+        this.flightMessageUntil = performance.now() + 600;
       }
     }
     // The HUD measures feet above terrain, so apply the cap to that same datum.
@@ -1454,6 +1556,8 @@ export class CampusGame {
       this.avatar.visible = false;
       this.walkway?.update(this.camera);
       this.localContextUpdate?.(this.camera.position);
+      this.downtown?.update(this.camera.position);
+      this.background?.update(this.camera.position);
       this.vegetation?.update(this.camera);
       this.ambientOcclusion.render(false);
       if (now - this.lastHud > 250) {
@@ -1542,6 +1646,8 @@ export class CampusGame {
     this.profiler.begin(this.frames);
     this.walkway?.update(this.camera);
     this.localContextUpdate?.(this.camera.position);
+    this.downtown?.update(this.camera.position);
+    this.background?.update(this.camera.position);
     this.vegetation?.update(this.camera);
     if(this.active&&!overviewCamera)this.localReflection?.update(p,now);
     this.ambientOcclusion.render(!overviewCamera);
@@ -1564,6 +1670,7 @@ export class CampusGame {
       // The legacy nearest-landmark search has no distance cutoff; inside the
       // deep-west extension it would name a distant core landmark.
       if (this.deepWest?.contains(p.x, p.z)) location = 'West Campus';
+      else if (this.downtown && p.z > this.downtown.bounds.seam.z) location = this.downtown.locationName(p.x, p.z);
       const recent = this.fpsSamples.slice(-60),
         fps = recent.length ? 1000 / (recent.reduce((a, b) => a + b, 0) / recent.length) : 0;
       this.report({
@@ -1616,7 +1723,7 @@ export class CampusGame {
     const ctx = this.map.getContext('2d');
     if (!ctx) return;
     const p = this.body.translation(),
-      view = mapView(mapBounds(this.world.data.bounds, this.deepWest?.bounds), p, this.mapExpanded),
+      view = mapView(mapBounds(this.world.data.bounds, this.deepWest?.bounds, this.downtown?.bounds), p, this.mapExpanded),
       { size, scale } = view;
     this.drawnMap = view;
     if (this.map.width !== size) this.map.width = this.map.height = size;
@@ -1628,6 +1735,7 @@ export class CampusGame {
     ctx.scale(scale, scale);
     ctx.translate(-view.x, -view.z);
     this.deepWest?.drawMap(ctx);
+    this.downtown?.drawMap(ctx);
     ctx.strokeStyle = '#d2cfb899';
     for (const path of this.world.data.paths) {
       if (
@@ -1746,6 +1854,10 @@ export class CampusGame {
       offline: this.offline,
       offlineTerrain: this.offlineTerrain,
       deepWest: this.deepWest ? this.deepWest.stats : { loaded: false, enabled: DEEP_WEST_EXTENSION, failure: this.deepWestFailure ?? null },
+      downtown: this.downtown ? { ...this.downtown.stats, visibleLodObjects: this.downtown.visibleLod(), physicsColliders: this.downtownColliders.length }
+        : { loaded: false, enabled: DOWNTOWN_EXTENSION, failure: this.downtownFailure ?? null },
+      background: this.background ? this.background.stats : { loaded: false, failure: this.backgroundFailure ?? null },
+      cameraFar: this.camera.far,
       groundTieIns: this.groundTieIns,
       blocks: this.blocks ? { stats: this.blocks.stats, replacements: this.blocks.replacements, data: this.blockData?.applied, rejected: this.blockData?.rejected, excluded: this.blockData?.excluded.map(e => e.key), added: this.blockData?.added.map(e => e.key) } : null,
       localContext: this.localContext,
@@ -1783,6 +1895,8 @@ export class CampusGame {
     // Before physics.free(): scan disposal removes its own colliders.
     this.scanField?.dispose();
     this.deepWest?.dispose();
+    this.downtown?.dispose();
+    this.background?.dispose();
     this.scanTower?.dispose();
     this.scanTowerPrepared?.dispose();
     this.scanTowerPrepared = undefined;

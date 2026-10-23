@@ -1,0 +1,398 @@
+[
+ {
+  "id": "dt-skyline-southmall-street",
+  "label": "Downtown skyline from the South Mall (street level)",
+  "kind": "street",
+  "position": [
+   -62,
+   0.98,
+   330
+  ],
+  "target": [
+   -700,
+   110,
+   2300
+  ],
+  "fov": 50,
+  "groundY": -0.767,
+  "groundSource": "campus terrain.json",
+  "focus": null,
+  "note": "Campus eye height on the South Mall lawn looking south past the Capitol to the skyline (~2 km)."
+ },
+ {
+  "id": "dt-skyline-campus-100m",
+  "label": "Downtown skyline from campus at the 100 m flight ceiling",
+  "kind": "aerial",
+  "position": [
+   -60,
+   106.19,
+   120
+  ],
+  "target": [
+   -650,
+   90,
+   2400
+  ],
+  "fov": 50,
+  "groundY": 6.186,
+  "groundSource": "campus terrain.json",
+  "focus": [
+   -650,
+   90,
+   2400
+  ],
+  "note": "Camera 100 m above campus terrain (the flight cap) over the Main Mall looking south."
+ },
+ {
+  "id": "dt-skyline-north-campus-street",
+  "label": "Skyline from north campus (Dean Keeton) at street level",
+  "kind": "street",
+  "position": [
+   -30,
+   12.01,
+   -560
+  ],
+  "target": [
+   -650,
+   130,
+   2400
+  ],
+  "fov": 40,
+  "groundY": 10.264,
+  "groundSource": "campus terrain.json",
+  "focus": null,
+  "note": "Longest campus sight line (~3 km): skyline through haze above campus roofs."
+ },
+ {
+  "id": "dt-capitol-congress-approach",
+  "label": "Congress Avenue south from the Capitol grounds",
+  "kind": "street",
+  "position": [
+   -418.0,
+   -7.57,
+   1580.0
+  ],
+  "target": [
+   -700,
+   40,
+   2480
+  ],
+  "fov": 55,
+  "groundY": -9.324,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": null,
+  "note": "Downtown street level on Congress Avenue just south of the strip seam, looking toward the river."
+ },
+ {
+  "id": "dt-seam-congress-flight",
+  "label": "Seam: Capitol south grounds to downtown, low flight",
+  "kind": "aerial",
+  "position": [
+   -480,
+   30.54,
+   1512
+  ],
+  "target": [
+   -600,
+   20,
+   1820
+  ],
+  "fov": 55,
+  "groundY": -4.462,
+  "groundSource": "Capitol strip patch (strip-ground.json)",
+  "focus": [
+   -600,
+   20,
+   1820
+  ],
+  "note": "Over the Capitol strip looking across the z=1536 seam into downtown (terrain/strip continuity)."
+ },
+ {
+  "id": "dt-oblique-northeast",
+  "label": "Downtown skyline oblique from the northeast",
+  "kind": "aerial",
+  "position": [
+   380,
+   169.23,
+   1640
+  ],
+  "target": [
+   -700,
+   110,
+   2300
+  ],
+  "fov": 50,
+  "groundY": -10.775,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": [
+   -700,
+   110,
+   2300
+  ],
+  "note": "Aerial over the I-35 frontage looking southwest across the core."
+ },
+ {
+  "id": "dt-oblique-southwest",
+  "label": "Downtown skyline from across Lady Bird Lake (southwest)",
+  "kind": "aerial",
+  "position": [
+   -1250,
+   91.41,
+   2900
+  ],
+  "target": [
+   -600,
+   110,
+   2150
+  ],
+  "fov": 50,
+  "groundY": -28.59,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": [
+   -600,
+   110,
+   2150
+  ],
+  "note": "Over the south bank (visual-only context) looking north-east at the skyline and the river."
+ },
+ {
+  "id": "dt-oblique-southeast",
+  "label": "Rainey and Waterline from the southeast",
+  "kind": "aerial",
+  "position": [
+   -520,
+   75.53,
+   3400
+  ],
+  "target": [
+   -228.38,
+   150,
+   2772.07
+  ],
+  "fov": 50,
+  "groundY": -34.47,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": [
+   -228.38,
+   150,
+   2772.07
+  ],
+  "note": "Over the river south of Rainey looking north at Waterline and the Rainey towers."
+ },
+ {
+  "id": "dt-oblique-west",
+  "label": "Skyline from the west (Lamar / Shoal Creek)",
+  "kind": "aerial",
+  "position": [
+   -1740,
+   111.36,
+   2050
+  ],
+  "target": [
+   -700,
+   120,
+   2200
+  ],
+  "fov": 50,
+  "groundY": -28.635,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": [
+   -700,
+   120,
+   2200
+  ],
+  "note": "West edge looking east along the river front: Independent, 360, Block 185 in front of the core."
+ },
+ {
+  "id": "dt-overview-top",
+  "label": "Downtown overview (high oblique)",
+  "kind": "aerial",
+  "position": [
+   -650,
+   652.86,
+   1300
+  ],
+  "target": [
+   -650,
+   -25.95,
+   2500
+  ],
+  "fov": 55,
+  "groundY": 2.862,
+  "groundSource": "Capitol strip patch (strip-ground.json)",
+  "focus": [
+   -650,
+   -25.95,
+   2500
+  ],
+  "note": "High oblique for map-travel review: street grid, parks, creeks, shoreline, bridges."
+ },
+ {
+  "id": "dt-route-congress-6th",
+  "label": "Street route: Congress Avenue at 6th Street",
+  "kind": "street",
+  "position": [
+   -505.0,
+   -11.49,
+   1880.0
+  ],
+  "target": [
+   -640,
+   25,
+   2300
+  ],
+  "fov": 60,
+  "groundY": -13.241,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": null,
+  "note": "Pedestrian view south on Congress near 6th Street (historic storefronts, Frost/Austonian ahead)."
+ },
+ {
+  "id": "dt-route-6th-street",
+  "label": "Street route: East 6th Street historic district",
+  "kind": "street",
+  "position": [
+   -347.35,
+   -7.43,
+   1916.83
+  ],
+  "target": [
+   -120,
+   6,
+   1975
+  ],
+  "fov": 60,
+  "groundY": -9.177,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": null,
+  "note": "Pedestrian view east along 6th Street (low-rise brick)."
+ },
+ {
+  "id": "dt-riverbank-congress",
+  "label": "Riverbank trail by the Congress Avenue Bridge",
+  "kind": "street",
+  "position": [
+   -610.0,
+   -29.09,
+   2696.68
+  ],
+  "target": [
+   -560,
+   -30,
+   2760
+  ],
+  "fov": 60,
+  "groundY": -30.838,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": null,
+  "note": "North shore trail (playable edge) looking across the river; the bridge deck is visual-only beyond the shore wall."
+ },
+ {
+  "id": "dt-riverbank-rainey",
+  "label": "Riverbank near Waller Creek mouth / Rainey",
+  "kind": "street",
+  "position": [
+   -283.07,
+   -26.12,
+   3321.35
+  ],
+  "target": [
+   -228.38,
+   120,
+   2772.07
+  ],
+  "fov": 60,
+  "groundY": -27.871,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": null,
+  "note": "North-east bank near the Waller Creek inlet barrier looking at Waterline."
+ },
+ {
+  "id": "dt-waterline-street",
+  "label": "Waterline from Red River / Cesar Chavez",
+  "kind": "street",
+  "position": [
+   -298.38,
+   -24.12,
+   2652.07
+  ],
+  "target": [
+   -228.38,
+   170,
+   2772.07
+  ],
+  "fov": 60,
+  "groundY": -25.872,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": null,
+  "note": "Street-level view up the 312 m tower: banded lower shaft, reveal, white grid upper shaft, crown frame."
+ },
+ {
+  "id": "dt-frost-crown",
+  "label": "Frost Bank Tower crown (mid distance)",
+  "kind": "aerial",
+  "position": [
+   -686.68,
+   94.86,
+   2037.09
+  ],
+  "target": [
+   -526.68,
+   150,
+   2177.09
+  ],
+  "fov": 45,
+  "groundY": -15.142,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": [
+   -526.68,
+   150,
+   2177.09
+  ],
+  "note": "Mid-distance view of the folded spire crown at the published 157 m overall height."
+ },
+ {
+  "id": "dt-block185-sail",
+  "label": "Block 185 sail from the river",
+  "kind": "aerial",
+  "position": [
+   -1235.17,
+   7.62,
+   2606.32
+  ],
+  "target": [
+   -1275.17,
+   90,
+   2276.32
+  ],
+  "fov": 50,
+  "groundY": -32.383,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": [
+   -1275.17,
+   90,
+   2276.32
+  ],
+  "note": "From over the river: terraced sail rising to the north peak (180 m)."
+ },
+ {
+  "id": "dt-sixth-guadalupe-street",
+  "label": "Sixth and Guadalupe from Guadalupe Street",
+  "kind": "street",
+  "position": [
+   -896.01,
+   -15.09,
+   1984.78
+  ],
+  "target": [
+   -916.01,
+   160,
+   1824.78
+  ],
+  "fov": 60,
+  "groundY": -16.845,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": null,
+  "note": "Street-level view up the three stacked volumes."
+ }
+]

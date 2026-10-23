@@ -1,0 +1,77 @@
+{
+ "asset": "downtown-background-v1.bin.gz",
+ "bytes": 5383664,
+ "gzipBytes": 1307066,
+ "sha256": "b9d778772570cd44add07bb4b1d3836a25e5e7c7248d7d93b6df0ff15a44da44",
+ "inputs": {
+  "dem-background.tif": "8ff863f5ce842b43c06cd3df096f0b3c4f4a7ff02a47ab0730f449a0c6d2ebda",
+  "offline-terrain-61.bin.gz": "22adb2250b7b16d29fa035d91e00fb3adb6c8b08b903c219952f7b69e1eaab28",
+  "strip-ground.json": "1633624dd0a8ed3645ce47f0b96d69b9bc58f85b0a9e7b78e616dd56e62c0d43",
+  "parks.json": "ec2619a03dccf17cce935139a136d3a6ab40ad773679b2d01d4c99b37ef97ccc",
+  "impervious-cover-2023.json": "ddaeed1c6fbca0cd8d3e54b1457b2d9251677acafbefe720537165f70148fb34",
+  "building-footprints-2023.json": "46941682ddec33cc311cf4e331d2637dd52e818dc932f5a236cc66677b0de0e7"
+ },
+ "cityQueries": {
+  "building-footprints-2023.json": [
+   "https://maps.austintexas.gov/arcgis/rest/services/Shared/PlanimetricsSurvey_1/MapServer/0/query?f=json&where=1%3D1&geometry=-97.762%2C30.2525%2C-97.7195%2C30.2811&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=10000"
+  ],
+  "impervious-cover-2023.json": [
+   "https://maps.austintexas.gov/arcgis/rest/services/Shared/PlanimetricsSurvey_1/MapServer/1/query?f=json&where=1%3D1&geometry=-97.762%2C30.2525%2C-97.7195%2C30.2811&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=10000",
+   "https://maps.austintexas.gov/arcgis/rest/services/Shared/PlanimetricsSurvey_1/MapServer/1/query?f=json&where=1%3D1&geometry=-97.762%2C30.2525%2C-97.7195%2C30.2811&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&orderByFields=OBJECTID&resultOffset=10000&resultRecordCount=10000",
+   "https://maps.austintexas.gov/arcgis/rest/services/Shared/PlanimetricsSurvey_1/MapServer/1/query?f=json&where=1%3D1&geometry=-97.762%2C30.2525%2C-97.7195%2C30.2811&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&orderByFields=OBJECTID&resultOffset=20000&resultRecordCount=10000",
+   "https://maps.austintexas.gov/arcgis/rest/services/Shared/PlanimetricsSurvey_1/MapServer/1/query?f=json&where=1%3D1&geometry=-97.762%2C30.2525%2C-97.7195%2C30.2811&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&orderByFields=OBJECTID&resultOffset=30000&resultRecordCount=10000"
+  ],
+  "parks.json": [
+   "https://maps.austintexas.gov/arcgis/rest/services/Shared/Infrastructure_2/MapServer/0/query?f=json&where=1%3D1&geometry=-97.762%2C30.2525%2C-97.7195%2C30.2811&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&orderByFields=OBJECTID&resultOffset=0&resultRecordCount=10000"
+  ]
+ },
+ "dem": {
+  "service": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage",
+  "license": "Public domain (U.S. Government work). Credit: U.S. Geological Survey.",
+  "tiles": [
+   {
+    "file": "dem-background.tif",
+    "request": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-97.762%2C30.2525%2C-97.7195%2C30.2811&bboxSR=4326&imageSR=4326&size=2043%2C1585&format=tiff&pixelType=F32&noDataInterpretation=esriNoDataMatchAny&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D&f=json",
+    "extent": {
+     "xmin": -97.762,
+     "ymin": 30.250313827704357,
+     "xmax": -97.7195,
+     "ymax": 30.283286172295647,
+     "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+     }
+    },
+    "width": 2043,
+    "height": 1585,
+    "sha256": "8ff863f5ce842b43c06cd3df096f0b3c4f4a7ff02a47ab0730f449a0c6d2ebda"
+   }
+  ]
+ },
+ "counts": {
+  "buildings": 4960,
+  "renderCells": 99679,
+  "waterTriangles": 180
+ },
+ "covered": [
+  [
+   -760.0,
+   -864.0,
+   1296.0,
+   1536.0
+  ],
+  [
+   -1570.0,
+   -510.0,
+   -760.0,
+   570.0
+  ],
+  [
+   -1760.0,
+   1536.0,
+   520.0,
+   3520.0
+  ]
+ ],
+ "claims": "Visual-only backdrop: USGS 3DEP DEM (8 m, lowered 1.2 m), City of Austin 2023 footprints (one MAX_HEIGHT each), impervious cover and parks. Facades and colours are rule-based estimates. No collision, no travel."
+}

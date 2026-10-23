@@ -78,7 +78,9 @@ export const AUSTIN_LATE_MORNING: LightingPreset = {
   environment: { intensity: 0.17, saturation: 0.4, groundAlbedo: 0.18, groundTint: 0x8a7f62 },
   hemisphere: { sky: 0xdde3e8, ground: 0x665e44, intensity: 0.1 },
   exposure: 0.88,
-  fog: { kind: 'height', color: null, density: 0.00028, baseHeight: 0, falloff: 1 / 180, edgeNear: 1300, edgeFar: 2050 },
+  // Far fade pushed out from 1300-2050 m (the old world edge) so the downtown skyline (2.3-3.6 km from campus)
+  // stays visible through the unchanged exponential height fog; it still ends inside the 4600 m far plane.
+  fog: { kind: 'height', color: null, density: 0.00028, baseHeight: 0, falloff: 1 / 180, edgeNear: 3200, edgeFar: 4400 },
   shadow: { singleReach: 28, singleMapSize: 4096, bias: -0.000015, normalBias: 0.008, radius: 2, texelSnap: true },
 };
 

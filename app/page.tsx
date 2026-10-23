@@ -90,7 +90,7 @@ export default function Home() {
         <div className="entry">
           <p className="eyebrow">THE UNIVERSITY OF TEXAS</p>
           <h2>Explore the Forty Acres.</h2>
-          <p>Walk, ride a scooter, or hold W to fly over the local campus.</p>
+          <p>Walk, ride a scooter, or hold W to fly over campus and downtown Austin to Lady Bird Lake.</p>
           <Link href="/character" style={{ color: 'inherit', fontSize: 14 }}>
             View your character
           </Link>

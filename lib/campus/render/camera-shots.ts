@@ -29,6 +29,8 @@ import shots13 from '../blocks/b13-north-perimeter/shots.json' with { type: 'jso
 import shots14 from '../blocks/b14-capitol/shots.json' with { type: 'json' };
 // Deep-west extension (D37-D40) reference-pose review shots (tools/extension/bake-deep-west.py).
 import deepWestShots from '../extension/deep-west/shots.json' with { type: 'json' };
+// Downtown extension review shots (tools/extension/downtown-shots.py; grounds from the baked terrain).
+import downtownShots from '../extension/downtown/shots.json' with { type: 'json' };
 
 export type Vec3 = readonly [number, number, number];
 
@@ -103,8 +105,12 @@ export const ATLAS_SHOTS: readonly (CameraShot & { block: string; kind: 'atlas' 
 export const EXTENSION_SHOTS: readonly (CameraShot & { district: string; kind: 'aerial'; referenceReview: string })[] =
   deepWestShots as unknown as (CameraShot & { district: string; kind: 'aerial'; referenceReview: string })[];
 
+/** Downtown extension review poses (skyline from campus, Capitol approach, obliques, routes, riverbank). */
+export const DOWNTOWN_SHOTS: readonly (CameraShot & { kind: string; groundSource: string })[] =
+  downtownShots as unknown as (CameraShot & { kind: string; groundSource: string })[];
 export function findShot(id: string): CameraShot | undefined {
-  return CAMERA_SHOTS.find(s => s.id === id) ?? ATLAS_SHOTS.find(s => s.id === id) ?? EXTENSION_SHOTS.find(s => s.id === id);
+  return CAMERA_SHOTS.find(s => s.id === id) ?? ATLAS_SHOTS.find(s => s.id === id) ?? EXTENSION_SHOTS.find(s => s.id === id)
+    ?? DOWNTOWN_SHOTS.find(s => s.id === id);
 }
 
 /** Ground-level point 15 m ahead of the camera unless the shot names a focus. */
@@ -185,7 +191,7 @@ export class CameraShotController {
     };
   }
 
-  list() { return [...CAMERA_SHOTS, ...EXTENSION_SHOTS].map(s => ({ id: s.id, label: s.label, position: s.position, target: s.target, fov: s.fov })); }
+  list() { return [...CAMERA_SHOTS, ...EXTENSION_SHOTS, ...DOWNTOWN_SHOTS].map(s => ({ id: s.id, label: s.label, position: s.position, target: s.target, fov: s.fov })); }
 
   dispose() {
     for (const type of EXIT_EVENTS) this.events?.removeEventListener(type, this.onInput, { capture: true } as EventListenerOptions);

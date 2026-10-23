@@ -1,0 +1,63 @@
+{
+ "claims": "Downtown extension: USGS 3DEP bare-earth DEM terrain (4 m grid); Lady Bird Lake shoreline = the DEM's hydro-flattened 130.53 m (NAVD88) water surface contoured at +0.3 m on that grid (the City \"Lakes\" polygon, SOURCE 2003, is fetched only as a cross-check and not used for geometry); City of Austin 2023 building footprints/heights and impervious-cover ground classes; 2017 USGS LiDAR (EPT depth-10 subset) roof tiers, canopy trees and bridge decks; OpenStreetMap (ODbL) outlines/heights for towers completed after the 2023 aerials; authored, photo-referenced landmark profiles. Facades, colours, tower plans inside block outlines and crowns are estimates. Not a survey and not 1:1. Five Capitol-strip (b14) building fragments clipped at z=1536 are replaced by their whole City footprints (stitched across the seam) only when this asset loads.",
+ "sources": [
+  {
+   "dataset": "City of Austin Planimetrics 2023 - Building Footprints 2023 (PlanimetricsSurvey_1/MapServer/0)",
+   "publisher": "City of Austin (Watershed Protection Department)",
+   "use": "footprints, MAX_HEIGHT (US survey ft)",
+   "url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/PlanimetricsSurvey_1/MapServer/0"
+  },
+  {
+   "dataset": "City of Austin Planimetrics 2023 - Impervious Cover 2023 (PlanimetricsSurvey_1/MapServer/1)",
+   "publisher": "City of Austin",
+   "use": "ground classes (roads, sidewalks, plazas, trails), bridge outlines",
+   "url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/PlanimetricsSurvey_1/MapServer/1"
+  },
+  {
+   "dataset": "City of Austin Parks (Infrastructure_2/MapServer/0)",
+   "publisher": "City of Austin",
+   "use": "park lawn class",
+   "url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/Infrastructure_2/MapServer/0"
+  },
+  {
+   "dataset": "City of Austin Comprehensive Transportation Network (Transportation_1/MapServer/22)",
+   "publisher": "City of Austin",
+   "use": "I-35 southbound frontage alignment for the east edge",
+   "url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/Transportation_1/MapServer/22"
+  },
+  {
+   "dataset": "USGS 3D Elevation Program bare-earth DEM (The National Map 3DEPElevation ImageServer)",
+   "publisher": "U.S. Geological Survey",
+   "license": "Public domain (U.S. Government work). Credit: U.S. Geological Survey.",
+   "url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer"
+  },
+  {
+   "dataset": "USGS LPC TX_Central_B1_2017 (Entwine Point Tile public mirror, depth <= 10 subset)",
+   "publisher": "U.S. Geological Survey",
+   "license": "Public domain (U.S. Government work).",
+   "url": "https://usgs-lidar-public.s3.us-west-2.amazonaws.com/USGS_LPC_TX_Central_B1_2017_LAS_2019/"
+  },
+  {
+   "dataset": "OpenStreetMap building outlines and tags",
+   "publisher": "OpenStreetMap contributors",
+   "license": "Open Database License (ODbL) 1.0",
+   "url": "https://www.openstreetmap.org/copyright"
+  }
+ ],
+ "osmExtract": {
+  "service": "Overpass API (overpass.kumi.systems mirror)",
+  "query": "[out:json][timeout:150];(way[\"building\"](30.2525,-97.7570,30.2745,-97.7310);relation[\"building\"](30.2525,-97.7570,30.2745,-97.7310);way[\"building:part\"](30.2525,-97.7570,30.2745,-97.7310);relation[\"building:part\"](30.2525,-97.7570,30.2745,-97.7310););out body geom;",
+  "osmBase": "2026-05-31T22:37:44Z",
+  "license": "ODbL 1.0"
+ },
+ "backdrop": {
+  "fetch": "tools/extension/fetch-downtown-background.py",
+  "bake": "tools/extension/bake-downtown-background.py",
+  "bbox": [
+   -97.762,
+   30.2525,
+   -97.7195,
+   30.2811
+  ]
+ }
+}

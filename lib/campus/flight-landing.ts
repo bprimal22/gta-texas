@@ -11,7 +11,9 @@ const identity = { x: 0, y: 0, z: 0, w: 1 };
  */
 export function findFlightLanding(world: RAPIER.World, player: RAPIER.Collider,
   position: { x: number; y: number; z: number }, surface?: LandingSurface,
-  preferred?: { x: number; z: number } | null): THREE.Vector3 | null {
+  preferred?: { x: number; z: number } | null,
+  /** Optional veto of a candidate (e.g. the downtown water bed); omitted, results are exactly as before. */
+  accept?: (target: THREE.Vector3) => boolean): THREE.Vector3 | null {
   const fromY = position.y + .1, distance = 265;
   const probe = (x: number, z: number, y: number, length: number) => {
     const hit = world.castRayAndGetNormal(new RAPIER.Ray({ x, y, z }, { x: 0, y: -1, z: 0 }),
@@ -39,6 +41,7 @@ export function findFlightLanding(world: RAPIER.World, player: RAPIER.Collider,
     }
     if (!supported) continue;
     const target = new THREE.Vector3(x, height + FOOT, z);
+    if (accept && !accept(target)) continue;
     if (world.intersectionWithShape(target, identity, new RAPIER.Capsule(.54, .34),
       RAPIER.QueryFilterFlags.EXCLUDE_SENSORS, undefined, player)) continue;
     return target;

@@ -161,6 +161,55 @@ same campus-Y datum), City of Austin data, OSM names and reference photographs, 
 * Block QA cameras: `?shot=<id>` for every id in `lib/campus/blocks/*/shots.json`; `?shot=<unit>-overview` for the
   153 research overview poses (`lib/campus/render/atlas-shots.json`, staged comparison only).
 
+### Downtown Austin extension (October 2026)
+
+South of the Capitol strip the world continues through downtown to the north shore of Lady Bird Lake: x −1760
+(Lamar/Shoal Creek) to the I-35 southbound frontage road, z 1536 (the strip seam) to the shoreline, about 2.3 km² of
+playable streets, plazas, parks and creek trails (`lib/campus/extension/downtown/`, one same-origin asset
+`public/assets/extension/downtown-v1.bin.gz`, 1.55 MB). The river, the south bank, the I-35 main lanes and the river
+bridges are rendered as visual-only context beyond walled edges.
+
+* **Measured:** terrain (USGS 3DEP bare-earth DEM, 4 m grid; the seam row is float-identical to the strip patch and is
+  validated at load, fail closed), shoreline (the DEM's hydro-flattened 130.53 m lake surface, contoured; City Lakes
+  polygon IoU 0.95 as a cross-check only), City of Austin 2023 footprints/heights and ground classes (roads, sidewalks,
+  plazas, trails, parks), 2017 USGS LiDAR roof tiers (64 buildings stepped), 5,519 canopy trees and bridge decks.
+* **Referenced:** towers completed after the 2023 aerials take current OpenStreetMap outlines/heights (Republic, ATX
+  Tower, Modern, 415 Colorado, Paseo, The Travis, 700 River, Vesper, Hanover towers, 44 East …). Thirteen landmarks
+  (`landmarks.json`: Waterline 312.4 m, Sixth and Guadalupe 263.65 m, Republic, Independent, Austonian, Frost, 360,
+  Block 185, Fairmont, Indeed, Spring, One American Center, 111 Congress) have authored setbacks, crowns and palettes
+  from architect/owner/contractor pages and reference photos (not shipped). Every landmark's rendered top (tiers +
+  crown, measured on the mesh) equals its cited published overall height.
+* **Estimated:** facade treatments and colours of ordinary buildings (rule-based from height, OSM building tag and
+  photo-derived palettes), tower plans inside full-block outlines, crowns, tree shapes.
+* **Seam:** six Capitol-strip (b14) fragments clipped at z = 1536 are rendered as whole City footprints by downtown and
+  skipped by the generated context, only when the downtown asset loaded (`BLOCK_REPLACES`); without it the strip is
+  unchanged.
+* **Backdrop (visual only):** around the playable worlds — notably the west notch between deep west and downtown —
+  a measured, low-detail backdrop (`downtown-background-v1.bin.gz`, 1.3 MB: USGS DEM at 8 m lowered 1.2 m and tucked
+  under neighbouring edges, City 2023 ground classes at 2 m and 4,960 single-height footprints) plus one horizon plane
+  below every surface fills what the longer view would otherwise show as void. It is scene-only: no colliders, not a
+  travel or flight floor, and it never overlaps the playable worlds by more than one 8 m cell.
+* **Water safety:** creek-mouth inlets are flight-legal (bridges over them stay open), so flight refuses landing targets
+  in mapped water below the inlet barrier tops and a target-less descent over water hovers ~5 m above the surface
+  ("Over water · steer to the shore or a bridge to land"); bridge decks over water remain normal landings
+  (`extension/downtown/water-safety.ts`). Map travel already refuses water; low barriers keep walkers out.
+* **View:** camera far plane 2100 → 4600 m and the height-fog far fade 1300–2050 → 3200–4400 m
+  (`game-constants.ts`, `render/lighting-presets.ts`), so the skyline is visible from campus; the exponential height
+  fog itself is unchanged.
+* **Budgets (checked):** ≤ 2.5 MB download, ≤ 140 draw calls (99 built: 512 m chunks of terrain, skyline and low-rise
+  batches, water, bridges, instanced trees), ~90 k building and ~420 k terrain triangles, 52 trimesh colliders +
+  2,803 trunk capsules, one 2280×1984 R8 class texture. Low-rise batches and trees are hidden beyond 1.4–1.5 km.
+* **Rebuild:** `python3 -I tools/extension/fetch-downtown.py --out <raw>` (City layers + DEM),
+  `python3 -I tools/extension/fetch-downtown-background.py --out <bg-raw>`, the LiDAR EPT subset
+  (`tools/extension/fetch-downtown-lidar.py --out <dir> [--cache <previous retrieval>]`), the OSM building extract
+  (Overpass query recorded in `tools/extension/downtown-sources.json`), then in a venv with `tools/extension/requirements.txt`
+  `python -I tools/extension/bake-downtown.py --raw <raw> --osm <osm.json> --lidar <subset.npz>`,
+  `python -I tools/extension/bake-downtown-background.py --raw <bg-raw>` and `python -I tools/extension/downtown-shots.py`.
+  Check: `npm run check:downtown` (36 checks incl. real-Rapier walking/scooter/flight/travel, flight over water,
+  landing heights, a shader structure lint — not a GLSL compiler; WebGL compilation is verified in a browser).
+* Review shots: `?shot=<id>` for the 18 ids in `lib/campus/extension/downtown/shots.json` (skyline from the South Mall,
+  north campus and the 100 m flight ceiling; Congress approach and seam; four obliques; routes; riverbank; landmarks).
+
 ### Review and switches (developer, read-only)
 
 * `?shot=<id>` or `__campus.shot(id)` puts the render camera at one of 14 fixed
@@ -234,6 +283,11 @@ context under Node (textures stubbed) and reports:
 
 ## Known limitations
 
+* Downtown: only 13 landmarks have authored profiles; other towers are LiDAR-tiered or single-height extrusions with
+  rule-based facades. Buildings built 2017–2023 that are not landmarks or OSM-updated keep a single City 2023 height
+  (no LiDAR tiers). Tower plans inside block outlines, crowns and colours are estimates. Trees come from 2017 LiDAR
+  crown peaks (approximate trunks). River bridges, the south bank and I-35 main lanes are visual only; the river is
+  static. Water clicks on the map land at the nearest shore; the south bank is not playable.
 * The integrator renders nothing in a browser. Codex's in-app browser checks so
   far covered isolated previews (near trees ~62 fps at Speedway, optional CSM,
   the west stand) and the Capitol/ambient-occlusion fix on an earlier build;

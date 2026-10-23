@@ -49,9 +49,24 @@ export function travelProbe(data: CampusData, p: Point): TravelProbe {
   return data.buildings.some(b => OPEN_AIR_FOOTPRINTS.has(b.id) && inRing(p, b.rings[0])) ? OPEN_AIR_TRAVEL_PROBE : TRAVEL_PROBE;
 }
 
-/** An optional walkable region beyond `data.bounds` (the deep-west extension): points it contains
- * are judged against its own footprints only. Omitted, every result is exactly as before. */
-export interface TravelRegion { contains: (p: Point) => boolean; footprints: Point[][][] }
+/** An optional walkable region beyond `data.bounds` (the deep-west and downtown extensions): points it contains
+ * are judged against its own footprints only (or its own `outdoor` test when given, e.g. a spatially indexed
+ * one). Omitted, every result is exactly as before. */
+export interface TravelRegion { contains: (p: Point) => boolean; footprints: Point[][][]; outdoor?: (p: Point) => boolean }
+
+/** Several extension regions as one: each point is judged by the first region that contains it. */
+export function combineTravelRegions(regions: (TravelRegion | undefined | null)[]): TravelRegion | undefined {
+  const list = regions.filter((r): r is TravelRegion => !!r);
+  if (list.length < 2) return list[0];
+  return {
+    contains: p => list.some(r => r.contains(p)),
+    footprints: list.flatMap(r => r.footprints),
+    outdoor: p => {
+      const r = list.find(q => q.contains(p));
+      return !!r && (r.outdoor ? r.outdoor(p) : !r.footprints.some(rings => nearFootprint(p, rings)));
+    },
+  };
+}
 
 function nearFootprint(p: Point, rings: Point[][]) {
   if (inRing(p, rings[0]) && !rings.slice(1).some(r => inRing(p, r))) return true;
@@ -62,7 +77,8 @@ function nearFootprint(p: Point, rings: Point[][]) {
 }
 
 export function outdoorPoint(data: CampusData, p: Point, region?: TravelRegion) {
-  if (region && p.every(Number.isFinite) && region.contains(p)) return !region.footprints.some(rings => nearFootprint(p, rings));
+  if (region && p.every(Number.isFinite) && region.contains(p))
+    return region.outdoor ? region.outdoor(p) : !region.footprints.some(rings => nearFootprint(p, rings));
   const [west, north, east, south] = data.bounds;
   if (!p.every(Number.isFinite) || p[0] < west + 2 || p[0] > east - 2 || p[1] < north + 2 || p[1] > south - 2) return false;
   return !data.buildings.some(b => {
