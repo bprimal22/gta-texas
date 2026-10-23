@@ -88,3 +88,11 @@ Flight and streetscape update (2026-10-23): additional West Campus/Guadalupe sid
 James D. Pfluger Pedestrian and Bicycle Bridge: City of Austin 2023 Bridge outline OBJECTID 9608 and 2017 USGS 3DEP LiDAR deck returns, fitted to a smooth structural profile. Independently authored girders, piers, railings, lamps and planters are guided by Carter Design Associates and AIA Austin reference photos; those images are not shipped. Details and hidden lower ramp turns are estimates. Sources and reproducible authoring method: tools/extension/bake-pfluger-bridge.py in the source repository.
 https://www.carterdesign.net/pfluger-bridge
 https://guidetoaustinarchitecture.com/places/james-d-pfluger-pedestrian-bridge/
+
+Playable central riverfront parks (2026-10-23): Auditorium Shores, Vic Mathias Shores, Butler Park, Doug Sahm Hill, Liz Carpenter Pond, the Long Center/Palmer grounds and the Pfluger south landing use City of Austin 2023 building footprints and impervious-cover paths, USGS 3DEP bare-earth DEM and 2017 LiDAR (public domain; credit U.S. Geological Survey). Pond boundaries and levels are estimated from LiDAR water voids and bank returns, cross-checked against the City park plan; they are not survey outlines. Long Center, Palmer Events Center, the adjacent parking garage and Fannie Davis Town Lake Gazebo are independently authored, efficient approximations guided by measured footprints/roof returns and architect/owner/AIA photographs. Reference photographs and plans are research only; no reference image pixels are shipped. Doug Sahm Hill uses the terrain grid and City paths. This playable extension covers the central south-bank corridor between Lamar and South First, not the entire Butler Trail. South First bridge remains visual scenery. Provenance: /assets/extension/sources.json and riverfront-v1.manifest.json; reproducible authoring: tools/extension/bake-riverfront.py in the source repository.
+https://thetrailconservancy.org/visit/maps-parking/
+https://services.austintexas.gov/edims/document.cfm?id=115490
+https://nelsenarchitects.com/nb-portfolio/the-long-center/?project_type=entertainment
+https://www.bgkarchitects.com/project/palmer-events-center-austin-energy
+https://guidetoaustinarchitecture.com/places/auditorium-shores/
+https://guidetoaustinarchitecture.com/places/fannie-davis-town-lake-gazebo/

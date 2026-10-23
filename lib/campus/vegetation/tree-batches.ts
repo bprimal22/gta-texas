@@ -111,6 +111,8 @@ export class TreeBatches {
   private woodIds: number[][] = []; private leafIds: number[][] = []; private impostorIds: number[] = [];
   private level: Int8Array; private last = new T.Vector3(Infinity, 0, 0);
   private woodInstance: number[] = []; private leafInstance: number[] = []; private impostorInstance: number[] = [];
+  /** Opt-in per-tree suppression (null = none hidden; default behaviour unchanged). Hidden trees draw at no LOD. */
+  private hidden: Uint8Array | null = null;
   counts = [0, 0, 0, 0, 0];
 
   constructor(public trees: PlacedTree[], private forms: TreeForm[], materials: TreeMaterials, private lods: LodDistances,
@@ -160,6 +162,26 @@ export class TreeBatches {
     }
   }
 
+  /** Hide (or show again) one tree at every LOD: wood, foliage and impostor. Showing re-evaluates its LOD on the next
+   * update. Used by extensions whose new ground replaces a tree's site (e.g. a pond over a former lawn tree). */
+  setHidden(index: number, hide: boolean) {
+    if (index < 0 || index >= this.trees.length) throw new RangeError(`tree ${index} out of range`);
+    if (!hide && !this.hidden?.[index]) return;
+    this.hidden ??= new Uint8Array(this.trees.length);
+    this.hidden[index] = hide ? 1 : 0;
+    this.wood.setVisibleAt(this.woodInstance[index], false);
+    this.foliage.setVisibleAt(this.leafInstance[index], false);
+    if (this.impostor) this.impostor.setVisibleAt(this.impostorInstance[index], false);
+    this.level[index] = -1;               // shown again: the next update applies its LOD from scratch
+    this.last.set(Infinity, 0, 0);        // and that update runs even if the camera has not moved
+  }
+  isHidden(index: number) { return !!this.hidden?.[index]; }
+  /** Per-instance visibility as drawn (wood, foliage, impostor), for checks. */
+  instanceVisible(index: number) {
+    return [this.wood.getVisibleAt(this.woodInstance[index]), this.foliage.getVisibleAt(this.leafInstance[index]),
+      this.impostor ? this.impostor.getVisibleAt(this.impostorInstance[index]) : false];
+  }
+
   /** Re-evaluate LODs when the camera has moved ≥ 1.5 m. */
   update(camera: T.Camera, force = false) {
     const p = camera.getWorldPosition(new T.Vector3());
@@ -168,6 +190,7 @@ export class TreeBatches {
     const { near, mid, far, max } = this.lods;
     this.counts.fill(0);
     for (let i = 0; i < this.trees.length; i++) {
+      if (this.hidden?.[i]) { this.counts[4]++; continue; }
       const t = this.trees[i];
       const k = Math.min(1.6, Math.max(.7, t.scale));
       const d = Math.hypot(t.x - p.x, t.y + 6 * t.scale - p.y, t.z - p.z) / k;
@@ -194,7 +217,7 @@ export class TreeBatches {
     const per = [0, 0, 0, 0];
     for (let i = 0; i < this.trees.length; i++) {
       const l = this.level[i];
-      if (l < 0 || l > 3) continue;
+      if (l < 0 || l > 3 || this.hidden?.[i]) continue;
       per[l] += l === 3 ? 6 : this.forms[this.trees[i].form].triangles[l];
     }
     return per;

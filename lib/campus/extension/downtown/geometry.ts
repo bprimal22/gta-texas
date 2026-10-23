@@ -5,6 +5,8 @@ import { FACADE_CODE, FLOOR_HEIGHT } from './materials';
 /** Exact height of the baked terrain grid (same diagonal as terrain.ts / the rendered and collider triangles). */
 export class DowntownTerrain {
   readonly nx: number; readonly nz: number; readonly step: number;
+  /** Cells another extension (riverfront) renders instead: not `rendered` here while set. Null = none. */
+  excluded: Uint8Array | null = null;
   readonly x0: number; readonly z0: number; readonly x1: number; readonly z1: number;
   constructor(private readonly data: DowntownData) {
     const m = data.meta;
@@ -17,7 +19,11 @@ export class DowntownTerrain {
     const j = Math.min(this.nz - 2, Math.max(0, Math.floor((z - this.z0) / this.step)));
     return j * (this.nx - 1) + i;
   }
-  rendered(x: number, z: number) { return this.inside(x, z) && (this.data.cellFlags[this.cell(x, z)] & 1) === 1; }
+  rendered(x: number, z: number) {
+    if (!this.inside(x, z)) return false;
+    const c = this.cell(x, z);
+    return (this.data.cellFlags[c] & 1) === 1 && !(this.excluded && this.excluded[c]);
+  }
   collidable(x: number, z: number) { return this.inside(x, z) && (this.data.cellFlags[this.cell(x, z)] & 3) === 3; }
   height(x: number, z: number): number | null {
     if (!this.inside(x, z)) return null;

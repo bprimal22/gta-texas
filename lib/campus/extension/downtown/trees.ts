@@ -17,7 +17,10 @@ type Point = [number, number];
 /** Clearance is only searched this far; beyond it the measured height wins. */
 const CLEAR_SEARCH = 14;
 
-export interface DowntownTreePlan extends DeepWestTreePlan { playable: boolean[] }
+export interface DowntownTreePlan extends DeepWestTreePlan { playable: boolean[];
+  /** Trunk capsules of every placed tree (index-aligned with `placed`), visual-only ones included: an extension that
+   * makes part of the visual-only bank playable (riverfront) adds the capsules of the trees it owns. */
+  allCapsules: DeepWestTreePlan['capsules'] }
 
 /** Distance from each tree to the nearest building edge (all footprints, visual-only ones included). */
 function clearances(data: DowntownData, points: Point[]) {
@@ -57,8 +60,9 @@ export function planDowntownTrees(data: DowntownData, forms: TreeForm[], height:
   const plan = planDeepWestTrees(records, forms, height);
   // Visual-only trees (south bank, I-35 band) render but never collide.
   const playable = plan.placed.map(t => playableAt.get(`${t.x},${t.z}`) ?? false);
-  plan.capsules = plan.capsules.filter((_c, i) => playable[i]);
-  return { ...plan, playable };
+  const allCapsules = plan.capsules;
+  plan.capsules = allCapsules.filter((_c, i) => playable[i]);
+  return { ...plan, playable, allCapsules };
 }
 
 export function downtownTreeBatches(plan: DowntownTreePlan, forms: TreeForm[], materials: TreeMaterials, impostors: ImpostorSet | null) {

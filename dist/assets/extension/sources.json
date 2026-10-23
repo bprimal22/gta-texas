@@ -85,5 +85,98 @@
    "https://guidetoaustinarchitecture.com/places/james-d-pfluger-pedestrian-bridge/"
   ],
   "limitations": "Support spacing, railing details and hidden lower ramp turns are estimates; reference photos are research only and are not shipped."
+ },
+ "riverfrontExtension": {
+  "asset": {
+   "file": "riverfront-v1.bin.gz",
+   "sha256": "47ab5a678c167612db99b2d2464d667a10d200937a9f80acc489785193b05737",
+   "tool": "tools/extension/bake-riverfront.py",
+   "boundTo": "downtown-v1.bin.gz (FNV checksum, wall list, float-identical shared terrain vertices)"
+  },
+  "data": [
+   {
+    "dataset": "downtown-v1.bin.gz (this repository)",
+    "use": "south-bank 4 m 3DEP terrain (copied float-identical), 1 m City ground classes, LiDAR canopy trees, building records, walls",
+    "sha256": "b467a75b938055c805a0b40af461a1e89d5d7d49c611a6cb226f22d6bc11ad6a"
+   },
+   {
+    "dataset": "USGS 3D Elevation Program (3DEP) bare-earth DEM via the National Map elevation ImageServer",
+    "publisher": "U.S. Geological Survey",
+    "license": "Public domain (U.S. Government work). Credit: U.S. Geological Survey.",
+    "query": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-97.762%2C30.2525%2C-97.7195%2C30.2811&bboxSR=4326&imageSR=4326&size=2043%2C1585&format=tiff&pixelType=F32&noDataInterpretation=esriNoDataMatchAny&interpolation=RSP_BilinearInterpolation&renderingRule=%7B%22rasterFunction%22%3A+%22None%22%7D&f=json",
+    "use": "terrain west of x = -1760 (Pfluger south landings, Auditorium Shores west end), NAVD88 m - 165",
+    "sha256": "8ff863f5ce842b43c06cd3df096f0b3c4f4a7ff02a47ab0730f449a0c6d2ebda"
+   },
+   {
+    "dataset": "City of Austin Planimetrics 2023 - Impervious Cover 2023 (layer 1)",
+    "publisher": "City of Austin",
+    "use": "ground classes west of x = -1760; pond docks; railroad ballast (corridor edge)",
+    "sha256": "ddaeed1c6fbca0cd8d3e54b1457b2d9251677acafbefe720537165f70148fb34"
+   },
+   {
+    "dataset": "City of Austin Planimetrics 2023 - Building Footprints 2023 (layer 0)",
+    "publisher": "City of Austin",
+    "use": "Long Center / Palmer / gazebo footprints (placement), west-of-seam buildings (MAX_HEIGHT)",
+    "sha256": "46941682ddec33cc311cf4e331d2637dd52e818dc932f5a236cc66677b0de0e7"
+   },
+   {
+    "dataset": "City of Austin Parks",
+    "publisher": "City of Austin",
+    "use": "park ground class west of x = -1760",
+    "sha256": "ec2619a03dccf17cce935139a136d3a6ab40ad773679b2d01d4c99b37ef97ccc"
+   },
+   {
+    "dataset": "City of Austin Transportation Network (CTN) street centrelines",
+    "publisher": "City of Austin",
+    "use": "corridor edges (Lamar, Riverside, Barton Springs, South First)",
+    "sha256": "5e2ddaf64c12c178a1bf4d7f791b67b8d15818d6aa513a15a55c7533170c431e"
+   },
+   {
+    "dataset": "USGS 3DEP LiDAR TX_Central_B1_2017 (public EPT mirror, depth-10 subset)",
+    "publisher": "U.S. Geological Survey",
+    "license": "Public domain (U.S. Government work). Credit: U.S. Geological Survey.",
+    "use": "pond outlines (water voids) and levels, Long Center ring circle fit / terrace / hall and stage volumes, Palmer roof profile, Doug Sahm Hill summit check, west-of-seam canopy trees; parking garage bulk roof (mode of roof returns) and cores; dock deck heights",
+    "sha256": "85fca6f774d4f51c117ce844232df641be934a86cbba2e72ab9d7f07b954ee52"
+   }
+  ],
+  "referencesNotShipped": [
+   {
+    "source": "City of Austin, Butler Park labeled aerial layout (2008)",
+    "url": "https://services.austintexas.gov/edims/document.cfm?id=115490",
+    "use": "names and relative layout of Liz Carpenter Pond, Doug Sahm Hill, Butler Fountain, Willie Wells Field, children's garden (2008 plan; 2023 classes and 2017 LiDAR govern geometry)"
+   },
+   {
+    "source": "Nelsen Partners, The Long Center (architect project page)",
+    "url": "https://nelsenarchitects.com/nb-portfolio/the-long-center/?project_type=entertainment",
+    "use": "form: thin pale ring beam, slender round columns, glazed hall front with aluminium bands, dark stage house"
+   },
+   {
+    "source": "The Long Center, H-E-B Terrace information",
+    "url": "https://thelongcenter.org/wp-content/uploads/2022/07/heb-terrace_tech_specs.pdf",
+    "use": "terrace / stage context"
+   },
+   {
+    "source": "BGK Architects, Palmer Events Center",
+    "url": "https://www.bgkarchitects.com/project/palmer-events-center-austin-energy",
+    "use": "form: tented canopy, eave sweeps, colonnade, solar"
+   },
+   {
+    "source": "AIA Austin Guide to Austin Architecture: Auditorium Shores; Fannie Davis Town Lake Gazebo",
+    "url": "https://guidetoaustinarchitecture.com/places/auditorium-shores/",
+    "use": "lawn/trail character; gazebo folded octagonal canopy with oculus"
+   },
+   {
+    "source": "City of Austin trail directory / Butler Trail pages; The Trail Conservancy map",
+    "url": "https://www.austintexas.gov/parks/locations/trail-directory",
+    "use": "trail identity and extent"
+   }
+  ],
+  "limitations": [
+   "Long Center, Palmer Events Center, their parking garage and the gazebo are reference-guided approximations placed on measured anchors, not 1:1 models; the Long Center ring circle fit has a ~3 m median residual",
+   "ponds are 2017 LiDAR water voids with an estimated level; docks are 2023 City polygons; no animated water",
+   "park layout follows 2023 City ground classes (the 2008 plan only informs names); playground paint, art and small furniture are not modelled",
+   "the river reach is flight-only (water never lands); the South First bridge stays visual-only",
+   "the parking garage height is the 2017 LiDAR bulk roof; the City 2023 MAX_HEIGHT for its footprint is its peak and is not used for the deck"
+  ]
  }
 }

@@ -9,22 +9,26 @@ const RING: [number, number][] = [[0, 0], [.4, 0], [-.4, 0], [0, .4], [0, -.4]];
 
 /** `bedTop`: feet below this over mapped water count as in the water/inlet (inside the low barriers, whose tops are at
  * the water surface + 3.2 m); a bridge deck above it is a real floor. */
-export interface WaterQuery { surfaceY: number; bedTop: number; isWater: (x: number, z: number) => boolean }
+export interface WaterQuery { surfaceY: number; bedTop: number; isWater: (x: number, z: number) => boolean;
+  /** Optional local bed top (e.g. a park pond above the lake level); omitted, `bedTop` applies everywhere. */
+  bedTopAt?: (x: number, z: number) => number }
+const bedTopAt = (q: WaterQuery, x: number, z: number) => q.bedTopAt ? q.bedTopAt(x, z) : q.bedTop;
 
 /** Water under any part of the capsule footprint (mapped water class at the point or within 0.4 m). */
 export function overWater(q: WaterQuery, x: number, z: number) { return RING.some(([dx, dz]) => q.isWater(x + dx, z + dz)); }
 
 /** A proposed landing (feet Y) in mapped water: on the bed or on banks inside the inlet barriers. Decks above are fine. */
 export function isWaterbedTarget(q: WaterQuery, x: number, feetY: number, z: number) {
-  return feetY < q.bedTop && overWater(q, x, z);
+  return feetY < bedTopAt(q, x, z) && overWater(q, x, z);
 }
 
 /** Lowest feet Y allowed for a target-less descent at (x, z), or null when not over open water. `floorFeetY` is the
  * first physical floor below (null = none): a deck above `bedTop` is a real floor, so no hover limit applies. */
 export function waterHoverFeet(q: WaterQuery, x: number, z: number, floorFeetY: number | null) {
   if (!overWater(q, x, z)) return null;
-  if (floorFeetY !== null && floorFeetY >= q.bedTop) return null;
-  return q.bedTop + WATER_HOVER_CLEARANCE;
+  const bed = bedTopAt(q, x, z);
+  if (floorFeetY !== null && floorFeetY >= bed) return null;
+  return bed + WATER_HOVER_CLEARANCE;
 }
 
 /** Vertical step limited by the hover height: descend no lower than it, rise back toward it at most `maxRise`. */

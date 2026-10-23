@@ -211,6 +211,65 @@ bridges are rendered as visual-only context beyond walled edges.
 * Review shots: `?shot=<id>` for the 20 ids in `lib/campus/extension/downtown/shots.json` (skyline from the South Mall,
   north campus and the 100 m flight ceiling; Congress approach and seam; four obliques; routes; riverbank; landmarks).
 
+### Central riverfront extension (October 2026)
+
+Across Lady Bird Lake from downtown, the south bank between the Lamar and South First bridges is playable: Auditorium
+Shores (the west off-leash shore and the Vic Mathias Shores east lawn), Butler Metro Park (Doug Sahm Hill, Liz Carpenter
+Pond with its docks, the Palmer pond, Willie Wells Field, the children's garden area), the Butler Hike-and-Bike Trail
+along the bank, the Long Center, the Palmer Events Center, their parking garage and the Fannie Davis gazebo — about 0.32 km² of land
+bounded by the Lamar east edge, Riverside Drive / the Union Pacific railroad, Barton Springs Road and South First
+(`lib/campus/extension/riverfront/`, one same-origin asset `public/assets/extension/riverfront-v1.bin.gz`, 0.26 MB).
+The James D. Pfluger bridge is now walkable end to end: the main span opens onto its two south arms, which continue
+on measured approach slabs to the Lamar and Riverside sidewalks. Flight can cross the river reach between the two
+bridges; water never lands (lake and ponds hover the descent, map travel resolves to the nearest shore).
+
+* **Measured:** terrain east of x = −1760 is downtown's 4 m 3DEP grid copied float-identically (validated at load);
+  west of it the 3DEP DEM, blended into that column. Shoreline = the DEM water contour (as downtown). Ponds = 2017
+  LiDAR water voids, level 0.25 m under the 5th-percentile bank return (never above the rendered bank). Paths, lawns
+  and plazas = City 2023 ground classes (riverfront-only paving finish: pale concrete and decomposed-granite albedo with
+  20 % texture grain, so park walks and the hill spiral read); docks = the three City 2023 'Dock' polygons within 5 m
+  of Liz Carpenter Pond, deck height = median LiDAR return on each (≈ 1.5 m above the pond level, flush with the bank). Doug Sahm Hill is the DEM (rendered summit
+  within 0.2 m of the highest LiDAR ground return), not an authored cone. Corridor edges = City CTN centrelines offset
+  to the curb.
+* **Reference-guided (approximate):** Long Center — the recycled ring beam as a thin, flat pale-cream band on slender
+  round white columns (LiDAR circle fit: centre, 41.6 m radius, top; ~3 m median fit residual, so its placement is
+  approximate), the raised City Terrace at its LiDAR level with a curved front stair, a rectangular hall (LiDAR box)
+  whose terrace faces are blue-grey glass with orange/tan aluminium bands, a dark stage house (LiDAR box) and a pale
+  podium. Palmer — a pale tented canopy over the City footprint corners with concave edges, LiDAR eave heights and deep
+  eave sweeps, a raised rim around a dark solar plateau, an open colonnade and an enclosed hall. Gazebo — octagonal
+  folded upswept canopy with an oculus on limestone columns. Parking garage (City 1329594) — a curved open parking
+  structure (dark bays, pale spandrels and piers, 4 decks) on the City footprint at the 2017 LiDAR bulk roof
+  (−15.35, mode of 8,821 roof returns, ~12 m above ground) with two compact LiDAR stair/elevator cores; the City
+  footprint's single MAX_HEIGHT (its peak, ~9 m higher) is kept in provenance only. Sources: Nelsen Partners and BGK Architects project pages,
+  the Long Center terrace sheet, AIA Austin guide, the City's 2008 labeled Butler Park aerial (names/layout only). No
+  photos ship. The recent H-E-B stage on the Long Center lawn stays a City footprint box.
+* **Ownership (fail closed, transactional):** the riverfront is bound to the downtown asset (checksum, wall list,
+  shared terrain vertices) and committed after downtown and the backdrop. It takes over 17,586 downtown terrain cells
+  (downtown stops drawing exactly those; the decoder also rejects any riverfront cell east of the seam that downtown
+  would still draw), collapses the generic Long Center / Palmer / gazebo / garage placeholders, hides (at every LOD,
+  restorably) the one downtown LiDAR tree whose trunk point falls inside Liz Carpenter Pond, gives the visual-only park
+  buildings, bridge triangles and 426 park trees colliders, and cuts the lowered backdrop under its west terrain. Only
+  vertices under modelled water/floors (ponds, terrace) differ from downtown. Any failure keeps the downtown world
+  exactly as before; disposal reverts the overlay.
+* **Edges:** downtown's shoreline walls inside the corridor are replaced by low physical barriers on the water line;
+  pond outlines have low barriers (docks stay walkable); wall pieces that pass under the Pfluger deck stop below its
+  girders. Other world limits (Lamar, railroad, Barton Springs, South First, the river reach ends) are walls.
+* **Map:** two area labels, "Auditorium Shores" and "Butler Park" (expanded map; the local minimap shows them nearby);
+  the other places are HUD names ("Riverfront · Doug Sahm Hill").
+* **Budgets (checked):** ≤ 0.6 MB download, 7 draw calls (terrain, landmarks, ponds, west buildings, tree batches),
+  ~44 k terrain + ~12.7 k landmark triangles, 3 trimesh colliders + 8 overlay colliders + trunk capsules; downtown loses
+  35,172 terrain triangles it no longer draws.
+* **Rebuild:** in the extension venv,
+  `python -I tools/extension/bake-riverfront.py --raw <downtown raw> --bg <downtown background raw> --lidar <subset.npz>`
+  (deterministic; also writes `lib/campus/extension/riverfront/shots.json`). Check: `npm run check:riverfront`
+  (37 checks: decode/binding/mutants, upward floor normals on every walkable model surface and pond water, garage and
+  dock measurements, pond-tree hiding across LODs and its rollback, map labels, ownership overlay, render/collider parity, hill/terrace/pond fit, Pfluger walking
+  and scooter both ways, Butler Trail, hill and terrace stair walks, barriers, flight across the reach and over
+  lake/pond/roof, travel, shots, trees, revert/dispose).
+* Review shots: `?shot=<id>` for the 10 ids in `lib/campus/extension/riverfront/shots.json` (Auditorium Shores aerial
+  and from the north bank, hill and pond, summit skyline, Long Center lawn view, Palmer, Pfluger arrival and deck,
+  gazebo, Vic Mathias trail).
+
 ### West Campus pass (October 2026)
 
 West Campus (b12) and the deep-west extension (D37–D40) gained the two student towers missing from the City 2023
@@ -327,6 +386,8 @@ context under Node (textures stubbed) and reports:
 * West Campus pass: Union on 24th's 97.5 m is a community-sourced (OSM) height; both new towers' internal plans
   (H proportions, podium heights, crown extents) and every deep-west facade treatment are photo-interpreted estimates;
   Deep West trees are 2017 LiDAR peaks.
+* Riverfront: Long Center, Palmer and the gazebo are reference-guided approximations, not 1:1; small park furniture,
+  playground paint and art are not modelled; the South First bridge stays visual-only; pond water is static.
 * Downtown: only 13 landmarks have authored profiles; other towers are LiDAR-tiered or single-height extrusions with
   rule-based facades. Buildings built 2017–2023 that are not landmarks or OSM-updated keep a single City 2023 height
   (no LiDAR tiers). Tower plans inside block outlines, crowns and colours are estimates. Trees come from 2017 LiDAR

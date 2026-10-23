@@ -87,7 +87,14 @@ export class Downtown {
   private readonly footprints: Point[][][];
   private mapImage: HTMLCanvasElement | null = null;
   private disposed = false;
+  /** Extension hooks (riverfront): terrain chunk meshes with their cell ranges, and each building's triangle range. */
+  readonly terrainMeshes: { mesh: THREE.Mesh; i0: number; i1: number; j0: number; j1: number }[] = [];
+  readonly buildingRanges = new Map<string, { mesh: THREE.Mesh; start: number; count: number; visual: boolean }>();
+  /** Building keys whose footprints another extension draws on the map instead (riverfront replacements). */
+  readonly mapHidden = new Set<string>();
   get meta() { return this.built.data.meta; }
+  /** Decoded data and exact terrain (read-only for extensions layered on downtown). */
+  get source() { return { data: this.built.data, terrain: this.built.terrain }; }
   /** Mapped water (DEM lake + creek-mouth inlets) and its surface, for flight water safety (water-safety.ts). */
   get water() {
     const data = this.built.data, m = data.meta;
@@ -121,6 +128,8 @@ export class Downtown {
         const mesh = new THREE.Mesh(c.terrain.render, ground.material);
         mesh.name = `Downtown terrain ${c.key}`; mesh.receiveShadow = true;
         terrainRaycast(mesh, built.terrain);
+        const [ci, cj] = c.key.split(',').map(Number), cells = RENDER_CHUNK / meta.step;
+        this.terrainMeshes.push({ mesh, i0: ci * cells, i1: Math.min(meta.grid.nx - 1, (ci + 1) * cells), j0: cj * cells, j1: Math.min(meta.grid.nz - 1, (cj + 1) * cells) });
         this.group.add(mesh); drawCalls++; terrainTriangles += c.terrain.triangles;
         if (c.terrain.collider) { this.colliders.push({ name: mesh.name, ...c.terrain.collider }); colliderTriangles += c.terrain.colliderTriangles; }
       }
@@ -130,6 +139,7 @@ export class Downtown {
         const mesh = new THREE.Mesh(g, facade);
         mesh.name = `Downtown ${kind} ${c.key}`; mesh.castShadow = true; mesh.receiveShadow = true;
         rangeRaycast(mesh, batch.ranges);
+        batch.ranges.forEach((r, i) => this.buildingRanges.set(owners[i].k, { mesh, start: r.start, count: r.count, visual: owners[i].visual }));
         this.group.add(mesh); drawCalls++; buildingTriangles += batch.triangles;
         const position = g.getAttribute('position').array as Float32Array;
         // Physics gets only the playable buildings' triangles (same shared positions); visual-only context
@@ -264,7 +274,7 @@ export class Downtown {
     ctx.drawImage(this.mapImage, m.rect.xmin, m.rect.zmin, m.classMap.w * m.classMap.res, m.classMap.h * m.classMap.res);
     ctx.fillStyle = '#c1bca6';
     ctx.beginPath();
-    for (const bb of m.buildings) for (const r of bb.tiers[0].r) { r.forEach(([x, z], i) => i ? ctx.lineTo(x, z) : ctx.moveTo(x, z)); ctx.closePath(); }
+    for (const bb of m.buildings) if (!this.mapHidden.has(bb.k)) for (const r of bb.tiers[0].r) { r.forEach(([x, z], i) => i ? ctx.lineTo(x, z) : ctx.moveTo(x, z)); ctx.closePath(); }
     ctx.fill('evenodd');
     ctx.restore();
   }

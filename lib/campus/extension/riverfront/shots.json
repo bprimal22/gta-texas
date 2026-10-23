@@ -1,0 +1,210 @@
+[
+ {
+  "id": "rf-auditorium-aerial-ne",
+  "label": "Auditorium Shores from over the lake (north-east), Long Center and Palmer behind",
+  "kind": "aerial",
+  "position": [
+   -1180.0,
+   30.0,
+   2440.0
+  ],
+  "target": [
+   -1480.0,
+   -26.0,
+   2720.0
+  ],
+  "fov": 60,
+  "groundY": -34.47,
+  "groundSource": "riverfront-v1 terrain grid",
+  "focus": [
+   -1480.0,
+   -26.0,
+   2720.0
+  ],
+  "note": "After the AIA Austin / Atelier Wong 2020 aerial: shore lawns, trail and the two landmarks beyond Riverside."
+ },
+ {
+  "id": "rf-auditorium-from-north-bank",
+  "label": "Auditorium Shores across the water from the downtown trail",
+  "kind": "street",
+  "position": [
+   -1420.0,
+   -27.26,
+   2318.0
+  ],
+  "target": [
+   -1460.0,
+   -26.0,
+   2560.0
+  ],
+  "fov": 55,
+  "groundY": -29.007,
+  "groundSource": "riverfront-v1 terrain grid",
+  "focus": null,
+  "note": "North-bank Butler Trail (downtown) looking south over the lake to the park."
+ },
+ {
+  "id": "rf-butler-hill-pond",
+  "label": "Butler Park: Doug Sahm Hill and Liz Carpenter Pond with its docks",
+  "kind": "aerial",
+  "position": [
+   -1790.0,
+   25.0,
+   2520.0
+  ],
+  "target": [
+   -1655.0,
+   -28.0,
+   2620.0
+  ],
+  "fov": 55,
+  "groundY": -28.96,
+  "groundSource": "riverfront-v1 terrain grid",
+  "focus": [
+   -1655.0,
+   -28.0,
+   2620.0
+  ],
+  "note": "From the west over Lee Barton / the railroad: pond, docks and the spiral hill."
+ },
+ {
+  "id": "rf-hill-summit-skyline",
+  "label": "Doug Sahm Hill summit looking at the downtown skyline",
+  "kind": "street",
+  "position": [
+   -1621.78,
+   -20.46,
+   2611.33
+  ],
+  "target": [
+   -1350.0,
+   40.0,
+   2150.0
+  ],
+  "fov": 55,
+  "groundY": -22.211,
+  "groundSource": "riverfront-v1 terrain grid",
+  "focus": null,
+  "note": "Summit at the highest 2017 LiDAR ground return."
+ },
+ {
+  "id": "rf-long-center-lawn",
+  "label": "Long Center ring beam and City Terrace from the park lawn (architect hero direction)",
+  "kind": "street",
+  "position": [
+   -1278.1,
+   -25.82,
+   2805.6
+  ],
+  "target": [
+   -1330.11,
+   -18.380000000000003,
+   2857.59
+  ],
+  "fov": 60,
+  "groundY": -27.575,
+  "groundSource": "riverfront-v1 terrain grid",
+  "focus": null,
+  "note": "Low view from the north-east lawn toward the terrace, ring and glazed hall front."
+ },
+ {
+  "id": "rf-palmer-ne",
+  "label": "Palmer Events Center canopy from the north path",
+  "kind": "street",
+  "position": [
+   -1470.0,
+   -26.59,
+   2698.0
+  ],
+  "target": [
+   -1510.0,
+   -16.0,
+   2830.0
+  ],
+  "fov": 60,
+  "groundY": -28.337,
+  "groundSource": "riverfront-v1 terrain grid",
+  "focus": null,
+  "note": "Concave tented canopy, deep eave sweep and colonnade."
+ },
+ {
+  "id": "rf-trail-pfluger-arrival",
+  "label": "Butler Trail at the Pfluger bridge south landing",
+  "kind": "street",
+  "position": [
+   -1800.0,
+   -27.55,
+   2412.0
+  ],
+  "target": [
+   -1862.0,
+   -25.0,
+   2368.0
+  ],
+  "fov": 60,
+  "groundY": -29.302,
+  "groundSource": "riverfront-v1 terrain grid",
+  "focus": null,
+  "note": "Trail by the south arms and approach slabs (bridge arrival)."
+ },
+ {
+  "id": "rf-pfluger-deck-south",
+  "label": "Pfluger bridge main span looking south to the park",
+  "kind": "street",
+  "position": [
+   -1787.8,
+   -23.46,
+   2275.0
+  ],
+  "target": [
+   -1700.0,
+   -26.0,
+   2520.0
+  ],
+  "fov": 60,
+  "groundY": -34.47,
+  "groundSource": "riverfront-v1 terrain grid",
+  "focus": null,
+  "note": "On the walkable deck (eye above the deck, not the lake bed)."
+ },
+ {
+  "id": "rf-gazebo-east-shore",
+  "label": "Fannie Davis Town Lake Gazebo by the east shore",
+  "kind": "street",
+  "position": [
+   -1124.0,
+   -31.61,
+   2648.0
+  ],
+  "target": [
+   -1107.8,
+   -28.909999999999997,
+   2625.16
+  ],
+  "fov": 55,
+  "groundY": -33.36,
+  "groundSource": "riverfront-v1 terrain grid",
+  "focus": null,
+  "note": "Octagonal folded canopy with oculus on limestone columns."
+ },
+ {
+  "id": "rf-trail-vic-mathias",
+  "label": "Butler Trail along Vic Mathias Shores looking west",
+  "kind": "street",
+  "position": [
+   -1205.0,
+   -32.11,
+   2588.0
+  ],
+  "target": [
+   -1450.0,
+   -30.0,
+   2480.0
+  ],
+  "fov": 60,
+  "groundY": -33.859,
+  "groundSource": "riverfront-v1 terrain grid",
+  "focus": null,
+  "note": "East lawn (Vic Mathias Shores) and the shoreline trail."
+ }
+]

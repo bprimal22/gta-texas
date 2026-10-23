@@ -66,6 +66,10 @@ export class DowntownBackground {
   private readonly textures: THREE.Texture[] = [];
   private readonly lod: { object: THREE.Object3D; center: THREE.Vector3 }[] = [];
   private disposed = false;
+  /** Extension hooks (riverfront): the terrain grid, chunk meshes with their cell ranges, each building's triangles. */
+  readonly grid: DowntownData;
+  readonly terrainMeshes: { mesh: THREE.Mesh; i0: number; i1: number; j0: number; j1: number }[] = [];
+  readonly buildingRanges = new Map<string, { mesh: THREE.Mesh; start: number; count: number }>();
 
   constructor(data: BackgroundData, borrowed: { grass: THREE.MeshStandardMaterial; asphalt: THREE.MeshStandardMaterial; concrete: THREE.MeshStandardMaterial; envMap: THREE.Texture | null }, decodeMs: number) {
     const m = data.meta;
@@ -80,6 +84,7 @@ export class DowntownBackground {
     this.materials.push(ground.material, facade, water, horizon); this.textures.push(ground.texture);
     // Grid terrain through the shared chunk builder (render bit only; collider never used).
     const grid = { meta: { grid: m.grid, step: m.step, rect: m.rect }, heights: data.heights, cellFlags: data.cellFlags } as unknown as DowntownData;
+    this.grid = grid;
     const cells = BACKGROUND_CHUNK / m.step, ncx = Math.ceil((m.grid.nx - 1) / cells), ncz = Math.ceil((m.grid.nz - 1) / cells);
     const groups = new Map<string, DowntownBuilding[]>();
     for (const b of m.buildings) {
@@ -92,15 +97,19 @@ export class DowntownBackground {
     let triangles = 0, drawCalls = 0;
     for (let cz = 0; cz < ncz; cz++) for (let cx = 0; cx < ncx; cx++) {
       const key = `${cx},${cz}`, center = new THREE.Vector3(m.rect.xmin + (cx + .5) * BACKGROUND_CHUNK, 0, m.rect.zmin + (cz + .5) * BACKGROUND_CHUNK);
-      const t = terrainChunk(grid, cx * cells, Math.min(m.grid.nx - 1, (cx + 1) * cells), cz * cells, Math.min(m.grid.nz - 1, (cz + 1) * cells));
+      const i0 = cx * cells, i1 = Math.min(m.grid.nx - 1, (cx + 1) * cells), j0 = cz * cells, j1 = Math.min(m.grid.nz - 1, (cz + 1) * cells);
+      const t = terrainChunk(grid, i0, i1, j0, j1);
       if (t.render) {
         const mesh = new THREE.Mesh(t.render, ground.material); mesh.name = `Downtown backdrop terrain ${key}`; mesh.receiveShadow = true;
+        this.terrainMeshes.push({ mesh, i0, i1, j0, j1 });
         this.group.add(mesh); drawCalls++; triangles += t.triangles;
       }
       const bc = buildingChunk(groups.get(key) ?? []);
       for (const [kind, batch] of [['skyline', bc.major], ['lowrise', bc.minor]] as const) {
         if (!batch.triangles) continue;
         const mesh = new THREE.Mesh(batch.geometry(), facade); mesh.name = `Downtown backdrop ${kind} ${key}`; mesh.castShadow = true; mesh.receiveShadow = true;
+        const owners = kind === 'skyline' ? bc.majorBuildings : bc.minorBuildings;
+        batch.ranges.forEach((r, i) => this.buildingRanges.set(owners[i].k, { mesh, start: r.start, count: r.count }));
         this.group.add(mesh); drawCalls++; triangles += batch.triangles;
         if (kind === 'lowrise') this.lod.push({ object: mesh, center });
       }

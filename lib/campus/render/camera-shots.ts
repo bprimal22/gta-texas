@@ -33,6 +33,8 @@ import deepWestShots from '../extension/deep-west/shots.json' with { type: 'json
 import downtownShots from '../extension/downtown/shots.json' with { type: 'json' };
 // West Campus pass review shots (tools/extension/west-campus-shots.py; grounds from the baked terrain).
 import westCampusShots from '../extension/west-campus/shots.json' with { type: 'json' };
+// Riverfront extension review shots (tools/extension/bake-riverfront.py; grounds from the riverfront terrain grid).
+import riverfrontShots from '../extension/riverfront/shots.json' with { type: 'json' };
 
 export type Vec3 = readonly [number, number, number];
 
@@ -113,9 +115,12 @@ export const DOWNTOWN_SHOTS: readonly (CameraShot & { kind: string; groundSource
 /** West Campus pass review poses (new towers, Deep West facades and canopy; street + aerial). */
 export const WEST_CAMPUS_SHOTS: readonly (CameraShot & { kind: 'street' | 'aerial'; groundSource: string })[] =
   westCampusShots as unknown as (CameraShot & { kind: 'street' | 'aerial'; groundSource: string })[];
+/** Riverfront review poses (Auditorium Shores, Butler Park, Long Center, Palmer, Butler Trail, Pfluger arrival). */
+export const RIVERFRONT_SHOTS: readonly (CameraShot & { kind: 'street' | 'aerial'; groundSource: string })[] =
+  riverfrontShots as unknown as (CameraShot & { kind: 'street' | 'aerial'; groundSource: string })[];
 export function findShot(id: string): CameraShot | undefined {
   return CAMERA_SHOTS.find(s => s.id === id) ?? ATLAS_SHOTS.find(s => s.id === id) ?? EXTENSION_SHOTS.find(s => s.id === id)
-    ?? DOWNTOWN_SHOTS.find(s => s.id === id) ?? WEST_CAMPUS_SHOTS.find(s => s.id === id);
+    ?? DOWNTOWN_SHOTS.find(s => s.id === id) ?? WEST_CAMPUS_SHOTS.find(s => s.id === id) ?? RIVERFRONT_SHOTS.find(s => s.id === id);
 }
 
 /** Ground-level point 15 m ahead of the camera unless the shot names a focus. */
@@ -196,7 +201,7 @@ export class CameraShotController {
     };
   }
 
-  list() { return [...CAMERA_SHOTS, ...EXTENSION_SHOTS, ...DOWNTOWN_SHOTS, ...WEST_CAMPUS_SHOTS].map(s => ({ id: s.id, label: s.label, position: s.position, target: s.target, fov: s.fov })); }
+  list() { return [...CAMERA_SHOTS, ...EXTENSION_SHOTS, ...DOWNTOWN_SHOTS, ...WEST_CAMPUS_SHOTS, ...RIVERFRONT_SHOTS].map(s => ({ id: s.id, label: s.label, position: s.position, target: s.target, fov: s.fov })); }
 
   dispose() {
     for (const type of EXIT_EVENTS) this.events?.removeEventListener(type, this.onInput, { capture: true } as EventListenerOptions);

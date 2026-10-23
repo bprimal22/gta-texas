@@ -49,12 +49,13 @@ import { loadDeepWest, type DeepWest } from './extension/deep-west';
 import { WestCampus, prepareWestCampus, towerFootprints, type PreparedWestCampus } from './extension/west-campus';
 import { loadDowntown, type Downtown } from './extension/downtown';
 import { loadBackground, type DowntownBackground } from './extension/downtown/background';
+import { loadRiverfront, type Riverfront } from './extension/riverfront';
 import type { DowntownMeta } from './extension/downtown/format';
 import { clampToWorld, mapBounds, worldWalls } from './extension/world-bounds';
 import stripGround from './blocks/b14-capitol/strip-ground.json' with { type: 'json' };
 import type { CampusData, TerrainData, GameStatus, Point } from './types';
 import { CAMERA_FAR } from './game-constants';
-import { guardDescent, isWaterbedTarget, overWater, waterHoverFeet } from './extension/downtown/water-safety';
+import { guardDescent, isWaterbedTarget, overWater, waterHoverFeet, type WaterQuery } from './extension/downtown/water-safety';
 
 /** Deep-west campus extension (D37-D40, x < -760). Installed only when its asset validates against
  * the loaded offline terrain seam; any failure keeps the original world, bounds and west wall. */
@@ -62,6 +63,9 @@ const DEEP_WEST_EXTENSION = true;
 /** Downtown Austin extension (Capitol strip seam z = 1536 south to Lady Bird Lake). Installed only when its asset
  * validates against the Capitol strip seam; any failure keeps the original world and south wall. */
 const DOWNTOWN_EXTENSION = true;
+/** Central riverfront (Lady Bird Lake south bank: Auditorium Shores, Butler Park, Butler Trail, Pfluger crossing, Long
+ * Center, Palmer). Layered on downtown and bound to its asset; any failure keeps the downtown world exactly as before. */
+const RIVERFRONT_EXTENSION = true;
 /** West Campus additions (Union on 24th across the deep-west seam, Villas on 24th, Deep West LiDAR canopy). Fail-closed:
  * any failure keeps the world exactly as without it. */
 const WEST_CAMPUS_EXTENSION = true;
@@ -105,6 +109,11 @@ export class CampusGame {
   /** Visual-only measured backdrop around the playable world (scene only: no colliders, no travel). */
   private background?: DowntownBackground;
   private backgroundFailure?: string;
+  /** Riverfront extension, present only after it validated against downtown, its colliders exist and its overlay applied. */
+  private riverfront?: Riverfront;
+  private riverfrontFailure?: string;
+  private riverfrontColliders: RAPIER.Collider[] = [];
+  private waterQueryCache?: WaterQuery;
   private groundTieIns?: ReturnType<typeof buildGroundTieIns>['stats'];
   private localContext?: ReturnType<typeof buildLocalContext>['stats'];
   /** Generated buildings and stadium: visible surfaces with matching colliders. */
@@ -376,6 +385,13 @@ export class CampusGame {
         if (!this.disposed) { this.backgroundFailure = error instanceof Error ? error.message : String(error); console.warn('Downtown backdrop unavailable.', error); }
         return null;
       }) : Promise.resolve(null);
+      // Riverfront decodes/validates against the downtown data and builds (no side effects) once downtown has loaded.
+      const riverfrontLoad = DOWNTOWN_EXTENSION && RIVERFRONT_EXTENSION ? downtownLoad.then(d => !d ? null : loadRiverfront({ downtown: d.source.data, signal: this.signal.signal,
+        materials: { grass: this.world.mat.grass, asphalt: this.world.mat.asphalt, concrete: this.world.mat.concrete, envMap: this.lighting.reflectionEnvironment.texture } }))
+        .then(r => { if (r && this.disposed) { r.dispose(); return null; } return r; }, error => {
+          if (!this.disposed) { this.riverfrontFailure = error instanceof Error ? error.message : String(error); console.warn('Riverfront extension unavailable; keeping the downtown world.', error); }
+          return null;
+        }) : Promise.resolve(null);
       const localTerrain = await loadOfflineTerrain(this.world.mat.grass);
       if (this.disposed) { localTerrain.dispose(); return; }
       this.world.group.add(localTerrain.mesh);
@@ -559,6 +575,9 @@ export class CampusGame {
         const background = await backgroundLoad;
         if (this.disposed) { background?.dispose(); return; }
         if (background) { this.background = background; this.scene.add(background.group); }
+        const riverfront = await riverfrontLoad;
+        if (this.disposed) { riverfront?.dispose(); return; }
+        if (riverfront) { markBoot('riverfront'); this.commitRiverfront(riverfront); }
       }
     }
     if (this.disposed) return;
@@ -623,11 +642,16 @@ export class CampusGame {
     const dtMeta = this.downtownMeta();
     const downtownEdges = this.downtown && dtMeta ? { bounds: this.downtown.bounds, barriers: dtMeta.barriers,
       barrierBottom: dtMeta.water.y - 2, barrierTop: dtMeta.barrierTop } : null;
-    for (const w of worldWalls(data.bounds, this.deepWest?.bounds, downtownEdges)) {
+    // The riverfront (only when committed) replaces downtown's walls by its validated list (shoreline/Pfluger crossing
+    // opened) and adds its own edges, low shoreline/pond barriers and under-deck pieces.
+    const rf = this.riverfront;
+    const riverfrontEdges = rf && downtownEdges ? { bounds: rf.bounds, walls: rf.meta.walls, downtownWalls: rf.meta.downtownWalls, barriers: rf.meta.barriers } : null;
+    for (const w of worldWalls(data.bounds, this.deepWest?.bounds, downtownEdges, riverfrontEdges)) {
       const desc = RAPIER.ColliderDesc.cuboid(w.hx, w.hy, w.hz).setTranslation(w.cx, w.cy, w.cz);
       if (w.angle) desc.setRotation({ x: 0, y: Math.sin(w.angle / 2), z: 0, w: Math.cos(w.angle / 2) });
       const c = this.physics.createCollider(desc);
-      if (w.kind !== 'edge') this.downtownColliders.push(c);
+      if (w.kind === 'riverfront') this.riverfrontColliders.push(c);
+      else if (w.kind !== 'edge') this.downtownColliders.push(c);
     }
     markBoot('physics');
     this.physics.step();
@@ -856,7 +880,7 @@ export class CampusGame {
   }
   travelTo(requested: Point) {
     if (!this.ready || !this.active || this.travel) return;
-    const candidates = travelCandidates(this.world.data, requested, combineTravelRegions([this.westCampus?.travelRegion, this.deepWest?.travelRegion, this.downtown?.travelRegion]));
+    const candidates = travelCandidates(this.world.data, requested, combineTravelRegions([this.westCampus?.travelRegion, this.deepWest?.travelRegion, this.riverfront?.travelRegion, this.downtown?.travelRegion]));
     if (!candidates.length) {
       this.travelMessage = this.downtown ? 'Choose a street, path or open area on land.' : 'Choose a path or an open area within campus.';
       this.travelMessageUntil = performance.now() + 5500; this.lastHud = 0;
@@ -1134,7 +1158,47 @@ export class CampusGame {
   /** Terrain height for movement, flight and travel: the deep-west extension where it is loaded
    * and owns (x, z), otherwise exactly the original terrain. */
   private groundHeight(x: number, z: number) {
-    return this.deepWest?.height(x, z) ?? this.downtown?.height(x, z) ?? this.world.terrain.height(x, z);
+    return this.deepWest?.height(x, z) ?? this.riverfront?.height(x, z) ?? this.downtown?.height(x, z) ?? this.world.terrain.height(x, z);
+  }
+  /** Flight water safety: downtown's mapped water plus the riverfront reach and ponds (pond-level bed top). */
+  private waterQuery(): WaterQuery | undefined {
+    const d = this.downtown?.water;
+    if (!d) return undefined;
+    const rf = this.riverfront;
+    if (!rf) return d;
+    return this.waterQueryCache ??= { surfaceY: d.surfaceY, bedTop: d.bedTop,
+      isWater: (x, z) => rf.isWater(x, z) || d.isWater(x, z), bedTopAt: (x, z) => rf.bedTopAt(x, z, d.bedTop) };
+  }
+  /** Install the validated riverfront after downtown (and the backdrop): trees, colliders (terrain, landmarks, west
+   * buildings, owned downtown visual buildings/trees), then the prepared downtown/backdrop overlay (ownership cut,
+   * placeholder removal) and the groups. Any failure removes partial colliders, discards the prepared overlay and keeps
+   * the downtown world exactly as it was (walls are created afterwards from this.riverfront, so they stay downtown's). */
+  private commitRiverfront(extension: Riverfront) {
+    const colliders: RAPIER.Collider[] = [];
+    let overlay: ReturnType<Riverfront['prepareOverlay']> | null = null;
+    try {
+      if (!this.downtown) throw new Error('Riverfront requires the downtown extension');
+      const v = this.vegetation;
+      extension.installTrees(v ? { forms: v.forms, materials: v.materials, impostors: v.impostors } : null);
+      overlay = extension.prepareOverlay(this.downtown, this.background ?? null);
+      for (const c of [...extension.colliders, ...overlay.colliders])
+        colliders.push(this.physics.createCollider(RAPIER.ColliderDesc.trimesh(c.position, c.index).setFriction(0.8)));
+      for (const t of [...extension.treeTrunks, ...overlay.capsules])
+        colliders.push(this.physics.createCollider(RAPIER.ColliderDesc.capsule(t.height / 2, t.radius).setTranslation(t.x, t.y + t.height / 2, t.z)));
+      overlay.apply();
+      Object.assign(extension.stats, { overlay: overlay.stats });
+      this.world.group.add(extension.group);
+      this.scene.add(extension.decor);
+      this.riverfront = extension;
+      this.riverfrontColliders = colliders;
+      this.waterQueryCache = undefined;
+    } catch (error) {
+      for (const c of colliders) this.physics.removeCollider(c, false);
+      overlay?.discard();
+      extension.dispose();
+      this.riverfrontFailure = error instanceof Error ? error.message : String(error);
+      console.warn('Riverfront extension unavailable; keeping the downtown world.', error);
+    }
   }
   private downtownMeta(): DowntownMeta | null { return this.downtown?.meta ?? null; }
   /** Install the validated downtown extension (fetched, seam-checked float-identical to the Capitol strip patch, and
@@ -1266,7 +1330,7 @@ export class CampusGame {
     }
     if (enabled && this.flight.mode === 'landing' && performance.now() >= this.flightLandingProbeAt) {
       this.flightLandingProbeAt = performance.now() + 200;
-      const water = this.downtown?.water;
+      const water = this.waterQuery();
       this.flightLandingTarget = this.scooterCollisionReady
         ? findFlightLanding(this.physics, this.collider, p,
           water && overWater(water, p.x, p.z)
@@ -1290,7 +1354,7 @@ export class CampusGame {
     if (this.flightLandingTarget) this.flightLandingMarker.position.set(this.flightLandingTarget.x, this.flightLandingTarget.y - .87, this.flightLandingTarget.z);
     const terrainY = this.groundHeight(p.x, p.z);
     const delta = requested.clone().multiplyScalar(dt);
-    const [clampedX, clampedZ] = clampToWorld(this.world.data.bounds, this.deepWest?.bounds, this.downtown?.bounds, p.x + delta.x, p.z + delta.z);
+    const [clampedX, clampedZ] = clampToWorld(this.world.data.bounds, this.deepWest?.bounds, this.downtown?.bounds, p.x + delta.x, p.z + delta.z, this.riverfront?.bounds);
     delta.x = clampedX - p.x;
     delta.z = clampedZ - p.z;
     this.flightGroundTarget = null; this.flightGroundLift = 0;
@@ -1320,11 +1384,12 @@ export class CampusGame {
     // Over open water, stop above the surface unless a visible deck is directly below. A lateral shore target must
     // not disable this guard, and invisible inlet barriers must never count as landing floors.
     this.flightOverWater = false;
-    if (this.downtown && enabled && this.flight.mode === 'landing'
-      && overWater(this.downtown.water, p.x + delta.x, p.z + delta.z)) {
+    const waterQ = this.waterQuery();
+    if (waterQ && enabled && this.flight.mode === 'landing'
+      && overWater(waterQ, p.x + delta.x, p.z + delta.z)) {
       const nx = p.x + delta.x, nz = p.z + delta.z;
       const shown = this.scooterGround.sample(nx, nz, p.y, 300);
-      const hover = waterHoverFeet(this.downtown.water, nx, nz, shown?.point.y ?? null);
+      const hover = waterHoverFeet(waterQ, nx, nz, shown?.point.y ?? null);
       if (hover !== null) {
         this.flightOverWater = true;
         delta.y = guardDescent(delta.y, p.y - .905, hover, FLIGHT_TUNING.climbSpeed * dt);
@@ -1589,6 +1654,7 @@ export class CampusGame {
       this.walkway?.update(this.camera);
       this.localContextUpdate?.(this.camera.position);
       this.downtown?.update(this.camera.position, this.camera);
+      this.riverfront?.update(this.camera.position, this.camera);
       this.background?.update(this.camera.position);
       this.vegetation?.update(this.camera);
       this.westCampus?.update(this.camera);
@@ -1686,6 +1752,7 @@ export class CampusGame {
     this.walkway?.update(this.camera);
     this.localContextUpdate?.(this.camera.position);
     this.downtown?.update(this.camera.position, this.camera);
+    this.riverfront?.update(this.camera.position, this.camera);
     this.background?.update(this.camera.position);
     this.vegetation?.update(this.camera);
     this.westCampus?.update(this.camera);
@@ -1710,6 +1777,7 @@ export class CampusGame {
       // The legacy nearest-landmark search has no distance cutoff; inside the
       // deep-west extension it would name a distant core landmark.
       if (this.deepWest?.contains(p.x, p.z)) location = 'West Campus';
+      else if (this.riverfront?.contains(p.x, p.z) && !this.downtown?.contains(p.x, p.z)) location = this.riverfront.locationName(p.x, p.z);
       else if (this.downtown && p.z > this.downtown.bounds.seam.z) location = this.downtown.locationName(p.x, p.z);
       const recent = this.fpsSamples.slice(-60),
         fps = recent.length ? 1000 / (recent.reduce((a, b) => a + b, 0) / recent.length) : 0;
@@ -1763,7 +1831,7 @@ export class CampusGame {
     const ctx = this.map.getContext('2d');
     if (!ctx) return;
     const p = this.body.translation(),
-      view = mapView(mapBounds(this.world.data.bounds, this.deepWest?.bounds, this.downtown?.bounds), p, this.mapExpanded),
+      view = mapView(mapBounds(this.world.data.bounds, this.deepWest?.bounds, this.downtown?.bounds, this.riverfront?.bounds), p, this.mapExpanded),
       { size, scale } = view;
     this.drawnMap = view;
     if (this.map.width !== size) this.map.width = this.map.height = size;
@@ -1777,6 +1845,7 @@ export class CampusGame {
     this.deepWest?.drawMap(ctx);
     this.westCampus?.drawMap(ctx);
     this.downtown?.drawMap(ctx);
+    this.riverfront?.drawMap(ctx);
     ctx.strokeStyle = '#d2cfb899';
     for (const path of this.world.data.paths) {
       if (
@@ -1817,6 +1886,19 @@ export class CampusGame {
       ctx.strokeText(abbr, x + 7, z + 4);
       ctx.fillStyle = '#fff';
       ctx.fillText(abbr, x + 7, z + 4);
+    }
+    // Riverfront area names (two only: Auditorium Shores, Butler Park), in the landmark label style without a dot. The
+    // minimap is local, so they show there only nearby; the expanded map shows both.
+    for (const { name, p: [lx, lz] } of this.riverfront?.mapLabels() ?? []) {
+      const x = (lx - view.x) * scale + size / 2, z = (lz - view.z) * scale + size / 2;
+      ctx.font = `bold ${this.mapExpanded ? 16 : 12}px Arial`;
+      const w = ctx.measureText(name).width;
+      if (x - w / 2 < 6 || x + w / 2 > size - 6 || z < 18 || z > size - 8) continue;
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = '#203329';
+      ctx.strokeText(name, x - w / 2, z);
+      ctx.fillStyle = '#e8e4cf';
+      ctx.fillText(name, x - w / 2, z);
     }
     ctx.save();
     const destination = this.travel?.requested ?? this.mapCursor;
@@ -1899,6 +1981,8 @@ export class CampusGame {
       downtown: this.downtown ? { ...this.downtown.stats, visibleLodObjects: this.downtown.visibleLod(), treeLod: this.downtown.trees?.counts.slice() ?? null, physicsColliders: this.downtownColliders.length }
         : { loaded: false, enabled: DOWNTOWN_EXTENSION, failure: this.downtownFailure ?? null },
       background: this.background ? this.background.stats : { loaded: false, failure: this.backgroundFailure ?? null },
+      riverfront: this.riverfront ? { ...this.riverfront.stats, treeLod: this.riverfront.trees?.counts.slice() ?? null, physicsColliders: this.riverfrontColliders.length }
+        : { loaded: false, enabled: RIVERFRONT_EXTENSION, failure: this.riverfrontFailure ?? null },
       cameraFar: this.camera.far,
       groundTieIns: this.groundTieIns,
       blocks: this.blocks ? { stats: this.blocks.stats, replacements: this.blocks.replacements, data: this.blockData?.applied, rejected: this.blockData?.rejected, excluded: this.blockData?.excluded.map(e => e.key), added: this.blockData?.added.map(e => e.key) } : null,
@@ -1938,6 +2022,8 @@ export class CampusGame {
     this.scanField?.dispose();
     this.westCampus?.dispose();
     this.deepWest?.dispose();
+    // Riverfront first: it reverts its overlay on downtown and the backdrop before they release their geometry.
+    this.riverfront?.dispose();
     this.downtown?.dispose();
     this.background?.dispose();
     this.scanTower?.dispose();
