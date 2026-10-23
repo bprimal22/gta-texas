@@ -61,5 +61,29 @@
     "https://www.statesman.com/story/business/real-estate/2023/09/15/cain-and-abels-bar-austin-student-housing-tower-breaks-ground-ut-university-of-texas-west-campus/70849599007/"
    ]
   }
- ]
+ ],
+ "westCampusPaving": {
+  "dataset": "City of Austin Planimetrics 2023 - Impervious Cover 2023",
+  "publisher": "City of Austin",
+  "url": "https://maps.austintexas.gov/arcgis/rest/services/Shared/PlanimetricsSurvey_1/MapServer/1",
+  "use": "West Campus/Guadalupe sidewalks, pavement, courtyards, patios, driveways, parking and curb gutters; deep-west additional parking, driveway and patio surfaces",
+  "authoring": [
+   "tools/extension/bake-b12-paving.py",
+   "tools/extension/bake-deep-west-paving.py"
+  ],
+  "rawInputSha256": {
+   "impervious-cover-2023.json": "67f90dca358b3d4921527ff25753631c0b108b4aca7d8be7aac11219dfd20336",
+   "downtown-background/impervious-cover-2023.json": "ddaeed1c6fbca0cd8d3e54b1457b2d9251677acafbefe720537165f70148fb34"
+  }
+ },
+ "pflugerBridge": {
+  "dataset": "City of Austin Bridge polygon OBJECTID 9608 and USGS 3DEP TX_Central_B1_2017 LiDAR deck returns",
+  "authoring": "tools/extension/bake-pfluger-bridge.py",
+  "use": "Bridge outline, smooth structural deck profile, north helix; authored supports and details guided by reference photos",
+  "references": [
+   "https://www.carterdesign.net/pfluger-bridge",
+   "https://guidetoaustinarchitecture.com/places/james-d-pfluger-pedestrian-bridge/"
+  ],
+  "limitations": "Support spacing, railing details and hidden lower ramp turns are estimates; reference photos are research only and are not shipped."
+ }
 }

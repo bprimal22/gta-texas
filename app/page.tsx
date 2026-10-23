@@ -82,6 +82,23 @@ export default function Home() {
           onKeyUp={e => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); game.current?.endFlightHold('up'); } }}>
           <kbd>W</kbd> Hold to fly / rise
         </button>}
+        {playing && flying && <button className="flight-toggle" type="button"
+          disabled={!status.ready || status.traveling || status.mapExpanded || status.overview}
+          aria-pressed={status.locomotion === 'landing'}
+          onPointerDown={e => { e.preventDefault(); e.currentTarget.setPointerCapture(e.pointerId); game.current?.beginFlightHold('down'); }}
+          onPointerUp={() => game.current?.endFlightHold('down')}
+          onPointerCancel={() => game.current?.endFlightHold('down')}
+          onBlur={() => game.current?.endFlightHold('down')}
+          onKeyDown={e => { if((e.key === 'Enter' || e.key === ' ') && !e.repeat) { e.preventDefault(); game.current?.beginFlightHold('down'); } }}
+          onKeyUp={e => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); game.current?.endFlightHold('down'); } }}>
+          <kbd>S</kbd> Hold to descend / land
+        </button>}
+        {playing && !flying && <button className="flight-toggle" type="button"
+          disabled={!status.ready || status.traveling || status.mapExpanded || status.overview}
+          aria-pressed={!!status.locomotion && status.locomotion !== 'foot'}
+          onClick={() => game.current?.toggleRide()}>
+          <kbd>E</kbd> {status.locomotion && status.locomotion !== 'foot' ? 'Get off scooter' : 'Scooter'}
+        </button>}
       </header>
       <div className="compass" aria-label="Compass">
         {status.heading ?? '—'}
@@ -90,7 +107,7 @@ export default function Home() {
         <div className="entry">
           <p className="eyebrow">THE UNIVERSITY OF TEXAS</p>
           <h2>Explore the Forty Acres.</h2>
-          <p>Walk, ride a scooter, or hold W to fly over campus and downtown Austin to Lady Bird Lake.</p>
+          <p>Walk, ride a scooter (E), or hold W to fly over campus and downtown Austin to Lady Bird Lake.</p>
           <Link href="/character" style={{ color: 'inherit', fontSize: 14 }}>
             View your character
           </Link>
@@ -141,23 +158,23 @@ export default function Home() {
       </aside>
       <footer className={`controls${flying ? ' flying-controls' : status.locomotion && status.locomotion !== 'foot' ? ' riding-controls' : ''}`}>
         {flying ? <>
-          <span><kbd>↑</kbd> Fly forward · <kbd>← →</kbd> Turn</span>
-          <span><kbd>W / SPACE</kbd> Rise</span>
-          <span><kbd>↓</kbd> Descend · release to hover</span>
+          <span><kbd>↑ ↓</kbd> Forward / back · <kbd>← → / A D</kbd> Turn</span>
+          <span><kbd>W</kbd> Rise · <kbd>S</kbd> Descend · release to hover</span>
+          <span><kbd>↑ + S</kbd> Dive · <kbd>↑ + W</kbd> Climb</span>
           <span><kbd>SHIFT</kbd> Boost</span>
           <span className="flight-readout">{status.locomotion === 'landing' ? 'Landing' : 'Flight'} · {Math.round((status.flightSpeed ?? 0) * 2.23694)} mph · {Math.round(status.flightHeight ?? 0)} m up</span>
         </> : status.locomotion && status.locomotion !== 'foot' ? <>
           <span><kbd>↑</kbd> Ride</span>
-          <span><kbd>← →</kbd> Steer</span>
+          <span><kbd>← → / A D</kbd> Steer</span>
           <span><kbd>↓ / SPACE</kbd> Brake</span>
-          <span><kbd>F</kbd> Get off</span>
+          <span><kbd>E</kbd> Get off</span>
           <span>Scooter · {Math.round((status.scooterSpeed ?? 0)*2.23694)} mph</span>
           <span><kbd>W</kbd> Hold to fly / rise</span>
         </> : <>
-          <span><kbd>↑ ↓</kbd> Run · <kbd>← →</kbd> Turn</span>
+          <span><kbd>↑ ↓</kbd> Forward / back · <kbd>← → / A D</kbd> Turn</span>
           <span><kbd>SHIFT</kbd> Run</span>
           <span><kbd>SPACE</kbd> Jump</span>
-          <span><kbd>F</kbd> Scooter</span>
+          <span><kbd>E</kbd> Scooter</span>
           <span><kbd>W</kbd> Hold to fly / rise</span>
         </>}
         <button className="power-saving" type="button" aria-pressed={!!status.powerSaving}

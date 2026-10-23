@@ -14,7 +14,7 @@
     "audit": "node scripts/audit-offline.mjs",
     "check:server": "node scripts/check-server.mjs",
     "check:context": "vite build --config scripts/harness/vite.harness.config.mjs && node scripts/harness/run-travel-fixture.mjs && node scripts/harness/run-context-check.mjs && node scripts/harness/run-ground-check.mjs && node scripts/harness/run-ground-paving-overlap-test.mjs && node scripts/harness/run-gdc-check.mjs && node scripts/harness/run-scan-check.mjs && node scripts/harness/run-stand-runtime-check.mjs && node scripts/harness/run-block-framework-test.mjs && node scripts/harness/run-side-proximity-check.mjs && node scripts/harness/run-block-checks.mjs && node scripts/harness/run-root-shared-check.mjs --no-scan && node scripts/harness/run-scan-lifecycle.mjs",
-    "verify": "npm run check && npm run check:performance && npm run build && npm run audit && npm run check:server && npm run check:context && npm run check:render && npm run check:b12-highrise && npm run check:b12-retail",
+    "verify": "npm run check && npm run check:flight && npm run check:performance && npm run build && npm run audit && npm run check:server && npm run check:context && npm run check:render && npm run check:b12-highrise && npm run check:b12-retail",
     "check:render": "node lib/campus/render/checks/run-render-checks.mjs && node lib/campus/render/checks/run-shot-clearance.mjs && node scripts/harness/run-capitol-shader-check.mjs",
     "check:scan-lifecycle": "node scripts/harness/run-scan-lifecycle.mjs",
     "check:extension": "vite build --config scripts/harness/deep-west.vite.config.mjs && node scripts/harness/run-deep-west-check.mjs",
@@ -22,7 +22,8 @@
     "check:b12-retail": "vite build --config scripts/harness/b12-retail-identity.vite.config.mjs && node scripts/harness/run-b12-retail-identity.mjs && node scripts/harness/run-b12-retail-identity.mjs --scene",
     "check:performance": "node --experimental-strip-types scripts/check-performance.mjs",
     "check:downtown": "vite build --config scripts/harness/downtown.vite.config.mjs && node scripts/harness/run-downtown-check.mjs",
-    "check:west-campus": "vite build --config scripts/harness/west-campus.vite.config.mjs && node scripts/harness/run-west-campus-check.mjs"
+    "check:west-campus": "vite build --config scripts/harness/west-campus.vite.config.mjs && node scripts/harness/run-west-campus-check.mjs",
+    "check:flight": "node --experimental-strip-types scripts/harness/run-flight-controls-test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

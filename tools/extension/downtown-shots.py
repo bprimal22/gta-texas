@@ -92,9 +92,9 @@ def on_street(x, z):
     raise SystemExit(f'no street pixel near {x},{z}')
 
 
-def add(sid, label, kind, cam, target, fov, note, eye=None, tgt_agl=None):
+def add(sid, label, kind, cam, target, fov, note, eye=None, tgt_agl=None, snap=True):
     cx, cz = cam[0], cam[2]
-    if kind == 'street' and R['zmin'] < cz:
+    if kind == 'street' and R['zmin'] < cz and snap:
         cx, cz = on_street(cx, cz)
     g, src = ground(cx, cz)
     cy = g + eye if eye is not None else cam[1]
@@ -129,8 +129,11 @@ add('dt-overview-top', 'Downtown overview (high oblique)', 'aerial', (-650, 0, 1
     'High oblique for map-travel review: street grid, parks, creeks, shoreline, bridges.', eye=650, tgt_agl=0)
 add('dt-route-congress-6th', 'Street route: Congress Avenue at 6th Street', 'street', (-505, 0, 1880), (-640, 25, 2300), 60,
     'Pedestrian view south on Congress near 6th Street (historic storefronts, Frost/Austonian ahead).', eye=1.75)
-add('dt-route-6th-street', 'Street route: East 6th Street historic district', 'street', (-330, 0, 1905), (-120, 6, 1975), 60,
-    'Pedestrian view east along 6th Street (low-rise brick).', eye=1.75)
+# East 6th Street: City of Austin CTN centreline points of the 300 block (camera) and the 500 block (target), so the
+# view runs down the street axis (the earlier z=1916 camera stood a block north, facing a wall).
+add('dt-route-6th-street', 'Street route: East 6th Street historic district', 'street', (-261.368, 0, 2091.238), (-54.667, 0, 2156.353), 60,
+    'Pedestrian view east along East 6th Street from the 300 block (CoA CTN centreline) toward the 500 block: low-rise historic storefronts.',
+    eye=1.75, tgt_agl=4, snap=False)
 sx, sz = shore(-610)
 add('dt-riverbank-congress', 'Riverbank trail by the Congress Avenue Bridge', 'street', (sx, 0, sz), (-560, -30, 2760), 60,
     'North shore trail (playable edge) looking across the river; the bridge deck is visual-only beyond the shore wall.', eye=1.75)
@@ -145,6 +148,16 @@ add('dt-block185-sail', 'Block 185 sail from the river', 'aerial', (b185[0] + 40
     'From over the river: terraced sail rising to the north peak (180 m).', eye=40)
 add('dt-sixth-guadalupe-street', 'Sixth and Guadalupe from Guadalupe Street', 'street', (sg[0] + 20, 0, sg[1] + 160), (sg[0], 160, sg[1]), 60,
     'Street-level view up the three stacked volumes.', eye=1.75)
+# Pfluger bridge shots (pfluger-bridge.ts): the deck camera stands on the bridge deck, not the terrain, so both are
+# authored from the deck/plan in pfluger-bridge.json rather than snapped to the class map.
+shots.append({'id': 'dt-pfluger-aerial', 'label': 'Pfluger pedestrian bridge from over Lady Bird Lake (southeast, 30 m)', 'kind': 'aerial',
+              'position': [-1700, -4.35, 2318], 'target': [-1792, -27, 2272], 'fov': 55, 'groundY': round(ground(-1700, 2318)[0], 3),
+              'groundSource': 'downtown terrain (baked asset)', 'focus': [-1792, -27, 2272],
+              'note': 'Double-curve deck, weathering-steel girders and curved twin-column bents (pfluger-bridge.ts); most of the span lies west of x=-1760 over the visual backdrop.'})
+shots.append({'id': 'dt-pfluger-deck', 'label': 'On the Pfluger bridge north connector looking south along the deck', 'kind': 'street',
+              'position': [-1750.5, -23.3, 2184], 'target': [-1806, -24.5, 2300], 'fov': 60, 'groundY': round(ground(-1750.5, 2184)[0], 3),
+              'groundSource': 'downtown terrain (baked asset); camera stands 1.7 m above the bridge deck (~-25.0)', 'focus': None,
+              'note': 'Eye height on the deck: tinted concrete with dusty-red bands, grey rails with mesh infill, saucer lamps; the helix to the left.'})
 out = ROOT / 'lib/campus/extension/downtown/shots.json'
 out.write_text(json.dumps(shots, indent=1) + '\n')
 print(len(shots), 'shots ->', out)

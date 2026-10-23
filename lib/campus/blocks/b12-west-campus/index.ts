@@ -20,6 +20,7 @@ import { SLOT_REPORT } from './massing';
 import { buildDistrict } from './district';
 import { buildRetail } from './retail-identity';
 import { byFamily, familyGeometry, createFamilyMaterials } from './pbr';
+import { buildPaving } from './paving';
 
 // Glass: low roughness and little metalness so the lit pane colours (dim interiors / warm displays) read through the
 // reflection instead of collapsing to black (Codex build-11 review). Paving: draped visual-only sidewalk finish drawn
@@ -63,6 +64,9 @@ export const block: BlockModule = {
     const towers = buildTowers(k, ctx.data, g, stats);
     // Retail identities (retail-identity/): Raising Cane's, Chick-fil-A, P. Terry's, Domino's on their frozen City records (own private kit, appended to k).
     const retail = buildRetail(k, ctx.data, g, stats);
+    // Measured ground paving (paving.ts): CoA 2023 sidewalks / plazas / patios / driveways / parking on ground that was
+    // drawn as lawn; same 'paving' detail bucket (material, draw call) as the Co-op frontage.
+    stats.paving = buildPaving(k.D('paving'), g);
     k.flushFaces();
     // Group 2 district bodies (district.ts): separate kit, PBR families (pbr.ts); collider shared below.
     const kp = new Kit(), district = buildDistrict(kp, ctx.data, g, stats);
@@ -79,7 +83,11 @@ export const block: BlockModule = {
     const mesh = (m: Mat, b: { geometry(): THREE.BufferGeometry }, role: 'solid' | 'detail') => {
       const geo = b.geometry(); geometries.push(geo);
       const o = new THREE.Mesh(geo, mat(m)); o.name = `b12 West Campus / Drag ${role} ${m}`;
-      o.castShadow = role === 'solid'; o.receiveShadow = true; if (m === 'paving') o.name = 'b12 West Campus / Drag sidewalk paving (visual, draped on terrain)'; o.userData.block = 'b12-west-campus'; return o;
+      o.castShadow = role === 'solid'; o.receiveShadow = true; o.userData.block = 'b12-west-campus';
+      // Ground paving is visual-only finish on the terrain, not authored walkable ground: skipped by the context coverage
+      // raster (userData.localContext, as b05's D10 plaza) so it never turns a neighbouring generated footprint into 'route'.
+      if (m === 'paving') { o.name = 'b12 West Campus / Drag sidewalk paving + measured CoA ground paving (visual, draped on terrain)'; o.userData.localContext = true; }
+      return o;
     };
     try {
       const solids = [...[...k.solid].filter(([, b]) => b.triangles).map(([m, b]) => mesh(m, b, 'solid')), ...pbrMeshes('solid')];

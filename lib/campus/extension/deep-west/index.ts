@@ -60,16 +60,20 @@ function extensionWall(source: THREE.MeshStandardMaterial) {
 }
 
 /** Offset copies of the borrowed paving so the 4 cm drape never z-fights the terrain at range. */
-function paving(source: THREE.Material, name: string, tint?: number) {
+function paving(source: THREE.Material, name: string, tint?: number, lighten = 1) {
   const m = source.clone();
   m.name = name;
   m.polygonOffset = true; m.polygonOffsetFactor = -1; m.polygonOffsetUnits = -1;
   if (tint !== undefined && m instanceof THREE.MeshStandardMaterial) m.color.multiply(new THREE.Color(tint));
+  if (lighten !== 1 && m instanceof THREE.MeshStandardMaterial) m.color.multiplyScalar(lighten);
   return m;
 }
 
+// Stage 2 (tools/extension/bake-deep-west-paving.py): Pavement also holds CoA Paved Driveway, Courtyard also Patio,
+// and Paved Parking is its own section on a weathered (lighter) asphalt so lots do not read as more roadway.
 const SURFACE_MATERIAL: Record<string, string> = {
   'Paved Road': 'asphalt', 'Paved Alley': 'asphalt', Sidewalk: 'concrete', Pavement: 'concrete', Courtyard: 'courtyard', Trail: 'trail',
+  'Paved Parking': 'parking', 'Paved Driveway': 'concrete', Patio: 'courtyard',
 };
 
 export interface DeepWestGeometry {
@@ -114,6 +118,7 @@ export class DeepWest {
       else if (key.startsWith('surface:')) {
         const kind = SURFACE_MATERIAL[key.slice(8)] ?? 'concrete';
         m = kind === 'asphalt' ? paving(materials.asphalt, 'Deep West road asphalt')
+          : kind === 'parking' ? paving(materials.asphalt, 'Deep West parking-lot asphalt (weathered)', 0xf2efe8, 1.35)
           : kind === 'courtyard' ? paving(materials.concrete, 'Deep West courtyard paving', 0xe8dccb)
           : kind === 'trail' ? paving(materials.concrete, 'Deep West trail surface', 0xc9b48f)
           : paving(materials.concrete, 'Deep West sidewalk concrete');

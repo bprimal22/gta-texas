@@ -39,13 +39,14 @@ browser; `npm start` only starts the server. Stop it with Ctrl+C.
 
 | Key | Action |
 | --- | --- |
-| ↑ / ↓ | Run forward / backward; scooter throttle / brake; fly forward / descend |
-| ← / → | Turn, with the camera following; steer the scooter |
-| Hold W | Take off from foot or scooter / rise; release to hover |
+| ↑ / ↓ | Forward / backward on foot and in flight (flying backward is half speed and keeps facing forward); scooter throttle / brake |
+| ← / → or A / D | Turn (interchangeable), with the camera following; steer the scooter |
+| Hold W | Take off from foot or scooter / rise; release to hold altitude |
+| Hold S | Descend while flying; lands on any clear floor below; release to hold altitude |
+| ↑ + W / ↑ + S | Climb / dive diagonally: the stretched Superman pose pitches along the actual flight path and eases upright only in the last metres of a landing |
 | Shift | Run; boost while flying |
-| Space | Jump on foot; brake on the scooter; climb while flying |
-| F | Get on / off the scooter (clear path needed; stairs need walking) |
-| Hold ↓ in flight | Descend while steering; ease into landing; release to hover |
+| Space | Jump on foot; brake on the scooter |
+| E | Get on / off the scooter (clear path needed; stairs need walking) |
 | V | Campus overview / back to the character |
 | M | Travel map: click a destination (arrives on foot, outdoors under open sky) |
 | Mouse drag, scroll | Look, zoom. Double-click locks the pointer; Esc releases it |
@@ -205,9 +206,9 @@ bridges are rendered as visual-only context beyond walled edges.
   (Overpass query recorded in `tools/extension/downtown-sources.json`), then in a venv with `tools/extension/requirements.txt`
   `python -I tools/extension/bake-downtown.py --raw <raw> --osm <osm.json> --lidar <subset.npz>`,
   `python -I tools/extension/bake-downtown-background.py --raw <bg-raw>` and `python -I tools/extension/downtown-shots.py`.
-  Check: `npm run check:downtown` (36 checks incl. real-Rapier walking/scooter/flight/travel, flight over water,
+  Check: `npm run check:downtown` (43 checks incl. real-Rapier walking/scooter/flight/travel, flight over water,
   landing heights, a shader structure lint — not a GLSL compiler; WebGL compilation is verified in a browser).
-* Review shots: `?shot=<id>` for the 18 ids in `lib/campus/extension/downtown/shots.json` (skyline from the South Mall,
+* Review shots: `?shot=<id>` for the 20 ids in `lib/campus/extension/downtown/shots.json` (skyline from the South Mall,
   north campus and the 100 m flight ceiling; Congress approach and seam; four obliques; routes; riverbank; landmarks).
 
 ### West Campus pass (October 2026)
@@ -409,3 +410,20 @@ needed because Pages canonicalizes that path to `/`.
 The hosted copy needs internet to download its bundled files. For fully offline
 play, download/clone the repository and use `npm start` locally. Neither version
 uses Cesium tokens or streamed provider tiles.
+
+### Flight and streetscape updates (October 23, 2026)
+
+Arrow keys move forward/back and turn; A/D also turn. Hold W to take off/rise, S to descend/land, and E to use the
+scooter. Releasing vertical input holds altitude. Superman flight follows actual velocity and eases upright near a
+landing; the chase camera lifts smoothly while stretched. Run `npm run check:flight` for the focused controls checks.
+
+Downtown now shares the campus tree forms and distance impostors. Heritage facades have varied masonry, storefronts
+and cornices; curtain walls use slimmer, darker framing. Pfluger Bridge has a smooth LiDAR-fitted deck, north spiral
+ramp, girders, piers, railings and lamps. Its main span remains scenery beyond the existing playable shoreline.
+Regenerate its authored data with `python -I tools/extension/bake-pfluger-bridge.py`; references and fit methods are
+in the tool's docstring. Review with `?shot=dt-pfluger-aerial` or `?shot=dt-pfluger-deck`.
+
+West Campus/Guadalupe paving uses measured City 2023 sidewalks, courtyards, patios, driveways and parking areas.
+`python -I tools/extension/bake-b12-paving.py` regenerates the base-world paving; run
+`python -I tools/extension/bake-deep-west-paving.py` after a fresh deep-west bake to add its extra paving surfaces.
+These authoring tools use the cached raw inputs documented in their help/docstrings. Power saver defaults to 30 FPS.

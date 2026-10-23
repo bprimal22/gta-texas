@@ -24,7 +24,11 @@ import { AUSTIN_LATE_MORNING } from '../../lib/campus/render/lighting-presets';
 import type { CampusData, Point, TerrainData } from '../../lib/campus/types';
 import { decodeBackground, DowntownBackground, BackgroundAssetError, HORIZON_Y } from '../../lib/campus/extension/downtown/background';
 import { Terrain } from '../../lib/campus/terrain';
-import { createFacadeMaterial, createGroundMaterial, createTreeMaterial, createWaterMaterial } from '../../lib/campus/extension/downtown/materials';
+import { createFacadeMaterial, createGroundMaterial, createWaterMaterial } from '../../lib/campus/extension/downtown/materials';
+import { treeForms } from '../../lib/campus/vegetation/oak-forms';
+import { loadTreeMaterials } from '../../lib/campus/vegetation/tree-materials';
+import { headlessImpostors } from '../../lib/campus/vegetation/tree-batches';
+import { buildPflugerGeometry, createPflugerMaterials, PFLUGER, pflugerCovers, profileRoughness, type PflugerData, type PflugerGeometry } from '../../lib/campus/extension/downtown/pfluger-bridge';
 
 type Result = { name: string; pass: boolean; detail: unknown };
 function seeded(seed: number) {
@@ -79,6 +83,9 @@ export async function run(root: string) {
   const stub = (name: string, map = true) => Object.assign(new THREE.MeshStandardMaterial({ map: map ? new THREE.Texture() : null }), { name });
   const downtown = new Downtown(geometry, { grass: stub('grass'), asphalt: stub('asphalt'), concrete: stub('concrete'), envMap: null }, decodeMs);
   const buildMs = performance.now() - t1;
+  // Trees: the campus forms / materials / impostors, exactly as CampusGame.commitDowntown passes them.
+  const forms = treeForms(), treeMats = await loadTreeMaterials();
+  downtown.installTrees({ forms, materials: treeMats, impostors: headlessImpostors(forms) });
   const st = downtown.stats as Record<string, number>;
   const trees = data.trees.length / 6;
   check('budgets: draw calls, triangles, colliders, trees, class map, decode+build time',
@@ -440,6 +447,150 @@ export async function run(root: string) {
       && !!bridgeLanding && bridgeLanding.landed && Math.abs(bridgeLanding.feet - deck!.y) < .3,
     { surfaceY: surf, bedTop: water.bedTop, unguarded, descent, released, shoreTarget, recovery, deck, bridgeLanding });
 
+  // ---------------------------------------------------------------- 6c. James D. Pfluger pedestrian bridge (pfluger-bridge.ts)
+  {
+    const pf = geometry.pfluger, ps = pf.stats, H = PFLUGER.helix, rm = (H.rIn + H.rOut) / 2;
+    const notPlayer = (c: RAPIER.Collider) => c.handle !== player.handle;
+    const hY = (phi: number) => H.yTop + H.slope * (phi - H.phiTop);
+    const hP = (phi: number, r = rm): Point => [H.c[0] + Math.cos(phi * Math.PI / 180) * r, H.c[1] + Math.sin(phi * Math.PI / 180) * r];
+    const pfStats = downtown.stats.pfluger as { drawCalls: number; colliders: number; replacedSoupTriangles: number };
+    // a) identity, soup suppression, budget
+    const bp = geometry.bridges.render.getAttribute('position');
+    let ghost = 0;
+    for (let t = 0; t < bp.count / 3; t++) if (pflugerCovers((bp.getX(t * 3) + bp.getX(t * 3 + 1) + bp.getX(t * 3 + 2)) / 3, (bp.getZ(t * 3) + bp.getZ(t * 3 + 1) + bp.getZ(t * 3 + 2)) / 3, .5)) ghost++;
+    const pfTris = ps.deckTriangles + ps.structureTriangles + ps.infillTriangles;
+    check('Pfluger bridge: CoA OID 9608 modelled; its flat soup polygon removed (no ghost triangles); 3 draw calls, 2 colliders, <= 40k triangles',
+      PFLUGER.oid === 9608 && pfStats.replacedSoupTriangles > 0 && ghost === 0 && pfStats.drawCalls === 3 && pfStats.colliders === 2 && pfTris <= 40_000,
+      { ...ps, triangles: pfTris, replacedSoupTriangles: pfStats.replacedSoupTriangles, ghost, keptSoupTriangles: geometry.bridges.triangles });
+    // b) walkable deck height (Rapier, top surface) vs the LiDAR class-13 reference returns
+    const lid = PFLUGER.lidar.map(([x, z, y, path]) => { const top = down(x, z, y + 15, c => dtHandles.has(c.handle)); return { path, x, z, lidar: y, d: top === null ? 99 : +(top - y).toFixed(2) }; });
+    const ad = lid.map(r => Math.abs(r.d)).sort((a, b) => a - b);
+    check('Pfluger deck: walkable top (Rapier ray) matches LiDAR deck returns of the smooth structural profile (median <= 0.1 m, max <= 0.3 m)',
+      lid.length >= 30 && ad[Math.floor(ad.length / 2)] <= .1 && ad[ad.length - 1] <= .3,
+      { samples: lid.length, median: ad[Math.floor(ad.length / 2)], max: ad[ad.length - 1], worst: lid.sort((a, b) => Math.abs(b.d) - Math.abs(a.d)).slice(0, 4) });
+    // c) continuity: 1 m samples between consecutive LiDAR references of each path and every 2 deg along the helix
+    let gaps = 0, maxStep = 0, samples = 0, helixMax = 0, stepAt: number[] = [];
+    const gapAt: number[][] = [];
+    const dtOnly = (c: RAPIER.Collider) => dtHandles.has(c.handle); // downtown trimeshes only (not the world walls)
+    for (let i = 0; i + 1 < PFLUGER.lidar.length; i++) {
+      const [ax, az, ay, ap] = PFLUGER.lidar[i], [bx, bz, by, bpth] = PFLUGER.lidar[i + 1];
+      if (ap !== bpth || ap === 'helix') continue;
+      const n = Math.ceil(Math.hypot(bx - ax, bz - az)); let prev: number | null = null;
+      for (let k = 0; k <= n; k++) {
+        const t = k / n, x = ax + (bx - ax) * t, z = az + (bz - az) * t, ey = ay + (by - ay) * t, y = down(x, z, ey + 3, dtOnly);
+        samples++;
+        if (y === null || Math.abs(y - ey) > 1) { gaps++; prev = null; if (gapAt.length < 6) gapAt.push([+x.toFixed(1), +z.toFixed(1), +ey.toFixed(2), y === null ? NaN : +y.toFixed(2)]); continue; }
+        if (prev !== null && Math.abs(y - prev) > maxStep) { maxStep = Math.abs(y - prev); stepAt = [+x.toFixed(1), +z.toFixed(1)]; }
+        prev = y;
+      }
+    }
+    for (let phi = H.phiTop - 1; phi > H.phiEnd + 1; phi -= 2) {
+      const [x, z] = hP(phi), y = down(x, z, hY(phi) + 1.2, notPlayer);
+      helixMax = Math.max(helixMax, y === null ? 99 : Math.abs(y - hY(phi)));
+    }
+    check('Pfluger deck continuous: no gaps and no step > 0.25 m between 1 m samples along every path and the helix surface follows its fitted grade at every level',
+      samples > 150 && gaps === 0 && maxStep < .25 && helixMax < .06, { gapAt, stepAt, samples, gaps, maxStepPerMetre: +maxStep.toFixed(3), helixMaxDev: +helixMax.toFixed(3), helixTurns: ps.helixTurns });
+    // d) walk: main deck at the helix junction -> 2 turns down the helix -> off the bottom onto the shore trail
+    const oz = PFLUGER.open.find(o => o.kind === 'helix')!, od = Math.hypot(oz.x - H.c[0], oz.z - H.c[1]);
+    const start: Point = [oz.x + (oz.x - H.c[0]) / od * 1.5, oz.z + (oz.z - H.c[1]) / od * 1.5];
+    const setOn = ([x, z]: Point, y: number) => { body.setTranslation({ x, y: y + .93, z }, true); body.setNextKinematicTranslation({ x, y: y + .93, z }); world.step(); };
+    setOn(start, down(start[0], start[1], H.yTop + 5, notPlayer)!);
+    const hPath: Point[] = [start];
+    for (let phi = H.phiTop - 10; phi > H.phiEnd + 3; phi -= 15) hPath.push(hP(phi));
+    hPath.push(hP(H.phiEnd + 2), hP(H.phiEnd - 6), hP(H.phiEnd - 12));
+    const helixWalk = walk(hPath, 5, 120);
+    const exitGround = downtown.height(helixWalk.end[0], helixWalk.end[2]);
+    // e) railings: push outward/inward on the upper helix turn and across the north connector
+    const radial = (phi: number, sign: number) => {
+      const [x, z] = hP(phi); setOn([x, z], hY(phi));
+      const r = walk([[x, z], [H.c[0] + (x - H.c[0]) * (1 + sign * 2), H.c[1] + (z - H.c[1]) * (1 + sign * 2)]], 6, 5), e = r.end;
+      return { phi, sign, endR: +Math.hypot(e[0] - H.c[0], e[2] - H.c[1]).toFixed(2), dy: +(e[1] - .905 - hY(phi)).toFixed(2) };
+    };
+    const ext = PFLUGER.piers.find(p => p.path === 'A' && !p.water)!; // north connector bent (over land)
+    const across = [1, -1].map(sign => {
+      const y0 = down(ext.x, ext.z, ext.deck + 5, notPlayer)!; setOn([ext.x, ext.z], y0);
+      const r = walk([[ext.x, ext.z], [ext.x + ext.dir[0] * sign * 30, ext.z + ext.dir[1] * sign * 30]], 6, 5);
+      return { sign, off: +Math.hypot(r.end[0] - ext.x, r.end[2] - ext.z).toFixed(2), half: ext.half, dy: +(r.end[1] - .905 - y0).toFixed(2) };
+    });
+    const rails = [radial(-100, 1), radial(-100, -1), radial(-190, 1), radial(-450, -1)];
+    check('Pfluger walking: junction -> down the double helix -> shore trail; railings hold the walker on the deck (helix edges, north connector)',
+      helixWalk.reached && exitGround !== null && Math.abs(helixWalk.end[1] - .905 - exitGround) < .35 && helixWalk.maxDy < .4
+        && rails.every(r => r.endR < H.rOut - .1 && r.endR > H.rIn + .1 && Math.abs(r.dy) < .25) && across.every(a => a.off < a.half && Math.abs(a.dy) < .3)
+        && ps.railLengthM > 600 && ps.lamps >= 20 && ps.planters >= 2 && ps.piers >= 10,
+      { helixWalk, exitGround, rails, across, railLengthM: ps.railLengthM, railSegments: ps.railSegments, lamps: ps.lamps, planters: ps.planters, piers: ps.piers });
+    // f) flight: hold Down from 25 m above the deck and land on it (north connector and the upper helix turn)
+    const landOn = ([x, z]: Point, y: number) => { const r = fly({ x, feet: y + 25, z }, 10, 'landing'); return { at: [x, z], deckY: +y.toFixed(2), landed: r.landed, feet: r.feet }; };
+    const landings = [landOn([ext.x, ext.z], down(ext.x, ext.z, ext.deck + 5, notPlayer)!), landOn(hP(-100), hY(-100))];
+    check('Pfluger flight: landing from above settles on the bridge deck (connector and helix)', landings.every(l => l.landed && Math.abs(l.feet - l.deckY) < .3), landings);
+    // g) smoothness (root review: the LiDAR-per-vertex deck waved and kinked): deck surface along every branch
+    // centreline (raycast, 0.5 m), every deck edge and every railing top; negative controls on the previous noisy heights.
+    type P3 = [number, number, number];
+    const tipsXZ = PFLUGER.open.filter(o => o.kind === 'ground').map(o => [o.x, o.z]);
+    const LIMITS = { main: { grade: .08, second: .02 }, ramp: { grade: .10, second: .02 }, helix: { grade: .06, second: .02 } };
+    const nearTip = (p: P3) => tipsXZ.some(([x, z]) => Math.hypot(p[0] - x, p[2] - z) < 16);
+    const runsOf = (pts: P3[]) => { // split a polyline into main / ramp runs (ramps: within 16 m of a ground landing)
+      const out: { kind: 'main' | 'ramp'; pts: P3[] }[] = [];
+      for (const p of pts) { const kind = nearTip(p) ? 'ramp' : 'main'; const last = out[out.length - 1]; if (last && last.kind === kind) last.pts.push(p); else out.push({ kind, pts: last ? [last.pts[last.pts.length - 1], p] : [p] }); }
+      return out.filter(r => r.pts.length > 4);
+    };
+    const smoothness = (d: PflugerData, g: PflugerGeometry) => {
+      const mesh = new THREE.Mesh(g.deck, new THREE.MeshBasicMaterial({ side: THREE.DoubleSide })); mesh.updateMatrixWorld(true);
+      const rc = new THREE.Raycaster(), dn = new THREE.Vector3(0, -1, 0);
+      const worst: Record<string, { grade: number; second: number; where: string }> = {};
+      let violations = 0;
+      const bad: unknown[] = [];
+      const take = (kind: 'main' | 'ramp' | 'helix', where: string, pts: P3[]) => {
+        const r = profileRoughness(pts), w = (worst[kind] ??= { grade: 0, second: 0, where: '' });
+        if (r.maxGrade > w.grade) { w.grade = r.maxGrade; w.where = where; }
+        w.second = Math.max(w.second, r.maxSecondDiff);
+        if (r.maxGrade > LIMITS[kind].grade || r.maxSecondDiff > LIMITS[kind].second) { violations++; if (bad.length < 8) bad.push({ kind, where, ...r, start: pts[0].map(v => +v.toFixed(1)) }); }
+      };
+      for (const [k, path] of Object.entries(PFLUGER.paths!)) {
+        const pts: P3[] = [];
+        for (let i = 0; i + 1 < path.length; i++) for (let t = 0; t < 1; t += .5) {
+          const x = path[i][0] + (path[i + 1][0] - path[i][0]) * t, z = path[i][2] + (path[i + 1][2] - path[i][2]) * t, y0 = path[i][1];
+          rc.set(new THREE.Vector3(x, y0 + 2, z), dn);
+          const hit = rc.intersectObject(mesh, false).find(h => Math.abs(h.point.y - y0) < 2);
+          if (hit) pts.push([x, hit.point.y, z]);
+        }
+        for (const r of runsOf(pts)) take(r.kind, `centreline ${k}`, r.pts);
+      }
+      // Edges and railing tops are profiled per plan-straight-ish run: split where the outline turns > 35 deg (deck-end
+      // corners), so a corner between a sloping side and a level end edge is not read as a kink.
+      const bends = (pts: P3[]) => {
+        const out: P3[][] = [[pts[0]]];
+        for (let i = 1; i < pts.length; i++) {
+          const cur = out[out.length - 1]; cur.push(pts[i]);
+          if (i + 1 < pts.length) {
+            const a1 = Math.atan2(pts[i][2] - pts[i - 1][2], pts[i][0] - pts[i - 1][0]), a2 = Math.atan2(pts[i + 1][2] - pts[i][2], pts[i + 1][0] - pts[i][0]);
+            const turn = Math.abs(((a2 - a1 + 3 * Math.PI) % (2 * Math.PI)) - Math.PI);
+            if (turn > 35 * Math.PI / 180) out.push([pts[i]]);
+          }
+        }
+        return out;
+      };
+      d.deck.forEach((ring, i) => { for (const b of bends([...ring, ring[0]] as P3[])) for (const r of runsOf(b)) take(r.kind, `deck edge ring ${i}`, r.pts); });
+      g.railTops.forEach((rt, i) => { for (const b of bends(rt as P3[])) for (const r of runsOf(b)) take(r.kind, `railing top ${i}`, r.pts); });
+      const H2 = d.helix, hp: P3[] = [];
+      for (let phi = H2.phiTop; phi >= H2.phiEnd; phi -= 1) { const t = phi * Math.PI / 180, rr = (H2.rIn + H2.rOut) / 2; hp.push([H2.c[0] + Math.cos(t) * rr, H2.yTop + H2.slope * (phi - H2.phiTop), H2.c[1] + Math.sin(t) * rr]); }
+      take('helix', 'helix centreline', hp);
+      return { violations, worst, bad };
+    };
+    const now = smoothness(PFLUGER, pf);
+    let noisyPrev: unknown = 'previous JSON not present (.work)';
+    let noisyPrevFails = true;
+    try {
+      const old = JSON.parse(read('.work/claude-controls-downtown/pfluger/pfluger-bridge-noisy.json').toString()) as PflugerData;
+      const r = smoothness(old, buildPflugerGeometry(old)); noisyPrev = r; noisyPrevFails = r.violations > 0;
+    } catch { /* optional local fixture */ }
+    const rnd2 = seeded(31);
+    const jitter = { ...PFLUGER, deck: PFLUGER.deck.map(r => r.map(p => [p[0], p[1] + (rnd2() - .5) * .24, p[2]] as P3)) } as PflugerData;
+    const synthetic = smoothness(jitter, buildPflugerGeometry(jitter));
+    check('Pfluger smoothness: centrelines, deck edges and railing tops grade <= 0.08 (ramps <= 0.10, helix <= 0.06) over 1.5 m and second difference <= 0.02 per 1 m; FAILS on the previous LiDAR-per-vertex heights and on +-0.12 m vertex noise',
+      now.violations === 0 && noisyPrevFails && synthetic.violations > 0,
+      { limits: LIMITS, now, previousNoisy: noisyPrev, syntheticNoise: { violations: synthetic.violations, worst: synthetic.worst }, profileFit: PFLUGER.profile });
+  }
+
   // ---------------------------------------------------------------- 7. map travel
   const region = combineTravelRegions([downtown.travelRegion]);
 
@@ -467,20 +618,52 @@ export async function run(root: string) {
   const outsideDowntown = !outdoorPoint(campus, [-1100, 2900], region) && !outdoorPoint(campus, [-700, 2700], region);
   check('map travel: lands outdoors on land at downtown destinations; refuses the river and the south bank', travelOk && outsideDowntown, travel);
 
+  // ---------------------------------------------------------------- 7b. trees: campus forms, decor only, trunks collide
+  {
+    const plan = downtown.treePlan!, tb = downtown.trees!;
+    const inGroup = (o: THREE.Object3D) => { let hit = false; downtown.group.traverse(c => { if (c === o) hit = true; }); return hit; };
+    const formKinds = new Map<string, number>();
+    for (const t of plan.placed) { const k = forms[t.form].spec.kind; formKinds.set(k, (formKinds.get(k) ?? 0) + 1); }
+    // Heights: rendered form height x scale vs the LiDAR peak (only clearance-limited trees may be shorter).
+    const lidarH = new Map<string, number>();
+    for (let k = 0; k < data.trees.length; k += 6) lidarH.set(`${data.trees[k]},${data.trees[k + 2]}`, data.trees[k + 3]);
+    let tooTall = 0, matched = 0, overhang = 0;
+    for (const t of plan.placed) {
+      const h = lidarH.get(`${t.x},${t.z}`)!, drawn = forms[t.form].spec.height * t.scale;
+      if (drawn > h + .05 && t.scale > .3501) tooTall++; // the shared 0.35 minimum scale may exceed tiny LiDAR peaks
+      if (Math.abs(drawn - h) <= .05) matched++;
+    }
+    const view = new THREE.PerspectiveCamera(); view.position.set(-600, 2, 2100); view.updateMatrixWorld();
+    downtown.update(view.position, view);
+    const lod = tb.counts.slice();
+    for (const t of plan.placed) overhang += forms[t.form].spec.radius * t.scale > 30 ? 1 : 0;
+    const playableTrunks = plan.playable.filter(Boolean).length;
+    check('trees: every baked canopy peak drawn with campus oak/upright forms in one TreeBatches population (<= 3 draws, scene decor, never ground); only playable trunks collide',
+      plan.placed.length + plan.skipped.noGround === trees && formKinds.size === 2 && !inGroup(tb.group) && downtown.decor.children.includes(tb.group)
+        && (tb.impostor ? 3 : 2) <= 3 && downtown.treeTrunks.length === playableTrunks && playableTrunks > 0
+        && downtown.treeTrunks.every(t => t.height > .4 && t.height <= 3.35 && t.radius >= .12 && t.radius < 1.2) && overhang === 0
+        && lod[0] + lod[1] + lod[2] > 0 && lod[3] > 0 && tooTall === 0 && matched > plan.placed.length * .5,
+      { placed: plan.placed.length, skipped: plan.skipped, kinds: Object.fromEntries(formKinds), reducedByClearance: plan.reduced,
+        conditions: { counted: plan.placed.length + plan.skipped.noGround === trees, kinds: formKinds.size === 2, notGround: !inGroup(tb.group), inDecor: downtown.decor.children.includes(tb.group),
+          trunks: downtown.treeTrunks.length === playableTrunks, trunkShape: downtown.treeTrunks.every(t => t.height > .4 && t.height <= 3.35 && t.radius >= .12 && t.radius < 1.2), overhang: overhang === 0 },
+        trunkRange: [Math.min(...downtown.treeTrunks.map(t => t.height)), Math.max(...downtown.treeTrunks.map(t => t.height)), Math.min(...downtown.treeTrunks.map(t => t.radius)), Math.max(...downtown.treeTrunks.map(t => t.radius))],
+        drawnTallerThanLidar: tooTall, drawnAtLidarHeight: matched, trunkColliders: downtown.treeTrunks.length, lodCounts: lod, draws: tb.impostor ? 3 : 2 });
+  }
+
   // ---------------------------------------------------------------- 8. LOD, disposal
   downtown.update(new THREE.Vector3(-60, 10, 120)); // campus South Mall
   const fromCampus = downtown.visibleLod();
   downtown.update(new THREE.Vector3(-600, 2, 2100));
   const inCore = downtown.visibleLod();
   const skylineAlways = downtown.group.children.filter(o => o.name.startsWith('Downtown skyline')).every(o => o.visible);
-  check('distance LOD: low-rise batches and trees hidden from campus, shown downtown; skyline always drawn',
+  check('distance LOD: low-rise batches hidden from campus, shown downtown; skyline always drawn',
     fromCampus < inCore && skylineAlways, { visibleFromCampus: fromCampus, visibleDowntown: inCore, lowriseDistance: LOWRISE_DISTANCE, lodObjects: st.lodObjects });
   const disposeCount = new Map<THREE.BufferGeometry, number>();
   const watch = (g: THREE.BufferGeometry) => { if (!disposeCount.has(g)) { disposeCount.set(g, 0); g.addEventListener('dispose', () => disposeCount.set(g, disposeCount.get(g)! + 1)); } };
   for (const root of [downtown.group, downtown.decor]) root.traverse(o => { const m = o as THREE.Mesh; if (m.isMesh) watch(m.geometry); });
   downtown.dispose(); downtown.dispose();
   const counts = [...disposeCount.values()];
-  check('dispose: every rendered geometry (terrain, buildings, decks, water, shared tree templates) released exactly once; height/contains null; idempotent',
+  check('dispose: every rendered geometry (terrain, buildings, decks, water, tree batches) released exactly once; height/contains null; idempotent',
     counts.length > 0 && counts.every(n => n === 1) && downtown.height(-500, 2000) === null && !downtown.contains(-500, 2000) && downtown.isDisposed,
     { geometries: counts.length, notOnce: counts.filter(n => n !== 1).length });
 
@@ -539,7 +722,7 @@ export async function run(root: string) {
     lint('facade', createFacadeMaterial(null), ['dtArea', 'dtGlassMask = mask', 'roughnessFactor = mix(roughnessFactor, .18', 'vDtFac = aFac']),
     lint('ground', gm.material, ['dtCls', 'vDtWorld =']),
     lint('water', createWaterMaterial(null), ['vDtW =', 'reflectedLight.indirectSpecular *=']),
-    lint('trees', createTreeMaterial(), []),
+    lint('pfluger infill', createPflugerMaterials().infill, ['pfFade = smoothstep', 'diffuseColor.a = mix']),
   ];
   // Negative control: the exact preview-v2 slip ("float mask = 0.," with shade's declaration lost) must be reported.
   const broken = createFacadeMaterial(null), good = broken.onBeforeCompile.bind(broken);

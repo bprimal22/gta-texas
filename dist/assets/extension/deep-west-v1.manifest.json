@@ -1,7 +1,7 @@
 {
  "asset": "deep-west-v1.bin.gz",
- "assetSha256": "0610c25570e49b256ff55c8252c97b8563e9c6b538bb1ad7736c293556728d41",
- "checksumFnv1aWords": 2789604825,
+ "assetSha256": "d7b33e688876a80071936472ed21687b84cbbcc4594b984871932c78a48d9a4e",
+ "checksumFnv1aWords": 2099593880,
  "status": "runtime-integrated evidence extension; not a survey, not current-age, not 1:1",
  "inputs": {
   "building-footprints-2023.json": {
@@ -71,6 +71,11 @@
   "terrain.json": {
    "sha256": "e9f33e9bb0048f26741eb9bf3f19f5b8a2ed6ef30e3b294f2475739bc22b70e5",
    "file": "terrain.json"
+  },
+  "impervious-cover-2023.json (stage 2)": {
+   "sha256": "67f90dca358b3d4921527ff25753631c0b108b4aca7d8be7aac11219dfd20336",
+   "file": "impervious-cover-2023.json",
+   "source": "https://maps.austintexas.gov/arcgis/rest/services/Shared/PlanimetricsSurvey_1/MapServer/1"
   }
  },
  "heightUnits": {
@@ -1365,7 +1370,10 @@
    "Paved Road",
    "Paved Alley",
    "Pavement",
-   "Courtyard"
+   "Courtyard",
+   "Paved Driveway",
+   "Patio",
+   "Paved Parking"
   ],
   "drapeMetres": 0.04,
   "records": 860,
@@ -10201,7 +10209,5202 @@
    "Courtyard": 3607.86
   },
   "drapeTrianglePairsQueried": 43627,
-  "rule": "clip to owned union, remove included building footprints (courtyard holes kept), per-record difference against higher-priority/earlier records, split only on intersecting terrain triangles (STRtree), constrained Delaunay, y = terrain plane + 0.04 m, fading linearly to 0 over x[-764,-760] so surfaces meet the old seam flush"
+  "rule": "clip to owned union, remove included building footprints (courtyard holes kept), per-record difference against higher-priority/earlier records, split only on intersecting terrain triangles (STRtree), constrained Delaunay, y = terrain plane + 0.04 m, fading linearly to 0 over x[-764,-760] so surfaces meet the old seam flush",
+  "stage2": {
+   "generatedBy": "tools/extension/bake-deep-west-paving.py",
+   "why": "stage 1 never draped City parking, driveways or patios (its filtered input lacked those kinds); they rendered as lawn",
+   "kindToSection": {
+    "Paved Driveway": "Pavement",
+    "Patio": "Courtyard",
+    "Paved Parking": "Paved Parking"
+   },
+   "records": 645,
+   "draped": 645,
+   "cityAreaInUnionByKind": {
+    "Paved Driveway": 27011.5,
+    "Paved Parking": 90651.1,
+    "Patio": 11936.8
+   },
+   "pieceAreaByKind": {
+    "Paved Driveway": 27010.0,
+    "Patio": 11933.6,
+    "Paved Parking": 90648.1
+   },
+   "drapedAreaBySection": {
+    "Pavement": 27010.0,
+    "Courtyard": 11933.6,
+    "Paved Parking": 90648.1
+   },
+   "addedTrianglesBySection": {
+    "Pavement": 25380,
+    "Courtyard": 9271,
+    "Paved Parking": 44029
+   },
+   "details": [
+    {
+     "key": "coa-impervious-2023:2918",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 142.57,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:3521",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 39.698,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:4991",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 39.968,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:10659",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 263.944,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:14483",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 69.883,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:17683",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 33.806,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:30941",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 28.566,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:31535",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 168.346,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:31830",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 44.13,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:35022",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 15.897,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:39176",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 49.664,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:42026",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 11.321,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:43447",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 113.955,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:46878",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 121.966,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:47180",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 65.442,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:53491",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 44.555,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:63295",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 249.845,
+     "clippedFraction": 0.9376,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:65427",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 130.099,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:66058",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 41.557,
+     "clippedFraction": 0.9612,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:77953",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 17.676,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:78017",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 17.329,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:79128",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 72.548,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:94352",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 63.957,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:94353",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 63.069,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:94355",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 7.534,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:94356",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 73.181,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:94357",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 68.048,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:94358",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 20.276,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:94360",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 60.695,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:94361",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 76.538,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:94363",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 32.95,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:94364",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 91.291,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:95851",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 150.469,
+     "clippedFraction": 0.3304,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:95894",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 74.634,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:96088",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 287.69,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:97000",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 69.495,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:106577",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 252.747,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:107064",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 72.04,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:109558",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 63.4,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:109774",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 157.43,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:111160",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 33.894,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:114602",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 16.28,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:128671",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 28.761,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:132911",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 28.892,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:133498",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 52.809,
+     "clippedFraction": 0.9971,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:133504",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 183.311,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:149939",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 83.679,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:150411",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 58.742,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:151748",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 83.6,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:151861",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 136.677,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:162778",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 7.505,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:162806",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 93.048,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:164354",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 205.789,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:172849",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 46.958,
+     "clippedFraction": 0.2537,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:177801",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 29.244,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:194122",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 137.663,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:196855",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 86.26,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:198382",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 95.399,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:198862",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 9.998,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:199821",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 43.046,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:200714",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 198.384,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:208149",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 103.731,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:227025",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 74.917,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:227627",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 119.776,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:227882",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 117.605,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:228397",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 55.762,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:233283",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 44.192,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:238346",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 112.776,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:247098",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 60.441,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:248573",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 70.941,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:251932",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 88.921,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:261595",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 91.614,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:262035",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 388.619,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:263602",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 18.383,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:268132",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 86.26,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:275229",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 157.129,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:275415",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 46.683,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:278639",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 18.438,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:279615",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 28.176,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:282808",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 66.036,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:285127",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 232.4,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:305054",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 37.296,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:305243",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 66.88,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:306230",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 28.1,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:309224",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 73.895,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:319415",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 91.287,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:329063",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 9.117,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:331625",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 58.319,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:331805",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 221.887,
+     "clippedFraction": 0.8775,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:332332",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 215.307,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:333051",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 158.146,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:335577",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 43.602,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:336241",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 35.112,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:340798",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 213.028,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:346554",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 53.746,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:365195",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 185.53,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:377312",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 20.722,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:379889",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 65.492,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:381360",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 640.278,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:382354",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 54.247,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:382694",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 13.744,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:386788",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 54.087,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:398598",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 101.593,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:408827",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 311.365,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:411442",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 79.426,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:414707",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 57.273,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:434590",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 75.256,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:442135",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 48.225,
+     "clippedFraction": 0.8097,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:447329",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 152.205,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:449993",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 194.591,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:451454",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 114.806,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:453441",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 24.434,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:455865",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 80.108,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:457011",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 74.038,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:468462",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 175.907,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:469758",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 19.876,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:469888",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 142.737,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:469935",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 10.087,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:469962",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 41.393,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:471615",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 77.724,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:474033",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 171.879,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:474141",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 137.867,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:476703",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 165.555,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:480514",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 59.278,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:482439",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 110.959,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:482744",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 105.499,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:488954",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 425.49,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:489027",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 221.863,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:491796",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 26.927,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:491900",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 79.651,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:494443",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 39.89,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:494971",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 53.41,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:495006",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 13.643,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:495052",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 11.958,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:495511",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 47.283,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:497036",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 7.537,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:501392",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 60.254,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:508448",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 29.359,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:508450",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 39.167,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:508451",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 51.661,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:508452",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 110.117,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:508539",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 24.23,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:511685",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 142.911,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:511847",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 102.516,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:512999",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 39.259,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:513270",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 242.386,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:514380",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 242.855,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:516343",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 70.666,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:517643",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 99.403,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:517779",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 95.372,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:518479",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 62.818,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:519195",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 33.655,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:521746",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 57.953,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:522087",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 675.92,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:522657",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 40.626,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:523029",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 60.873,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:523691",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 39.063,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:525054",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 103.918,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:532028",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 83.027,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:532897",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 3.957,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:533171",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 102.427,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:533207",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 127.018,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:533594",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 59.713,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:534067",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 119.64,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:535852",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 30.248,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:539141",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 295.577,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:539539",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 105.153,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:539705",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 204.464,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:553139",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 36.078,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:553315",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 169.942,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:554032",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 56.992,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:557254",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 10.891,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:558186",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 37.614,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:558818",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 316.414,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:560262",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 76.694,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:563275",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 331.621,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:563440",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 65.194,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:563546",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 117.562,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:563682",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 151.337,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:565679",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 32.956,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:574987",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 100.605,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:575165",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 91.392,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:575335",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 96.426,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:575420",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 109.242,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:575677",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 137.065,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:576740",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 30.949,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:578095",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 97.164,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:578139",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 18.074,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:578540",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 122.249,
+     "clippedFraction": 0.5898,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:578668",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 84.87,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:579378",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 64.618,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:579910",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 245.948,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:580619",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 31.512,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:583749",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 113.736,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:584322",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 104.486,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:596691",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 51.859,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:598799",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 128.929,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:600899",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 189.888,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:601793",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 117.775,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:605879",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 39.055,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:606381",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 283.937,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:606770",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 37.252,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:608155",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 41.125,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:609083",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 61.991,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:615601",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 12.6,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:616350",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 60.001,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:617391",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 84.2,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:617837",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 24.483,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:618193",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 63.254,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:619841",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 162.059,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:620333",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 37.566,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:621308",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 137.614,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:626723",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 53.933,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:629087",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 152.304,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:629485",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 47.002,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:630432",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 75.08,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:640342",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 50.233,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:640388",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 53.722,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:640486",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 37.756,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:640586",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 34.594,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:643997",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 57.944,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:648938",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 165.393,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:651393",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 60.297,
+     "clippedFraction": 0.2286,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:662039",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 32.966,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:662040",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 38.578,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:662041",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 37.64,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:662108",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 282.012,
+     "clippedFraction": 0.9318,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:662186",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 190.148,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:662409",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 26.76,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:662511",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 120.968,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:662748",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 77.342,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:662774",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 79.417,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:662921",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 258.619,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:664022",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 15.871,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:664204",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 50.926,
+     "clippedFraction": 0.849,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:664281",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 75.571,
+     "clippedFraction": 0.2056,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:667423",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 63.107,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:667574",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 41.572,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:667878",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 48.249,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:672293",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 454.368,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:682370",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 37.013,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:683174",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 96.098,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:684359",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 191.896,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:685343",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 34.844,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:688776",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 31.662,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:689494",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 2.956,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:690656",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 88.556,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:690924",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 14.581,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:691093",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 28.387,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:693732",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 35.42,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:694940",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 148.4,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:695676",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 80.737,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:703280",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 42.536,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:704188",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 94.065,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:704309",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 53.566,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:705735",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 37.754,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:706277",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 54.835,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:707859",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 123.814,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:710571",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 41.807,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:711928",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 41.059,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:711979",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 57.808,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:712174",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 79.416,
+     "clippedFraction": 0.4381,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:712541",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 146.777,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:712670",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 461.186,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:726058",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 38.051,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:728022",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 31.804,
+     "clippedFraction": 0.3917,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:730167",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 41.03,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:731553",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 112.575,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:736531",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 17.633,
+     "clippedFraction": 0.5077,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329061",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 69.809,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329331",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 249.1,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329337",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 47.485,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329376",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 163.515,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329411",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 43.468,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329440",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 93.591,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329449",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 116.515,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329453",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 115.719,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329556",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 103.13,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329608",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 181.944,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329619",
+     "kind": "Paved Driveway",
+     "status": "draped",
+     "pieceArea": 25.187,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:31355",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 90.54,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:37070",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 3.922,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:42945",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 253.438,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:46302",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 7.263,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:46707",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 36.328,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:47399",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 5.537,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:64020",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 140.286,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:74127",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 30.7,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:75202",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 88.218,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:79047",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 62.956,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:81145",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 4.803,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:113970",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 67.755,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:129458",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 11.936,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:129951",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 64.346,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:140332",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 56.642,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:149739",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 45.011,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:150918",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 92.763,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:161607",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 64.293,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:176121",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 48.479,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:196196",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 183.484,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:200489",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 52.738,
+     "clippedFraction": 0.9948,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:201341",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 15.861,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:214480",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 28.561,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:228427",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 47.94,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:234026",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 21.408,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:239556",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 30.718,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:242905",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 25.943,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:244149",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 3.155,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:245999",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 26.415,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:280004",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 53.091,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:281111",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 25.522,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:284917",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 31.501,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:302558",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 28.77,
+     "clippedFraction": 0.1967,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:345388",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 109.009,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:347749",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 9.239,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364123",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 3.862,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364124",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 42.176,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364126",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 11.546,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364127",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 21.843,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364128",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 5.567,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364129",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 8.83,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364130",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 11.655,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364132",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 2.981,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364133",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 19.547,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364134",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 42.814,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364135",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 134.243,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364136",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 9.882,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364137",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 15.242,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364138",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 54.079,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364139",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 30.676,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364286",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 236.436,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:365550",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 40.048,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:369492",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 21.137,
+     "clippedFraction": 0.1166,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:379171",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 68.199,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:383340",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 47.446,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:410761",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 23.886,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:413373",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 15.256,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:431895",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 81.56,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:447353",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 7.404,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:451137",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 13.77,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:454757",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 25.694,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:455403",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 45.42,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:456388",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 2.221,
+     "clippedFraction": 0.0072,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:457087",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 4.61,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:457124",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 17.465,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:457669",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 61.492,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:459222",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 92.435,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:460687",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 56.483,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:469558",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 39.048,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:471149",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 123.83,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:472816",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 38.372,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:473592",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 149.205,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:474880",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 54.361,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:475581",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 239.369,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:478175",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 30.755,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:479113",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 8.123,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:489522",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 97.154,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:489789",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 36.971,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:490201",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 52.679,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:490747",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 22.986,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:496750",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 47.027,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:496888",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 53.075,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:498463",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 27.916,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:500875",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 9.871,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:511517",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 119.174,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:511570",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 52.773,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:512081",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 17.304,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:515144",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 22.757,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:516566",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 32.966,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:517015",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 188.857,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:517070",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 51.819,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:518720",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 47.684,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:521830",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 104.617,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:523230",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 13.935,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:537259",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 12.146,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:537311",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 41.798,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:537398",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 10.06,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:537793",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 5.654,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:539524",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 3.976,
+     "clippedFraction": 0.0949,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:541582",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 35.48,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:544553",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 39.425,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:553837",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 29.166,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:554014",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 61.689,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:554379",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 180.696,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:555557",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 61.673,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:557168",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 148.481,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:557499",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 21.402,
+     "clippedFraction": 0.936,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:560372",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 3.271,
+     "clippedFraction": 0.253,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:560474",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 18.971,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:562813",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 21.624,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:563644",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 289.316,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:565065",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 335.445,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:574199",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 27.181,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:577507",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 15.932,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:579936",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 22.375,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:586590",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 25.321,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:587068",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 45.907,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:595221",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 9.595,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:599003",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 161.875,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:601536",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 15.381,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:603537",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 143.326,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:604973",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 149.677,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:606370",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 57.647,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:615510",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 13.191,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:615605",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 303.67,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:619024",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 23.357,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:621206",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 138.618,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:628989",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 5.252,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:629177",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 55.233,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:630749",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 73.05,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:631460",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 69.98,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:632700",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 64.373,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:640886",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 44.674,
+     "clippedFraction": 0.7782,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:641884",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 25.129,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:642903",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 218.608,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:649320",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 107.939,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:650092",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 4.714,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:650855",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 6.614,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:662015",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 19.943,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:670082",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 36.847,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:670594",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 7.471,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:673034",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 122.614,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:673724",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 19.337,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:673775",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 8.563,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:678142",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 5.123,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:678546",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 11.221,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:678547",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 4.716,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:678548",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 40.519,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:678549",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 30.76,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:678550",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 14.177,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:678552",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 104.609,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:678553",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 85.163,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:678554",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 33.7,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:678555",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 605.056,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:678640",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 171.428,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:681454",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 41.116,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:681455",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 6.357,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:681456",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 42.624,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:681457",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 6.215,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:682108",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 5.388,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:682491",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 281.011,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:682959",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 363.588,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:683426",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 46.072,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:686196",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 154.379,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:686637",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 60.418,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:689417",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 8.268,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:693767",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 41.069,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:703844",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 130.232,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:704489",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 71.202,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:704582",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 71.313,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:705112",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 72.439,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:705226",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 21.524,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:705424",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 26.662,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:705948",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 194.11,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:708369",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 29.978,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:709874",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 13.773,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:711089",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 79.524,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:712022",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 20.006,
+     "clippedFraction": 0.3983,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:712323",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 71.808,
+     "clippedFraction": 0.5829,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:712655",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 137.52,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:713055",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 61.759,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:726512",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 123.947,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:728090",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 17.012,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:729864",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 37.835,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:730326",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 6.212,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:730649",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 123.279,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:731879",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 42.641,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329375",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 51.928,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329542",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 33.378,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329604",
+     "kind": "Patio",
+     "status": "draped",
+     "pieceArea": 141.796,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:17979",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 50.335,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:81828",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 15.667,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:82641",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 437.602,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:96002",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 977.669,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:103970",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 828.173,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:129462",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 730.611,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:129921",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 848.304,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:134057",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 179.007,
+     "clippedFraction": 0.0923,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:145097",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 327.349,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:163288",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1796.339,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:197810",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 865.372,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:228167",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 111.871,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:228168",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 247.36,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:232283",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1001.195,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:241406",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 460.125,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:250750",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 59.832,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:259097",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 70.733,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:259098",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 58.123,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:261964",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1759.792,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:278050",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 47.431,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:342552",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 101.835,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364882",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 571.855,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364912",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1027.871,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:364913",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 462.005,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:365796",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 419.878,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:387303",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 165.607,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:406170",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 148.866,
+     "clippedFraction": 0.6483,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:411220",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 31.351,
+     "clippedFraction": 0.5834,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:413037",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1618.004,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:414360",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 7.906,
+     "clippedFraction": 0.0302,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:430216",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 67.29,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:430637",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1701.292,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:447953",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 915.015,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:452090",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 167.266,
+     "clippedFraction": 0.1933,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:453910",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 230.831,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:455546",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 612.72,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:457208",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 4206.005,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:457496",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 104.656,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:461640",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 328.971,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:468773",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 155.129,
+     "clippedFraction": 0.7197,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:469062",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 151.355,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:469139",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 228.818,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:474078",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 34.929,
+     "clippedFraction": 0.2948,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:474952",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 259.198,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:475269",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1103.574,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:475713",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 214.003,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:477098",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 172.436,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:477148",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 126.38,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:488590",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 573.76,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:489530",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 339.925,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:491737",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1173.315,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:491748",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 293.931,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:492893",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1489.197,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:493499",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1220.457,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:494233",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 39.66,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:495485",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 35.392,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:496575",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 122.933,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:496719",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 293.845,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:512374",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 564.207,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:512407",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 165.627,
+     "clippedFraction": 0.1578,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:512493",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 224.868,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:513014",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 444.225,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:516035",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 455.214,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:519160",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 484.665,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:520304",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 50.257,
+     "clippedFraction": 0.3482,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:521688",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 375.139,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:524254",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 422.801,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:532513",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1258.423,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:532564",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 180.247,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:534128",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 228.993,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:539299",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 48.546,
+     "clippedFraction": 0.1051,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:539979",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 332.994,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:540048",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1711.156,
+     "clippedFraction": 0.7931,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:541676",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 29.984,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:543884",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 49.501,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:544629",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 520.158,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:546582",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 193.248,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:547170",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 82.128,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:553101",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 115.401,
+     "clippedFraction": 0.9151,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:554137",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1064.171,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:554238",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 619.024,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:559457",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 144.868,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:559975",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 308.739,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:563762",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 163.177,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:576100",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1067.421,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:577087",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 196.508,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:577845",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 463.036,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:580005",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 32.772,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:583279",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 396.575,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:583897",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 145.778,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:583903",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 164.176,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:595770",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1294.088,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:595888",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1946.42,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:596226",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 4232.619,
+     "clippedFraction": 0.8326,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:596512",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 457.288,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:599829",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 97.502,
+     "clippedFraction": 0.6162,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:603409",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1299.699,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:604043",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 119.499,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:606627",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 330.647,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:616698",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 5915.897,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:616755",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 619.775,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:617030",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 325.986,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:617360",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 819.77,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:619553",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 403.093,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:620181",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 900.77,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:625930",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 146.174,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:626967",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 169.647,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:628231",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1133.484,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:628346",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 103.3,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:630864",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 251.55,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:630874",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 716.436,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:632656",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 75.107,
+     "clippedFraction": 0.6935,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:633105",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 233.675,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:640433",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 987.828,
+     "clippedFraction": 0.9399,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:640491",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 290.692,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:640590",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 121.732,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:640817",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 277.143,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:642548",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 515.037,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:642560",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 189.444,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:642952",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 30.738,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:643331",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 393.284,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:644262",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 411.346,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:644398",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 802.155,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:645126",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 562.627,
+     "clippedFraction": 0.9532,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:645723",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 47.547,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:647205",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 178.469,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:650901",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 159.76,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:663609",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 904.709,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:663645",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 84.506,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:663902",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 119.528,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:664692",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 209.129,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:668304",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 291.869,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:668378",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 279.534,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:670820",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 115.044,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:671183",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 351.564,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:674058",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 85.199,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:682025",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 446.655,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:682067",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1357.899,
+     "clippedFraction": 0.8063,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:682221",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 277.708,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:682645",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 132.968,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:683395",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 265.542,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:693282",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 210.791,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:693361",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 477.99,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:703459",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 848.229,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:703661",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 315.775,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:704065",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 163.614,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:704458",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 343.164,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:704648",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 356.978,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:705931",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 480.432,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:707783",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 425.934,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:708566",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 571.359,
+     "clippedFraction": 0.9329,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:710074",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 45.544,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:710416",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 165.476,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:710815",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 179.874,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:710865",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 165.449,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:712062",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 120.523,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:724939",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1096.362,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:725144",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 577.386,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:725660",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 6.16,
+     "clippedFraction": 0.0251,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:725661",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 196.58,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:725976",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 182.299,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:729373",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 382.138,
+     "clippedFraction": 0.7859,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:729743",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 52.15,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:736011",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 803.152,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:736368",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 151.819,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1328979",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 487.442,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329035",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1488.583,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329132",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 297.87,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329162",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 941.944,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329278",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 1144.388,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329388",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 298.393,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329492",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 827.684,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329513",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 281.554,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329553",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 353.065,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    },
+    {
+     "key": "coa-impervious-2023:1329565",
+     "kind": "Paved Parking",
+     "status": "draped",
+     "pieceArea": 231.553,
+     "clippedFraction": 1.0,
+     "orphanHoles": 0
+    }
+   ],
+   "rule": "stage-1 rule on the shipped terrain: clip to union, minus included footprints and all stage-1 surfaces, per-record difference in priority order (driveway, patio, parking), slivers < 0.3 m opened away, split on intersecting terrain triangles, constrained Delaunay, y = terrain plane + drape fading to 0 over the seam strip",
+   "notDraped": "Median, Uncovered/Covered Deck, pools, Recreation Court/Ball Field, unpaved kinds, Miscellaneous stay lawn"
+  }
  },
  "architecture": {
   "measured": [
@@ -10240,5 +15443,10 @@
   "d40-orbit-southeast",
   "d40-orbit-northeast",
   "d40-orbit-northwest"
- ]
+ ],
+ "stage1Asset": {
+  "sha256": "0610c25570e49b256ff55c8252c97b8563e9c6b538bb1ad7736c293556728d41",
+  "checksumFnv1aWords": 2789604825,
+  "bytes": 2122085
+ }
 }

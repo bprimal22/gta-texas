@@ -1,8 +1,13 @@
 import * as THREE from 'three';
 import { decodeDowntown, type DowntownBuilding, type DowntownData, type StripSeamSource } from './format';
 import { DowntownBounds } from './bounds';
-import { bridgeGeometry, buildingChunk, DowntownTerrain, rangeRaycast, terrainChunk, terrainRaycast, treeTemplate, waterGeometry } from './geometry';
-import { createFacadeMaterial, createGroundMaterial, createTreeMaterial, createWaterMaterial } from './materials';
+import { bridgeGeometry, buildingChunk, DowntownTerrain, rangeRaycast, terrainChunk, terrainRaycast, waterGeometry } from './geometry';
+import { createFacadeMaterial, createGroundMaterial, createWaterMaterial } from './materials';
+import type { TreeForm } from '../../vegetation/oak-forms';
+import type { TreeMaterials } from '../../vegetation/tree-materials';
+import type { ImpostorSet, TreeBatches } from '../../vegetation/tree-batches';
+import { buildPflugerGeometry, createPflugerMaterials, pflugerCovers, type PflugerGeometry } from './pfluger-bridge';
+import { downtownTreeBatches, planDowntownTrees, type DowntownTreePlan } from './trees';
 
 /** Downtown Austin extension: Capitol strip seam (z = 1536) south to the Lady Bird Lake shoreline,
  * Lamar/Shoal Creek (x = -1760) east to the I-35 southbound frontage road. Same-origin, fail-closed:
@@ -10,9 +15,9 @@ import { createFacadeMaterial, createGroundMaterial, createTreeMaterial, createW
 export const DOWNTOWN_URL = '/assets/extension/downtown-v1.bin.gz';
 /** Render chunks (m): terrain, buildings and trees are grouped per 512 m square for frustum culling. */
 export const RENDER_CHUNK = 512;
-/** Low-rise batches and trees are hidden beyond this camera distance (the skyline batches never are). */
+/** Low-rise batches are hidden beyond this camera distance (the skyline batches never are). Trees use the campus
+ * canopy LODs (CANOPY_LODS: impostors out to 1.5 km). */
 export const LOWRISE_DISTANCE = 1400;
-export const TREE_DISTANCE = 1500;
 
 export interface DowntownMaterials {
   /** Borrowed campus materials (never disposed here). */
@@ -27,6 +32,10 @@ export interface DowntownGeometry {
   bounds: DowntownBounds;
   chunks: { key: string; center: THREE.Vector3; terrain: ReturnType<typeof terrainChunk>; buildings: ReturnType<typeof buildingChunk> }[];
   bridges: ReturnType<typeof bridgeGeometry>;
+  /** James D. Pfluger Pedestrian Bridge (pfluger-bridge.ts); its flat City polygon is removed from `bridges`. */
+  pfluger: PflugerGeometry;
+  /** Baked bridge-soup triangles dropped because the modelled Pfluger bridge replaces them. */
+  pflugerReplacedTriangles: number;
   water: THREE.BufferGeometry;
 }
 
@@ -49,7 +58,11 @@ export function buildDowntownGeometry(data: DowntownData): DowntownGeometry {
     const center = new THREE.Vector3(m.rect.xmin + (cx + .5) * RENDER_CHUNK, 0, m.rect.zmin + (cz + .5) * RENDER_CHUNK);
     chunks.push({ key, center, terrain: t, buildings: buildingChunk(groups.get(key) ?? []) });
   }
-  return { data, terrain, bounds, chunks, bridges: bridgeGeometry(data), water: waterGeometry(data) };
+  // The baked soup's flat Pfluger polygon (OID 9608) is replaced by the modelled bridge: drop those triangles.
+  const src = data.bridges, keep: number[] = [];
+  for (let t = 0; t < src.length / 9; t++) if (!pflugerCovers((src[t * 9] + src[t * 9 + 3] + src[t * 9 + 6]) / 3, (src[t * 9 + 2] + src[t * 9 + 5] + src[t * 9 + 8]) / 3)) keep.push(t);
+  const soup = { ...data, bridges: Float32Array.from(keep.flatMap(t => Array.from(src.subarray(t * 9, t * 9 + 9)))), bridgeCollide: Uint8Array.from(keep.map(t => data.bridgeCollide[t])) };
+  return { data, terrain, bounds, chunks, bridges: bridgeGeometry(soup), pfluger: buildPflugerGeometry(), pflugerReplacedTriangles: src.length / 9 - keep.length, water: waterGeometry(data) };
 }
 
 export class Downtown {
@@ -60,8 +73,11 @@ export class Downtown {
   readonly bounds: DowntownBounds;
   /** Trimesh sources: exactly rendered triangles (terrain/bridge collidable subsets, building batches). */
   readonly colliders: { name: string; position: Float32Array; index: Uint32Array }[] = [];
-  /** Trunk capsules for trees inside the playable area (visible trunks). */
+  /** Trunk capsules for trees inside the playable area (visible trunks); filled by installTrees. */
   readonly treeTrunks: { x: number; y: number; z: number; height: number; radius: number }[] = [];
+  /** Campus-form tree population (scene decor, never ground); null until installTrees with campus vegetation. */
+  trees: TreeBatches | null = null;
+  treePlan: DowntownTreePlan | null = null;
   readonly travelRegion: { contains: (p: Point) => boolean; footprints: Point[][][]; outdoor: (p: Point) => boolean };
   readonly stats: Record<string, unknown>;
   private readonly ownMaterials: THREE.Material[] = [];
@@ -96,9 +112,8 @@ export class Downtown {
       classMap: data.classMap, width: meta.classMap.w, height: meta.classMap.h, origin: [meta.rect.xmin, meta.rect.zmin], res: meta.classMap.res });
     const facade = createFacadeMaterial(materials.envMap);
     const water = createWaterMaterial(materials.envMap);
-    const trees = createTreeMaterial();
     const deck = materials.concrete.clone(); deck.name = 'Downtown bridge decks'; deck.side = THREE.DoubleSide;
-    this.ownMaterials.push(ground.material, facade, water, trees, deck);
+    this.ownMaterials.push(ground.material, facade, water, deck);
     this.ownTextures.push(ground.texture);
     let terrainTriangles = 0, buildingTriangles = 0, drawCalls = 0, colliderTriangles = 0, visualOnlyTriangles = 0;
     for (const c of built.chunks) {
@@ -135,39 +150,25 @@ export class Downtown {
       if (position.length) this.colliders.push({ name: 'Downtown bridge decks', position, index: Uint32Array.from({ length: position.length / 3 }, (_, i) => i) });
       colliderTriangles += b.colliderTriangles;
     }
+    // Pfluger bridge: walkable deck (+ land supports) in the ground group == its collider; railings collide (no walking
+    // off over the water); girders, water piers, rails, lamps, planters and the mesh infill are decor.
+    const pf = built.pfluger, pfm = createPflugerMaterials();
+    this.ownMaterials.push(pfm.solid, pfm.infill); this.ownTextures.push(...pfm.textures);
+    const pfDeck = new THREE.Mesh(pf.deck, pfm.solid);
+    pfDeck.name = 'Pfluger bridge deck (CoA OID 9608, LiDAR)'; pfDeck.castShadow = true; pfDeck.receiveShadow = true;
+    this.group.add(pfDeck);
+    const pfStructure = new THREE.Mesh(pf.structure, pfm.solid);
+    pfStructure.name = 'Pfluger bridge girders, piers, railings, lamps'; pfStructure.castShadow = true; pfStructure.receiveShadow = true;
+    const pfInfill = new THREE.Mesh(pf.infill, pfm.infill);
+    pfInfill.name = 'Pfluger bridge railing mesh infill';
+    this.decor.add(pfStructure, pfInfill); drawCalls += 3;
+    this.lod.push({ object: pfInfill, center: pf.infill.boundingSphere!.center.clone(), distance: 700 });
+    this.colliders.push({ name: 'Pfluger bridge deck', ...pf.deckCollider }, { name: 'Pfluger bridge railings', ...pf.railCollider });
+    colliderTriangles += pf.deckCollider.index.length / 3 + pf.railCollider.index.length / 3;
     const waterMesh = new THREE.Mesh(built.water, water);
     waterMesh.name = 'Lady Bird Lake (static water)'; waterMesh.receiveShadow = true;
     this.decor.add(waterMesh); drawCalls++;
-    // Trees: one trunk + one crown instanced mesh per render chunk.
-    const [trunkGeo, crownGeo] = treeTemplate();
-    const perChunk = new Map<string, number[]>();
-    const tr = data.trees, nTrees = tr.length / 6;
-    for (let i = 0; i < nTrees; i++) {
-      const key = `${Math.floor((tr[i * 6] - meta.rect.xmin) / RENDER_CHUNK)},${Math.floor((tr[i * 6 + 2] - meta.rect.zmin) / RENDER_CHUNK)}`;
-      const l = perChunk.get(key); if (l) l.push(i); else perChunk.set(key, [i]);
-    }
-    const mtx = new THREE.Matrix4(), q = new THREE.Quaternion(), col = new THREE.Color();
-    for (const [key, list] of perChunk) {
-      const trunks = new THREE.InstancedMesh(trunkGeo, trees, list.length), crowns = new THREE.InstancedMesh(crownGeo, trees, list.length);
-      trunks.name = `Downtown tree trunks ${key}`; crowns.name = `Downtown tree crowns ${key}`;
-      list.forEach((i, k) => {
-        const x = tr[i * 6], y = tr[i * 6 + 1], z = tr[i * 6 + 2], h = tr[i * 6 + 3], r = tr[i * 6 + 4];
-        const seed = Math.abs(Math.sin(x * 12.9898 + z * 78.233)) % 1;
-        const crownH = Math.min(h * .62, r * 2.1), trunkH = Math.max(1.6, h - crownH * .8), thick = THREE.MathUtils.clamp(h / 10, .7, 1.8);
-        q.setFromAxisAngle(new THREE.Vector3(0, 1, 0), seed * Math.PI * 2);
-        trunks.setMatrixAt(k, mtx.compose(new THREE.Vector3(x, y - .2, z), q, new THREE.Vector3(thick, trunkH + .2, thick)));
-        crowns.setMatrixAt(k, mtx.compose(new THREE.Vector3(x, y + h - crownH / 2, z), q, new THREE.Vector3(r, crownH / 2, r * (.85 + .3 * seed))));
-        crowns.setColorAt(k, col.setRGB(.85 + .3 * seed, .9 + .25 * ((seed * 7) % 1), .8 + .2 * seed));
-        trunks.setColorAt(k, col.setRGB(1, 1, 1));
-        if (tr[i * 6 + 5] === 1) this.treeTrunks.push({ x, y, z, height: Math.min(trunkH, 3.2), radius: .2 * thick });
-      });
-      for (const im of [trunks, crowns]) {
-        im.castShadow = true; im.receiveShadow = true; im.computeBoundingSphere();
-        this.decor.add(im); drawCalls++;
-        this.lod.push({ object: im, center: im.boundingSphere!.center.clone(), distance: TREE_DISTANCE + im.boundingSphere!.radius });
-      }
-    }
-    this.ownGeometries.push(trunkGeo, crownGeo);
+    const nTrees = data.trees.length / 6;
     // Travel: inside the playable polygon, 2 m from walls, not within 0.8 m of a footprint, not in inlet water.
     this.footprints = meta.buildings.filter(bb => !bb.visual).map(bb => bb.tiers[0].r as Point[][]);
     this.footprints.forEach((rings, i) => {
@@ -188,8 +189,9 @@ export class Downtown {
     };
     this.stats = {
       loaded: true, rect: meta.rect, playableAreaM2: Math.round(polygonArea(meta.playable)), buildings: meta.buildings.length,
-      landmarks: meta.buildings.filter(bb => bb.lm).map(bb => bb.lm), trees: nTrees, treeColliders: this.treeTrunks.length,
-      terrainTriangles, buildingTriangles, bridgeTriangles: b.triangles, waterTriangles: built.water.getAttribute('position').count / 3,
+      landmarks: meta.buildings.filter(bb => bb.lm).map(bb => bb.lm), trees: nTrees, treeColliders: 0, treeForms: false,
+      terrainTriangles, buildingTriangles, bridgeTriangles: b.triangles,
+      pfluger: { ...pf.stats, replacedSoupTriangles: built.pflugerReplacedTriangles, drawCalls: 3, colliders: 2 }, waterTriangles: built.water.getAttribute('position').count / 3,
       drawCalls, colliderTriangles, visualOnlyBuildingTriangles: visualOnlyTriangles, colliders: this.colliders.length, walls: meta.walls.length, barriers: meta.barriers.length,
       lodObjects: this.lod.length,
       seam: { z: meta.seam.z, x0: meta.seam.x0, x1: meta.seam.x1, matchedStripVertices: data.seam.matched, maxAbsDelta: data.seam.maxAbsDelta },
@@ -216,13 +218,28 @@ export class Downtown {
     return !l.some(i => nearFootprint([x, z], this.footprints[i]));
   }
 
+  /** Street/park trees with the campus forms, materials and impostors (borrowed; owned by the campus vegetation).
+   * Call once before the game creates colliders from treeTrunks. Without campus vegetation no trees are drawn and
+   * none collide (an invisible trunk would be worse than a missing tree). */
+  installTrees(vegetation: { forms: TreeForm[]; materials: TreeMaterials; impostors: ImpostorSet | null } | null) {
+    if (this.disposed || this.trees || !vegetation) return;
+    const plan = planDowntownTrees(this.built.data, vegetation.forms, (x, z) => this.built.terrain.height(x, z));
+    this.treePlan = plan;
+    this.trees = downtownTreeBatches(plan, vegetation.forms, vegetation.materials, vegetation.impostors);
+    this.decor.add(this.trees.group);
+    for (const c of plan.capsules) this.treeTrunks.push({ x: c.a.x, y: c.a.y, z: c.a.z, height: c.b.y - c.a.y, radius: c.radius });
+    Object.assign(this.stats, { treeColliders: this.treeTrunks.length, treeForms: true, treePlaced: plan.placed.length,
+      treeReducedScale: plan.reduced, treeSkipped: plan.skipped, treeDraws: this.trees.impostor ? 3 : 2 });
+  }
+
   /** Terrain height where downtown owns (x, z): inside its rectangle south of the seam; null elsewhere. */
   height(x: number, z: number) { return this.disposed ? null : this.built.terrain.height(x, z); }
   contains(x: number, z: number) { return !this.disposed && this.bounds.contains(x, z); }
 
   /** Distance LOD: low-rise batches and trees beyond their distance are hidden (skyline batches always draw). */
-  update(camera: THREE.Vector3) {
+  update(camera: THREE.Vector3, view?: THREE.Camera) {
     for (const l of this.lod) l.object.visible = Math.hypot(camera.x - l.center.x, camera.z - l.center.z) < l.distance;
+    if (view && !this.disposed) this.trees?.update(view);
   }
   visibleLod() { return this.lod.filter(l => l.object.visible).length; }
 
@@ -268,6 +285,8 @@ export class Downtown {
     if (this.disposed) return;
     this.disposed = true;
     this.group.removeFromParent(); this.decor.removeFromParent();
+    // Tree batches own only their BatchedMesh buffers; forms, materials and impostors belong to the campus vegetation.
+    this.trees?.dispose(); this.trees = null;
     // Each geometry has exactly one owner: ground meshes (terrain/buildings/decks) and the water mesh own theirs; the
     // shared tree templates are disposed once via ownGeometries; instanced meshes only release instance buffers.
     this.group.traverse(o => { if ((o as THREE.Mesh).isMesh) (o as THREE.Mesh).geometry.dispose(); });
@@ -327,6 +346,7 @@ export async function loadDowntown(options: { materials: DowntownMaterials; stri
   } catch (error) {
     for (const c of built.chunks) c.terrain.render?.dispose();
     built.bridges.render.dispose(); built.bridges.collider.dispose(); built.water.dispose();
+    built.pfluger.deck.dispose(); built.pfluger.structure.dispose(); built.pfluger.infill.dispose();
     throw error;
   }
 }

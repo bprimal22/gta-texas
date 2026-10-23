@@ -119,13 +119,99 @@ function capTriangles(rings: PolygonRings) {
   return THREE.ShapeUtils.triangulateShape(contour, holes).map(t => t.map(k => all[k]));
 }
 
+// Facade looks: deterministic per-building variation at build time (no re-bake). The baked, photo-derived palette stays
+// the source of each building's hue family; the heritage low-rise (code 5) is remapped onto Austin's Congress Ave /
+// E 6th St materials (red and brown brick, buff brick, cream limestone, painted brick/stucco), pale albedos are tamed
+// (the campus sun + ACES blew them out to white), glass is darkened, and a per-building variant/seed and the tier
+// height are packed into aFac for the shader (materials.ts):
+//   aFac.z = code + (seed - .5) * .8, seed = (variant + r) / 8 (variant 0..7, r in [.05, .95])
+//   aFac.w = floorHeight + 16 * round(tierTopAboveGround * 4)       (floorHeight < 16; 0 = no tier top, e.g. crowns)
+const lum = (c: THREE.Color) => .2126 * c.r + .7152 * c.g + .0722 * c.b;
+/** Soft-knee albedo compression in linear space (hue kept): l > knee -> knee + (l - knee) * slope. */
+function tame(c: THREE.Color, knee: number, slope: number) { const l = lum(c); if (l > knee) c.multiplyScalar((knee + (l - knee) * slope) / l); return c; }
+/** Stable uniform [0,1) from a building hash and a stream index. */
+function unit(h: number, k: number) {
+  let x = Math.imul(h ^ Math.imul(k + 1, 0x9e3779b1), 0x85ebca6b) >>> 0;
+  x ^= x >>> 13; x = Math.imul(x, 0xc2b2ae35) >>> 0; x ^= x >>> 16;
+  return (x >>> 0) / 4294967296;
+}
+export const packFacadeCode = (code: number, variant: number, r: number) => code + ((variant + .05 + .9 * r) / 8 - .5) * .8;
+export const packFloorHeight = (fh: number, topAboveGround: number) => fh + 16 * Math.max(0, Math.min(1600, Math.round(topAboveGround * 4)));
+// Heritage low-rise materials (sRGB), from the downtown reference photos (Congress Ave / Sixth Street Historic District).
+const BRICK: RGB[] = [[148, 74, 54], [128, 62, 46], [160, 92, 64], [112, 66, 52], [174, 108, 76], [138, 84, 66]];
+const BUFF: RGB[] = [[192, 160, 116], [178, 142, 100], [200, 172, 130], [168, 134, 98]];
+const LIMESTONE: RGB[] = [[202, 188, 156], [188, 174, 142], [212, 198, 168], [178, 166, 140]];
+const PAINTED: RGB[] = [[214, 198, 164], [204, 176, 112], [140, 152, 120], [112, 128, 140], [172, 96, 70], [64, 86, 70],
+  [76, 78, 80], [220, 214, 198], [198, 140, 118], [88, 128, 124], [186, 170, 150], [150, 60, 52]];
+const OLD_GLASS: RGB[] = [[30, 34, 38], [26, 32, 32], [36, 36, 34], [28, 30, 36]];
+const HOUSE_KINDS = new Set(['house', 'detached', 'shed', 'carport']);
+
+interface TierLook { w: THREE.Color; a: THREE.Color; z: number; fh: number }
+function tierLook(b: DowntownBuilding, t: DowntownTier, code: number, h: number): TierLook {
+  const r = (k: number) => unit(h, k), pick = (p: RGB[], k: number) => p[Math.floor(r(k) * p.length) % p.length];
+  const landmark = !!b.lm || b.src === 'landmark';
+  let w = lin(t.w), a = lin(t.a), variant = 0;
+  const reddish = t.w[0] - t.w[2] > 50;
+  if (code === FACADE_CODE.historic) {
+    // variant = material (0 brick, 1 limestone ashlar, 2 stucco/painted, 3 painted brick) + 4 for houses (no storefront).
+    const p = r(1);
+    let mat: number, pal: RGB[];
+    if (reddish) { if (p < .62) { mat = 0; pal = BRICK; } else { mat = r(2) < .6 ? 3 : 2; pal = PAINTED; } }
+    else if (p < .26) { mat = 0; pal = BUFF; }
+    else if (p < .56) { mat = 1; pal = LIMESTONE; }
+    else { mat = r(2) < .45 ? 3 : 2; pal = PAINTED; }
+    w = lin(pick(pal, 3)); a = lin(pick(OLD_GLASS, 4));
+    variant = mat + (HOUSE_KINDS.has(b.kind) ? 4 : 0);
+  } else if (code === FACADE_CODE.punched || code === FACADE_CODE.ribbon) {
+    // variant: window proportion 0..3 (+4 = brick coursing for the brick-red mid-rise palette).
+    variant = Math.floor(r(5) * 4) + (reddish && !landmark ? 4 : 0);
+  }
+  if (!landmark) {
+    // Local distinction: brightness and a slight warm/cool shift per building; glass a little darker and varied.
+    const s = r(6) - .5;
+    w.multiplyScalar(.9 + .2 * r(7)); w.r *= 1 + .08 * s; w.b *= 1 - .08 * s;
+    a.multiplyScalar(.74 + .18 * r(8));
+  } else a.multiplyScalar(.9);
+  tame(w, landmark ? .34 : .28, landmark ? .62 : .5);
+  // Mid-rise/tower floor rhythm varies a little per building (estimated storeys; landmark rhythm unchanged).
+  const fh = FLOOR_HEIGHT[code] * (landmark || code === FACADE_CODE.historic ? 1 : .95 + .1 * r(9));
+  return { w, a, z: packFacadeCode(code, variant, r(10)), fh };
+}
+
+/** Projecting cornice on heritage low-rise (code 5) street walls: a cove (wall -> d out) and a vertical fascia, sharing
+ * the wall's u so the shader paints them as the cornice band, closed on top by a roof-coloured cap at the roof height
+ * (so a downward ray meets the same up-facing surface in the render and in the two-sided collider). Mitered with the
+ * neighbouring edges; 6 triangles per edge. */
+const CORNICE_MIN_EDGE = 6;
+function addCornice(batch: FacadeBatch, a: THREE.Vector2, b: THREE.Vector2, nPrev: THREE.Vector2, n: THREE.Vector2, nNext: THREE.Vector2,
+  top: number, g0: number, u: number, len: number, look: TierLook, fw: number, roofColor: THREE.Color) {
+  const tall = top - g0 >= 6, d = tall ? .36 : .26, cove = tall ? .75 : .6, fascia = tall ? .3 : .24;
+  const miter = (m: THREE.Vector2) => { const k = 1 + m.dot(n); return k < .5 ? n.clone().multiplyScalar(d) : m.clone().add(n).multiplyScalar(d / k); };
+  const oa = a.clone().add(miter(nPrev)), ob = b.clone().add(miter(nNext));
+  const out = new THREE.Vector3(n.x, 0, n.y);
+  const P = (q: THREE.Vector2, y: number) => new THREE.Vector3(q.x, y, q.y);
+  const F = (uu: number, y: number): [number, number, number, number] => [uu, y - g0, look.z, fw];
+  const y0 = top - cove, y1 = top - fascia;
+  batch.quad([P(a, y0), P(b, y0), P(ob, y1), P(oa, y1)], [F(u, y0), F(u + len, y0), F(u + len, y1), F(u, y1)], look.w, look.a, out);
+  batch.quad([P(oa, y1), P(ob, y1), P(ob, top), P(oa, top)], [F(u, y1), F(u + len, y1), F(u + len, top), F(u, top)], look.w, look.a, out);
+  const R = (q: THREE.Vector2): [number, number, number, number] => [q.x, q.y, 0, 4];
+  batch.quad([P(a, top), P(b, top), P(ob, top), P(oa, top)], [R(a), R(b), R(ob), R(oa)], roofColor, roofColor, UP);
+}
+
 /** Massing of one tier: walls from `bottom` to the (flat or planar) top, a roof cap and, for raised tiers, a soffit. */
-function addTier(batch: FacadeBatch, b: DowntownBuilding, t: DowntownTier, roofColor: THREE.Color) {
+function addTier(batch: FacadeBatch, b: DowntownBuilding, t: DowntownTier, roofColor: THREE.Color, h: number) {
   const g0 = b.g[0], bottom = t.b ?? g0 - .6, top = topOf(t);
-  const code = FACADE_CODE[t.f] ?? 1, fh = FLOOR_HEIGHT[code];
-  const w = lin(t.w), a = lin(t.a);
+  const code = FACADE_CODE[t.f] ?? 1;
+  const look = tierLook(b, t, code, h), w = look.w, a = look.a, z = look.z, fw = packFloorHeight(look.fh, t.y - g0);
+  const cornice = code === FACADE_CODE.historic && !b.visual && t.b === undefined && !t.pl && t.y - g0 >= 4;
   t.r.forEach((ring, ri) => {
     const ccw = signedArea(ring) > 0, outwardSign = (ccw ? 1 : -1) * (ri ? -1 : 1);
+    // Outward unit normals per edge (null for degenerate edges), for the cornice miters.
+    const normals = ring.map(([ax, az], i) => {
+      const [bx, bz] = ring[(i + 1) % ring.length], len = Math.hypot(bx - ax, bz - az);
+      return len < .02 ? null : new THREE.Vector2((bz - az) * outwardSign / len, -(bx - ax) * outwardSign / len);
+    });
+    const near = (i: number, step: number) => { for (let k = 1; k <= ring.length; k++) { const q = normals[((i + step * k) % ring.length + ring.length) % ring.length]; if (q) return q; } return normals[i]!; };
     let u = 0;
     for (let i = 0; i < ring.length; i++) {
       const [ax, az] = ring[i], [bx, bz] = ring[(i + 1) % ring.length];
@@ -134,8 +220,10 @@ function addTier(batch: FacadeBatch, b: DowntownBuilding, t: DowntownTier, roofC
       const out = new THREE.Vector3((bz - az) * outwardSign, 0, -(bx - ax) * outwardSign).normalize();
       const ta = top(ax, az), tb = top(bx, bz);
       const p = [new THREE.Vector3(ax, bottom, az), new THREE.Vector3(bx, bottom, bz), new THREE.Vector3(bx, tb, bz), new THREE.Vector3(ax, ta, az)];
-      const f: [number, number, number, number][] = [[u, bottom - g0, code, fh], [u + len, bottom - g0, code, fh], [u + len, tb - g0, code, fh], [u, ta - g0, code, fh]];
+      const f: [number, number, number, number][] = [[u, bottom - g0, z, fw], [u + len, bottom - g0, z, fw], [u + len, tb - g0, z, fw], [u, ta - g0, z, fw]];
       batch.quad(p, f, w, a, out);
+      if (cornice && ri === 0 && len >= CORNICE_MIN_EDGE)
+        addCornice(batch, new THREE.Vector2(ax, az), new THREE.Vector2(bx, bz), near(i, -1), normals[i]!, near(i, 1), t.y, g0, u, len, look, fw, roofColor);
       u += len;
     }
   });
@@ -150,7 +238,8 @@ function addTier(batch: FacadeBatch, b: DowntownBuilding, t: DowntownTier, roofC
 }
 
 function hash(s: string) { let h = 2166136261; for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619) >>> 0; return h; }
-const ROOFS: RGB[] = [[150, 150, 146], [176, 176, 170], [120, 122, 122], [196, 194, 186], [104, 104, 100]];
+// Membrane, gravel and dark-tar roofs (sRGB); the warm grey entry reads as gravel ballast on heritage parapet roofs.
+const ROOFS: RGB[] = [[150, 150, 146], [176, 176, 170], [120, 122, 122], [196, 194, 186], [104, 104, 100], [138, 128, 116], [84, 86, 88]];
 
 /** Crowns (landmarks.json `crown`): authored, reference-guided ESTIMATES built in the top tier's oriented frame. */
 export function addCrown(batch: FacadeBatch, c: DowntownCrown) {
@@ -216,8 +305,8 @@ export function buildingChunk(buildings: DowntownBuilding[]): BuildingChunk {
     const batch = top >= 30 || b.lm ? major : minor;
     (batch === major ? majorBuildings : minorBuildings).push(b);
     const start = batch.triangles;
-    const roof = lin(ROOFS[hash(b.k) % ROOFS.length]);
-    for (const t of b.tiers) addTier(batch, b, t, roof);
+    const h = hash(b.k), roof = lin(ROOFS[h % ROOFS.length]);
+    for (const t of b.tiers) addTier(batch, b, t, roof, h);
     if (b.crown) addCrown(batch, b.crown);
     const box = new THREE.Box3();
     for (let i = start * 9; i < batch.position.length; i += 3) box.expandByPoint(new THREE.Vector3(batch.position[i], batch.position[i + 1], batch.position[i + 2]));
@@ -295,21 +384,3 @@ export function bridgeGeometry(data: DowntownData) {
 }
 
 export function waterGeometry(data: DowntownData) { return soupGeometry(data.water); }
-
-/** One trunk + crown template; instance matrices from the LiDAR canopy peaks (height, crown radius). */
-export function treeTemplate() {
-  const trunk = new THREE.CylinderGeometry(.14, .2, 1, 6, 1, true).translate(0, .5, 0);
-  const crown = new THREE.IcosahedronGeometry(1, 1);
-  const tc = new THREE.Color().setRGB(.16, .12, .09), cc = new THREE.Color().setRGB(.11, .17, .07);
-  const parts = [trunk, crown].map((g, k) => {
-    const n = g.index ? g.toNonIndexed() : g, p = n.getAttribute('position'), col = new Float32Array(p.count * 3);
-    for (let i = 0; i < p.count; i++) {
-      const c = k ? cc.clone().multiplyScalar(.75 + .45 * (p.getY(i) + 1) / 2) : tc;
-      col.set([c.r, c.g, c.b], i * 3);
-    }
-    n.setAttribute('color', new THREE.BufferAttribute(col, 3));
-    n.deleteAttribute('uv');
-    return n;
-  });
-  return parts;
-}

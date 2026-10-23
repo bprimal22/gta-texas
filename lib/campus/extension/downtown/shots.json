@@ -252,20 +252,20 @@
   "label": "Street route: East 6th Street historic district",
   "kind": "street",
   "position": [
-   -347.35,
-   -7.43,
-   1916.83
+   -261.37,
+   -15.55,
+   2091.24
   ],
   "target": [
-   -120,
-   6,
-   1975
+   -54.67,
+   -14.47,
+   2156.35
   ],
   "fov": 60,
-  "groundY": -9.177,
+  "groundY": -17.303,
   "groundSource": "downtown terrain (baked asset)",
   "focus": null,
-  "note": "Pedestrian view east along 6th Street (low-rise brick)."
+  "note": "Pedestrian view east along East 6th Street from the 300 block (CoA CTN centreline) toward the 500 block: low-rise historic storefronts."
  },
  {
   "id": "dt-riverbank-congress",
@@ -394,5 +394,49 @@
   "groundSource": "downtown terrain (baked asset)",
   "focus": null,
   "note": "Street-level view up the three stacked volumes."
+ },
+ {
+  "id": "dt-pfluger-aerial",
+  "label": "Pfluger pedestrian bridge from over Lady Bird Lake (southeast, 30 m)",
+  "kind": "aerial",
+  "position": [
+   -1700,
+   -4.35,
+   2318
+  ],
+  "target": [
+   -1792,
+   -27,
+   2272
+  ],
+  "fov": 55,
+  "groundY": -34.47,
+  "groundSource": "downtown terrain (baked asset)",
+  "focus": [
+   -1792,
+   -27,
+   2272
+  ],
+  "note": "Double-curve deck, weathering-steel girders and curved twin-column bents (pfluger-bridge.ts); most of the span lies west of x=-1760 over the visual backdrop."
+ },
+ {
+  "id": "dt-pfluger-deck",
+  "label": "On the Pfluger bridge north connector looking south along the deck",
+  "kind": "street",
+  "position": [
+   -1750.5,
+   -23.3,
+   2184
+  ],
+  "target": [
+   -1806,
+   -24.5,
+   2300
+  ],
+  "fov": 60,
+  "groundY": -30.543,
+  "groundSource": "downtown terrain (baked asset); camera stands 1.7 m above the bridge deck (~-25.0)",
+  "focus": null,
+  "note": "Eye height on the deck: tinted concrete with dusty-red bands, grey rails with mesh infill, saucer lamps; the helix to the left."
  }
 ]

@@ -18,6 +18,8 @@ Writes:
 
 Requires numpy + shapely>=2.1 (constrained Delaunay). Run:
   python tools/extension/bake-deep-west.py --raw <deep-west-base-data> --packets <packets>
+Then ALWAYS run stage 2 (tools/extension/bake-deep-west-paving.py): it appends the City parking lots, driveways and
+patios this stage's filtered surface input lacks (they otherwise render as lawn).
 """
 from __future__ import annotations
 
