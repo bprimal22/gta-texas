@@ -54,6 +54,13 @@ const r = await run({ scan: true });
 const { physics, RAPIER, player, scanStand } = r;
 if (!scanStand) { fail('scan stand missing'); process.exit(1); }
 const standIds = new Set(scanStand.colliders.map(c => c.handle));
+// One GPU atlas for both LODs (tools/scans/stand-share-atlas.mjs): every far captured material uses the near map.
+{
+  const lodS = scanStand.group.children.find(o => o.isLOD), maps = level => { const s = new Set(); level.object.traverse(o => { if (o.isMesh) for (const m of [o.material].flat()) if (m.map) s.add(m.map); }); return s; };
+  const nearMaps = maps(lodS.levels[0]), farMaps = maps(lodS.levels[1]);
+  console.log('STAND-ATLAS-SHARING', JSON.stringify({ sharedAtlases: scanStand.stats.sharedAtlases, nearMaps: nearMaps.size, farMaps: farMaps.size }));
+  if (scanStand.stats.sharedAtlases !== 1 || [...farMaps].some(m => !nearMaps.has(m))) fail('far LOD does not share the near atlas');
+}
 const registered = r.groundRoots.includes(scanStand.groundSurface);
 let farInRoots = 0, colliderMeshInRoots = 0;
 const lod = scanStand.group.children.find(o => o.isLOD);

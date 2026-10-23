@@ -122,39 +122,71 @@ function framedGlass(p: Painter, u0: number, v0: number, u1: number, v1: number,
   if (transom !== null) rect(p, u0, transom - fw / 2, u1, transom + fw / 2, frame, 0.3, 0.5);
 }
 
-/** DKR outer wall, east side and north end: buff masonry (reference-guided, no photo pixels).
- * The Jan 2017 north/corner Street View observation (ut/research/realism-rebuild-91/
- * user-streetview-direction.md) and the official 2022 UT aerials (ut/research/dkr-body-62/
- * references) show buff masonry pier boxes, deep flat pale concourse bands, flat pale lintels,
- * open rectangular slots and tall dark framed glazing -- not a round-arch curtain.
- * One tile = STADIUM_FACADE_TILE.stadiumFacade (9 m along x 12.5 m up, authored estimates):
- * a deep pale band at its base, a wide pier box with a narrow open slot, then one bay split by
- * two slender piers: a tier of tall dark framed glazing, a continuous flat lintel, and a tier of
- * open rectangular slots under a second flat lintel. */
+/** DKR outer wall, east side and north end (2008-09 NEZ, east side): warm orange-buff brick with cream cast-stone bands
+ * and caps and dark recessed bays, as in the official 2022 aerials (ref-ut-dji0226 north + east elevations,
+ * ref-ut-pano0001) and the Dec 2025 Commons photograph (ref-commons-ajay-2025, same brick). Authored pattern, no photo
+ * pixels. One tile = STADIUM_FACADE_TILE.stadiumFacade (9 m along x 12.5 m up): a brick pier with a cream cap, then a
+ * recessed bay of three levels: dark openings / tinted glazing between cream spandrel bands and slim cream mullions. The
+ * projecting square pier towers themselves are geometry (stadium-bowl.ts east/north piers). */
 function stadiumFacade(p: Painter) {
-  rect(p, 0, 0, 1, 1, '#b39169', 0.7, 0.95); // mortar
-  coursing(p, 1001, [196, 160, 116], 12, 0.12, 0.975, 17, 8);
-  const lintel = '#e2dccf', slot = '#2a2b2c', shadow = '#8a6f50';
-  // Wide pier box with its single open slot and pale cap stone; shade line on its edge.
-  rect(p, 0.135, 0.2, 0.165, 0.88, slot, 0.1, 0.95);
-  rect(p, 0.115, 0.88, 0.185, 0.91, lintel, 0.95, 0.85);
-  rect(p, 0.3, 0.12, 0.312, 0.975, shadow, 0.6, 0.95);
-  const u0 = 0.33, u1 = 0.985, piers = [0.545, 0.765], pw = 0.035;
-  const spans: [number, number][] = [[u0, piers[0]], [piers[0] + pw, piers[1]], [piers[1] + pw, u1]];
-  // Tier 1: tall dark framed glazing.
-  rect(p, u0, 0.165, u1, 0.17, shadow, 0.6, 0.95);
-  spans.forEach(([a, b], k) => framedGlass(p, a, 0.17, b, 0.56, 1003 + k, 1, null));
-  rect(p, u0 - 0.01, 0.56, u1 + 0.01, 0.615, lintel, 1, 0.85);
-  // Tier 2: open rectangular slots (shadowed concourse behind), each with a darker head.
-  for (const [a, b] of spans) { rect(p, a, 0.655, b, 0.875, slot, 0.12, 0.95); rect(p, a, 0.84, b, 0.875, '#1d1e1f', 0.1, 0.95); }
-  rect(p, u0, 0.65, u1, 0.655, shadow, 0.6, 0.95);
-  rect(p, u0 - 0.01, 0.875, u1 + 0.01, 0.925, lintel, 1, 0.85);
-  // Deep flat concourse band (projecting slab edge) and the shadowed soffit under the next band.
-  rect(p, 0, 0, 1, 0.12, '#ddd7ca', 1, 0.85);
-  rect(p, 0, 0.108, 1, 0.12, '#ebe7de', 1, 0.8);
-  rect(p, 0, 0, 1, 0.01, '#bdb6a8', 0.95, 0.85);
-  rect(p, 0, 0.975, 1, 1, '#6f665b', 0.45, 0.95);
+  rect(p, 0, 0, 1, 1, '#b77f4e', 0.7, 0.95); // mortar
+  coursing(p, 1001, [200, 140, 92], 14, 0, 1, 34, 6);
+  const cream = '#e4dccb', dark = '#24282c', shade = '#7f5a3a';
+  // Recessed bay (u 0.27..1): three levels of dark openings framed by cream bands.
+  const levels: [number, number][] = [[0.07, 0.31], [0.37, 0.62], [0.68, 0.92]];
+  for (const [v0, v1] of levels) {
+    rect(p, 0.29, v0, 0.985, v1, dark, 0.1, 0.4);
+    glass(p, 0.31, v0 + 0.03, 0.965, v1 - 0.02, 1003 + Math.round(v0 * 100));
+    for (let k = 1; k < 4; k++) { const u = 0.29 + (0.695 * k) / 4; rect(p, u - 0.006, v0, u + 0.006, v1, cream, 0.8, 0.8); }
+  }
+  for (const v of [0.31, 0.62, 0.92]) { rect(p, 0.27, v, 1, v + 0.06, cream, 1, 0.85); rect(p, 0.27, v, 1, v + 0.008, '#b7ae9c', 0.9, 0.85); }
+  rect(p, 0.27, 0.0, 0.29, 1, shade, 0.5, 0.95); // pier shade edge
+  // Pier: brick with cream cap and base.
+  rect(p, 0.02, 0.94, 0.25, 1, cream, 1, 0.85);
+  rect(p, 0, 0, 1, 0.07, cream, 1, 0.85);
+  rect(p, 0, 0.065, 1, 0.07, '#a79f8f', 0.9, 0.85);
   noise(p, 1002, 7, 2);
+}
+
+/** 2021 South End Zone exterior (ref-commons-ajay-2025: Dec 2025 photograph from the south; ref-ut-dji0226): warm brick
+ * piers framing, per 12.5 m band, two open balcony / club levels (white soffits, glass balustrades, shaded interior) under
+ * a level of large dark windows with white mullion grids, with cream cast-stone bands. Authored, no photo pixels.
+ * One tile = STADIUM_FACADE_TILE.stadiumSezSouth (9 m x 12.5 m). */
+function stadiumSezSouth(p: Painter) {
+  rect(p, 0, 0, 1, 1, '#b77f4e', 0.7, 0.95);
+  coursing(p, 1801, [202, 142, 94], 14, 0, 1, 34, 5);
+  const cream = '#e6dfcf', white = '#f1efea';
+  // Two balcony levels.
+  for (const [v0, v1] of [[0.05, 0.32], [0.36, 0.63]] as [number, number][]) {
+    rect(p, 0.17, v0, 0.98, v1, '#5d6266', 0.3, 0.8);                 // shaded interior
+    rect(p, 0.17, v1 - 0.05, 0.98, v1, white, 1, 0.8);                 // white soffit / slab edge
+    rect(p, 0.17, v0, 0.98, v0 + 0.1, '#a9b8bf', 0.55, 0.3);           // glass balustrade
+    rect(p, 0.17, v0 + 0.1, 0.98, v0 + 0.11, white, 1, 0.6);
+  }
+  // Club level: large dark windows with white mullion grid.
+  rect(p, 0.17, 0.67, 0.98, 0.93, '#1f2529', 0.2, 0.3);
+  glass(p, 0.18, 0.68, 0.97, 0.92, 1803);
+  for (let k = 1; k < 5; k++) { const u = 0.17 + (0.81 * k) / 5; rect(p, u - 0.005, 0.67, u + 0.005, 0.93, white, 1, 0.6); }
+  rect(p, 0.17, 0.795, 0.98, 0.802, white, 1, 0.6);
+  for (const v of [0.32, 0.63, 0.93]) rect(p, 0.15, v, 1, v + 0.04, cream, 1, 0.85);
+  rect(p, 0, 0, 1, 0.05, cream, 1, 0.85);
+  rect(p, 0.15, 0, 0.17, 1, '#7f5a3a', 0.5, 0.95);
+  noise(p, 1802, 7, 2);
+}
+
+/** SEZ field club seats inside the longhorn outline (ref-ut-pano0009 / ref-ut-dji0226: dark slate chairbacks). */
+function stadiumClubSeats(p: Painter) {
+  rect(p, 0, 0, 1, 1, '#3d4650', 0.6, 0.7);
+  rect(p, 0.08, 0.38, 0.92, 0.9, '#4a5561', 1, 0.5);
+  rect(p, 0.08, 0.38, 0.92, 0.46, '#2c333a', 0.9, 0.6);
+  noise(p, 1901, 8, 1);
+}
+
+/** Burnt-orange terrace fascia / frames of the 2021 SEZ (longhorn outline, flank-tower frames). */
+function stadiumTerraceFascia(p: Painter) {
+  rect(p, 0, 0, 1, 1, '#b4521c', 0.8, 0.6);
+  rect(p, 0, 0.9, 1, 1, '#c8692e', 1, 0.55);
+  noise(p, 1951, 5, 1);
 }
 
 /** DKR outer wall, west side and south end: pale coated concrete. The west is Bellmont Hall
@@ -256,6 +288,29 @@ function stadiumSuites(p: Painter) {
   rect(p, 0, 0.5, 1, 0.51, '#9da1a3', 0.7, 0.4);
 }
 
+/** 2021 SEZ corner towers (ref-ut-dkr2, ref-ut-dji0226: white-framed premium levels with glass
+ * balustrades between the board and the east/west stands). One tile = one 4 m level x 4 m: a deep
+ * white slab edge, a recessed dark glazed storey behind a pale glass rail, white frame posts at the
+ * tile edges. Authored pattern (no photo pixels); proportions are estimates. */
+function stadiumSezTower(p: Painter) {
+  rect(p, 0, 0, 1, 1, '#2c3338', 0.3, 0.35);
+  glass(p, 0.04, 0.2, 0.96, 0.92, 1601);
+  rect(p, 0, 0.2, 1, 0.46, '#9fb0b8', 0.55, 0.3); // glass balustrade catching the sky
+  rect(p, 0, 0.45, 1, 0.47, '#e9e7e2', 1, 0.6);   // rail cap
+  rect(p, 0, 0, 1, 0.2, '#efede8', 1, 0.82);      // white slab edge
+  rect(p, 0, 0.19, 1, 0.2, '#b9b6af', 0.9, 0.85);
+  rect(p, 0, 0.92, 1, 1, '#5a5f62', 0.4, 0.8);    // soffit shade under the next slab
+  rect(p, 0, 0.2, 0.05, 0.92, '#ecebe6', 1, 0.8); rect(p, 0.95, 0.2, 1, 0.92, '#ecebe6', 1, 0.8);
+  noise(p, 1602, 5, 2);
+}
+
+/** East outer-wall pier towers: plain buff brick coursing (the stadiumFacade palette, no openings). */
+function stadiumBrick(p: Painter) {
+  rect(p, 0, 0, 1, 1, '#b77f4e', 0.7, 0.95);
+  coursing(p, 1701, [200, 140, 92], 14, 0, 1, 17, 4);
+  noise(p, 1702, 7, 2);
+}
+
 function fieldCanvas() {
   // u: sideline to sideline (71 m plate), v: end line to end line (126 m plate).
   const w = 512, h = 1024, ctx = canvas(w);
@@ -301,6 +356,11 @@ export function createStadiumMaterials(renderer: THREE.WebGLRenderer) {
   add(BN.key, stadiumFacadeBellmontNorth, 1024, 3, true);
   add('stadiumSeat', stadiumSeats, 128, 2);
   add('stadiumSuite', stadiumSuites, 128, 1.5);
+  add('stadiumSezTower', stadiumSezTower, 128, 1.5);
+  add('stadiumBrick', stadiumBrick, 128, 2);
+  add('stadiumSezSouth', stadiumSezSouth, 256, 3);
+  add('stadiumClubSeat', stadiumClubSeats, 64, 1);
+  add('stadiumTerraceFascia', stadiumTerraceFascia, 64, 1);
   add('stadiumRiser', stadiumConcrete, 128, 1.5);
   // Stadium rim/coping (previously shared with the building trim material).
   add('trim', stadiumConcrete, 128, 1.5);

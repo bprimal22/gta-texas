@@ -391,7 +391,7 @@ export async function prepareScanStand(options: ScanLoadOptions & { shading?: 'b
   const gltfs = await acquireAll(standMeta.files.map(f => assetUrl(base, f.name)), load, options.timeoutMs ?? 20000, 'Stand scan load', options.signal);
   const [near, far] = gltfs;
   const group = new THREE.Group();
-  let colliderPositions: Float32Array, colliderIndices: Uint32Array, triangles = 0;
+  let colliderPositions: Float32Array, colliderIndices: Uint32Array, triangles = 0, sharedAtlases = 0;
   try {
     group.name = 'DKR west stand photogrammetry (aligned scan)';
     const [ax, , az] = standMeta.anchor;
@@ -415,6 +415,8 @@ export async function prepareScanStand(options: ScanLoadOptions & { shading?: 'b
     triangles = assertFinite(meshesOf(near.scene), 'Stand scan near LOD') + assertFinite(meshesOf(far.scene), 'Stand scan far LOD');
     for (const mesh of meshes) { mesh.castShadow = true; mesh.receiveShadow = options.shading === 'lit'; mesh.matrixAutoUpdate = false; mesh.geometry.computeBoundingSphere(); }
     finishMaterials(meshes, options.shading ?? 'baked', 1);
+    // One atlas on the GPU for both LODs (tools/scans/stand-share-atlas.mjs: the far GLB carries a small placeholder).
+    sharedAtlases = shareNearTextures(meshesOf(near.scene), meshesOf(far.scene));
   } catch (error) {
     disposeTree(group, ...gltfs.map(g => g.scene));
     throw error;
@@ -423,7 +425,7 @@ export async function prepareScanStand(options: ScanLoadOptions & { shading?: 'b
   const stats: Record<string, unknown> = {
     source: 'seanhlewis/utimagery@13f08efe stadium.glb (MIT), west stand only, aligned + cropped, source photo charts re-packed',
     sector: [standMeta.sector.vMin, standMeta.sector.vMax], triangles, lodTriangles: standMeta.files.map(f => f.triangles),
-    colliderTriangles: colliderIndices.length / 3, texelsPerMetreSource: standMeta.crop.texelsPerMetre,
+    colliderTriangles: colliderIndices.length / 3, texelsPerMetreSource: standMeta.crop.texelsPerMetre, sharedAtlases,
   };
   let state: 'prepared' | 'committed' | 'disposed' = 'prepared';
   return {

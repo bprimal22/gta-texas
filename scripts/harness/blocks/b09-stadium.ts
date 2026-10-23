@@ -160,27 +160,40 @@ export const check: BlockCheck = scene => {
     if (clash) failures.push(`tower ${tw.name}: ${clash} samples inside other colliders`);
   }
   report.towers = towers;
-  // 8. Videoboard: official size (width/height) measured on the physical box; no bowl collider inside it.
-  const B = ext.board as unknown as { centre: [number, number]; width: number; height: number; depth: number; angle: number; bottom: number; top: number };
-  const Wd = [Math.cos(B.angle), -Math.sin(B.angle)], Ld = [Math.sin(B.angle), Math.cos(B.angle)];
+  // 8. Videoboard (2021 SEZ): official 160 x 44 ft screen (48.77 x 13.41 m) + name header measured on the physical box, centred on
+  //    the field axis and mounted on the bowl's SEZ face, header top at the plan datum (above the SEZ roof); no other collider inside it.
+  const B = ext.board as unknown as { centre: [number, number]; width: number; height: number; header: number; depth: number; top: number };
+  const ang = Math.atan2(-0.068, 1), Wd = [Math.cos(ang), -Math.sin(ang)], Ld = [Math.sin(ang), Math.cos(ang)];
+  const bottom = B.top - B.header - B.height;
   const at = (t: number, d: number) => [B.centre[0] + Wd[0] * t + Ld[0] * d, B.centre[1] + Wd[1] * t + Ld[1] * d];
-  const mid = (B.bottom + B.top) / 2;
+  const mid = bottom + B.height / 2;
   const [ax, az] = at(-B.width / 2 - 5, 0), wHit = ray({ x: ax, y: mid, z: az }, { x: Wd[0], y: 0, z: Wd[1] }, 10, onlyOwn);
   const [bx, bz] = at(B.width / 2 + 5, 0), wHit2 = ray({ x: bx, y: mid, z: bz }, { x: -Wd[0], y: 0, z: -Wd[1] }, 10, onlyOwn);
   const width = wHit !== null && wHit2 !== null ? B.width + 10 - wHit - wHit2 : NaN;
-  const [cx0, cz0] = at(0, 0), topHit = ray({ x: cx0, y: 120, z: cz0 }, { x: 0, y: -1, z: 0 }, 200, onlyOwn), botHit = ray({ x: cx0, y: B.bottom - 0.5, z: cz0 }, { x: 0, y: 1, z: 0 }, 30, onlyOwn);
-  const height = topHit !== null && botHit !== null ? (120 - topHit) - (B.bottom - 0.5 + botHit) : NaN;
-  let inBoard = 0; for (let t = -B.width / 2 + 0.3; t < B.width / 2; t += 2) for (const d of [-B.depth / 2 + 0.2, 0, B.depth / 2 - 0.2]) for (let y = B.bottom + 0.1; y < B.top; y += 2) {
+  const [cx0, cz0] = at(0, 0), topHit = ray({ x: cx0, y: 120, z: cz0 }, { x: 0, y: -1, z: 0 }, 200, onlyOwn), botHit = ray({ x: cx0, y: bottom - 0.5, z: cz0 }, { x: 0, y: 1, z: 0 }, 30, onlyOwn);
+  const top = topHit === null ? NaN : 120 - topHit, height = botHit !== null ? top - (bottom - 0.5 + botHit) : NaN;
+  // Field axis: the board centre's field-frame u (across the field) is 0 within 0.1 m.
+  const fu = (B.centre[0] - 444.3) * Math.cos(ang) - (B.centre[1] - 272.5) * Math.sin(ang);
+  let inBoard = 0; for (let t = -B.width / 2 + 0.3; t < B.width / 2; t += 2) for (const d of [-B.depth / 2 + 0.2, 0, B.depth / 2 - 0.2]) for (let y = bottom + 0.1; y < B.top; y += 2) {
     const [x, z] = at(t, d); let hit = false; physics.intersectionsWithShape({ x, y, z }, { x: 0, y: 0, z: 0, w: 1 }, probe, () => { hit = true; return false; }, undefined, undefined, player, undefined, notOwn); if (hit) inBoard++; }
-  report.videoboard = { widthM: +width.toFixed(3), officialWidthM: 40.96, heightM: +height.toFixed(3), officialHeightM: 17.02, bottom: B.bottom, top: B.top, otherCollidersInside: inBoard };
-  if (!(Math.abs(width - 40.96) < 0.05 && Math.abs(height - 17.02) < 0.05) || inBoard) failures.push(`videoboard ${JSON.stringify(report.videoboard)}`);
-  // 9. SEZ premium bands present on the south wall (south-to-north rays at band level hit b09 just outside the bowl wall).
-  let bandN = 0, bandOk = 0;
+  report.videoboard = { widthM: +width.toFixed(3), officialWidthM: 48.77, screenPlusHeaderM: +height.toFixed(3), officialScreenM: 13.41, headerM: B.header, top: +top.toFixed(2), fieldU: +fu.toFixed(3), otherCollidersInside: inBoard };
+  if (!(Math.abs(width - 48.77) < 0.05 && Math.abs(height - (13.41 + B.header)) < 0.05 && Math.abs(top - B.top) < 0.05 && Math.abs(fu) < 0.1) || inBoard) failures.push(`videoboard ${JSON.stringify(report.videoboard)}`);
+  // 9. SEZ exterior: south-to-north rays at Y 12.5 along the measured south wall. Behind the board (field-frame |u| <= 24) they
+  //    hit the central SEZ block's facade (stadium-bowl.ts stadiumSezSouth) on that wall (within 0.8 m); outside it they hit
+  //    the open corner stands' exposed underside / flank towers / SW stair tower (stadiumRiser, stadiumSezTower, stadiumBrick),
+  //    never a facade-clad wall (the SEZ is not a building wrapping the corners: ref-ut-pano0009).
+  let bandN = 0, bandOk = 0, sideN = 0, sideOk = 0;
+  const stadiumSolids: THREE.Object3D[] = []; scene.context.solid.traverse((o: THREE.Object3D) => { if ((o as THREE.Mesh).isMesh && o.name.startsWith('Local context stadium ')) stadiumSolids.push(o); });
+  const fa = Math.atan2(-0.068, 1);
   for (const [x, wz] of (ext.southWall as number[][]).filter(p => p[0] >= 385 && p[0] <= 490).map(p => [p[0], p[1]])) {
-    bandN++; const t = ray({ x, y: 12.5, z: 470 }, { x: 0, y: 0, z: -1 }, 120, onlyOwn); if (t !== null && 470 - t - wz > 0.05 && 470 - t - wz < 0.8) bandOk++;
+    const u = (x - 444.3) * Math.cos(fa) - (wz - 272.5) * Math.sin(fa);
+    const h = new THREE.Raycaster(new THREE.Vector3(x, 12.5, 470), new THREE.Vector3(0, 0, -1), 0, 160).intersectObjects(stadiumSolids, false)[0];
+    const name = h?.object.name ?? '';
+    if (Math.abs(u) <= 24) { bandN++; if (h && name.endsWith('stadiumSezSouth') && Math.abs(h.point.z - wz) < 0.8) bandOk++; }
+    else if (Math.abs(u) >= 27) { sideN++; if (h && /stadium(Riser|SezTower|Brick)$/.test(name)) sideOk++; }
   }
-  report.sezBands = { columns: bandN, withGlazingBand: bandOk };
-  if (bandOk < bandN * 0.95) failures.push(`SEZ bands: ${bandOk}/${bandN}`);
+  report.sezExterior = { centralColumns: bandN, onSezFacade: bandOk, sideColumns: sideN, openOrTower: sideOk };
+  if (bandN < 40 || bandOk < bandN * 0.95 || sideOk < sideN * 0.9) failures.push(`SEZ exterior: ${JSON.stringify(report.sezExterior)}`);
   // ---- D19 Bellmont pilot (exterior-plan.json `bellmont`, reference-interpreted from projected reviewed captures) ----
   // 10. Per official bay: the physical top is the referenced datum (roof behind the facade line) and nothing of b09 rises above
   //     it in front of the line; fin bays carry the planned number of proud fins; band bays the planned number of recessed ribbons

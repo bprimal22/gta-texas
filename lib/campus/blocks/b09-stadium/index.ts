@@ -1,12 +1,13 @@
 // Block b09-stadium: Stadium + athletics: DKR, Moncrief, Bellmont, LBJ west of I-35.
 // Owner-only file (research/whole-campus-92/BLOCKS.md). Round 1 corrections are data (context.json). Round 2 install() adds the
 // DKR exterior features (./exterior.ts): Bellmont west facade above/south of the authored frontage, the three LiDAR-measured
-// north corner towers, the 2021 SEZ premium bands and videoboard — all outside the generated bowl's collider envelope.
+// north corner towers, the 2021 SEZ premium bands and videoboard (on the bowl's SEZ face) — none of it inside the bowl's colliders.
 // East-south lane: D20 Myers east stand / press box / masts, D17 TMM, D18 LBJ + Bass fly-tower slits, D19 Manor Garage with the
 // Myers west stand and MFH (./d17-tmm.ts, ./d18-lbj-bass.ts, ./d19-manor.ts, ./d20-myers.ts).
 import * as THREE from 'three';
 import type { BlockInstall, BlockModule } from '../types';
 import { buildExterior, exteriorCollider, EXTERIOR_MATERIALS } from './exterior';
+import { createBoardFace } from './board-face';
 import { Kit } from './lane-kit';
 import { buildMyers } from './d20-myers';
 import { buildTmm, TMM_KEY } from './d17-tmm';
@@ -22,11 +23,14 @@ export const block: BlockModule = {
     const started = performance.now();
     const parts = buildExterior(ctx.groundHeight);
     const materials = new Map<string, THREE.MeshStandardMaterial>();
+    let boardMap: THREE.Texture | null = null;
     const mat = (k: keyof typeof EXTERIOR_MATERIALS) => {
       let m = materials.get(k);
       if (!m) {
         const s = EXTERIOR_MATERIALS[k];
         m = new THREE.MeshStandardMaterial({ name: `b09 DKR exterior ${k}`, color: s.color, roughness: s.roughness, metalness: s.metalness ?? 0, emissive: s.emissive ?? 0 });
+        // SEZ videoboard: authored canvas face (board-face.ts), self-lit at a moderate level like an LED screen by day.
+        if (k === 'boardFace' && ctx.renderer) { boardMap = createBoardFace(ctx.renderer); m.map = boardMap; m.emissiveMap = boardMap; m.emissiveIntensity = 0.45; m.userData.authored = 'b09 board-face.ts'; }
         materials.set(k, m);
       }
       return m;
@@ -68,6 +72,7 @@ export const block: BlockModule = {
         for (const c of colliders) if (ctx.physics.getCollider(c.handle)) ctx.physics.removeCollider(c, false);
         for (const g of geometries) g.dispose();
         for (const m of materials.values()) m.dispose();
+        boardMap?.dispose();
       },
     };
     return install;

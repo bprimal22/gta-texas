@@ -189,5 +189,203 @@
   "fov": 62,
   "groundY": 4.86,
   "note": "Level count / bay are estimates; ramp tower not placed."
+ },
+ {
+  "id": "b09-dkr-ring-n",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "North (E 23rd St side) oblique: north end zone exterior, round corner towers, the continuous east/north rim ring and the SEZ board beyond",
+  "position": [444, 45, 40],
+  "target": [444, 10, 230],
+  "fov": 60,
+  "groundY": -2.28,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-ring-ne",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "Northeast corner oblique (cf. official 2022 DJI_0226): east brick piers + flagpoles, NE tower, north upper deck, west upper deck and gantry beyond",
+  "position": [650, 50, 90],
+  "target": [470, 12, 250],
+  "fov": 60,
+  "groundY": 6.79,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-ring-e",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "East (Robert Dedman Dr) oblique: east outer wall with projecting brick piers, flagpoles and the two light standards on the rim",
+  "position": [720, 35, 280],
+  "target": [500, 15, 275],
+  "fov": 60,
+  "groundY": 13.89,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-ring-se",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "Southeast corner oblique: SEZ corner tower face, orange board rear, east upper deck ending at the SEZ",
+  "position": [650, 50, 470],
+  "target": [460, 12, 300],
+  "fov": 60,
+  "groundY": 7.34,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-ring-s",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "South oblique over MNC: SEZ south wall bands, orange board rear above the roof, SW brick tower with glazed drum",
+  "position": [440, 40, 600],
+  "target": [440, 15, 330],
+  "fov": 60,
+  "groundY": -2.58,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-ring-sw",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "Southwest corner oblique (cf. Dec 2025 Commons photo): west stand south end, SW brick tower, SEZ roof and board rear",
+  "position": [255, 50, 480],
+  "target": [400, 12, 310],
+  "fov": 60,
+  "groundY": -10.06,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-ring-w",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "West (San Jacinto) oblique: Bellmont facade, scanned west upper deck, press box and the light gantry on the rim",
+  "position": [252, 35, 272],
+  "target": [380, 20, 272],
+  "fov": 60,
+  "groundY": -10.52,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-ring-nw",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "Northwest corner oblique: NW round towers, Bellmont north wall, west upper deck north end and gantry",
+  "position": [255, 50, 80],
+  "target": [400, 12, 240],
+  "fov": 60,
+  "groundY": -5.51,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-aerial-top",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "Near-vertical aerial over the field: bowl plan, tier bands, SEZ longhorn terraces/building, gantry and east rim details",
+  "position": [444, 330, 330],
+  "target": [444, 0, 274],
+  "fov": 45,
+  "groundY": -3.79,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-aerial-ne-high",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "High northeast aerial looking southwest (pose family of the official 2022 DJI_0226): unequal stands, SEZ composition",
+  "position": [720, 220, 40],
+  "target": [430, 0, 300],
+  "fov": 50,
+  "groundY": 8.38,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-aerial-n-high",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "High north aerial looking south (pose family of the official PANO0009, without its lens distortion): bowl layout and SEZ",
+  "position": [444, 200, 60],
+  "target": [444, 0, 300],
+  "fov": 60,
+  "groundY": -3.36,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-bowl-north-rim",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "Bowl from above the north upper deck looking south: low SEZ terraces, building face, board between the corner towers, west scan + gantry, east deck",
+  "position": [444, 58, 172],
+  "target": [444, 15, 360],
+  "fov": 70,
+  "groundY": -3.82,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-field-sez",
+  "block": "b09-stadium",
+  "kind": "street",
+  "label": "Field level near the north 30 looking south-southwest (cf. official DKR_2): SEZ face and board, west upper deck and gantry at right",
+  "position": [470, -1.13, 245],
+  "target": [440, 26, 380],
+  "fov": 62,
+  "groundY": -2.88,
+  "note": "Street eye 1.75 m above the physical surface (generated field plane -2.883); cleared in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-field-west",
+  "block": "b09-stadium",
+  "kind": "street",
+  "label": "Field level on the east hash looking west at the scanned west stand, suite fascia/press box and gantry",
+  "position": [470, -1.13, 300],
+  "target": [370, 30, 260],
+  "fov": 62,
+  "groundY": -2.88,
+  "note": "Street eye 1.75 m above the physical surface (generated field plane -2.883); cleared in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-east-rim-gantry",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "From above the east upper deck looking west: scanned west upper deck, press box massing and the light gantry colonnade",
+  "position": [525, 58, 300],
+  "target": [360, 58, 270],
+  "fov": 55,
+  "groundY": 2.73,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-sez-board",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "Board detail from over the south 25: 160 x 44 ft screen + name header above the SEZ face, white-framed flank towers, club/loge levels and the longhorn terrace outline",
+  "position": [444, 22, 285],
+  "target": [439, 32, 358],
+  "fov": 55,
+  "groundY": -3.97,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-sw-tower",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "SW SEZ stair tower detail from the south-southwest: brick octagonal shaft, glazed drum, pale cornice; orange board rear",
+  "position": [380, 25, 470],
+  "target": [407, 25, 360],
+  "fov": 55,
+  "groundY": -7.22,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
+ },
+ {
+  "id": "b09-dkr-sez-longhorn",
+  "block": "b09-stadium",
+  "kind": "aerial",
+  "label": "Longhorn (steer-head) terraces from above the north end of the south 20 looking down south: dark club rows inside the burnt-orange outline, central tunnel, loge rows",
+  "position": [444, 40, 300],
+  "target": [442, 0, 345],
+  "fov": 60,
+  "groundY": -3.91,
+  "note": "Elevated review camera (render camera only); groundY = planning terrain. Cleared against colliders in scanned and fallback modes (stadium fidelity pass)."
  }
 ]

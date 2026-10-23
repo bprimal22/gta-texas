@@ -6,8 +6,8 @@
 //     (10 pale fins of the frontage fin section with >= 0.55 m slots; upper-panel rib count unresolvable), three band bays of stacked recessed
 //     ribbons. All levels are reference-interpreted estimates; the storefront level reuses dkr-frontage-plan.
 //  2. North end corner towers: three round towers measured in the 2017 USGS 3DEP DSM (NEZ built 2008): centre, radius, top.
-//  3. 2021 South End Zone: premium-level glazing bands on the bowl's south outer wall (estimate) and the 55.85 x 134.38 ft
-//     videoboard on the south rim (official size; plan x from the 2017 LiDAR old-board footprint; height above rim = estimate).
+//  3. 2021 South End Zone: the official 160 x 44 ft
+//     videoboard with its name header on the generated SEZ building face (stadium-bowl.ts SEZ_FACE), above the SEZ roof.
 // The bowl is built later from footprints and retracts from authored coverage, so every mesh here is excluded from the coverage
 // raster (userData.localContext) and the block check asserts the bowl is bit-identical to the no-install baseline.
 import * as THREE from 'three';
@@ -15,10 +15,14 @@ import RAPIER from '@dimforge/rapier3d-compat';
 import { MeshBuilder, ColliderBuilder } from '../../context-geometry';
 import type { Point } from '../../types';
 import plan from './exterior-plan.json' with { type: 'json' };
+import { STADIUM_FIELD, SEZ_FACE } from '../../stadium-bowl';
+import { BOARD_HEADER_FRACTION } from './board-face';
 
 type V = THREE.Vector3;
-type Key = 'concrete' | 'glass' | 'fin' | 'finBack' | 'masonry' | 'cap' | 'roof' | 'board' | 'boardBack' | 'slit';
+type Key = 'concrete' | 'glass' | 'fin' | 'finBack' | 'masonry' | 'cap' | 'roof' | 'boardFace' | 'boardBack' | 'slit';
 const WHITE = new THREE.Color(1, 1, 1), UP = new THREE.Vector3(0, 1, 0), DOWN = new THREE.Vector3(0, -1, 0);
+/** North round towers: height of the dark glazed lantern band under the cap (ref-ut-dji0226, estimate). */
+const LANTERN_HEIGHT = 7.2;
 
 export interface ExteriorParts { builders: Map<Key, MeshBuilder>; detail: Map<Key, MeshBuilder>; collider: ColliderBuilder; stats: Record<string, number> }
 
@@ -33,7 +37,7 @@ export function buildExterior(ground: (x: number, z: number) => number): Exterio
   const builders = new Map<Key, MeshBuilder>(), detail = new Map<Key, MeshBuilder>(), collider = new ColliderBuilder();
   const solid = (k: Key) => { let b = builders.get(k); if (!b) builders.set(k, b = new MeshBuilder()); return b; };
   const visual = (k: Key) => { let b = detail.get(k); if (!b) detail.set(k, b = new MeshBuilder()); return b; };
-  const stats = { piers: 0, bays: 0, finBays: 0, bandBays: 0, ribbons: 0, fins: 0, towers: 0, sezSegments: 0, board: 0 };
+  const stats = { piers: 0, bays: 0, finBays: 0, bandBays: 0, ribbons: 0, fins: 0, towers: 0, board: 0 };
   const quad = (k: Key, a: V, b: V, c: V, d: V, facing: V, uvScale = 1) => {
     const w = a.distanceTo(b) / uvScale, h = a.distanceTo(d) / uvScale;
     solid(k).quad(a, b, c, d, [0, 0], [w, 0], [w, h], [0, h], WHITE, facing); collider.quad(a, b, c, d);
@@ -146,62 +150,63 @@ export function buildExterior(ground: (x: number, z: number) => number): Exterio
     const [cx, cz] = tw.centre, r = tw.radius, seg = 28;
     let g = Infinity; for (let k = 0; k < seg; k++) { const a = (k / seg) * Math.PI * 2; g = Math.min(g, ground(cx + Math.cos(a) * r, cz + Math.sin(a) * r)); }
     const y0 = g - 0.6, capY = tw.top - 0.7, ring = (rad: number, y: number, k: number) => new THREE.Vector3(cx + Math.cos((k / seg) * Math.PI * 2) * rad, y, cz + Math.sin((k / seg) * Math.PI * 2) * rad);
+    // ref-ut-dji0226 (north elevation crop): brick body with cream cast-stone base and stringcourse, a tall dark glazed
+    // lantern band right under the round cap (pale cornice, dark roof). Band heights are estimates from that image.
+    const glassTop = capY, glassBottom = tw.top - LANTERN_HEIGHT, course = glassBottom - 0.7, baseTop = g + 2.2;
     for (let k = 0; k < seg; k++) {
       const out = new THREE.Vector3(Math.cos(((k + 0.5) / seg) * Math.PI * 2), 0, Math.sin(((k + 0.5) / seg) * Math.PI * 2));
-      quad('masonry', ring(r, y0, k), ring(r, y0, k + 1), ring(r, capY, k + 1), ring(r, capY, k), out, 3);
+      quad('cap', ring(r, y0, k), ring(r, y0, k + 1), ring(r, baseTop, k + 1), ring(r, baseTop, k), out);
+      quad('masonry', ring(r, baseTop, k), ring(r, baseTop, k + 1), ring(r, course, k + 1), ring(r, course, k), out, 3);
+      quad('cap', ring(r, course, k), ring(r, course, k + 1), ring(r, glassBottom, k + 1), ring(r, glassBottom, k), out);
+      // Lantern glazing 0.1 m inside the brick face (within the LiDAR radius tolerance), its sill and head closed.
+      quad('glass', ring(r - 0.1, glassBottom, k), ring(r - 0.1, glassBottom, k + 1), ring(r - 0.1, glassTop, k + 1), ring(r - 0.1, glassTop, k), out);
+      quad('cap', ring(r - 0.1, glassBottom, k), ring(r - 0.1, glassBottom, k + 1), ring(r, glassBottom, k + 1), ring(r, glassBottom, k), UP);
       // Pale cap band (slightly proud) and its underside.
       quad('cap', ring(r + 0.18, capY, k), ring(r + 0.18, capY, k + 1), ring(r + 0.18, tw.top, k + 1), ring(r + 0.18, tw.top, k), out);
-      quad('cap', ring(r, capY, k), ring(r, capY, k + 1), ring(r + 0.18, capY, k + 1), ring(r + 0.18, capY, k), DOWN);
+      quad('cap', ring(r - 0.1, capY, k), ring(r - 0.1, capY, k + 1), ring(r + 0.18, capY, k + 1), ring(r + 0.18, capY, k), DOWN);
       solid('roof').tri(new THREE.Vector3(cx, tw.top, cz), ring(r + 0.18, tw.top, k + 1), ring(r + 0.18, tw.top, k), [0, 0], [1, 0], [0, 1], WHITE, UP);
       collider.tri(new THREE.Vector3(cx, tw.top, cz), ring(r + 0.18, tw.top, k + 1), ring(r + 0.18, tw.top, k));
     }
-    // Tall narrow window slots (estimate: Jan 2017 observation "tall dark framed glazing"), 2 cm proud, visual only.
-    for (let k = 0; k < seg; k += 4) {
-      const a0 = ((k + 1.6) / seg) * Math.PI * 2, a1 = ((k + 2.4) / seg) * Math.PI * 2, rr = r + 0.02, ya = g + 3.5, yb = capY - 2.5;
+    // Slim pale mullions on the lantern (every second facet), 2 cm proud, visual only.
+    for (let k = 0; k < seg; k += 2) {
+      const a0 = ((k - 0.06) / seg) * Math.PI * 2, a1 = ((k + 0.06) / seg) * Math.PI * 2, rr = r - 0.08;
       const p = (a: number, y: number) => new THREE.Vector3(cx + Math.cos(a) * rr, y, cz + Math.sin(a) * rr);
-      visual('slit').quad(p(a0, ya), p(a1, ya), p(a1, yb), p(a0, yb), [0, 0], [1, 0], [1, 1], [0, 1], WHITE, new THREE.Vector3(Math.cos((a0 + a1) / 2), 0, Math.sin((a0 + a1) / 2)));
+      visual('cap').quad(p(a0, glassBottom), p(a1, glassBottom), p(a1, glassTop), p(a0, glassTop), [0, 0], [1, 0], [1, 1], [0, 1], WHITE, new THREE.Vector3(Math.cos(k / seg * Math.PI * 2), 0, Math.sin(k / seg * Math.PI * 2)));
     }
     stats.towers++;
   }
 
-  // ---- 3. South End Zone premium bands on the measured south outer wall ----------------------------------------------------
-  const sw = (plan.southWall as number[][]).filter(p => p[0] >= 383 && p[0] <= 492);
-  const bandsSez: [number, number, number, Key][] = [[10.6, 11.0, 0.6, 'concrete'], [11.0, 14.2, 0.12, 'glass'], [15.6, 16.0, 0.6, 'concrete'], [16.0, 19.2, 0.12, 'glass'],
-    [20.6, 21.0, 0.6, 'concrete'], [21.0, 24.2, 0.12, 'glass'], [25.6, 26.2, 0.6, 'concrete']];
-  const normalAt = (i: number) => { const a = sw[Math.max(0, i - 1)], b = sw[Math.min(sw.length - 1, i + 1)]; const tx = b[0] - a[0], tz = b[1] - a[1], l = Math.hypot(tx, tz); return [-tz / l, tx / l]; };
-  for (let i = 0; i + 1 < sw.length; i++) {
-    const na = normalAt(i), nb = normalAt(i + 1), out = new THREE.Vector3((na[0] + nb[0]) / 2, 0, (na[1] + nb[1]) / 2).normalize();
-    for (const [y0, y1, o, k] of bandsSez) {
-      const P = (j: number, d: number, y: number) => { const p = sw[j], n = j === i ? na : nb; return new THREE.Vector3(p[0] + n[0] * d, y, p[1] + n[1] * d); };
-      quad(k, P(i, o, y0), P(i + 1, o, y0), P(i + 1, o, y1), P(i, o, y1), out);
-      quad(k, P(i, o, y1), P(i + 1, o, y1), P(i + 1, 0.02, y1), P(i, 0.02, y1), UP);
-      quad(k, P(i, 0.02, y0), P(i + 1, 0.02, y0), P(i + 1, o, y0), P(i, o, y0), DOWN);
-      if (i === 0 || i + 2 === sw.length) { const j = i === 0 ? i : i + 1, s = i === 0 ? -1 : 1; const tng = new THREE.Vector3(-out.z * -s, 0, out.x * -s);
-        quad(k, P(j, 0.02, y0), P(j, o, y0), P(j, o, y1), P(j, 0.02, y1), tng); }
-    }
-    stats.sezSegments++;
-  }
-
-  // ---- 4. Videoboard on the south rim ---------------------------------------------------------------------------------------
-  const B = plan.board, W: Point = [Math.cos(B.angle), -Math.sin(B.angle)], Lf: Point = [Math.sin(B.angle), Math.cos(B.angle)];
-  const Ob: Point = [B.centre[0], B.centre[1]];
-  // Screen faces the field (north, -L); other faces dark metal.
+  // ---- 3. (retired) South End Zone premium bands: the bowl's own SEZ exterior (stadium-bowl.ts stadiumSezSouth facade, from the
+  //      Dec 2025 photograph) replaces the estimated glazing ribbons that used to be hung on the measured south wall.
+  // ---- 4. 2021 SEZ videoboard on the SEZ building face ---------------------------------------------------------------------
+  // Official 160 x 44 ft screen (texaslonghorns.com facility page), centred on the field axis (ref-ut-pano0009) and mounted on
+  // the generated SEZ building face (stadium-bowl.ts SEZ_FACE) with the name header above, rising above the SEZ roof (plan.board.note).
+  const B = plan.board, W: Point = [Math.cos(STADIUM_FIELD.angle), -Math.sin(STADIUM_FIELD.angle)], Lf: Point = [Math.sin(STADIUM_FIELD.angle), Math.cos(STADIUM_FIELD.angle)];
+  const along = STADIUM_FIELD.halfLength + SEZ_FACE.t - B.depth / 2 - B.faceGap;
+  const Ob: Point = [STADIUM_FIELD.center[0] + Lf[0] * along, STADIUM_FIELD.center[1] + Lf[1] * along];
+  if (Math.hypot(Ob[0] - B.centre[0], Ob[1] - B.centre[1]) > 0.05) throw new Error(`b09 board centre ${Ob.join(',')} drifted from the plan ${B.centre.join(',')} (SEZ face moved?)`);
   const P = (t: number, d: number, y: number) => new THREE.Vector3(Ob[0] + W[0] * t + Lf[0] * d, y, Ob[1] + W[1] * t + Lf[1] * d);
   const hw = B.width / 2, hd = B.depth / 2, nL = new THREE.Vector3(Lf[0], 0, Lf[1]), nW = new THREE.Vector3(W[0], 0, W[1]);
-  quad('board', P(hw, -hd, B.bottom), P(-hw, -hd, B.bottom), P(-hw, -hd, B.top), P(hw, -hd, B.top), nL.clone().negate());
-  quad('boardBack', P(-hw, hd, B.bottom), P(hw, hd, B.bottom), P(hw, hd, B.top), P(-hw, hd, B.top), nL);
-  quad('boardBack', P(hw, hd, B.bottom), P(hw, -hd, B.bottom), P(hw, -hd, B.top), P(hw, hd, B.top), nW);
-  quad('boardBack', P(-hw, -hd, B.bottom), P(-hw, hd, B.bottom), P(-hw, hd, B.top), P(-hw, -hd, B.top), nW.clone().negate());
+  const bottom = B.top - B.header - B.height, split = B.top - B.header;
+  // Screen + header faces toward the field (-L) with one shared canvas (board-face.ts: header = top BOARD_HEADER_FRACTION).
+  const face = (y0: number, y1: number, v0: number, v1: number) => {
+    const a = P(hw, -hd, y0), b = P(-hw, -hd, y0), c = P(-hw, -hd, y1), d = P(hw, -hd, y1);
+    solid('boardFace').quad(a, b, c, d, [0, v0], [1, v0], [1, v1], [0, v1], WHITE, nL.clone().negate()); collider.quad(a, b, c, d);
+  };
+  face(bottom, split, 0, 1 - BOARD_HEADER_FRACTION); face(split, B.top, 1 - BOARD_HEADER_FRACTION, 1);
+  quad('boardBack', P(-hw, hd, bottom), P(hw, hd, bottom), P(hw, hd, B.top), P(-hw, hd, B.top), nL);
+  quad('boardBack', P(hw, hd, bottom), P(hw, -hd, bottom), P(hw, -hd, B.top), P(hw, hd, B.top), nW);
+  quad('boardBack', P(-hw, -hd, bottom), P(-hw, hd, bottom), P(-hw, hd, B.top), P(-hw, -hd, B.top), nW.clone().negate());
   quad('boardBack', P(-hw, -hd, B.top), P(hw, -hd, B.top), P(hw, hd, B.top), P(-hw, hd, B.top), UP);
-  quad('boardBack', P(-hw, hd, B.bottom), P(hw, hd, B.bottom), P(hw, -hd, B.bottom), P(-hw, -hd, B.bottom), DOWN);
+  quad('boardBack', P(-hw, hd, bottom), P(hw, hd, bottom), P(hw, -hd, bottom), P(-hw, -hd, bottom), DOWN);
   stats.board = 1;
   return { builders, detail, collider, stats };
 }
 
 export const EXTERIOR_MATERIALS: Record<Key, { color: number; roughness: number; metalness?: number; emissive?: number }> = {
   concrete: { color: 0xcfcabb, roughness: 0.88 }, fin: { color: 0xc4bfae, roughness: 0.86 }, finBack: { color: 0x8f8c83, roughness: 0.9 }, glass: { color: 0x26313a, roughness: 0.22, metalness: 0.35 },
-  masonry: { color: 0xb99b72, roughness: 0.92 }, cap: { color: 0xe3ddcd, roughness: 0.85 }, roof: { color: 0x8e8b84, roughness: 0.95 },
-  board: { color: 0x111418, roughness: 0.35, metalness: 0.2, emissive: 0x0b0e12 }, boardBack: { color: 0x3a3d40, roughness: 0.7, metalness: 0.4 }, slit: { color: 0x1f272d, roughness: 0.3, metalness: 0.3 },
+  masonry: { color: 0xb9814f, roughness: 0.92 }, cap: { color: 0xe3ddcd, roughness: 0.85 }, roof: { color: 0x8e8b84, roughness: 0.95 },
+  boardFace: { color: 0xffffff, roughness: 0.4, metalness: 0, emissive: 0xffffff }, boardBack: { color: 0xb4521c, roughness: 0.6, metalness: 0.15 } /* orange-clad board rear (ref-commons-ajay-2025) */, slit: { color: 0x1f272d, roughness: 0.3, metalness: 0.3 },
 };
 
 /** Trimesh collider from the solid triangles (same buffers as the rendered solids). */
