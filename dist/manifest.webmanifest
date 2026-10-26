@@ -1,11 +1,11 @@
 {
-  "name": "UT Austin Campus Explorer",
-  "short_name": "UT Campus",
-  "description": "A locally playable third-person exploration of the University of Texas at Austin.",
+  "name": "GTA Texas",
+  "short_name": "GTA Texas",
+  "description": "Explore Austin from campus to the river, on foot, by scooter, or in flight.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#192423",
+  "background_color": "#121a18",
   "theme_color": "#bf5700",
   "icons": [
     {

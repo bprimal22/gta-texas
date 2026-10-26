@@ -70,6 +70,16 @@ const RIVERFRONT_EXTENSION = true;
  * any failure keeps the world exactly as without it. */
 const WEST_CAMPUS_EXTENSION = true;
 
+/** Resolves once the browser has had a chance to paint (so the loading screen shows the current boot
+ * stage), or at once in a hidden tab where nothing paints. Costs at most about one frame per call. */
+function nextPaint(): Promise<void> {
+  return new Promise(resolve => {
+    if (typeof document === 'undefined' || document.hidden || typeof requestAnimationFrame !== 'function') { resolve(); return; }
+    const fallback = setTimeout(resolve, 100); // rAF stops if the tab is hidden mid-wait
+    requestAnimationFrame(() => setTimeout(() => { clearTimeout(fallback); resolve(); }, 0));
+  });
+}
+
 export class CampusGame {
   renderer: THREE.WebGLRenderer;
   scene = new THREE.Scene();
@@ -188,6 +198,9 @@ export class CampusGame {
   vertical = 0;
   jumpQueued = false;
   active = false;
+  /** A menu or how-to-play dialog covers live play: game keys and pointer look are ignored. */
+  inputPaused = false;
+  private releasePointerDrag = () => {};
   overview = false;
   overviewDistance = 650;
   mapExpanded = false;
@@ -228,6 +241,8 @@ export class CampusGame {
     private host: HTMLDivElement,
     private map: HTMLCanvasElement,
     private report: (s: GameStatus) => void,
+    /** Boot stage marks (the same names as `__campusBoot`), for the loading screen. */
+    private onBoot?: (stage: string) => void,
   ) {
     this.renderer = new THREE.WebGLRenderer({
       // AO already resolves scene edges with 4x MSAA. The final fullscreen
@@ -247,7 +262,7 @@ export class CampusGame {
     this.renderer.domElement.tabIndex = 0;
     this.renderer.domElement.setAttribute(
       'aria-label',
-      'UT Austin exploration game. Up arrow moves forward and Down arrow backward; Left and Right arrows or A and D turn, with the camera following. Hold W to take off or rise and S to descend or land; release to hold altitude and hover. Flight is capped at 100 metres. Shift runs or boosts. Space jumps. E mounts or dismounts the scooter. Drag mouse to look.',
+      'GTA Texas exploration game. Up arrow moves forward and Down arrow backward; Left and Right arrows or A and D turn, with the camera following. Hold W to take off or rise and S to descend or land; release to hold altitude and hover. Flight is capped at 100 metres. Shift boosts flight. Space jumps on foot or brakes the scooter. E mounts or dismounts the scooter. Drag mouse to look.',
     );
     this.host.appendChild(this.renderer.domElement);
     this.camera.aspect = host.clientWidth / host.clientHeight;
@@ -281,7 +296,9 @@ export class CampusGame {
     const markBoot = (stage: string) => {
       boot.stage = stage;
       boot.marks.push({ stage, elapsedMs: performance.now() - start });
+      this.onBoot?.(stage);
     };
+    this.onBoot?.(boot.stage);
     const [data, terrain, , gltf, roofsLidar] = await Promise.all([
       fetch('/data/campus.json').then((r) => {
         if (!r.ok) throw Error('Campus data failed to load');
@@ -307,6 +324,10 @@ export class CampusGame {
     // footprints, catalogue entries and massing. Before anything reads data.buildings.
     this.blockData = applyBlockData(data);
     markBoot('world');
+    // Let the loading screen paint each stage before the long synchronous builds below. Yields sit
+    // only where nothing prepared is still pending (or right before an existing await + disposed check).
+    await nextPaint();
+    if (this.disposed) return;
     this.physics = new RAPIER.World({ x: 0, y: -24, z: 0 });
     this.physics.timestep = 1 / 60;
     this.world = new CampusWorld(
@@ -320,6 +341,8 @@ export class CampusGame {
     // URL parameters never select another scene: the local campus is the only one.
     {
       markBoot('buildings-and-ground');
+      await nextPaint();
+      if (this.disposed) return;
       this.walkway = new SpeedwayWalkway(
         data,
         this.world.terrain,
@@ -496,6 +519,7 @@ export class CampusGame {
       roadAsphalt.polygonOffsetFactor = -1;
       roadAsphalt.polygonOffsetUnits = -1;
       // The bowl omits its west-straight rows only when the scanned stand is ready to replace them.
+      await nextPaint(); // the disposed checks after the awaits below cover this yield too
       const standPrepared = await scanStandLoad;
       if (this.disposed) return; // dispose() already released this.scanStandPrepared
       // Seam stitching: a validated downtown renders the whole City footprints of the Capitol-strip fragments clipped
@@ -550,6 +574,7 @@ export class CampusGame {
       // Live oaks (authored placements), LiDAR canopy trees and the lawn finish.
       // After contact AO: its ground rays must not hit new tree colliders.
       markBoot('vegetation');
+      await nextPaint(); // covered by the disposed check after westCampusLoad
       const westPrepared = await westCampusLoad;
       if (this.disposed) return;
       const vegetation = await installCampusVegetation({ physics: this.physics, renderer: this.renderer, data,
@@ -580,6 +605,8 @@ export class CampusGame {
         if (riverfront) { markBoot('riverfront'); this.commitRiverfront(riverfront); }
       }
     }
+    markBoot('character');
+    await nextPaint();
     if (this.disposed) return;
     const model = gltf.scene;
     const rig = model.getObjectByName('UTCampusCivilian');
@@ -654,6 +681,8 @@ export class CampusGame {
       else if (w.kind !== 'edge') this.downtownColliders.push(c);
     }
     markBoot('physics');
+    await nextPaint();
+    if (this.disposed) return;
     this.physics.step();
     this.previousPosition.set(x, y, z);
     this.focus.set(x, y + 0.55, z);
@@ -698,6 +727,8 @@ export class CampusGame {
     // Compile every program behind the loading screen (parallel where the GPU
     // driver supports it) instead of during the first seconds of play.
     markBoot('shader-warmup');
+    await nextPaint();
+    if (this.disposed) return;
     await this.ambientOcclusion.warmUp();
     if (this.disposed) return;
     this.startedAt = performance.now();
@@ -857,7 +888,7 @@ export class CampusGame {
     this.renderer.domElement.focus();
   }
   setMapExpanded(open: boolean) {
-    if (!this.ready || !this.active) return;
+    if (!this.ready || !this.active || (open && this.inputPaused)) return;
     this.mapExpanded = open;
     this.endFlightHold();
     this.pauseScooter();
@@ -870,6 +901,25 @@ export class CampusGame {
     if (open) this.map.focus(); else this.renderer.domElement.focus();
     this.lastHud = 0;
   }
+  /** Menu / how-to-play over live play. Drops every held key and pointer drag the same way losing
+   * window focus does: the scooter brakes to a stop, flight releases its W/S hold and hovers, and no
+   * game key or pointer look is accepted until resumed. The tick loop also freezes physics while covered. */
+  setInputPaused(paused: boolean) {
+    if (this.inputPaused === paused) return;
+    this.inputPaused = paused;
+    this.interactedAt = performance.now();
+    if (!this.ready) return;
+    this.endFlightHold(); this.pauseScooter(); this.flight.pause();
+    this.keys.clear(); this.pressedAt.clear(); this.jumpQueued = false;
+    this.velocity.set(0, 0, 0);
+    this.releasePointerDrag();
+    if (paused) {
+      if (this.mapExpanded) { this.mapExpanded = false; this.mapCursor = undefined; this.drawMap(); }
+      if (document.pointerLockElement) document.exitPointerLock();
+    }
+    this.pacing.reset(); this.accumulator = 0; this.last = performance.now();
+    this.lastHud = 0;
+  }
   cancelTravel(message = 'Travel cancelled.') {
     if (!this.travel) return;
     this.travel = undefined;
@@ -879,7 +929,7 @@ export class CampusGame {
     this.renderer.domElement.focus();
   }
   travelTo(requested: Point) {
-    if (!this.ready || !this.active || this.travel) return;
+    if (!this.ready || !this.active || this.inputPaused || this.travel) return;
     const candidates = travelCandidates(this.world.data, requested, combineTravelRegions([this.westCampus?.travelRegion, this.deepWest?.travelRegion, this.riverfront?.travelRegion, this.downtown?.travelRegion]));
     if (!candidates.length) {
       this.travelMessage = this.downtown ? 'Choose a street, path or open area on land.' : 'Choose a path or an open area within campus.';
@@ -946,6 +996,7 @@ export class CampusGame {
     const options = { signal: this.signal.signal };
     const canvas = this.renderer.domElement;
     let dragging = false;
+    this.releasePointerDrag = () => { dragging = false; };
     const wake = () => { this.interactedAt = performance.now(); };
     for (const event of ['keydown', 'keyup', 'pointerdown', 'wheel'])
       window.addEventListener(event, wake, { ...options, passive: true });
@@ -961,7 +1012,7 @@ export class CampusGame {
     window.addEventListener(
       'keydown',
       (e) => {
-        if ((e.target as HTMLElement).tagName === 'INPUT') return;
+        if ((e.target as HTMLElement).tagName === 'INPUT' || this.inputPaused) return;
         if (e.code === 'KeyM' && this.active && !e.repeat) {
           e.preventDefault(); this.setMapExpanded(!this.mapExpanded); return;
         }
@@ -1006,7 +1057,7 @@ export class CampusGame {
       this.travelTo(mapPoint(this.drawnMap, (e.clientX - rect.left) / rect.width, (e.clientY - rect.top) / rect.height));
     }, options);
     this.map.addEventListener('keydown', e => {
-      if (!this.ready || !this.active || !this.drawnMap) return;
+      if (!this.ready || !this.active || this.inputPaused || !this.drawnMap) return;
       if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', 'Space'].includes(e.code)) {
         e.preventDefault(); e.stopPropagation();
         const p = this.body.translation(); this.mapCursor ??= [p.x, p.z];
@@ -1051,7 +1102,7 @@ export class CampusGame {
     canvas.addEventListener(
       'pointerdown',
       (e) => {
-        if (!this.active || this.mapExpanded || this.travel) return;
+        if (!this.active || this.inputPaused || this.mapExpanded || this.travel) return;
         dragging = true;
         canvas.setPointerCapture(e.pointerId);
         canvas.focus();
@@ -1069,7 +1120,7 @@ export class CampusGame {
       'pointermove',
       (e) => {
         if (
-          !this.active || this.mapExpanded || this.travel ||
+          !this.active || this.inputPaused || this.mapExpanded || this.travel ||
           (!dragging && document.pointerLockElement !== canvas)
         )
           return;
@@ -1085,7 +1136,7 @@ export class CampusGame {
     canvas.addEventListener(
       'dblclick',
       () => {
-        if (this.active)
+        if (this.active && !this.inputPaused)
           void Promise.resolve(canvas.requestPointerLock?.()).catch(() => {});
       },
       options,
@@ -1093,7 +1144,7 @@ export class CampusGame {
     canvas.addEventListener(
       'wheel',
       (e) => {
-        if (this.active) {
+        if (this.active && !this.inputPaused) {
           e.preventDefault();
           if (this.overview)
             this.overviewDistance = THREE.MathUtils.clamp(
@@ -1261,7 +1312,7 @@ export class CampusGame {
     if(this.scooterVisual)this.scooterVisual.root.visible = false;
   }
   /** E key and the on-screen scooter button. */
-  toggleRide() { this.interactedAt = performance.now(); if (this.active && !this.overview && !this.mapExpanded && !this.travel) this.toggleScooter(); }
+  toggleRide() { this.interactedAt = performance.now(); if (this.active && !this.inputPaused && !this.overview && !this.mapExpanded && !this.travel) this.toggleScooter(); }
   private toggleScooter() {
     if(!this.ready || !this.scooterClearance || !this.scooterVisual)return;
     if (this.flight.active) { this.notifyRide('Hold S to land before riding.'); return; }
@@ -1278,7 +1329,7 @@ export class CampusGame {
   }
   beginFlightHold(direction: 'up' | 'down' = 'up') {
     this.interactedAt = performance.now();
-    if (!this.ready || !this.active || this.overview || this.mapExpanded || this.travel) return;
+    if (!this.ready || !this.active || this.inputPaused || this.overview || this.mapExpanded || this.travel) return;
     if (this.flightHolding && this.flightHoldDirection === direction) return;
     if(direction === 'down' && !this.flight.active)return;
     if (!this.flight.active) {
@@ -1638,7 +1689,7 @@ export class CampusGame {
     const moving = this.keys.size > 0 || this.jumpQueued || this.flightHolding
       || this.velocity.lengthSq() > .01 || (!this.grounded && !this.flight.active)
       || (this.scooter.mounted && this.scooter.actualSpeed > .02);
-    const quiet = !this.cameraShots.active && !this.travel && (!this.active || this.mapExpanded || (!moving && now - this.interactedAt > 2500));
+    const quiet = !this.cameraShots.active && !this.travel && (!this.active || this.inputPaused || this.mapExpanded || (!moving && now - this.interactedAt > 2500));
     const elapsed = this.pacing.sample(now, { hidden: document.hidden, focused: document.hasFocus(), quiet });
     if (elapsed === null) {
       if (document.hidden || !document.hasFocus()) this.accumulator = 0;
@@ -1671,10 +1722,17 @@ export class CampusGame {
     }
     if (rawElapsed > 0) this.fpsSamples.push(rawElapsed * 1000);
     if (this.fpsSamples.length > 600) this.fpsSamples.shift();
-    this.accumulator += elapsed;
-    while (this.accumulator >= 1 / 60) {
-      this.step(1 / 60);
-      this.accumulator -= 1 / 60;
+    if (this.inputPaused) {
+      // Freeze mid-jump, landing and mount/dismount transitions as well as held input. Keep interpolation
+      // at the current body position and discard time in the menu so resuming never catches up in a burst.
+      this.accumulator = 0;
+      this.previousPosition.copy(this.body.translation());
+    } else {
+      this.accumulator += elapsed;
+      while (this.accumulator >= 1 / 60) {
+        this.step(1 / 60);
+        this.accumulator -= 1 / 60;
+      }
     }
     const current = this.body.translation(),
       p = this.previousPosition

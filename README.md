@@ -44,12 +44,23 @@ browser; `npm start` only starts the server. Stop it with Ctrl+C.
 | Hold W | Take off from foot or scooter / rise; release to hold altitude |
 | Hold S | Descend while flying; lands on any clear floor below; release to hold altitude |
 | ↑ + W / ↑ + S | Climb / dive diagonally: the stretched Superman pose pitches along the actual flight path and eases upright only in the last metres of a landing |
-| Shift | Run; boost while flying |
+| Shift | Boost while flying (arrows already run on foot) |
 | Space | Jump on foot; brake on the scooter |
 | E | Get on / off the scooter (clear path needed; stairs need walking) |
 | V | Campus overview / back to the character |
 | M | Travel map: click a destination (arrives on foot, outdoors under open sky) |
+| H | Pause menu: controls tutorial, power saver, character preview and credits |
 | Mouse drag, scroll | Look, zoom. Double-click locks the pointer; Esc releases it |
+
+The GTA Texas start screen follows seven real loading phases, then enables **Start
+exploring**. **How to play** is available while loading and later from the H menu;
+its three steps cover walking, riding and flying/travel, with Skip and Back/Next.
+Completion is remembered locally when browser storage is available. The menu
+pauses movement and physics, clears held input, and restores focus on close.
+Power saver remains on by default; the normal HUD hides FPS and build labels.
+Use `?debug=1` for the FPS readout. Load failures offer an explicit reload, and
+stages taking more than 25 seconds show a waiting/reload hint. The loading bar
+counts completed phases rather than estimating download bytes or elapsed time.
 
 Flight cruise is 28 m/s, boost 48 m/s, and height is capped at 100 m above the
 terrain (`lib/campus/flight-motion.ts`, unchanged from the source game). The

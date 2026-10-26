@@ -26,7 +26,11 @@ check('W/S release: the other held key takes over, none holds altitude',
 const game = readFileSync(resolve(root, 'lib/campus/game.ts'), 'utf8'), page = readFileSync(resolve(root, 'app/page.tsx'), 'utf8');
 const stale = ["'KeyF'", "'KeyG'", "'KeyC'", "'ControlLeft'", "held('KeyS')", "held('KeyA')", "held('Space') || (this.flightHolding"].filter(s => game.includes(s));
 check('game.ts reads movement through controls.ts only (no stale literal bindings)', stale.length === 0, { stale });
-check('HUD help names E for the scooter, S for descend, A D for turning; never F', !/<kbd>F<\/kbd>/.test(page) && page.includes('<kbd>E</kbd>') && page.includes('<kbd>S</kbd>') && page.includes('A D'));
+// The HUD shows contextual keys; the full key help lives in the how-to-play steps (lib/campus/onboarding.ts).
+const help = readFileSync(resolve(root, 'lib/campus/onboarding.ts'), 'utf8');
+check('HUD help names E for the scooter, S for descend, A D for turning; never F',
+  !/<kbd>F<\/kbd>/.test(page) && !/keys: \[[^\]]*'F'/.test(help) && page.includes('<kbd>E</kbd>') && page.includes('<kbd>S</kbd>')
+  && help.includes('A / D') && help.includes("'KeyA', 'KeyD'") && help.includes("codes: ['KeyE']") && help.includes("codes: ['KeyS']"));
 
 // ------------------------------------------------------------------ 2. flight motion
 const dt = 1 / 60;
