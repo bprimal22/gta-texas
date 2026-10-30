@@ -30,6 +30,8 @@ export interface GroundIndexOptions {
  */
 export class GroundIndex implements GroundQuery {
   private cell: number;
+  /** Per triangle, the terms every point query evaluates (identical arithmetic, computed once):
+   * cx, cz, bz - cz, cx - bx, cz - az, ax - cx, d (the 2D barycentric denominator), ay, by, cy. */
   private tris: number[] = [];
   private flags: number[] = [];
   private cells = new Map<number, number[]>();
@@ -95,7 +97,11 @@ export class GroundIndex implements GroundQuery {
           for (let i = i0; i <= i1; i++) for (let j = j0; j <= j1; j++) {
             const k = this.key(i, j);
             if (this.wanted && !this.wanted.has(k)) continue;
-            if (id < 0) { id = this.flags.length; this.tris.push(a.x, a.y, a.z, b.x, b.y, b.z, c.x, c.y, c.z); this.flags.push(flag); }
+            if (id < 0) {
+              id = this.flags.length;
+              this.tris.push(c.x, c.z, b.z - c.z, c.x - b.x, c.z - a.z, a.x - c.x, (b.z - c.z) * (a.x - c.x) + (c.x - b.x) * (a.z - c.z), a.y, b.y, c.y);
+              this.flags.push(flag);
+            }
             let list = this.cells.get(k);
             if (!list) this.cells.set(k, list = []);
             list.push(id);
@@ -115,25 +121,25 @@ export class GroundIndex implements GroundQuery {
     return best;
   }
   private at(id: number, x: number, z: number) {
-    const o = id * 9, p = this.tris;
-    const ax = p[o], ay = p[o + 1], az = p[o + 2], bx = p[o + 3], by = p[o + 4], bz = p[o + 5], cx = p[o + 6], cy = p[o + 7], cz = p[o + 8];
-    const d = (bz - cz) * (ax - cx) + (cx - bx) * (az - cz);
+    const o = id * 10, p = this.tris, d = p[o + 6];
     if (Math.abs(d) < 1e-12) return null;
-    const u = ((bz - cz) * (x - cx) + (cx - bx) * (z - cz)) / d, v = ((cz - az) * (x - cx) + (ax - cx) * (z - cz)) / d, w = 1 - u - v;
-    if (u < -1e-6 || v < -1e-6 || w < -1e-6) return null;
-    return u * ay + v * by + w * cy;
+    const dx = x - p[o], dz = z - p[o + 1], u = (p[o + 2] * dx + p[o + 3] * dz) / d;
+    if (u < -1e-6) return null;
+    const v = (p[o + 4] * dx + p[o + 5] * dz) / d, w = 1 - u - v;
+    if (v < -1e-6 || w < -1e-6) return null;
+    return u * p[o + 7] + v * p[o + 8] + w * p[o + 9];
   }
   under(x: number, z: number, below: number): GroundHit | null {
     const list = this.cells.get(this.key(Math.floor(x / this.cell), Math.floor(z / this.cell)));
     let best: GroundHit | null = null;
     if (list) for (const id of list) {
-      const o = id * 9, p = this.tris;
-      const ax = p[o], ay = p[o + 1], az = p[o + 2], bx = p[o + 3], by = p[o + 4], bz = p[o + 5], cx = p[o + 6], cy = p[o + 7], cz = p[o + 8];
-      const d = (bz - cz) * (ax - cx) + (cx - bx) * (az - cz);
+      const o = id * 10, p = this.tris, d = p[o + 6];
       if (Math.abs(d) < 1e-12) continue;
-      const u = ((bz - cz) * (x - cx) + (cx - bx) * (z - cz)) / d, v = ((cz - az) * (x - cx) + (ax - cx) * (z - cz)) / d, w = 1 - u - v;
-      if (u < -1e-6 || v < -1e-6 || w < -1e-6) continue;
-      const y = u * ay + v * by + w * cy;
+      const dx = x - p[o], dz = z - p[o + 1], u = (p[o + 2] * dx + p[o + 3] * dz) / d;
+      if (u < -1e-6) continue;
+      const v = (p[o + 4] * dx + p[o + 5] * dz) / d, w = 1 - u - v;
+      if (v < -1e-6 || w < -1e-6) continue;
+      const y = u * p[o + 7] + v * p[o + 8] + w * p[o + 9];
       if (y > below + .05) continue;
       // Highest surface wins; at equal height (overlay on terrain/lawn) paving wins.
       if (!best || y > best.y + .03 || (Math.abs(y - best.y) <= .03 && this.flags[id] === 1)) best = { y, paved: this.flags[id] === 1 || (best !== null && Math.abs(y - best.y) <= .03 && best.paved) };

@@ -39,6 +39,11 @@ export interface VegetationInstallOptions {
 /** One call after walkway + offline terrain + local surfaces + local context. */
 export async function installCampusVegetation(o: VegetationInstallOptions) {
   const started = performance.now();
+  // Request the canopy/inventory JSON now (both resolve null on failure) so the download overlaps the ground index and
+  // the authored tree fit instead of starting after them.
+  const sourcesLoad = Promise.all([
+    o.canopy === undefined || o.canopy === 'fetch' ? loadCanopyData() : Promise.resolve(o.canopy),
+    o.treeSites === undefined || o.treeSites === 'fetch' ? loadTreeSites() : Promise.resolve(o.treeSites)]);
   const group = new T.Group();
   group.name = 'Campus vegetation';
   const baked = new BakedGround(o.terrainPositions, 8, o.terrainFallback);
@@ -50,9 +55,7 @@ export async function installCampusVegetation(o: VegetationInstallOptions) {
   const forms = treeForms();
   const impostors = (o.renderer ? bakeImpostors(o.renderer, forms, materials) : null) ?? (o.headlessImpostors ? headlessImpostors(forms) : null);
   await o.foreground?.finish({ ground, footprints, renderer: o.renderer, materials, impostors });
-  const [canopyData, sites] = await Promise.all([
-    o.canopy === undefined || o.canopy === 'fetch' ? loadCanopyData() : Promise.resolve(o.canopy),
-    o.treeSites === undefined || o.treeSites === 'fetch' ? loadTreeSites() : Promise.resolve(o.treeSites)]);
+  const [canopyData, sites] = await sourcesLoad;
   const authored = (o.foreground?.placed ?? []).map(t => ({ x: t.x, z: t.z }));
   // Official sites first, residual CHM outside inventory coverage, OSM where
   // neither exists (see canopy-forest.ts).

@@ -31,4 +31,19 @@ assert.equal(p.playFps,30);
 assert.equal(p.sample(100320,active),0);
 p.setPowerSaving(false);
 assert.equal(p.playFps,60);
-console.log('PASS: 60–165 Hz pacing, 30/60 fps budgets, simulation time, quiet/input transitions, blur/visibility without catch-up');
+// rAF timestamps jitter around vsync (root's 60 Hz capture: 15.6–17.8 ms callbacks). A whole-refresh budget must keep
+// one cadence (no 1/3-refresh judder pairs) and the fractional ones must keep their average rate.
+for (const [hz, fps] of [[60, 30], [59.94, 30], [60, 60], [120, 30], [120, 60], [144, 30], [144, 60], [165, 30], [90, 60]]) {
+ let seed = 7; const jitter = () => { seed = (seed * 16807) % 2147483647; return (seed / 2147483647 - .5) * 2.2; };
+ const p = new FramePacing(`?fps=${fps}`), period = 1000 / hz, rendered = [];
+ for (let i = 0; i < hz * 20; i++) {
+  const t = i * period + jitter();
+  if (p.sample(t, active) !== null) rendered.push(i);
+ }
+ const gaps = rendered.slice(1).map((v, i) => v - rendered[i]).slice(20);
+ const ratio = hz / fps, counts = new Set(gaps);
+ assert(Math.abs(rendered.length - Math.min(fps, hz) * 20) <= 2, `${hz}Hz / ${fps}fps jittered count ${rendered.length}`);
+ if (Math.abs(ratio - Math.round(ratio)) < .05) assert.deepEqual([...counts], [Math.round(ratio)], `${hz}Hz / ${fps}fps jittered cadence ${[...counts].join(',')}`);
+ else assert([...counts].every(g => g === Math.floor(ratio) || g === Math.ceil(ratio)), `${hz}Hz / ${fps}fps jittered gaps ${[...counts].join(',')}`);
+}
+console.log('PASS: 60–165 Hz pacing, jittered vsync cadence, 30/60 fps budgets, simulation time, quiet/input transitions, blur/visibility without catch-up');

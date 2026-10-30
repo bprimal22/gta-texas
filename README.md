@@ -467,6 +467,19 @@ samples. Unsupported GPU timers report null, rather than zero. Run
 `npm run check:performance` for refresh-rate, idle, pause/resume, and power-mode
 checks; `npm run check:render` also checks the AO pass count and output shader.
 
+Startup ground queries use a construction-scoped spatial index, and vegetation
+queries reuse triangle terms. The same world geometry, tree placements, and
+colliders are retained. Canopy and deep-west data download earlier while other
+construction runs; shader warm-up still completes before play. Controlled local
+browser runs measured roughly 16 seconds before and 12.7 seconds after this pass;
+device and network timings will vary. Run
+`node --experimental-strip-types scripts/harness/run-vertical-raycast-test.mjs`
+to check exact intersections, cache invalidation, and reduced triangle work.
+
+Frame pacing measures display refresh and schedules whole refresh intervals,
+avoiding alternating short/long frames when browser callbacks jitter. The 30 FPS
+default and 60 FPS option keep their existing graphics settings.
+
 ## Cloudflare Pages hosting
 
 The hosted copy is a Direct Upload Pages project named `gtatexas`. Upload the

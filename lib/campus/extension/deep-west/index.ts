@@ -214,9 +214,18 @@ async function fetchBytes(url: string, signal?: AbortSignal) {
 }
 
 /** Fetch, validate against the loaded offline terrain seam, and build. Throws (fail closed). */
-export async function loadDeepWest(options: { materials: DeepWestMaterials; offlineTerrainPositions: ArrayLike<number>; signal?: AbortSignal; url?: string }) {
+/** Start the asset download ahead of the campus build; hand the promise to loadDeepWest (`bytes`), which reports any
+ * failure exactly as its own fetch would. Holds only the downloaded bytes (nothing to dispose); the signal aborts it. */
+export function prefetchDeepWest(signal?: AbortSignal, url = DEEP_WEST_URL) {
+  const bytes = fetchBytes(url, signal);
+  bytes.catch(() => {}); // observed when loadDeepWest awaits it; never an unhandled rejection meanwhile
+  return bytes;
+}
+
+export async function loadDeepWest(options: { materials: DeepWestMaterials; offlineTerrainPositions: ArrayLike<number>; signal?: AbortSignal; url?: string;
+  bytes?: Promise<ArrayBuffer> }) {
   const start = performance.now();
-  const buffer = await fetchBytes(options.url ?? DEEP_WEST_URL, options.signal);
+  const buffer = await (options.bytes ?? fetchBytes(options.url ?? DEEP_WEST_URL, options.signal));
   const data = decodeDeepWest(buffer, options.offlineTerrainPositions);
   const built = buildDeepWestGeometry(data);
   try { return new DeepWest(built, options.materials, performance.now() - start); }

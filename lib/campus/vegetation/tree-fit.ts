@@ -15,7 +15,10 @@ export const FOLIAGE_PAVED_CLEARANCE = 2.2;
 type Ring = number[][];
 /** Building footprints, grid-hashed for point tests. */
 export class Footprints {
-  private cells = new Map<string, { rings: Ring[]; box: number[] }[]>();
+  // Numeric cell keys (unique for |j| < 2^20 cells, i.e. 33,000 km at 32 m): tree fitting calls contains() millions
+  // of times at startup and a template-string key per call dominated it.
+  private cells = new Map<number, { rings: Ring[]; box: number[] }[]>();
+  private key(i: number, j: number) { return i * 2097152 + j; }
   constructor(buildings: { rings: Ring[] }[], private cell = 32) {
     for (const b of buildings) {
       const ring = b.rings?.[0];
@@ -24,12 +27,12 @@ export class Footprints {
       const box = [Math.min(...xs), Math.max(...xs), Math.min(...zs), Math.max(...zs)];
       for (let i = Math.floor(box[0] / cell); i <= Math.floor(box[1] / cell); i++)
         for (let j = Math.floor(box[2] / cell); j <= Math.floor(box[3] / cell); j++) {
-          const k = `${i},${j}`; if (!this.cells.has(k)) this.cells.set(k, []); this.cells.get(k)!.push({ rings: b.rings, box });
+          const k = this.key(i, j); if (!this.cells.has(k)) this.cells.set(k, []); this.cells.get(k)!.push({ rings: b.rings, box });
         }
     }
   }
   contains(x: number, z: number) {
-    for (const b of this.cells.get(`${Math.floor(x / this.cell)},${Math.floor(z / this.cell)}`) ?? []) {
+    for (const b of this.cells.get(this.key(Math.floor(x / this.cell), Math.floor(z / this.cell))) ?? []) {
       if (x < b.box[0] || x > b.box[1] || z < b.box[2] || z > b.box[3]) continue;
       let inside = false;
       for (const ring of b.rings) for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {

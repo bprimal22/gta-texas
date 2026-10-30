@@ -88,6 +88,7 @@ import { buildFlawnBuilding } from './flawn-building';
 import { buildHoggBuilding } from './hogg-building';
 import { buildUnionBuilding } from './union-building';
 import { buildUnionApproach } from './union-approach';
+import { VerticalRaycast } from './vertical-raycast';
 import flawnGroundPlan from '../../public/data/flawn-ground-plan.json' with { type: 'json' };
 import speedwayInventory from '../../public/data/speedway-tree-inventory.json' with { type: 'json' };
 
@@ -211,6 +212,9 @@ export class SpeedwayWalkway {
     const firstSpeedway = data.paths.find((p) => p.id === 126307538);
     if (!firstSpeedway)
       throw Error('The mapped Speedway pilot path is missing.');
+    // Construction-only: the hot downward ground probes below return exactly Raycaster's hits, but test only the
+    // triangles under the ray in each large ground batch (startup CPU). Its geometry grids are dropped with it.
+    const groundRays = new VerticalRaycast();
     this.sourceWayIds = landscape
       ? [
           126307538, 581040963, 581040954, 127009032, 31954550, 31960732,
@@ -1045,7 +1049,7 @@ export class SpeedwayWalkway {
         groundMeshes.forEach(mesh=>mesh.updateMatrixWorld(true));
         const groundHeight=(x:number,z:number)=>{
           groundRay.set(new THREE.Vector3(x,24,z),new THREE.Vector3(0,-1,0));
-          return groundRay.intersectObjects(groundMeshes,false)[0]?.point.y??terrain.height(x,z);
+          return groundRays.intersectObjects(groundRay,groundMeshes,false)[0]?.point.y??terrain.height(x,z);
         };
         const flawn=buildFlawnBuilding({groundHeight});
         const hogg=buildHoggBuilding({baseHeight:17.67,groundHeight,includeRegistrationFringe:false});
@@ -1055,7 +1059,7 @@ export class SpeedwayWalkway {
         const existingGround=[...this.surfaces.children];
         const unionGround=(x:number,z:number)=>{
           groundRay.set(new THREE.Vector3(x,15,z),new THREE.Vector3(0,-1,0));
-          return groundRay.intersectObjects(existingGround,true).find(h=>h.face&&h.face.normal.clone().transformDirection(h.object.matrixWorld).y>.6)?.point.y??terrain.height(x,z);
+          return groundRays.intersectObjects(groundRay,existingGround,true).find(h=>h.face&&h.face.normal.clone().transformDirection(h.object.matrixWorld).y>.6)?.point.y??terrain.height(x,z);
         };
         const apron=buildUnionApproach(unionGround,dkr?.materials[0]??concrete);
         this.surfaces.add(...apron.meshes);
@@ -1195,7 +1199,7 @@ export class SpeedwayWalkway {
         const mainGround=(x:number,z:number)=>{
           mainGroundRay.set(new THREE.Vector3(x,24,z),new THREE.Vector3(0,-1,0));
           mainGroundRay.far=18;
-          const hit=mainGroundRay.intersectObject(this.surfaces,true).find(h=>h.face&&h.face.normal.y>.6);
+          const hit=groundRays.intersectObject(mainGroundRay,this.surfaces,true).find(h=>h.face&&h.face.normal.y>.6);
           return hit?.point.y??grade(x,z);
         };
         // The Welch south cap shares one measured cornice with its complete
@@ -1215,7 +1219,7 @@ export class SpeedwayWalkway {
         const strictWelchGround=(x:number,z:number)=>{
           welchGroundRay.set(new THREE.Vector3(x,14,z),new THREE.Vector3(0,-1,0));
           welchGroundRay.far=20;
-          return welchGroundRay.intersectObjects(welchGroundMeshes,false).find(h=>h.face&&h.face.normal.y>.6)?.point.y;
+          return groundRays.intersectObjects(welchGroundRay,welchGroundMeshes,false).find(h=>h.face&&h.face.normal.y>.6)?.point.y;
         };
         const welchRoutes=buildWelchApproachGround({groundHeight:strictWelchGround,material:malls.groundMaterial,westLandingElevation:7.1,southLandingElevation:6.1,bottomElevation:4.2});
         const welchGround=(x:number,z:number)=>welchRoutes.height(x,z)??(welchYard.contains(x,z)?welchYard.height(x,z):strictWelchGround(x,z)??grade(x,z));
@@ -1375,7 +1379,7 @@ export class SpeedwayWalkway {
         this.pobFrontage=pob.stats;
         const pob59Ray=new THREE.Raycaster();
         const pob59Fixed=(x:number,z:number)=>{
-          const sample=(xx:number)=>{pob59Ray.set(new THREE.Vector3(xx,8,z),new THREE.Vector3(0,-1,0));pob59Ray.far=6;return pob59Ray.intersectObjects(grassMeshes,false).find(h=>h.face&&h.face.normal.y>.5)?.point.y??NaN;};
+          const sample=(xx:number)=>{pob59Ray.set(new THREE.Vector3(xx,8,z),new THREE.Vector3(0,-1,0));pob59Ray.far=6;return groundRays.intersectObjects(pob59Ray,grassMeshes,false).find(h=>h.face&&h.face.normal.y>.5)?.point.y??NaN;};
           const y=sample(x);return Number.isFinite(y)?y:sample(x-.02);
         };
         // Match the existing uppermost authored boundary, including the small

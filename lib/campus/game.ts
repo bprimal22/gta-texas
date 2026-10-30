@@ -45,7 +45,7 @@ import { applyBlockData, installBlocks, BLOCK_REPLACES, type InstalledBlocks, ty
 import { BakedGround } from './baked-ground';
 import { heroRouteExtraGround } from './ground/hero-route';
 import { createFlightPose } from './flight-pose';
-import { loadDeepWest, type DeepWest } from './extension/deep-west';
+import { loadDeepWest, prefetchDeepWest, type DeepWest } from './extension/deep-west';
 import { WestCampus, prepareWestCampus, towerFootprints, type PreparedWestCampus } from './extension/west-campus';
 import { loadDowntown, type Downtown } from './extension/downtown';
 import { loadBackground, type DowntownBackground } from './extension/downtown/background';
@@ -415,6 +415,8 @@ export class CampusGame {
           if (!this.disposed) { this.riverfrontFailure = error instanceof Error ? error.message : String(error); console.warn('Riverfront extension unavailable; keeping the downtown world.', error); }
           return null;
         }) : Promise.resolve(null);
+      // Deep west installs after the vegetation, but its download need not wait for the campus build.
+      const deepWestBytes = DEEP_WEST_EXTENSION ? prefetchDeepWest(this.signal.signal) : undefined;
       const localTerrain = await loadOfflineTerrain(this.world.mat.grass);
       if (this.disposed) { localTerrain.dispose(); return; }
       this.world.group.add(localTerrain.mesh);
@@ -589,7 +591,7 @@ export class CampusGame {
       if (DEEP_WEST_EXTENSION) {
         markBoot('deep-west');
         await this.installDeepWest(localTerrain.mesh.geometry.getAttribute('position').array,
-          key => contextMaterials.materials.get(key));
+          key => contextMaterials.materials.get(key), deepWestBytes);
         if (this.disposed) return;
       }
       if (westPrepared) { markBoot('west-campus'); this.installWestCampus(westPrepared); }
@@ -1168,11 +1170,11 @@ export class CampusGame {
    * extension: colliders from the rendered geometries, then the group under world.group so travel,
    * scooter and flight ground queries see it. Any failure removes partial colliders and keeps the
    * original world (the west wall stays closed because this.deepWest stays unset). */
-  private async installDeepWest(offlineTerrainPositions: ArrayLike<number>, context: (key: string) => THREE.Material | undefined) {
+  private async installDeepWest(offlineTerrainPositions: ArrayLike<number>, context: (key: string) => THREE.Material | undefined, bytes?: Promise<ArrayBuffer>) {
     let extension: DeepWest | undefined;
     const colliders: RAPIER.Collider[] = [];
     try {
-      extension = await loadDeepWest({ offlineTerrainPositions, signal: this.signal.signal,
+      extension = await loadDeepWest({ offlineTerrainPositions, signal: this.signal.signal, bytes,
         materials: { terrain: this.world.mat.grass, asphalt: this.world.mat.asphalt, concrete: this.world.mat.concrete, context } });
       if (this.disposed) { extension.dispose(); return; }
       for (const g of extension.colliderGeometries) {
